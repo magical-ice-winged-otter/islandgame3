@@ -48,11 +48,12 @@
 #include "constants/items.h"
 #include "difficulty.h"
 #include "follower_npc.h"
+#include "script_pokemon_util.h"
+#include "main_menu.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
 static void ClearFrontierRecord(void);
-static void WarpToTruck(void);
 static void ResetMiniGamesRecords(void);
 static void ResetItemFlags(void);
 static void ResetDexNav(void);
@@ -129,12 +130,6 @@ static void ClearFrontierRecord(void)
     gSaveBlock2Ptr->frontier.opponentNames[1][0] = EOS;
 }
 
-static void WarpToTruck(void)
-{
-    SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
-    WarpIntoMap();
-}
-
 void Sav2_ClearSetDefault(void)
 {
     ClearSav2();
@@ -197,7 +192,12 @@ void NewGameInitData(void)
     InitDewfordTrend();
     ResetFanClub();
     ResetLotteryCorner();
-    WarpToTruck();
+#if NEW_GAME_STYLE == NEW_GAME_DEFAULT
+    SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
+#elif NEW_GAME_STYLE == NEW_GAME_WARP
+    SetWarpDestination(MAP_GROUP(MAP_MAUVILLE_CITY), MAP_NUM(MAP_MAUVILLE_CITY), WARP_ID_NONE, 26, 9);
+#endif
+    WarpIntoMap();
     RunScriptImmediately(EventScript_ResetAllMapFlags);
     ResetMiniGamesRecords();
     InitUnionRoomChatRegisteredTexts();
@@ -213,6 +213,13 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+#if NEW_GAME_STYLE == NEW_GAME_WARP
+    SetPlayerName(COMPOUND_STRING(DEFAULT_PLAYER_NAME));
+    // This flag makes sure that we unlock the pokemon selection menu:
+    // usually its set when you pick the starter.
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    ScriptGiveMon(SPECIES_BULBASAUR, 5, ITEM_NONE);
+#endif
 }
 
 static void ResetMiniGamesRecords(void)

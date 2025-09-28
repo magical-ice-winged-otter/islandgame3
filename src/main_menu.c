@@ -1079,7 +1079,11 @@ static void Task_HandleMainMenuAPressed(u8 taskId)
             default:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
                 gPlttBufferFaded[0] = RGB_BLACK;
+            #if NEW_GAME_STYLE == NEW_GAME_DEFAULT
                 gTasks[taskId].func = Task_NewGameBirchSpeech_Init;
+            #elif NEW_GAME_STYLE == NEW_GAME_WARP
+                gTasks[taskId].func = Task_NewGameBirchSpeech_Cleanup;
+            #endif
                 break;
             case ACTION_CONTINUE:
                 gPlttBufferUnfaded[0] = RGB_BLACK;
@@ -2126,12 +2130,17 @@ static s8 NewGameBirchSpeech_ProcessGenderMenuInput(void)
 void NewGameBirchSpeech_SetDefaultPlayerName(u8 nameId)
 {
     const u8 *name;
-    u8 i;
 
     if (gSaveBlock2Ptr->playerGender == MALE)
         name = sMalePresetNames[nameId];
     else
         name = sFemalePresetNames[nameId];
+    SetPlayerName(name);
+}
+
+void SetPlayerName(const u8 *name)
+{
+    u8 i;
     for (i = 0; i < PLAYER_NAME_LENGTH; i++)
         gSaveBlock2Ptr->playerName[i] = name[i];
     gSaveBlock2Ptr->playerName[PLAYER_NAME_LENGTH] = EOS;

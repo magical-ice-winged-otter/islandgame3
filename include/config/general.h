@@ -66,6 +66,17 @@
 // Changing GEN_LATEST's value to a different Generation will change every default setting that uses it at once.
 #define GEN_LATEST GEN_9
 
+// New Game related settings
+#define NEW_GAME_DEFAULT             0       // Default
+#define NEW_GAME_WARP                1       // Set name, npc, etc.
+
+// NEW_GAME_WARP also sets extra data such as the player name (using DEFAULT_PLAYER_NAME) as well as spawn location. 
+// Make sure to check out "NewGameInitData" in new_game.c
+#define DEFAULT_PLAYER_NAME          "rain dan"
+
+#define NEW_GAME_STYLE               NEW_GAME_DEFAULT
+#define NEW_GAME_TRUCK_SEQUENCE      TRUE    // If TRUE, plays the default truck shake sequence.
+
 // General settings
 #define EXPANSION_INTRO              TRUE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.
 #define HQ_RANDOM                    TRUE    // If TRUE, replaces the default RNG with an implementation of SFC32 RNG. May break code that relies on RNG.
