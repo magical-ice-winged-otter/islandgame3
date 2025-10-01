@@ -567,6 +567,27 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteLight2,             OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
     {gObjectEventPaletteNeonLight,          OBJ_EVENT_PAL_TAG_NEON_LIGHT},
+
+
+
+    // island-game
+    {gObjectEventPal_OliviaNormal,          OBJ_EVENT_PAL_TAG_OLIVIA_NORMAL},
+    {gObjectEventPal_OliviaBike,            OBJ_EVENT_PAL_TAG_OLIVIA_BIKE},
+    {gObjectEventPal_OliviaFieldMove,       OBJ_EVENT_PAL_TAG_OLIVIA_FIELD_MOVE},
+    {gObjectEventPal_OliviaFishing,         OBJ_EVENT_PAL_TAG_OLIVIA_FISHING},
+    {gObjectEventPal_OliviaWatering,        OBJ_EVENT_PAL_TAG_OLIVIA_WATERING},
+    {gObjectEventPal_OliviaSurfing,         OBJ_EVENT_PAL_TAG_OLIVIA_SURFING},
+
+    {gObjectEventPal_OliverNormal,          OBJ_EVENT_PAL_TAG_OLIVER_NORMAL},
+    {gObjectEventPal_OliverBike,            OBJ_EVENT_PAL_TAG_OLIVER_BIKE},
+    {gObjectEventPal_OliverFieldMove,       OBJ_EVENT_PAL_TAG_OLIVER_FIELD_MOVE},
+    {gObjectEventPal_OliverFishing,         OBJ_EVENT_PAL_TAG_OLIVER_FISHING},
+    {gObjectEventPal_OliverWatering,        OBJ_EVENT_PAL_TAG_OLIVER_WATERING},
+    {gObjectEventPal_OliverSurfing,         OBJ_EVENT_PAL_TAG_OLIVER_SURFING},
+
+
+    
+
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else

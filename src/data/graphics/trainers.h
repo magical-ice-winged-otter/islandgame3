@@ -292,6 +292,26 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
 
+
+
+
+
+
+
+// island-game
+const u32 gTrainerFrontPic_Oliver[] = INCBIN_U32("graphics/trainers/front_pics/oliver.4bpp.smol");
+const u16 gTrainerPalette_Oliver[] = INCBIN_U16("graphics/trainers/front_pics/oliver.gbapal");
+const u8 gTrainerBackPic_Oliver[] = INCBIN_U8("graphics/trainers/back_pics/oliver.4bpp");
+const u16 gTrainerBackPicPalette_Oliver[] = INCBIN_U16("graphics/trainers/back_pics/oliver.gbapal");
+
+const u32 gTrainerFrontPic_Olivia[] = INCBIN_U32("graphics/trainers/front_pics/olivia.4bpp.smol");
+const u16 gTrainerPalette_Olivia[] = INCBIN_U16("graphics/trainers/front_pics/olivia.gbapal");
+const u8 gTrainerBackPic_Olivia[] = INCBIN_U8("graphics/trainers/back_pics/olivia.4bpp");
+const u16 gTrainerBackPicPalette_Olivia[] = INCBIN_U16("graphics/trainers/back_pics/olivia.gbapal");
+
+
+
+
 // The first two parameters invoke a front pic and palette by
 // calling a "TRAINER_PIC" constant (e.g. TRAINER_PIC_HIKER), and
 // gTrainerFrontPic/gTrainerPalette pointers, (e.g "gTrainerFrontPic_Hiker" and "gTrainerPalette_Hiker").
@@ -401,6 +421,13 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_LEAF, gTrainerFrontPic_Leaf, gTrainerPalette_Leaf),
     TRAINER_SPRITE(TRAINER_PIC_RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, gTrainerPalette_RubySapphireBrendan),
     TRAINER_SPRITE(TRAINER_PIC_RS_MAY, gTrainerFrontPic_RubySapphireMay, gTrainerPalette_RubySapphireMay),
+
+
+
+
+    // island-game
+    TRAINER_SPRITE(TRAINER_PIC_OLIVIA, gTrainerFrontPic_Olivia, gTrainerPalette_Olivia),
+    TRAINER_SPRITE(TRAINER_PIC_OLIVER, gTrainerFrontPic_Oliver, gTrainerPalette_Oliver),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
@@ -476,4 +503,8 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY, 4, gTrainerBackPic_RubySapphireMay, gTrainerPalette_RubySapphireMay, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_WALLY, 4, gTrainerBackPic_Wally, gTrainerPalette_Wally, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_STEVEN, 4, gTrainerBackPic_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
+
+    // island-game
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_OLIVER, 5, gTrainerBackPic_Oliver, gTrainerBackPicPalette_Oliver, sBackAnims_Kanto),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_OLIVIA, 5, gTrainerBackPic_Olivia, gTrainerBackPicPalette_Olivia, sBackAnims_Kanto),
 };

@@ -250,7 +250,39 @@
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        242
+#define NUM_REGULAR_OBJ_EVENT_GFX                        242
+
+
+// island-game
+#define ISLAND_START                             (NUM_REGULAR_OBJ_EVENT_GFX)
+
+#define OBJ_EVENT_GFX_OLIVIA_NORMAL              (ISLAND_START + 1)
+#define OBJ_EVENT_GFX_OLIVIA_SURFING             ISLAND_START + 2
+#define OBJ_EVENT_GFX_OLIVIA_FISHING             ISLAND_START + 3
+#define OBJ_EVENT_GFX_OLIVIA_FIELD_MOVE          ISLAND_START + 4
+#define OBJ_EVENT_GFX_OLIVIA_MACH_BIKE           ISLAND_START + 5
+#define OBJ_EVENT_GFX_OLIVIA_WATERING            ISLAND_START + 6
+#define OBJ_EVENT_GFX_OLIVER_NORMAL              ISLAND_START + 7
+#define OBJ_EVENT_GFX_OLIVER_SURFING             ISLAND_START + 8
+#define OBJ_EVENT_GFX_OLIVER_FISHING             ISLAND_START + 9
+#define OBJ_EVENT_GFX_OLIVER_FIELD_MOVE          ISLAND_START + 10
+#define OBJ_EVENT_GFX_OLIVER_MACH_BIKE           ISLAND_START + 11
+#define OBJ_EVENT_GFX_OLIVER_WATERING            ISLAND_START + 12
+
+#define ISLAND_END                               OBJ_EVENT_GFX_OLIVER_WATERING
+
+#define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
+
+
+
+
+
+
+
+
+
+
+
 
 
 // These are dynamic object gfx ids.
@@ -426,6 +458,25 @@
 // Not a real OW palette tag; used for the white flash applied to followers
 #define OBJ_EVENT_PAL_TAG_WHITE                   (OBJ_EVENT_PAL_TAG_NONE - 1)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
+
+
+// island-game
+#define OBJ_EVENT_PAL_TAG_OLIVIA_FISHING          0x1300
+#define OBJ_EVENT_PAL_TAG_OLIVIA_BIKE             0x1301
+#define OBJ_EVENT_PAL_TAG_OLIVIA_FIELD_MOVE       0x1302
+#define OBJ_EVENT_PAL_TAG_OLIVIA_NORMAL           0x1303
+#define OBJ_EVENT_PAL_TAG_OLIVIA_WATERING         0x1304
+#define OBJ_EVENT_PAL_TAG_OLIVIA_SURFING          0x1305
+#define OBJ_EVENT_PAL_TAG_OLIVER_FISHING          0x1306
+#define OBJ_EVENT_PAL_TAG_OLIVER_BIKE             0x1307
+#define OBJ_EVENT_PAL_TAG_OLIVER_FIELD_MOVE       0x1308
+#define OBJ_EVENT_PAL_TAG_OLIVER_NORMAL           0x1309
+#define OBJ_EVENT_PAL_TAG_OLIVER_WATERING         0x130A
+#define OBJ_EVENT_PAL_TAG_OLIVER_SURFING          0x130B
+
+
+
+
 
 // This + localId is used as the tileTag
 // for compressed graphicsInfos

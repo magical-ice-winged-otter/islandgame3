@@ -1,3 +1,41 @@
+// island-game
+const u32 gObjectEventPic_OliviaNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/olivia/walking.4bpp", "graphics/object_events/pics/people/olivia/running.4bpp");
+const u32 gObjectEventPic_OliviaSurfing[] = INCBIN_U32("graphics/object_events/pics/people/olivia/surfing.4bpp");
+const u32 gObjectEventPic_OliviaFishing[] = INCBIN_U32("graphics/object_events/pics/people/olivia/fishing.4bpp");
+const u32 gObjectEventPic_OliviaFieldMove[] = INCBIN_U32("graphics/object_events/pics/people/olivia/field_move.4bpp");
+const u32 gObjectEventPic_OliviaMachBike[] = INCBIN_U32("graphics/object_events/pics/people/olivia/mach_bike.4bpp");
+const u32 gObjectEventPic_OliviaWatering[] = INCBIN_U32("graphics/object_events/pics/people/olivia/watering.4bpp");
+
+const u16 gObjectEventPal_OliviaNormal[] = INCBIN_U16("graphics/object_events/palettes/olivia_normal.gbapal");
+const u16 gObjectEventPal_OliviaBike[] = INCBIN_U16("graphics/object_events/palettes/olivia_bike.gbapal");
+const u16 gObjectEventPal_OliviaFieldMove[] = INCBIN_U16("graphics/object_events/palettes/olivia_field_move.gbapal");
+const u16 gObjectEventPal_OliviaFishing[] = INCBIN_U16("graphics/object_events/palettes/olivia_fishing.gbapal");
+const u16 gObjectEventPal_OliviaWatering[] = INCBIN_U16("graphics/object_events/palettes/olivia_watering.gbapal");
+const u16 gObjectEventPal_OliviaSurfing[] = INCBIN_U16("graphics/object_events/palettes/olivia_surfing.gbapal");
+
+const u32 gObjectEventPic_OliverNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/oliver/walking.4bpp", "graphics/object_events/pics/people/oliver/running.4bpp");
+const u32 gObjectEventPic_OliverSurfing[] = INCBIN_U32("graphics/object_events/pics/people/oliver/surfing.4bpp");
+const u32 gObjectEventPic_OliverFishing[] = INCBIN_U32("graphics/object_events/pics/people/oliver/fishing.4bpp");
+const u32 gObjectEventPic_OliverFieldMove[] = INCBIN_U32("graphics/object_events/pics/people/oliver/field_move.4bpp");
+const u32 gObjectEventPic_OliverMachBike[] = INCBIN_U32("graphics/object_events/pics/people/oliver/mach_bike.4bpp");
+const u32 gObjectEventPic_OliverWatering[] = INCBIN_U32("graphics/object_events/pics/people/oliver/watering.4bpp");
+
+const u16 gObjectEventPal_OliverNormal[] = INCBIN_U16("graphics/object_events/palettes/oliver_normal.gbapal");
+const u16 gObjectEventPal_OliverBike[] = INCBIN_U16("graphics/object_events/palettes/oliver_bike.gbapal");
+const u16 gObjectEventPal_OliverFieldMove[] = INCBIN_U16("graphics/object_events/palettes/oliver_field_move.gbapal");
+const u16 gObjectEventPal_OliverFishing[] = INCBIN_U16("graphics/object_events/palettes/oliver_fishing.gbapal");
+const u16 gObjectEventPal_OliverWatering[] = INCBIN_U16("graphics/object_events/palettes/oliver_watering.gbapal");
+const u16 gObjectEventPal_OliverSurfing[] = INCBIN_U16("graphics/object_events/palettes/oliver_surfing.gbapal");
+
+
+
+
+
+
+
+
+
+
 const u32 gObjectEventPic_BrendanNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/brendan/walking.4bpp", "graphics/object_events/pics/people/brendan/running.4bpp");
 const u16 gObjectEventPal_Brendan[] = INCBIN_U16("graphics/object_events/palettes/brendan.gbapal");
 const u32 gObjectEventPic_RubySapphireBrendanNormal[] = INCBIN_U32("graphics/object_events/pics/people/ruby_sapphire_brendan/walking.4bpp");
@@ -465,3 +503,6 @@ const u16 gObjectEventPal_StrangeBall[] = INCBIN_U16("graphics/object_events/pic
 
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
+
+
+
