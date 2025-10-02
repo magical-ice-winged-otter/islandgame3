@@ -1158,3 +1158,20 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Hallway/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Storage/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Stairs/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room1/scripts.inc"

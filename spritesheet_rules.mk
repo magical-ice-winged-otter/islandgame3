@@ -46,7 +46,8 @@ $(OBJEVENTGFXDIR)/people/oliver/watering.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 
-
+$(OBJEVENTGFXDIR)/people/palm.4bpp: graphics/object_events/pics/people/palm.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 
 

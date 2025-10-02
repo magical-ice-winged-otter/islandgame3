@@ -4410,6 +4410,86 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_HALLWAY",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Hallway_Layout",
+      "width": 27,
+      "height": 15,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Hallway/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Hallway/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_CAPTAINS_ROOM",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_ROOM2",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Room2_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_CAFETERIA",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Layout",
+      "width": 12,
+      "height": 20,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_PLAYER_ROOM",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_STAIRS",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Stairs_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Stairs/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Stairs/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_STORAGE",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Storage_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Storage/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Storage/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_ROOM1",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_Room1_Layout",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room1/map.bin"
     }
   ]
 }

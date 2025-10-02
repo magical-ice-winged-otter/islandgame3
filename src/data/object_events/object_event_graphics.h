@@ -30,6 +30,8 @@ const u16 gObjectEventPal_OliverSurfing[] = INCBIN_U16("graphics/object_events/p
 
 
 
+const u32 gObjectEventPic_Palm[] = INCBIN_U32("graphics/object_events/pics/people/palm.4bpp");
+const u16 gObjectEventPal_Palm[] = INCBIN_U16("graphics/object_events/pics/people/palm.gbapal");
 
 
 

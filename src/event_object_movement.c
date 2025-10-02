@@ -577,13 +577,14 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_OliviaFishing,         OBJ_EVENT_PAL_TAG_OLIVIA_FISHING},
     {gObjectEventPal_OliviaWatering,        OBJ_EVENT_PAL_TAG_OLIVIA_WATERING},
     {gObjectEventPal_OliviaSurfing,         OBJ_EVENT_PAL_TAG_OLIVIA_SURFING},
-
     {gObjectEventPal_OliverNormal,          OBJ_EVENT_PAL_TAG_OLIVER_NORMAL},
     {gObjectEventPal_OliverBike,            OBJ_EVENT_PAL_TAG_OLIVER_BIKE},
     {gObjectEventPal_OliverFieldMove,       OBJ_EVENT_PAL_TAG_OLIVER_FIELD_MOVE},
     {gObjectEventPal_OliverFishing,         OBJ_EVENT_PAL_TAG_OLIVER_FISHING},
     {gObjectEventPal_OliverWatering,        OBJ_EVENT_PAL_TAG_OLIVER_WATERING},
     {gObjectEventPal_OliverSurfing,         OBJ_EVENT_PAL_TAG_OLIVER_SURFING},
+    
+    {gObjectEventPal_Palm,                  OBJ_EVENT_PAL_TAG_PALM},
 
 
     

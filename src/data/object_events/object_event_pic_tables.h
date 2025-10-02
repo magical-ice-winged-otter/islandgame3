@@ -88,6 +88,9 @@ static const struct SpriteFrameImage sPicTable_OliverSurfing[] = {
 
 
 
+static const struct SpriteFrameImage sPicTable_Palm[] = {
+    overworld_ascending_frames(gObjectEventPic_Palm, 2, 4),
+};
 
 
 

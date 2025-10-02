@@ -269,7 +269,10 @@
 #define OBJ_EVENT_GFX_OLIVER_MACH_BIKE           ISLAND_START + 11
 #define OBJ_EVENT_GFX_OLIVER_WATERING            ISLAND_START + 12
 
-#define ISLAND_END                               OBJ_EVENT_GFX_OLIVER_WATERING
+
+#define OBJ_EVENT_GFX_PALM                       ISLAND_START + 13
+
+#define ISLAND_END                               OBJ_EVENT_GFX_PALM
 
 #define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
 
@@ -474,6 +477,9 @@
 #define OBJ_EVENT_PAL_TAG_OLIVER_WATERING         0x130A
 #define OBJ_EVENT_PAL_TAG_OLIVER_SURFING          0x130B
 
+
+
+#define OBJ_EVENT_PAL_TAG_PALM                    0x130C
 
 
 
