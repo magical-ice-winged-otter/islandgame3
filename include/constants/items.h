@@ -997,7 +997,11 @@
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 829
+// island-game items
+#define ITEM_ISLANDGAME_LOBSTER_ROLL 829
+
+
+#define ITEMS_COUNT 830
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

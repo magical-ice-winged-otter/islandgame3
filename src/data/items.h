@@ -1271,20 +1271,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_OldGateau,
     },
 
+    // modified
     [ITEM_CASTELIACONE] =
     {
         .name = ITEM_NAME("Ice Cream"),
         .price = (I_PRICE >= GEN_7) ? 350 : 100,
+        .holdEffectParam = 30,
         .description = COMPOUND_STRING(
-            "A yummy treat\n"
-            "that heals all\n"
+            "Restores 30 HP\n"
+            "and heals all\n"
             "status problems."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
-        .battleUsage = EFFECT_ITEM_CURE_STATUS,
-        .effect = gItemEffect_FullHeal,
+        .battleUsage = EFFECT_ITEM_HEAL_AND_CURE_STATUS,
+        .effect = gItemEffect_IceCream,
         .flingPower = 30,
         .iconPic = gItemIcon_Casteliacone,
         .iconPalette = gItemIconPalette_Casteliacone,
@@ -14591,6 +14593,27 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
+    },
+
+    // island-game custom items
+    [ITEM_ISLANDGAME_LOBSTER_ROLL] =
+    {
+        .name = ITEM_NAME("Lobster Roll"),
+        .price = 3000,
+        .holdEffectParam = 200,
+        .description = COMPOUND_STRING(
+            "Restores 200 HP.\n"
+            "Contains no\n"
+            "Pokémon!"),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_STATUS_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_RESTORE_HP,
+        .effect = gItemEffect_LobsterRoll,
+        .flingPower = 30,
+        .iconPic = gItemIcon_IslandgameLobsterRoll,
+        .iconPalette = gItemIconPalette_IslandgameLobsterRoll,
     },
 };
 

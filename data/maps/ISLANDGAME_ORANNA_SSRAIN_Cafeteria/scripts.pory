@@ -40,6 +40,16 @@ script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_NPC2 {
     release
 }
 
+// alcremie
+script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Alcremie {
+    lock
+    msgbox(format(
+        "{COLOR RED}(Despite its appearance, it's just a cake that looks like an Alcremie.)"
+    ))
+    closemessage
+    release
+}
+
 // ice cream kid
 script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl {
     lock
@@ -88,7 +98,7 @@ script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy {
                     playse(SE_SHOP)
                     waitse
                     hidemoneybox
-                    // giveitem(ITEM_ISLANDGAME_LOBSTER_ROLL)
+                    giveitem(ITEM_ISLANDGAME_LOBSTER_ROLL)
                     setflag(FLAG_DAILY_ORANNA_SSRAIN_LOBSTER_ROLL)
                     goto(LobsterRoll_End)
                 }

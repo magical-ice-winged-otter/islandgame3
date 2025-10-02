@@ -50,114 +50,128 @@ ISLANDGAME_ORANNA_SSRAIN_Cafeteria_NPC2::
 	return
 
 
-ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl::
+ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Alcremie::
 # 45 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	lock
 # 46 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Alcremie_Text_0
+# 49 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	closemessage
+# 50 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl::
+# 55 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	lock
+# 56 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	faceplayer
-# 47 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 57 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto_if_unset FLAG_ORANNA_SSRAIN_ICECREAM, ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_2
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_1:
-# 56 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 66 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_2
-# 58 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 68 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 IceCreamGirl_End:
-# 59 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 69 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	closemessage
-# 60 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 70 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	release
 	return
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_2:
-# 48 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 58 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_0, MSGBOX_YESNO
-# 49 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 59 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_5
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_4:
-# 53 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 63 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	giveitem ITEM_CASTELIACONE
-# 54 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 64 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	setflag FLAG_ORANNA_SSRAIN_ICECREAM
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_1
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_5:
-# 50 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 60 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_1
-# 51 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 61 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto IceCreamGirl_End
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_4
 
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy::
-# 65 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 75 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	lock
-# 66 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 76 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	faceplayer
-# 67 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 77 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto_if_set FLAG_TEMP_3, ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_2
-# 110 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 120 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_4
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_1:
-# 115 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 125 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 LobsterRoll_End:
-# 116 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 126 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	closemessage
-# 117 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 127 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	release
 	return
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_2:
-# 68 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 78 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto_if_unset FLAG_DAILY_ORANNA_SSRAIN_LOBSTER_ROLL, ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_5
-# 103 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 113 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_3
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_1
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_5:
-# 69 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 79 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_0
-# 72 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 82 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	showmoneybox 0, 0
-# 73 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 83 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_1, MSGBOX_YESNO
-# 76 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 86 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_8
-# 97 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 107 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	hidemoneybox
-# 98 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 108 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto LobsterRoll_End
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_1
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_8:
-# 77 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 87 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	checkmoney 3000
-# 78 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 88 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_11
-# 86 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 96 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	removemoney 3000
-# 87 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 97 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	updatemoneybox
-# 88 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 98 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	playse SE_SHOP
-# 89 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 99 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	waitse
-# 90 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 100 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	hidemoneybox
-# 92 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 101 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	giveitem ITEM_ISLANDGAME_LOBSTER_ROLL
+# 102 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	setflag FLAG_DAILY_ORANNA_SSRAIN_LOBSTER_ROLL
-# 93 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 103 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto LobsterRoll_End
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_1
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_11:
-# 79 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 89 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_2
-# 82 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 92 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	hidemoneybox
-# 83 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 93 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	goto LobsterRoll_End
 	goto ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_1
 
@@ -178,36 +192,41 @@ ISLANDGAME_ORANNA_SSRAIN_Cafeteria_NPC2_Text_0:
 	.string "Now you can stop accusing me of\n"
 	.string "committing Pokémon cruelty!$"
 
+ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Alcremie_Text_0:
+# 47 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+	.string "{COLOR RED}(Despite its appearance, it's just a\n"
+	.string "cake that looks like an Alcremie.)$"
+
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_0:
-# 48 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 58 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "I don't like how this ice cream tastes...\n"
 	.string "Do you want it?$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_1:
-# 50 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 60 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "But I don't want it!$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_IceCreamGirl_Text_2:
-# 56 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 66 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "I wanted orange sher-bet, but they\n"
 	.string "don't have it here...$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_0:
-# 70 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 80 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "Our famous lobster roll is made with\n"
 	.string "only the freshest lobster.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_1:
-# 74 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 84 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "Would you like to try one? It is ¥3000\n"
 	.string "for a roll.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_2:
-# 80 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 90 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "Sorry, you do not have enough money.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_3:
-# 104 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 114 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "Sorry, due to the high popularity of our\n"
 	.string "lobster roll, only one may be purchased\l"
 	.string "per customer every night.\p"
@@ -215,7 +234,7 @@ ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_3:
 	.string "come back tomorrow.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy_Text_4:
-# 111 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
+# 121 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.pory"
 	.string "If you would like to try our famous\n"
 	.string "lobster roll, you will have to come back\l"
 	.string "later tonight.$"

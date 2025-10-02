@@ -3401,4 +3401,11 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u16 gBattleIcons_Pal1[];
 extern const u16 gBattleIcons_Pal2[];
 
+
+
+
+// Islandgame Item Graphics
+extern const u32 gItemIcon_IslandgameLobsterRoll[];
+extern const u16 gItemIconPalette_IslandgameLobsterRoll[];
+
 #endif //GUARD_GRAPHICS_H
