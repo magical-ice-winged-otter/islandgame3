@@ -1175,3 +1175,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Stairs/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/scripts.inc"

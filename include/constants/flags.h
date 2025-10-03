@@ -661,7 +661,7 @@
 
 // island-game hidden items
 #define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_ORAN_BERRY  0x264
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_EXP_CANDY   0x265 
 #define FLAG_UNUSED_0x266  0x266 // Unused Flag
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
@@ -1513,13 +1513,11 @@
 
 
 // island-game general flags
-
-
 #define FLAG_ORANNA_SSRAIN_ICECREAM                 (SYSTEM_FLAGS + 0x85)
-#define FLAG_UNUSED_0x8E6                           (SYSTEM_FLAGS + 0x86) // Unused Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
-#define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
-#define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
+#define FLAG_ORANNA_SSRAIN_GAVE_WATER               (SYSTEM_FLAGS + 0x86)
+#define FLAG_ORANNA_SSRAIN_LEFT_SHIP                (SYSTEM_FLAGS + 0x87)
+#define FLAG_ORANNA_TIDALCOVE_RUKA_DEFEATED         (SYSTEM_FLAGS + 0x88)
+#define FLAG_ORANNA_ROSEVALE_AMULET_COIN            (SYSTEM_FLAGS + 0x89)
 #define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag

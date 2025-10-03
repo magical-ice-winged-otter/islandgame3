@@ -1,0 +1,1 @@
+tools/porytiles/porytiles compile-secondary -output=data/tilesets/secondary/islandgame_ss_rain_secondary -tiles-output-pal=greyscale -target-base-game=pokeemerald -transparency-color=24,40,80 -default-behavior=MB_NORMAL porytiles/islandgame_ss_rain_secondary porytiles/islandgame_ss_rain_general porytiles/metatile_behaviors.h

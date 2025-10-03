@@ -4424,7 +4424,7 @@
     {
       "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_CAPTAINS_ROOM",
       "name": "ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom_Layout",
-      "width": 19,
+      "width": 9,
       "height": 11,
       "primary_tileset": "gTileset_islandgame_ssrain_general",
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
@@ -4454,7 +4454,7 @@
     {
       "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_PLAYER_ROOM",
       "name": "ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_Layout",
-      "width": 19,
+      "width": 9,
       "height": 11,
       "primary_tileset": "gTileset_islandgame_ssrain_general",
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
@@ -4490,6 +4490,16 @@
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room1/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_UPPER_DECK",
+      "name": "ISLANDGAME_ORANNA_SSRAIN_UpperDeck_Layout",
+      "width": 32,
+      "height": 19,
+      "primary_tileset": "gTileset_islandgame_ssrain_general",
+      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/map.bin"
     }
   ]
 }
