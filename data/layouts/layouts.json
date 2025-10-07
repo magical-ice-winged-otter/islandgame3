@@ -4434,7 +4434,7 @@
     {
       "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_ROOM2",
       "name": "ISLANDGAME_ORANNA_SSRAIN_Room2_Layout",
-      "width": 19,
+      "width": 9,
       "height": 11,
       "primary_tileset": "gTileset_islandgame_ssrain_general",
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
@@ -4474,18 +4474,18 @@
     {
       "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_STORAGE",
       "name": "ISLANDGAME_ORANNA_SSRAIN_Storage_Layout",
-      "width": 19,
-      "height": 11,
+      "width": 20,
+      "height": 15,
       "primary_tileset": "gTileset_islandgame_ssrain_general",
-      "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
+      "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Storage/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Storage/map.bin"
     },
     {
       "id": "LAYOUT_ISLANDGAME_ORANNA_SSRAIN_ROOM1",
       "name": "ISLANDGAME_ORANNA_SSRAIN_Room1_Layout",
-      "width": 19,
-      "height": 11,
+      "width": 9,
+      "height": 8,
       "primary_tileset": "gTileset_islandgame_ssrain_general",
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_Room1/border.bin",

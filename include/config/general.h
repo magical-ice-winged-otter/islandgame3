@@ -75,7 +75,7 @@
 #define DEFAULT_PLAYER_NAME          "rain dan"
 
 #define NEW_GAME_STYLE               NEW_GAME_DEFAULT
-#define NEW_GAME_TRUCK_SEQUENCE      TRUE    // If TRUE, plays the default truck shake sequence.
+#define NEW_GAME_TRUCK_SEQUENCE      FALSE    // If TRUE, plays the default truck shake sequence.
 
 // General settings
 #define EXPANSION_INTRO              TRUE    // If TRUE, a custom RHH intro will play after the vanilla copyright screen.

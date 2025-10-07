@@ -15,7 +15,7 @@ script ISLANDGAME_ORANNA_SSRAIN_Hallway_NPC {
     lock
     faceplayer
     msgbox(format(
-        "It's too hot outside. I'm staying in here until it's cooler."
+        "Uggggg. It's sooooo hot outside. I'm staying in here until it's cooler."
     ))
     closemessage
     release
@@ -27,13 +27,13 @@ script ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician {
     if(flag(FLAG_ORANNA_TIDALCOVE_RUKA_DEFEATED)) {
         msgbox(format(
             "Oh hey, you're back!\p"
-            "Unfortunately, we still haven't figured out what's going on with the lights...\p"
-            "We're on our break right now, so you can check it out for yourself if you want.\p"
+            "Unfortunately, I still haven't figured out what's going on with the lights...\p"
+            "I'm on my lunch break right now, so you can check it out for yourself if you want.\p"
             "Just watch your step though... It's pretty dark."
         ))
     }   
     msgbox(format(
-        "We're currently doing some maintenance, so I can't let you downstairs for now.\p"
+        "I'm currently doing some maintenance, so I can't let you downstairs for now.\p"
         "For some reason, the lights just keep turning on and off by themselves.\p"
         "It's almost like they're being possessed by a {COLOR LIGHT_BLUE}ghost {COLOR DARK_GRAY}or something..."
     ))   

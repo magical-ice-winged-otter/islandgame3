@@ -52,11 +52,11 @@ gText_Birch_AndYouAre::
 	.string "about you!$"
 
 gText_Birch_BoyOrGirl::
-	.string "{COLOR GREEN}Choose your character!$"
+	.string "{COLOR GREEN}Choose your avatar!$"
 
 gText_Birch_WhatsYourName::
 	.string "{COLOR GREEN}What's your name? Leave it blank\n"
-	.string " to use the “canon” name!$"
+	.string "to use the “canon” name!$"
 
 gText_Birch_SoItsPlayer::
 	.string "Ah, so it's {PLAYER}?$"

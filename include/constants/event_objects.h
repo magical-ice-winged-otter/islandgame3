@@ -480,6 +480,12 @@
 
 
 #define OBJ_EVENT_PAL_TAG_PALM                    0x130C
+#define OBJ_EVENT_PAL_TAG_LASS                    0x130D
+#define OBJ_EVENT_PAL_TAG_LITTLE_GIRL             0x130E
+#define OBJ_EVENT_PAL_TAG_FAT_MAN                 0x130F
+#define OBJ_EVENT_PAL_TAG_SAILOR                  0x1310
+#define OBJ_EVENT_PAL_TAG_GENTLEMAN               0x1311
+#define OBJ_EVENT_PAL_TAG_EXPERT_F                0x1312
 
 
 

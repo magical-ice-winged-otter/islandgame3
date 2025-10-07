@@ -75,7 +75,7 @@ ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes::
 # 55 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_RUNNING_SHOES, ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes_2
 ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes_1:
-# 63 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
+# 64 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	releaseall
 	return
 
@@ -88,21 +88,23 @@ ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes_2:
 	closemessage
 # 61 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+# 62 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
+	waitmovement 0
 	goto ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes_1
 
 
 ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_RunningShoes::
-# 67 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
-	lockall
 # 68 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
-	setflag FLAG_RECEIVED_RUNNING_SHOES
+	lockall
 # 69 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+# 70 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	msgbox ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_RunningShoes_Text_0
-# 73 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
-	removeobject VAR_LAST_TALKED
 # 74 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
-	setflag FLAG_SYS_B_DASH
+	removeobject VAR_LAST_TALKED
 # 75 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
+	setflag FLAG_SYS_B_DASH
+# 76 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	releaseall
 	return
 
@@ -140,7 +142,7 @@ ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes_Text_0:
 	.string "I leave.)$"
 
 ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_RunningShoes_Text_0:
-# 70 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
+# 71 "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.pory"
 	.string "{COLOR GREEN}You changed into your Running Shoes!\n"
 	.string "Press “B” to run!\p"
 	.string "You can also press the “R” button to\n"

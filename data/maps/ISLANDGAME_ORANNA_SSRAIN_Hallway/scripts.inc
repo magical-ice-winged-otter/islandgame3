@@ -54,22 +54,23 @@ ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician_2:
 
 ISLANDGAME_ORANNA_SSRAIN_Hallway_NPC_Text_0:
 # 18 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Hallway/scripts.pory"
-	.string "It's too hot outside. I'm staying in\n"
-	.string "here until it's cooler.$"
+	.string "Uggggg. It's sooooo hot outside. I'm\n"
+	.string "staying in here until it's cooler.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician_Text_0:
 # 29 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Hallway/scripts.pory"
 	.string "Oh hey, you're back!\p"
-	.string "Unfortunately, we still haven't figured\n"
+	.string "Unfortunately, I still haven't figured\n"
 	.string "out what's going on with the lights...\p"
-	.string "We're on our break right now, so you can\n"
-	.string "check it out for yourself if you want.\p"
+	.string "I'm on my lunch break right now, so you\n"
+	.string "can check it out for yourself if you\l"
+	.string "want.\p"
 	.string "Just watch your step though... It's\n"
 	.string "pretty dark.$"
 
 ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician_Text_1:
 # 36 "data/maps/ISLANDGAME_ORANNA_SSRAIN_Hallway/scripts.pory"
-	.string "We're currently doing some maintenance,\n"
+	.string "I'm currently doing some maintenance,\n"
 	.string "so I can't let you downstairs for now.\p"
 	.string "For some reason, the lights just keep\n"
 	.string "turning on and off by themselves.\p"

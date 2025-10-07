@@ -1,4 +1,4 @@
-// island-game
+// island-game player char
 const u32 gObjectEventPic_OliviaNormalRunning[] = INCBIN_U32("graphics/object_events/pics/people/olivia/walking.4bpp", "graphics/object_events/pics/people/olivia/running.4bpp");
 const u32 gObjectEventPic_OliviaSurfing[] = INCBIN_U32("graphics/object_events/pics/people/olivia/surfing.4bpp");
 const u32 gObjectEventPic_OliviaFishing[] = INCBIN_U32("graphics/object_events/pics/people/olivia/fishing.4bpp");
@@ -28,12 +28,18 @@ const u16 gObjectEventPal_OliverWatering[] = INCBIN_U16("graphics/object_events/
 const u16 gObjectEventPal_OliverSurfing[] = INCBIN_U16("graphics/object_events/palettes/oliver_surfing.gbapal");
 
 
-
-
+// island-game notables
 const u32 gObjectEventPic_Palm[] = INCBIN_U32("graphics/object_events/pics/people/palm.4bpp");
 const u16 gObjectEventPal_Palm[] = INCBIN_U16("graphics/object_events/pics/people/palm.gbapal");
 
 
+// island-game trainers
+const u16 gObjectEventPal_Lass[] = INCBIN_U16("graphics/object_events/pics/people/lass.gbapal");
+const u16 gObjectEventPal_FatMan[] = INCBIN_U16("graphics/object_events/pics/people/fat_man.gbapal");
+const u16 gObjectEventPal_Sailor[] = INCBIN_U16("graphics/object_events/pics/people/sailor.gbapal");
+const u16 gObjectEventPal_LittleGirl[] = INCBIN_U16("graphics/object_events/pics/people/little_girl.gbapal");
+const u16 gObjectEventPal_Gentleman[] = INCBIN_U16("graphics/object_events/pics/people/gentleman.gbapal");
+const u16 gObjectEventPal_ExpertF[] = INCBIN_U16("graphics/object_events/pics/people/expert_f.gbapal");
 
 
 

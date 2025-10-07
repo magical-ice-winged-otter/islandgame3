@@ -59,6 +59,7 @@ script ISLANDGAME_ORANNA_SSRAIN_PlayerRoom_NeedShoes {
         ))
         closemessage
         applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown)
+        waitmovement(0)
     }
     releaseall
 }

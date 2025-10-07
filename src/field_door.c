@@ -89,6 +89,16 @@ static const u8 sDoorAnimTiles_BattleTentInterior[] = INCBIN_U8("graphics/door_a
 static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_lobby_elevator.4bpp");
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 
+
+
+// island-game
+static const u8 sDoorAnimTiles_islandgame_ss_rain_general_00[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_00.4bpp");
+static const u8 sDoorAnimTiles_islandgame_ss_rain_general_01[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_01.4bpp");
+
+
+
+
+
 #define CLOSED_DOOR_TILES_OFFSET 0xFFFF
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -197,8 +207,21 @@ static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
 
+
+
+// island-game
+static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_00[] = {2,2,2,2,2,2,2,2};
+static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_01[] = {2,2,2,2,2,2,2,2};
+
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
+    // island-game
+    {METATILE_islandgame_ss_rain_general_door_00,                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_islandgame_ss_rain_general_00, sDoorAnimPalettes_islandgame_ss_rain_general_00},
+    {METATILE_islandgame_ss_rain_general_door_01,                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_islandgame_ss_rain_general_01, sDoorAnimPalettes_islandgame_ss_rain_general_01},
+
+
+
+    
     {METATILE_General_Door,                                 DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_General, sDoorAnimPalettes_General},
     {METATILE_General_Door_PokeCenter,                      DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
     {METATILE_General_Door_Gym,                             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},

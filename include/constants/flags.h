@@ -1226,8 +1226,11 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
+
+
+//island-game : Pokeball Items
+#define FLAG_ORANNA_SSRAIN_TM_CHARGE_BEAM                           0x493
+#define FLAG_ORANNA_SSRAIN_LEFTOVERS                                0x494
 #define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
@@ -1317,7 +1320,7 @@
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
+#define FLAG_SMART_WILD_AI                                          0x4EE
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
@@ -1518,7 +1521,7 @@
 #define FLAG_ORANNA_SSRAIN_LEFT_SHIP                (SYSTEM_FLAGS + 0x87)
 #define FLAG_ORANNA_TIDALCOVE_RUKA_DEFEATED         (SYSTEM_FLAGS + 0x88)
 #define FLAG_ORANNA_ROSEVALE_AMULET_COIN            (SYSTEM_FLAGS + 0x89)
-#define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
+#define FLAG_ORANNA_SSRAIN_ROTOM_DEFEATED           (SYSTEM_FLAGS + 0x8A)
 #define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
 #define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag

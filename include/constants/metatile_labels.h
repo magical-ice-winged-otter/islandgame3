@@ -772,9 +772,14 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
+
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
+
+// gTileset_islandgame_ss_rain_general
+#define METATILE_islandgame_ss_rain_general_door_00  0x0FA
+#define METATILE_islandgame_ss_rain_general_door_01  0x071
 
 // Other
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205

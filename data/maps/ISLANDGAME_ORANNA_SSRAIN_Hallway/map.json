@@ -48,6 +48,34 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_STAIRS",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 13,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_PLAYER_ROOM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_ROOM1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_ROOM2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_STORAGE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

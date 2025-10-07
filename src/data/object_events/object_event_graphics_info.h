@@ -490,7 +490,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleBoy = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LittleGirl = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LITTLE_GIRL,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -585,7 +585,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Woman1 = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FatMan = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_FAT_MAN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -680,7 +680,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertM = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ExpertF = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_EXPERT_F,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -1155,7 +1155,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Scientist1 = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_LASS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -1174,7 +1174,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lass = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GENTLEMAN,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
@@ -1193,7 +1193,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sailor = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_SAILOR,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
