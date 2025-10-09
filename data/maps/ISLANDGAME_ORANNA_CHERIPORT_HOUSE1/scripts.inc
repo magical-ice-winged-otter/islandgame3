@@ -1,0 +1,3 @@
+ISLANDGAME_ORANNA_CHERIPORT_HOUSE1_MapScripts::
+	.byte 0
+

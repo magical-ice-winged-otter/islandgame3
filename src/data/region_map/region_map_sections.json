@@ -1234,6 +1234,10 @@
     {
       "id": "MAPSEC_SSRAIN",
       "name": "S.S. Rain"
+    },
+    {
+      "id": "MAPSEC_CHERIPORT",
+      "name": "Cheriport"
     }
   ]
 }

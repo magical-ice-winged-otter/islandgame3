@@ -213,3 +213,9 @@ const u16 gMetatileAttributes_islandgame_ssrain_general[] = INCBIN_U16("data/til
 
 const u16 gMetatiles_islandgame_ssrain_secondary[] = INCBIN_U16("data/tilesets/secondary/islandgame_ssrain_secondary/metatiles.bin");
 const u16 gMetatileAttributes_islandgame_ssrain_secondary[] = INCBIN_U16("data/tilesets/secondary/islandgame_ssrain_secondary/metatile_attributes.bin");
+
+const u16 gMetatiles_islandgame_oranna_general[] = INCBIN_U16("data/tilesets/primary/islandgame_oranna_general/metatiles.bin");
+const u16 gMetatileAttributes_islandgame_oranna_general[] = INCBIN_U16("data/tilesets/primary/islandgame_oranna_general/metatile_attributes.bin");
+
+const u16 gMetatiles_islandgame_oranna_cheriport[] = INCBIN_U16("data/tilesets/secondary/islandgame_oranna_cheriport/metatiles.bin");
+const u16 gMetatileAttributes_islandgame_oranna_cheriport[] = INCBIN_U16("data/tilesets/secondary/islandgame_oranna_cheriport/metatile_attributes.bin");

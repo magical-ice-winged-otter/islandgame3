@@ -33,14 +33,27 @@ const u32 gObjectEventPic_Palm[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u16 gObjectEventPal_Palm[] = INCBIN_U16("graphics/object_events/pics/people/palm.gbapal");
 
 
-// island-game trainers
+// island-game extra NPCs
+const u32 gObjectEventPic_SilverwingM[] = INCBIN_U32("graphics/object_events/pics/people/silverwing_m.4bpp");
+const u16 gObjectEventPal_SilverwingM[] = INCBIN_U16("graphics/object_events/pics/people/silverwing_m.gbapal");
+const u32 gObjectEventPic_SilverwingF[] = INCBIN_U32("graphics/object_events/pics/people/silverwing_f.4bpp");
+const u16 gObjectEventPal_SilverwingF[] = INCBIN_U16("graphics/object_events/pics/people/silverwing_f.gbapal");
+const u32 gObjectEventPic_GameboyKid2[] = INCBIN_U32("graphics/object_events/pics/people/gameboy_kid2.4bpp");
+const u16 gObjectEventPal_GameboyKid2[] = INCBIN_U16("graphics/object_events/pics/people/gameboy_kid2.gbapal");
+const u32 gObjectEventPic_TuberFSwimming[] = INCBIN_U32("graphics/object_events/pics/people/tuber_f_swimming.4bpp");
+const u16 gObjectEventPal_TuberFSwimming[] = INCBIN_U16("graphics/object_events/pics/people/tuber_f_swimming.gbapal");
+
+// island-game reworked trainer pals
 const u16 gObjectEventPal_Lass[] = INCBIN_U16("graphics/object_events/pics/people/lass.gbapal");
 const u16 gObjectEventPal_FatMan[] = INCBIN_U16("graphics/object_events/pics/people/fat_man.gbapal");
 const u16 gObjectEventPal_Sailor[] = INCBIN_U16("graphics/object_events/pics/people/sailor.gbapal");
 const u16 gObjectEventPal_LittleGirl[] = INCBIN_U16("graphics/object_events/pics/people/little_girl.gbapal");
 const u16 gObjectEventPal_Gentleman[] = INCBIN_U16("graphics/object_events/pics/people/gentleman.gbapal");
 const u16 gObjectEventPal_ExpertF[] = INCBIN_U16("graphics/object_events/pics/people/expert_f.gbapal");
-
+const u16 gObjectEventPal_ExpertM[] = INCBIN_U16("graphics/object_events/pics/people/expert_m.gbapal");
+const u16 gObjectEventPal_TuberMSwimming[] = INCBIN_U16("graphics/object_events/pics/people/tuber_m_swimming.gbapal");
+const u16 gObjectEventPal_TuberM[] = INCBIN_U16("graphics/object_events/pics/people/tuber_m.gbapal");
+const u16 gObjectEventPal_TuberF[] = INCBIN_U16("graphics/object_events/pics/people/tuber_f.gbapal");
 
 
 

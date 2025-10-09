@@ -1251,7 +1251,7 @@ static const u8 *const sUnused_StatStrings[] =
 #define ROTOM_HEAT_MOVE  MOVE_OVERHEAT
 #define ROTOM_WASH_MOVE  MOVE_HYDRO_PUMP
 #define ROTOM_FROST_MOVE MOVE_BLIZZARD
-#define ROTOM_FAN_MOVE   MOVE_AIR_SLASH
+#define ROTOM_FAN_MOVE   MOVE_HURRICANE
 #define ROTOM_MOW_MOVE   MOVE_LEAF_STORM
 
 static const u16 sRotomFormChangeMoves[5] =

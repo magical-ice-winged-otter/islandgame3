@@ -268,6 +268,10 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverWater
 
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Palm;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SilverwingM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SilverwingF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GameboyKid2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TuberFSwimming;
 
 
 
@@ -290,6 +294,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 
 
     [OBJ_EVENT_GFX_PALM] =                     &gObjectEventGraphicsInfo_Palm,
+    [OBJ_EVENT_GFX_SILVERWING_M] =             &gObjectEventGraphicsInfo_SilverwingM,
+    [OBJ_EVENT_GFX_SILVERWING_F] =             &gObjectEventGraphicsInfo_SilverwingF,
+    [OBJ_EVENT_GFX_GAMEBOY_KID_2] =            &gObjectEventGraphicsInfo_GameboyKid2,
+    [OBJ_EVENT_GFX_TUBER_F_SWIMMING] =         &gObjectEventGraphicsInfo_TuberFSwimming,
 
 
 

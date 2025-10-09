@@ -660,9 +660,9 @@
 
 
 // island-game hidden items
-#define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_ORAN_BERRY  0x264
-#define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_EXP_CANDY   0x265 
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_ORAN_BERRY       0x264
+#define FLAG_HIDDEN_ITEM_ORANNA_SSRAIN_EXP_CANDY        0x265 
+#define FLAG_HIDDEN_ITEM_ORANNA_CHERIPORT_EXP_CANDY     0x266
 #define FLAG_UNUSED_0x267  0x267 // Unused Flag
 #define FLAG_UNUSED_0x268  0x268 // Unused Flag
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
@@ -1231,7 +1231,7 @@
 //island-game : Pokeball Items
 #define FLAG_ORANNA_SSRAIN_TM_CHARGE_BEAM                           0x493
 #define FLAG_ORANNA_SSRAIN_LEFTOVERS                                0x494
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
+#define FLAG_ORANNA_CHERIPORT_HP_UP                                 0x495
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
@@ -1522,8 +1522,8 @@
 #define FLAG_ORANNA_TIDALCOVE_RUKA_DEFEATED         (SYSTEM_FLAGS + 0x88)
 #define FLAG_ORANNA_ROSEVALE_AMULET_COIN            (SYSTEM_FLAGS + 0x89)
 #define FLAG_ORANNA_SSRAIN_ROTOM_DEFEATED           (SYSTEM_FLAGS + 0x8A)
-#define FLAG_UNUSED_0x8EB                           (SYSTEM_FLAGS + 0x8B) // Unused Flag
-#define FLAG_UNUSED_0x8EC                           (SYSTEM_FLAGS + 0x8C) // Unused Flag
+#define FLAG_ORANNA_CHERIPORT_GOT_EEVEE             (SYSTEM_FLAGS + 0x8B)
+#define FLAG_ORANNA_CHERIPORT_TOWN_MAP              (SYSTEM_FLAGS + 0x8C)
 #define FLAG_UNUSED_0x8ED                           (SYSTEM_FLAGS + 0x8D) // Unused Flag
 #define FLAG_UNUSED_0x8EE                           (SYSTEM_FLAGS + 0x8E) // Unused Flag
 #define FLAG_UNUSED_0x8EF                           (SYSTEM_FLAGS + 0x8F) // Unused Flag

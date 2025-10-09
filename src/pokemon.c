@@ -5852,7 +5852,13 @@ u16 GetBattleBGM(void)
     }
     else
     {
-        return MUS_VS_WILD;
+        switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
+        {
+        case SPECIES_ROTOM:
+            return MUS_DP_VS_LEGEND;
+        default:
+            return MUS_DP_VS_WILD;
+        }
     }
 }
 

@@ -95,7 +95,10 @@ static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/d
 static const u8 sDoorAnimTiles_islandgame_ss_rain_general_00[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_00.4bpp");
 static const u8 sDoorAnimTiles_islandgame_ss_rain_general_01[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_01.4bpp");
 
+static const u8 sDoorAnimTiles_islandgame_oranna_general_00[]    = INCBIN_U8("graphics/door_anims/islandgame_oranna_general_00.4bpp");
+static const u8 sDoorAnimTiles_islandgame_oranna_general_01[]    = INCBIN_U8("graphics/door_anims/islandgame_oranna_general_01.4bpp");
 
+static const u8 sDoorAnimTiles_islandgame_oranna_cheriport[]     = INCBIN_U8("graphics/door_anims/islandgame_oranna_cheriport.4bpp");
 
 
 
@@ -212,12 +215,18 @@ static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7,
 // island-game
 static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_00[] = {2,2,2,2,2,2,2,2};
 static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_01[] = {2,2,2,2,2,2,2,2};
+static const u8 sDoorAnimPalettes_islandgame_oranna_general_00[] = {3,3,4,4,4,4,3,3};
+static const u8 sDoorAnimPalettes_islandgame_oranna_general_01[] = {3,3,4,4,4,4,3,3};
+static const u8 sDoorAnimPalettes_islandgame_oranna_cheriport[] = {8,8,8,8,7,7,8,8};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
     // island-game
     {METATILE_islandgame_ss_rain_general_door_00,                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_islandgame_ss_rain_general_00, sDoorAnimPalettes_islandgame_ss_rain_general_00},
     {METATILE_islandgame_ss_rain_general_door_01,                DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_islandgame_ss_rain_general_01, sDoorAnimPalettes_islandgame_ss_rain_general_01},
+    {METATILE_islandgame_oranna_general_door_00,                 DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_islandgame_oranna_general_00, sDoorAnimPalettes_islandgame_oranna_general_00},
+    {METATILE_islandgame_oranna_general_door_01,                 DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_islandgame_oranna_general_01, sDoorAnimPalettes_islandgame_oranna_general_01},
+    {METATILE_islandgame_oranna_cheriport_door,                  DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_islandgame_oranna_cheriport, sDoorAnimPalettes_islandgame_oranna_cheriport},
 
 
 

@@ -32,4 +32,9 @@ void InitTilesetAnim_EliteFour(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);
 
+
+
+// island-game start
+void InitTilesetAnim_islandgame_ss_rain_general(void);
+
 #endif // GUARD_TILESET_ANIMS_H

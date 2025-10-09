@@ -92,8 +92,21 @@ static const struct SpriteFrameImage sPicTable_Palm[] = {
     overworld_ascending_frames(gObjectEventPic_Palm, 2, 4),
 };
 
+static const struct SpriteFrameImage sPicTable_SilverwingM[] = {
+    overworld_ascending_frames(gObjectEventPic_SilverwingM, 2, 4),
+};
 
+static const struct SpriteFrameImage sPicTable_SilverwingF[] = {
+    overworld_ascending_frames(gObjectEventPic_SilverwingF, 2, 4),
+};
 
+static const struct SpriteFrameImage sPicTable_GameboyKid2[] = {
+    overworld_ascending_frames(gObjectEventPic_GameboyKid2, 2, 4),
+};
+
+static const struct SpriteFrameImage sPicTable_TuberFSwimming[] = {
+    overworld_ascending_frames(gObjectEventPic_TuberFSwimming, 2, 4),
+};
 
 
 
@@ -349,11 +362,11 @@ static const struct SpriteFrameImage sPicTable_RunningTriathleteF[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_TuberF[] = {
-    overworld_ascending_frames(gObjectEventPic_TuberF, 2, 2),
+    overworld_ascending_frames(gObjectEventPic_TuberF, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_TuberM[] = {
-    overworld_ascending_frames(gObjectEventPic_TuberM, 2, 2),
+    overworld_ascending_frames(gObjectEventPic_TuberM, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Hiker[] = {
@@ -1104,7 +1117,7 @@ static const struct SpriteFrameImage sPicTable_RayquazaStill[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_TuberMSwimming[] = {
-    overworld_ascending_frames(gObjectEventPic_TuberMSwimming, 2, 2),
+    overworld_ascending_frames(gObjectEventPic_TuberMSwimming, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_Mom[] = {

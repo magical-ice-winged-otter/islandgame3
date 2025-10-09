@@ -4500,6 +4500,86 @@
       "secondary_tileset": "gTileset_islandgame_ssrain_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_HOUSE2",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_HOUSE2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_HOUSE2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_HOUSE2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_Layout",
+      "width": 60,
+      "height": 49,
+      "primary_tileset": "gTileset_islandgame_oranna_general",
+      "secondary_tileset": "gTileset_islandgame_oranna_cheriport",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_HOUSE1",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_HOUSE1_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_HOUSE1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_HOUSE1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_LAB_2F",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_LAB_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_LAB_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_LAB_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_PKMNMART",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_PKMNMART_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNMART/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNMART/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_ORANNA_CHERIPORT_LAB",
+      "name": "ISLANDGAME_ORANNA_CHERIPORT_LAB_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_LAB/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_ORANNA_CHERIPORT_LAB/map.bin"
     }
   ]
 }

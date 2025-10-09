@@ -772,21 +772,29 @@
 #define METATILE_TrickHousePuzzle_RedDoorV_Retracted          0x24A
 #define METATILE_TrickHousePuzzle_Stairs_Down                 0x20B
 
-
 // gTileset_Underwater
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
-// gTileset_islandgame_ss_rain_general
-#define METATILE_islandgame_ss_rain_general_door_00  0x0FA
-#define METATILE_islandgame_ss_rain_general_door_01  0x071
+// gTileset_islandgame_oranna_cheriport
+#define METATILE_islandgame_oranna_cheriport_door  0x24C
+
+// gTileset_islandgame_oranna_general
+#define METATILE_islandgame_oranna_general_door_00  0x0C1
+#define METATILE_islandgame_oranna_general_door_01  0x0A1
+
+// gTileset_islandgame_ssrain_general
+#define METATILE_islandgame_ssrain_general_door_00  0x0FA
+#define METATILE_islandgame_ssrain_general_door_01  0x071
 
 // Other
-#define METATILE_RSMossdeepGym_RedArrow_Down   0x205
-#define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
-#define METATILE_RSMossdeepGym_RedArrow_Right  0x204
-#define METATILE_RSMossdeepGym_RedArrow_Up     0x20D
-#define METATILE_RSMossdeepGym_Switch_Down     0x239
-#define METATILE_RSMossdeepGym_Switch_Up       0x238
+#define METATILE_RSMossdeepGym_RedArrow_Down         0x205
+#define METATILE_RSMossdeepGym_RedArrow_Left         0x20C
+#define METATILE_RSMossdeepGym_RedArrow_Right        0x204
+#define METATILE_RSMossdeepGym_RedArrow_Up           0x20D
+#define METATILE_RSMossdeepGym_Switch_Down           0x239
+#define METATILE_RSMossdeepGym_Switch_Up             0x238
+#define METATILE_islandgame_ss_rain_general_door_00  0x0FA
+#define METATILE_islandgame_ss_rain_general_door_01  0x071
 
 #endif // GUARD_METATILE_LABELS_H

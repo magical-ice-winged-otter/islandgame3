@@ -1177,3 +1177,19 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room1/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_HOUSE2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_HOUSE1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_LAB/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_LAB_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNMART/scripts.inc"

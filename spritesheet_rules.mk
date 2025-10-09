@@ -46,12 +46,22 @@ $(OBJEVENTGFXDIR)/people/oliver/watering.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
 
+
+
 $(OBJEVENTGFXDIR)/people/palm.4bpp: graphics/object_events/pics/people/palm.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/silverwing_m.4bpp: graphics/object_events/pics/people/silverwing_m.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/silverwing_f.4bpp: graphics/object_events/pics/people/silverwing_f.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/gameboy_kid2.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/tuber_f_swimming.4bpp: graphics/object_events/pics/people/tuber_f_swimming.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 
 
@@ -415,13 +425,13 @@ $(OBJEVENTGFXDIR)/people/teala.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/tuber_f.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/tuber_m.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/tuber_m_swimming.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/union_room_attendant.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

@@ -48,9 +48,9 @@
 #define BERRY_TREE_ROUTE_102_ORAN     2
 #define BERRY_TREE_ROUTE_104_SOIL_1   3
 #define BERRY_TREE_ROUTE_104_ORAN_1   4
-#define BERRY_TREE_ROUTE_103_CHERI_1  5
+#define BERRY_TREE_ROUTE_103_CHERI_1  5 // Cheriport
 #define BERRY_TREE_ROUTE_103_LEPPA    6
-#define BERRY_TREE_ROUTE_103_CHERI_2  7
+#define BERRY_TREE_ROUTE_103_CHERI_2  7 // Cheriport
 #define BERRY_TREE_ROUTE_104_CHERI_1  8
 #define BERRY_TREE_ROUTE_104_SOIL_2   9
 #define BERRY_TREE_ROUTE_104_LEPPA    10
@@ -138,4 +138,15 @@
 
 #define BERRY_TREES_COUNT 128
 
+// For island-game
+// Note: In the future, we will get rid of the vanilla definitions, and just rename the below
+// This is so that we don't have to move things around in the codebase.
+#define BERRY_TREE_CHERIPORT_1          BERRY_TREE_ROUTE_103_CHERI_1
+#define BERRY_TREE_CHERIPORT_2          BERRY_TREE_ROUTE_103_CHERI_2
+
+
+
+
+
 #endif // GUARD_CONSTANTS_BERRY_H
+

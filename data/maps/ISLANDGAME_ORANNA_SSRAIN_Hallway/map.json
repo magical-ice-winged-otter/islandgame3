@@ -76,6 +76,13 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_ORANNA_SSRAIN_STORAGE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ORANNA_CHERIPORT",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],

@@ -861,3 +861,25 @@ const struct Tileset gTileset_islandgame_ssrain_secondary =
     .metatileAttributes = gMetatileAttributes_islandgame_ssrain_secondary,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_islandgame_oranna_general =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_islandgame_oranna_general,
+    .palettes = gTilesetPalettes_islandgame_oranna_general,
+    .metatiles = gMetatiles_islandgame_oranna_general,
+    .metatileAttributes = gMetatileAttributes_islandgame_oranna_general,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_islandgame_oranna_cheriport =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_islandgame_oranna_cheriport,
+    .palettes = gTilesetPalettes_islandgame_oranna_cheriport,
+    .metatiles = gMetatiles_islandgame_oranna_cheriport,
+    .metatileAttributes = gMetatileAttributes_islandgame_oranna_cheriport,
+    .callback = NULL,
+};
