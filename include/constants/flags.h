@@ -1604,7 +1604,7 @@
 
 // island-game daily flags
 #define FLAG_DAILY_ORANNA_SSRAIN_LOBSTER_ROLL       (DAILY_FLAGS_START + 0x15)
-#define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
+#define FLAG_DAILY_ORANNA_CHERIPORT_DRINK           (DAILY_FLAGS_START + 0x16)
 #define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
 #define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
 #define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag

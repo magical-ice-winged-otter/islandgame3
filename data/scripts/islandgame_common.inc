@@ -1,402 +1,433 @@
-ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F_MapScripts::
-	.byte 0
+ISLANDGAME_COMMON_PKMNCENTER_Nurse::
+# 6 "data/scripts/islandgame_common.pory"
+	goto_if_unset FLAG_ORANNA_CHERIPORT_GOT_EEVEE, ISLANDGAME_COMMON_PKMNCENTER_Nurse_1
+# 16 "data/scripts/islandgame_common.pory"
+	setvar VAR_0x800B, 1
+# 17 "data/scripts/islandgame_common.pory"
+	call Common_EventScript_PkmnCenterNurse
+# 18 "data/scripts/islandgame_common.pory"
+	waitmessage
+# 19 "data/scripts/islandgame_common.pory"
+	waitbuttonpress
+# 20 "data/scripts/islandgame_common.pory"
+	release
+	return
+
+ISLANDGAME_COMMON_PKMNCENTER_Nurse_1:
+# 7 "data/scripts/islandgame_common.pory"
+	lock
+# 8 "data/scripts/islandgame_common.pory"
+	msgbox ISLANDGAME_COMMON_PKMNCENTER_Nurse_Text_0
+# 12 "data/scripts/islandgame_common.pory"
+	closemessage
+# 13 "data/scripts/islandgame_common.pory"
+	release
+	return
 
 
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger::
-# 7 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 26 "data/scripts/islandgame_common.pory"
 	lock
-# 8 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 27 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 9 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 28 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_0, MSGBOX_YESNO
-# 14 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 33 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_2
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_1:
-# 26 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 45 "data/scripts/islandgame_common.pory"
 	closemessage
-# 27 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 46 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_2:
-# 15 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 34 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_TO_BLACK
-# 16 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 35 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_1
-# 17 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 36 "data/scripts/islandgame_common.pory"
 	waitmessage
-# 18 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 37 "data/scripts/islandgame_common.pory"
 	special StartWallClock
-# 19 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 38 "data/scripts/islandgame_common.pory"
 	waitstate
-# 20 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 39 "data/scripts/islandgame_common.pory"
 	delay 30
-# 21 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 40 "data/scripts/islandgame_common.pory"
 	setflag FLAG_SET_WALL_CLOCK
-# 22 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 41 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_2
 	goto ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_1
 
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater::
-# 33 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 52 "data/scripts/islandgame_common.pory"
 	lock
-# 34 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 53 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 35 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 54 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_0, MSGBOX_YESNO
-# 39 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 58 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_2
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_1:
-# 99 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 118 "data/scripts/islandgame_common.pory"
 NameRater_End:
-# 100 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 119 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_7
-# 101 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 120 "data/scripts/islandgame_common.pory"
 	closemessage
-# 102 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 121 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_2:
-# 40 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 59 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_1
-# 43 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 62 "data/scripts/islandgame_common.pory"
 	special ChoosePartyMon
-# 44 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 63 "data/scripts/islandgame_common.pory"
 	waitstate
-# 45 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 64 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_ne ISLANDGAME_COMMON_PKMNCENTER_NameRater_4
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_1
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_4:
-# 46 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 65 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
-# 47 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 66 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, SPECIES_EGG
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_7
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_6:
-# 53 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 72 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 54 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 73 "data/scripts/islandgame_common.pory"
 	special IsMonOTIDNotPlayers
-# 55 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 74 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_10
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_9:
-# 64 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 83 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, MonOTNameNotPlayer
-# 65 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 84 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 66 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 85 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_13
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_12:
-# 75 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 94 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_4, MSGBOX_YESNO
-# 79 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 98 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_15
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_1
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_7:
-# 48 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 67 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_2
-# 51 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 70 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_6
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_10:
-# 56 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 75 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_3
-# 62 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 81 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_9
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_13:
-# 67 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 86 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_3
-# 73 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 92 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_12
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_15:
-# 80 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 99 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_5
-# 83 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 102 "data/scripts/islandgame_common.pory"
 	call Common_EventScript_NameReceivedPartyMon
-# 84 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 103 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
-# 85 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 104 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 86 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 105 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_NameRater_17
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_1
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_17:
-# 87 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 106 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_6
 	goto ISLANDGAME_COMMON_PKMNCENTER_NameRater_1
 
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter::
-# 109 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 128 "data/scripts/islandgame_common.pory"
 	lock
-# 110 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 129 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 111 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 130 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_0, MSGBOX_YESNO
-# 115 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 134 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_2
-# 171 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 190 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_8
-# 172 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 191 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_1:
-# 175 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 194 "data/scripts/islandgame_common.pory"
 MoveDeleter_End:
-# 176 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 195 "data/scripts/islandgame_common.pory"
 	closemessage
-# 177 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 196 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_2:
-# 116 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 135 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_1
-# 119 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 138 "data/scripts/islandgame_common.pory"
 	special ChoosePartyMon
-# 120 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 139 "data/scripts/islandgame_common.pory"
 	waitstate
-# 121 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 140 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_6
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_5:
-# 128 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 147 "data/scripts/islandgame_common.pory"
 	special IsSelectedMonEgg
-# 129 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 148 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_9
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_8:
-# 135 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 154 "data/scripts/islandgame_common.pory"
 	special GetNumMovesSelectedMonHas
-# 136 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 155 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_12
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_11:
-# 144 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 163 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_5
-# 147 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 166 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_TO_BLACK
-# 148 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 167 "data/scripts/islandgame_common.pory"
 	special MoveDeleterChooseMoveToForget
-# 149 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 168 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_FROM_BLACK
-# 150 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
-	goto_if_eq VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter
-# 151 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 169 "data/scripts/islandgame_common.pory"
+	goto_if_eq VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_PKMNCENTER_2F_MoveDeleter
+# 170 "data/scripts/islandgame_common.pory"
 	special BufferMoveDeleterNicknameAndMove
-# 152 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 171 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_6, MSGBOX_YESNO
-# 155 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 174 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_14
-# 166 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 185 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_8
-# 167 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 186 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_1
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_6:
-# 122 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 141 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_2
-# 126 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 145 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_5
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_9:
-# 130 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 149 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_3
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_8
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_12:
-# 137 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 156 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_4
-# 142 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 161 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_11
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_14:
-# 156 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 175 "data/scripts/islandgame_common.pory"
 	special MoveDeleterForgetMove
-# 157 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 176 "data/scripts/islandgame_common.pory"
 	playfanfare MUS_MOVE_DELETED
-# 158 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 177 "data/scripts/islandgame_common.pory"
 	waitfanfare
-# 159 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 178 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_7
-# 163 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 182 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_1
 
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner::
-# 184 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 203 "data/scripts/islandgame_common.pory"
 	lock
-# 185 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 204 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 186 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 205 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_0
-# 191 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 210 "data/scripts/islandgame_common.pory"
 	showmoneybox 0, 0
-# 192 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 211 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_1, MSGBOX_YESNO
-# 195 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 214 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_2
-# 252 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 271 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_8
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_1:
-# 255 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 274 "data/scripts/islandgame_common.pory"
 MoveRelearner_End:
-# 256 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 275 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 257 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 276 "data/scripts/islandgame_common.pory"
 	closemessage
-# 258 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 277 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_2:
-# 196 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 215 "data/scripts/islandgame_common.pory"
 	checkmoney 1000
-# 197 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 216 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_5
-# 204 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 223 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_3
-# 207 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 226 "data/scripts/islandgame_common.pory"
 	special ChooseMonForMoveRelearner
-# 208 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 227 "data/scripts/islandgame_common.pory"
 	waitstate
-# 209 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 228 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_9
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_8:
-# 215 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 234 "data/scripts/islandgame_common.pory"
 	special IsSelectedMonEgg
-# 216 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 235 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_12
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_11:
-# 222 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 241 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8005, 0
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_15
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_14:
-# 228 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 247 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_7
-# 231 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 250 "data/scripts/islandgame_common.pory"
 	special TeachMoveRelearnerMove
-# 232 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 251 "data/scripts/islandgame_common.pory"
 	waitstate
-# 233 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 252 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, 0
 	goto_if_eq ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_18
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_17:
-# 237 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 256 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_9
-# 240 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 259 "data/scripts/islandgame_common.pory"
 	waitmessage
-# 241 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 260 "data/scripts/islandgame_common.pory"
 	showmoneybox 0, 0
-# 242 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 261 "data/scripts/islandgame_common.pory"
 	removemoney 1000
-# 243 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 262 "data/scripts/islandgame_common.pory"
 	updatemoneybox
-# 244 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 263 "data/scripts/islandgame_common.pory"
 	playse SE_SHOP
-# 245 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 264 "data/scripts/islandgame_common.pory"
 	waitse
-# 246 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 265 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_10
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_1
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_5:
-# 198 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 217 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_2
-# 201 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 220 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_1
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_9:
-# 210 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 229 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_4
-# 213 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 232 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_8
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_12:
-# 217 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 236 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_5
-# 220 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 239 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_11
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_15:
-# 223 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 242 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_6
-# 226 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 245 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_14
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_18:
-# 234 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 253 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_8
-# 235 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 254 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_17
 
 
+ISLANDGAME_COMMON_PKMNCENTER_Nurse_Text_0:
+# 9 "data/scripts/islandgame_common.pory"
+	.string "Welcome to the Maryan isles, trainer!\n"
+	.string "This is a Pokémon Center.\p"
+	.string "It seems like you don't have any\n"
+	.string "Pokémon right now, but when you do, you\l"
+	.string "can take them here to heal them!$"
+
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_0:
-# 10 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 29 "data/scripts/islandgame_common.pory"
 	.string "You look tired, trainer. Would you like\n"
 	.string "to take a rest in one of our rooms?\p"
 	.string "{COLOR RED}(Should I take a break and pass the\n"
 	.string "time...?)$"
 
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_1:
-# 16 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 35 "data/scripts/islandgame_common.pory"
 	.string "You took a break until...$"
 
 ISLANDGAME_COMMON_PKMNCENTER_TimeChanger_Text_2:
-# 23 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 42 "data/scripts/islandgame_common.pory"
 	.string "We hope you had a good rest! Come back\n"
 	.string "if you would like to pass time.$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_0:
-# 36 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 55 "data/scripts/islandgame_common.pory"
 	.string "How's it going, youngin? I'm Marya's\n"
 	.string "official Name Rater!\p"
 	.string "Would you like me to impart my\n"
 	.string "name-rating wisdom on your Pokémon?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_1:
-# 41 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 60 "data/scripts/islandgame_common.pory"
 	.string "Alrighty mate, whose name shall I giveth\n"
 	.string "a critique on?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_2:
-# 49 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 68 "data/scripts/islandgame_common.pory"
 	.string "That's an egg, init? I can't judge a\n"
 	.string "Pokémon that hasn't hatched yet!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_3:
-# 57 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 76 "data/scripts/islandgame_common.pory"
 	.string "Ah, {STR_VAR_1} is it? A truly\n"
 	.string "spectacular name, I say!\p"
 	.string "Its original trainer must have been a\n"
@@ -407,18 +438,18 @@ ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_3:
 	.string "Rater moral code of ethics!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_4:
-# 76 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 95 "data/scripts/islandgame_common.pory"
 	.string "Hmm, so it's {STR_VAR_1}? A fitting\n"
 	.string "name for such a fine Pokémon!\p"
 	.string "But if you've a better name, I'm more\n"
 	.string "than happy to change it to that!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_5:
-# 81 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 100 "data/scripts/islandgame_common.pory"
 	.string "What'll its new name be?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_6:
-# 88 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 107 "data/scripts/islandgame_common.pory"
 	.string "There we are! This Pokemon shall\n"
 	.string "henceforth be known as...\p"
 	.string "{STR_VAR_1}!\p"
@@ -426,38 +457,38 @@ ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_6:
 	.string "it's absolutely chuffed to have it!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_NameRater_Text_7:
-# 100 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 119 "data/scripts/islandgame_common.pory"
 	.string "If you've any Pokemon whose name you'd\n"
 	.string "like me to rate, I'm always here!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_0:
-# 112 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 131 "data/scripts/islandgame_common.pory"
 	.string "Why hello there, whippersnapper! I'm\n"
 	.string "the...{PAUSE 30} um...{PAUSE 30} oh! The Move Deleter!\p"
 	.string "Would you like me to have your Pokemon\n"
 	.string "forget one of their moves?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_1:
-# 117 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 136 "data/scripts/islandgame_common.pory"
 	.string "O-Oh! Splendid! Which Pokémon do you\n"
 	.string "want me to make forget a move?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_2:
-# 123 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 142 "data/scripts/islandgame_common.pory"
 	.string "Oh... I see. It was foolish of me to get\n"
 	.string "excited...\p"
 	.string "I suppose I will continue being useless\n"
 	.string "in these modern times...$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_3:
-# 131 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 150 "data/scripts/islandgame_common.pory"
 	.string "Eh? Is this a prank? You think it's\n"
 	.string "funny picking on the elderly?\p"
 	.string "Kids these days... No respect for\n"
 	.string "anyone but themselves.$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_4:
-# 138 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 157 "data/scripts/islandgame_common.pory"
 	.string "I'm afraid I cannot make a Pokemon\n"
 	.string "forget its only move...\p"
 	.string "Doing so would cause MissingNo. to\n"
@@ -466,29 +497,29 @@ ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_4:
 	.string "baloney? Are you disrespecting me!?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_5:
-# 145 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 164 "data/scripts/islandgame_common.pory"
 	.string "Alright, which move should be\n"
 	.string "forgotten?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_6:
-# 153 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 172 "data/scripts/islandgame_common.pory"
 	.string "Ah... {STR_VAR_1}'s {STR_VAR_2}?\n"
 	.string "You want this move to be forgotten?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_7:
-# 160 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 179 "data/scripts/islandgame_common.pory"
 	.string "Your {STR_VAR_1} has successfully\n"
 	.string "forgotten the move {STR_VAR_2}!\p"
 	.string "If you need another move forgotten,\n"
 	.string "please come again!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter_Text_8:
-# 166 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 185 "data/scripts/islandgame_common.pory"
 	.string "I see... I suppose there is no need for a\n"
 	.string "Move Deleter in this world anymore...$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_0:
-# 187 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 206 "data/scripts/islandgame_common.pory"
 	.string "Hullo! I am the all-powerful man known\n"
 	.string "as the Move Relearner!\p"
 	.string "I can help your Pokémon relearn moves\n"
@@ -497,51 +528,51 @@ ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_0:
 	.string "missed out on!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_1:
-# 193 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 212 "data/scripts/islandgame_common.pory"
 	.string "I can do this, for the low, low price of\n"
 	.string "¥1000! How's that sound?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_2:
-# 199 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 218 "data/scripts/islandgame_common.pory"
 	.string "Sorry pal, I gotta make a living. I can't\n"
 	.string "do it if ya don't got the money.$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_3:
-# 205 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 224 "data/scripts/islandgame_common.pory"
 	.string "Awesome. Which Pokémon do you want to\n"
 	.string "relearn a move?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_4:
-# 211 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 230 "data/scripts/islandgame_common.pory"
 	.string "If you ever need my power, I'll be here,\n"
 	.string "waiting!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_5:
-# 218 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 237 "data/scripts/islandgame_common.pory"
 	.string "Umm... eggs don't even have moves to\n"
 	.string "learn...$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_6:
-# 224 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 243 "data/scripts/islandgame_common.pory"
 	.string "There's no moves for this Pokémon to\n"
 	.string "relearn...$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_7:
-# 229 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 248 "data/scripts/islandgame_common.pory"
 	.string "Which move should I reteach this\n"
 	.string "Pokémon?$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_8:
-# 234 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 253 "data/scripts/islandgame_common.pory"
 	.string "Well, if you change your mind, I'm always\n"
 	.string "here!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_9:
-# 238 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 257 "data/scripts/islandgame_common.pory"
 	.string "Okay... {PAUSE 30}annnnnd...{PAUSE 30} done! Your Pokémon\n"
 	.string "has relearned its move!$"
 
 ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner_Text_10:
-# 247 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.pory"
+# 266 "data/scripts/islandgame_common.pory"
 	.string "Pleasure doin' business with you,\n"
 	.string "trainer!$"
