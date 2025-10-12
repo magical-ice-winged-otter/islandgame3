@@ -389,6 +389,10 @@ u8 ListMenuInitInRect(struct ListMenuTemplate *listMenuTemplate, struct ListMenu
 s32 ListMenu_ProcessInput(u8 listTaskId)
 {
     struct ListMenu *list = (void *) gTasks[listTaskId].data;
+    
+    s32 currentPosition = list->scrollOffset + list->selectedRow;
+    u8 lastPositon = list->template.totalItems - 1;
+    u8 position = currentPosition == 0 ? lastPositon : 1;
 
     if (JOY_NEW(A_BUTTON))
     {
@@ -400,12 +404,12 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
     }
     else if (JOY_REPEAT(DPAD_UP))
     {
-        ListMenuChangeSelection(list, TRUE, 1, FALSE);
+        ListMenuChangeSelection(list, TRUE, position, FALSE);
         return LIST_NOTHING_CHOSEN;
     }
     else if (JOY_REPEAT(DPAD_DOWN))
     {
-        ListMenuChangeSelection(list, TRUE, 1, TRUE);
+        ListMenuChangeSelection(list, TRUE, position, TRUE);
         return LIST_NOTHING_CHOSEN;
     }
     else // try to move by one window scroll
