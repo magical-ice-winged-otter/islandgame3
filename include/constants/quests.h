@@ -14,6 +14,14 @@
 #define QUEST_MENU_CHECK_COMPLETE       9   //checks if questId has been completed. Returns result to gSpecialVar_Result
 #define QUEST_MENU_BUFFER_QUEST_NAME    10   //buffers a quest name to gStringVar1
 
+// Quest flags, see enum QuestCases in include/quests.h
+#define QUEST_UNLOCKED   0 // this is never actually being used, maybe we want to make quest trees?
+#define QUEST_INACTIVE   1
+#define QUEST_ACTIVE     2
+#define QUEST_REWARD     3
+#define QUEST_COMPLETED  4
+#define QUEST_FAVORITE   5
+
 // quest number defines
 #define QUEST_1          0
 #define QUEST_2          1
@@ -82,5 +90,8 @@
 #define QUEST_2_SUB_COUNT 20
 #define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT)
 
-#define QUEST_ARRAY_COUNT (SUB_QUEST_COUNT > QUEST_COUNT ? SUB_QUEST_COUNT : QUEST_COUNT)
+// We want to allocate more space in the saveblock for quests than we need,
+// so we don't make breaking changes in the future.
+#define QUEST_ARRAY_COUNT 100
+
 #endif // GUARD_CONSTANTS_QUESTS_H
