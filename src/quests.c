@@ -239,313 +239,311 @@ static const u8 sText_AZ[] = _(" A-Z");
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
 
 //Declaration of subquest structures. Edits to subquests are made here.
-#define sub_quest(i, n, d, m, s, st, t) {.id = i, .name = n, .desc = d, .map = m, .sprite = s, .spritetype = st, .type = t}
 static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
 {
-	sub_quest(
-	      0,
-	      COMPOUND_STRING("Part 1"),
-	      COMPOUND_STRING("Description Sub 1"),
-	      COMPOUND_STRING("Map 1"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 0,
+        .name = COMPOUND_STRING("Part 1"),
+        .desc = COMPOUND_STRING("Description Sub 1"),
+        .map = COMPOUND_STRING("Map 1"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      1,
-	      COMPOUND_STRING("Part 2"),
-	      COMPOUND_STRING("Description Sub 2"),
-	      COMPOUND_STRING("Map 2"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 1,
+        .name = COMPOUND_STRING("Part 2"),
+        .desc = COMPOUND_STRING("Description Sub 2"),
+        .map = COMPOUND_STRING("Map 2"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      2,
-	      COMPOUND_STRING("Part 3"),
-	      COMPOUND_STRING("Description Sub 3"),
-	      COMPOUND_STRING("Map 3"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 2,
+        .name = COMPOUND_STRING("Part 3"),
+        .desc = COMPOUND_STRING("Description Sub 3"),
+        .map = COMPOUND_STRING("Map 3"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      3,
-	      COMPOUND_STRING("Part 4"),
-	      COMPOUND_STRING("Description Sub 4"),
-	      COMPOUND_STRING("Map 4"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 3,
+        .name = COMPOUND_STRING("Part 4"),
+        .desc = COMPOUND_STRING("Description Sub 4"),
+        .map = COMPOUND_STRING("Map 4"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      4,
-	      COMPOUND_STRING("Part 5"),
-	      COMPOUND_STRING("Description Sub 5"),
-	      COMPOUND_STRING("Map 5"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 4,
+        .name = COMPOUND_STRING("Part 5"),
+        .desc = COMPOUND_STRING("Description Sub 5"),
+        .map = COMPOUND_STRING("Map 5"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      5,
-	      COMPOUND_STRING("Part 6"),
-	      COMPOUND_STRING("Description Sub 6"),
-	      COMPOUND_STRING("Map 6"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 5,
+        .name = COMPOUND_STRING("Part 6"),
+        .desc = COMPOUND_STRING("Description Sub 6"),
+        .map = COMPOUND_STRING("Map 6"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      6,
-	      COMPOUND_STRING("Part 7"),
-	      COMPOUND_STRING("Description Sub 7"),
-	      COMPOUND_STRING("Map 7"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 6,
+        .name = COMPOUND_STRING("Part 7"),
+        .desc = COMPOUND_STRING("Description Sub 7"),
+        .map = COMPOUND_STRING("Map 7"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      7,
-	      COMPOUND_STRING("Part 8"),
-	      COMPOUND_STRING("Description Sub 8"),
-	      COMPOUND_STRING("Map 8"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 7,
+        .name = COMPOUND_STRING("Part 8"),
+        .desc = COMPOUND_STRING("Description Sub 8"),
+        .map = COMPOUND_STRING("Map 8"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      8,
-	      COMPOUND_STRING("Part 9"),
-	      COMPOUND_STRING("Description Sub 9"),
-	      COMPOUND_STRING("Map 9"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 8,
+        .name = COMPOUND_STRING("Part 9"),
+        .desc = COMPOUND_STRING("Description Sub 9"),
+        .map = COMPOUND_STRING("Map 9"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      9,
-	      COMPOUND_STRING("Part 10"),
-	      COMPOUND_STRING("Description Sub 10"),
-	      COMPOUND_STRING("Map 10"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 9,
+        .name = COMPOUND_STRING("Part 10"),
+        .desc = COMPOUND_STRING("Description Sub 10"),
+        .map = COMPOUND_STRING("Map 10"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 };
 
 static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 {
-	sub_quest(
-	      10,
-	      COMPOUND_STRING("Part 1"),
-	      COMPOUND_STRING("Description sub 1"),
-	      COMPOUND_STRING("Map 1"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 10,
+        .name = COMPOUND_STRING("Part 1"),
+        .desc = COMPOUND_STRING("Description sub 1"),
+        .map = COMPOUND_STRING("Map 1"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      11,
-	      COMPOUND_STRING("Part 2"),
-	      COMPOUND_STRING("Description sub 2"),
-	      COMPOUND_STRING("Map 2"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 11,
+        .name = COMPOUND_STRING("Part 2"),
+        .desc = COMPOUND_STRING("Description sub 2"),
+        .map = COMPOUND_STRING("Map 2"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      12,
-	      COMPOUND_STRING("Part 3"),
-	      COMPOUND_STRING("Description sub 3"),
-	      COMPOUND_STRING("Map 3"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 12,
+        .name = COMPOUND_STRING("Part 3"),
+        .desc = COMPOUND_STRING("Description sub 3"),
+        .map = COMPOUND_STRING("Map 3"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      13,
-	      COMPOUND_STRING("Part 4"),
-	      COMPOUND_STRING("Description sub 4"),
-	      COMPOUND_STRING("Map 4"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 13,
+        .name = COMPOUND_STRING("Part 4"),
+        .desc = COMPOUND_STRING("Description sub 4"),
+        .map = COMPOUND_STRING("Map 4"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      14,
-	      COMPOUND_STRING("Part 5"),
-	      COMPOUND_STRING("Description sub 5"),
-	      COMPOUND_STRING("Map 5"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 14,
+        .name = COMPOUND_STRING("Part 5"),
+        .desc = COMPOUND_STRING("Description sub 5"),
+        .map = COMPOUND_STRING("Map 5"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      15,
-	      COMPOUND_STRING("Part 6"),
-	      COMPOUND_STRING("Description sub 6"),
-	      COMPOUND_STRING("Map 6"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 15,
+        .name = COMPOUND_STRING("Part 6"),
+        .desc = COMPOUND_STRING("Description sub 6"),
+        .map = COMPOUND_STRING("Map 6"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      16,
-	      COMPOUND_STRING("Part 7"),
-	      COMPOUND_STRING("Description sub 7"),
-	      COMPOUND_STRING("Map 7"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 16,
+        .name = COMPOUND_STRING("Part 7"),
+        .desc = COMPOUND_STRING("Description sub 7"),
+        .map = COMPOUND_STRING("Map 7"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      17,
-	      COMPOUND_STRING("Part 8"),
-	      COMPOUND_STRING("Description sub 8"),
-	      COMPOUND_STRING("Map 8"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 17,
+        .name = COMPOUND_STRING("Part 8"),
+        .desc = COMPOUND_STRING("Description sub 8"),
+        .map = COMPOUND_STRING("Map 8"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      18,
-	      COMPOUND_STRING("Part 9"),
-	      COMPOUND_STRING("Description sub 9"),
-	      COMPOUND_STRING("Map 9"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 18,
+        .name = COMPOUND_STRING("Part 9"),
+        .desc = COMPOUND_STRING("Description sub 9"),
+        .map = COMPOUND_STRING("Map 9"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      19,
-	      COMPOUND_STRING("Part 10"),
-	      COMPOUND_STRING("Description sub 10"),
-	      COMPOUND_STRING("Map 10"),
-	      SPECIES_HO_OH,
-	      PKMN,
-	      sText_Caught
+    {
+        .id = 19,
+        .name = COMPOUND_STRING("Part 10"),
+        .desc = COMPOUND_STRING("Description sub 10"),
+        .map = COMPOUND_STRING("Map 10"),
+        .sprite = SPECIES_HO_OH,
+        .spritetype = PKMN,
+        .type = sText_Caught
 
-	),
+    },
 
-	sub_quest(
-	      20,
-	      COMPOUND_STRING("Part 11"),
-	      COMPOUND_STRING("Description sub 11"),
-	      COMPOUND_STRING("Map 11"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 20,
+        .name = COMPOUND_STRING("Part 11"),
+        .desc = COMPOUND_STRING("Description sub 11"),
+        .map = COMPOUND_STRING("Map 11"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      21,
-	      COMPOUND_STRING("Part 12"),
-	      COMPOUND_STRING("Description sub 12"),
-	      COMPOUND_STRING("Map 12"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 21,
+        .name = COMPOUND_STRING("Part 12"),
+        .desc = COMPOUND_STRING("Description sub 12"),
+        .map = COMPOUND_STRING("Map 12"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      22,
-	      COMPOUND_STRING("Part 13"),
-	      COMPOUND_STRING("Description sub 13"),
-	      COMPOUND_STRING("Map 13"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 22,
+        .name = COMPOUND_STRING("Part 13"),
+        .desc = COMPOUND_STRING("Description sub 13"),
+        .map = COMPOUND_STRING("Map 13"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      23,
-	      COMPOUND_STRING("Part 14"),
-	      COMPOUND_STRING("Description sub 14"),
-	      COMPOUND_STRING("Map 14"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 23,
+        .name = COMPOUND_STRING("Part 14"),
+        .desc = COMPOUND_STRING("Description sub 14"),
+        .map = COMPOUND_STRING("Map 14"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      24,
-	      COMPOUND_STRING("Part 15"),
-	      COMPOUND_STRING("Description sub 15"),
-	      COMPOUND_STRING("Map 15"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 24,
+        .name = COMPOUND_STRING("Part 15"),
+        .desc = COMPOUND_STRING("Description sub 15"),
+        .map = COMPOUND_STRING("Map 15"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      25,
-	      COMPOUND_STRING("Part 16"),
-	      COMPOUND_STRING("Description sub 16"),
-	      COMPOUND_STRING("Map 16"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 25,
+        .name = COMPOUND_STRING("Part 16"),
+        .desc = COMPOUND_STRING("Description sub 16"),
+        .map = COMPOUND_STRING("Map 16"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      26,
-	      COMPOUND_STRING("Part 17"),
-	      COMPOUND_STRING("Description sub 17"),
-	      COMPOUND_STRING("Map 17"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 26,
+        .name = COMPOUND_STRING("Part 17"),
+        .desc = COMPOUND_STRING("Description sub 17"),
+        .map = COMPOUND_STRING("Map 17"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      27,
-	      COMPOUND_STRING("Part 18"),
-	      COMPOUND_STRING("Description sub 18"),
-	      COMPOUND_STRING("Map 18"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 27,
+        .name = COMPOUND_STRING("Part 18"),
+        .desc = COMPOUND_STRING("Description sub 18"),
+        .map = COMPOUND_STRING("Map 18"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      28,
-	      COMPOUND_STRING("Part 19"),
-	      COMPOUND_STRING("Description sub 19"),
-	      COMPOUND_STRING("Map 19"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
+    {
+        .id = 28,
+        .name = COMPOUND_STRING("Part 19"),
+        .desc = COMPOUND_STRING("Description sub 19"),
+        .map = COMPOUND_STRING("Map 19"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 
-	sub_quest(
-	      29,
-	      COMPOUND_STRING("Part 20"),
-	      COMPOUND_STRING("Description sub 20"),
-	      COMPOUND_STRING("Map 20"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sText_Found
-	),
-
+    {
+        .id = 29,
+        .name = COMPOUND_STRING("Part 20"),
+        .desc = COMPOUND_STRING("Description sub 20"),
+        .map = COMPOUND_STRING("Map 20"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .type = sText_Found
+    },
 };
 
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
@@ -555,310 +553,310 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 ////////////////////////BEGIN QUEST CUSTOMIZATION//////////////////////////////
 
 //Declaration of side quest structures. Edits to quests are made here.
-#define side_quest(n, d, dd, m, s, st, sq, ns) {.name = n, .desc = d, .donedesc = dd, .map = m, .sprite = s, .spritetype = st, .subquests = sq, .numSubquests = ns}
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
 {
-	side_quest(
-	      COMPOUND_STRING("Side Quest 1"),
-	      COMPOUND_STRING("Description 1"),
-	      COMPOUND_STRING("Completed Quest 1"),
-	      COMPOUND_STRING("Map 1"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 2"),
-	      COMPOUND_STRING("Description 2"),
-	      COMPOUND_STRING("Completed Quest 2"),
-	      COMPOUND_STRING("Map 2"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sSubQuests1,
-	      QUEST_1_SUB_COUNT
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 3"),
-	      COMPOUND_STRING("Description 3"),
-	      COMPOUND_STRING("Completed Quest 3"),
-	      COMPOUND_STRING("Map 3"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      sSubQuests2,
-	      QUEST_2_SUB_COUNT
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 4"),
-	      COMPOUND_STRING("Description 4"),
-	      COMPOUND_STRING("Completed Quest 4"),
-	      COMPOUND_STRING("Map 4"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 5"),
-	      COMPOUND_STRING("Description 5"),
-	      COMPOUND_STRING("Completed Quest 5"),
-	      COMPOUND_STRING("Map 5"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 6"),
-	      COMPOUND_STRING("Description 6"),
-	      COMPOUND_STRING("Completed Quest 6"),
-	      COMPOUND_STRING("Map 6"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 7"),
-	      COMPOUND_STRING("Description 7"),
-	      COMPOUND_STRING("Completed Quest 7"),
-	      COMPOUND_STRING("Map 7"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 8"),
-	      COMPOUND_STRING("Description 8"),
-	      COMPOUND_STRING("Completed Quest 8"),
-	      COMPOUND_STRING("Map 8"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 9"),
-	      COMPOUND_STRING("Description 9"),
-	      COMPOUND_STRING("Completed Quest 9"),
-	      COMPOUND_STRING("Map 9"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 10"),
-	      COMPOUND_STRING("Description 10"),
-	      COMPOUND_STRING("Completed Quest 10"),
-	      COMPOUND_STRING("Map 10"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 11"),
-	      COMPOUND_STRING("Description 11"),
-	      COMPOUND_STRING("Completed Quest 11"),
-	      COMPOUND_STRING("Map 11"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 12"),
-	      COMPOUND_STRING("Description 12"),
-	      COMPOUND_STRING("Completed Quest 12"),
-	      COMPOUND_STRING("Map 12"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 13"),
-	      COMPOUND_STRING("Description 13"),
-	      COMPOUND_STRING("Completed Quest 13"),
-	      COMPOUND_STRING("Map 13"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 14"),
-	      COMPOUND_STRING("Description 14"),
-	      COMPOUND_STRING("Completed Quest 14"),
-	      COMPOUND_STRING("Map 14"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 15"),
-	      COMPOUND_STRING("Description 15"),
-	      COMPOUND_STRING("Completed Quest 15"),
-	      COMPOUND_STRING("Map 15"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 16"),
-	      COMPOUND_STRING("Description 16"),
-	      COMPOUND_STRING("Completed Quest 16"),
-	      COMPOUND_STRING("Map 16"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 17"),
-	      COMPOUND_STRING("Description 17"),
-	      COMPOUND_STRING("Completed Quest 17"),
-	      COMPOUND_STRING("Map 17"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 18"),
-	      COMPOUND_STRING("Description 18"),
-	      COMPOUND_STRING("Completed Quest 18"),
-	      COMPOUND_STRING("Map 18"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 19"),
-	      COMPOUND_STRING("Description 19"),
-	      COMPOUND_STRING("Completed Quest 19"),
-	      COMPOUND_STRING("Map 19"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 20"),
-	      COMPOUND_STRING("Description 20"),
-	      COMPOUND_STRING("Completed Quest 20"),
-	      COMPOUND_STRING("Map 20"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 21"),
-	      COMPOUND_STRING("Description 21"),
-	      COMPOUND_STRING("Completed Quest 21"),
-	      COMPOUND_STRING("Map 21"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 22"),
-	      COMPOUND_STRING("Description 22"),
-	      COMPOUND_STRING("Completed Quest 22"),
-	      COMPOUND_STRING("Map 22"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 23"),
-	      COMPOUND_STRING("Description 23"),
-	      COMPOUND_STRING("Completed Quest 23"),
-	      COMPOUND_STRING("Map 23"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 24"),
-	      COMPOUND_STRING("Description 24"),
-	      COMPOUND_STRING("Completed Quest 24"),
-	      COMPOUND_STRING("Map 24"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 25"),
-	      COMPOUND_STRING("Description 25"),
-	      COMPOUND_STRING("Completed Quest 25"),
-	      COMPOUND_STRING("Map 25"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 26"),
-	      COMPOUND_STRING("Description 26"),
-	      COMPOUND_STRING("Completed Quest 26"),
-	      COMPOUND_STRING("Map 26"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 27"),
-	      COMPOUND_STRING("Description 27"),
-	      COMPOUND_STRING("Completed Quest 27"),
-	      COMPOUND_STRING("Map 27"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 28"),
-	      COMPOUND_STRING("Description 28"),
-	      COMPOUND_STRING("Completed Quest 28"),
-	      COMPOUND_STRING("Map 28"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 29"),
-	      COMPOUND_STRING("Description 29"),
-	      COMPOUND_STRING("Completed Quest 29"),
-	      COMPOUND_STRING("Map 29"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
-	side_quest(
-	      COMPOUND_STRING("Side Quest 30"),
-	      COMPOUND_STRING("Description 30"),
-	      COMPOUND_STRING("Completed Quest 30"),
-	      COMPOUND_STRING("Map 30"),
-	      OBJ_EVENT_GFX_WALLY,
-	      OBJECT,
-	      NULL,
-	      0
-	),
+    {
+        .name = COMPOUND_STRING("Side Quest 1"),
+        .desc = COMPOUND_STRING("Description 1"),
+        .donedesc = COMPOUND_STRING("Completed Quest 1"),
+        .map = COMPOUND_STRING("Map 1"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 2"),
+        .desc = COMPOUND_STRING("Description 2"),
+        .donedesc = COMPOUND_STRING("Completed Quest 2"),
+        .map = COMPOUND_STRING("Map 2"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = sSubQuests1,
+        .numSubquests = QUEST_1_SUB_COUNT
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 3"),
+        .desc = COMPOUND_STRING("Description 3"),
+        .donedesc = COMPOUND_STRING("Completed Quest 3"),
+        .map = COMPOUND_STRING("Map 3"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = sSubQuests2,
+        .numSubquests = QUEST_2_SUB_COUNT
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 4"),
+        .desc = COMPOUND_STRING("Description 4"),
+        .donedesc = COMPOUND_STRING("Completed Quest 4"),
+        .map = COMPOUND_STRING("Map 4"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 5"),
+        .desc = COMPOUND_STRING("Description 5"),
+        .donedesc = COMPOUND_STRING("Completed Quest 5"),
+        .map = COMPOUND_STRING("Map 5"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 6"),
+        .desc = COMPOUND_STRING("Description 6"),
+        .donedesc = COMPOUND_STRING("Completed Quest 6"),
+        .map = COMPOUND_STRING("Map 6"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 7"),
+        .desc = COMPOUND_STRING("Description 7"),
+        .donedesc = COMPOUND_STRING("Completed Quest 7"),
+        .map = COMPOUND_STRING("Map 7"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 8"),
+        .desc = COMPOUND_STRING("Description 8"),
+        .donedesc = COMPOUND_STRING("Completed Quest 8"),
+        .map = COMPOUND_STRING("Map 8"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 9"),
+        .desc = COMPOUND_STRING("Description 9"),
+        .donedesc = COMPOUND_STRING("Completed Quest 9"),
+        .map = COMPOUND_STRING("Map 9"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 10"),
+        .desc = COMPOUND_STRING("Description 10"),
+        .donedesc = COMPOUND_STRING("Completed Quest 10"),
+        .map = COMPOUND_STRING("Map 10"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 11"),
+        .desc = COMPOUND_STRING("Description 11"),
+        .donedesc = COMPOUND_STRING("Completed Quest 11"),
+        .map = COMPOUND_STRING("Map 11"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 12"),
+        .desc = COMPOUND_STRING("Description 12"),
+        .donedesc = COMPOUND_STRING("Completed Quest 12"),
+        .map = COMPOUND_STRING("Map 12"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 13"),
+        .desc = COMPOUND_STRING("Description 13"),
+        .donedesc = COMPOUND_STRING("Completed Quest 13"),
+        .map = COMPOUND_STRING("Map 13"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 14"),
+        .desc = COMPOUND_STRING("Description 14"),
+        .donedesc = COMPOUND_STRING("Completed Quest 14"),
+        .map = COMPOUND_STRING("Map 14"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 15"),
+        .desc = COMPOUND_STRING("Description 15"),
+        .donedesc = COMPOUND_STRING("Completed Quest 15"),
+        .map = COMPOUND_STRING("Map 15"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 16"),
+        .desc = COMPOUND_STRING("Description 16"),
+        .donedesc = COMPOUND_STRING("Completed Quest 16"),
+        .map = COMPOUND_STRING("Map 16"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 17"),
+        .desc = COMPOUND_STRING("Description 17"),
+        .donedesc = COMPOUND_STRING("Completed Quest 17"),
+        .map = COMPOUND_STRING("Map 17"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 18"),
+        .desc = COMPOUND_STRING("Description 18"),
+        .donedesc = COMPOUND_STRING("Completed Quest 18"),
+        .map = COMPOUND_STRING("Map 18"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 19"),
+        .desc = COMPOUND_STRING("Description 19"),
+        .donedesc = COMPOUND_STRING("Completed Quest 19"),
+        .map = COMPOUND_STRING("Map 19"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 20"),
+        .desc = COMPOUND_STRING("Description 20"),
+        .donedesc = COMPOUND_STRING("Completed Quest 20"),
+        .map = COMPOUND_STRING("Map 20"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 21"),
+        .desc = COMPOUND_STRING("Description 21"),
+        .donedesc = COMPOUND_STRING("Completed Quest 21"),
+        .map = COMPOUND_STRING("Map 21"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 22"),
+        .desc = COMPOUND_STRING("Description 22"),
+        .donedesc = COMPOUND_STRING("Completed Quest 22"),
+        .map = COMPOUND_STRING("Map 22"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 23"),
+        .desc = COMPOUND_STRING("Description 23"),
+        .donedesc = COMPOUND_STRING("Completed Quest 23"),
+        .map = COMPOUND_STRING("Map 23"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 24"),
+        .desc = COMPOUND_STRING("Description 24"),
+        .donedesc = COMPOUND_STRING("Completed Quest 24"),
+        .map = COMPOUND_STRING("Map 24"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 25"),
+        .desc = COMPOUND_STRING("Description 25"),
+        .donedesc = COMPOUND_STRING("Completed Quest 25"),
+        .map = COMPOUND_STRING("Map 25"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 26"),
+        .desc = COMPOUND_STRING("Description 26"),
+        .donedesc = COMPOUND_STRING("Completed Quest 26"),
+        .map = COMPOUND_STRING("Map 26"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 27"),
+        .desc = COMPOUND_STRING("Description 27"),
+        .donedesc = COMPOUND_STRING("Completed Quest 27"),
+        .map = COMPOUND_STRING("Map 27"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 28"),
+        .desc = COMPOUND_STRING("Description 28"),
+        .donedesc = COMPOUND_STRING("Completed Quest 28"),
+        .map = COMPOUND_STRING("Map 28"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 29"),
+        .desc = COMPOUND_STRING("Description 29"),
+        .donedesc = COMPOUND_STRING("Completed Quest 29"),
+        .map = COMPOUND_STRING("Map 29"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
+    {
+        .name = COMPOUND_STRING("Side Quest 30"),
+        .desc = COMPOUND_STRING("Description 30"),
+        .donedesc = COMPOUND_STRING("Completed Quest 30"),
+        .map = COMPOUND_STRING("Map 30"),
+        .sprite = OBJ_EVENT_GFX_WALLY,
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0
+    },
 };
+
 ////////////////////////END QUEST CUSTOMIZATION////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
