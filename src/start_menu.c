@@ -8,6 +8,7 @@
 #include "event_object_movement.h"
 #include "event_object_lock.h"
 #include "event_scripts.h"
+#include "fake_rtc.h"
 #include "fieldmap.h"
 #include "field_effect.h"
 #include "field_player_avatar.h"
@@ -477,25 +478,31 @@ static void ShowTimeWindow(void)
     PutWindowTilemap(sStartClockWindowId);
     DrawStdWindowFrame(sStartClockWindowId, FALSE);
 
-    if (gLocalTime.hours < 12)
+    struct SiiRtcInfo *rtc = FakeRtc_GetCurrentTime();
+    s8 hours = OW_USE_FAKE_RTC ? rtc->hour : gLocalTime.hours;
+    s8 minutes = OW_USE_FAKE_RTC ? rtc->minute : gLocalTime.minutes;
+
+    if (hours < 12)
     {
-        convertedHours = (gLocalTime.hours == 0) ? 12 : gLocalTime.hours;
+        convertedHours = (hours == 0) ? 12 : hours;
         suffix = gText_AM;
     }
     else
     {
-        convertedHours = (gLocalTime.hours == 12) ? 12 : gLocalTime.hours - 12;
+        convertedHours = (hours == 12) ? 12 : hours - 12;
         suffix = gText_PM;
     }
 
-    StringExpandPlaceholders(gStringVar4, gDayNameStringsTable[(gLocalTime.days % WEEKDAY_COUNT)]);
+    u32 day = OW_USE_FAKE_RTC ? rtc->dayOfWeek : ((gLocalTime.days - 1) + (WEEKDAY_COUNT - 1)) % WEEKDAY_COUNT;
+    
+    StringExpandPlaceholders(gStringVar4, gDayNameStringsTable[day]);
     // StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime); // prints "time" word, from version before weekday was added and leaving it here in case anyone would prefer to use it
     AddTextPrinterParameterized(sStartClockWindowId, 1, gStringVar4, 0, 1, 0xFF, NULL); 
 
     ptr = ConvertIntToDecimalStringN(gStringVar4, convertedHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr = 0xF0;
 
-    ConvertIntToDecimalStringN(ptr + 1, gLocalTime.minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(ptr + 1, minutes, STR_CONV_MODE_LEADING_ZEROS, 2);
     AddTextPrinterParameterized(sStartClockWindowId, 1, gStringVar4, GetStringRightAlignXOffset(1, suffix, CLOCK_WINDOW_WIDTH) - (CLOCK_WINDOW_WIDTH - GetStringRightAlignXOffset(1, gStringVar4, CLOCK_WINDOW_WIDTH) + 3), 1, 0xFF, NULL); // print time
 
     AddTextPrinterParameterized(sStartClockWindowId, 1, suffix, GetStringRightAlignXOffset(1, suffix, CLOCK_WINDOW_WIDTH), 1, 0xFF, NULL); // print am/pm
