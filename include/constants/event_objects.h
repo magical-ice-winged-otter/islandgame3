@@ -497,6 +497,10 @@
 #define OBJ_EVENT_PAL_TAG_TUBER_F                 0x1318
 #define OBJ_EVENT_PAL_TAG_TUBER_M                 0x1319
 #define OBJ_EVENT_PAL_TAG_EXPERT_M                0x131A
+#define OBJ_EVENT_PAL_TAG_FISHERMAN               0x131B
+#define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x131C
+#define OBJ_EVENT_PAL_TAG_GIRL_3                  0x131D
+#define OBJ_EVENT_PAL_TAG_LITTLE_BOY              0x131E
 
 
 

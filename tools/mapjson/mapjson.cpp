@@ -165,7 +165,11 @@ string generate_map_header_text(Json map_data, Json layouts_data) {
          << "\t.byte "  << json_to_string(map_data, "weather") << "\n"
          << "\t.byte "  << json_to_string(map_data, "map_type") << "\n";
 
-    if (version != "firered")
+    // This implementation overrides a byte that was previously unused. I wonder 
+    // if there's a better way of adding other fields than this.
+    if (map_data.object_items().find("night_music") != map_data.object_items().end())
+        text << "\t.2byte " << json_to_string(map_data, "night_music", true) << "\n";
+    else if (version != "firered")
         text << "\t.2byte 0\n";
 
     if (version == "ruby")

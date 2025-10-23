@@ -1,37 +1,24 @@
 ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_MapScripts::
-# 5 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 2 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	map_script MAP_SCRIPT_ON_TRANSITION, ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_SetHealLocation
-# 6 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 3 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 	.byte 0
 
 
 ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_SetHealLocation::
-# 10 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 7 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	setrespawn HEAL_LOCATION_ISLANDGAME_ORANNA_CHERIPORT
 	return
 
 
-ISLANDGAME_COMMON_PKMNCENTER_Nurse::
-# 17 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	goto_if_unset FLAG_ORANNA_CHERIPORT_GOT_EEVEE, ISLANDGAME_COMMON_PKMNCENTER_Nurse_1
-# 27 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	setvar VAR_0x800B, 1
-# 28 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	call Common_EventScript_PkmnCenterNurse
-# 29 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	waitmessage
-# 30 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	waitbuttonpress
-# 31 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	release
-	return
-
-ISLANDGAME_COMMON_PKMNCENTER_Nurse_1:
-# 18 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1::
+# 13 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	lock
-# 19 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	msgbox ISLANDGAME_COMMON_PKMNCENTER_Nurse_Text_0
+# 14 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+	faceplayer
+# 15 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+	msgbox ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1_Text_0
 # 23 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	closemessage
 # 24 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
@@ -39,58 +26,36 @@ ISLANDGAME_COMMON_PKMNCENTER_Nurse_1:
 	return
 
 
-ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1::
-# 37 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	lock
-# 38 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	faceplayer
-# 39 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	msgbox ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1_Text_0
-# 47 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	closemessage
-# 48 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	release
-	return
-
-
 ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2::
-# 53 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 29 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	lock
-# 54 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 30 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	faceplayer
-# 55 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 31 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2_Text_0
-# 60 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 36 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	closemessage
-# 61 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 37 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3::
-# 66 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 42 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	lock
-# 67 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 43 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	faceplayer
-# 68 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 44 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3_Text_0
-# 73 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 49 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	closemessage
-# 74 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 50 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	release
 	return
 
 
-ISLANDGAME_COMMON_PKMNCENTER_Nurse_Text_0:
-# 20 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
-	.string "Welcome to the Maryan isles, trainer!\n"
-	.string "This is a Pokémon Center.\p"
-	.string "It seems like you don't have any\n"
-	.string "Pokémon right now, but when you do, you\l"
-	.string "can take them here to heal them!$"
-
 ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1_Text_0:
-# 40 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 16 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	.string "It's dangerous to wander outside\n"
 	.string "Cheriport without a Pokémon.\p"
 	.string "Even if you don't have one though,\n"
@@ -103,7 +68,7 @@ ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1_Text_0:
 	.string "Aha, I am just kidding.$"
 
 ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2_Text_0:
-# 56 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 32 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	.string "The Pokémon Centers in Marya are top\n"
 	.string "notch!\p"
 	.string "They've got rooms upstairs where you\n"
@@ -112,7 +77,7 @@ ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2_Text_0:
 	.string "Unova was like this...$"
 
 ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3_Text_0:
-# 69 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
+# 45 "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.pory"
 	.string "In the path between Cheriport and Camp\n"
 	.string "Persi is a small cave where a scary\l"
 	.string "black Pokémon lives.\p"

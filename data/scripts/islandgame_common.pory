@@ -1,8 +1,7 @@
 const OBJ_NURSE = 1
 
-
 // Pokemon Center Nurse
-script ISLANDGAME_COMMON_PKMNCENTER_Nurse {
+script ISLANDGAME_COMMON_PKMNCENTER_NURSE {
     if (!flag(FLAG_ORANNA_CHERIPORT_GOT_EEVEE)) {
         lock
         msgbox(format(
@@ -166,7 +165,7 @@ script ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter {
         fadescreen(FADE_TO_BLACK)
         special(MoveDeleterChooseMoveToForget)
         fadescreen(FADE_FROM_BLACK)
-        goto_if_eq(VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_PKMNCENTER_2F_MoveDeleter)
+        goto_if_eq(VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter)
         special(BufferMoveDeleterNicknameAndMove)
         msgbox(format(
             "Ah... {STR_VAR_1}'s {STR_VAR_2}? You want this move to be forgotten?"
@@ -275,4 +274,32 @@ script ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner {
         hidemoneybox
         closemessage
         release
+}
+
+const LOOP_BOUND = VAR_TEMP_A
+const LOOP_ITER  = VAR_TEMP_B
+const QUEST      = VAR_TEMP_C
+
+//Common script to loop through subquests of a quest
+//Usage:
+//  setvar(LOOP_ITER, start)                where start represents the starting index of the first subquest
+//  setvar(LOOP_BOUND, start + end)         where end represents the number of possible subquests
+//  setvar(QUEST, quest)                    where quest represents the actual quest
+//  call(Common_NextSubQuest)
+//
+script Common_NextSubQuest {
+    while (var(LOOP_ITER) < LOOP_BOUND) {
+        subquestmenu(QUEST_MENU_CHECK_COMPLETE, QUEST, LOOP_ITER)
+        if (var(VAR_RESULT) == FALSE) {
+            subquestmenu(QUEST_MENU_BUFFER_QUEST_NAME, QUEST, LOOP_ITER)
+            // -> {STR_VAR_1} = quest name
+            // -> {STR_VAR_2} = item/pokemon name
+            // -> var(VAR_RESULT) = the actual id
+            // -> var(LOOP_ITER)  = the subquest that wasn't complete
+            // -> var(LOOP_BOUND) = the index that represents the number of subquests
+            return 
+        }
+        addvar(LOOP_ITER, 1)
+    }
+    return
 }

@@ -54,6 +54,11 @@ const u16 gObjectEventPal_ExpertM[] = INCBIN_U16("graphics/object_events/pics/pe
 const u16 gObjectEventPal_TuberMSwimming[] = INCBIN_U16("graphics/object_events/pics/people/tuber_m_swimming.gbapal");
 const u16 gObjectEventPal_TuberM[] = INCBIN_U16("graphics/object_events/pics/people/tuber_m.gbapal");
 const u16 gObjectEventPal_TuberF[] = INCBIN_U16("graphics/object_events/pics/people/tuber_f.gbapal");
+const u16 gObjectEventPal_Fisherman[] = INCBIN_U16("graphics/object_events/pics/people/fisherman.gbapal");
+const u16 gObjectEventPal_MartEmployee[] = INCBIN_U16("graphics/object_events/pics/people/mart_employee.gbapal");
+const u16 gObjectEventPal_Girl3[] = INCBIN_U16("graphics/object_events/pics/people/girl_3.gbapal");
+const u16 gObjectEventPal_LittleBoy[] = INCBIN_U16("graphics/object_events/pics/people/little_boy.gbapal");
+
 
 
 

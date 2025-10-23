@@ -1,6 +1,3 @@
-const OBJ_NURSE = 1
-
-
 mapscripts ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_SetHealLocation
     MAP_SCRIPT_ON_RESUME: CableClub_OnResume
@@ -10,27 +7,6 @@ script ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_SetHealLocation {
 	setrespawn(HEAL_LOCATION_ISLANDGAME_ORANNA_CHERIPORT)
 }
 
-
-
-// Pokemon Center Nurse
-script ISLANDGAME_COMMON_PKMNCENTER_Nurse {
-    if (!flag(FLAG_ORANNA_CHERIPORT_GOT_EEVEE)) {
-        lock
-        msgbox(format(
-            "Welcome to the Maryan isles, trainer! This is a Pokémon Center.\p"
-            "It seems like you don't have any Pokémon right now, but when you do, you can take them here to heal them!"
-        ))
-        closemessage
-        release
-    }
-    else {
-        setvar(VAR_0x800B, OBJ_NURSE)
-        call(Common_EventScript_PkmnCenterNurse)
-        waitmessage
-        waitbuttonpress
-        release
-    }
-}
 
 // girl
 script ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_NPC1 {

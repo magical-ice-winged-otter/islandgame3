@@ -47,6 +47,7 @@
 #include "constants/party_menu.h"
 #include "constants/pokedex.h"
 #include "constants/pokemon.h"
+#include "constants/quests.h"
 #include "constants/rtc.h"
 #include "constants/roulette.h"
 #include "constants/script_menu.h"
@@ -1193,3 +1194,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_LAB_2F/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNMART/scripts.inc"
+	
+	.include "data/scripts/islandgame_common.inc"
