@@ -4,117 +4,270 @@
 #include "constants/battle_partner.h"
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
-#define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
-#define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
-#define TRAINER_GABRIELLE_1                   9
-#define TRAINER_GRUNT_PETALBURG_WOODS        10
-#define TRAINER_MARCEL                       11
-#define TRAINER_ALBERTO                      12
-#define TRAINER_ED                           13
-#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
-#define TRAINER_DECLAN                       15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
-#define TRAINER_GRUNT_WEATHER_INST_1         17
-#define TRAINER_GRUNT_WEATHER_INST_2         18
-#define TRAINER_GRUNT_WEATHER_INST_3         19
-#define TRAINER_GRUNT_MUSEUM_1               20
-#define TRAINER_GRUNT_MUSEUM_2               21
-#define TRAINER_GRUNT_SPACE_CENTER_1         22
-#define TRAINER_GRUNT_MT_PYRE_1              23
-#define TRAINER_GRUNT_MT_PYRE_2              24
-#define TRAINER_GRUNT_MT_PYRE_3              25
-#define TRAINER_GRUNT_WEATHER_INST_4         26
-#define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
-#define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
-#define TRAINER_FREDRICK                     29
-#define TRAINER_MATT                         30
-#define TRAINER_ZANDER                       31
-#define TRAINER_SHELLY_WEATHER_INSTITUTE     32
-#define TRAINER_SHELLY_SEAFLOOR_CAVERN       33
-#define TRAINER_ARCHIE                       34
-#define TRAINER_LEAH                         35
-#define TRAINER_DAISY                        36
-#define TRAINER_ROSE_1                       37
-#define TRAINER_FELIX                        38
-#define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
-#define TRAINER_DUSTY_1                      44
-#define TRAINER_CHIP                         45
-#define TRAINER_FOSTER                       46
-#define TRAINER_DUSTY_2                      47
-#define TRAINER_DUSTY_3                      48
-#define TRAINER_DUSTY_4                      49
-#define TRAINER_DUSTY_5                      50
-#define TRAINER_GABBY_AND_TY_1               51
-#define TRAINER_GABBY_AND_TY_2               52
-#define TRAINER_GABBY_AND_TY_3               53
-#define TRAINER_GABBY_AND_TY_4               54
-#define TRAINER_GABBY_AND_TY_5               55
-#define TRAINER_GABBY_AND_TY_6               56
-#define TRAINER_LOLA_1                       57
-#define TRAINER_AUSTINA                      58
-#define TRAINER_GWEN                         59
-#define TRAINER_LOLA_2                       60
-#define TRAINER_LOLA_3                       61
-#define TRAINER_LOLA_4                       62
-#define TRAINER_LOLA_5                       63
-#define TRAINER_RICKY_1                      64
-#define TRAINER_SIMON                        65
-#define TRAINER_CHARLIE                      66
-#define TRAINER_RICKY_2                      67
-#define TRAINER_RICKY_3                      68
-#define TRAINER_RICKY_4                      69
-#define TRAINER_RICKY_5                      70
-#define TRAINER_RANDALL                      71
-#define TRAINER_PARKER                       72
-#define TRAINER_GEORGE                       73
-#define TRAINER_BERKE                        74
-#define TRAINER_BRAXTON                      75
-#define TRAINER_VINCENT                      76
-#define TRAINER_LEROY                        77
-#define TRAINER_WILTON_1                     78
-#define TRAINER_EDGAR                        79
-#define TRAINER_ALBERT                       80
-#define TRAINER_SAMUEL                       81
-#define TRAINER_VITO                         82
-#define TRAINER_OWEN                         83
-#define TRAINER_WILTON_2                     84
-#define TRAINER_WILTON_3                     85
-#define TRAINER_WILTON_4                     86
-#define TRAINER_WILTON_5                     87
-#define TRAINER_WARREN                       88
-#define TRAINER_MARY                         89
-#define TRAINER_ALEXIA                       90
-#define TRAINER_JODY                         91
-#define TRAINER_WENDY                        92
-#define TRAINER_KEIRA                        93
-#define TRAINER_BROOKE_1                     94
-#define TRAINER_JENNIFER                     95
-#define TRAINER_HOPE                         96
-#define TRAINER_SHANNON                      97
-#define TRAINER_MICHELLE                     98
-#define TRAINER_CAROLINE                     99
-#define TRAINER_JULIE                       100
-#define TRAINER_BROOKE_2                    101
-#define TRAINER_BROOKE_3                    102
-#define TRAINER_BROOKE_4                    103
-#define TRAINER_BROOKE_5                    104
-#define TRAINER_PATRICIA                    105
-#define TRAINER_KINDRA                      106
-#define TRAINER_TAMMY                       107
-#define TRAINER_VALERIE_1                   108
-#define TRAINER_TASHA                       109
-#define TRAINER_VALERIE_2                   110
-#define TRAINER_VALERIE_3                   111
+
+/// Southern Oranna Path
+#define TRAINER_S_ORANNA_PATH_TRAINER_1       2
+//#define TRAINER_GRUNT_AQUA_HIDEOUT_1        2
+#define TRAINER_S_ORANNA_PATH_TRAINER_2       3
+//#define TRAINER_GRUNT_AQUA_HIDEOUT_2        3
+#define TRAINER_S_ORANNA_PATH_TRAINER_3       4
+//#define TRAINER_GRUNT_AQUA_HIDEOUT_3        4
+#define TRAINER_S_ORANNA_PATH_TRAINER_4       5
+//#define TRAINER_GRUNT_AQUA_HIDEOUT_4        5
+
+
+
+
+/// Camp Persi
+#define TRAINER_CAMP_PERSI_TRAINER_1          6
+//#define TRAINER_GRUNT_SEAFLOOR_CAVERN_1     6
+#define TRAINER_CAMP_PERSI_TRAINER_2          7
+//#define TRAINER_GRUNT_SEAFLOOR_CAVERN_2     7
+#define TRAINER_CAMP_PERSI_TRAINER_3          8
+//#define TRAINER_GRUNT_SEAFLOOR_CAVERN_3     8
+#define TRAINER_CAMP_PERSI_TRAINER_4          9
+//#define TRAINER_GABRIELLE_1                 9
+#define TRAINER_CAMP_PERSI_TRAINER_5         10
+//#define TRAINER_GRUNT_PETALBURG_WOODS      10
+#define TRAINER_CAMP_PERSI_JONAS             11
+//#define TRAINER_MARCEL                     11
+#define TRAINER_CAMP_PERSI_THIEF             93
+#define TRAINER_KEIRA                        TRAINER_CAMP_PERSI_THIEF
+
+
+// Verdant Path
+#define TRAINER_VERDANT_PATH_TRAINER_1       12
+//#define TRAINER_ALBERTO                    12
+#define TRAINER_VERDANT_PATH_TRAINER_2       13
+//#define TRAINER_ED                         13
+#define TRAINER_VERDANT_PATH_TRAINER_3       14
+//#define TRAINER_GRUNT_SEAFLOOR_CAVERN_4    14
+#define TRAINER_VERDANT_PATH_TRAINER_4       15
+//#define TRAINER_DECLAN                     15
+#define TRAINER_VERDANT_PATH_TRAINER_5       16
+//#define TRAINER_GRUNT_RUSTURF_TUNNEL       16
+#define TRAINER_VERDANT_PATH_TRAINER_6       17
+//#define TRAINER_GRUNT_WEATHER_INST_1       17
+
+
+
+
+// Verdant Woods
+#define TRAINER_VERDANT_WOODS_1              18
+//#define TRAINER_GRUNT_WEATHER_INST_2       18
+#define TRAINER_VERDANT_WOODS_2              19
+//#define TRAINER_GRUNT_WEATHER_INST_3       19
+#define TRAINER_VERDANT_WOODS_3              20
+//#define TRAINER_GRUNT_MUSEUM_1             20
+#define TRAINER_VERDANT_WOODS_4              21
+//#define TRAINER_GRUNT_MUSEUM_2             21
+#define TRAINER_VERDANT_WOODS_5              22
+//#define TRAINER_GRUNT_SPACE_CENTER_1       22
+
+
+
+// Minty Meadows
+#define TRAINER_MINTY_MEADOWS_RIVAL          23
+#define TRAINER_MINTY_MEADOWS_1              24
+#define TRAINER_MINTY_MEADOWS_3              26
+#define TRAINER_MINTY_MEADOWS_4              27
+#define TRAINER_MINTY_MEADOWS_6              29
+#define TRAINER_MINTY_MEADOWS_7              30
+#define TRAINER_MINTY_MEADOWS_8              31
+#define TRAINER_ZANDER                       TRAINER_MINTY_MEADOWS_8
+#define TRAINER_MINTY_MEADOWS_11             34
+#define TRAINER_ARCHIE                       TRAINER_MINTY_MEADOWS_11
+#define TRAINER_MINTY_MEADOWS_12             35
+#define TRAINER_LEAH                         TRAINER_MINTY_MEADOWS_12
+#define TRAINER_MINTY_MEADOWS_13             36
+#define TRAINER_DAISY                        TRAINER_MINTY_MEADOWS_13
+#define TRAINER_MINTY_MEADOWS_14             37
+#define TRAINER_ROSE_1                       TRAINER_MINTY_MEADOWS_14
+#define TRAINER_MINTY_MEADOWS_15             38
+#define TRAINER_FELIX                        TRAINER_MINTY_MEADOWS_15
+#define TRAINER_MINTY_MEADOWS_16             39
+#define TRAINER_VIOLET                       TRAINER_MINTY_MEADOWS_16
+
+
+// Traveler's Tunnel
+#define TRAINER_TRAVELERS_TUNNEL_1           25
+
+
+
+
+//NORTH ORANNA PATH
+#define TRAINER_NORANNA_1                    43
+#define TRAINER_NORANNA_2                    44
+#define TRAINER_NORANNA_3                    45
+#define TRAINER_NORANNA_4                    46
+#define TRAINER_NORANNA_5                    47
+#define TRAINER_NORANNA_6                    48
+#define TRAINER_NORANNA_7                    49
+#define TRAINER_NORANNA_LOWER_NPC_WEST       50
+#define TRAINER_GABBY_AND_TY_1               TRAINER_NORANNA_LOWER_NPC_WEST
+
+
+
+
+
+//CENTRAL ORANNA PATH
+#define TRAINER_CORANNA_1_NPC1               51
+#define TRAINER_CORANNA_1_NPC2               52
+#define TRAINER_CORANNA_1_NPC3               53
+#define TRAINER_CORANNA_1_NPC4               54
+#define TRAINER_GABBY_AND_TY_2               TRAINER_CORANNA_1_NPC1
+#define TRAINER_GABBY_AND_TY_3               TRAINER_CORANNA_1_NPC2
+#define TRAINER_GABBY_AND_TY_4               TRAINER_CORANNA_1_NPC3
+#define TRAINER_GABBY_AND_TY_5               TRAINER_CORANNA_1_NPC4
+#define TRAINER_CORANNA_2_CAMPER             55
+#define TRAINER_CORANNA_2_MANIAC             56
+#define TRAINER_CORANNA_2_BIKER              57
+#define TRAINER_CORANNA_2_FISHERMAN          58
+#define TRAINER_GABBY_AND_TY_6               TRAINER_CORANNA_2_CAMPER
+#define TRAINER_LOLA_1                       TRAINER_CORANNA_2_MANIAC
+#define TRAINER_AUSTINA                      TRAINER_CORANNA_2_BIKER
+#define TRAINER_GWEN                         TRAINER_CORANNA_2_FISHERMAN
+#define TRAINER_MINTY_MEADOWS_5              28 // Central Oranna Path Ranger Crystal
+#define TRAINER_CORANNA_PATHMASTER           40
+#define TRAINER_ROSE_2                       TRAINER_CORANNA_PATHMASTER
+
+
+
+
+// Tidalcove Gym
+#define TRAINER_TIDALCOVE_GYM_1              1
+#define TRAINER_SAWYER_1                     TRAINER_TIDALCOVE_GYM_1
+#define TRAINER_TIDALCOVE_GYM_2              32
+#define TRAINER_SHELLY_WEATHER_INSTITUTE     TRAINER_TIDALCOVE_GYM_2
+#define TRAINER_TIDALCOVE_GYM_3              33
+#define TRAINER_SHELLY_SEAFLOOR_CAVERN       TRAINER_TIDALCOVE_GYM_3
+#define TRAINER_TIDALCOVE_GYM_4              63
+#define TRAINER_LOLA_5                       TRAINER_TIDALCOVE_GYM_4
+#define TRAINER_TIDALCOVE_GYM_RUKA           60
+#define TRAINER_LOLA_2                       TRAINER_TIDALCOVE_GYM_RUKA
+
+// Mt. Aurora
+#define TRAINER_MT_AURORA_EDEA               62
+#define TRAINER_LOLA_4                       TRAINER_MT_AURORA_EDEA
+
+
+// Rosevale
+#define TRAINER_ROSEVALE_ARTHUR              61
+#define TRAINER_LOLA_3                       TRAINER_ROSEVALE_ARTHUR
+#define TRAINER_ROSEVALE_RED                 41 
+#define TRAINER_ROSE_3                       TRAINER_ROSEVALE_RED
+
+
+
+
+// Promenade Path
+#define TRAINER_PROMENADE_1                  64
+#define TRAINER_RICKY_1                      TRAINER_PROMENADE_1
+#define TRAINER_PROMENADE_2                  65
+#define TRAINER_SIMON                        TRAINER_PROMENADE_2
+#define TRAINER_PROMENADE_3                  66
+#define TRAINER_CHARLIE                      TRAINER_PROMENADE_3
+#define TRAINER_PROMENADE_4                  67
+#define TRAINER_RICKY_2                      TRAINER_PROMENADE_4
+
+// Rocky Path
+#define TRAINER_ROCKY_PATH_1                 42
+#define TRAINER_ROSE_4                       TRAINER_ROCKY_PATH_1
+#define TRAINER_ROCKY_PATH_2                 68
+#define TRAINER_RICKY_3                      TRAINER_ROCKY_PATH_2
+#define TRAINER_ROCKY_PATH_3                 69
+#define TRAINER_RICKY_4                      TRAINER_ROCKY_PATH_3
+#define TRAINER_ROCKY_PATH_4                 70
+#define TRAINER_RICKY_5                      TRAINER_ROCKY_PATH_4
+#define TRAINER_ROCKY_PATH_5                 71
+#define TRAINER_RANDALL                      TRAINER_ROCKY_PATH_5
+#define TRAINER_ROCKY_PATH_6                 72
+#define TRAINER_PARKER                       TRAINER_ROCKY_PATH_6
+#define TRAINER_ROCKY_PATH_7                 73
+#define TRAINER_GEORGE                       TRAINER_ROCKY_PATH_7
+#define TRAINER_ROCKY_PATH_8                 74
+#define TRAINER_BERKE                        TRAINER_ROCKY_PATH_8
+#define TRAINER_ROCKY_PATH_9                 75
+#define TRAINER_BRAXTON                      TRAINER_ROCKY_PATH_9
+#define TRAINER_ROCKY_PATH_10                76
+#define TRAINER_VINCENT                      TRAINER_ROCKY_PATH_10
+#define TRAINER_ROCKY_PATHMASTER             77
+#define TRAINER_LEROY                        TRAINER_ROCKY_PATHMASTER
+
+// Lumine Cave
+#define TRAINER_LUMINE_CAVE_1                78
+#define TRAINER_WILTON_1                     TRAINER_LUMINE_CAVE_1
+#define TRAINER_LUMINE_CAVE_2                79
+#define TRAINER_EDGAR                        TRAINER_LUMINE_CAVE_2
+#define TRAINER_LUMINE_CAVE_3                80
+#define TRAINER_ALBERT                       TRAINER_LUMINE_CAVE_3
+#define TRAINER_LUMINE_CAVE_4                81
+#define TRAINER_SAMUEL                       TRAINER_LUMINE_CAVE_4
+#define TRAINER_LUMINE_CAVE_5                82
+#define TRAINER_VITO                         TRAINER_LUMINE_CAVE_5
+#define TRAINER_LUMINE_CAVE_6                83
+#define TRAINER_OWEN                         TRAINER_LUMINE_CAVE_6
+#define TRAINER_LUMINE_CAVE_7                84
+#define TRAINER_WILTON_2                     TRAINER_LUMINE_CAVE_7
+#define TRAINER_LUMINE_CAVE_8                85
+#define TRAINER_WILTON_3                     TRAINER_LUMINE_CAVE_8
+#define TRAINER_LUMINE_CAVE_9                86
+#define TRAINER_WILTON_4                     TRAINER_LUMINE_CAVE_9
+#define TRAINER_LUMINE_CAVE_10               87
+#define TRAINER_WILTON_5                     TRAINER_LUMINE_CAVE_10
+#define TRAINER_LUMINE_CAVE_11               88
+#define TRAINER_WARREN                       TRAINER_LUMINE_CAVE_11
+#define TRAINER_LUMINE_CAVE_12               89
+#define TRAINER_MARY                         TRAINER_LUMINE_CAVE_12
+#define TRAINER_LUMINE_CAVE_13               90
+#define TRAINER_ALEXIA                       TRAINER_LUMINE_CAVE_13
+#define TRAINER_LUMINE_CAVE_ALBA             91
+#define TRAINER_JODY                         TRAINER_LUMINE_CAVE_ALBA
+#define TRAINER_LUMINE_CAVE_14               92
+#define TRAINER_WENDY                        TRAINER_LUMINE_CAVE_14
+  
+
+// Valley of Peace
+#define TRAINER_VALLEY_OF_PEACE_1            94
+#define TRAINER_BROOKE_1                     TRAINER_VALLEY_OF_PEACE_1
+#define TRAINER_VALLEY_OF_PEACE_2            95
+#define TRAINER_JENNIFER                     TRAINER_VALLEY_OF_PEACE_2
+#define TRAINER_VALLEY_OF_PEACE_3            96
+#define TRAINER_HOPE                         TRAINER_VALLEY_OF_PEACE_3
+#define TRAINER_VALLEY_OF_PEACE_4            97
+#define TRAINER_SHANNON                      TRAINER_VALLEY_OF_PEACE_4
+#define TRAINER_VALLEY_OF_PEACE_5            98
+#define TRAINER_MICHELLE                     TRAINER_VALLEY_OF_PEACE_5
+#define TRAINER_VALLEY_OF_PEACE_6            99
+#define TRAINER_CAROLINE                     TRAINER_VALLEY_OF_PEACE_6
+#define TRAINER_VALLEY_OF_PEACE_7           100
+#define TRAINER_JULIE                       TRAINER_VALLEY_OF_PEACE_7
+#define TRAINER_VALLEY_OF_PEACE_8           101
+#define TRAINER_BROOKE_2                    TRAINER_VALLEY_OF_PEACE_8
+#define TRAINER_VALLEY_OF_PEACE_9           102
+#define TRAINER_BROOKE_3                    TRAINER_VALLEY_OF_PEACE_9
+
+// Pleasant Avenue
+
+#define TRAINER_PLEASANT_AVENUE_GOONER      103
+#define TRAINER_BROOKE_4                    TRAINER_PLEASANT_AVENUE_GOONER
+#define TRAINER_PLEASANT_AVENUE_1           104
+#define TRAINER_BROOKE_5                    TRAINER_PLEASANT_AVENUE_1
+#define TRAINER_PLEASANT_AVENUE_2           105
+#define TRAINER_PATRICIA                    TRAINER_PLEASANT_AVENUE_2
+#define TRAINER_PLEASANT_AVENUE_3           106
+#define TRAINER_KINDRA                      TRAINER_PLEASANT_AVENUE_3
+#define TRAINER_PLEASANT_AVENUE_4           107
+#define TRAINER_TAMMY                       TRAINER_PLEASANT_AVENUE_4
+#define TRAINER_PLEASANT_AVENUE_5           108
+#define TRAINER_VALERIE_1                   TRAINER_PLEASANT_AVENUE_5
+#define TRAINER_PLEASANT_AVENUE_6           109
+#define TRAINER_TASHA                       TRAINER_PLEASANT_AVENUE_6
+#define TRAINER_PLEASANT_AVENUE_7           110
+#define TRAINER_VALERIE_2                   TRAINER_PLEASANT_AVENUE_7
+#define TRAINER_PLEASANT_AVENUE_8           111
+#define TRAINER_VALERIE_3                   TRAINER_PLEASANT_AVENUE_8
+
 #define TRAINER_VALERIE_4                   112
 #define TRAINER_VALERIE_5                   113
 #define TRAINER_CINDY_1                     114
@@ -858,6 +1011,17 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
+
+
+// #define TRAINER_RICKY_1                      TRAINER_ROCKY_PATH_KARATE_BRO
+// #define TRAINER_SIMON                        TRAINER_ROCKY_PATH_KARATE_SIS
+// #define TRAINER_CHARLIE                      TRAINER_ROCKY_PATH_CYCLER_F
+// #define TRAINER_RICKY_2                      TRAINER_ROCKY_PATH_BEAUTY
+// #define TRAINER_RICKY_3                      TRAINER_ROCKY_PATH_CAMPER_F
+// #define TRAINER_RICKY_4                      TRAINER_ROCKY_PATH_GENTLEMAN
+// #define TRAINER_RICKY_5                      TRAINER_ROCKY_PATH_PSYCHIC_F
+// #define TRAINER_RANDALL                      TRAINER_ROCKY_PATH_PSYCHIC_M
+// #define TRAINER_PARKER                       TRAINER_ROCKY_PATH_FISHERMAN
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
