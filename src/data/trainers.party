@@ -81,63 +81,60 @@ Gender: Male
 Music: Male
 Double Battle: No
 
-=== TRAINER_SAWYER_1 ===
-Name: SAWYER
-Class: Hiker
-Pic: Hiker
+=== TRAINER_S_ORANNA_PATH_TRAINER_1 ===
+Name: TYLER
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Hiker
+Music: Male
 Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 21
+Starly
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_S_ORANNA_PATH_TRAINER_2 ===
+Name: JULIA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu (F)
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_S_ORANNA_PATH_TRAINER_3 ===
+Name: MANNY
+Class: Bug Catcher
+Pic: Bug Catcher
 Gender: Male
-Music: Aqua
+Music: MALE
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Poochyena
-Level: 32
+Surskit
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+=== TRAINER_S_ORANNA_PATH_TRAINER_4 ===
+Name: JAKE
+Class: Youngster
+Pic: Youngster
 Gender: Male
-Music: Aqua
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zubat
-Level: 31
+Scraggy
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Intimidate
 
-Carvanha
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_AQUA_HIDEOUT_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_GRUNT_AQUA_HIDEOUT_4 ===
+=== TRAINER_CAMP_PERSI_TRAINER_1 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -150,7 +147,7 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_1 ===
+=== TRAINER_CAMP_PERSI_TRAINER_2 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -163,7 +160,7 @@ Poochyena
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2 ===
+=== TRAINER_CAMP_PERSI_TRAINER_3 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -176,7 +173,7 @@ Carvanha
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_3 ===
+=== TRAINER_CAMP_PERSI_TRAINER_4 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -189,7 +186,7 @@ Zubat
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GABRIELLE_1 ===
+=== TRAINER_CAMP_PERSI_TRAINER_5 ===
 Name: GABRIELLE
 Class: Pkmn Breeder
 Pic: Pokemon Breeder F
@@ -222,7 +219,7 @@ Taillow
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_PETALBURG_WOODS ===
+=== TRAINER_CAMP_PERSI_JONAS ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -235,7 +232,7 @@ Poochyena
 Level: 9
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MARCEL ===
+=== TRAINER_CAMP_PERSI_THIEF ===
 Name: MARCEL
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -253,7 +250,7 @@ Shiftry
 Level: 29
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ALBERTO ===
+=== TRAINER_VERDANT_PATH_TRAINER_1 ===
 Name: ALBERTO
 Class: Bird Keeper
 Pic: Bird Keeper
@@ -270,7 +267,7 @@ Xatu
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ED ===
+=== TRAINER_VERDANT_PATH_TRAINER_2 ===
 Name: ED
 Class: Collector
 Pic: Collector
@@ -287,7 +284,7 @@ Seviper
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4 ===
+=== TRAINER_VERDANT_PATH_TRAINER_3 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt F
@@ -300,7 +297,7 @@ Carvanha
 Level: 36
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DECLAN ===
+=== TRAINER_VERDANT_PATH_TRAINER_4 ===
 Name: DECLAN
 Class: Swimmer M
 Pic: Swimmer M
@@ -313,7 +310,7 @@ Gyarados
 Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
+=== TRAINER_VERDANT_PATH_TRAINER_5 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -326,7 +323,7 @@ Poochyena
 Level: 11
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_1 ===
+=== TRAINER_VERDANT_PATH_TRAINER_6 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -343,7 +340,7 @@ Poochyena
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_2 ===
+=== TRAINER_VERDANT_WOODS_1 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -360,7 +357,7 @@ Carvanha
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_3 ===
+=== TRAINER_VERDANT_WOODS_2 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -381,7 +378,7 @@ Carvanha
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MUSEUM_1 ===
+=== TRAINER_VERDANT_WOODS_3 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -394,7 +391,7 @@ Carvanha
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MUSEUM_2 ===
+=== TRAINER_VERDANT_WOODS_4 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -411,7 +408,7 @@ Carvanha
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_SPACE_CENTER_1 ===
+=== TRAINER_VERDANT_WOODS_5 ===
 Name: GRUNT
 Class: Team Magma
 Pic: Magma Grunt M
@@ -424,7 +421,7 @@ Numel
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_1 ===
+=== TRAINER_MINTY_MEADOWS_RIVAL ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -437,7 +434,7 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_2 ===
+=== TRAINER_MINTY_MEADOWS_1 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -450,7 +447,7 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_MT_PYRE_3 ===
+=== TRAINER_MINTY_MEADOWS_3 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt M
@@ -467,7 +464,7 @@ Carvanha
 Level: 30
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_WEATHER_INST_4 ===
+=== TRAINER_MINTY_MEADOWS_4 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt F
@@ -480,7 +477,7 @@ Carvanha
 Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_5 ===
+=== TRAINER_MINTY_MEADOWS_6 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt F
@@ -493,7 +490,7 @@ Carvanha
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GRUNT_AQUA_HIDEOUT_6 ===
+=== TRAINER_MINTY_MEADOWS_7 ===
 Name: GRUNT
 Class: Team Aqua
 Pic: Aqua Grunt F
@@ -506,7 +503,7 @@ Zubat
 Level: 32
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FREDRICK ===
+=== TRAINER_MINTY_MEADOWS_8 ===
 Name: FREDRICK
 Class: Expert
 Pic: Expert M
@@ -523,7 +520,7 @@ Machoke
 Level: 30
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MATT ===
+=== TRAINER_MINTY_MEADOWS_11 ===
 Name: MATT
 Class: Aqua Admin
 Pic: Aqua Admin M
@@ -541,7 +538,7 @@ Golbat
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_ZANDER ===
+=== TRAINER_MINTY_MEADOWS_12 ===
 Name: ZANDER
 Class: Black Belt
 Pic: Black Belt
@@ -554,7 +551,7 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_SHELLY_WEATHER_INSTITUTE ===
+=== TRAINER_MINTY_MEADOWS_13 ===
 Name: SHELLY
 Class: Aqua Admin
 Pic: Aqua Admin F
@@ -571,7 +568,7 @@ Mightyena
 Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_SHELLY_SEAFLOOR_CAVERN ===
+=== TRAINER_MINTY_MEADOWS_14 ===
 Name: SHELLY
 Class: Aqua Admin
 Pic: Aqua Admin F
@@ -588,7 +585,7 @@ Mightyena
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ARCHIE ===
+=== TRAINER_MINTY_MEADOWS_15 ===
 Name: ARCHIE
 Class: Aqua Leader
 Pic: Aqua Leader Archie
@@ -610,7 +607,7 @@ Sharpedo
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_LEAH ===
+=== TRAINER_MINTY_MEADOWS_16 ===
 Name: LEAH
 Class: Hex Maniac
 Pic: Hex Maniac
@@ -623,7 +620,7 @@ Spoink
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DAISY ===
+=== TRAINER_TRAVELERS_TUNNEL_1 ===
 Name: DAISY
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -640,7 +637,7 @@ Roselia
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ROSE_1 ===
+=== TRAINER_NORANNA_1 ===
 Name: ROSE
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -661,7 +658,7 @@ Roselia
 Level: 14
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_FELIX ===
+=== TRAINER_NORANNA_2 ===
 Name: FELIX
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -682,7 +679,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Skill Swap
 - Earthquake
 
-=== TRAINER_VIOLET ===
+=== TRAINER_NORANNA_3 ===
 Name: VIOLET
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -699,7 +696,7 @@ Gloom
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ROSE_2 ===
+=== TRAINER_NORANNA_4 ===
 Name: ROSE
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -716,7 +713,7 @@ Roselia
 Level: 26
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_ROSE_3 ===
+=== TRAINER_NORANNA_5 ===
 Name: ROSE
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -737,7 +734,7 @@ Roselia
 Level: 28
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_ROSE_4 ===
+=== TRAINER_NORANNA_6 ===
 Name: ROSE
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -758,7 +755,7 @@ Roselia
 Level: 31
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_ROSE_5 ===
+=== TRAINER_NORANNA_7 ===
 Name: ROSE
 Class: Aroma Lady
 Pic: Aroma Lady
@@ -779,7 +776,7 @@ Roselia
 Level: 34
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_DUSTY_1 ===
+=== TRAINER_NORANNA_LOWER_NPC_WEST ===
 Name: DUSTY
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -796,7 +793,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_CHIP ===
+=== TRAINER_CORANNA_1_NPC1 ===
 Name: CHIP
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -829,7 +826,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_FOSTER ===
+=== TRAINER_CORANNA_1_NPC2 ===
 Name: FOSTER
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -854,7 +851,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_2 ===
+=== TRAINER_CORANNA_1_NPC3 ===
 Name: DUSTY
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -871,7 +868,7 @@ IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_3 ===
+=== TRAINER_CORANNA_1_NPC4 ===
 Name: DUSTY
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -888,7 +885,7 @@ IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_4 ===
+=== TRAINER_CORANNA_2_CAMPER ===
 Name: DUSTY
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -905,7 +902,7 @@ IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_DUSTY_5 ===
+=== TRAINER_CORANNA_2_MANIAC ===
 Name: DUSTY
 Class: Ruin Maniac
 Pic: Ruin Maniac
@@ -922,7 +919,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Sand Attack
 - Poison Sting
 
-=== TRAINER_GABBY_AND_TY_1 ===
+=== TRAINER_CORANNA_2_BIKER ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -939,7 +936,7 @@ Whismur
 Level: 17
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_GABBY_AND_TY_2 ===
+=== TRAINER_CORANNA_2_FISHERMAN ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -956,7 +953,7 @@ Loudred
 Level: 27
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_GABBY_AND_TY_3 ===
+=== TRAINER_CORANNA_2_RANGER ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -973,7 +970,7 @@ Loudred
 Level: 30
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_GABBY_AND_TY_4 ===
+=== TRAINER_CORANNA_PATHMASTER ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -990,7 +987,7 @@ Loudred
 Level: 33
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-=== TRAINER_GABBY_AND_TY_5 ===
+=== TRAINER_TIDALCOVE_GYM_1 ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -1007,7 +1004,7 @@ Loudred
 Level: 36
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 
-=== TRAINER_GABBY_AND_TY_6 ===
+=== TRAINER_TIDALCOVE_GYM_2 ===
 Name: GABBY & TY
 Class: Interviewer
 Pic: Interviewer
@@ -1032,7 +1029,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Supersonic
 - Hyper Voice
 
-=== TRAINER_LOLA_1 ===
+=== TRAINER_TIDALCOVE_GYM_3 ===
 Name: LOLA
 Class: Tuber F
 Pic: Tuber F
@@ -1049,7 +1046,7 @@ Azurill
 Level: 12
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_AUSTINA ===
+=== TRAINER_TIDALCOVE_GYM_4 ===
 Name: AUSTINA
 Class: Tuber F
 Pic: Tuber F
@@ -1062,7 +1059,7 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_GWEN ===
+=== TRAINER_TIDALCOVE_GYM_RUKA ===
 Name: GWEN
 Class: Tuber F
 Pic: Tuber F
@@ -1075,7 +1072,7 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LOLA_2 ===
+=== TRAINER_MT_AURORA_EDEA ===
 Name: LOLA
 Class: Tuber F
 Pic: Tuber F
@@ -1092,7 +1089,7 @@ Marill
 Level: 26
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-=== TRAINER_LOLA_3 ===
+=== TRAINER_ROSEVALE_ARTHUR ===
 Name: LOLA
 Class: Tuber F
 Pic: Tuber F
@@ -1109,7 +1106,7 @@ Marill
 Level: 29
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_LOLA_4 ===
+=== TRAINER_ROSEVALE_RED ===
 Name: LOLA
 Class: Tuber F
 Pic: Tuber F
@@ -1126,7 +1123,7 @@ Marill
 Level: 32
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_LOLA_5 ===
+=== TRAINER_PROMENADE_1 ===
 Name: LOLA
 Class: Tuber F
 Pic: Tuber F
@@ -1143,7 +1140,7 @@ Azumarill
 Level: 35
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_RICKY_1 ===
+=== TRAINER_PROMENADE_2 ===
 Name: RICKY
 Class: Tuber M
 Pic: Tuber M
@@ -1160,7 +1157,7 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_SIMON ===
+=== TRAINER_PROMENADE_3 ===
 Name: SIMON
 Class: Tuber M
 Pic: Tuber M
@@ -1177,7 +1174,7 @@ Marill
 Level: 12
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CHARLIE ===
+=== TRAINER_PROMENADE_4 ===
 Name: CHARLIE
 Class: Tuber M
 Pic: Tuber M
@@ -1190,7 +1187,7 @@ Marill
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_RICKY_2 ===
+=== TRAINER_ROCKY_PATH_1 ===
 Name: RICKY
 Class: Tuber M
 Pic: Tuber M
@@ -1207,7 +1204,7 @@ IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RICKY_3 ===
+=== TRAINER_ROCKY_PATH_2 ===
 Name: RICKY
 Class: Tuber M
 Pic: Tuber M
@@ -1224,7 +1221,7 @@ IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RICKY_4 ===
+=== TRAINER_ROCKY_PATH_3 ===
 Name: RICKY
 Class: Tuber M
 Pic: Tuber M
@@ -1241,7 +1238,7 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RICKY_5 ===
+=== TRAINER_ROCKY_PATH_4 ===
 Name: RICKY
 Class: Tuber M
 Pic: Tuber M
@@ -1258,7 +1255,7 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Tail Whip
 - Surf
 
-=== TRAINER_RANDALL ===
+=== TRAINER_ROCKY_PATH_5 ===
 Name: RANDALL
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1275,7 +1272,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Agility
 - Wing Attack
 
-=== TRAINER_PARKER ===
+=== TRAINER_ROCKY_PATH_6 ===
 Name: PARKER
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1292,7 +1289,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dizzy Punch
 - Focus Punch
 
-=== TRAINER_GEORGE ===
+=== TRAINER_ROCKY_PATH_7 ===
 Name: GEORGE
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1309,7 +1306,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Counter
 - Shadow Ball
 
-=== TRAINER_BERKE ===
+=== TRAINER_ROCKY_PATH_8 ===
 Name: BERKE
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1325,7 +1322,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Focus Energy
 - Slash
 
-=== TRAINER_BRAXTON ===
+=== TRAINER_ROCKY_PATH_9 ===
 Name: BRAXTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1375,7 +1372,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Double Team
 - Swagger
 
-=== TRAINER_VINCENT ===
+=== TRAINER_ROCKY_PATH_10 ===
 Name: VINCENT
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1397,7 +1394,7 @@ Sharpedo
 Level: 44
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_LEROY ===
+=== TRAINER_ROCKY_PATHMASTER ===
 Name: LEROY
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1415,7 +1412,7 @@ Starmie
 Level: 46
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_WILTON_1 ===
+=== TRAINER_LUMINE_CAVE_1 ===
 Name: WILTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1437,7 +1434,7 @@ Makuhita
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_EDGAR ===
+=== TRAINER_LUMINE_CAVE_2 ===
 Name: EDGAR
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1455,7 +1452,7 @@ Pelipper
 Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ALBERT ===
+=== TRAINER_LUMINE_CAVE_3 ===
 Name: ALBERT
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1473,7 +1470,7 @@ Muk
 Level: 43
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_SAMUEL ===
+=== TRAINER_LUMINE_CAVE_4 ===
 Name: SAMUEL
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1495,7 +1492,7 @@ Kadabra
 Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_VITO ===
+=== TRAINER_LUMINE_CAVE_5 ===
 Name: VITO
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1521,7 +1518,7 @@ Shiftry
 Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_OWEN ===
+=== TRAINER_LUMINE_CAVE_6 ===
 Name: OWEN
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1543,7 +1540,7 @@ Wailord
 Level: 42
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_WILTON_2 ===
+=== TRAINER_LUMINE_CAVE_8 ===
 Name: WILTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1565,7 +1562,7 @@ Makuhita
 Level: 26
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-=== TRAINER_WILTON_3 ===
+=== TRAINER_LUMINE_CAVE_9 ===
 Name: WILTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1587,7 +1584,7 @@ Makuhita
 Level: 29
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
-=== TRAINER_WILTON_4 ===
+=== TRAINER_LUMINE_CAVE_11 ===
 Name: WILTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1609,7 +1606,7 @@ Makuhita
 Level: 32
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
-=== TRAINER_WILTON_5 ===
+=== TRAINER_LUMINE_CAVE_12 ===
 Name: WILTON
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1631,7 +1628,7 @@ Hariyama
 Level: 35
 IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
 
-=== TRAINER_WARREN ===
+=== TRAINER_LUMINE_CAVE_13 ===
 Name: WARREN
 Class: Cooltrainer
 Pic: Cooltrainer M
@@ -1649,7 +1646,7 @@ Ludicolo
 Level: 33
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MARY ===
+=== TRAINER_LUMINE_CAVE_ALBA ===
 Name: MARY
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1665,7 +1662,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Feint Attack
 - Shock Wave
 
-=== TRAINER_ALEXIA ===
+=== TRAINER_LUMINE_CAVE_14 ===
 Name: ALEXIA
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1682,7 +1679,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Edge
 - Shadow Ball
 
-=== TRAINER_JODY ===
+=== TRAINER_VALLEY_OF_PEACE_1 ===
 Name: JODY
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1698,7 +1695,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Swords Dance
 - Slash
 
-=== TRAINER_WENDY ===
+=== TRAINER_VALLEY_OF_PEACE_2 ===
 Name: WENDY
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1732,7 +1729,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Mist
 - Protect
 
-=== TRAINER_KEIRA ===
+=== TRAINER_VALLEY_OF_PEACE_3 ===
 Name: KEIRA
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1750,7 +1747,7 @@ Manectric
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_BROOKE_1 ===
+=== TRAINER_VALLEY_OF_PEACE_4 ===
 Name: BROOKE
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1772,7 +1769,7 @@ Roselia
 Level: 17
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_JENNIFER ===
+=== TRAINER_VALLEY_OF_PEACE_6 ===
 Name: JENNIFER
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1786,7 +1783,7 @@ Sableye
 Level: 30
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
-=== TRAINER_HOPE ===
+=== TRAINER_VALLEY_OF_PEACE_7 ===
 Name: HOPE
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1800,7 +1797,7 @@ Roselia
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_SHANNON ===
+=== TRAINER_VALLEY_OF_PEACE_8 ===
 Name: SHANNON
 Class: Cooltrainer
 Pic: Cooltrainer F
@@ -1814,7 +1811,7 @@ Claydol
 Level: 45
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_MICHELLE ===
+=== TRAINER_VALLEY_OF_PEACE_9 ===
 Name: MICHELLE
 Class: Cooltrainer
 Pic: Cooltrainer F

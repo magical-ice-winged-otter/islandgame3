@@ -95,7 +95,7 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Battle_Biker {
 }
 
 script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Battle_Ranger {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_5, 
+    trainerbattle_single(TRAINER_CORANNA_2_RANGER, 
         format("I need to be alone! Go away!"), 
         "-sigh-"
     )

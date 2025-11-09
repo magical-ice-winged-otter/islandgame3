@@ -155,7 +155,7 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_1_RouteMaster {
         defeated(TRAINER_CORANNA_2_MANIAC) &&
         defeated(TRAINER_CORANNA_2_BIKER) &&
         defeated(TRAINER_CORANNA_2_FISHERMAN) && 
-        defeated(TRAINER_MINTY_MEADOWS_5)  &&
+        defeated(TRAINER_CORANNA_2_RANGER)  &&
         !defeated(TRAINER_CORANNA_PATHMASTER)
     ) {
         msgbox(format(

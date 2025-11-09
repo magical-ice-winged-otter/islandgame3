@@ -41,16 +41,6 @@ script ISLANDGAME_MINTY_MEADOWS_Trainer4 {
 	msgbox(format("{COLOR DARK_GRAY}I suppose it is still too early for me to bloom."), MSGBOX_AUTOCLOSE)
 }
 
-
-// script ISLANDGAME_MINTY_MEADOWS_Trainer5 {
-//     trainerbattle_single(TRAINER_MINTY_MEADOWS_5, format("{COLOR DARK_GRAY}Hello! Let's explore the wonders of this lovely meadow together!"), ISLANDGAME_MINTY_MEADOWS_Trainer5_Loss)
-// 	msgbox("Oh, our meadow journey had its \nchallenges. \pNature's charm is truly enchanting,\nisn't it?", MSGBOX_AUTOCLOSE)
-// }
-
-// text ISLANDGAME_MINTY_MEADOWS_Trainer5_Loss {
-// 	format("{COLOR DARK_GRAY}I will see you again!")
-//}
-
 script ISLANDGAME_MINTY_MEADOWS_Trainer6 {
     trainerbattle_single(TRAINER_MINTY_MEADOWS_6, format("I will find you my queen... I'll stop at nothing to see your beauty!"), "How dare you come between me and Her\nMajesty!")
 	msgbox(format("You'll pay for this... Delaying my search for my lovely Vespiquen!"), MSGBOX_AUTOCLOSE)

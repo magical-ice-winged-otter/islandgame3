@@ -1238,6 +1238,15 @@
     {
       "id": "MAPSEC_CHERIPORT",
       "name": "Cheriport"
+    },
+    {
+      "id": "MAPSEC_MAPLEGROVE"
+    },
+    {
+      "id": "MAPSEC_CENTRAL_ORANNA_PATH"
+    },
+    {
+      "id": "MAPSEC_VERDANT_WOODS"
     }
   ]
 }
