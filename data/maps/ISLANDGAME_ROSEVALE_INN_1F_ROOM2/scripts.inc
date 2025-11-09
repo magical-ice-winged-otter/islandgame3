@@ -1,0 +1,66 @@
+ISLANDGAME_ROSEVALE_INN_1F_ROOM2_MapScripts::
+	.byte 0
+
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED::
+# 4 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	lock
+# 5 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	faceplayer
+# 6 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_Text_0
+# 9 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	goto_if_unset FLAG_ROSEVALE_RED, ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_2
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_1:
+# 28 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	closemessage
+# 29 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	release
+	return
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_2:
+# 10 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	trainerbattle_no_intro_no_whiteout TRAINER_ROSEVALE_RED, ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_Text_0
+# 11 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 12 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	switch VAR_RESULT
+# 13 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	case B_OUTCOME_WON, ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_5
+# 22 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	special HealPlayerParty
+# 23 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_Text_0
+	goto ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_1
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_5:
+# 14 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_Text_0
+# 19 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	giveitem ITEM_LIGHT_BALL
+# 20 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	setflag FLAG_ROSEVALE_RED
+	goto ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_1
+
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_Pikachu::
+# 33 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	lock
+# 34 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	faceplayer
+# 35 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	playmoncry SPECIES_PIKACHU, CRY_MODE_NORMAL
+# 36 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_INN_1F_ROOM1_Pikachu_Text_0
+# 39 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED_Text_0:
+# 7 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	.string "...$"
+
+ISLANDGAME_ROSEVALE_INN_1F_ROOM1_Pikachu_Text_0:
+# 37 "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.pory"
+	.string "Pika!$"

@@ -1,3 +1,0 @@
-ISLANDGAME_ORANNA_CHERIPORT_LAB_MapScripts::
-	.byte 0
-

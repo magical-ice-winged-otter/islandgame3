@@ -1,0 +1,60 @@
+mapscripts ISLANDGAME_BELLEHAVEN_PKMNMART_MapScripts {}
+
+script ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_Employee {
+    lock
+    faceplayer
+    msgbox(format("Welcome! What would you like to buy?"))
+    pokemart(Bellehaven_MartItems)
+    msgbox(format("Have a nice rest of your day!"))
+    closemessage
+    release
+}
+
+mart Bellehaven_MartItems {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_HEAL_BALL
+    ITEM_TIMER_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_PARALYZE_HEAL
+    ITEM_ANTIDOTE
+    ITEM_AWAKENING
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+}
+
+movement ISLANDGAME_BELLEHAVEN_PKMNMART_SkittyHeart {
+    emote_heart
+}
+
+script ISLANDGAME_BELLEHAVEN_PKMNMART_Skitty {
+    lock
+    faceplayer
+    applymovement(2, ISLANDGAME_BELLEHAVEN_PKMNMART_SkittyHeart)
+    playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
+    waitmoncry
+}
+
+script ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Unbelievable. I can't even get a pack of Poké Puffs for a reasonable price 'cause of this economy.\p"
+        "Thanks a lot, Silverwing Ding-a-lings."
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_PKMNMART_NPC2 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Ooooh the rizzory... How I wish I had a Fezanskibidi..."
+    ))
+    closemessage
+    release
+}

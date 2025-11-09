@@ -1,0 +1,221 @@
+//in the other map
+const MAREEP_OW_ID = 11
+const MIGHTYENA_OW_ID = 12
+
+const OW_MON_ID_1 = 19
+const OW_MON_ID_2 = 20
+
+mapscripts ISLANDGAME_MINTY_MEADOWS_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setobjectaswildencounter(OW_MON_ID_1, ENCOUNTER_LAND)
+        setobjectaswildencounter(OW_MON_ID_2, ENCOUNTER_LAND)
+    }
+}
+
+script ISLANDGAME_MINTY_MEADOWS_Interact_EntranceSign {
+	msgbox(format("{LEFT_ARROW} MAPLEGROVE \n{RIGHT_ARROW} MINTY MEADOWS"), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer1 {
+    trainerbattle_double(TRAINER_MINTY_MEADOWS_1, format("{COLOR DARK_GRAY}Oi! You're ruining our romantic excursion!"), "Lizzy: Ugh! Worst date ever!\pOwen: W-Wait! Don't leave!", format("{COLOR DARK_GRAY}Go away! We're having a touching moment!"))
+	msgbox(format("{COLOR DARK_GRAY}Ugh, now we have to take our Pokémon to Nurse Joy.\pThanks a lot."), MSGBOX_AUTOCLOSE)
+}
+
+// script ISLANDGAME_MINTY_MEADOWS_Trainer2 {
+//     trainerbattle_single(TRAINER_MINTY_MEADOWS_2, format("{COLOR DARK_GRAY}Battling feels heavy today..."), ISLANDGAME_MINTY_MEADOWS_Trainer2_Loss)
+// 	msgbox("I couldn't overcome the weight.\n It's a struggle, isn't it?", MSGBOX_AUTOCLOSE)
+// }
+
+// text ISLANDGAME_MINTY_MEADOWS_Trainer2_Loss {
+// 	format("Your strength is a beacon. I'll find my own light in this darkness.")
+// }
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer3 {
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_3, format("Hey! Get out of my way! I'm trying to keep up my pace here!"), "I couldn't keep up the momentum...")
+	msgbox(format("I need to get stronger... Fight, Jack... Fight! TATAKAE!!!"), MSGBOX_AUTOCLOSE)
+}
+
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer4 {
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_4, format("{COLOR DARK_GRAY}Let our Pokémon bloom in the meadow's embrace!"), "Your Pokémon flourished beautifully!")
+	msgbox(format("{COLOR DARK_GRAY}I suppose it is still too early for me to bloom."), MSGBOX_AUTOCLOSE)
+}
+
+
+// script ISLANDGAME_MINTY_MEADOWS_Trainer5 {
+//     trainerbattle_single(TRAINER_MINTY_MEADOWS_5, format("{COLOR DARK_GRAY}Hello! Let's explore the wonders of this lovely meadow together!"), ISLANDGAME_MINTY_MEADOWS_Trainer5_Loss)
+// 	msgbox("Oh, our meadow journey had its \nchallenges. \pNature's charm is truly enchanting,\nisn't it?", MSGBOX_AUTOCLOSE)
+// }
+
+// text ISLANDGAME_MINTY_MEADOWS_Trainer5_Loss {
+// 	format("{COLOR DARK_GRAY}I will see you again!")
+//}
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer6 {
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_6, format("I will find you my queen... I'll stop at nothing to see your beauty!"), "How dare you come between me and Her\nMajesty!")
+	msgbox(format("You'll pay for this... Delaying my search for my lovely Vespiquen!"), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer7 {
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_7, format("Go Go Go! My awesome Pokémon!"), "No No No! My awesome Pokémon!")
+	msgbox(format("My Pokémon are awesome, so yours must be awesomer!"), MSGBOX_AUTOCLOSE)
+}
+
+
+script ISLANDGAME_MINTY_MEADOWS_Trainer8 {
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_8, format("This was the worst place for a picnic... I'm allergic to the flowers here."), "It's hard to concentrate in battle when\nyou're sneezing constantly!")
+	msgbox(format("{COLOR DARK_GRAY}Do you have any tissues? I'm not sure how much more of this I can take."), MSGBOX_AUTOCLOSE)
+}
+
+
+
+
+script ISLANDGAME_MINTY_MEADOWS_FlabebeRed {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    setcwildbattle(0, SPECIES_FLABEBE_RED, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0)
+    playmoncry(SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            setflag(FLAG_TEMP_1)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_TEMP_1)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_TEMP_1)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}
+
+script ISLANDGAME_MINTY_MEADOWS_FlabebeOrange {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    setcwildbattle(0, SPECIES_FLABEBE_ORANGE, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0)
+    playmoncry(SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            setflag(FLAG_TEMP_2)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_TEMP_2)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_TEMP_2)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}
+
+script ISLANDGAME_MINTY_MEADOWS_FlabebeYellow {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    setcwildbattle(0, SPECIES_FLABEBE_YELLOW, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0)
+    playmoncry(SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            setflag(FLAG_TEMP_3)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_TEMP_3)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_TEMP_3)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}
+
+script ISLANDGAME_MINTY_MEADOWS_FlabebeBlue {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    setcwildbattle(0, SPECIES_FLABEBE_BLUE, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0)
+    playmoncry(SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            setflag(FLAG_TEMP_4)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_TEMP_4)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_TEMP_4)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}
+
+script ISLANDGAME_MINTY_MEADOWS_FlabebeWhite {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    setcwildbattle(0, SPECIES_FLABEBE_WHITE, 8, ITEM_NONE, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0)
+    playmoncry(SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            setflag(FLAG_TEMP_5)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_TEMP_5)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_TEMP_5)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}

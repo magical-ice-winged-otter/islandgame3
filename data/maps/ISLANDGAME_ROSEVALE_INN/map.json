@@ -1,0 +1,159 @@
+{
+  "id": "MAP_ISLANDGAME_ROSEVALE_INN",
+  "name": "ISLANDGAME_ROSEVALE_INN",
+  "layout": "LAYOUT_ISLANDGAME_ROSEVALE_INN",
+  "music": "MUS_VERDANTURF",
+  "region_map_section": "MAPSEC_ROSEVALE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 18,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_ArthurMom",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TWIN",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_ArthurSister",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
+      "x": 18,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_ArthurDad",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ARTHUR",
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_Arthur",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SHINY_AZURILL",
+      "x": 29,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_ROTATE_CLOCKWISE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_Marill",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ROSEVALE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 20,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ROSEVALE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ROSEVALE_INN_2F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ROSEVALE_INN_1F_ROOM1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_ROSEVALE_INN_1F_ROOM2",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_ROSEVALE_STATE",
+      "var_value": "7",
+      "script": "ISLANDGAME_ROSEVALE_INN_Trigger_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_ROSEVALE_STATE",
+      "var_value": "7",
+      "script": "ISLANDGAME_ROSEVALE_INN_Trigger_Cutscene"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_ROSEVALE_STATE",
+      "var_value": "7",
+      "script": "ISLANDGAME_ROSEVALE_INN_Trigger_Cutscene"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ISLANDGAME_ROSEVALE_INN_Interact_LockedDoor"
+    }
+  ]
+}

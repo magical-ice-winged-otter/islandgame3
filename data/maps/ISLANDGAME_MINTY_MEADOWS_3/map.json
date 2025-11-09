@@ -1,0 +1,72 @@
+{
+  "id": "MAP_ISLANDGAME_MINTY_MEADOWS_3",
+  "name": "ISLANDGAME_MINTY_MEADOWS_3",
+  "layout": "LAYOUT_ISLANDGAME_MINTY_MEADOWS_3",
+  "music": "MUS_NONE",
+  "region_map_section": "MAPSEC_MINTY_MEADOWS",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ISLANDGAME_MINTY_MEADOWS_2",
+      "offset": -55,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(AEGISLASH_SHIELD)",
+      "x": 20,
+      "y": 15,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_MINTY_MEADOWS_3_Aegislash",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 15,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM_RETURN",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_TM_RETURN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_TRAVELERS_TUNNEL_2",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_MAX_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_MINTY_MEADOWS_MAX_REVIVE"
+    }
+  ]
+}

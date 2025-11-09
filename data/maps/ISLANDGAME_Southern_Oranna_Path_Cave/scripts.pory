@@ -1,0 +1,43 @@
+mapscripts ISLANDGAME_Southern_Oranna_Path_Cave_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(flag(FLAG_S_ORANNA_PATH_ABSOL_DEFEATED)) {
+            setflag(FLAG_TEMP_1)
+        }
+        else {
+            setflag(FLAG_ITEM_SORANNA_PATH_ABSOLITE)
+        }
+    }
+}
+
+script ISLANDGAME_Southern_Oranna_Path_Cave_BattleAbsol {
+    lock 
+    faceplayer
+    setflag(FLAG_SMART_WILD_AI)
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_ABSOL, 25, ITEM_NONE, NUM_NATURES, 2, MON_GENDERLESS, 0, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_PLAY_ROUGH, MOVE_SUCKER_PUNCH, MOVE_MEGAHORN, MOVE_ZEN_HEADBUTT)
+    playmoncry(SPECIES_ABSOL, CRY_MODE_ENCOUNTER)
+    waitmoncry
+    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+    dowildbattle
+    clearflag(FLAG_SMART_WILD_AI)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+        
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_LOST:
+            break
+        case B_OUTCOME_RAN:
+            break
+        case B_OUTCOME_WON:
+            goto(Common_EventScript_RemoveStaticPokemon)
+        case B_OUTCOME_CAUGHT:
+            setflag(FLAG_S_ORANNA_PATH_ABSOL_DEFEATED)
+            clearflag(FLAG_ITEM_SORANNA_PATH_ABSOLITE)
+            addobject(2)
+            goto(Common_EventScript_RemoveStaticPokemon)
+        default:
+            setflag(FLAG_S_ORANNA_PATH_ABSOL_DEFEATED)
+            clearflag(FLAG_ITEM_SORANNA_PATH_ABSOLITE)
+            addobject(2)
+            goto(Common_EventScript_RemoveStaticPokemon)
+    }
+    release
+}

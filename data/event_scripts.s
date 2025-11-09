@@ -1160,39 +1160,294 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
 
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Hallway/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room2/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_PlayerRoom/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Cafeteria/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Storage/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Stairs/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_Room1/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_SSRAIN_UpperDeck/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_HOUSE2/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_HOUSE1/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_LAB/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_LAB_2F/scripts.inc"
-
-	.include "data/maps/ISLANDGAME_ORANNA_CHERIPORT_PKMNMART/scripts.inc"
-	
+	.include "data/scripts/islandgame_debug.inc"
 	.include "data/scripts/islandgame_common.inc"
+	.include "data/scripts/islandgame_menu.inc"
+	
+	.include "data/maps/ForestBaseCamp_FrontLawn/scripts.inc"
+
+	.include "data/maps/IslandJungle_Route1/scripts.inc"
+
+	.include "data/maps/ForestBaseCamp_Interior1F/scripts.inc"
+
+	.include "data/maps/ForestBaseCamp_Interior2F/scripts.inc"
+
+	.include "data/maps/PoryTileTest1/scripts.inc"
+
+	.include "data/maps/SS_RAIN_STAIRS/scripts.inc"
+
+	.include "data/maps/SS_RAIN_Hallway/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SS_RAIN_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SS_RAIN_ROOM3/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SS_RAIN_CAPTAIN_ROOM/scripts.inc"
+
+	.include "data/maps/SS_RAIN_CAFETERIA/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT_PKMNMART/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT_HOUSE1/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_CHERIPORT_HOUSE2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_Southern_Oranna_Path/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MINTY_MEADOWS_3/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_MINTY_MEADOWS_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TRAVELERS_TUNNEL/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VERDANT_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VERDANT_PATH_FISHHOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_FRESA_FARMS/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_NORTHERN_ORANNA_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AURORA_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_AURORA_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_AURORA_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_AudreysHouse_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_AudreysHouse_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_BERRY_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_FRESA_FARMS_DAYCARE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_FRESA_FARMS_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_NORTHERN_ORANNA_PATH_FITNESS_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_RALTS_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AURORA_WEATHER_INSTITUTE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_GYM/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_CYCLE_SHOP/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_RARE_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_GENERAL_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_Southern_Oranna_Path_Cave/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TRAVELERS_TUNNEL_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_HOUSE2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN_2F_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN_2F_ROOM2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_INN_1F_ROOM2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_AURORA_3F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_AURORA_2F_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROCKY_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLE_CATACOMBS/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_PLEASANT_AVENUE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AZURE_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ARBORIA/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ARBORIA_THICKET/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SIERRA_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CANTALO/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_POWER_PLANT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_THERION_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MT_THERION_1F/scripts.inc"
+
+	.include "data/maps/ISLADNGAME_PROMENADE_PATH/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_SS_RAIN_BASEMENT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_1F_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_B2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_1F_3/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_APPLEVINE_NAME_RATER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_PKMNMART/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_GAME_CORNER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_RESTAURANT/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_BIKE_PATH_BUILDING/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_QUEST_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT_LAB_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CAMP_PERSI_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_MAPLEGROVE_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TIDALCOVE_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROSEVALE_PKMNCENTER_2F/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_ROCKY_PATH_HOUSE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ROCKY_PATH_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_GROTTO/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AURORA_PATH_GROTTO/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_APPLEVINE_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_HOUSE_1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_HOUSE_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_FOSTER_HOME/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_PKMNCENTER/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_B3F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_LUMINE_CAVE_B4F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_TRAVELERS_TUNNEL_B1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2_GROOMERS/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ANOMALY01_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ANOMALY02_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_ANOMALY01_3F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_FOSTER_HOME_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLEHAVEN_PKMNCENTER_2F/scripts.inc"
+	
+	.include "data/maps/ISLANDGAME_BELLE_CATACOMBS_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLE_CATACOMBS_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLE_CATACOMBS_3F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_BELLE_CATACOMBS_4F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_SEWERS_MAIN/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/scripts.inc"

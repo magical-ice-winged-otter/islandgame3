@@ -1,0 +1,7 @@
+mapscripts ISLANDGAME_MT_AURORA_1F_MapScripts {
+}
+
+
+script ISLANDGAME_MT_AURORA_1F_SignInteract {
+        msgbox(format("WARNING\nBEWARE OF SUBZERO TEMPERATURES\pAttention! The caves of Mt. Aurora can get dangerously cold. Please wear proper attire before traversing."), MSGBOX_SIGN)
+}

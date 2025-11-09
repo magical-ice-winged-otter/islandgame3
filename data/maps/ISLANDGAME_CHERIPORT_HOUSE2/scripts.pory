@@ -1,0 +1,91 @@
+mapscripts ISLANDGAME_CHERIPORT_HOUSE2_MapScripts {}
+
+
+script ISLANDGAME_CHERIPORT_HOUSE2_EventScript_NPC1 {
+    lock
+    faceplayer
+    msgbox(ISLANDGAME_CHERIPORT_HOUSE2_NPC1_TALK)
+    release
+}
+
+text ISLANDGAME_CHERIPORT_HOUSE2_NPC1_TALK {
+    format(
+        "{COLOR DARK_GRAY}This building was once a derelict chapel on the brink of collapse. \p"
+        "{COLOR DARK_GRAY}We have since then renovated it and given it a new purpose. \p"
+        "{COLOR DARK_GRAY}To provide beach amenities and complimentary drinks to those in need."
+    )
+}
+
+script ISLANDGAME_CHERIPORT_HOUSE2_EventScript_NPC2 {
+    lock
+    faceplayer
+    msgbox(ISLANDGAME_CHERIPORT_HOUSE2_NPC2_TALK)
+    release
+}
+
+text ISLANDGAME_CHERIPORT_HOUSE2_NPC2_TALK {
+    format(
+        "{COLOR DARK_GRAY}I wish I was a water Pokémon. Then, I wouldn't have to wear this inner tube! \p"
+        "{COLOR DARK_GRAY}Which water Pokémon would you wanna be? I wanna be a Wooper! Woop Woop!"
+    )
+}
+
+script ISLANDGAME_CHERIPORT_HOUSE2_EventScript_NPC3 {
+    lock
+    faceplayer
+
+    if (!flag(FLAG_DAILY_CHERIPORT_RECEIVED_DRINK))
+    {
+        msgbox(ISLANDGAME_CHERIPORT_HOUSE2_NPC3_TALK, MSGBOX_YESNO)
+
+        if (var(VAR_RESULT) == NO) {
+            msgbox(format("We'll always be here if you need a drink."))
+            goto(PriestessDrinkGiver_End)
+        }
+
+        if (!var(VAR_RESULT)) {
+            msgbox(format("Oh dear, you don't have enough room for a drink."))
+            goto(PriestessDrinkGiver_End)
+        }
+        setflag(FLAG_DAILY_CHERIPORT_RECEIVED_DRINK)
+
+        // Randomly select some item to give the player.
+        // random(100)
+
+        random(100)
+        if (var(VAR_RESULT) < 30)
+        {
+            giveitem(ITEM_FRESH_WATER)
+        }
+        elif (var(VAR_RESULT) < 30 + 25)
+        {
+            giveitem(ITEM_LEMONADE)
+        }
+        elif (var(VAR_RESULT) < 30 + 25 + 20)
+        {
+            giveitem(ITEM_SODA_POP)
+        }
+        elif (var(VAR_RESULT) < 30 + 25 + 20 + 15)
+        {
+            giveitem(ITEM_MOOMOO_MILK)
+        }
+        else
+        {
+            giveitem(ITEM_BERRY_JUICE)
+        }
+    }
+    else
+    {
+        msgbox(format("Sorry, our policy is one beverage per day. Come back tomorrow."))
+    }
+
+    PriestessDrinkGiver_End:
+        closemessage
+        release
+}
+
+text ISLANDGAME_CHERIPORT_HOUSE2_NPC3_TALK {
+    format(
+        "{COLOR DARK_GRAY}You look thirsty. Would you like a refreshing beverage?"
+    )
+}

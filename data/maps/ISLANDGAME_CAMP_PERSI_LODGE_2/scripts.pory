@@ -1,0 +1,70 @@
+mapscripts ISLANDGAME_CAMP_PERSI_LODGE_2_MapScripts {}
+
+
+script ISLANDGAME_CAMP_PERSI_LODGE_2_EventScript_NPC1 {
+    lock
+    faceplayer
+    msgbox(ISLANDGAME_CAMP_PERSI_LODGE_2_NPC1Talk)
+    release
+}
+
+text ISLANDGAME_CAMP_PERSI_LODGE_2_NPC1Talk {
+    format(
+        "I hope Scoutmaster Lumpus is doing alright. Those boys can be so rowdy."
+    )
+}
+
+script ISLANDGAME_CAMP_PERSI_LODGE_2_EventScript_NPC2 {
+    lock
+    faceplayer
+    if (flag(FLAG_DAILY_PERSI_GIRL_SCOUT)) {
+        msgbox(format(
+            "If you want another one, come back tomorrow! :D"
+        ))
+        closemessage
+        return
+    }
+    msgbox(format(
+        "I made an extra one of these during arts and crafts! You can have it!"
+    ))
+    random(7)
+    switch(var(VAR_RESULT)) {
+        case 1: giveitem(ITEM_HEAVY_BALL)
+        case 2: giveitem(ITEM_LURE_BALL)
+        case 3: giveitem(ITEM_FRIEND_BALL)
+        case 4: giveitem(ITEM_LOVE_BALL)
+        case 5: giveitem(ITEM_LEVEL_BALL)
+        case 6: giveitem(ITEM_FAST_BALL)
+        default: giveitem(ITEM_MOON_BALL)
+    }
+    setflag(FLAG_DAILY_PERSI_GIRL_SCOUT)
+    release
+}
+
+
+script ISLANDGAME_CAMP_PERSI_LODGE_2_EventScript_NPC3 {
+    lock
+    faceplayer
+    msgbox(ISLANDGAME_CAMP_PERSI_LODGE_2_NPC3Talk)
+    release
+}
+
+text ISLANDGAME_CAMP_PERSI_LODGE_2_NPC3Talk {
+    format(
+        "The boys are so lucky to have a game console. I wanted to get one for our cabin too, but I got outvoted by everyone else. \p"
+        "So now we just have a stupid kitchen in here."
+    )
+}
+
+script ISLANDGAME_CAMP_PERSI_LODGE_2_EventScript_Doll {
+    lock
+    faceplayer
+    msgbox(ISLANDGAME_CAMP_PERSI_LODGE_2_DollInteract)
+    release
+}
+
+text ISLANDGAME_CAMP_PERSI_LODGE_2_DollInteract {
+    format(
+        "{COLOR RED}(It's a doll of a Chikorita. It looks neglected.)"
+    )
+}

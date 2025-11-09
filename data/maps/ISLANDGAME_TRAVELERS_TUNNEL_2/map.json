@@ -1,0 +1,101 @@
+{
+  "id": "MAP_ISLANDGAME_TRAVELERS_TUNNEL_2",
+  "name": "ISLANDGAME_TRAVELERS_TUNNEL_2",
+  "layout": "LAYOUT_ISLANDGAME_TRAVELERS_TUNNEL_2",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_TRAVELERS_TUNNEL",
+  "requires_flash": true,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 20,
+      "y": 12,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_StrengthBoulder",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 21,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ISLANDGAME_TRAVELERS_TUNNEL_2_Trainer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_TRAVELERS_TUNNEL_2_Maniac",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 11,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_TRAVELERS_TUNNEL",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_MINTY_MEADOWS_3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_TRAVELERS_TUNNEL_B1F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_MOON_STONE",
+      "flag": "FLAG_HIDDEN_ITEM_TRAVELERS_TUNNEL_MOONSTONE"
+    },
+    {
+      "type": "hidden_item",
+      "x": 13,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_EXP_CANDY_S",
+      "flag": "FLAG_HIDDEN_ITEM_TRAVELERS_TUNNEL_CANDY"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+const FLAG_DAYTIME = FLAG_TEMP_2
+const FLAG_NIGHTTIME = FLAG_TEMP_3
+
+// const QUEST_VALLEY_OF_PEACE_CUBONE_NPC = 11 // is this right?
+
+mapscripts ISLANDGAME_BELLEHAVEN_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        // quest_emote_on_warp(QUEST_VALLEY_OF_PEACE_CUBONE_NPC, QUEST_VALLEY_OF_PEACE_CUBONE)        
+        gettime
+
+        if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
+            setflag(FLAG_NIGHTTIME) // controls daytime npcs
+            returnqueststate(QUEST_VALLEY_OF_PEACE_CUBONE)
+            switch (var(VAR_RESULT)) {
+                case QUEST_INACTIVE: break
+                default: setflag(FLAG_TEMP_4) // frankie
+            }
+        }
+        else {
+            setflag(FLAG_DAYTIME) // controls nighttime npcs
+            setflag(FLAG_TEMP_4) // frankie
+        }
+        destroyfollower() // kill easter egg spooky girl from pkmn center
+    }
+}
+
+script ISLANDGAME_BELLEHAVEN_Interact_Sign {
+    msgbox(format(
+        "BELLEHAVEN\n"
+        "Peace and Harmony"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_BELLEHAVEN_LumineCave_Sign {
+    msgbox(format(
+        "LUMINE CAVE"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_BELLEHAVEN_PokeShelterSign {
+    msgbox(format(
+        "Bellehaven Pokémon Foster Care\nChange a life today!"
+    ), MSGBOX_SIGN)
+}
+
+
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_Frankie {
+    lock
+    faceplayer
+    msgbox(format(
+        "Excuse me, have you seen a Cubone anywhere by chance?\pWe took one in earlier this morning, but I couldn't find it anywhere when it came dinner time!\p"
+        "Ooh, I hope he's alright... I found him wandering around the Valley of Peace all by himself at night.\pMaybe he's returned there to look for his parents?"
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_Azurill {
+    lock
+    faceplayer
+    playmoncry(SPECIES_AZURILL, CRY_MODE_NORMAL)
+    msgbox(format(
+        "Azu... {COLOR BLUE}(Mr. Herriman is such a killjoy. I can't have any fun around here...)"
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_Tyrogue {
+    lock
+    playmoncry(SPECIES_TYROGUE, CRY_MODE_NORMAL)
+    msgbox(format(
+        "Tyro! {COLOR BLUE}(Heya! My name's Wilt. How's it hangin'?)"
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_Herriman {
+    lock
+    msgbox(format(
+        "Good heavens, am I exhausted! I had to deal with Master Bloo's tomfoolery all day!\p"
+        "I hope Master Mac comes back from schooling soon. I'm not sure how much of this trouble-maker I can take..."
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_NPC_1 {
+    lock
+    faceplayer
+    msgbox(format(
+        "To the east is the Valley of Peace, a sacred burial ground where people may go to pay their respects to the fallen.\p"
+        "In the center of the valley is a shrine, where you can communicate with those in the afterlife, or so it is believed."
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_NPC_3 {
+    lock
+    faceplayer
+    msgbox(format(
+        "That's the last time I take my litty kitty out for a walk in Lumine Cave..."
+    ))
+    applymovement(8, Common_Movement_FaceOriginalDirection)
+    waitmovement(0)
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_Litten {
+    lock
+    faceplayer
+    playmoncry(SPECIES_LITTEN, CRY_MODE_NORMAL)
+    msgbox(format(
+        "Mreow... {COLOR BLUE}(I hate mondays.)"
+    ))
+    applymovement(9, Common_Movement_FaceOriginalDirection)
+    waitmovement(0)
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_NPC_4 {
+    lock
+    faceplayer
+    msgbox(format(
+        "I sense a premonition of impending doom... Can you feel it too?\p"
+        "Ah, of course you cannot. You are not a cosmic adept like me."
+    ))
+    closemessage
+    release
+}
+
+script ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Hey...{PAUSE 60} do you think ghosts are real?"
+    ), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES) {
+        msgbox(format(
+            "Hmm...{PAUSE 30} I wonder if ghost Pokémon also count as real ghosts or not..."
+        ))
+    }
+    else {
+        msgbox(format(
+            "You don't? I must be imagining that white hand on your shoulder then...\p"
+            "...\p"
+            "Ha! Made you look!"
+        ))
+    }
+    closemessage
+    release
+}
+
+
+
