@@ -1637,6 +1637,23 @@
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GMAX         SPECIES_URSHIFU_RAPID_STRIKE_GMAX
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
+#define SPECIES_SHADOW_LUGIA                            1524
+#define SPECIES_SHADOW_MIGHTYENA                        1525
+#define SPECIES_GOLETT_MARYAN                           1526
+#define SPECIES_GOLURK_MARYAN                           1527
+#define SPECIES_FEEBAS_MARYAN                           1528
+#define SPECIES_MILOTIC_MARYAN                          1529
+#define SPECIES_PURRLOIN_MARYAN                         1530
+#define SPECIES_LIEPARD_MARYAN                          1531
+#define SPECIES_NINCADA_MARYAN                          1532
+#define SPECIES_NINJASK_MARYAN                          1533
+#define SPECIES_SHEDINJA_MARYAN                         1534
+#define SPECIES_COMBEE_MARYAN                           1535
+#define SPECIES_VESPIQUEN_MARYAN                        1536
+#define SPECIES_SHADOW_AGGRON                           1537
+#define SPECIES_ANOMALY_01                              1538
+#define SPECIES_SHELLOS_MARYAN                          1539
+#define SPECIES_GASTRODON_MARYAN                        1540
 
 #define SPECIES_EGG                                     (SPECIES_MIMIKYU_BUSTED_TOTEM + 1)
 
