@@ -839,7 +839,7 @@ Misdreavus @ Sitrus Berry
 Level: 21
 - Psybeam
 - Hex
-- Confuse Raw
+- Confuse Ray
 - Mean Look
 
 Vespiquen Maryan @ Petaya Berry
@@ -948,7 +948,6 @@ Class: Thief
 Pic: Edea
 Gender: Female
 Music: Aqua
-AI: Check Bad Move
 Items: Super Potion / Full Heal
 AI: Check Bad Move / Try To Faint / Check Viability / Prefer Status Moves / Smart Switching / Ace Pokemon
 
@@ -1491,7 +1490,7 @@ Level: 33
 Ball: Ultra Ball
 Nature: Adamant
 - Pursuit
-- Zen Headbut
+- Zen Headbutt
 - Bullet Punch
 - Metal Claw
 
@@ -1646,7 +1645,7 @@ Gender: Female
 Music: Female
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Antique
+Sinistea Antique
 Level: 35
 
 Poltchageist Artisan

@@ -42,66 +42,66 @@ ISLANDGAME_MINTY_MEADOWS_Trainer4::
 
 
 ISLANDGAME_MINTY_MEADOWS_Trainer6::
-# 55 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 45 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_6, ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_0, ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_1
-# 56 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 46 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_Trainer7::
-# 60 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 50 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_7, ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_0, ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_1
-# 61 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 51 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_Trainer8::
-# 66 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 56 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_8, ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_0, ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_1
-# 67 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 57 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeRed::
-# 74 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 64 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	lock
-# 75 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 65 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	faceplayer
-# 76 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 66 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 77 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 67 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setcwildbattle 0, SPECIES_FLABEBE_RED, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0
-# 78 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 68 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	playmoncry SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER
-# 79 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 69 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	waitmoncry
-# 80 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 70 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 81 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 71 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	dowildbattle
-# 82 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 72 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 83 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 73 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 85 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 75 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	switch VAR_RESULT
-# 86 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 76 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_MINTY_MEADOWS_FlabebeRed_3
-# 88 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 78 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_FlabebeRed_4
-# 90 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 80 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_MINTY_MEADOWS_FlabebeRed_5
-# 93 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 83 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_MINTY_MEADOWS_FlabebeRed_6
-# 97 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 87 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_1
-# 98 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 88 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_MINTY_MEADOWS_FlabebeRed_1:
-# 100 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 90 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	release
 	return
 
@@ -112,57 +112,57 @@ ISLANDGAME_MINTY_MEADOWS_FlabebeRed_4:
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeRed_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeRed_5:
-# 91 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 81 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_1
-# 92 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 82 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeRed_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeRed_6:
-# 94 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 84 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_1
-# 95 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 85 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeRed_1
 
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeOrange::
-# 104 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 94 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	lock
-# 105 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 95 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	faceplayer
-# 106 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 96 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 107 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 97 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setcwildbattle 0, SPECIES_FLABEBE_ORANGE, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0
-# 108 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 98 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	playmoncry SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER
-# 109 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 99 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	waitmoncry
-# 110 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 100 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 111 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 101 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	dowildbattle
-# 112 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 102 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 113 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 103 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 115 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 105 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	switch VAR_RESULT
-# 116 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 106 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_3
-# 118 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 108 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_4
-# 120 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 110 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_5
-# 123 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 113 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_6
-# 127 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 117 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_2
-# 128 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 118 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_1:
-# 130 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 120 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	release
 	return
 
@@ -173,57 +173,57 @@ ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_4:
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_5:
-# 121 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 111 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_2
-# 122 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 112 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_6:
-# 124 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 114 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_2
-# 125 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 115 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeOrange_1
 
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeYellow::
-# 134 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 124 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	lock
-# 135 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 125 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	faceplayer
-# 136 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 126 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 137 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 127 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setcwildbattle 0, SPECIES_FLABEBE_YELLOW, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0
-# 138 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 128 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	playmoncry SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER
-# 139 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 129 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	waitmoncry
-# 140 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 130 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 141 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 131 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	dowildbattle
-# 142 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 132 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 143 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 133 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 145 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 135 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	switch VAR_RESULT
-# 146 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 136 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_3
-# 148 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 138 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_4
-# 150 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 140 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_5
-# 153 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 143 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_6
-# 157 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 147 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_3
-# 158 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 148 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_1:
-# 160 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 150 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	release
 	return
 
@@ -234,57 +234,57 @@ ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_4:
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_5:
-# 151 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 141 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_3
-# 152 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 142 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_6:
-# 154 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 144 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_3
-# 155 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 145 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeYellow_1
 
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeBlue::
-# 164 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 154 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	lock
-# 165 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 155 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	faceplayer
-# 166 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 156 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 167 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 157 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setcwildbattle 0, SPECIES_FLABEBE_BLUE, 8, ITEM_NONE, NUM_NATURES, 0, 0, 0, 0, 0, 0, 0
-# 168 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 158 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	playmoncry SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER
-# 169 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 159 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	waitmoncry
-# 170 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 160 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 171 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 161 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	dowildbattle
-# 172 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 162 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 173 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 163 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 175 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 165 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	switch VAR_RESULT
-# 176 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 166 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_3
-# 178 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 168 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_4
-# 180 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 170 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_5
-# 183 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 173 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_6
-# 187 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 177 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_4
-# 188 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 178 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_1:
-# 190 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 180 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	release
 	return
 
@@ -295,57 +295,57 @@ ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_4:
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_5:
-# 181 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 171 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_4
-# 182 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 172 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_6:
-# 184 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 174 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_4
-# 185 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 175 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeBlue_1
 
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeWhite::
-# 194 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 184 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	lock
-# 195 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 185 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	faceplayer
-# 196 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 186 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 197 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 187 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setcwildbattle 0, SPECIES_FLABEBE_WHITE, 8, ITEM_NONE, NUM_NATURES, 1, 0, 0, 0, 0, 0, 0
-# 198 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 188 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	playmoncry SPECIES_FLABEBE_RED, CRY_MODE_ENCOUNTER
-# 199 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 189 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	waitmoncry
-# 200 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 190 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 201 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 191 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	dowildbattle
-# 202 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 192 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 203 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 193 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 205 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 195 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	switch VAR_RESULT
-# 206 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 196 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_3
-# 208 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 198 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_4
-# 210 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 200 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_5
-# 213 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 203 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_6
-# 217 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 207 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_5
-# 218 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 208 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_1:
-# 220 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 210 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	release
 	return
 
@@ -356,16 +356,16 @@ ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_4:
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_5:
-# 211 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 201 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_5
-# 212 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 202 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_1
 
 ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_6:
-# 214 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 204 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	setflag FLAG_TEMP_5
-# 215 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 205 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_MINTY_MEADOWS_FlabebeWhite_1
 
@@ -424,42 +424,42 @@ ISLANDGAME_MINTY_MEADOWS_Trainer4_Text_2:
 	.string "bloom.$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_0:
-# 55 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 45 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "I will find you my queen... I'll stop at\n"
 	.string "nothing to see your beauty!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_1:
-# 55 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 45 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "How dare you come between me and Her\nMajesty!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer6_Text_2:
-# 56 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 46 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "You'll pay for this... Delaying my search\n"
 	.string "for my lovely Vespiquen!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_0:
-# 60 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 50 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "Go Go Go! My awesome Pokémon!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_1:
-# 60 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 50 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "No No No! My awesome Pokémon!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer7_Text_2:
-# 61 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 51 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "My Pokémon are awesome, so yours must\n"
 	.string "be awesomer!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_0:
-# 66 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 56 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "This was the worst place for a picnic...\n"
 	.string "I'm allergic to the flowers here.$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_1:
-# 66 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 56 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "It's hard to concentrate in battle when\nyou're sneezing constantly!$"
 
 ISLANDGAME_MINTY_MEADOWS_Trainer8_Text_2:
-# 67 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
+# 57 "data/maps/ISLANDGAME_MINTY_MEADOWS/scripts.pory"
 	.string "{COLOR DARK_GRAY}Do you have any tissues? I'm not sure\n"
 	.string "how much more of this I can take.$"
