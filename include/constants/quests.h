@@ -23,8 +23,8 @@
 #define QUEST_FAVORITE   5
 
 // quest number defines
-#define QUEST_1          0
-#define QUEST_2          1
+#define QUEST_POKEDEX_COMPLETION          0
+#define QUEST_MINTY_MEADOWS_MELISSA       1
 #define QUEST_3          2
 #define QUEST_4          3
 #define QUEST_5          4
@@ -55,19 +55,19 @@
 #define QUEST_30        29
 #define QUEST_COUNT     (QUEST_30 + 1)
 
-#define SUB_QUEST_1          0
-#define SUB_QUEST_2          1
-#define SUB_QUEST_3          2
-#define SUB_QUEST_4          3
-#define SUB_QUEST_5          4
-#define SUB_QUEST_6          5
-#define SUB_QUEST_7          6
-#define SUB_QUEST_8          7
-#define SUB_QUEST_9          8
-#define SUB_QUEST_10         9
-#define SUB_QUEST_11        10
-#define SUB_QUEST_12        11
-#define SUB_QUEST_13        12
+#define SUB_QUEST_POKEDEX_MILESTONE_1      0
+#define SUB_QUEST_POKEDEX_MILESTONE_2      1
+#define SUB_QUEST_POKEDEX_MILESTONE_3      2
+#define SUB_QUEST_POKEDEX_MILESTONE_4      3
+#define SUB_QUEST_POKEDEX_MILESTONE_5      4
+#define SUB_QUEST_POKEDEX_MILESTONE_6      5
+#define SUB_QUEST_POKEDEX_MILESTONE_7      6
+#define SUB_QUEST_POKEDEX_MILESTONE_8      7
+#define SUB_QUEST_POKEDEX_MILESTONE_9      8
+#define SUB_QUEST_POKEDEX_MILESTONE_10     9
+#define SUB_QUEST_POKEDEX_MILESTONE_11     10
+#define SUB_QUEST_POKEDEX_MILESTONE_12     11
+#define SUB_QUEST_POKEDEX_MILESTONE_13     12
 #define SUB_QUEST_14        13
 #define SUB_QUEST_15        14
 #define SUB_QUEST_16        15
@@ -86,9 +86,9 @@
 #define SUB_QUEST_29        28
 #define SUB_QUEST_30        29
 
-#define QUEST_1_SUB_COUNT 10
+#define SUB_QUEST_COUNT_POKEDEX_MILESTONE 13
 #define QUEST_2_SUB_COUNT 20
-#define SUB_QUEST_COUNT (QUEST_1_SUB_COUNT + QUEST_2_SUB_COUNT)
+#define SUB_QUEST_COUNT (SUB_QUEST_COUNT_POKEDEX_MILESTONE + QUEST_2_SUB_COUNT)
 
 // We want to allocate more space in the saveblock for quests than we need,
 // so we don't make breaking changes in the future.

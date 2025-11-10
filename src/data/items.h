@@ -11673,7 +11673,10 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("TM52"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "An attack that\n"
+            "leaves the foe\n"
+            "with at least 1 HP."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14616,6 +14619,23 @@ const struct Item gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_IslandgameLobsterRoll,
         .iconPalette = gItemIconPalette_IslandgameLobsterRoll,
+    },
+
+    [ITEM_ISLANDGAME_STRANGE_DISC] =
+    {
+        .name = ITEM_NAME("Strange Disc"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Huh? When did I”\n"
+            "get this? Wonder\n"
+            "what's inside..."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .importance = 1,
+        .iconPic = gItemIcon_IslandgameStrangeDisc,
+        .iconPalette = gItemIconPalette_IslandgameStrangeDisc,
     },
 };
 

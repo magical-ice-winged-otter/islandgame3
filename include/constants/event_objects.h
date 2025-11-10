@@ -269,13 +269,14 @@
 #define OBJ_EVENT_GFX_OLIVER_MACH_BIKE           ISLAND_START + 11
 #define OBJ_EVENT_GFX_OLIVER_WATERING            ISLAND_START + 12
 #define OBJ_EVENT_GFX_PALM                       ISLAND_START + 13
-
 #define OBJ_EVENT_GFX_SILVERWING_M               ISLAND_START + 14
 #define OBJ_EVENT_GFX_SILVERWING_F               ISLAND_START + 15
 #define OBJ_EVENT_GFX_GAMEBOY_KID_2              ISLAND_START + 16
 #define OBJ_EVENT_GFX_TUBER_F_SWIMMING           ISLAND_START + 17
+#define OBJ_EVENT_GFX_MELISSA                    ISLAND_START + 18
+#define OBJ_EVENT_GFX_COCO                       ISLAND_START + 19
 
-#define ISLAND_END                               OBJ_EVENT_GFX_TUBER_F_SWIMMING
+#define ISLAND_END                               OBJ_EVENT_GFX_COCO
 
 #define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
 
@@ -501,6 +502,8 @@
 #define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x131C
 #define OBJ_EVENT_PAL_TAG_GIRL_3                  0x131D
 #define OBJ_EVENT_PAL_TAG_LITTLE_BOY              0x131E
+#define OBJ_EVENT_PAL_TAG_MELISSA                 0x131F
+#define OBJ_EVENT_PAL_TAG_COCO                    0x1320
 
 
 

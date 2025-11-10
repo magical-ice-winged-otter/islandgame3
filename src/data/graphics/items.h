@@ -2104,3 +2104,6 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon
 // island-game custom items
 const u32 gItemIcon_IslandgameLobsterRoll[] = INCBIN_U32("graphics/items/icons/lobster_roll.4bpp.smol");
 const u16 gItemIconPalette_IslandgameLobsterRoll[] = INCBIN_U16("graphics/items/icon_palettes/lobster_roll.gbapal");
+
+const u32 gItemIcon_IslandgameStrangeDisc[] = INCBIN_U32("graphics/items/icons/strange_disc.4bpp.smol");
+const u16 gItemIconPalette_IslandgameStrangeDisc[] = INCBIN_U16("graphics/items/icon_palettes/strange_disc.gbapal");

@@ -239,106 +239,136 @@ static const u8 sText_AZ[] = _(" A-Z");
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
 
 //Declaration of subquest structures. Edits to subquests are made here.
-static const struct SubQuest sSubQuests1[QUEST_1_SUB_COUNT] =
+static const struct SubQuest sSubQuests_PokedexMilestones[SUB_QUEST_COUNT_POKEDEX_MILESTONE] =
 {
     {
-        .id = 0,
-        .name = COMPOUND_STRING("Part 1"),
-        .desc = COMPOUND_STRING("Description Sub 1"),
-        .map = COMPOUND_STRING("Map 1"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_1,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 30 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_TM52,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 1,
-        .name = COMPOUND_STRING("Part 2"),
-        .desc = COMPOUND_STRING("Description Sub 2"),
-        .map = COMPOUND_STRING("Map 2"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_2,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 60 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_NEST_BALL,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 2,
-        .name = COMPOUND_STRING("Part 3"),
-        .desc = COMPOUND_STRING("Description Sub 3"),
-        .map = COMPOUND_STRING("Map 3"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_3,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 90 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_RARE_CANDY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 3,
-        .name = COMPOUND_STRING("Part 4"),
-        .desc = COMPOUND_STRING("Description Sub 4"),
-        .map = COMPOUND_STRING("Map 4"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_4,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 120 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_LEVEL_BALL,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 4,
-        .name = COMPOUND_STRING("Part 5"),
-        .desc = COMPOUND_STRING("Description Sub 5"),
-        .map = COMPOUND_STRING("Map 5"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_5,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 150 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_ABILITY_CAPSULE,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 5,
-        .name = COMPOUND_STRING("Part 6"),
-        .desc = COMPOUND_STRING("Description Sub 6"),
-        .map = COMPOUND_STRING("Map 6"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_6,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 180 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_ULTRA_BALL,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 6,
-        .name = COMPOUND_STRING("Part 7"),
-        .desc = COMPOUND_STRING("Description Sub 7"),
-        .map = COMPOUND_STRING("Map 7"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_7,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 210 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_ABILITY_PATCH,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 7,
-        .name = COMPOUND_STRING("Part 8"),
-        .desc = COMPOUND_STRING("Description Sub 8"),
-        .map = COMPOUND_STRING("Map 8"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_8,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 240 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_QUICK_BALL,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 8,
-        .name = COMPOUND_STRING("Part 9"),
-        .desc = COMPOUND_STRING("Description Sub 9"),
-        .map = COMPOUND_STRING("Map 9"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_9,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 270 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_CATCHING_CHARM,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 
     {
-        .id = 9,
-        .name = COMPOUND_STRING("Part 10"),
-        .desc = COMPOUND_STRING("Description Sub 10"),
-        .map = COMPOUND_STRING("Map 10"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_POKEDEX_MILESTONE_10,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 300 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_EXP_CHARM,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+
+    {
+        .id = SUB_QUEST_POKEDEX_MILESTONE_11,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 330 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_OVAL_CHARM,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+
+    {
+        .id = SUB_QUEST_POKEDEX_MILESTONE_12,
+        .name = COMPOUND_STRING("Milestone Reached!"),
+        .desc = COMPOUND_STRING("You've completed 360 entries!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_MASTER_BALL,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+
+    {
+        .id = SUB_QUEST_POKEDEX_MILESTONE_13,
+        .name = COMPOUND_STRING("Pokédex Completed!"),
+        .desc = COMPOUND_STRING("You've completed the Pokédex!"),
+        .map = COMPOUND_STRING(""),
+        .sprite = ITEM_AURORA_TICKET,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 };
 
@@ -552,29 +582,33 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////BEGIN QUEST CUSTOMIZATION//////////////////////////////
 
-//Declaration of side quest structures. Edits to quests are made here.
+// Declaration of side quest structures. Edits to quests are made here.
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
 {
+    [QUEST_POKEDEX_COMPLETION] =
+	{
+        .name = COMPOUND_STRING("<!> Gotta Catch 'Em All!"),
+        .desc = COMPOUND_STRING("You know the deal. Complete the\nPokédex for Professor Palm!"),
+        .donedesc = COMPOUND_STRING("Thanks for playing! :)"),
+        .map = COMPOUND_STRING("Cheriport"),
+        .sprite = OBJ_EVENT_GFX_PALM,
+        .spritetype = OBJECT,
+        .subquests = sSubQuests_PokedexMilestones,
+        .numSubquests = SUB_QUEST_COUNT_POKEDEX_MILESTONE
+    },
+
+	[QUEST_MINTY_MEADOWS_MELISSA] =
     {
-        .name = COMPOUND_STRING("Side Quest 1"),
-        .desc = COMPOUND_STRING("Description 1"),
-        .donedesc = COMPOUND_STRING("Completed Quest 1"),
-        .map = COMPOUND_STRING("Map 1"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .name = COMPOUND_STRING("<!> The Journey Begins!"),
+        .desc = COMPOUND_STRING("Meet up with your new\nco-apprentice, Melissa!"),
+        .donedesc = COMPOUND_STRING("You and Melissa rescued\nOld Man Paulie's Mareep!"),
+        .map = COMPOUND_STRING("Minty Meadows"),
+        .sprite = OBJ_EVENT_GFX_MELISSA,
         .spritetype = OBJECT,
         .subquests = NULL,
         .numSubquests = 0
     },
-    {
-        .name = COMPOUND_STRING("Side Quest 2"),
-        .desc = COMPOUND_STRING("Description 2"),
-        .donedesc = COMPOUND_STRING("Completed Quest 2"),
-        .map = COMPOUND_STRING("Map 2"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = sSubQuests1,
-        .numSubquests = QUEST_1_SUB_COUNT
-    },
+
     {
         .name = COMPOUND_STRING("Side Quest 3"),
         .desc = COMPOUND_STRING("Description 3"),
@@ -583,7 +617,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
         .sprite = OBJ_EVENT_GFX_WALLY,
         .spritetype = OBJECT,
         .subquests = sSubQuests2,
-        .numSubquests = QUEST_2_SUB_COUNT
+        .numSubquests = 0
     },
     {
         .name = COMPOUND_STRING("Side Quest 4"),

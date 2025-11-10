@@ -1,1 +1,20 @@
 mapscripts ISLANDGAME_ORANNA_CHERIPORT_LAB_2F_MapScripts {}
+
+
+
+script ISLANDGAME_ORANNA_CHERIPORT_LAB_2F_Bag {
+    lock
+    msgbox(format(
+        "{COLOR RED}(I probably shouldn't be snooping around in this.)"
+    ))
+    closemessage
+    release
+
+}
+
+script ISLANDGAME_ORANNA_CHERIPORT_LAB_2F_PC {
+    msgbox(format(
+        "{COLOR RED}(It's Professor Palm's computer. It's password-protected, obviously.)"
+    ), MSGBOX_SIGN)
+}
+

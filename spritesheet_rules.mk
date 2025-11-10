@@ -63,8 +63,11 @@ $(OBJEVENTGFXDIR)/people/gameboy_kid2.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/tuber_f_swimming.4bpp: graphics/object_events/pics/people/tuber_f_swimming.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/melissa.4bpp: graphics/object_events/pics/people/melissa.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-
+$(OBJEVENTGFXDIR)/people/coco.4bpp: graphics/object_events/pics/people/coco.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 
 $(OBJEVENTGFXDIR)/people/brendan/walking.4bpp: %.4bpp: %.png
