@@ -82,12 +82,11 @@ Music: Male
 Double Battle: No
 
 === TRAINER_S_ORANNA_PATH_TRAINER_1 ===
-Name: TYLER
+Name: Tyler
 Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Starly
@@ -95,12 +94,11 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_S_ORANNA_PATH_TRAINER_2 ===
-Name: JULIA
+Name: Julia
 Class: Lass
 Pic: Lass
 Gender: Female
 Music: Female
-Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Pikachu (F)
@@ -108,12 +106,11 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_S_ORANNA_PATH_TRAINER_3 ===
-Name: MANNY
+Name: Manny
 Class: Bug Catcher
 Pic: Bug Catcher
 Gender: Male
 Music: MALE
-Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Surskit
@@ -121,12 +118,11 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_S_ORANNA_PATH_TRAINER_4 ===
-Name: JAKE
+Name: Jake
 Class: Youngster
 Pic: Youngster
 Gender: Male
 Music: Male
-Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Scraggy
@@ -135,1787 +131,1558 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Intimidate
 
 === TRAINER_CAMP_PERSI_TRAINER_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: Hanzo
+Class: Ninja Boy
+Pic: Ninja Boy
 Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Nincada Maryan
+Level: 8
 
 === TRAINER_CAMP_PERSI_TRAINER_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: Edward
+Class: Scout
+Pic: Scout M
 Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CAMP_PERSI_TRAINER_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CAMP_PERSI_TRAINER_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_CAMP_PERSI_TRAINER_5 ===
-Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Skitty
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Poochyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
 
 Zigzagoon
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Level: 7
 
-Lotad
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+=== TRAINER_CAMP_PERSI_TRAINER_3 ===
+Name: Lazlo
+Class: Scout
+Pic: Scout M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Seedot
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Chimchar
+Level: 7
 
-Taillow
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+=== TRAINER_CAMP_PERSI_TRAINER_4 ===
+Name: Patsy
+Class: Scout
+Pic: Scout F
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cottonee
+Level: 6
+
+Marill
+Level: 6
+
+=== TRAINER_CAMP_PERSI_TRAINER_5 ===
+Name: Nina
+Class: Scout
+Pic: Scout F
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Chikorita @ Oran Berry
+Level: 7
 
 === TRAINER_CAMP_PERSI_JONAS ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
+Name: Jonas
+Class: Rival
+Pic: Jonas
 Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn
+Items: Energy Powder / Heal Powder
 
-Poochyena
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Snorunt (F) @ Starf Berry
+Level: 10
+Ability: Moody
+- Powder Snow
+- Double Team
+- Protect
+- Ice Shard
 
 === TRAINER_CAMP_PERSI_THIEF ===
-Name: MARCEL
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Weevil
+Class: School Kid
+Pic: School Kid M
 Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Manectric
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Kricketune
+Level: 10
 
-Shiftry
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Beedrill
+Level: 10
 
 === TRAINER_VERDANT_PATH_TRAINER_1 ===
-Name: ALBERTO
+Name: Felix
 Class: Bird Keeper
 Pic: Bird Keeper
 Gender: Male
 Music: Cool
-Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Pelipper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Wingull
+Level:8 
 
-Xatu
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Fletchling
+Level: 8
 
 === TRAINER_VERDANT_PATH_TRAINER_2 ===
-Name: ED
+Name: Steve
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Froakie
+Level: 8
+
+Lotad
+Level: 8
+
+=== TRAINER_VERDANT_PATH_TRAINER_3 ===
+Name: Jonathan
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mudkip
+Level: 10
+
+=== TRAINER_VERDANT_PATH_TRAINER_4 ===
+Name: Frank
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Magikarp
+Level: 15
+Shiny: Yes
+
+=== TRAINER_VERDANT_PATH_TRAINER_5 ===
+Name: Mindy & Mandy
+Class: Twins
+Pic: Twins
+Music: Twins
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Wooper
+Level: 10
+
+Minccino
+Level: 10
+
+=== TRAINER_VERDANT_PATH_TRAINER_6 ===
+Name: Jaden
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Rich
+Items: Full Restore
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Rowlet
+Level: 10
+
+=== TRAINER_VERDANT_WOODS_1 ===
+Name: Maya
+Class: Bug Catcher
+Pic: Bug Catcher F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Yanma
+Level: 10
+
+Vivillon
+Level: 10
+
+=== TRAINER_VERDANT_WOODS_2 ===
+Name: Cody
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Nincada Maryan
+Level: 9
+
+Spinarak
+Level: 9
+
+Joltik
+Level: 9
+
+=== TRAINER_VERDANT_WOODS_3 ===
+Name: Zach
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Zigzagoon
+Level: 10
+
+=== TRAINER_VERDANT_WOODS_4 ===
+Name: Beth
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Espurr (F)
+Level: 10
+
+=== TRAINER_VERDANT_WOODS_5 ===
+Name: Raj
+Class: Scout
+Pic: Scout M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Poochyena
+Level: 11
+
+=== TRAINER_MINTY_MEADOWS_RIVAL ===
+Name: Melissa
+Class: Rival
+Pic: Melissa
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Switching
+
+Rockruff (M)
+Level: 15
+Ability: Vital Spirit
+- Rock Tomb
+- Sand Attack
+- Fire Fang
+- Thunder Fang
+
+Drilbur (M)
+Level: 15
+Ability: Mold Breaker
+- Metal Claw
+- Mud Slap
+- Hone Claws
+- Rapid Spin
+
+Gible (F)
+Level: 15
+Ability: Rough Skin
+- Sand Tomb
+- Outrage
+- Sand Attack
+- Metal Claw
+
+=== TRAINER_MINTY_MEADOWS_1 ===
+Name: Lizzy & Owen
+Class: Young Couple
+Pic: Young Couple
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Buneary (F)
+Level: 12
+
+Scorbunny (M)
+Level: 12
+
+=== TRAINER_MINTY_MEADOWS_3 ===
+Name: Jack
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Wingull
+Level: 11 
+
+Zubat
+Level: 12
+
+=== TRAINER_MINTY_MEADOWS_4 ===
+Name: Hope
+Class: Aroma Lady
+Pic: Aroma Lady
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Flabebe
+Level: 11
+
+Roselia
+Level: 12
+
+=== TRAINER_MINTY_MEADOWS_6 ===
+Name: Dale
+Class: Bug Maniac
+Pic: Bug Maniac
+Gender: Male
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Combee Maryan (M)
+Level: 13
+
+Combee Maryan (M)
+Level: 13
+
+Combee Maryan (M)
+Level: 13
+
+Combee Maryan (M)
+Level: 13
+
+Combee Maryan (M)
+Level: 13
+
+=== TRAINER_MINTY_MEADOWS_7 ===
+Name: Alex
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Electrike
+Level: 13
+
+Drifloon
+Level: 14
+
+=== TRAINER_MINTY_MEADOWS_8 ===
+Name: Alice
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mareep
+Level: 13
+
+Deerling Spring
+Level: 14
+
+=== TRAINER_MINTY_MEADOWS_11 ===
+Name: Bart
+Class: Rancher
+Pic: Rancher
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mudbray
+Level: 15
+
+Herdier
+Level: 16
+
+=== TRAINER_MINTY_MEADOWS_12 ===
+Name: Bailey
+Class: Cowgirl
+Pic: Cowgirl
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Torchic
+Level: 15
+
+Flaaffy
+Level: 16
+
+=== TRAINER_MINTY_MEADOWS_13 ===
+Name: Vivian
+Class: Bug Catcher
+Pic: Bug Catcher F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vivillon Fancy
+Level: 17
+
+=== TRAINER_MINTY_MEADOWS_14 ===
+Name: Sally
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Shroomish
+Level: 15
+
+Tinkatink
+Level: 16
+
+=== TRAINER_MINTY_MEADOWS_15 ===
+Name: Inigo
+Class: Pokemaniac
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Fidough
+Level: 15
+
+Monferno
+Level: 16
+
+=== TRAINER_MINTY_MEADOWS_16 ===
+Name: Jake
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Lombre
+Level: 15
+
+Staravia
+Level: 16
+
+=== TRAINER_TRAVELERS_TUNNEL_1 ===
+Name: Tom
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Carbink
+Level: 17
+
+Onix
+Level: 18
+
+=== TRAINER_NORANNA_1 ===
+Name: Mark
+Class: Ranger
+Pic: Ranger M
+Gender: Male
+Music: Cool
+AI: Check Bad Move / Try To Faint / Check Viability
+Items: Super Potion
+
+Timburr
+Level: 21
+
+Wartortle
+Level: 22
+
+=== TRAINER_NORANNA_2 ===
+Name: Mai & Rue
+Class: Sr And Jr
+Pic: Sr And Jr
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Deerling Spring
+Level: 22
+
+Deerling Winter
+Level: 22
+
+=== TRAINER_NORANNA_3 ===
+Name: Ashley
+Class: Cowgirl
+Pic: Cowgirl
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pumpkaboo Small
+Level: 20
+
+Pumpkaboo Average
+Level: 21
+
+Pumpkaboo Large
+Level: 22
+
+=== TRAINER_NORANNA_4 ===
+Name: Joyce
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Breloom @ Coba Berry
+Level: 23
+Ability: Technician
+- Bullet Seed
+- Mach Punch
+- Stun Spore
+- Leech Seed
+
+=== TRAINER_NORANNA_5 ===
+Name: Amelia
+Class: Triathlete
+Pic: Running Triathlete F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Staravia
+Level: 23
+
+=== TRAINER_NORANNA_6 ===
+Name: Jesus
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Twins
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Marshtomp
+Level: 22
+
+=== TRAINER_NORANNA_7 ===
+Name: Justine
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Slowpoke
+Level: 21
+
+Meditite
+Level: 22
+
+=== TRAINER_NORANNA_LOWER_NPC_WEST ===
+Name: Gabe
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Dewpider
+Level: 21
+
+Masquerain
+Level: 22
+
+=== TRAINER_CORANNA_1_NPC1 ===
+Name: Ingrid
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Twins
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Purrloin Maryan
+Level: 17
+
+Prinplup
+Level: 18
+
+=== TRAINER_CORANNA_1_NPC2 ===
+Name: Barry
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Combee Maryan
+Level: 16
+
+Cutiefly
+Level: 17
+
+Beedrill
+Level: 18
+
+=== TRAINER_CORANNA_1_NPC3 ===
+Name: Gretchen
+Class: Scout
+Pic: Scout F
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Croconaw
+Level: 19
+
+=== TRAINER_CORANNA_1_NPC4 ===
+Name: George
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Poliwag
+Level: 17
+
+Ekans
+Level: 17
+
+Houndour
+Level: 17
+
+=== TRAINER_CORANNA_2_CAMPER ===
+Name: Federica
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+Items: Full Restore
+
+Kirlia
+Level: 20
+
+=== TRAINER_CORANNA_2_MANIAC ===
+Name: Preston
 Class: Collector
 Pic: Collector
 Gender: Male
 Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Zangoose
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Scraggy
+Level: 19
 
-Seviper
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Frogadier
+Level: 19
 
-=== TRAINER_VERDANT_PATH_TRAINER_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
+=== TRAINER_CORANNA_2_BIKER ===
+Name: Manuel
+Class: Pkmn Trainer 1
+Pic: Cycling Triathlete M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Raichu
+Level: 20
+
+=== TRAINER_CORANNA_2_FISHERMAN ===
+Name: Scott
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Tentacool
+Level: 19
+
+Buizel
+Level: 19
+
+=== TRAINER_CORANNA_2_RANGER ===
+Name: Crystal
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
 Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
+Music: Cool
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Carvanha
-Level: 36
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Jigglypuff
+Level: 19
 
-=== TRAINER_VERDANT_PATH_TRAINER_4 ===
-Name: DECLAN
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
+Cottonee
+Level: 19
 
-Gyarados
-Level: 34
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Fletchinder @ Oran Berry
+Level: 20
 
-=== TRAINER_VERDANT_PATH_TRAINER_5 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_PATH_TRAINER_6 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_WOODS_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 27
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_WOODS_2 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Zubat
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_WOODS_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_WOODS_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_VERDANT_WOODS_5 ===
-Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
-Gender: Male
-Music: Magma
-Double Battle: No
-AI: Check Bad Move
-
-Numel
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_RIVAL ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_1 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_3 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Carvanha
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_4 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 28
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_6 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Carvanha
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_7 ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Check Bad Move
-
-Zubat
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_8 ===
-Name: FREDRICK
-Class: Expert
-Pic: Expert M
+=== TRAINER_CORANNA_PATHMASTER ===
+Name: Jia
+Class: Pathmaster
+Pic: Psychic M
 Gender: Male
 Music: Intense
-Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Makuhita
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Chimecho @ Psychic Gem
+Level: 21
+- Stored Power
+- Yawn
+- Cosmic Power
+- Wish
 
-Machoke
-Level: 30
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Misdreavus @ Sitrus Berry
+Level: 21
+- Psybeam
+- Hex
+- Confuse Raw
+- Mean Look
 
-=== TRAINER_MINTY_MEADOWS_11 ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
-Gender: Male
+Vespiquen Maryan @ Petaya Berry
+Level: 21
+- Psybeam
+- Struggle Bug
+- Confuse Ray
+- Hypnosis
+
+=== TRAINER_TIDALCOVE_GYM_1 ===
+Name: Sumire
+Class: Beauty
+Pic: Beauty
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vanillite
+Level: 23
+
+Cubchoo
+Level: 23
+
+=== TRAINER_TIDALCOVE_GYM_2 ===
+Name: Trish
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Swinub
+Level: 23
+
+Golett Maryan
+Level: 23
+
+=== TRAINER_TIDALCOVE_GYM_3 ===
+Name: Holly
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+Items: Full Restore
+
+Frosmoth
+Level: 24
+Ability: Ice Scales
+
+=== TRAINER_TIDALCOVE_GYM_4 ===
+Name: Heather
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Twins
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Snover
+Level: 23
+Ability: Snow Warning
+
+Froslass
+Level: 23
+Ability: Snow Cloak
+
+=== TRAINER_TIDALCOVE_GYM_RUKA ===
+Name: Ruka
+Class: Leader
+Pic: Ruka
+Gender: Female
+Music: Elite Four
+AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Ace Pokemon
+Mugshot: Blue
+
+Glaceon (F) @ Light Clay
+Ball: Dive Ball
+Ability: Snow Warning
+Level: 24
+- Aurora Veil
+- Snowscape
+- Icy Wind
+- Water Pulse
+
+Lapras (F) @ Icy Rock
+Ball: Dive Ball
+Ability: Shell Armor
+Level: 24
+- Ice Shard
+- Water Pulse
+- Confuse Ray
+- Snowscape
+
+Milotic Maryan (F) @ Ice Gem
+Ball: Dive Ball
+Ability: Ice Body
+Level: 25
+- Dragon Breath
+- Water Pulse
+- Aurora Beam
+- Snowscape
+
+=== TRAINER_MT_AURORA_EDEA ===
+Name: Edea
+Class: Thief
+Pic: Edea
+Gender: Female
 Music: Aqua
-Items: Super Potion
-Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move
+Items: Super Potion / Full Heal
+AI: Check Bad Move / Try To Faint / Check Viability / Prefer Status Moves / Smart Switching / Ace Pokemon
 
-Mightyena
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Liepard Maryan (F)
+Ability: Prankster
+Level: 24
+Ball: Luxury Ball
+- Fake Out
+- Spark
+- Thief
+- Parting Shot
 
-Golbat
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Sableye (M)
+Ability: Prankster
+Level: 23
+Ball: Luxury Ball
+- Shadow Sneak
+- Thief
+- Fake Out
+- Will O Wisp
 
-=== TRAINER_MINTY_MEADOWS_12 ===
-Name: ZANDER
+Sneasel (M)
+Ability: Pickpocket
+Level: 23
+Ball: Luxury Ball
+- Metal Claw
+- Ice Shard
+- Pursuit
+- Fake Out
+
+Umbreon (F) @ Sitrus Berry
+Ability: Magic Guard
+Level: 23
+Ball: Luxury Ball
+- Confuse Ray
+- Pursuit
+- Yawn
+- Snarl
+
+=== TRAINER_ROSEVALE_ARTHUR ===
+Name: Arthur
+Class: Rival
+Pic: Arthur
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Switching
+
+Scraggy
+Level: 23
+Ability: Intimidate
+- Brick Break
+- Payback
+- Swagger
+- Fake Out
+
+Flaaffy
+Level: 23
+Ability: Static
+- Thunder Wave
+- Shock Wave
+- Signal Beam
+- Confuse Ray
+
+Azumarill @ Sitrus Berry
+Level: 24
+Ability: Sap Sipper
+- Play Rough
+- Aqua Jet
+- Aqua Tail
+- Aqua Ring
+
+=== TRAINER_ROSEVALE_RED ===
+Name: Red
+Class: Legend
+Pic: Red
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu Partner (M) @ Light Ball
+Happiness: 255
+EVs: 252 HP / 252 Atk / 252 Def / 252 SpA / 252 SpD / 252 Spe
+Ability: Static
+Level: 25
+Ball: Cherish Ball
+- Pika Papow
+- Zippy Zap
+- Splishy Splash
+- Floaty Fall
+
+=== TRAINER_PROMENADE_1 ===
+Name: Yoosay
+Class: Triathlete
+Pic: Cycling Triathlete M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Luxio
+Level: 24
+
+Lucario
+Level: 25
+
+=== TRAINER_PROMENADE_2 ===
+Name: Akeezuh
+Class: Triathlete
+Pic: Cycling Triathelete F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Roserade
+Level: 25
+
+=== TRAINER_PROMENADE_3 ===
+Name: Jak
+Class: Triathlete
+Pic: Cycling Triathlete M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vulpix
+Level: 24
+
+Togedemaru
+Level: 25
+
+=== TRAINER_PROMENADE_4 ===
+Name: Hoagie
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Swellow
+Level: 25
+
+Dartrix
+Level: 25
+
+=== TRAINER_ROCKY_PATH_1 ===
+Name: Jane
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Girl
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Milcery
+Level: 25
+
+Swirlix
+Level: 25
+
+Tinkatuff
+Level: 25
+
+=== TRAINER_ROCKY_PATH_2 ===
+Name: Jack
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Drilbur
+Level: 26
+
+Naclstack
+Level: 26
+
+=== TRAINER_ROCKY_PATH_3 ===
+Name: Casey
+Class: Bug Catcher
+Pic: Bug Catcher F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Shuckle @ Berry Juice
+Level: 26
+- Power Trick
+- Rollout
+
+=== TRAINER_ROCKY_PATH_4 ===
+Name: Mike
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Mudbray
+Level: 25
+
+Nidorino
+Level: 26
+
+=== TRAINER_ROCKY_PATH_5 ===
+Name: Joey
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability / Prefer Highest Damage Move
+
+Rattata @ Focus Sash
+Level: 1
+Shiny: Yes
+- Endeavor
+- Quick Attack
+
+=== TRAINER_ROCKY_PATH_6 ===
+Name: Yamcha
 Class: Black Belt
 Pic: Black Belt
 Gender: Male
 Music: Intense
 Double Battle: No
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability
 
 Hariyama
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MINTY_MEADOWS_13 ===
-Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-Carvanha
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Mightyena
-Level: 28
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-=== TRAINER_MINTY_MEADOWS_14 ===
-Name: SHELLY
-Class: Aqua Admin
-Pic: Aqua Admin F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-Sharpedo
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Mightyena
-Level: 37
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_MINTY_MEADOWS_15 ===
-Name: ARCHIE
-Class: Aqua Leader
-Pic: Aqua Leader Archie
-Gender: Male
-Music: Aqua
-Items: Super Potion / Super Potion
-Double Battle: No
-AI: Basic Trainer
-
-Mightyena
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Crobat
-Level: 41
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Sharpedo
-Level: 43
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_MINTY_MEADOWS_16 ===
-Name: LEAH
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Check Bad Move
-
-Spoink
-Level: 31
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_TRAVELERS_TUNNEL_1 ===
-Name: DAISY
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_NORANNA_1 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_NORANNA_2 ===
-Name: FELIX
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Medicham
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Psychic
-
-Claydol
-Level: 43
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Skill Swap
-- Earthquake
-
-=== TRAINER_NORANNA_3 ===
-Name: VIOLET
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Roselia
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Gloom
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_NORANNA_4 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Shroomish
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Roselia
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_NORANNA_5 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Shroomish
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Gloom
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Roselia
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_NORANNA_6 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Shroomish
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Gloom
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Roselia
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_NORANNA_7 ===
-Name: ROSE
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Breloom
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Gloom
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Roselia
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_NORANNA_LOWER_NPC_WEST ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandslash
-Level: 23
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_1_NPC1 ===
-Name: CHIP
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Baltoy
 Level: 27
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Psybeam
-- Self Destruct
-- Sandstorm
-- Ancient Power
-
-Sandshrew
-Level: 27
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-Sandslash
-Level: 27
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_1_NPC2 ===
-Name: FOSTER
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandshrew
-Level: 25
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-Sandslash
-Level: 25
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_1_NPC3 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandslash
-Level: 27
-IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_1_NPC4 ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandslash
-Level: 30
-IVs: 8 HP / 8 Atk / 8 Def / 8 SpA / 8 SpD / 8 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_2_CAMPER ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandslash
-Level: 33
-IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_2_MANIAC ===
-Name: DUSTY
-Class: Ruin Maniac
-Pic: Ruin Maniac
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Sandslash
-Level: 36
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Dig
-- Slash
-- Sand Attack
-- Poison Sting
-
-=== TRAINER_CORANNA_2_BIKER ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magnemite
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Whismur
-Level: 17
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-=== TRAINER_CORANNA_2_FISHERMAN ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magnemite
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Loudred
-Level: 27
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_CORANNA_2_RANGER ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magneton
-Level: 30
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-Loudred
-Level: 30
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_CORANNA_PATHMASTER ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magneton
-Level: 33
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-Loudred
-Level: 33
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-
-=== TRAINER_TIDALCOVE_GYM_1 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magneton
-Level: 36
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-Loudred
-Level: 36
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-
-=== TRAINER_TIDALCOVE_GYM_2 ===
-Name: GABBY & TY
-Class: Interviewer
-Pic: Interviewer
-Gender: Male
-Music: Interviewer
-Double Battle: Yes
-AI: Check Bad Move
-
-Magneton
-Level: 39
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Sonic Boom
-- Thunder Wave
-- Metal Sound
-- Thunderbolt
-
-Exploud
-Level: 39
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Astonish
-- Stomp
-- Supersonic
-- Hyper Voice
-
-=== TRAINER_TIDALCOVE_GYM_3 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Azurill
-Level: 12
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_TIDALCOVE_GYM_4 ===
-Name: AUSTINA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_TIDALCOVE_GYM_RUKA ===
-Name: GWEN
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MT_AURORA_EDEA ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Marill
-Level: 26
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_ROSEVALE_ARTHUR ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Marill
-Level: 29
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_ROSEVALE_RED ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Marill
-Level: 32
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_PROMENADE_1 ===
-Name: LOLA
-Class: Tuber F
-Pic: Tuber F
-Gender: Female
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Azumarill
-Level: 35
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_PROMENADE_2 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Zigzagoon
-Level: 13
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Headbutt
-- Tail Whip
-- Surf
-
-=== TRAINER_PROMENADE_3 ===
-Name: SIMON
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Azurill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Marill
-Level: 12
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_PROMENADE_4 ===
-Name: CHARLIE
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ROCKY_PATH_1 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
-
-=== TRAINER_ROCKY_PATH_2 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
-
-=== TRAINER_ROCKY_PATH_3 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
-
-=== TRAINER_ROCKY_PATH_4 ===
-Name: RICKY
-Class: Tuber M
-Pic: Tuber M
-Gender: Male
-Music: Girl
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Sand Attack
-- Pin Missile
-- Tail Whip
-- Surf
-
-=== TRAINER_ROCKY_PATH_5 ===
-Name: RANDALL
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Swellow
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Quick Attack
-- Agility
-- Wing Attack
-
-=== TRAINER_ROCKY_PATH_6 ===
-Name: PARKER
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Spinda
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Teeter Dance
-- Dizzy Punch
-- Focus Punch
 
 === TRAINER_ROCKY_PATH_7 ===
-Name: GEORGE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Spike
+Class: Pokemaniac
+Pic: Pokemaniac
 Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Slakoth @ Sitrus Berry
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Slack Off
-- Counter
-- Shadow Ball
+Lycanroc Midnight
+Level: 27
 
 === TRAINER_ROCKY_PATH_8 ===
-Name: BERKE
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Osvaldo
+Class: Psychic
+Pic: Psychic M
 Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Vigoroth
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Energy
-- Slash
+Slowpoke
+Level: 27
+
+Xatu
+Level: 27
 
 === TRAINER_ROCKY_PATH_9 ===
-Name: BRAXTON
-Class: Cooltrainer
-Pic: Cooltrainer M
+Name: Marlton
+Class: Nerd
+Pic: Nerd
 Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Music: Suspicious
+Items: X Sp Def / X Sp Atk
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Swellow
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Energy
-- Quick Attack
-- Wing Attack
-- Endeavor
+Grimer
+Level: 27
 
-Trapinch
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Bite
-- Dig
-- Feint Attack
-- Sand Tomb
-
-Wailmer
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Rollout
-- Whirlpool
-- Astonish
-- Water Pulse
-
-Magneton
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Thunderbolt
-- Supersonic
-- Thunder Wave
-- Sonic Boom
-
-Shiftry
-Level: 28
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Giga Drain
-- Feint Attack
-- Double Team
-- Swagger
+Magnemite
+Level: 27
 
 === TRAINER_ROCKY_PATH_10 ===
-Name: VINCENT
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
+Name: Thalia
+Class: Bird Keeper
+Pic: Bird Keeper F
+Gender: Female
 Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Sableye
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Medicham
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Sharpedo
-Level: 44
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_ROCKY_PATHMASTER ===
-Name: LEROY
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Mawile
-Level: 46
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Starmie
-Level: 46
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_1 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Super Potion
-Double Battle: No
-AI: Basic Trainer
-
-Electrike
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Wailmer
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Makuhita
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_2 ===
-Name: EDGAR
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Cacturne
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Pelipper
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_3 ===
-Name: ALBERT
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Magneton
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Muk
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_4 ===
-Name: SAMUEL
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Check Viability
 
 Swellow
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Level: 28
 
-Mawile
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Kadabra
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_5 ===
-Name: VITO
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Dodrio
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Kadabra
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Electrode
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Shiftry
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_6 ===
-Name: OWEN
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Kecleon
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Graveler
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Wailord
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_8 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Electrike
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-Wailmer
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-Makuhita
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-=== TRAINER_LUMINE_CAVE_9 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Manectric
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-Wailmer
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-Makuhita
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-=== TRAINER_LUMINE_CAVE_11 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Manectric
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-
-Wailmer
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-
-Makuhita
-Level: 32
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-
-=== TRAINER_LUMINE_CAVE_12 ===
-Name: WILTON
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Manectric
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
-
-Wailmer
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
-
-Hariyama
-Level: 35
-IVs: 17 HP / 17 Atk / 17 Def / 17 SpA / 17 SpD / 17 Spe
-
-=== TRAINER_LUMINE_CAVE_13 ===
-Name: WARREN
-Class: Cooltrainer
-Pic: Cooltrainer M
-Gender: Male
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Graveler
-Level: 33
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Ludicolo
-Level: 33
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LUMINE_CAVE_ALBA ===
-Name: MARY
-Class: Cooltrainer
+=== TRAINER_ROCKY_PATHMASTER ===
+Name: Coppelia
+Class: Pathmaster
 Pic: Cooltrainer F
 Gender: Female
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability / Prefer Status Moves / Smart Switching
 
-Delcatty
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Feint Attack
-- Shock Wave
+Carbink @ Light Clay
+Ability: Sturdy
+Level: 28
+- Stealth Rock
+- Light Screen
+- Reflect
+- Toxic
 
-=== TRAINER_LUMINE_CAVE_14 ===
-Name: ALEXIA
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Wigglytuff
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Defense Curl
-- Double Edge
-- Shadow Ball
-
-=== TRAINER_VALLEY_OF_PEACE_1 ===
-Name: JODY
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
-
-Zangoose
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Swords Dance
-- Slash
-
-=== TRAINER_VALLEY_OF_PEACE_2 ===
-Name: WENDY
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
-
-Mawile
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Baton Pass
-- Feint Attack
-- Fake Tears
-- Bite
-
-Roselia
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Mega Drain
-- Magical Leaf
-- Grass Whistle
-- Leech Seed
-
-Pelipper
-Level: 29
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Fly
-- Water Gun
-- Mist
+Shuckle @ Leftovers
+Ability: Sturdy
+Level: 28
+- Infestation
+- Toxic
+- Encore
 - Protect
 
-=== TRAINER_VALLEY_OF_PEACE_3 ===
-Name: KEIRA
-Class: Cooltrainer
-Pic: Cooltrainer F
+Appletun @ Jaboca Berry
+Ability: Ripen
+Level: 28
+- Apple Acid
+- Dragon Tail
+- Recover
+- Recycle
+
+Skarmory @ Rocky Helmet
+Ability: Sturdy
+Level: 28
+- Whirlwind
+- Roost
+- Toxic
+- Steel Wing
+
+=== TRAINER_LUMINE_CAVE_1 ===
+Name: Shiloh
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Boldore
+Level: 28
+
+Onix
+Ability: Sturdy
+Level: 28
+
+Sudowoodo
+Level: 28
+
+=== TRAINER_LUMINE_CAVE_2 ===
+Name: Mai
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Meditite
+Level: 28
+
+Combusken
+Level: 29
+
+=== TRAINER_LUMINE_CAVE_3 ===
+Name: Dioh
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ninjask Maryan
+Level: 29
+
+=== TRAINER_LUMINE_CAVE_4 ===
+Name: Dephne
+Class: Lass
+Pic: Lass
 Gender: Female
 Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Lairon
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mawile @ Sitrus Berry
+Ability: Sheer Force
+Level: 30
 
-Manectric
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+=== TRAINER_LUMINE_CAVE_5 ===
+Name: Jay
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+AI: Check Bad Move / Try To Faint / Check Viability
 
-=== TRAINER_VALLEY_OF_PEACE_4 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Golbat
+Level: 29
+
+Corvisquire
+Level: 30
+
+=== TRAINER_LUMINE_CAVE_6 ===
+Name: Hasan
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Thwackey
+Level: 29
+
+Torracat
+Level: 29
+
+Marshtomp
+Level: 29
+
+=== TRAINER_LUMINE_CAVE_7 ===
+Name: Luna
+Class: Triathlete
+Pic: Cycling Triathlete F
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Liepard Maryan
+Level: 30
+
+=== TRAINER_LUMINE_CAVE_8 ===
+Name: Boppo
+Class: Clown
+Pic: Clown
+Gender: Male
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Kadabra @ Twisted Spoon
+Ability: Inner Focus
+Level: 30
+- Psybeam
+- Kinesis
+- Disable
+- Miracle Eye
+
+Monferno @ Fire Gem
+Ability: Blaze
+Level: 31
+- Mach Punch
+- Flame Wheel
+- Fake Out
+- Thunder Punch
+
+Sealeo @ Chesto Berry
+Ability: Thick Fat
+Level: 32
+- Rest
+- Brine
+- Aurora Beam
+- Body Slam
+
+=== TRAINER_LUMINE_CAVE_9 ===
+Name: Stevel
+Class: Worker
+Pic: Worker
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gurdurr
+Level: 30
+
+Ampharos
+Level: 31
+
+=== TRAINER_LUMINE_CAVE_10 ===
+Name: Alexis
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
 Gender: Female
 Music: Cool
 Items: Super Potion
-Double Battle: No
-AI: Basic Trainer
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Wingull
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Nidorina
+Level: 30
 
-Numel
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Marshtomp
+Level: 30
 
-Roselia
-Level: 17
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Manectric
+Level: 30
+
+=== TRAINER_LUMINE_CAVE_11 ===
+Name: Hughie
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Hiker
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Binacle
+Level: 30
+
+Gastrodon
+Level: 31
+
+=== TRAINER_LUMINE_CAVE_12 ===
+Name: Kamala
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Vespiquen Maryan @ Sitrus Berry
+Ability: Magic Guard
+Level: 32
+- Attack Order
+- Heal Order
+- Psycho Cut
+- Defend Order
+
+=== TRAINER_LUMINE_CAVE_13 ===
+Name: Mokuba
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Axew
+Level: 32
+
+Dreepy
+Level: 32
+
+Dipplin
+Level: 33
+
+=== TRAINER_LUMINE_CAVE_ALBA ===
+Name: Alba
+Class: Scientist
+Pic: Scientist2
+Gender: Female
+Music: Suspicious
+Items: Hyper Potion / X Attack / Full Heal
+AI: Check Bad Move / Try To Faint / Check Viability / Smart Switching / Prefer Status Moves / Ace Pokemon
+
+Metang @ Metal Coat
+EVs: 126 HP
+Ability: Clear Body
+Level: 33
+Ball: Ultra Ball
+Nature: Adamant
+- Pursuit
+- Zen Headbut
+- Bullet Punch
+- Metal Claw
+
+Magneton @ Magnet
+EVs: 126 SpA
+Ability: Sturdy
+Level: 33
+Ball: Ultra Ball
+Nature: Modest
+- Flash Cannon
+- Shock Wave
+- Thunder Wave
+- Volt Switch
+
+Porygon2 @ Eviolite
+EVs: 126 SpA
+Ability: Trace
+Level: 33
+Ball: Ultra Ball
+Nature: Calm
+- Recover
+- Tri Attack
+- Toxic
+- Psybeam
+
+Rotom Mow @ White Herb
+EVs: 126 SpA
+Ability: Levitate
+Level: 33
+Ball: Ultra Ball
+Nature: Modest
+- Leaf Storm
+- Charge Beam
+- Will O Wisp
+- Confuse Ray
+
+=== TRAINER_LUMINE_CAVE_14 ===
+Name: Al & Heather
+Class: Young Couple
+Pic: Young Couple
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Cloyster (F)
+Level: 33
+
+Steelix (M)
+Level: 33
+Shiny: Yes
+
+=== TRAINER_VALLEY_OF_PEACE_1 ===
+Name: Bryce
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Meowstic (M)
+Level: 33
+
+Chimecho
+Level: 33
+
+Hattrem
+Level: 33
+
+=== TRAINER_VALLEY_OF_PEACE_2 ===
+Name: Bella
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Meowstic (F)
+Level: 35
+Nature: Modest
+Ability: Competitive
+- Psyshock
+- Miracle Eye
+- Shadow Ball
+- Charge Beam
+
+=== TRAINER_VALLEY_OF_PEACE_3 ===
+Name: Devin
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Cool
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Talonflame
+Level: 35
+Nature: Adamant
+Ability: Gale Wings
+- Roost
+- Acrobatics
+- Flame Charge
+- Steel Wing
+
+=== TRAINER_VALLEY_OF_PEACE_4 ===
+Name: Logan
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Pikachu Libre (M) @ Light Ball
+Level: 35
+Nature: Adamant
+- Flying Press
+- Thunder Punch
+- Fake Out
+- Double Team
+
+=== TRAINER_VALLEY_OF_PEACE_5 ===
+Name: Lou & Marley
+Class: FarmerDuo
+Pic: FarmerDuo
+Music: Hiker
+Double Battle: Yes
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Houndstone
+Level: 35
+
+Dachsbun
+Level: 35
 
 === TRAINER_VALLEY_OF_PEACE_6 ===
-Name: JENNIFER
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
+Name: Lukas
+Class: Biker
+Pic: Biker
+Gender: Male
+Music: Suspicious
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Sableye
-Level: 30
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+Duskull
+Level: 35
+
+Haunter
+Level: 35
 
 === TRAINER_VALLEY_OF_PEACE_7 ===
-Name: HOPE
-Class: Cooltrainer
-Pic: Cooltrainer F
+Name: Jill
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
 Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
+Music: Female
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Roselia
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Antique
+Level: 35
+
+Poltchageist Artisan
+Level: 35
 
 === TRAINER_VALLEY_OF_PEACE_8 ===
-Name: SHANNON
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
+Name: Takeshi
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Claydol
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Gallade (M)
+Level: 36
+Nature: Jolly
+Ability: Sharpness
+- Psycho Cut
+- Sacred Sword
+- Leaf Blade
+- Night Slash
 
 === TRAINER_VALLEY_OF_PEACE_9 ===
-Name: MICHELLE
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
+Name: Norville
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Twins
+AI: Check Bad Move / Try To Faint / Check Viability
 
-Torkoal
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Raticate
+Level: 35
 
-Medicham
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Ludicolo
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_CAROLINE ===
-Name: CAROLINE
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Skarmory
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Sableye
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_JULIE ===
-Name: JULIE
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Sandslash
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Ninetales
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-Tropius
-Level: 42
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_BROOKE_2 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Wingull
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-Numel
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-Roselia
-Level: 26
-IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
-
-=== TRAINER_BROOKE_3 ===
-Name: BROOKE
-Class: Cooltrainer
-Pic: Cooltrainer F
-Gender: Female
-Music: Cool
-Items: Hyper Potion
-Double Battle: No
-AI: Basic Trainer
-
-Pelipper
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-Numel
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
-
-Roselia
-Level: 29
-IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
+Sudowoodo
+Level: 35
+Ability: Rattled
 
 === TRAINER_BROOKE_4 ===
 Name: BROOKE
