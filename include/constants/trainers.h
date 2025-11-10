@@ -108,12 +108,37 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
+#define TRAINER_PIC_RS_MAY                92
+#define TRAINER_PIC_GAMBLER               93
+#define TRAINER_PIC_ARTIST                94
+#define TRAINER_PIC_BALD                  95
+#define TRAINER_PIC_BIRDKEEPERF           96
+#define TRAINER_PIC_CLOWN                 97
+#define TRAINER_PIC_COOLTRAINERSNOWF      98
+#define TRAINER_PIC_COOLTRAINERSNOWM      99
+#define TRAINER_PIC_RANCHER              100
+#define TRAINER_PIC_COWGIRL              101
+#define TRAINER_PIC_CYNTHIA              102
+#define TRAINER_PIC_FARMERDUO            103
+#define TRAINER_PIC_INTERVIEWERF         104
+#define TRAINER_PIC_INTERVIEWERM         105
+#define TRAINER_PIC_JOGGER               106
+#define TRAINER_PIC_OLDLADY              107
+#define TRAINER_PIC_PIKACHUGIRL          108
+#define TRAINER_PIC_POLICE               109
+#define TRAINER_PIC_POPIDOL              110
+#define TRAINER_PIC_SCIENTIST            111
+#define TRAINER_PIC_SKIF                 112
+#define TRAINER_PIC_SKIM                 113
+#define TRAINER_PIC_SWIMMERTUBERDUO      114
+#define TRAINER_PIC_WAITER               115
+#define TRAINER_PIC_WAITRESS             116
+#define TRAINER_PIC_WORKER               117
 
-
-// island-game
-#define TRAINER_PIC_OLIVIA                93
-#define TRAINER_PIC_OLIVER                94
-#define TRAINER_PIC_COUNT                 95
+// islandgame
+#define TRAINER_PIC_OLIVIA                118
+#define TRAINER_PIC_OLIVER                119
+#define TRAINER_PIC_COUNT                 120
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
