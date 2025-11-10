@@ -310,6 +310,10 @@ const u8 gTrainerBackPic_Olivia[] = INCBIN_U8("graphics/trainers/back_pics/olivi
 const u16 gTrainerBackPicPalette_Olivia[] = INCBIN_U16("graphics/trainers/back_pics/olivia.gbapal");
 
 
+const u8 gTrainerBackPic_Melissa[] = INCBIN_U8("graphics/trainers/back_pics/melissa.4bpp");
+const u16 gTrainerBackPicPalette_Melissa[] = INCBIN_U16("graphics/trainers/back_pics/melissa.gbapal");
+
+
 
 
 // The first two parameters invoke a front pic and palette by
@@ -507,4 +511,5 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     // island-game
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_OLIVER, 5, gTrainerBackPic_Oliver, gTrainerBackPicPalette_Oliver, sBackAnims_Kanto),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_OLIVIA, 5, gTrainerBackPic_Olivia, gTrainerBackPicPalette_Olivia, sBackAnims_Kanto),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_MELISSA, 5, gTrainerBackPic_Melissa, gTrainerBackPicPalette_Melissa, sBackAnims_Kanto),
 };
