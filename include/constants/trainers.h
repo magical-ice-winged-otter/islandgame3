@@ -135,10 +135,25 @@
 #define TRAINER_PIC_WAITRESS             116
 #define TRAINER_PIC_WORKER               117
 
-// islandgame
-#define TRAINER_PIC_OLIVIA                118
-#define TRAINER_PIC_OLIVER                119
-#define TRAINER_PIC_COUNT                 120
+// island-game
+#define TRAINER_PIC_ARTHUR               118
+#define TRAINER_PIC_EDEA                 119
+#define TRAINER_PIC_MELISSA              120
+#define TRAINER_PIC_JONAS                121
+#define TRAINER_PIC_RUKA                 122
+#define TRAINER_PIC_OLIVIA               123
+#define TRAINER_PIC_OLIVER               124
+#define TRAINER_PIC_SCOUT_M              125
+#define TRAINER_PIC_SCOUT_F              126
+#define TRAINER_PIC_BUG_CATCHER_F        127
+#define TRAINER_PIC_NERD                 128
+#define TRAINER_PIC_BIRD_KEEPER_F        129
+#define TRAINER_PIC_SCIENTIST2           130
+#define TRAINER_PIC_BIKER                131
+#define TRAINER_PIC_TAMER                132
+#define TRAINER_PIC_PAINTER              133
+#define TRAINER_PIC_CUEBALL              134
+#define TRAINER_PIC_COUNT                135
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
