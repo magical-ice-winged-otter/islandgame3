@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_Islandgame_Oranna"
   ],
   "gMapGroup_Islandgame1": [
     "ForestBaseCamp_FrontLawn",
@@ -770,5 +771,24 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_Islandgame_Oranna": [
+    "ISLANDGAME_ORANNA_SSRAIN_Hallway",
+    "ISLANDGAME_ORANNA_SSRAIN_Stairs",
+    "ISLANDGAME_ORANNA_SSRAIN_PlayerRoom",
+    "ISLANDGAME_ORANNA_SSRAIN_Room1",
+    "ISLANDGAME_ORANNA_SSRAIN_Room2",
+    "ISLANDGAME_ORANNA_SSRAIN_CaptainsRoom",
+    "ISLANDGAME_ORANNA_SSRAIN_Cafeteria",
+    "ISLANDGAME_ORANNA_SSRAIN_Storage",
+    "ISLANDGAME_ORANNA_SSRAIN_UpperDeck",
+    "ISLANDGAME_ORANNA_CHERIPORT",
+    "ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER",
+    "ISLANDGAME_ORANNA_CHERIPORT_PKMNMART",
+    "ISLANDGAME_ORANNA_CHERIPORT_LAB",
+    "ISLANDGAME_ORANNA_CHERIPORT_LAB_2F",
+    "ISLANDGAME_ORANNA_CHERIPORT_PKMNCENTER_2F",
+    "ISLANDGAME_ORANNA_CHERIPORT_HOUSE1",
+    "ISLANDGAME_ORANNA_CHERIPORT_HOUSE2"
   ]
 }
