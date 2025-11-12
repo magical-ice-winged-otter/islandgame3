@@ -1,0 +1,49 @@
+mapscripts ISLANDGAME_ORANNA_SSRAIN_Room2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(!flag(FLAG_ORANNA_SSRAIN_LEFT_SHIP)) {
+            setflag(FLAG_TEMP_1)
+        }
+    }
+}
+
+script ISLANDGAME_ORANNA_SSRAIN_Room2_Gentleman {
+    lock
+    if (!flag(FLAG_ORANNA_SSRAIN_LEFT_SHIP) && !flag(FLAG_ORANNA_SSRAIN_GAVE_WATER)) {
+        checkitem(ITEM_FRESH_WATER)
+        if(var(VAR_RESULT)) {
+            faceplayer
+            msgbox(format(
+                "...Oh? My nephew sent you here to bring me water?\p"
+                "That's proper kind of you to help. Here, take one of these for your troubles."
+            ))
+            giveitem(ITEM_RARE_CANDY)
+            setflag(FLAG_ORANNA_SSRAIN_GAVE_WATER)
+            removeitem(ITEM_FRESH_WATER)
+        }
+        else {
+            msgbox(format(
+                "Oooh, I do hope Bartholmew comes downstairs soon... I'm quite parched."
+            ))
+        }
+    }
+    else {
+        faceplayer
+        msgbox(format(
+            "Traveling to the Maryan Isles by boat was quite the ten-day trek...\p"
+            "After seeing nothing but the vast sea for so long, I'm ecstatic to finally see some land!"
+        ))
+    }
+    closemessage
+    release
+}
+
+script ISLANDGAME_ORANNA_SSRAIN_Room2_Boy {
+    lock
+    faceplayer
+    msgbox(format(
+        "The water here is pristine. Much clearer than back home.\p"
+        "It's as if Suicune had come by and purified the entire sea."
+    ))
+    closemessage
+    release
+}

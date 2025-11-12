@@ -55,6 +55,7 @@
 // - MOVE_SNATCH                                       //
 // - MOVE_OVERHEAT                                     //
 // - MOVE_CHARGE_BEAM                                  //
+// - MOVE_FALSE_SWIPE                                  //
 // - MOVE_CUT                                          //
 // - MOVE_FLY                                          //
 // - MOVE_SURF                                         //

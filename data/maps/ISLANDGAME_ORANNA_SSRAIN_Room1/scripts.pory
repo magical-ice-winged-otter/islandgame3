@@ -1,0 +1,12 @@
+mapscripts ISLANDGAME_ORANNA_SSRAIN_Room1_MapScripts {}
+
+script ISLANDGAME_ORANNA_SSRAIN_Room1_NPC {
+    lock
+    faceplayer
+    msgbox(format(
+        "It's been almost twenty years since the last time I came here.\p"
+        "A lot sure has changed since then."
+    ))
+    waitmessage
+    release
+}

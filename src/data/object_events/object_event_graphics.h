@@ -31,6 +31,10 @@ const u16 gObjectEventPal_OliverSurfing[] = INCBIN_U16("graphics/object_events/p
 // island-game notables
 const u32 gObjectEventPic_Palm[] = INCBIN_U32("graphics/object_events/pics/people/palm.4bpp");
 const u16 gObjectEventPal_Palm[] = INCBIN_U16("graphics/object_events/pics/people/palm.gbapal");
+const u32 gObjectEventPic_Melissa[] = INCBIN_U32("graphics/object_events/pics/people/melissa.4bpp");
+const u16 gObjectEventPal_Melissa[] = INCBIN_U16("graphics/object_events/pics/people/melissa.gbapal");
+const u32 gObjectEventPic_Coco[] = INCBIN_U32("graphics/object_events/pics/people/coco.4bpp");
+const u16 gObjectEventPal_Coco[] = INCBIN_U16("graphics/object_events/pics/people/coco.gbapal");
 
 
 // island-game extra NPCs

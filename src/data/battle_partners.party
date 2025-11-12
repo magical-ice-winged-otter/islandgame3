@@ -44,3 +44,41 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 - Protect
 - Solar Beam
 - Dragon Claw
+
+=== PARTNER_MEADOWS_RIVAL ===
+Name: Melissa
+Class: Rival
+Pic: Melissa
+Gender: Female
+Music: Female
+Back Pic: Melissa
+
+Rockruff
+Hardy Nature
+Level: 15
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Vital Spirit
+- Rock Tomb
+- Sand Attack
+- Fire Fang
+- Thunder Fang
+
+Drilbur
+Hardy Nature
+Level: 15
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Mold Breaker
+- Metal Claw
+- Mud-Slap
+- Hone Claws
+- Rapid Spin
+
+Gible
+Hardy Nature
+Level: 15
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: Rough Skin
+- Sand Tomb
+- Outrage
+- Sand Attack
+- Metal Claw

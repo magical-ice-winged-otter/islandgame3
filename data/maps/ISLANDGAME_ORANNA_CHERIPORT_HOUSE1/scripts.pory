@@ -1,0 +1,26 @@
+mapscripts ISLANDGAME_ORANNA_CHERIPORT_HOUSE1_MapScripts {}
+
+// pokefan
+script ISLANDGAME_ORANNA_CHERIPORT_HOUSE1_NPC1 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Marya has really become a hot tourist destination in recent years!\p"
+        "It's interesting seeing so many people from different regions visiting here!"
+    ))
+    closemessage
+    release
+}
+
+
+// girl
+script ISLANDGAME_ORANNA_CHERIPORT_HOUSE1_NPC2 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Oranna is home to one of Marya's legendary Isle Guardians. \p"
+        "The mythical Wings of Frost: Articuno! \p"
+        "With a single flap of its wings, it can chill the moisture in the air around it, creating snow even in the sweltering tropics of Marya!"
+    ))
+    release
+}

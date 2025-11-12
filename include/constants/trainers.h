@@ -108,12 +108,52 @@
 #define TRAINER_PIC_LEAF                  90
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
-
+#define TRAINER_PIC_RS_MAY                92
+#define TRAINER_PIC_GAMBLER               93
+#define TRAINER_PIC_ARTIST                94
+#define TRAINER_PIC_BALD                  95
+#define TRAINER_PIC_BIRDKEEPERF           96
+#define TRAINER_PIC_CLOWN                 97
+#define TRAINER_PIC_COOLTRAINERSNOWF      98
+#define TRAINER_PIC_COOLTRAINERSNOWM      99
+#define TRAINER_PIC_RANCHER              100
+#define TRAINER_PIC_COWGIRL              101
+#define TRAINER_PIC_CYNTHIA              102
+#define TRAINER_PIC_FARMERDUO            103
+#define TRAINER_PIC_INTERVIEWERF         104
+#define TRAINER_PIC_INTERVIEWERM         105
+#define TRAINER_PIC_JOGGER               106
+#define TRAINER_PIC_OLDLADY              107
+#define TRAINER_PIC_PIKACHUGIRL          108
+#define TRAINER_PIC_POLICE               109
+#define TRAINER_PIC_POPIDOL              110
+#define TRAINER_PIC_SCIENTIST            111
+#define TRAINER_PIC_SKIF                 112
+#define TRAINER_PIC_SKIM                 113
+#define TRAINER_PIC_SWIMMERTUBERDUO      114
+#define TRAINER_PIC_WAITER               115
+#define TRAINER_PIC_WAITRESS             116
+#define TRAINER_PIC_WORKER               117
 
 // island-game
-#define TRAINER_PIC_OLIVIA                93
-#define TRAINER_PIC_OLIVER                94
-#define TRAINER_PIC_COUNT                 95
+#define TRAINER_PIC_ARTHUR               118
+#define TRAINER_PIC_EDEA                 119
+#define TRAINER_PIC_MELISSA              120
+#define TRAINER_PIC_JONAS                121
+#define TRAINER_PIC_RUKA                 122
+#define TRAINER_PIC_OLIVIA               123
+#define TRAINER_PIC_OLIVER               124
+#define TRAINER_PIC_SCOUT_M              125
+#define TRAINER_PIC_SCOUT_F              126
+#define TRAINER_PIC_BUG_CATCHER_F        127
+#define TRAINER_PIC_NERD                 128
+#define TRAINER_PIC_BIRD_KEEPER_F        129
+#define TRAINER_PIC_SCIENTIST2           130
+#define TRAINER_PIC_BIKER                131
+#define TRAINER_PIC_TAMER                132
+#define TRAINER_PIC_PAINTER              133
+#define TRAINER_PIC_CUEBALL              134
+#define TRAINER_PIC_COUNT                135
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
@@ -127,6 +167,7 @@
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      7
 #define TRAINER_BACK_PIC_WALLY                  8
 #define TRAINER_BACK_PIC_STEVEN                 9
+#define TRAINER_BACK_PIC_MELISSA                10
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -368,6 +409,23 @@ enum TrainerClassID
     TRAINER_CLASS_PIKE_QUEEN,
     TRAINER_CLASS_PYRAMID_KING,
     TRAINER_CLASS_RS_PROTAG,
+    // island-game
+    TRAINER_CLASS_SCOUT,
+    TRAINER_CLASS_NERD,
+    TRAINER_CLASS_COWGIRL,
+    TRAINER_CLASS_RANCHER,
+    TRAINER_CLASS_PATHMASTER,
+    TRAINER_CLASS_THIEF,
+    TRAINER_CLASS_LEGEND,
+    TRAINER_CLASS_CLOWN,
+    TRAINER_CLASS_WORKER,
+    TRAINER_CLASS_SCIENTIST,
+    TRAINER_CLASS_FARMERDUO,
+    TRAINER_CLASS_BIKER,
+    TRAINER_CLASS_CUEBALL,
+    TRAINER_CLASS_TAMER,
+    TRAINER_CLASS_PAINTER,
+    TRAINER_CLASS_ARTIST,
     TRAINER_CLASS_COUNT,
 };
 

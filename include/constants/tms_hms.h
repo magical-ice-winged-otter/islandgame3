@@ -52,7 +52,8 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(CHARGE_BEAM) 
+    F(CHARGE_BEAM) \
+    F(FALSE_SWIPE) 
 
 #define FOREACH_HM(F) \
     F(CUT) \
