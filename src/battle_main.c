@@ -368,6 +368,23 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PIKE_QUEEN] = { _("PIKE QUEEN") },
     [TRAINER_CLASS_PYRAMID_KING] = { _("PYRAMID KING") },
     [TRAINER_CLASS_RS_PROTAG] = { _("{PKMN} TRAINER") },
+    // island-game
+    [TRAINER_CLASS_SCOUT] = { _("Scout") },
+    [TRAINER_CLASS_COWGIRL] = { _("Cowgirl") },
+    [TRAINER_CLASS_RANCHER] = { _("Rancher") },
+    [TRAINER_CLASS_NERD] = { _("Nerd") },
+    [TRAINER_CLASS_PATHMASTER] = { _("Path Master") },
+    [TRAINER_CLASS_THIEF] = { _("{PKMN} Thief") },
+    [TRAINER_CLASS_LEGEND] = { _("{PKMN} Legend") },
+    [TRAINER_CLASS_CLOWN] = { _("Clown") },
+    [TRAINER_CLASS_WORKER] = { _("Worker") },
+    [TRAINER_CLASS_SCIENTIST] = { _("Scientist") },
+    [TRAINER_CLASS_FARMERDUO] = { _("Ranchers") },
+    [TRAINER_CLASS_BIKER] = { _("Goon Gang") },
+    [TRAINER_CLASS_CUEBALL] = { _("Goon Boss") },
+    [TRAINER_CLASS_TAMER] = { _("Tamer") },
+    [TRAINER_CLASS_PAINTER] = { _("Painter") },
+    [TRAINER_CLASS_ARTIST] = { _("Artist") },
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
