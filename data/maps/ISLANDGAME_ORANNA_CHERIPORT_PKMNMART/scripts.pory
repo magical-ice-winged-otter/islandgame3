@@ -42,3 +42,4 @@ script ISLANDGAME_ORANNA_CHERIPORT_PKMNMART_NPC2 {
     closemessage
     release
 }
+

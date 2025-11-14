@@ -126,3 +126,6 @@ script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_LobsterRollGuy {
         closemessage
         release
 }
+
+
+

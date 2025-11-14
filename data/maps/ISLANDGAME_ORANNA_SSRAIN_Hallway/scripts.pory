@@ -40,3 +40,4 @@ script ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician {
     closemessage
     release
 }
+
