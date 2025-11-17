@@ -35,7 +35,10 @@ mapscripts ISLANDGAME_VERDANT_PATH_FISHHOUSE_MapScripts {
             }
         }
         else {
-            setvar(CATCH_OF_THE_DAY, VAR_VERDANT_PATH_STATE)
+	    // NOTE(poe): The commented-out line below caused a compile warning (try it yourself!)
+	    // Not sure what the correct behavior is, but worth testing to make sure this is okay.
+            //setvar(CATCH_OF_THE_DAY, VAR_VERDANT_PATH_STATE)
+	    copyvar(CATCH_OF_THE_DAY, VAR_VERDANT_PATH_STATE)
         }
         
         quest_emote_on_warp(3, QUEST_ARNIE_FISHING_QUESTS)
