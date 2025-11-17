@@ -867,6 +867,7 @@ void TryToSetBattleFormChangeMoves(struct Pokemon *mon, enum FormChanges method)
 u32 GetMonFriendshipScore(struct Pokemon *pokemon);
 u32 GetMonAffectionHearts(struct Pokemon *pokemon);
 void UpdateMonPersonality(struct BoxPokemon *boxMon, u32 personality);
+void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature);
 u8 CalculatePartyCount(struct Pokemon *party);
 u16 SanitizeSpeciesId(u16 species);
 bool32 IsSpeciesEnabled(u16 species);
