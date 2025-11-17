@@ -25,35 +25,19 @@
 // quest number defines
 #define QUEST_POKEDEX_COMPLETION          0
 #define QUEST_MINTY_MEADOWS_MELISSA       1
-#define QUEST_3          2
-#define QUEST_4          3
-#define QUEST_5          4
-#define QUEST_6          5
-#define QUEST_7          6
-#define QUEST_8          7
-#define QUEST_9          8
-#define QUEST_10         9
-#define QUEST_11        10
-#define QUEST_12        11
-#define QUEST_13        12
-#define QUEST_14        13
-#define QUEST_15        14
-#define QUEST_16        15
-#define QUEST_17        16
-#define QUEST_18        17
-#define QUEST_19        18
-#define QUEST_20        19
-#define QUEST_21        20
-#define QUEST_22        21
-#define QUEST_23        22
-#define QUEST_24        23
-#define QUEST_25        24
-#define QUEST_26        25
-#define QUEST_27        26
-#define QUEST_28        27
-#define QUEST_29        28
-#define QUEST_30        29
-#define QUEST_COUNT     (QUEST_30 + 1)
+#define QUEST_PERSI_FAVORITE_CARD         2
+#define QUEST_PERSI_BERRY_MANIAC          3
+#define QUEST_ARNIE_FISHING_QUESTS        4  
+#define QUEST_MAPLEGROVE_LOVERS           5
+#define QUEST_MARYA_GYM_CHALLENGE         6
+#define QUEST_FRESA_FARMS_TORCHIC_EGG     7
+#define QUEST_ROSEVALE_RESCUE             8
+#define QUEST_AETHERIA_MELISSA            9
+#define QUEST_APPLEVINE_COUCH_POTATO      10
+#define QUEST_ROCKY_PATH_NURSE            11
+#define QUEST_VALLEY_OF_PEACE_CUBONE      12
+#define QUEST_MISSINGNO                   13 // this should always be the last quest
+#define QUEST_COUNT                       14 // This number is literally how many to show in the UI (keep it accurate!)
 
 #define SUB_QUEST_POKEDEX_MILESTONE_1      0
 #define SUB_QUEST_POKEDEX_MILESTONE_2      1
@@ -68,27 +52,59 @@
 #define SUB_QUEST_POKEDEX_MILESTONE_11     10
 #define SUB_QUEST_POKEDEX_MILESTONE_12     11
 #define SUB_QUEST_POKEDEX_MILESTONE_13     12
-#define SUB_QUEST_14        13
-#define SUB_QUEST_15        14
-#define SUB_QUEST_16        15
-#define SUB_QUEST_17        16
-#define SUB_QUEST_18        17
-#define SUB_QUEST_19        18
-#define SUB_QUEST_20        19
-#define SUB_QUEST_21        20
-#define SUB_QUEST_22        21
-#define SUB_QUEST_23        22
-#define SUB_QUEST_24        23
-#define SUB_QUEST_25        24
-#define SUB_QUEST_26        25
-#define SUB_QUEST_27        26
-#define SUB_QUEST_28        27
-#define SUB_QUEST_29        28
-#define SUB_QUEST_30        29
+#define SUB_QUEST_COUNT_POKEDEX_MILESTONE  13
 
-#define SUB_QUEST_COUNT_POKEDEX_MILESTONE 13
-#define QUEST_2_SUB_COUNT 20
-#define SUB_QUEST_COUNT (SUB_QUEST_COUNT_POKEDEX_MILESTONE + QUEST_2_SUB_COUNT)
+#define SUB_QUEST_PERSI_BERRY_1            13
+#define SUB_QUEST_PERSI_BERRY_2            14
+#define SUB_QUEST_PERSI_BERRY_3            15
+#define SUB_QUEST_PERSI_BERRY_4            16
+#define SUB_QUEST_PERSI_BERRY_5            17
+#define SUB_QUEST_PERSI_BERRY_6            18
+#define SUB_QUEST_PERSI_BERRY_7            19
+#define SUB_QUEST_PERSI_BERRY_8            20
+#define SUB_QUEST_PERSI_BERRY_9            21
+#define SUB_QUEST_PERSI_BERRY_10           22
+#define SUB_QUEST_PERSI_BERRY_11           23
+#define SUB_QUEST_PERSI_BERRY_12           24
+#define SUB_QUEST_PERSI_BERRY_13           25
+#define SUB_QUEST_PERSI_BERRY_14           26
+#define SUB_QUEST_COUNT_PERSI_BERRY        14
+
+#define SUB_QUEST_MARYA_GYM_CHALLENGE_1    27
+#define SUB_QUEST_MARYA_GYM_CHALLENGE_2    28
+#define SUB_QUEST_MARYA_GYM_CHALLENGE_3    29
+#define SUB_QUEST_COUNT_GYM_CHALLENGE      3
+
+#define SUB_QUEST_COUCH_POTATO_1           30
+#define SUB_QUEST_COUCH_POTATO_2           31
+#define SUB_QUEST_COUCH_POTATO_3           32
+#define SUB_QUEST_COUCH_POTATO_4           33
+#define SUB_QUEST_COUCH_POTATO_5           34
+#define SUB_QUEST_COUNT_COUCH_POTATO       5
+
+#define SUB_QUEST_MISSINGNO_1              35
+#define SUB_QUEST_MISSINGNO_2              36
+#define SUB_QUEST_MISSINGNO_3              37
+#define SUB_QUEST_MISSINGNO_4              38
+#define SUB_QUEST_MISSINGNO_5              39
+#define SUB_QUEST_MISSINGNO_6              40
+#define SUB_QUEST_COUNT_MISSINGNO          6
+
+#define SUB_QUEST_CUBONE_1                 41
+#define SUB_QUEST_CUBONE_2                 42
+#define SUB_QUEST_CUBONE_3                 43
+#define SUB_QUEST_COUNT_CUBONE             3
+
+#define SUB_QUEST_ARNIE_FISHING_QUEST_1    44
+#define SUB_QUEST_ARNIE_FISHING_QUEST_2    45
+#define SUB_QUEST_ARNIE_FISHING_QUEST_3    46
+#define SUB_QUEST_ARNIE_FISHING_QUEST_4    47
+#define SUB_QUEST_ARNIE_FISHING_QUEST_5    48
+#define SUB_QUEST_ARNIE_FISHING_QUEST_6    49
+#define SUB_QUEST_ARNIE_FISHING_QUEST_7    50
+#define SUB_QUEST_COUNT_ARNIE              7
+
+#define SUB_QUEST_COUNT (SUB_QUEST_COUNT_POKEDEX_MILESTONE + SUB_QUEST_COUNT_PERSI_BERRY + SUB_QUEST_COUNT_GYM_CHALLENGE + SUB_QUEST_COUNT_COUCH_POTATO + SUB_QUEST_COUNT_CUBONE + SUB_QUEST_COUNT_MISSINGNO + SUB_QUEST_COUNT_ARNIE)
 
 // We want to allocate more space in the saveblock for quests than we need,
 // so we don't make breaking changes in the future.

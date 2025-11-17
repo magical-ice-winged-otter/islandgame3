@@ -235,344 +235,497 @@ static const u8 sText_Close[] = _("Close");
 static const u8 sText_ColorGreen[] = _("{COLOR}{GREEN}");
 static const u8 sText_AZ[] = _(" A-Z");
 
+const u8 sText_SideQuestMap_Unknown[] = _("Marya");
+
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////BEGIN SUBQUEST CUSTOMIZATION/////////////////////////////
 
 //Declaration of subquest structures. Edits to subquests are made here.
+
 static const struct SubQuest sSubQuests_PokedexMilestones[SUB_QUEST_COUNT_POKEDEX_MILESTONE] =
 {
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_1,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 30 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_TM52,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_2,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 60 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_NEST_BALL,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_3,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 90 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_RARE_CANDY,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_4,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 120 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_LEVEL_BALL,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_5,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 150 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_ABILITY_CAPSULE,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_6,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 180 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_ULTRA_BALL,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_7,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 210 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_ABILITY_PATCH,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_8,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 240 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_QUICK_BALL,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_9,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 270 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_CATCHING_CHARM,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_10,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 300 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_EXP_CHARM,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_11,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 330 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_OVAL_CHARM,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_12,
         .name = COMPOUND_STRING("Milestone Reached!"),
         .desc = COMPOUND_STRING("You've completed 360 entries!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_MASTER_BALL,
         .spritetype = ITEM,
         .type = sText_Complete
     },
-
     {
         .id = SUB_QUEST_POKEDEX_MILESTONE_13,
         .name = COMPOUND_STRING("Pokédex Completed!"),
         .desc = COMPOUND_STRING("You've completed the Pokédex!"),
-        .map = COMPOUND_STRING(""),
+        .map = sText_SideQuestMap_Unknown,
         .sprite = ITEM_AURORA_TICKET,
         .spritetype = ITEM,
         .type = sText_Complete
     },
 };
 
-static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
+static const struct SubQuest sSubQuests_PersiBerryManiac[SUB_QUEST_COUNT_PERSI_BERRY] =
 {
     {
-        .id = 10,
-        .name = COMPOUND_STRING("Part 1"),
-        .desc = COMPOUND_STRING("Description sub 1"),
-        .map = COMPOUND_STRING("Map 1"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_1,
+        .name = COMPOUND_STRING("Liechi Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Liechi Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_LIECHI_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 11,
-        .name = COMPOUND_STRING("Part 2"),
-        .desc = COMPOUND_STRING("Description sub 2"),
-        .map = COMPOUND_STRING("Map 2"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_2,
+        .name = COMPOUND_STRING("Ganlon Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Ganlon Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_GANLON_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 12,
-        .name = COMPOUND_STRING("Part 3"),
-        .desc = COMPOUND_STRING("Description sub 3"),
-        .map = COMPOUND_STRING("Map 3"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_3,
+        .name = COMPOUND_STRING("Salac Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Salac Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_SALAC_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 13,
-        .name = COMPOUND_STRING("Part 4"),
-        .desc = COMPOUND_STRING("Description sub 4"),
-        .map = COMPOUND_STRING("Map 4"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_4,
+        .name = COMPOUND_STRING("Petaya Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Petaya Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_PETAYA_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 14,
-        .name = COMPOUND_STRING("Part 5"),
-        .desc = COMPOUND_STRING("Description sub 5"),
-        .map = COMPOUND_STRING("Map 5"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_5,
+        .name = COMPOUND_STRING("Apicot Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Apicot Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_APICOT_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 15,
-        .name = COMPOUND_STRING("Part 6"),
-        .desc = COMPOUND_STRING("Description sub 6"),
-        .map = COMPOUND_STRING("Map 6"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_6,
+        .name = COMPOUND_STRING("Kee Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Kee Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_KEE_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 16,
-        .name = COMPOUND_STRING("Part 7"),
-        .desc = COMPOUND_STRING("Description sub 7"),
-        .map = COMPOUND_STRING("Map 7"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_7,
+        .name = COMPOUND_STRING("Maranga Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Maranga Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_MARANGA_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 17,
-        .name = COMPOUND_STRING("Part 8"),
-        .desc = COMPOUND_STRING("Description sub 8"),
-        .map = COMPOUND_STRING("Map 8"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_8,
+        .name = COMPOUND_STRING("Lansat Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Lansat Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_LANSAT_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 18,
-        .name = COMPOUND_STRING("Part 9"),
-        .desc = COMPOUND_STRING("Description sub 9"),
-        .map = COMPOUND_STRING("Map 9"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_PERSI_BERRY_9,
+        .name = COMPOUND_STRING("Enigma Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Enigma Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_ENIGMA_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
-
     {
-        .id = 19,
-        .name = COMPOUND_STRING("Part 10"),
-        .desc = COMPOUND_STRING("Description sub 10"),
-        .map = COMPOUND_STRING("Map 10"),
-        .sprite = SPECIES_HO_OH,
+        .id = SUB_QUEST_PERSI_BERRY_10,
+        .name = COMPOUND_STRING("Micle Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Micle Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_MICLE_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_PERSI_BERRY_11,
+        .name = COMPOUND_STRING("Custap Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Custap Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_CUSTAP_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_PERSI_BERRY_12,
+        .name = COMPOUND_STRING("Jaboca Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Jaboca Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_JABOCA_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_PERSI_BERRY_13,
+        .name = COMPOUND_STRING("Rowap Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Rowap Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_ROWAP_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_PERSI_BERRY_14,
+        .name = COMPOUND_STRING("Starf Berry"),
+        .desc = COMPOUND_STRING("You found and gave a Starf Berry\nto the Berry Maniac."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_STARF_BERRY,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+};
+
+static const struct SubQuest sSubQuests_ArnieFishingQuests[SUB_QUEST_COUNT_ARNIE] = 
+{
+    {
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_1,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Mudkip!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_MUDKIP, 
         .spritetype = PKMN,
-        .type = sText_Caught
-
+        .type = sText_Complete
     },
-
     {
-        .id = 20,
-        .name = COMPOUND_STRING("Part 11"),
-        .desc = COMPOUND_STRING("Description sub 11"),
-        .map = COMPOUND_STRING("Map 11"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_2,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Feebas!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_FEEBAS, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
-
     {
-        .id = 21,
-        .name = COMPOUND_STRING("Part 12"),
-        .desc = COMPOUND_STRING("Description sub 12"),
-        .map = COMPOUND_STRING("Map 12"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_3,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Lumineon!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_LUMINEON, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
-
     {
-        .id = 22,
-        .name = COMPOUND_STRING("Part 13"),
-        .desc = COMPOUND_STRING("Description sub 13"),
-        .map = COMPOUND_STRING("Map 13"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_4,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Seadra!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_SEADRA, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
-
     {
-        .id = 23,
-        .name = COMPOUND_STRING("Part 14"),
-        .desc = COMPOUND_STRING("Description sub 14"),
-        .map = COMPOUND_STRING("Map 14"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_5,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Palafin!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_PALAFIN, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
-
     {
-        .id = 24,
-        .name = COMPOUND_STRING("Part 15"),
-        .desc = COMPOUND_STRING("Description sub 15"),
-        .map = COMPOUND_STRING("Map 15"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_6,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Clamperl!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_CLAMPERL, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
-
     {
-        .id = 25,
-        .name = COMPOUND_STRING("Part 16"),
-        .desc = COMPOUND_STRING("Description sub 16"),
-        .map = COMPOUND_STRING("Map 16"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .type = sText_Found
+        .id = SUB_QUEST_ARNIE_FISHING_QUEST_7,
+        .name = COMPOUND_STRING("Quest Complete!"),
+        .desc = COMPOUND_STRING("You caught and showed Arnie a Relicanth!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = SPECIES_RELICANTH, 
+        .spritetype = PKMN,
+        .type = sText_Complete
     },
+};
 
+static const struct SubQuest sSubQuests_MaryaGymChallenge[SUB_QUEST_COUNT_GYM_CHALLENGE] = 
+{
     {
-        .id = 26,
-        .name = COMPOUND_STRING("Part 17"),
-        .desc = COMPOUND_STRING("Description sub 17"),
-        .map = COMPOUND_STRING("Map 17"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .id = SUB_QUEST_MARYA_GYM_CHALLENGE_1,
+        .name = COMPOUND_STRING("Tidalcove Badge"),
+        .desc = COMPOUND_STRING("“Stay frosty!” -Ruka"),
+        .map = COMPOUND_STRING("Tidalcove"),
+        .sprite = OBJ_EVENT_GFX_RUKA, 
         .spritetype = OBJECT,
-        .type = sText_Found
+        .type = sText_Complete
     },
-
     {
-        .id = 27,
-        .name = COMPOUND_STRING("Part 18"),
-        .desc = COMPOUND_STRING("Description sub 18"),
-        .map = COMPOUND_STRING("Map 18"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .id = SUB_QUEST_MARYA_GYM_CHALLENGE_2,
+        .name = COMPOUND_STRING("Cantalo Badge"),
+        .desc = COMPOUND_STRING("“Your passion for battle is\nan inspiration.” -Avi"),
+        .map = COMPOUND_STRING("Cantalo"),
+        .sprite = OBJ_EVENT_GFX_MAN_4,
         .spritetype = OBJECT,
-        .type = sText_Found
+        .type = sText_Complete
     },
-
     {
-        .id = 28,
-        .name = COMPOUND_STRING("Part 19"),
-        .desc = COMPOUND_STRING("Description sub 19"),
-        .map = COMPOUND_STRING("Map 19"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .id = SUB_QUEST_MARYA_GYM_CHALLENGE_3,
+        .name = COMPOUND_STRING("Amberidge Badge"),
+        .desc = COMPOUND_STRING("“Keep that win streak hot hot hot!” -Javier"),
+        .map = COMPOUND_STRING("Amberidge"),
+        .sprite = OBJ_EVENT_GFX_MAN_5,
         .spritetype = OBJECT,
-        .type = sText_Found
+        .type = sText_Complete
     },
+};
 
+static const struct SubQuest sSubQuests_ApplevineCouchPotato[SUB_QUEST_COUNT_COUCH_POTATO] = 
+{
     {
-        .id = 29,
-        .name = COMPOUND_STRING("Part 20"),
-        .desc = COMPOUND_STRING("Description sub 20"),
-        .map = COMPOUND_STRING("Map 20"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .id = SUB_QUEST_COUCH_POTATO_1,
+        .name = COMPOUND_STRING("Delivery Complete!"),
+        .desc = COMPOUND_STRING("You delivered his\nSweet Heart!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_SWEET_HEART,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_COUCH_POTATO_2,
+        .name = COMPOUND_STRING("Delivery Complete!"),
+        .desc = COMPOUND_STRING("You delivered his\nCandy Bar!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_RAGE_CANDY_BAR,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_COUCH_POTATO_3,
+        .name = COMPOUND_STRING("Delivery Complete!"),
+        .desc = COMPOUND_STRING("You delivered his\nPancake!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_LUMIOSE_GALETTE,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_COUCH_POTATO_4,
+        .name = COMPOUND_STRING("Delivery Complete!"),
+        .desc = COMPOUND_STRING("You delivered his\nJelly Donut!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_BIG_MALASADA,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_COUCH_POTATO_5,
+        .name = COMPOUND_STRING("Delivery Complete!"),
+        .desc = COMPOUND_STRING("You delivered his\nSera-Snaxx!"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_PEWTER_CRUNCHIES,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+};
+
+static const struct SubQuest sSubQuests_ValleyOfPeaceCubone[SUB_QUEST_COUNT_CUBONE] = 
+{
+    {
+        .id = SUB_QUEST_CUBONE_1,
+        .name = COMPOUND_STRING("Part I"),
+        .desc = COMPOUND_STRING("Hmm... Maybe I can find\nthe hunters around Lumine..."),
+        .map = COMPOUND_STRING("Valley of Peace"),
+        .sprite = SPECIES_GENGAR, 
+        .spritetype = PKMN,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_CUBONE_2,
+        .name = COMPOUND_STRING("Part II"),
+        .desc = COMPOUND_STRING("TBD"),
+        .map = COMPOUND_STRING("Lumine"),
+        .sprite = OBJ_EVENT_GFX_MAN_5,
         .spritetype = OBJECT,
-        .type = sText_Found
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_CUBONE_3,
+        .name = COMPOUND_STRING("Part III"),
+        .desc = COMPOUND_STRING("TBD"),
+        .map = COMPOUND_STRING("Minerva"),
+        .sprite = OBJ_EVENT_GFX_MAN_5,
+        .spritetype = OBJECT,
+        .type = sText_Complete
+    },
+};
+
+static const struct SubQuest sSubQuests_MissingNo[SUB_QUEST_COUNT_MISSINGNO] = 
+{
+    {
+        .id = SUB_QUEST_MISSINGNO_1,
+        .name = COMPOUND_STRING("けつばん-01"),
+        .desc = COMPOUND_STRING("01010111"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_ISLANDGAME_STRANGE_DISC,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_MISSINGNO_2,
+        .name = COMPOUND_STRING("けつばん-02"),
+        .desc = COMPOUND_STRING("01000001"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_TM05,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_MISSINGNO_3,
+        .name = COMPOUND_STRING("けつばん-03"),
+        .desc = COMPOUND_STRING("01001011"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_TM05,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_MISSINGNO_4,
+        .name = COMPOUND_STRING("けつばん-04"),
+        .desc = COMPOUND_STRING("01000101"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_TM05,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_MISSINGNO_5,
+        .name = COMPOUND_STRING("けつばん-05"),
+        .desc = COMPOUND_STRING("01010101"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_TM05,
+        .spritetype = ITEM,
+        .type = sText_Complete
+    },
+    {
+        .id = SUB_QUEST_MISSINGNO_6,
+        .name = COMPOUND_STRING("けつばん-06"),
+        .desc = COMPOUND_STRING("01010000"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_TM05,
+        .spritetype = ITEM,
+        .type = sText_Complete
     },
 };
 
@@ -586,7 +739,7 @@ static const struct SubQuest sSubQuests2[QUEST_2_SUB_COUNT] =
 static const struct SideQuest sSideQuests[QUEST_COUNT] =
 {
     [QUEST_POKEDEX_COMPLETION] =
-	{
+    {
         .name = COMPOUND_STRING("<!> Gotta Catch 'Em All!"),
         .desc = COMPOUND_STRING("You know the deal. Complete the\nPokédex for Professor Palm!"),
         .donedesc = COMPOUND_STRING("Thanks for playing! :)"),
@@ -597,7 +750,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
         .numSubquests = SUB_QUEST_COUNT_POKEDEX_MILESTONE
     },
 
-	[QUEST_MINTY_MEADOWS_MELISSA] =
+    [QUEST_MINTY_MEADOWS_MELISSA] =
     {
         .name = COMPOUND_STRING("<!> The Journey Begins!"),
         .desc = COMPOUND_STRING("Meet up with your new\nco-apprentice, Melissa!"),
@@ -609,285 +762,148 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
         .numSubquests = 0
     },
 
+    [QUEST_PERSI_FAVORITE_CARD] =
     {
-        .name = COMPOUND_STRING("Side Quest 3"),
-        .desc = COMPOUND_STRING("Description 3"),
-        .donedesc = COMPOUND_STRING("Completed Quest 3"),
-        .map = COMPOUND_STRING("Map 3"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = sSubQuests2,
+        .name = COMPOUND_STRING("The Ultra Rare Charizard"),
+        .desc = COMPOUND_STRING("A little camper has lost his\nfavorite trading card!"),
+        .donedesc = COMPOUND_STRING("I'm just saying, that card\nis going for hundreds online."),
+        .map = COMPOUND_STRING("Persi"),
+        .sprite = ITEM_ISLANDGAME_TRADING_CARD, 
+        .spritetype = ITEM,
+        .subquests = NULL,
         .numSubquests = 0
     },
+
+    [QUEST_PERSI_BERRY_MANIAC] =
     {
-        .name = COMPOUND_STRING("Side Quest 4"),
-        .desc = COMPOUND_STRING("Description 4"),
-        .donedesc = COMPOUND_STRING("Completed Quest 4"),
-        .map = COMPOUND_STRING("Map 4"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
+        .name = COMPOUND_STRING("Berry Hunting"),
+        .desc = COMPOUND_STRING("The Berry Maniac from Camp Persi\nyearns for rare berries!"),
+        .donedesc = COMPOUND_STRING("You've aided the Berry Maniac\n in achieving his full power..."),
+        .map = COMPOUND_STRING("Persi"),
+        .sprite = OBJ_EVENT_GFX_BARD, 
+        .spritetype = OBJECT,
+        .subquests = sSubQuests_PersiBerryManiac,
+        .numSubquests = SUB_QUEST_COUNT_PERSI_BERRY
+    },
+
+    [QUEST_ARNIE_FISHING_QUESTS] =
+    {
+        .name = COMPOUND_STRING("Arnie's Fishing Challenge"),
+        .desc = COMPOUND_STRING("Do you have what it takes to be\na fishing master?"),
+        .donedesc = COMPOUND_STRING("“The title of master hooker\nbelongs to you!” -Arnie"),
+        .map = COMPOUND_STRING("Verdant Path"),
+        .sprite = OBJ_EVENT_GFX_MAN_1, 
+        .spritetype = OBJECT,
+        .subquests = sSubQuests_ArnieFishingQuests,
+        .numSubquests = SUB_QUEST_COUNT_ARNIE
+    },
+
+    [QUEST_MAPLEGROVE_LOVERS] =
+    {
+        .name = COMPOUND_STRING("A Star-crossed Lover"),
+        .desc = COMPOUND_STRING("Deliver Roman's love letter\nto Julie in Applevine!"),
+        .donedesc = COMPOUND_STRING("You've succeeded in being\n a messenger of love!"),
+        .map = COMPOUND_STRING("Maplegrove"),
+        .sprite = ITEM_ISLANDGAME_ROMANS_LETTER, 
+        .spritetype = ITEM,
+        .subquests = NULL,
+        .numSubquests = 0 
+    },
+
+    [QUEST_MARYA_GYM_CHALLENGE] =
+    {
+        .name = COMPOUND_STRING("<!> The Marya League"),
+        .desc = COMPOUND_STRING("Acquire the gym badges of Oranna,\nLumine, and Minerva Island!"),
+        .donedesc = COMPOUND_STRING("All that's left is the\nFestival Tournament..."),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_POKE_BALL, 
+        .spritetype = ITEM,
+        .subquests = sSubQuests_MaryaGymChallenge,
+        .numSubquests = SUB_QUEST_COUNT_GYM_CHALLENGE
+    },
+
+    [QUEST_FRESA_FARMS_TORCHIC_EGG] =
+    {
+        .name = COMPOUND_STRING("Parenting 101"),
+        .desc = COMPOUND_STRING("Paulie from Fresa Farms has\nchosen you to raise this egg!"),
+        .donedesc = COMPOUND_STRING("They just grow up so fast,\n don't they?"),
+        .map = COMPOUND_STRING("Fresa Farms"),
+        .sprite = ITEM_LUCKY_EGG, 
+        .spritetype = ITEM,
+        .subquests = NULL,
+        .numSubquests = 0 
+    },
+
+    [QUEST_ROSEVALE_RESCUE] =
+    {
+        .name = COMPOUND_STRING("<!> Rescue Mission"),
+        .desc = COMPOUND_STRING("A little girl's Azurill has been stolen!\nThe thief is somewhere in Mt. Aurora..."),
+        .donedesc = COMPOUND_STRING("You successfully rescued Azurill,\n with some help from Articuno!"),
+        .map = COMPOUND_STRING("Rosevale"),
+        .sprite = SPECIES_AZURILL, 
+        .spritetype = PKMN,
+        .subquests = NULL,
+        .numSubquests = 0 
+    },
+
+    [QUEST_AETHERIA_MELISSA] =
+    {
+        .name = COMPOUND_STRING("<!> The City That Never Sleeps"),
+        .desc = COMPOUND_STRING("Melissa wants to meet up in Aetheria!"),
+        .donedesc = COMPOUND_STRING("Looks like Edea got away this time..."),
+        .map = COMPOUND_STRING("Aetheria"),
+        .sprite = OBJ_EVENT_GFX_MELISSA, 
         .spritetype = OBJECT,
         .subquests = NULL,
         .numSubquests = 0
     },
+
+    [QUEST_APPLEVINE_COUCH_POTATO] =
     {
-        .name = COMPOUND_STRING("Side Quest 5"),
-        .desc = COMPOUND_STRING("Description 5"),
-        .donedesc = COMPOUND_STRING("Completed Quest 5"),
-        .map = COMPOUND_STRING("Map 5"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
+        .name = COMPOUND_STRING("Part-Time Job"),
+        .desc = COMPOUND_STRING("You probably weren't expecting to get\none."),
+        .donedesc = COMPOUND_STRING("Looks like you've been laid off.\nAt least you were compensated...?"),
+        .map = COMPOUND_STRING("Applevine"),
+        .sprite = ITEM_LEFTOVERS, 
+        .spritetype = ITEM,
+        .subquests = sSubQuests_ApplevineCouchPotato,
+        .numSubquests = SUB_QUEST_COUNT_COUCH_POTATO 
+    },
+
+    [QUEST_ROCKY_PATH_NURSE] =
+    {
+        .name = COMPOUND_STRING("The Missing Ingredient"),
+        .desc = COMPOUND_STRING("Nurse Joy needs a Balm Mushroom for\nher newest medicinal breakthrough!"),
+        .donedesc = COMPOUND_STRING("You've aided Nurse Joy\nin creating the PokéVial!"),
+        .map = COMPOUND_STRING("Rocky Path"),
+        .sprite = ITEM_POKEVIAL, 
+        .spritetype = ITEM,
         .subquests = NULL,
         .numSubquests = 0
     },
+
+    [QUEST_VALLEY_OF_PEACE_CUBONE] =
     {
-        .name = COMPOUND_STRING("Side Quest 6"),
-        .desc = COMPOUND_STRING("Description 6"),
-        .donedesc = COMPOUND_STRING("Completed Quest 6"),
-        .map = COMPOUND_STRING("Map 6"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
+        .name = COMPOUND_STRING("The Hunters Become The Hunted"),
+        .desc = COMPOUND_STRING("Track down the hunters\nwho took Cubone's mother!"),
+        .donedesc = COMPOUND_STRING("Righteous retribution\nhas been inflicted."),
+        .map = COMPOUND_STRING("Rocky Path"),
+        .sprite = SPECIES_CUBONE, 
+        .spritetype = PKMN,
+        .subquests = sSubQuests_ValleyOfPeaceCubone,
+        .numSubquests = SUB_QUEST_COUNT_CUBONE 
     },
+
+    [QUEST_MISSINGNO] =
     {
-        .name = COMPOUND_STRING("Side Quest 7"),
-        .desc = COMPOUND_STRING("Description 7"),
-        .donedesc = COMPOUND_STRING("Completed Quest 7"),
-        .map = COMPOUND_STRING("Map 7"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 8"),
-        .desc = COMPOUND_STRING("Description 8"),
-        .donedesc = COMPOUND_STRING("Completed Quest 8"),
-        .map = COMPOUND_STRING("Map 8"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 9"),
-        .desc = COMPOUND_STRING("Description 9"),
-        .donedesc = COMPOUND_STRING("Completed Quest 9"),
-        .map = COMPOUND_STRING("Map 9"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 10"),
-        .desc = COMPOUND_STRING("Description 10"),
-        .donedesc = COMPOUND_STRING("Completed Quest 10"),
-        .map = COMPOUND_STRING("Map 10"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 11"),
-        .desc = COMPOUND_STRING("Description 11"),
-        .donedesc = COMPOUND_STRING("Completed Quest 11"),
-        .map = COMPOUND_STRING("Map 11"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 12"),
-        .desc = COMPOUND_STRING("Description 12"),
-        .donedesc = COMPOUND_STRING("Completed Quest 12"),
-        .map = COMPOUND_STRING("Map 12"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 13"),
-        .desc = COMPOUND_STRING("Description 13"),
-        .donedesc = COMPOUND_STRING("Completed Quest 13"),
-        .map = COMPOUND_STRING("Map 13"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 14"),
-        .desc = COMPOUND_STRING("Description 14"),
-        .donedesc = COMPOUND_STRING("Completed Quest 14"),
-        .map = COMPOUND_STRING("Map 14"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 15"),
-        .desc = COMPOUND_STRING("Description 15"),
-        .donedesc = COMPOUND_STRING("Completed Quest 15"),
-        .map = COMPOUND_STRING("Map 15"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 16"),
-        .desc = COMPOUND_STRING("Description 16"),
-        .donedesc = COMPOUND_STRING("Completed Quest 16"),
-        .map = COMPOUND_STRING("Map 16"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 17"),
-        .desc = COMPOUND_STRING("Description 17"),
-        .donedesc = COMPOUND_STRING("Completed Quest 17"),
-        .map = COMPOUND_STRING("Map 17"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 18"),
-        .desc = COMPOUND_STRING("Description 18"),
-        .donedesc = COMPOUND_STRING("Completed Quest 18"),
-        .map = COMPOUND_STRING("Map 18"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 19"),
-        .desc = COMPOUND_STRING("Description 19"),
-        .donedesc = COMPOUND_STRING("Completed Quest 19"),
-        .map = COMPOUND_STRING("Map 19"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 20"),
-        .desc = COMPOUND_STRING("Description 20"),
-        .donedesc = COMPOUND_STRING("Completed Quest 20"),
-        .map = COMPOUND_STRING("Map 20"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 21"),
-        .desc = COMPOUND_STRING("Description 21"),
-        .donedesc = COMPOUND_STRING("Completed Quest 21"),
-        .map = COMPOUND_STRING("Map 21"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 22"),
-        .desc = COMPOUND_STRING("Description 22"),
-        .donedesc = COMPOUND_STRING("Completed Quest 22"),
-        .map = COMPOUND_STRING("Map 22"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 23"),
-        .desc = COMPOUND_STRING("Description 23"),
-        .donedesc = COMPOUND_STRING("Completed Quest 23"),
-        .map = COMPOUND_STRING("Map 23"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 24"),
-        .desc = COMPOUND_STRING("Description 24"),
-        .donedesc = COMPOUND_STRING("Completed Quest 24"),
-        .map = COMPOUND_STRING("Map 24"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 25"),
-        .desc = COMPOUND_STRING("Description 25"),
-        .donedesc = COMPOUND_STRING("Completed Quest 25"),
-        .map = COMPOUND_STRING("Map 25"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 26"),
-        .desc = COMPOUND_STRING("Description 26"),
-        .donedesc = COMPOUND_STRING("Completed Quest 26"),
-        .map = COMPOUND_STRING("Map 26"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 27"),
-        .desc = COMPOUND_STRING("Description 27"),
-        .donedesc = COMPOUND_STRING("Completed Quest 27"),
-        .map = COMPOUND_STRING("Map 27"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 28"),
-        .desc = COMPOUND_STRING("Description 28"),
-        .donedesc = COMPOUND_STRING("Completed Quest 28"),
-        .map = COMPOUND_STRING("Map 28"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 29"),
-        .desc = COMPOUND_STRING("Description 29"),
-        .donedesc = COMPOUND_STRING("Completed Quest 29"),
-        .map = COMPOUND_STRING("Map 29"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
-    },
-    {
-        .name = COMPOUND_STRING("Side Quest 30"),
-        .desc = COMPOUND_STRING("Description 30"),
-        .donedesc = COMPOUND_STRING("Completed Quest 30"),
-        .map = COMPOUND_STRING("Map 30"),
-        .sprite = OBJ_EVENT_GFX_WALLY,
-        .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
+        .name = COMPOUND_STRING("<?> À GlitŒh エñ tHœ MあtrÏx"),
+        .desc = COMPOUND_STRING("▶▶WARNいNG▶▶ アN ANおMAL¥ HAS BえEN\nD♀TÊCTéD WITH♂N YöUr $àVê FイLE!"),
+        .donedesc = COMPOUND_STRING("01000100 01010010 01000101 01000001 01001101"),
+        .map = sText_SideQuestMap_Unknown,
+        .sprite = ITEM_ISLANDGAME_STRANGE_DISC,
+        .spritetype = ITEM,
+        .subquests = sSubQuests_MissingNo,
+        .numSubquests = SUB_QUEST_COUNT_MISSINGNO
     },
 };
 
