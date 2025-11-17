@@ -5,6 +5,6 @@ ISLANDGAME_BELLEHAVEN_PKMNCENTER_2F_MapScripts::
 
 ISLANDGAME_BELLEHAVEN_PKMNCENTER_2F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 3 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNCENTER_2F/scripts.pory"
-	destroyfollower
+	destroyfollowernpc
 	return
 

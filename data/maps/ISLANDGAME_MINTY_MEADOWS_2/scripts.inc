@@ -662,7 +662,7 @@ ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Main::
 # 438 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	special HealPlayerParty
 # 440 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setfollower 8, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL
+	setfollowernpc 8, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL
 # 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	call ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet
 # 445 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -976,7 +976,7 @@ ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena::
 # 598 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_4
 # 601 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	destroyfollower
+	destroyfollowernpc
 # 602 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	goto ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene
 ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_1:
@@ -986,7 +986,7 @@ ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_1:
 
 ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_3:
 # 597 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	destroyfollower
+	destroyfollowernpc
 	goto ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_1
 
 ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena_4:
@@ -1351,7 +1351,7 @@ ISLANDGAME_MINTY_MEADOWS_2_Mark_Audrey::
 # 852 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement 8
 # 853 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	destroyfollower
+	destroyfollowernpc
 	return
 
 
@@ -1371,7 +1371,7 @@ ISLANDGAME_MINTY_MEADOWS_2_WelcomeBack::
 # 865 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
 # 867 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setfollower 8, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL
+	setfollowernpc 8, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL
 # 868 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_MINTY_MEADOWS_STATE, 1
 # 869 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -1420,7 +1420,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_3:
 
 ISLANDGAME_MINTY_MEADOWS_2_CantLeave_4:
 # 891 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	facefollower
+	facefollowernpc
 # 892 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	call ISLANDGAME_MINTY_MEADOWS_2_LeaveMessage
 # 893 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -1433,7 +1433,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_4:
 
 ISLANDGAME_MINTY_MEADOWS_2_CantLeave_5:
 # 914 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	facefollower
+	facefollowernpc
 # 915 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	call ISLANDGAME_MINTY_MEADOWS_2_LeaveMessage
 # 916 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"

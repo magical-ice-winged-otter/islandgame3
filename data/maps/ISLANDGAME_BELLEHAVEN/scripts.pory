@@ -20,7 +20,7 @@ mapscripts ISLANDGAME_BELLEHAVEN_MapScripts {
             setflag(FLAG_DAYTIME) // controls nighttime npcs
             setflag(FLAG_TEMP_4) // frankie
         }
-        destroyfollower() // kill easter egg spooky girl from pkmn center
+        destroyfollowernpc() // kill easter egg spooky girl from pkmn center
     }
 }
 

@@ -437,7 +437,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Main {
     waitmovement(0)
     special(HealPlayerParty)
     //follow me
-    setfollower(RIVAL_OW_ID, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL)
+    setfollowernpc(RIVAL_OW_ID, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL)
 
     //teleport
     call(ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet)
@@ -594,11 +594,11 @@ script ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena {
     
     switch(var(VAR_RESULT)) {
         case B_OUTCOME_LOST:
-            destroyfollower()
+            destroyfollowernpc()
         case B_OUTCOME_RAN:
             break
         default:
-            destroyfollower()
+            destroyfollowernpc()
             goto(ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene)
     }
     release
@@ -850,7 +850,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Mark_Audrey {
     setvar(VAR_MINTY_MEADOWS_STATE, STATE_PAUSED_QUEST) 
     applymovement(RIVAL_OW_ID, Common_Movement_WalkRight)
     waitmovement(RIVAL_OW_ID)
-    destroyfollower()
+    destroyfollowernpc()
 
     return
 }
@@ -864,7 +864,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_WelcomeBack {
     waitbuttonpress
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
     
-    setfollower(RIVAL_OW_ID, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL)
+    setfollowernpc(RIVAL_OW_ID, 0x100, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL)
     setvar(VAR_MINTY_MEADOWS_STATE, STATE_STARTED_QUEST)
     waitmovement(OBJ_EVENT_ID_PLAYER)
     closemessage
@@ -888,7 +888,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
         case STATE_PAUSED_QUEST:
             call(ISLANDGAME_MINTY_MEADOWS_2_WelcomeBack)
         case STATE_PRE_FIGHT_SIGHTING:
-            facefollower
+            facefollowernpc
             call(ISLANDGAME_MINTY_MEADOWS_2_LeaveMessage)
             switch (var(VAR_RESULT)) {
                 case YES:
@@ -911,7 +911,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
                     closemessage
             }
         case STATE_STARTED_QUEST:
-            facefollower
+            facefollowernpc
             call(ISLANDGAME_MINTY_MEADOWS_2_LeaveMessage)
             switch (var(VAR_RESULT)) {
                 case YES:
