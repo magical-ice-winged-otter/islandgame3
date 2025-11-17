@@ -95,35 +95,35 @@
 #define VAR_POKELOT_RND1                                 0x404B
 #define VAR_POKELOT_RND2                                 0x404C
 #define VAR_POKELOT_PRIZE_PLACE                          0x404D
-#define VAR_UNUSED_0x404E                                0x404E // Unused Var
+#define VAR_MINTY_MEADOWS_STATE                          0x404E // island-game: used to track the mightyena encounter
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
 #define VAR_OLDALE_TOWN_STATE                            0x4051
-#define VAR_DEWFORD_TOWN_STATE                           0x4052 // Unused Var
+#define VAR_ROSEVALE_STATE                               0x4052 // island-game: used for the mt-aurora quest that starts in rosevale
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
-#define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
-#define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
+#define VAR_SPOOKY_HOUSE_STATE                           0x4055 // island-game: used for the spooky house in verdant woods
+#define VAR_COR_HIDDEN_GROTTO_STATE                      0x4056 // island-game: used for central oranna path's hidden grotto
 #define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
-#define VAR_MAUVILLE_CITY_STATE                          0x4059 // Unused Var
+#define VAR_TIDALCOVE_STATE                              0x4059 // island-game used for tidalcove rare stone dood
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
-#define VAR_FORTREE_CITY_STATE                           0x405B // Unused Var
-#define VAR_LILYCOVE_CITY_STATE                          0x405C // Unused Var
+#define VAR_AURORA_PATH_HIDDEN_GROTTO_STATE              0x405B // island-game used for aurora path's hidden grotto
+#define VAR_BATTLE_SPEED                                 0x405C 
 #define VAR_MOSSDEEP_CITY_STATE                          0x405D
 #define VAR_SOOTOPOLIS_CITY_STATE                        0x405E
-#define VAR_EVER_GRANDE_CITY_STATE                       0x405F // Unused Var
+#define VAR_ROCKY_PATH_STATE                             0x405F // island-game: used for rocky paths rockruff
 #define VAR_ROUTE101_STATE                               0x4060
-#define VAR_ROUTE102_STATE                               0x4061 // Unused Var
-#define VAR_ROUTE103_STATE                               0x4062 // Unused Var
+#define VAR_ROUTE102_STATE                               0x4061 // island-game: used for custom terrains
+#define VAR_CAMP_PERSI_STATE                             0x4062 // island-game: used for missingno encounter
 #define VAR_ROUTE104_STATE                               0x4063
-#define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
-#define VAR_ROUTE109_STATE                               0x4068 // Unused Var
+#define VAR_APPLEVINE_STATE                              0x4064 // island-game: used to track how many coins you've given to the coin girl
+#define VAR_DEXNAV_SPECIES                               0x4065 
+#define VAR_DEXNAV_STEP_COUNTER                          0x4066 
+#define VAR_VALLEY_OF_PEACE_HIDDEN_GROTTO_STATE          0x4067 // island-game: used for valley of peace's hidden grotto
+#define VAR_VALLEY_OF_PEACE_STATE                        0x4068 // island-game: used for valley of peace cubone quest
 #define VAR_ROUTE110_STATE                               0x4069
-#define VAR_ROUTE111_STATE                               0x406A // Unused Var
+#define VAR_VERDANT_PATH_STATE                           0x406A // island-game: used for Verdant Path's Fishing Club
 #define VAR_ROUTE112_STATE                               0x406B // Unused Var
 #define VAR_ROUTE113_STATE                               0x406C // Unused Var
 #define VAR_ROUTE114_STATE                               0x406D // Unused Var
@@ -264,7 +264,7 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
+#define VAR_TEAM_PARTNER_UNUSED                          0x40F7 // island-game: Used to track a double battle with another trainer's party. Set it to the id of a trainer to use.
 #define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
 #define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
@@ -300,7 +300,7 @@
 #define VAR_CONTEST_CATEGORY          0x8011
 #define VAR_MON_BOX_ID                0x8012
 #define VAR_MON_BOX_POS               0x8013
-#define VAR_UNUSED_0x8014             0x8014
+#define VAR_0x8014                    0x8014
 #define VAR_TRAINER_BATTLE_OPPONENT_A 0x8015 // Alias of TRAINER_BATTLE_PARAM.opponentA
 
 #define SPECIAL_VARS_END              0x8015
@@ -325,15 +325,15 @@
 #define VAR_TEMP_TRANSFERRED_SPECIES  VAR_TEMP_1
 
 #if TESTING
-#define TESTING_VARS_START                  0x9000
-#define TESTING_VAR_DIFFICULTY              (TESTING_VARS_START + 0x0)
-#define TESTING_VAR_STARTING_STATUS         (TESTING_VARS_START + 0x1)
-#define TESTING_VAR_STARTING_STATUS_TIMER   (TESTING_VARS_START + 0x2)
-#define TESTING_VAR_UNUSED_3                (TESTING_VARS_START + 0x3)
-#define TESTING_VAR_UNUSED_4                (TESTING_VARS_START + 0x4)
-#define TESTING_VAR_UNUSED_5                (TESTING_VARS_START + 0x5)
-#define TESTING_VAR_UNUSED_6                (TESTING_VARS_START + 0x6)
-#define TESTING_VAR_UNUSED_7                (TESTING_VARS_START + 0x7)
+#define TESTING_VARS_START             0x9000
+#define TESTING_VAR_DIFFICULTY         (TESTING_VARS_START + 0x0)
+#define TESTING_VAR_UNUSED_1           (TESTING_VARS_START + 0x1)
+#define TESTING_VAR_UNUSED_2           (TESTING_VARS_START + 0x2)
+#define TESTING_VAR_UNUSED_3           (TESTING_VARS_START + 0x3)
+#define TESTING_VAR_UNUSED_4           (TESTING_VARS_START + 0x4)
+#define TESTING_VAR_UNUSED_5           (TESTING_VARS_START + 0x5)
+#define TESTING_VAR_UNUSED_6           (TESTING_VARS_START + 0x6)
+#define TESTING_VAR_UNUSED_7           (TESTING_VARS_START + 0x7)
 #endif // TESTING
 
 #endif // GUARD_CONSTANTS_VARS_H
