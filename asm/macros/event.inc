@@ -2816,3 +2816,12 @@
     subquestmenu QUEST_MENU_CHECK_COMPLETE \parent \child
     call_if_eq VAR_RESULT, FALSE, \dest
     .endm
+
+    .macro quest_emote_on_warp, obj:req, quest:req
+    returnqueststate \quest
+    goto_if_eq VAR_RESULT, QUEST_INACTIVE, 1f
+    goto 2f
+    1:
+    setobjectmovementtype \obj, MOVEMENT_TYPE_EMOTE_THINKING
+    2:
+    .endm
