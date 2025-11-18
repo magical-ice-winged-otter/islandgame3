@@ -1238,6 +1238,9 @@
     {
       "id": "MAPSEC_CHERIPORT",
       "name": "Cheriport"
+    },
+    {
+      "id": "MAPSEC_TIDALCOVE"
     }
   ]
 }

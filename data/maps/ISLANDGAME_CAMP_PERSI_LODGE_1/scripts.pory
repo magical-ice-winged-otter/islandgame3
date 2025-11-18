@@ -108,55 +108,55 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_NPC5 {
 
 
 script ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene {
-    msgbox(format("{COLOR RED}(...Huh?)"))
-    closemessage
-    delay(30)
-    playse(SE_THUNDER)
-    fadescreen(FADE_TO_WHITE)
-    delay(15)
-    fadescreen(FADE_FROM_WHITE)
-    delay(15)
-    fadescreen(FADE_TO_BLACK)
-    delay(15)
-    fadescreen(FADE_FROM_BLACK)
-    delay(15)
-    clearflag(FLAG_TEMP_5)
-    applymovement(OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Movement_PorygonAppear)
-    waitmovement(0)
-    playse(SE_PIN)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    playmoncry(SPECIES_PORYGON, CRY_MODE_ENCOUNTER)
-    waitmoncry
+    // msgbox(format("{COLOR RED}(...Huh?)"))
+    // closemessage
+    // delay(30)
+    // playse(SE_THUNDER)
+    // fadescreen(FADE_TO_WHITE)
+    // delay(15)
+    // fadescreen(FADE_FROM_WHITE)
+    // delay(15)
+    // fadescreen(FADE_TO_BLACK)
+    // delay(15)
+    // fadescreen(FADE_FROM_BLACK)
+    // delay(15)
+    // clearflag(FLAG_TEMP_5)
+    // applymovement(OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Movement_PorygonAppear)
+    // waitmovement(0)
+    // playse(SE_PIN)
+    // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    // waitmovement(0)
+    // playmoncry(SPECIES_PORYGON, CRY_MODE_ENCOUNTER)
+    // waitmoncry
 
-    setflag(FLAG_SMART_WILD_AI)
-    setflag(FLAG_NO_CATCHING)
-    setflag(FLAG_NO_RUNNING)
-    setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_4X)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-    waitmovement(0)
-    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_PORYGON, 10, ITEM_BERRY_JUICE, NUM_NATURES, 1, MON_GENDERLESS, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_RECYCLE, MOVE_CONVERSION_2, MOVE_TACKLE, MOVE_THUNDER_SHOCK)
-    dowildbattle
-    setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_1X)
-    clearflag(FLAG_SMART_WILD_AI)
-    clearflag(FLAG_NO_CATCHING)
-    clearflag(FLAG_NO_RUNNING)
+    // setflag(FLAG_SMART_WILD_AI)
+    // setflag(FLAG_NO_CATCHING)
+    // setflag(FLAG_NO_RUNNING)
+    // setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_4X)
+    // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    // waitmovement(0)
+    // createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_PORYGON, 10, ITEM_BERRY_JUICE, NUM_NATURES, 1, MON_GENDERLESS, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_RECYCLE, MOVE_CONVERSION_2, MOVE_TACKLE, MOVE_THUNDER_SHOCK)
+    // dowildbattle
+    // setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_1X)
+    // clearflag(FLAG_SMART_WILD_AI)
+    // clearflag(FLAG_NO_CATCHING)
+    // clearflag(FLAG_NO_RUNNING)
 
-    specialvar(VAR_RESULT, GetBattleOutcome)
-    switch(var(VAR_RESULT)) {
-        case B_OUTCOME_LOST:
-            break
-        case B_OUTCOME_RAN:
-            break
-        default:
-            fadescreenswapbuffers(FADE_TO_BLACK)
-            setflag(FLAG_TEMP_5)
-            setflag(FLAG_CAMP_PERSI_PORYGON_DEFEATED)
-            removeobject(7)
-            fadescreenswapbuffers(FADE_FROM_BLACK)
-            goto(ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu)
-    }
-    return
+    // specialvar(VAR_RESULT, GetBattleOutcome)
+    // switch(var(VAR_RESULT)) {
+    //     case B_OUTCOME_LOST:
+    //         break
+    //     case B_OUTCOME_RAN:
+    //         break
+    //     default:
+    //         fadescreenswapbuffers(FADE_TO_BLACK)
+    //         setflag(FLAG_TEMP_5)
+    //         setflag(FLAG_CAMP_PERSI_PORYGON_DEFEATED)
+    //         removeobject(7)
+    //         fadescreenswapbuffers(FADE_FROM_BLACK)
+    //         goto(ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu)
+    // }
+    // return
 }
 
 movement ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Movement_PorygonAppear {

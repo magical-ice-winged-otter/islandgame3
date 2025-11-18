@@ -653,7 +653,6 @@ script ISLANDGAME_VALLEY_OF_PEACE_Primrose {
 }
 
 movement ISLANDGAME_VALLEY_OF_PEACE_Primrose1 {
-    emote_thinking
     delay_16 * 4
     lock_facing_direction
     walk_up

@@ -2,7 +2,7 @@ const OBJ_NURSE = 1
 
 // Pokemon Center Nurse
 script ISLANDGAME_COMMON_PKMNCENTER_NURSE {
-    if (!flag(FLAG_ORANNA_CHERIPORT_GOT_EEVEE)) {
+    if (!flag(FLAG_PROF_GAVE_EEVEE)) {
         lock
         msgbox(format(
             "Welcome to the Maryan isles, trainer! This is a Pokémon Center.\p"

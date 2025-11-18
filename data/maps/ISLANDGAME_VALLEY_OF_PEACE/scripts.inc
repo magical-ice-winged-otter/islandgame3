@@ -879,64 +879,62 @@ ISLANDGAME_VALLEY_OF_PEACE_Primrose::
 # 655 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_Primrose1:
 # 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	emote_thinking
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 658 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock_facing_direction
-# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 658 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_up
-# 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_in_place_up
+# 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_in_place_up
-# 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 663 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_down
-# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 663 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	unlock_facing_direction
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 	step_end
 
-# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 667 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_Primrose2:
-# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_down
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_down
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_down
 # 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_down
+	walk_left
 # 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_down
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
 	step_end
 

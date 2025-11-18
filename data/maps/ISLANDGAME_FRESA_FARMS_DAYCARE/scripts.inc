@@ -126,7 +126,7 @@ ISLANDGAME_FRESA_FARMS_DAYCARE_EventScripts_TorchicBreeder_10:
 # 50 "data/maps/ISLANDGAME_FRESA_FARMS_DAYCARE/scripts.pory"
 	msgbox ISLANDGAME_FRESA_FARMS_DAYCARE_EventScripts_TorchicBreeder_Text_1
 # 51 "data/maps/ISLANDGAME_FRESA_FARMS_DAYCARE/scripts.pory"
-	giveegg SPECIES_TORCHIC, NUM_NATURES, 2, 18, 18, 18, 18, 18, 18
+	giveegg SPECIES_TORCHIC
 # 52 "data/maps/ISLANDGAME_FRESA_FARMS_DAYCARE/scripts.pory"
 	startquest QUEST_FRESA_FARMS_TORCHIC_EGG
 	goto ISLANDGAME_FRESA_FARMS_DAYCARE_EventScripts_TorchicBreeder_4

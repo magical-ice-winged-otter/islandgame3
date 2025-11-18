@@ -1,6 +1,6 @@
 ISLANDGAME_COMMON_PKMNCENTER_NURSE::
 # 5 "data/scripts/islandgame_common.pory"
-	goto_if_unset FLAG_ORANNA_CHERIPORT_GOT_EEVEE, ISLANDGAME_COMMON_PKMNCENTER_NURSE_1
+	goto_if_unset FLAG_PROF_GAVE_EEVEE, ISLANDGAME_COMMON_PKMNCENTER_NURSE_1
 # 15 "data/scripts/islandgame_common.pory"
 	setvar VAR_0x800B, 1
 # 16 "data/scripts/islandgame_common.pory"

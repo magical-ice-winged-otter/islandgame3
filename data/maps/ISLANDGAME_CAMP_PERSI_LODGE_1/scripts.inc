@@ -142,98 +142,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_NPC5::
 
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene::
-# 111 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_Text_0
-# 112 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	closemessage
-# 113 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	delay 30
-# 114 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	playse SE_THUNDER
-# 115 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 116 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	delay 15
-# 117 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	delay 15
-# 119 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 120 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	delay 15
-# 121 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 122 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	delay 15
-# 123 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	clearflag FLAG_TEMP_5
-# 124 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Movement_PorygonAppear
-# 125 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	waitmovement 0
-# 126 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	playse SE_PIN
-# 127 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-# 128 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	waitmovement 0
-# 129 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	playmoncry SPECIES_PORYGON, CRY_MODE_ENCOUNTER
-# 130 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	waitmoncry
-# 132 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setflag FLAG_SMART_WILD_AI
-# 133 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setflag FLAG_NO_CATCHING
-# 134 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setflag FLAG_NO_RUNNING
-# 135 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setvar VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_4X
-# 136 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 137 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	waitmovement 0
-# 138 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	createmon B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_PORYGON, 10, ITEM_BERRY_JUICE, NUM_NATURES, 1, MON_GENDERLESS, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_RECYCLE, MOVE_CONVERSION_2, MOVE_TACKLE, MOVE_THUNDER_SHOCK
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	dowildbattle
-# 140 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setvar VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_1X
-# 141 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	clearflag FLAG_SMART_WILD_AI
-# 142 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	clearflag FLAG_NO_CATCHING
-# 143 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	clearflag FLAG_NO_RUNNING
-# 145 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
-# 146 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	switch VAR_RESULT
-# 147 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	case B_OUTCOME_LOST, ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_3
-# 149 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	case B_OUTCOME_RAN, ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_4
-# 152 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 153 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setflag FLAG_TEMP_5
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	setflag FLAG_CAMP_PERSI_PORYGON_DEFEATED
-# 155 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	removeobject 7
-# 156 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 157 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	goto ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_1:
 	return
-
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_3:
-	goto ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_1
-
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_4:
-	goto ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_1
 
 
 # 162 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
@@ -340,10 +249,6 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_NPC5_Text_0:
 # 103 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	.string "Ugh, if I only had one more turn! I would\n"
 	.string "have won!$"
-
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene_Text_0:
-# 111 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	.string "{COLOR RED}(...Huh?)$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_0:
 # 182 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
