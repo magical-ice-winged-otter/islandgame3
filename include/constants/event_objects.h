@@ -250,35 +250,97 @@
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_REGULAR_OBJ_EVENT_GFX                        242
-
+#define NUM_REGULAR_OBJ_EVENT_GFX                242
 
 // island-game
-#define ISLAND_START                             (NUM_REGULAR_OBJ_EVENT_GFX)
 
-#define OBJ_EVENT_GFX_OLIVIA_NORMAL              (ISLAND_START + 1)
-#define OBJ_EVENT_GFX_OLIVIA_SURFING             ISLAND_START + 2
-#define OBJ_EVENT_GFX_OLIVIA_FISHING             ISLAND_START + 3
-#define OBJ_EVENT_GFX_OLIVIA_FIELD_MOVE          ISLAND_START + 4
-#define OBJ_EVENT_GFX_OLIVIA_MACH_BIKE           ISLAND_START + 5
-#define OBJ_EVENT_GFX_OLIVIA_WATERING            ISLAND_START + 6
-#define OBJ_EVENT_GFX_OLIVER_NORMAL              ISLAND_START + 7
-#define OBJ_EVENT_GFX_OLIVER_SURFING             ISLAND_START + 8
-#define OBJ_EVENT_GFX_OLIVER_FISHING             ISLAND_START + 9
-#define OBJ_EVENT_GFX_OLIVER_FIELD_MOVE          ISLAND_START + 10
-#define OBJ_EVENT_GFX_OLIVER_MACH_BIKE           ISLAND_START + 11
-#define OBJ_EVENT_GFX_OLIVER_WATERING            ISLAND_START + 12
-#define OBJ_EVENT_GFX_PALM                       ISLAND_START + 13
-#define OBJ_EVENT_GFX_SILVERWING_M               ISLAND_START + 14
-#define OBJ_EVENT_GFX_SILVERWING_F               ISLAND_START + 15
-#define OBJ_EVENT_GFX_GAMEBOY_KID_2              ISLAND_START + 16
-#define OBJ_EVENT_GFX_TUBER_F_SWIMMING           ISLAND_START + 17
-#define OBJ_EVENT_GFX_MELISSA                    ISLAND_START + 18
-#define OBJ_EVENT_GFX_COCO                       ISLAND_START + 19
+enum IslandgameObjEvents
+{
+    ISLAND_START = NUM_REGULAR_OBJ_EVENT_GFX,
+    OBJ_EVENT_GFX_OLIVIA_NORMAL,
+    OBJ_EVENT_GFX_OLIVIA_SURFING,
+    OBJ_EVENT_GFX_OLIVIA_FISHING,
+    OBJ_EVENT_GFX_OLIVIA_FIELD_MOVE,
+    OBJ_EVENT_GFX_OLIVIA_MACH_BIKE,
+    OBJ_EVENT_GFX_OLIVER_NORMAL,
+    OBJ_EVENT_GFX_OLIVER_SURFING,
+    OBJ_EVENT_GFX_OLIVER_FISHING,
+    OBJ_EVENT_GFX_OLIVER_FIELD_MOVE,
+    OBJ_EVENT_GFX_OLIVER_MACH_BIKE,
+    OBJ_EVENT_GFX_OLIVER_WATERING,
+    OBJ_EVENT_GFX_OLIVIA_WATERING,
+    OBJ_EVENT_GFX_LITTLE_BOY_CAMPER,
+    OBJ_EVENT_GFX_BOY_4,
+    OBJ_EVENT_GFX_BOY_5,
+    OBJ_EVENT_GFX_GIRL_4,
+    OBJ_EVENT_GFX_GROUND_SWIMMER_F,
+    OBJ_EVENT_GFX_GROUND_SWIMMER_M,
+    OBJ_EVENT_GFX_MAN_6,
+    OBJ_EVENT_GFX_POLICE,
+    OBJ_EVENT_GFX_PSYCHIC_F,
+    OBJ_EVENT_GFX_RANGER_F,
+    OBJ_EVENT_GFX_RANGER_M,
+    OBJ_EVENT_GFX_ROUGHNECK,
+    OBJ_EVENT_GFX_RUIN_MANIAC,
+    OBJ_EVENT_GFX_SCIENTIST_3,
+    OBJ_EVENT_GFX_TUBER_F_SWIMMING,
+    OBJ_EVENT_GFX_WORKER,
+    OBJ_EVENT_GFX_RUKA,
+    OBJ_EVENT_GFX_MELISSA,
+    OBJ_EVENT_GFX_ACE_TRAINER_M,
+    OBJ_EVENT_GFX_ACE_TRAINER_F,
+    OBJ_EVENT_GFX_JONAS,
+    OBJ_EVENT_GFX_PALM,
+    OBJ_EVENT_GFX_ARTHUR,
+    OBJ_EVENT_GFX_COCO,
+    OBJ_EVENT_GFX_PRIMROSE,
+    OBJ_EVENT_GFX_EDEA,
+    OBJ_EVENT_GFX_BEAUTY_MASTERS,
+    OBJ_EVENT_GFX_COWGIRL,
+    OBJ_EVENT_GFX_GIRL_5,
+    OBJ_EVENT_GFX_GIRL_6,
+    OBJ_EVENT_GFX_GIRL_7,
+    OBJ_EVENT_GFX_JUGGLER,
+    OBJ_EVENT_GFX_MAN_7,
+    OBJ_EVENT_GFX_BIKER,
+    OBJ_EVENT_GFX_CHANNELER,
+    OBJ_EVENT_GFX_NERD,
+    OBJ_EVENT_GFX_RANCHER,
+    OBJ_EVENT_GFX_SCHOOL_KID_M_2,
+    OBJ_EVENT_GFX_SCOUT_M,
+    OBJ_EVENT_GFX_SCOUT_F,
+    OBJ_EVENT_GFX_SILVERWING_M,
+    OBJ_EVENT_GFX_SILVERWING_F,
+    OBJ_EVENT_GFX_WOMAN_6,
+    OBJ_EVENT_GFX_WOMAN_7,
+    OBJ_EVENT_GFX_WOMAN_8,
+    OBJ_EVENT_GFX_SCHOOL_KID_F,
+    OBJ_EVENT_GFX_APPLE,
+    OBJ_EVENT_GFX_SHINY_AZURILL,
+    OBJ_EVENT_GFX_BUG_CATCHER_F,
+    OBJ_EVENT_GFX_OFFICER_M,
+    OBJ_EVENT_GFX_OFFICER_F,
+    OBJ_EVENT_GFX_ACE_TRAINER_M_2,
+    OBJ_EVENT_GFX_ACE_TRAINER_F_2,
+    OBJ_EVENT_GFX_ACE_TRAINER_SNOW,
+    OBJ_EVENT_GFX_NINJA_BOY_2,
+    OBJ_EVENT_GFX_LITTLE_GIRL_2,
+    OBJ_EVENT_GFX_BEAUTY_2,
+    OBJ_EVENT_GFX_BREEDER_M,
+    OBJ_EVENT_GFX_BREEDER_F,
+    OBJ_EVENT_GFX_DRAGON_TAMER,
+    OBJ_EVENT_GFX_GAMER,
+    OBJ_EVENT_GFX_BIRD_KEEPER,
+    OBJ_EVENT_GFX_POKE_MANIAC,
+    OBJ_EVENT_GFX_MARTIAL_ARTIST,
+    OBJ_EVENT_GFX_WOMAN_9,
+    OBJ_EVENT_GFX_POKEKID,
+    OBJ_EVENT_GFX_BIKER_2,
+    OBJ_EVENT_GFX_VETERAN,
+    ISLAND_END,
+};
 
-#define ISLAND_END                               OBJ_EVENT_GFX_COCO
-
-#define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
+#define NUM_OBJ_EVENT_GFX                        ISLAND_END
 
 
 
@@ -420,6 +482,7 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_NPC_10                  0x1125
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
@@ -467,46 +530,117 @@
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
-// island-game
-#define OBJ_EVENT_PAL_TAG_OLIVIA_FISHING          0x1300
-#define OBJ_EVENT_PAL_TAG_OLIVIA_BIKE             0x1301
-#define OBJ_EVENT_PAL_TAG_OLIVIA_FIELD_MOVE       0x1302
-#define OBJ_EVENT_PAL_TAG_OLIVIA_NORMAL           0x1303
-#define OBJ_EVENT_PAL_TAG_OLIVIA_WATERING         0x1304
-#define OBJ_EVENT_PAL_TAG_OLIVIA_SURFING          0x1305
-#define OBJ_EVENT_PAL_TAG_OLIVER_FISHING          0x1306
-#define OBJ_EVENT_PAL_TAG_OLIVER_BIKE             0x1307
-#define OBJ_EVENT_PAL_TAG_OLIVER_FIELD_MOVE       0x1308
-#define OBJ_EVENT_PAL_TAG_OLIVER_NORMAL           0x1309
-#define OBJ_EVENT_PAL_TAG_OLIVER_WATERING         0x130A
-#define OBJ_EVENT_PAL_TAG_OLIVER_SURFING          0x130B
-
-
-
-#define OBJ_EVENT_PAL_TAG_PALM                    0x130C
-#define OBJ_EVENT_PAL_TAG_LASS                    0x130D
-#define OBJ_EVENT_PAL_TAG_LITTLE_GIRL             0x130E
-#define OBJ_EVENT_PAL_TAG_FAT_MAN                 0x130F
-#define OBJ_EVENT_PAL_TAG_SAILOR                  0x1310
-#define OBJ_EVENT_PAL_TAG_GENTLEMAN               0x1311
-#define OBJ_EVENT_PAL_TAG_EXPERT_F                0x1312
-#define OBJ_EVENT_PAL_TAG_SILVERWING_M            0x1313
-#define OBJ_EVENT_PAL_TAG_SILVERWING_F            0x1314
-#define OBJ_EVENT_PAL_TAG_GAMEBOY_KID_2           0x1315
-#define OBJ_EVENT_PAL_TAG_TUBER_F_SWIMMING        0x1316
-#define OBJ_EVENT_PAL_TAG_TUBER_M_SWIMMING        0x1317
-#define OBJ_EVENT_PAL_TAG_TUBER_F                 0x1318
-#define OBJ_EVENT_PAL_TAG_TUBER_M                 0x1319
-#define OBJ_EVENT_PAL_TAG_EXPERT_M                0x131A
-#define OBJ_EVENT_PAL_TAG_FISHERMAN               0x131B
-#define OBJ_EVENT_PAL_TAG_MART_EMPLOYEE           0x131C
-#define OBJ_EVENT_PAL_TAG_GIRL_3                  0x131D
-#define OBJ_EVENT_PAL_TAG_LITTLE_BOY              0x131E
-#define OBJ_EVENT_PAL_TAG_MELISSA                 0x131F
-#define OBJ_EVENT_PAL_TAG_COCO                    0x1320
-
-
-
+#define OBJ_EVENT_PAL_TAG_NPC_11                  0x1200
+#define OBJ_EVENT_PAL_TAG_NPC_12                  0x1201
+#define OBJ_EVENT_PAL_TAG_NPC_13                  0x1202
+#define OBJ_EVENT_PAL_TAG_NPC_14                  0x1203
+#define OBJ_EVENT_PAL_TAG_NPC_15                  0x1204
+#define OBJ_EVENT_PAL_TAG_NPC_16                  0x1205
+#define OBJ_EVENT_PAL_TAG_NPC_17                  0x1206
+#define OBJ_EVENT_PAL_TAG_NPC_18                  0x1207
+#define OBJ_EVENT_PAL_TAG_NPC_19                  0x1208
+#define OBJ_EVENT_PAL_TAG_NPC_20                  0x1209
+#define OBJ_EVENT_PAL_TAG_NPC_21                  0x120A
+#define OBJ_EVENT_PAL_TAG_NPC_22                  0x120B
+#define OBJ_EVENT_PAL_TAG_NPC_23                  0x120C
+#define OBJ_EVENT_PAL_TAG_NPC_24                  0x120D // worker
+#define OBJ_EVENT_PAL_TAG_NPC_25                  0x120E
+#define OBJ_EVENT_PAL_TAG_NPC_26                  0x120F
+#define OBJ_EVENT_PAL_TAG_NPC_27                  0x1210
+#define OBJ_EVENT_PAL_TAG_NPC_28                  0x1211
+#define OBJ_EVENT_PAL_TAG_NPC_29                  0x1212
+#define OBJ_EVENT_PAL_TAG_NPC_30                  0x1213
+#define OBJ_EVENT_PAL_TAG_NPC_31                  0x1214
+#define OBJ_EVENT_PAL_TAG_NPC_32                  0x1215
+#define OBJ_EVENT_PAL_TAG_NPC_33                  0x1216
+#define OBJ_EVENT_PAL_TAG_NPC_34                  0x1217
+#define OBJ_EVENT_PAL_TAG_NPC_35                  0x1218
+#define OBJ_EVENT_PAL_TAG_NPC_36                  0x1219
+#define OBJ_EVENT_PAL_TAG_NPC_37                  0x121A
+#define OBJ_EVENT_PAL_TAG_NPC_38                  0x121B
+#define OBJ_EVENT_PAL_TAG_NPC_39                  0x121C
+#define OBJ_EVENT_PAL_TAG_NPC_40                  0x121D
+#define OBJ_EVENT_PAL_TAG_NPC_41                  0x121E
+#define OBJ_EVENT_PAL_TAG_NPC_42                  0x121F
+#define OBJ_EVENT_PAL_TAG_NPC_43                  0x1220
+#define OBJ_EVENT_PAL_TAG_NPC_44                  0x1221
+#define OBJ_EVENT_PAL_TAG_NPC_45                  0x1222
+#define OBJ_EVENT_PAL_TAG_NPC_46                  0x1223
+#define OBJ_EVENT_PAL_TAG_NPC_47                  0x1224
+#define OBJ_EVENT_PAL_TAG_NPC_48                  0x1225
+#define OBJ_EVENT_PAL_TAG_NPC_49                  0x1226
+#define OBJ_EVENT_PAL_TAG_NINJA_BOY_2             0x1227 
+#define OBJ_EVENT_PAL_TAG_LITTLE_GIRL_2           0x1228
+#define OBJ_EVENT_PAL_TAG_BEAUTY_2                0x1229
+#define OBJ_EVENT_PAL_TAG_BREEDER_M               0x122A
+#define OBJ_EVENT_PAL_TAG_BREEDER_F               0x122B
+#define OBJ_EVENT_PAL_TAG_DRAGON_TAMER            0x122C
+#define OBJ_EVENT_PAL_TAG_GAMER                   0x122D
+#define OBJ_EVENT_PAL_TAG_BIRD_KEEPER             0x122E
+#define OBJ_EVENT_PAL_TAG_POKE_MANIAC             0x122F
+#define OBJ_EVENT_PAL_TAG_MARTIAL_ARTIST          0x1230
+#define OBJ_EVENT_PAL_TAG_WOMAN_9                 0x1231
+#define OBJ_EVENT_PAL_TAG_POKEKID                 0x1232
+#define OBJ_EVENT_PAL_TAG_BIKER_2                 0x1233
+#define OBJ_EVENT_PAL_TAG_CUEBALL                 0x1234 // unused
+#define OBJ_EVENT_PAL_TAG_VETERAN                 0x1235
+#define OBJ_EVENT_PAL_TAG_NPC_65                  0x1236 // unused 
+#define OBJ_EVENT_PAL_TAG_NPC_66                  0x1237 // unused
+#define OBJ_EVENT_PAL_TAG_NPC_67                  0x1238 // unused
+#define OBJ_EVENT_PAL_TAG_NPC_68                  0x1239 // unused
+#define OBJ_EVENT_PAL_TAG_NPC_69                  0x123A // unused
+#define OBJ_EVENT_PAL_TAG_NPC_70                  0x123B // unused
+#define OBJ_EVENT_PAL_TAG_OLIVIA_FISHING          0x123C
+#define OBJ_EVENT_PAL_TAG_OLIVIA_BIKE             0x123D
+#define OBJ_EVENT_PAL_TAG_OLIVIA_FIELD_MOVE       0x123E
+#define OBJ_EVENT_PAL_TAG_OLIVIA_NORMAL           0x123F
+#define OBJ_EVENT_PAL_TAG_RUKA                    0x1240
+#define OBJ_EVENT_PAL_TAG_OLIVER_FISHING          0x1241
+#define OBJ_EVENT_PAL_TAG_OLIVER_BIKE             0x1242
+#define OBJ_EVENT_PAL_TAG_OLIVER_FIELD_MOVE       0x1243
+#define OBJ_EVENT_PAL_TAG_OLIVER_NORMAL           0x1244
+#define OBJ_EVENT_PAL_TAG_OLIVIA_WATERING         0x1245
+#define OBJ_EVENT_PAL_TAG_OLIVER_WATERING         0x1246
+#define OBJ_EVENT_PAL_TAG_OLIVIA_SURFING          0x1247
+#define OBJ_EVENT_PAL_TAG_MELISSA                 0x1248
+#define OBJ_EVENT_PAL_TAG_FIELD_EFFECTS           0x1249
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F           0x124A
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M           0x124B
+#define OBJ_EVENT_PAL_TAG_JONAS                   0x124C
+#define OBJ_EVENT_PAL_TAG_PALM                    0x124D
+#define OBJ_EVENT_PAL_TAG_ARTHUR                  0x124E
+#define OBJ_EVENT_PAL_TAG_COCO                    0x124F
+#define OBJ_EVENT_PAL_TAG_PRIMROSE                0x1250
+#define OBJ_EVENT_PAL_TAG_EDEA                    0x1251
+#define OBJ_EVENT_PAL_TAG_BEAUTY_MASTERS          0x1252 
+#define OBJ_EVENT_PAL_TAG_COWGIRL                 0x1253
+#define OBJ_EVENT_PAL_TAG_GIRL_5                  0x1254
+#define OBJ_EVENT_PAL_TAG_GIRL_6                  0x1255
+#define OBJ_EVENT_PAL_TAG_GIRL_7                  0x1256
+#define OBJ_EVENT_PAL_TAG_JUGGLER                 0x1257
+#define OBJ_EVENT_PAL_TAG_MAN_7                   0x1258
+#define OBJ_EVENT_PAL_TAG_BIKER                   0x1259
+#define OBJ_EVENT_PAL_TAG_CHANNELER               0x125A
+#define OBJ_EVENT_PAL_TAG_NERD                    0x125B
+#define OBJ_EVENT_PAL_TAG_RANCHER                 0x125C
+#define OBJ_EVENT_PAL_TAG_SCHOOL_KID_M_2          0x125D
+#define OBJ_EVENT_PAL_TAG_SCOUT_M                 0x125E
+#define OBJ_EVENT_PAL_TAG_SCOUT_F                 0x125F
+#define OBJ_EVENT_PAL_TAG_SILVERWING_M            0x1260
+#define OBJ_EVENT_PAL_TAG_SILVERWING_F            0x1261
+#define OBJ_EVENT_PAL_TAG_WOMAN_6                 0x1262
+#define OBJ_EVENT_PAL_TAG_WOMAN_7                 0x1263
+#define OBJ_EVENT_PAL_TAG_WOMAN_8                 0x1264
+#define OBJ_EVENT_PAL_TAG_SCHOOL_KID_F            0x1265
+#define OBJ_EVENT_PAL_TAG_APPLE                   0x1266
+#define OBJ_EVENT_PAL_TAG_SHINY_AZURILL           0x1267
+#define OBJ_EVENT_PAL_TAG_HEX_MANIAC              0x1268
+#define OBJ_EVENT_PAL_TAG_BUG_CATCHER_F           0x1269
+#define OBJ_EVENT_PAL_TAG_OFFICER_M               0x126A
+#define OBJ_EVENT_PAL_TAG_OFFICER_F               0x126B
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_2         0x126C
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F_2         0x126D
+#define OBJ_EVENT_PAL_TAG_ACE_TRAINER_SNOW        0x127E
 
 // This + localId is used as the tileTag
 // for compressed graphicsInfos
