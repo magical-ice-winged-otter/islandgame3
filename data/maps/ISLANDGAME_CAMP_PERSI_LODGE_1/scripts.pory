@@ -133,15 +133,12 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_PorygonCutscene {
     setflag(FLAG_NO_CATCHING)
     setflag(FLAG_NO_RUNNING)
 
-    // TODO(poe): I had to disable the setvar commands here: for some reason,
-    // the maintainers deleted VAR_BATTLE_SPEED support. I couldn't find a replacement.
-
-    //setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_4X)
+    setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_4X)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
     waitmovement(0)
     createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_PORYGON, 10, ITEM_BERRY_JUICE, NUM_NATURES, 1, MON_GENDERLESS, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_RECYCLE, MOVE_CONVERSION_2, MOVE_TACKLE, MOVE_THUNDER_SHOCK)
     dowildbattle
-    //setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_1X)
+    setvar(VAR_BATTLE_SPEED, OPTIONS_BATTLE_SCENE_1X)
     clearflag(FLAG_SMART_WILD_AI)
     clearflag(FLAG_NO_CATCHING)
     clearflag(FLAG_NO_RUNNING)
