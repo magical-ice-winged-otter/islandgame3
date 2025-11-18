@@ -1599,4 +1599,10 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_Pokevial(u8 taskId)
+{
+}
+
+
+
 #undef tUsingRegisteredKeyItem
