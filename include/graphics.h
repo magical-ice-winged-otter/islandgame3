@@ -3401,10 +3401,17 @@ extern const u32 gBattleIcons_Gfx2[];
 extern const u16 gBattleIcons_Pal1[];
 extern const u16 gBattleIcons_Pal2[];
 
-
-
-
 // Islandgame Item Graphics
+extern const u32 gItemIcon_IslandgameMachete[];
+extern const u16 gItemIconPalette_IslandgameMachete[];
+extern const u32 gItemIcon_IslandgameLantern[];
+extern const u16 gItemIconPalette_IslandgameLantern[];
+extern const u32 gItemIcon_IslandgamePickaxe[];
+extern const u16 gItemIconPalette_IslandgamePickaxe[];
+extern const u32 gItemIcon_IslandgameTradingCard[];
+extern const u16 gItemIconPalette_IslandgameTradingCard[];
+extern const u32 gItemIcon_IslandgameSquirtBottle[];
+extern const u16 gItemIconPalette_IslandgameSquirtBottle[];
 extern const u32 gItemIcon_IslandgameLobsterRoll[];
 extern const u16 gItemIconPalette_IslandgameLobsterRoll[];
 extern const u32 gItemIcon_IslandgameStrangeDisc[];

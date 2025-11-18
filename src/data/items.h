@@ -14601,6 +14601,139 @@ const struct Item gItemsInfo[] =
     },
 
     // island-game custom items
+
+    [ITEM_ISLANDGAME_MACHETE] =
+    {
+        .name = ITEM_NAME("Machete"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A sharp blade that\n"
+            "can cut down trees."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_IslandgameMachete,
+        .iconPalette = gItemIconPalette_IslandgameMachete,
+    },
+
+    [ITEM_ISLANDGAME_LANTERN] =
+    {
+        .name = ITEM_NAME("Lantern"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A portable light\n"
+            "that can illuminate\n"
+            "dark areas."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_Flash,
+        .iconPic = gItemIcon_IslandgameLantern,
+        .iconPalette = gItemIconPalette_IslandgameLantern,
+    },
+
+    [ITEM_ISLANDGAME_WHISTLE] =
+    {
+        .name = ITEM_NAME("Whistle"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Calls down a bird\n"
+            "Pokémon to fly you\n"
+            "to any known town."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_Fly,
+        .iconPic = gItemIcon_PokeFlute,
+        .iconPalette = gItemIconPalette_PokeFlute,
+    },
+
+    [ITEM_ISLANDGAME_RAFT] =
+    {
+        .name = ITEM_NAME("Wailmerine"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Allows you to surf,\n"
+            "dive, and go up\n"
+            "waterfalls."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_WailmerPail,
+        .iconPalette = gItemIconPalette_WailmerPail,
+    },
+
+    [ITEM_ISLANDGAME_PICKAXE] =
+    {
+        .name = ITEM_NAME("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+             "A tool that can\n"
+            "smash rocks."  
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_IslandgamePickaxe,
+        .iconPalette = gItemIconPalette_IslandgamePickaxe,
+    },
+
+    [ITEM_ISLANDGAME_POWERGLOVE] =
+    {
+        .name = ITEM_NAME("Power Glove"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A handy gauntlet\n"
+            "that helps you\n"
+            "push large objects."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1, // honestly idk what this does
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PunchingGlove,
+        .iconPalette = gItemIconPalette_PunchingGlove,
+    },
+
+    [ITEM_ISLANDGAME_TRADING_CARD] =
+    {
+        .name = ITEM_NAME("Trading Card"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A really rare\n"
+            "card! It's in\n"
+            "poor condition."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1,
+        .iconPic = gItemIcon_IslandgameTradingCard,
+        .iconPalette = gItemIconPalette_IslandgameTradingCard,
+    },
+
+    [ITEM_ISLANDGAME_JULIES_LETTER] =
+    {
+        .name = ITEM_NAME("Reply Letter"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Julie's response\n"
+            "to Roman.\n"
+            "No peeksies!"
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1,
+        .iconPic = gItemIcon_FabMail,
+        .iconPalette = gItemIconPalette_FabMail,
+    },
+
     [ITEM_ISLANDGAME_LOBSTER_ROLL] =
     {
         .name = ITEM_NAME("Lobster Roll"),
@@ -14636,6 +14769,20 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .iconPic = gItemIcon_IslandgameStrangeDisc,
         .iconPalette = gItemIconPalette_IslandgameStrangeDisc,
+    },
+
+    [ITEM_ISLANDGAME_CUBONES_POKEBALL] =
+    {
+        .name = ITEM_NAME("Cubone's Ball"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Cuu!"
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1,
+        .iconPic = gItemIcon_PokeBall,
+        .iconPalette = gItemIconPalette_PokeBall,
     },
 };
 

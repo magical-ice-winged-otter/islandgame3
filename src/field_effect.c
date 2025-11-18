@@ -38,6 +38,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "item_icon.h" // field effect items
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -1426,10 +1427,7 @@ static void Task_UseFly(u8 taskId)
             if (!IsWeatherNotFadingIn())
                 return;
 
-            gFieldEffectArguments[0] = GetCursorSelectionMonId();
-            if ((int)gFieldEffectArguments[0] > PARTY_SIZE - 1)
-                gFieldEffectArguments[0] = 0;
-
+            gFieldEffectArguments[0] = ITEM_ISLANDGAME_WHISTLE;
             FieldEffectStart(FLDEFF_USE_FLY);
             fieldEffectStarted = TRUE;
         }
@@ -3172,7 +3170,9 @@ static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
     struct Sprite *sprite;
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
-    monSprite = CreateMonSprite_FieldMove(species, isShiny, personality, 320, 80, 0);
+    monSprite = AddItemIconSprite(2110, 2110, species);
+    gSprites[monSprite].y = 0x50;
+    gSprites[monSprite].x = 0x140;
     sprite = &gSprites[monSprite];
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
@@ -3188,10 +3188,7 @@ static void SpriteCB_FieldMoveMonSlideOnscreen(struct Sprite *sprite)
         sprite->x = DISPLAY_WIDTH / 2;
         sprite->sOnscreenTimer = 30;
         sprite->callback = SpriteCB_FieldMoveMonWaitAfterCry;
-        if (sprite->data[6])
-            PlayCry_NormalNoDucking(sprite->sSpecies, 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
-        else
-            PlayCry_Normal(sprite->sSpecies, 0);
+        PlaySE(SE_USE_ITEM);
     }
 }
 

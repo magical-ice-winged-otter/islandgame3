@@ -2102,6 +2102,22 @@ const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon
 
 
 // island-game custom items
+
+const u32 gItemIcon_IslandgameMachete[] = INCBIN_U32("graphics/items/icons/machete.4bpp.smol");
+const u16 gItemIconPalette_IslandgameMachete[] = INCBIN_U16("graphics/items/icon_palettes/machete.gbapal");
+
+const u32 gItemIcon_IslandgameLantern[] = INCBIN_U32("graphics/items/icons/lantern.4bpp.smol");
+const u16 gItemIconPalette_IslandgameLantern[] = INCBIN_U16("graphics/items/icon_palettes/lantern.gbapal");
+
+const u32 gItemIcon_IslandgamePickaxe[] = INCBIN_U32("graphics/items/icons/pickaxe.4bpp.smol");
+const u16 gItemIconPalette_IslandgamePickaxe[] = INCBIN_U16("graphics/items/icon_palettes/pickaxe.gbapal");
+
+const u32 gItemIcon_IslandgameTradingCard[] = INCBIN_U32("graphics/items/icons/trading_card.4bpp.smol");
+const u16 gItemIconPalette_IslandgameTradingCard[] = INCBIN_U16("graphics/items/icon_palettes/trading_card.gbapal");
+
+const u32 gItemIcon_IslandgameSquirtBottle[] = INCBIN_U32("graphics/items/icons/squirt_bottle.4bpp.smol");
+const u16 gItemIconPalette_IslandgameSquirtBottle[] = INCBIN_U16("graphics/items/icon_palettes/squirt_bottle.gbapal");
+
 const u32 gItemIcon_IslandgameLobsterRoll[] = INCBIN_U32("graphics/items/icons/lobster_roll.4bpp.smol");
 const u16 gItemIconPalette_IslandgameLobsterRoll[] = INCBIN_U16("graphics/items/icon_palettes/lobster_roll.gbapal");
 

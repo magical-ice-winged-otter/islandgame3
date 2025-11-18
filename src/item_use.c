@@ -45,6 +45,7 @@
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
+#include "region_map.h" // item field effects (fly, flash)
 
 static void SetUpItemUseCallback(u8);
 static void FieldCB_UseItemOnField(void);
@@ -1467,6 +1468,32 @@ void ItemUseOutOfBattle_Honey(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_Fly(u8 taskId)
+{
+    if (SetUpFieldMove_Fly() == TRUE)
+    {
+        gBagMenu->newScreenCallback = CB2_OpenFlyMap;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else
+    {
+        ItemUseOutOfBattle_CannotUse(taskId);
+    }
+}
+
+void ItemUseOutOfBattle_Flash(u8 taskId)
+{
+    if (SetUpFieldMove_Flash() == TRUE)
+    {
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+    }
+    else
+    {
+        ItemUseOutOfBattle_CannotUse(taskId);
+    }
 }
 
 static bool32 IsValidLocationForVsSeeker(void)
