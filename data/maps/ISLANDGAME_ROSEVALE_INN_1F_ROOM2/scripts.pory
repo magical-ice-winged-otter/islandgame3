@@ -7,7 +7,9 @@ script ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED {
         "..."
     ))
     if(!flag(FLAG_ROSEVALE_RED)) {
-        trainerbattle_no_intro_no_whiteout(TRAINER_ROSEVALE_RED, "...")
+        setflag(FLAG_NO_WHITEOUT)
+        trainerbattle_no_intro(TRAINER_ROSEVALE_RED, "...")
+        clearflag(FLAG_NO_WHITEOUT)
         specialvar(VAR_RESULT, GetBattleOutcome)
         switch(var(VAR_RESULT)) {
             case B_OUTCOME_WON:

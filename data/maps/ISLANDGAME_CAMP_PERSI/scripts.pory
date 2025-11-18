@@ -204,7 +204,10 @@ script ISLANDGAME_CAMP_PERSI_EventScript_JonasBattleEngage {
         "But that's enough about me. You said you were a Pokémon trainer, right?\p"
         "In that case...{PAUSE 60} mind if I trouble you for a little battle?"
     ))
-    trainerbattle_no_intro_no_whiteout(TRAINER_CAMP_PERSI_JONAS, ISLANDGAME_CAMP_PERSI_Jonas_Defeated_Text)
+
+    setflag(FLAG_NO_WHITEOUT)
+    trainerbattle_no_intro(TRAINER_CAMP_PERSI_JONAS, ISLANDGAME_CAMP_PERSI_Jonas_Defeated_Text)
+    clearflag(FLAG_NO_WHITEOUT)
     specialvar(VAR_RESULT, GetBattleOutcome)
     switch(var(VAR_RESULT)) {
         case B_OUTCOME_WON:
