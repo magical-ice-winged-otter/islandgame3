@@ -43,16 +43,16 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_NO_ENCOUNTER    0x20 
+#define FLAG_NO_COLLISION    0x21 
+#define FLAG_NO_TRAINER_SEE  0x22 
+#define FLAG_FORCE_DOUBLE_WILD 0x23 
+#define FLAG_SMART_WILD_AI    0x24 
+#define FLAG_NO_CATCHING    0x25 
+#define FLAG_NO_RUNNING      0x26
+#define FLAG_DEXNAV_SEARCHING        0x27 
+#define FLAG_DEXNAV_GET              0x28 
+#define FLAG_DEXNAV_DETECTOR_MODE    0x29 
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
@@ -90,7 +90,7 @@
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_EXP_SHARE       0x4F // LINK include/config/item.h
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -658,8 +658,7 @@
 
 
 
-
-// island-game hidden items
+// island-game : Hidden Items
 #define FLAG_HIDDEN_ITEM_TIDALCOVE_PEARL            0x265 
 #define FLAG_HIDDEN_ITEM_ROSEVALE_EXP_CANDY         0x266
 #define FLAG_HIDDEN_ITEM_AURORA_PATH_EXP_CANDY      0x267 
@@ -693,9 +692,9 @@
 #define FLAG_HIDDEN_ITEM_ROCKY_PATH_EXP_CANDY_S     0x283
 #define FLAG_HIDDEN_ITEM_ROCKY_PATH_ETHER           0x284 
 #define FLAG_HIDDEN_ITEM_SS_RAIN_ORAN_BERRY         0x285 
-#define FLAG_HIDDEN_ITEM_PLEASANT_AVENUE_NUGGET     0x286 
+#define FLAG_HIDDEN_ITEM_CHERIPORT_H_FEATHER        0x286 // unused
 #define FLAG_HIDDEN_ITEM_CAMP_PERSI_BERRY_JUICE     0x287
-#define FLAG_HIDDEN_ITEM_AETHERIA_COLBUR_BERRY      0x288
+#define FLAG_HIDDEN_ITEM_CAMP_PERSI_MUSCLE_FEATHER  0x288 // unused
 #define FLAG_HIDDEN_ITEM_VERDANT_PATH_G_FEATHER     0x289 // unused
 #define FLAG_HIDDEN_ITEM_VERDANT_WOODS_TINYSHROOM   0x28A 
 #define FLAG_HIDDEN_ITEM_MAPLEGROVE_FEATHER         0x28B // unused
@@ -850,7 +849,7 @@
 #define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1                          0x31C
 #define FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1                          0x31D
 #define FLAG_HIDE_ROUTE_120_GABBY_AND_TY_1                          0x31E
-#define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2                          0x31F
+#define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3                          0x31F
 #define FLAG_HIDE_LUGIA                                             0x320
 #define FLAG_HIDE_HO_OH                                             0x321
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_REPORTER                    0x322
@@ -954,7 +953,7 @@
 #define FLAG_HIDE_ROUTE_110_TEAM_AQUA                               0x384
 #define FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2                          0x385
 #define FLAG_HIDE_ROUTE_120_GABBY_AND_TY_2                          0x386
-#define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3                          0x387
+#define FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2                          0x387
 #define FLAG_HIDE_ROUTE_118_GABBY_AND_TY_3                          0x388
 #define FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS                     0x389
 #define FLAG_HIDE_ROUTE_104_WHITE_HERB_FLORIST                      0x38A
@@ -1225,8 +1224,6 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-
-
 //island-game : Pokeball Items
 #define FLAG_ROOM3_ITEM                                             0x493 
 #define FLAG_ANOMALY01_ITEM                                         0x494
@@ -1289,7 +1286,7 @@
 #define FLAG_ITEM_VALLEY_OF_PEACE_SPELL_TAG                         0x4CD
 #define FLAG_ITEM_VALLEY_OF_PEACE_REVIVE                            0x4CE
 #define FLAG_ITEM_VALLEY_OF_PEACE_DUSK_STONE                        0x4CF 
-#define FLAG_ITEM_AETHERIA_PP_UP                                    0x4D0 
+#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
@@ -1319,7 +1316,7 @@
 #define FLAG_UNUSED_0x4EB                                           0x4EB // Unused Flag
 #define FLAG_UNUSED_0x4EC                                           0x4EC // Unused Flag
 #define FLAG_UNUSED_0x4ED                                           0x4ED // Unused Flag
-#define FLAG_SMART_WILD_AI                                          0x4EE
+#define FLAG_UNUSED_0x4EE                                           0x4EE // Unused Flag
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
@@ -1356,7 +1353,8 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+//quest system
+#define FLAG_SYS_QUEST_MENU_GET                      (SYSTEM_FLAGS + 0x3) 
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
@@ -1403,7 +1401,6 @@
 
 #define FLAG_SYS_USE_FLASH                          (SYSTEM_FLAGS + 0x28)
 #define FLAG_SYS_USE_STRENGTH                       (SYSTEM_FLAGS + 0x29)
-// Sets abnormal weather on maps that check for it
 #define FLAG_SYS_WEATHER_CTRL                       (SYSTEM_FLAGS + 0x2A)
 #define FLAG_SYS_CYCLING_ROAD                       (SYSTEM_FLAGS + 0x2B)
 #define FLAG_SYS_SAFARI_MODE                        (SYSTEM_FLAGS + 0x2C)
@@ -1514,7 +1511,10 @@
 #define FLAG_RECEIVED_POKEDEX_FROM_BIRCH            (SYSTEM_FLAGS + 0x84)
 
 
-// island-game general flags
+
+
+
+// island-game flags
 #define FLAG_LEFT_SS_RAIN                           (SYSTEM_FLAGS + 0x85)   
 #define FLAG_ROOM3_GAVE_WATER                       (SYSTEM_FLAGS + 0x86) 
 #define FLAG_PROF_GAVE_EEVEE                        (SYSTEM_FLAGS + 0x87)
@@ -1601,7 +1601,7 @@
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13) // Unused Flag
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 0x14)
 
-// island-game daily flags
+// island-game DAILY FLAGS
 #define FLAG_DAILY_CHERIPORT_RECEIVED_DRINK         (DAILY_FLAGS_START + 0x15) 
 #define FLAG_DAILY_PERSI_CANDY_BOY_SALE             (DAILY_FLAGS_START + 0x16) 
 #define FLAG_DAILY_PERSI_COOKIE_GIRL_SALE           (DAILY_FLAGS_START + 0x17) 
@@ -1626,8 +1626,8 @@
 #define FLAG_DAILY_APPLEVINE_COIN_CARD              (DAILY_FLAGS_START + 0x2A)
 #define FLAG_DAILY_VALLEY_OF_PEACE_GROTTO_ROLL      (DAILY_FLAGS_START + 0x2B)
 #define FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL          (DAILY_FLAGS_START + 0x2C)
-#define FLAG_DAILY_PLEASANT_AVENUE_ROLL             (DAILY_FLAGS_START + 0x2D) 
-#define FLAG_DAILY_AETHERIA_CAMEO_BATTLE            (DAILY_FLAGS_START + 0x2E)
+#define FLAG_UNUSED_0x94D                           (DAILY_FLAGS_START + 0x2D) // Unused Flag
+#define FLAG_UNUSED_0x94E                           (DAILY_FLAGS_START + 0x2E) // Unused Flag
 #define FLAG_UNUSED_0x94F                           (DAILY_FLAGS_START + 0x2F) // Unused Flag
 #define FLAG_UNUSED_0x950                           (DAILY_FLAGS_START + 0x30) // Unused Flag
 #define FLAG_UNUSED_0x951                           (DAILY_FLAGS_START + 0x31) // Unused Flag
@@ -1673,7 +1673,7 @@
 #if TESTING
 #define TESTING_FLAGS_START                     0x5000
 #define TESTING_FLAG_SLEEP_CLAUSE               (TESTING_FLAGS_START + 0x0)
-#define TESTING_FLAG_INVERSE_BATTLE             (TESTING_FLAGS_START + 0x1)
+#define TESTING_FLAG_UNUSED_1                   (TESTING_FLAGS_START + 0x1)
 #define TESTING_FLAG_UNUSED_2                   (TESTING_FLAGS_START + 0x2)
 #define TESTING_FLAG_UNUSED_3                   (TESTING_FLAGS_START + 0x3)
 #define TESTING_FLAG_UNUSED_4                   (TESTING_FLAGS_START + 0x4)
