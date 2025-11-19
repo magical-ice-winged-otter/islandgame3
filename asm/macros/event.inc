@@ -2816,3 +2816,10 @@
     subquestmenu QUEST_MENU_CHECK_COMPLETE \parent \child
     call_if_eq VAR_RESULT, FALSE, \dest
     .endm
+
+    @ Applies the movement at the specified id then executes a msgbox.
+    .macro msgboxEmote localId:req, movements:req, text:req, type=MSGBOX_DEFAULT
+    applymovement \localId , \movements
+    loadword 0, \text
+    callstd \type
+    .endm
