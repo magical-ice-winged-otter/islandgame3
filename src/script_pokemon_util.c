@@ -61,15 +61,47 @@ static void HealPlayerBoxes(void)
     }
 }
 
-u8 ScriptGiveEgg(u16 species)
+u8 ScriptGiveEgg(u16 species, u8 nature, u8 abilityNum, u8 *ivs)
 {
     struct Pokemon mon;
     u8 isEgg;
+    u8 i;
+    u8 language;
+    bool8 isShiny = Random() % 2;
+    
+    //set nature
+    if (nature == NUM_NATURES || nature == 0xFF)
+        nature = Random() % NUM_NATURES;
+        
+    //create mon
+    if (isShiny)
+        CreateShinyMonWithNature(&mon, species, 1, nature);
+    else
+        CreateMonWithNature(&mon, species, 1, 32, nature);
 
-    CreateEgg(&mon, species, TRUE);
+    //set ability
+    if (abilityNum == 0xFF || GetAbilityBySpecies(species, abilityNum) == 0)
+    {
+        do {
+            abilityNum = Random() % 3;  // includes hidden abilities
+        } while (GetAbilityBySpecies(species, abilityNum) == 0);
+    }
+    SetMonData(&mon, MON_DATA_ABILITY_NUM, &abilityNum);
+
+    //set ivs
+    for (i = 0; i < NUM_STATS; i++)
+    {
+        if (ivs[i] != 32 && ivs[i] != 0xFF)
+            SetMonData(&mon, MON_DATA_HP_IV + i, &ivs[i]);
+    }
+    //we don't need to calculate stats?
+    CalculateMonStats(&mon);
+
     isEgg = TRUE;
     SetMonData(&mon, MON_DATA_IS_EGG, &isEgg);
 
+    language = LANGUAGE_KOREAN;
+    SetMonData(&mon, MON_DATA_LANGUAGE, &language);
     return GiveMonToPlayer(&mon);
 }
 

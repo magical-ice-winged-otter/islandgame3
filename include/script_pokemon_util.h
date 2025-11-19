@@ -2,7 +2,7 @@
 #define GUARD_SCRIPT_POKEMON_UTIL_H
 
 u32 ScriptGiveMon(u16 species, u8 level, u16 item);
-u8 ScriptGiveEgg(u16 species);
+u8 ScriptGiveEgg(u16 species, u8 nature, u8 ability, u8* ivs);
 void CreateScriptedWildMon(u16 species, u8 level, u16 item);
 void CreateScriptedWildMonCustom(u8 spot, u16 species, u8 level, u16 item, u8 nature, u8 abilityNum, u8* evs, u8* ivs, u16* moves, bool8 isShiny);
 void CreateScriptedDoubleWildMon(u16 species, u8 level, u16 item, u16 species2, u8 level2, u16 item2);

@@ -2268,10 +2268,20 @@ bool8 ScrCmd_bufferboxname(struct ScriptContext *ctx)
 bool8 ScrCmd_giveegg(struct ScriptContext *ctx)
 {
     u16 species = VarGet(ScriptReadHalfword(ctx));
+    u8 nature = ScriptReadByte(ctx);
+    u8 abilityNum = ScriptReadByte(ctx);
+    u8 hpIv = ScriptReadByte(ctx);
+    u8 atkIv = ScriptReadByte(ctx);
+    u8 defIv = ScriptReadByte(ctx);
+    u8 speedIv = ScriptReadByte(ctx);
+    u8 spAtkIv = ScriptReadByte(ctx);
+    u8 spDefIv = ScriptReadByte(ctx);
+
+    u8 ivs[NUM_STATS] = {hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv};
 
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 
-    gSpecialVar_Result = ScriptGiveEgg(species);
+    gSpecialVar_Result = ScriptGiveEgg(species, nature, abilityNum, ivs);
     return FALSE;
 }
 
