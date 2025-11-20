@@ -350,6 +350,7 @@ static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
     [MOVEMENT_TYPE_FOLLOW_PLAYER] = MovementType_FollowPlayer,
     [MOVEMENT_TYPE_WANDER_IN_GRASS] = MovementType_WanderInGrass,
     [MOVEMENT_TYPE_WANDER_IN_WATER] = MovementType_WanderInWater,
+    [MOVEMENT_TYPE_EMOTE_THINKING] = MovementType_EmoteThinking,
 };
 
 static const bool8 sMovementTypeHasRange[NUM_MOVEMENT_TYPES] = {
@@ -396,6 +397,7 @@ static const bool8 sMovementTypeHasRange[NUM_MOVEMENT_TYPES] = {
     [MOVEMENT_TYPE_COPY_PLAYER_CLOCKWISE_IN_GRASS] = TRUE,
     [MOVEMENT_TYPE_WANDER_IN_GRASS] = TRUE,
     [MOVEMENT_TYPE_WANDER_IN_WATER] = TRUE,
+    [MOVEMENT_TYPE_EMOTE_THINKING] = TRUE,
 };
 
 const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
@@ -6184,6 +6186,25 @@ bool8 MovementType_Invisible_Step1(struct ObjectEvent *objectEvent, struct Sprit
 bool8 MovementType_Invisible_Step2(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     objectEvent->singleMovementActive = FALSE;
+    return FALSE;
+}
+
+movement_type_def(MovementType_EmoteThinking, gMovementTypeFuncs_EmoteThinking)
+
+bool8 MovementType_EmoteThinking_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{ // sprite creation
+    ObjectEventGetLocalIdAndMap(objectEvent, &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+    FieldEffectStart(FLDEFF_THINKING_ICON);
+    sprite->sTypeFuncId = 1;
+    return FALSE;
+}
+
+bool8 MovementType_EmoteThinking_Step1(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{ // handle when to respawn the sprite, we are stuck in this step until we either break (via talking to npc, etc) or enough frames passed.
+    if (!FieldEffectActiveListContains(FLDEFF_THINKING_ICON))
+    {
+        sprite->sTypeFuncId = 0;
+    }
     return FALSE;
 }
 
