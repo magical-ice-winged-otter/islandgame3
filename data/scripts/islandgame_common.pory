@@ -1,18 +1,44 @@
-const OBJ_NURSE = 1
+const LOCALID_NURSE = 1
+const LOOP_BOUND = VAR_TEMP_A
+const LOOP_ITER  = VAR_TEMP_B
+const QUEST      = VAR_TEMP_C
 
-// Pokemon Center Nurse
-script ISLANDGAME_COMMON_PKMNCENTER_NURSE {
+//Common script to loop through subquests of a quest
+//Usage:
+//  setvar(LOOP_ITER, start)                where start represents the starting index of the first subquest
+//  setvar(LOOP_BOUND, start + end)         where end represents the number of possible subquests
+//  setvar(QUEST, quest)                    where quest represents the actual quest
+//  call(Common_NextSubQuest)
+//
+script Common_NextSubQuest {
+    while (var(LOOP_ITER) < LOOP_BOUND) {
+        subquestmenu(QUEST_MENU_CHECK_COMPLETE, QUEST, LOOP_ITER)
+        if (var(VAR_RESULT) == FALSE) {
+            subquestmenu(QUEST_MENU_BUFFER_QUEST_NAME, QUEST, LOOP_ITER)
+            // -> {STR_VAR_1} = quest name
+            // -> {STR_VAR_2} = item/pokemon name
+            // -> var(VAR_RESULT) = the actual id
+            // -> var(LOOP_ITER)  = the subquest that wasn't complete
+            // -> var(LOOP_BOUND) = the index that represents the number of subquests
+            return 
+        }
+        addvar(LOOP_ITER, 1)
+    }
+    return
+}
+
+script IslandGame_Common_PokemonCenter_1F_EventScript_Nurse {
     if (!flag(FLAG_PROF_GAVE_EEVEE)) {
         lock
         msgbox(format(
             "Welcome to the Maryan isles, trainer! This is a Pokémon Center.\p"
-            "It seems like you don't have any Pokémon right now, but when you do, you can take them here to heal them!"
+            "You don't have any Pokémon right now, but when you do we can heal them."
         ))
         closemessage
         release
     }
     else {
-        setvar(VAR_0x800B, OBJ_NURSE)
+        setvar(VAR_0x800B, LOCALID_NURSE)
         call(Common_EventScript_PkmnCenterNurse)
         waitmessage
         waitbuttonpress
@@ -20,8 +46,10 @@ script ISLANDGAME_COMMON_PKMNCENTER_NURSE {
     }
 }
 
-// Time Changer
-script ISLANDGAME_COMMON_PKMNCENTER_TimeChanger {
+
+
+// talk to this girl if you want to change the time
+script ISLANDGAME_PKMNCENTER_2F_TimeNPC {
     lock
     faceplayer
     msgbox(format(
@@ -46,8 +74,8 @@ script ISLANDGAME_COMMON_PKMNCENTER_TimeChanger {
 }
 
 
-// Name Rater
-script ISLANDGAME_COMMON_PKMNCENTER_NameRater {
+// talk to this gentleman if you want to change a mon's name
+script ISLANDGAME_PKMNCENTER_2F_NameRater {
     lock
     faceplayer
     msgbox(format(
@@ -121,9 +149,8 @@ script ISLANDGAME_COMMON_PKMNCENTER_NameRater {
 }
 
 
-
-// Move Deleter
-script ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter {
+// talk this old guy if you want to delete moves (in a game with no HMs, for whatever reason)
+script ISLANDGAME_PKMNCENTER_2F_MoveDeleter {
     lock
     faceplayer
     msgbox(format(
@@ -165,7 +192,7 @@ script ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter {
         fadescreen(FADE_TO_BLACK)
         special(MoveDeleterChooseMoveToForget)
         fadescreen(FADE_FROM_BLACK)
-        goto_if_eq(VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter)
+        goto_if_eq(VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_PKMNCENTER_2F_MoveDeleter)
         special(BufferMoveDeleterNicknameAndMove)
         msgbox(format(
             "Ah... {STR_VAR_1}'s {STR_VAR_2}? You want this move to be forgotten?"
@@ -196,13 +223,12 @@ script ISLANDGAME_COMMON_PKMNCENTER_MoveDeleter {
 }
 
 
-
-// Move Relearner
-script ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner {
+// talk this chub if you want to relearn moves
+script ISLANDGAME_PKMNCENTER_2F_MoveRelearner {
     lock
     faceplayer
     msgbox(format(
-        "Hullo! I am the all-powerful man known as the Move Relearner!\p"
+        "Hullo! I am the all-powerful guru known as the Move Relearner!\p"
         "I can help your Pokémon relearn moves they've previously learned!\p"
         "I can even teach them moves that they missed out on!"
     ))
@@ -274,32 +300,4 @@ script ISLANDGAME_COMMON_PKMNCENTER_MoveRelearner {
         hidemoneybox
         closemessage
         release
-}
-
-const LOOP_BOUND = VAR_TEMP_A
-const LOOP_ITER  = VAR_TEMP_B
-const QUEST      = VAR_TEMP_C
-
-//Common script to loop through subquests of a quest
-//Usage:
-//  setvar(LOOP_ITER, start)                where start represents the starting index of the first subquest
-//  setvar(LOOP_BOUND, start + end)         where end represents the number of possible subquests
-//  setvar(QUEST, quest)                    where quest represents the actual quest
-//  call(Common_NextSubQuest)
-//
-script Common_NextSubQuest {
-    while (var(LOOP_ITER) < LOOP_BOUND) {
-        subquestmenu(QUEST_MENU_CHECK_COMPLETE, QUEST, LOOP_ITER)
-        if (var(VAR_RESULT) == FALSE) {
-            subquestmenu(QUEST_MENU_BUFFER_QUEST_NAME, QUEST, LOOP_ITER)
-            // -> {STR_VAR_1} = quest name
-            // -> {STR_VAR_2} = item/pokemon name
-            // -> var(VAR_RESULT) = the actual id
-            // -> var(LOOP_ITER)  = the subquest that wasn't complete
-            // -> var(LOOP_BOUND) = the index that represents the number of subquests
-            return 
-        }
-        addvar(LOOP_ITER, 1)
-    }
-    return
 }
