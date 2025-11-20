@@ -567,3 +567,4 @@ gSpecials::
   def_special PokevialGetDose
   def_special PokevialGetSize
   def_special PokevialRefill
+	def_special SetIcefallCaveCrackedIceMetatiles
