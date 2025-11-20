@@ -5,5 +5,6 @@ void SetUpFieldTasks(void);
 void ActivatePerStepCallback(u8 callbackId);
 void ResetFieldTasksArgs(void);
 void SetSootopolisGymCrackedIceMetatiles(void);
+void SetIcefallCaveCrackedIceMetatiles(void); // island-game
 
 #endif // GUARD_FIELD_TASKS_H
