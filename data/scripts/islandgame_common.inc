@@ -408,6 +408,100 @@ ISLANDGAME_PKMNCENTER_2F_MoveRelearner_18:
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_17
 
 
+Common_EventScript_OverworldPokemon::
+# 306 "data/scripts/islandgame_common.pory"
+	lock
+# 307 "data/scripts/islandgame_common.pory"
+	faceplayer
+# 308 "data/scripts/islandgame_common.pory"
+	setflag FLAG_SMART_WILD_AI
+# 309 "data/scripts/islandgame_common.pory"
+	startwildoverworldencounter
+# 310 "data/scripts/islandgame_common.pory"
+	clearflag FLAG_SMART_WILD_AI
+# 311 "data/scripts/islandgame_common.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 313 "data/scripts/islandgame_common.pory"
+	switch VAR_RESULT
+# 314 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_LOST, Common_EventScript_OverworldPokemon_3
+# 316 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_RAN, Common_EventScript_OverworldPokemon_4
+# 318 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_WON, Common_EventScript_OverworldPokemon_5
+# 320 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_CAUGHT, Common_EventScript_OverworldPokemon_6
+# 323 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+Common_EventScript_OverworldPokemon_1:
+# 325 "data/scripts/islandgame_common.pory"
+	release
+	return
+
+Common_EventScript_OverworldPokemon_3:
+	goto Common_EventScript_OverworldPokemon_1
+
+Common_EventScript_OverworldPokemon_4:
+	goto Common_EventScript_OverworldPokemon_1
+
+Common_EventScript_OverworldPokemon_5:
+# 319 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_OverworldPokemon_1
+
+Common_EventScript_OverworldPokemon_6:
+# 321 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_OverworldPokemon_1
+
+
+Common_EventScript_OverworldPokemon_Level::
+# 329 "data/scripts/islandgame_common.pory"
+	lock
+# 330 "data/scripts/islandgame_common.pory"
+	faceplayer
+# 331 "data/scripts/islandgame_common.pory"
+	setflag FLAG_SMART_WILD_AI
+# 332 "data/scripts/islandgame_common.pory"
+	startoverworldencounter 23
+# 333 "data/scripts/islandgame_common.pory"
+	clearflag FLAG_SMART_WILD_AI
+# 334 "data/scripts/islandgame_common.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 336 "data/scripts/islandgame_common.pory"
+	switch VAR_RESULT
+# 337 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_LOST, Common_EventScript_OverworldPokemon_Level_3
+# 339 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_RAN, Common_EventScript_OverworldPokemon_Level_4
+# 341 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_WON, Common_EventScript_OverworldPokemon_Level_5
+# 343 "data/scripts/islandgame_common.pory"
+	case B_OUTCOME_CAUGHT, Common_EventScript_OverworldPokemon_Level_6
+# 346 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+Common_EventScript_OverworldPokemon_Level_1:
+# 348 "data/scripts/islandgame_common.pory"
+	release
+	return
+
+Common_EventScript_OverworldPokemon_Level_3:
+	goto Common_EventScript_OverworldPokemon_Level_1
+
+Common_EventScript_OverworldPokemon_Level_4:
+	goto Common_EventScript_OverworldPokemon_Level_1
+
+Common_EventScript_OverworldPokemon_Level_5:
+# 342 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_OverworldPokemon_Level_1
+
+Common_EventScript_OverworldPokemon_Level_6:
+# 344 "data/scripts/islandgame_common.pory"
+	goto Common_EventScript_RemoveStaticPokemon
+	goto Common_EventScript_OverworldPokemon_Level_1
+
+
 IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_Text_0:
 # 34 "data/scripts/islandgame_common.pory"
 	.string "Welcome to the Maryan isles, trainer!\n"

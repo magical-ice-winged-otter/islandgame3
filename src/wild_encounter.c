@@ -65,6 +65,8 @@ static u16 ReturnFixedSpeciesEncounter();
 static u16 ReturnHeaderSpeciesEncounter(u8 encounterType, u16 headerId);
 static bool8 GeneratedOverworldMonShinyRoll(void);
 
+// ow-encounters: store data based on the object event graphics ids
+EWRAM_DATA struct WildPokemon activeOverworldEncounters[(OBJ_EVENT_GFX_LAST - OBJ_EVENT_GFX_VARS)] = {0};
 EWRAM_DATA static u8 sWildEncountersDisabled = 0;
 EWRAM_DATA static u32 sFeebasRngValue = 0;
 EWRAM_DATA bool8 gIsFishingEncounter = 0;
@@ -585,6 +587,34 @@ static bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum 
 
     CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
     return TRUE;
+}
+
+static bool8 TryGenerateOverworldWildMon(const struct WildPokemon* wildMon)
+{
+    u8 level;
+    
+    if (wildMon->species == SPECIES_NONE)
+        return FALSE;
+
+    level = wildMon->minLevel + Random() % (wildMon->maxLevel - wildMon->minLevel + 1);    CreateWildMon(wildMon->species, level);
+    return TRUE;
+}
+
+void GenerateOverworldWildMon(void)
+{
+    u8 localId = gObjectEvents[gSelectedObjectEvent].localId;
+    u16 graphicsId = GetObjectEventGraphicsIdByLocalIdAndMap(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+    u16 variableOffset = (graphicsId >= OBJ_EVENT_GFX_VAR_0) ? graphicsId - OBJ_EVENT_GFX_VAR_0 : 0;
+    u16 objectEventVariable = VAR_OBJ_GFX_ID_0 + variableOffset;
+    struct WildPokemon wildMon = activeOverworldEncounters[variableOffset];
+
+    TryGenerateOverworldWildMon(&wildMon);
+
+    bool8 shiny = VarGet(objectEventVariable) - (wildMon.species + OBJ_EVENT_GFX_SPECIES(NONE)) >= SPECIES_SHINY_TAG;
+    if (shiny)
+    {
+        SetMonData(&gEnemyParty[0], MON_DATA_IS_SHINY, &shiny);
+    }
 }
 
 static u16 GenerateFishingWildMon(const struct WildPokemonInfo *wildMonInfo, u8 rod)
