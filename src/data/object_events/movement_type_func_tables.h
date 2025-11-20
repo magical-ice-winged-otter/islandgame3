@@ -476,3 +476,8 @@ u8 (*const gMovementTypeFuncs_Invisible[])(struct ObjectEvent *, struct Sprite *
     MovementType_Invisible_Step1,
     MovementType_Invisible_Step2,
 };
+
+u8 (*const gMovementTypeFuncs_EmoteThinking[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementType_EmoteThinking_Step0,
+    MovementType_EmoteThinking_Step1,
+};
