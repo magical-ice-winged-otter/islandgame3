@@ -532,7 +532,7 @@ enum IslandgameObjEvents
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
 
-#define OBJ_EVENT_PAL_TAG_NPC_11                  0x1200
+#define OBJ_EVENT_PAL_TAG_NPC_11                  0x1200 // NOTE(poe): unused for good reason! Any pallete here visually glitches
 #define OBJ_EVENT_PAL_TAG_NPC_12                  0x1201
 #define OBJ_EVENT_PAL_TAG_NPC_13                  0x1202
 #define OBJ_EVENT_PAL_TAG_NPC_14                  0x1203
@@ -591,7 +591,7 @@ enum IslandgameObjEvents
 #define OBJ_EVENT_PAL_TAG_NPC_67                  0x1238 // unused
 #define OBJ_EVENT_PAL_TAG_NPC_68                  0x1239 // unused
 #define OBJ_EVENT_PAL_TAG_NPC_69                  0x123A // unused
-#define OBJ_EVENT_PAL_TAG_NPC_70                  0x123B // unused
+#define OBJ_EVENT_PAL_TAG_BOY_5                   0x123B
 #define OBJ_EVENT_PAL_TAG_OLIVIA_FISHING          0x123C
 #define OBJ_EVENT_PAL_TAG_OLIVIA_BIKE             0x123D
 #define OBJ_EVENT_PAL_TAG_OLIVIA_FIELD_MOVE       0x123E
