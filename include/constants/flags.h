@@ -694,7 +694,7 @@
 #define FLAG_HIDDEN_ITEM_SS_RAIN_ORAN_BERRY         0x285 
 #define FLAG_HIDDEN_ITEM_CHERIPORT_H_FEATHER        0x286 // unused
 #define FLAG_HIDDEN_ITEM_CAMP_PERSI_BERRY_JUICE     0x287
-#define FLAG_HIDDEN_ITEM_CAMP_PERSI_MUSCLE_FEATHER  0x288 // unused
+#define FLAG_HIDDEN_ITEM_AETHERIA_COLBUR_BERRY      0x288
 #define FLAG_HIDDEN_ITEM_VERDANT_PATH_G_FEATHER     0x289 // unused
 #define FLAG_HIDDEN_ITEM_VERDANT_WOODS_TINYSHROOM   0x28A 
 #define FLAG_HIDDEN_ITEM_MAPLEGROVE_FEATHER         0x28B // unused
@@ -1286,7 +1286,7 @@
 #define FLAG_ITEM_VALLEY_OF_PEACE_SPELL_TAG                         0x4CD
 #define FLAG_ITEM_VALLEY_OF_PEACE_REVIVE                            0x4CE
 #define FLAG_ITEM_VALLEY_OF_PEACE_DUSK_STONE                        0x4CF 
-#define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
+#define FLAG_ITEM_AETHERIA_PP_UP                                    0x4D0
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
@@ -1626,8 +1626,8 @@
 #define FLAG_DAILY_APPLEVINE_COIN_CARD              (DAILY_FLAGS_START + 0x2A)
 #define FLAG_DAILY_VALLEY_OF_PEACE_GROTTO_ROLL      (DAILY_FLAGS_START + 0x2B)
 #define FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL          (DAILY_FLAGS_START + 0x2C)
-#define FLAG_UNUSED_0x94D                           (DAILY_FLAGS_START + 0x2D) // Unused Flag
-#define FLAG_UNUSED_0x94E                           (DAILY_FLAGS_START + 0x2E) // Unused Flag
+#define FLAG_DAILY_PLEASANT_AVENUE_ROLL             (DAILY_FLAGS_START + 0x2D)
+#define FLAG_DAILY_AETHERIA_CAMEO_BATTLE            (DAILY_FLAGS_START + 0x2E)
 #define FLAG_UNUSED_0x94F                           (DAILY_FLAGS_START + 0x2F) // Unused Flag
 #define FLAG_UNUSED_0x950                           (DAILY_FLAGS_START + 0x30) // Unused Flag
 #define FLAG_UNUSED_0x951                           (DAILY_FLAGS_START + 0x31) // Unused Flag
