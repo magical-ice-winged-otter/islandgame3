@@ -191,3 +191,90 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 86
+    [DIFFICULTY_NORMAL][PARTNER_AETHERIA_WALLY] =
+    {
+#line 87
+        .trainerName = _("Wally"),
+#line 88
+        .trainerClass = TRAINER_CLASS_RIVAL_HOENN,
+#line 89
+        .trainerPic = TRAINER_PIC_HIKER,
+        .encounterMusic_gender =
+#line 91
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 92
+        .trainerBackPic = TRAINER_BACK_PIC_WALLY,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 94
+            .species = SPECIES_ALTARIA,
+#line 94
+            .gender = TRAINER_MON_MALE,
+#line 94
+            .heldItem = ITEM_SITRUS_BERRY,
+#line 97
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 96
+            .ability = ABILITY_CLOUD_NINE,
+#line 95
+            .lvl = 36,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 97
+                MOVE_DRAGON_BREATH,
+                MOVE_FLY,
+                MOVE_TAILWIND,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 102
+            .species = SPECIES_MAGNEZONE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 102
+            .heldItem = ITEM_MAGNET,
+#line 105
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 104
+            .ability = ABILITY_ANALYTIC,
+#line 103
+            .lvl = 36,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 105
+                MOVE_SHOCK_WAVE,
+                MOVE_FLASH_CANNON,
+                MOVE_THUNDER_WAVE,
+                MOVE_REFLECT,
+            },
+            },
+            {
+#line 110
+            .species = SPECIES_GALLADE,
+#line 110
+            .gender = TRAINER_MON_MALE,
+#line 110
+            .heldItem = ITEM_GALLADITE,
+#line 113
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 112
+            .ability = ABILITY_STEADFAST,
+#line 111
+            .lvl = 36,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 113
+                MOVE_PSYCHO_CUT,
+                MOVE_LEAF_BLADE,
+                MOVE_CLOSE_COMBAT,
+                MOVE_NIGHT_SLASH,
+            },
+            },
+        },
+    },

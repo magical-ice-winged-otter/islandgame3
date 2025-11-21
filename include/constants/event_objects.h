@@ -337,6 +337,8 @@ enum IslandgameObjEvents
     OBJ_EVENT_GFX_POKEKID,
     OBJ_EVENT_GFX_BIKER_2,
     OBJ_EVENT_GFX_VETERAN,
+    OBJ_EVENT_GFX_BRENDAN_2,
+    OBJ_EVENT_GFX_MAY_2,
     ISLAND_END,
 };
 
@@ -584,8 +586,8 @@ enum IslandgameObjEvents
 #define OBJ_EVENT_PAL_TAG_BIKER_2                 0x1233
 #define OBJ_EVENT_PAL_TAG_CUEBALL                 0x1234 // unused
 #define OBJ_EVENT_PAL_TAG_VETERAN                 0x1235
-#define OBJ_EVENT_PAL_TAG_NPC_65                  0x1236 // unused 
-#define OBJ_EVENT_PAL_TAG_NPC_66                  0x1237 // unused
+#define OBJ_EVENT_PAL_TAG_BRENDAN_2               0x1236
+#define OBJ_EVENT_PAL_TAG_MAY_2                   0x1237
 #define OBJ_EVENT_PAL_TAG_NPC_67                  0x1238 // unused
 #define OBJ_EVENT_PAL_TAG_NPC_68                  0x1239 // unused
 #define OBJ_EVENT_PAL_TAG_NPC_69                  0x123A // unused

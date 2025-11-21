@@ -502,6 +502,239 @@ Common_EventScript_OverworldPokemon_Level_6:
 	goto Common_EventScript_OverworldPokemon_Level_1
 
 
+Common_EventScript_VendingMachine::
+# 352 "data/scripts/islandgame_common.pory"
+	lock
+# 354 "data/scripts/islandgame_common.pory"
+Common_VendingMachine:
+# 355 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_0
+# 358 "data/scripts/islandgame_common.pory"
+	showmoneybox 17, 1
+# 359 "data/scripts/islandgame_common.pory"
+	dynmultipush Common_EventScript_VendingMachine_Text_1, 0
+# 360 "data/scripts/islandgame_common.pory"
+	dynmultipush Common_EventScript_VendingMachine_Text_2, 35
+# 361 "data/scripts/islandgame_common.pory"
+	dynmultipush Common_EventScript_VendingMachine_Text_3, 36
+# 362 "data/scripts/islandgame_common.pory"
+	dynmultipush Common_EventScript_VendingMachine_Text_4, 37
+# 363 "data/scripts/islandgame_common.pory"
+	dynmultistack 0, 0, TRUE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
+# 364 "data/scripts/islandgame_common.pory"
+	switch VAR_RESULT
+# 365 "data/scripts/islandgame_common.pory"
+	case 35, Common_EventScript_VendingMachine_3
+# 404 "data/scripts/islandgame_common.pory"
+	case 36, Common_EventScript_VendingMachine_4
+# 443 "data/scripts/islandgame_common.pory"
+	case 37, Common_EventScript_VendingMachine_5
+# 482 "data/scripts/islandgame_common.pory"
+	goto VendingMachine_End
+Common_EventScript_VendingMachine_1:
+# 485 "data/scripts/islandgame_common.pory"
+VendingMachine_End:
+# 486 "data/scripts/islandgame_common.pory"
+	hidemoneybox
+# 487 "data/scripts/islandgame_common.pory"
+	closemessage
+# 488 "data/scripts/islandgame_common.pory"
+	release
+	return
+
+Common_EventScript_VendingMachine_3:
+# 366 "data/scripts/islandgame_common.pory"
+	checkmoney 500
+# 367 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_8
+Common_EventScript_VendingMachine_7:
+# 373 "data/scripts/islandgame_common.pory"
+	removemoney 500
+# 374 "data/scripts/islandgame_common.pory"
+	updatemoneybox
+# 375 "data/scripts/islandgame_common.pory"
+	playse SE_SHOP
+# 376 "data/scripts/islandgame_common.pory"
+	waitse
+# 377 "data/scripts/islandgame_common.pory"
+	playse SE_VEND
+# 378 "data/scripts/islandgame_common.pory"
+	waitse
+# 379 "data/scripts/islandgame_common.pory"
+	hidemoneybox
+# 382 "data/scripts/islandgame_common.pory"
+	random 10
+# 383 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_17
+Common_EventScript_VendingMachine_16:
+# 392 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_FRESH_WATER
+# 395 "data/scripts/islandgame_common.pory"
+	random 5
+# 396 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_26
+Common_EventScript_VendingMachine_25:
+# 403 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_1
+
+Common_EventScript_VendingMachine_4:
+# 405 "data/scripts/islandgame_common.pory"
+	checkmoney 800
+# 406 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_11
+Common_EventScript_VendingMachine_10:
+# 412 "data/scripts/islandgame_common.pory"
+	removemoney 800
+# 413 "data/scripts/islandgame_common.pory"
+	updatemoneybox
+# 414 "data/scripts/islandgame_common.pory"
+	playse SE_SHOP
+# 415 "data/scripts/islandgame_common.pory"
+	waitse
+# 416 "data/scripts/islandgame_common.pory"
+	playse SE_VEND
+# 417 "data/scripts/islandgame_common.pory"
+	waitse
+# 418 "data/scripts/islandgame_common.pory"
+	hidemoneybox
+# 421 "data/scripts/islandgame_common.pory"
+	random 10
+# 422 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_20
+Common_EventScript_VendingMachine_19:
+# 431 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_SODA_POP
+# 434 "data/scripts/islandgame_common.pory"
+	random 5
+# 435 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_29
+Common_EventScript_VendingMachine_28:
+# 442 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_1
+
+Common_EventScript_VendingMachine_5:
+# 444 "data/scripts/islandgame_common.pory"
+	checkmoney 1200
+# 445 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_14
+Common_EventScript_VendingMachine_13:
+# 451 "data/scripts/islandgame_common.pory"
+	removemoney 1200
+# 452 "data/scripts/islandgame_common.pory"
+	updatemoneybox
+# 453 "data/scripts/islandgame_common.pory"
+	playse SE_SHOP
+# 454 "data/scripts/islandgame_common.pory"
+	waitse
+# 455 "data/scripts/islandgame_common.pory"
+	playse SE_VEND
+# 456 "data/scripts/islandgame_common.pory"
+	waitse
+# 457 "data/scripts/islandgame_common.pory"
+	hidemoneybox
+# 460 "data/scripts/islandgame_common.pory"
+	random 10
+# 461 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_23
+Common_EventScript_VendingMachine_22:
+# 470 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_LEMONADE
+# 473 "data/scripts/islandgame_common.pory"
+	random 5
+# 474 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_VendingMachine_32
+Common_EventScript_VendingMachine_31:
+# 480 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_1
+
+Common_EventScript_VendingMachine_8:
+# 368 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_5
+# 371 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_7
+
+Common_EventScript_VendingMachine_11:
+# 407 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_5
+# 410 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_10
+
+Common_EventScript_VendingMachine_14:
+# 446 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_5
+# 449 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_13
+
+Common_EventScript_VendingMachine_17:
+# 384 "data/scripts/islandgame_common.pory"
+	playse SE_TRUCK_UNLOAD
+# 385 "data/scripts/islandgame_common.pory"
+	waitse
+# 386 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_6
+# 389 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_16
+
+Common_EventScript_VendingMachine_20:
+# 423 "data/scripts/islandgame_common.pory"
+	playse SE_TRUCK_UNLOAD
+# 424 "data/scripts/islandgame_common.pory"
+	waitse
+# 425 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_6
+# 428 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_19
+
+Common_EventScript_VendingMachine_23:
+# 462 "data/scripts/islandgame_common.pory"
+	playse SE_TRUCK_UNLOAD
+# 463 "data/scripts/islandgame_common.pory"
+	waitse
+# 464 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_6
+# 467 "data/scripts/islandgame_common.pory"
+	goto Common_VendingMachine
+	goto Common_EventScript_VendingMachine_22
+
+Common_EventScript_VendingMachine_26:
+# 397 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_7
+# 400 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_FRESH_WATER
+	goto Common_EventScript_VendingMachine_25
+
+Common_EventScript_VendingMachine_29:
+# 436 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_7
+# 439 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_SODA_POP
+	goto Common_EventScript_VendingMachine_28
+
+Common_EventScript_VendingMachine_32:
+# 475 "data/scripts/islandgame_common.pory"
+	msgbox Common_EventScript_VendingMachine_Text_7
+# 478 "data/scripts/islandgame_common.pory"
+	giveitem ITEM_LEMONADE
+	goto Common_EventScript_VendingMachine_31
+
+
 IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_Text_0:
 # 34 "data/scripts/islandgame_common.pory"
 	.string "Welcome to the Maryan isles, trainer!\n"
@@ -692,3 +925,38 @@ ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_10:
 # 291 "data/scripts/islandgame_common.pory"
 	.string "Pleasure doin' business with you,\n"
 	.string "trainer!$"
+
+Common_EventScript_VendingMachine_Text_0:
+# 356 "data/scripts/islandgame_common.pory"
+	.string "{COLOR RED}(It's a vending machine. What should I\n"
+	.string "get?)$"
+
+Common_EventScript_VendingMachine_Text_1:
+# 359 "data/scripts/islandgame_common.pory"
+	.string "Nah, I'm good$"
+
+Common_EventScript_VendingMachine_Text_2:
+# 360 "data/scripts/islandgame_common.pory"
+	.string "Fresh Water - ¥500$"
+
+Common_EventScript_VendingMachine_Text_3:
+# 361 "data/scripts/islandgame_common.pory"
+	.string "Soda Pop - ¥800$"
+
+Common_EventScript_VendingMachine_Text_4:
+# 362 "data/scripts/islandgame_common.pory"
+	.string "Lemonade - ¥1200$"
+
+Common_EventScript_VendingMachine_Text_5:
+# 369 "data/scripts/islandgame_common.pory"
+	.string "{COLOR RED}(I don't have enough money.)$"
+
+Common_EventScript_VendingMachine_Text_6:
+# 387 "data/scripts/islandgame_common.pory"
+	.string "{COLOR RED}(Looks like the machine got jammed.\n"
+	.string "What a scam.)$"
+
+Common_EventScript_VendingMachine_Text_7:
+# 398 "data/scripts/islandgame_common.pory"
+	.string "{COLOR RED}(Huh? Looks like another drink fell\n"
+	.string "along with mine.)$"
