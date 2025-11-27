@@ -43,7 +43,7 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
     //             setobjectxyperm(LOCALID_RIVAL, BENCH_X, BENCH_Y)
     //         case STATE_EXHIBIT_ROBBED:
     //         case STATE_FOUND_THIEF:
-    //             if (checkfollower == FALSE) {
+    //             if (checkfollowernpc == FALSE) {
     //                 // rival is waiting near the entrance to aetheria, by pleasant ave
     //                 setobjectxyperm(LOCALID_RIVAL, ENTRANCE_X, ENTRANCE_Y)
     //             }
@@ -55,14 +55,14 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
 
 // // TODO(poe): Create triggers for this script
 // script ISLANDGAME_AETHERIA_LeaveCity {
-//     if (checkfollower == TRUE) {
+//     if (checkfollowernpc == TRUE) {
 //         msgbox("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Are you leaving?", MSGBOX_YESNO)
 //         switch (var(VAR_RESULT)) {
 //             case YES:
 //                 msgbox("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Come back soon...")
 //                 applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight)
 //                 waitmovement(OBJ_EVENT_ID_PLAYER)
-//                 destroyfollower
+//                 destroyfollowernpc
 //             case NO:
 //                 msgbox("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Lets go!")
 //         }
@@ -70,7 +70,7 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
 //     else {
 //         msgbox("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Welcome back!")
 //         // TODO(poe): Create rival partner team, check to make sure flags are correct
-//         setfollower(LOCALID_RIVAL, 0x100, ISLANDGAME_AETHERIA_Rival, PARTNER_AETHERIA_RIVAL)
+//         setfollowernpc(LOCALID_RIVAL, 0x100, ISLANDGAME_AETHERIA_Rival, PARTNER_AETHERIA_RIVAL)
 //         applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
 //         waitmovement(OBJ_EVENT_ID_PLAYER)
 //     }
@@ -879,9 +879,9 @@ script ISLANDGAME_AETHERIA_Wally {
             ))
             // multi_2_vs_2 TRAINER_MAXIE_MOSSDEEP, MossdeepCity_SpaceCenter_2F_Text_JustWantToExpandLand, TRAINER_TABITHA_MOSSDEEP, MossdeepCity_SpaceCenter_Text_TabithaDefeat, PARTNER_STEVEN
             
-            // setfollower(8, 0x100, ISLANDGAME_AETHERIA_Wally, PARTNER_AETHERIA_WALLY)
+            // setfollowernpc(8, 0x100, ISLANDGAME_AETHERIA_Wally, PARTNER_AETHERIA_WALLY)
             // trainerbattle_two_trainers(TRAINER_AETHERIA_BRENDAN, "Well, this shirt is ruined...", TRAINER_AETHERIA_MAY, "Auuuugh! No way! We lost!?")
-            // destroyfollower
+            // destroyfollowernpc
             
             multi_2_vs_2(TRAINER_AETHERIA_BRENDAN, "Well, this shirt is ruined...", TRAINER_AETHERIA_MAY, "Auuuugh! No way! We lost!?", PARTNER_AETHERIA_WALLY)
             switch(var(VAR_RESULT)) {

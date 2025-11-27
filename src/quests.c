@@ -894,6 +894,18 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
         .numSubquests = SUB_QUEST_COUNT_CUBONE 
     },
 
+    [QUEST_GOON_GANG_ENCOUNTER] =
+    {
+        .name = COMPOUND_STRING("Impending Doom"),
+        .desc = COMPOUND_STRING("You've been marked for death.\nBest watch your back..."),
+        .donedesc = COMPOUND_STRING("You showed those Goons\nwhat's up!."),
+        .map = COMPOUND_STRING("Lumine"),
+        .sprite = OBJ_EVENT_GFX_BIKER, 
+        .spritetype = OBJECT,
+        .subquests = NULL,
+        .numSubquests = 0 
+    },
+
     [QUEST_MISSINGNO] =
     {
         .name = COMPOUND_STRING("<?> À GlitŒh エñ tHœ MあtrÏx"),
