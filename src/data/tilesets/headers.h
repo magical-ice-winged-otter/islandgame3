@@ -840,39 +840,6 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_test =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_test,
-    .palettes = gTilesetPalettes_test,
-    .metatiles = gMetatiles_test,
-    .metatileAttributes = gMetatileAttributes_test,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_PorytilesPrimaryTest =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_PorytilesPrimaryTest,
-    .palettes = gTilesetPalettes_PorytilesPrimaryTest,
-    .metatiles = gMetatiles_PorytilesPrimaryTest,
-    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_PorytilesSecondaryTest =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PorytilesSecondaryTest,
-    .palettes = gTilesetPalettes_PorytilesSecondaryTest,
-    .metatiles = gMetatiles_PorytilesSecondaryTest,
-    .metatileAttributes = gMetatileAttributes_PorytilesSecondaryTest,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_islandgame_ss_rain_general =
 {
     .isCompressed = TRUE,

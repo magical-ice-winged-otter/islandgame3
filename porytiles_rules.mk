@@ -35,7 +35,7 @@ METATILE_BEHAVIORS_DIR := include/constants/metatile_behaviors.h
 PRIMARY_TILESET_DIR := $(TILESETS_DIR)/primary
 SECONDARY_TILESET_DIR := $(TILESETS_DIR)/secondary
 PORYTILES_DATA_DIR := porytiles-data
-PORYTILES_BUILD_ARTIFACTS := top.png middle.png bottom.png attributes.csv
+PORYTILES_BUILD_ARTIFACTS := top.png middle.png bottom.png
 
 PRIMARY_TILESET_TARGETS := $(patsubst %/$(PORYTILES_DATA_DIR),%/metatiles.bin,$(shell find $(PRIMARY_TILESET_DIR) -type d -name $(PORYTILES_DATA_DIR)))
 SECONDARY_TILESET_TARGETS := $(patsubst %/$(PORYTILES_DATA_DIR),%/metatiles.bin,$(shell find $(SECONDARY_TILESET_DIR) -type d -name $(PORYTILES_DATA_DIR)))
@@ -65,6 +65,27 @@ endef
 
 # Define secondary tilesets here:
 # $(eval $(call secondary-tileset-macro,test-secondary,general2))
+$(eval $(call secondary-tileset-macro,islandgame_ss_rain_secondary,islandgame_ss_rain_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_persi,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_cheriport,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_maplegrove,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_central_path,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_verdant,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_rosevale,islandgame_oranna_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_tidalcove,islandgame_ocean_general))
+$(eval $(call secondary-tileset-macro,islandgame_oranna_mt_aurora,islandgame_empty_primary))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_applevine,islandgame_ocean_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_rocky_path,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_bellehaven,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_bellehaven,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_aetheria,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_azure_path,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_arboria,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_sierra_path,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_cantalo,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_power_plant,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_therion_path,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_cave_1,islandgame_general))
 
 # To debug the macro, try this info log:
 # $(info The generated rule string is: [$(call secondary-tileset-macro,test-secondary,general2)])
