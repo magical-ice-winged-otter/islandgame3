@@ -1290,7 +1290,7 @@
     {
       "id": "MAPSEC_FRESA_FARMS",
       "name": "Fresa Farms",
-      "x": 5,
+      "x": 6,
       "y": 12,
       "width": 1,
       "height": 1
@@ -1346,7 +1346,7 @@
     {
       "id": "MAPSEC_TIDALCOVE",
       "name": "Tidalcove",
-      "x": 3,
+      "x": 4,
       "y": 10,
       "width": 1,
       "height": 2
