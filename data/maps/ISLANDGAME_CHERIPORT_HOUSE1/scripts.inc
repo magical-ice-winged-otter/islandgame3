@@ -28,15 +28,17 @@ ISLANDGAME_CHERIPORT_TOWN1_EventScript_NPC2Talk::
 
 NPC1_Text::
 # 10 "data/maps/ISLANDGAME_CHERIPORT_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}Oranna is home to one of Marya's\n"
+	.string "Oranna is home to one of Marya's\n"
 	.string "legendary Isle Guardians.\p"
-	.string "{COLOR DARK_GRAY}The mythical Pokémon: Articuno!\p"
-	.string "{COLOR DARK_GRAY}I've never seen it in person, but they\n"
-	.string "say its wings can cause a blizzard!$"
+	.string "The mythical Wings of Frost: Articuno!\p"
+	.string "With a single flap of its wings, it can\n"
+	.string "chill the moisture in the air around it,\l"
+	.string "creating snow even in the sweltering\l"
+	.string "tropics of Marya!$"
 
 NPC2_Text::
 # 25 "data/maps/ISLANDGAME_CHERIPORT_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}I used to go to the beach every day.\p"
-	.string "{COLOR DARK_GRAY}But ever since Cheriport became a hot\n"
-	.string "vacation spot, it's been hard to find\l"
-	.string "space on the sand...$"
+	.string "Marya has really become a hot tourist\n"
+	.string "destination in recent years!\p"
+	.string "It's interesting seeing so many people\n"
+	.string "from different regions visiting here!$"

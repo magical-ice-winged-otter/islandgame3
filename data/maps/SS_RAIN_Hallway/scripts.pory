@@ -10,35 +10,33 @@ mapscripts SS_RAIN_Hallway_MapScripts {
 
 }
 
-script SS_RAIN_Hallway_GirlTalk {
+// random lass
+script ISLANDGAME_ORANNA_SSRAIN_Hallway_NPC {
     lock
     faceplayer
-    msgbox(NPCGirl_Text)
-    waitmessage
+    msgbox(format(
+        "Uggggg. It's sooooo hot outside. I'm staying in here until it's cooler."
+    ))
+    closemessage
     release
 }
 
-script SS_RAIN_Hallway_ElectricianTalk {
+script ISLANDGAME_ORANNA_SSRAIN_Hallway_Electrician {
     lock
+    faceplayer
     if(flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
         msgbox(format(
             "Oh hey, you're back!\p"
-            "Unfortunately, we still haven't figured out what's going on with the lights...\p"
-            "We're on our break right now, so you can check it out for yourself if you want.\p"
+            "Unfortunately, I still haven't figured out what's going on with the lights...\p"
+            "I'm on my lunch break right now, so you can check it out for yourself if you want.\p"
             "Just watch your step though... It's pretty dark."
         ))
-    }
-    else {
-        msgbox(format(
-            "{COLOR DARK_GRAY}We're currently doing some maintenance, so I can't let you downstairs for now.\p"
-            "{COLOR DARK_GRAY}For some reason, the lights just keep turning on and off by themselves.\p"
-            "{COLOR DARK_GRAY}It's almost like they're being possessed by a {COLOR LIGHT_BLUE}ghost {COLOR DARK_GRAY}or something..."
-        ))   
-    }
-    waitmessage
+    }   
+    msgbox(format(
+        "I'm currently doing some maintenance, so I can't let you downstairs for now.\p"
+        "For some reason, the lights just keep turning on and off by themselves.\p"
+        "It's almost like they're being possessed by a {COLOR LIGHT_BLUE}ghost {COLOR DARK_GRAY}or something..."
+    ))   
+    closemessage
     release
-}
-
-text NPCGirl_Text {
-    format("{COLOR DARK_GRAY}It's too hot outside. I'm staying in here until it's cooler.")
 }

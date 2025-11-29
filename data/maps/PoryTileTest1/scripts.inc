@@ -98,43 +98,37 @@ PoryTileTest2_EventScript_NPC4Talk::
 	faceplayer
 # 90 "data/maps/PoryTileTest1/scripts.pory"
 	msgbox PoryTileTest2_EventScript_NPC4Talk_Text_0
-# 96 "data/maps/PoryTileTest1/scripts.pory"
+# 93 "data/maps/PoryTileTest1/scripts.pory"
 	applymovement 4, Common_Movement_FaceLeft
-# 97 "data/maps/PoryTileTest1/scripts.pory"
+# 94 "data/maps/PoryTileTest1/scripts.pory"
 	waitmovement 0
-# 98 "data/maps/PoryTileTest1/scripts.pory"
+# 95 "data/maps/PoryTileTest1/scripts.pory"
 	closemessage
-# 99 "data/maps/PoryTileTest1/scripts.pory"
+# 96 "data/maps/PoryTileTest1/scripts.pory"
 	release
 	return
 
 
 PoryTileTest2_EventScript_Stern::
-# 103 "data/maps/PoryTileTest1/scripts.pory"
+# 100 "data/maps/PoryTileTest1/scripts.pory"
 	lock
-# 104 "data/maps/PoryTileTest1/scripts.pory"
+# 101 "data/maps/PoryTileTest1/scripts.pory"
 	faceplayer
-# 105 "data/maps/PoryTileTest1/scripts.pory"
+# 102 "data/maps/PoryTileTest1/scripts.pory"
 	msgbox PoryTileTest2_EventScript_Stern_Text_0
-# 108 "data/maps/PoryTileTest1/scripts.pory"
+# 105 "data/maps/PoryTileTest1/scripts.pory"
 	closemessage
-# 109 "data/maps/PoryTileTest1/scripts.pory"
+# 106 "data/maps/PoryTileTest1/scripts.pory"
 	release
 	return
 
 
 PoryTileTest2_EventScript_NPC4Talk_Text_0:
 # 91 "data/maps/PoryTileTest1/scripts.pory"
-	.string "I'M FLYING!!!!!\p"
-	.string "Huh? What do you mean, why am I yelling\n"
-	.string "that? Do you really not know why?\p"
-	.string "I feel bad for you kids. You missed out\n"
-	.string "on the golden age of entertainment.\p"
-	.string "Now you're all engrossed in that cringe\n"
-	.string "PokéIdol nonsense or whatever.$"
+	.string "I'M FLYING!!!!!$"
 
 PoryTileTest2_EventScript_Stern_Text_0:
-# 106 "data/maps/PoryTileTest1/scripts.pory"
+# 103 "data/maps/PoryTileTest1/scripts.pory"
 	.string "This is quite the impressive vessel, I\n"
 	.string "must say. It's just like our S.S. Tidal.$"
 

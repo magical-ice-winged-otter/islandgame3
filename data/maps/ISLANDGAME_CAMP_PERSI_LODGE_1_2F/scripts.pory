@@ -61,7 +61,8 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC {
                 ))
             closemessage
             playse(SE_PIN)
-            applymovement(1, ExclaimFacePlayer)
+            applymovement(1, Common_Movement_ExclamationMark)
+            applymovement(1, Common_Movement_FacePlayer)
             faceplayer
             delay(30)
             msgbox(format(

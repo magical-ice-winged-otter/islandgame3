@@ -737,10 +737,10 @@ Common_EventScript_VendingMachine_32:
 
 IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_Text_0:
 # 34 "data/scripts/islandgame_common.pory"
-	.string "Welcome to the Maryan isles, trainer!\n"
-	.string "This is a Pokémon Center.\p"
-	.string "You don't have any Pokémon right now,\n"
-	.string "but when you do we can heal them.$"
+	.string "Welcome to the Maryan isles! This is a\n"
+	.string "Pokémon Center.\p"
+	.string "Trainers can bring their Pokémon here\n"
+	.string "to have them healed free of charge!$"
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_0:
 # 56 "data/scripts/islandgame_common.pory"
