@@ -1452,3 +1452,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_AETHERIA_SEWERS_MAIN/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_2/scripts.inc"

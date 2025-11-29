@@ -5245,7 +5245,7 @@
       "id": "LAYOUT_ISLANDGAME_AETHERIA",
       "name": "ISLANDGAME_AETHERIA_Layout",
       "width": 78,
-      "height": 70,
+      "height": 36,
       "primary_tileset": "gTileset_islandgame_lumine_general",
       "secondary_tileset": "gTileset_islandgame_lumine_aetheria",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA/border.bin",
@@ -5850,6 +5850,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_2",
+      "name": "ISLANDGAME_AETHERIA_2_Layout",
+      "width": 78,
+      "height": 34,
+      "primary_tileset": "gTileset_islandgame_lumine_general",
+      "secondary_tileset": "gTileset_islandgame_lumine_aetheria",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/map.bin"
     }
   ]
 }

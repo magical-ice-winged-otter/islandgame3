@@ -17,6 +17,11 @@
       "map": "MAP_ISLANDGAME_PLEASANT_AVENUE",
       "offset": 1,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ISLANDGAME_AETHERIA_2",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -44,136 +49,6 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ISLANDGAME_AETHERIA_NPC1",
-      "flag": "FLAG_TEMP_3"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
-      "x": 68,
-      "y": 41,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_IceCreamLady",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 56,
-      "y": 56,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer2",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
-      "x": 61,
-      "y": 62,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer1",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_2",
-      "x": 59,
-      "y": 58,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Brendan",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAY_2",
-      "x": 59,
-      "y": 56,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_May",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_WALLY",
-      "x": 66,
-      "y": 56,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Wally",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 69,
-      "y": 55,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_WallyDad",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SCOTT",
-      "x": 63,
-      "y": 53,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Scott",
-      "flag": "FLAG_TEMP_5"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POLICE",
-      "x": 58,
-      "y": 42,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "6",
-      "script": "ISLANDGAME_AETHERIA_Trainer1",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 59,
-      "y": 44,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC3",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -346,19 +221,6 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 21,
-      "y": 40,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_DRAGON_TAMER",
       "x": 38,
       "y": 27,
@@ -396,58 +258,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ISLANDGAME_AETHERIA_NPC10",
       "flag": "FLAG_TEMP_3"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_GROUND_SWIMMER_F",
-      "x": 6,
-      "y": 36,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_GROUND_SWIMMER_M",
-      "x": 2,
-      "y": 51,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_DOWN_AND_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
-      "x": 6,
-      "y": 41,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
-      "x": 7,
-      "y": 62,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
@@ -554,58 +364,6 @@
       "flag": "FLAG_TEMP_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 65,
-      "y": 37,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC3",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_MANIAC",
-      "x": 62,
-      "y": 46,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC4",
-      "flag": "FLAG_TEMP_3"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_TWIN",
-      "x": 64,
-      "y": 46,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC5",
-      "flag": "FLAG_TEMP_3"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": 65,
-      "y": 46,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC6",
-      "flag": "FLAG_TEMP_3"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(PURRLOIN_MARYAN)",
       "x": 47,
       "y": 17,
@@ -617,110 +375,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ISLANDGAME_AETHERIA_StrayPurrloin",
       "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
-      "x": 70,
-      "y": 41,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 65,
-      "y": 49,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC7",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_NURSE",
-      "x": 69,
-      "y": 58,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer3",
-      "flag": "FLAG_TEMP_4"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 59,
-      "y": 57,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Battler1",
-      "flag": "FLAG_TEMP_4"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(FRAXURE)",
-      "x": 61,
-      "y": 57,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_FraxureBattle",
-      "flag": "FLAG_TEMP_4"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_NERD",
-      "x": 66,
-      "y": 57,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Battler2",
-      "flag": "FLAG_TEMP_4"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(KIRLIA)",
-      "x": 64,
-      "y": 57,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_KirliaBattle",
-      "flag": "FLAG_TEMP_4"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_5",
-      "x": 56,
-      "y": 58,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer4",
-      "flag": "FLAG_TEMP_4"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DIANCIE)",
@@ -880,32 +534,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 14,
-      "y": 60,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 10,
-      "y": 48,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
       "x": 20,
       "y": 35,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 34,
-      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -946,30 +576,6 @@
       "type": "sign",
       "x": 64,
       "y": 16,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_AETHERIA_EmptyTrash"
-    },
-    {
-      "type": "sign",
-      "x": 58,
-      "y": 44,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_AETHERIA_EmptyTrash"
-    },
-    {
-      "type": "sign",
-      "x": 70,
-      "y": 51,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_AETHERIA_EmptyTrash"
-    },
-    {
-      "type": "sign",
-      "x": 65,
-      "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ISLANDGAME_AETHERIA_EmptyTrash"
@@ -1061,30 +667,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Common_EventScript_VendingMachine"
-    },
-    {
-      "type": "sign",
-      "x": 56,
-      "y": 53,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "FLAG_HIDDEN_ITEM_AETHERIA_COLBUR_BERRY"
-    },
-    {
-      "type": "sign",
-      "x": 67,
-      "y": 42,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "ISLANDGAME_AETHERIA_IceCreamLady"
-    },
-    {
-      "type": "sign",
-      "x": 68,
-      "y": 42,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "ISLANDGAME_AETHERIA_IceCreamLady"
     }
   ],
   "night_music": "MUS_DP_JUBILIFE_NIGHT"
