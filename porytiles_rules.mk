@@ -78,7 +78,7 @@ $(eval $(call secondary-tileset-macro,islandgame_lumine_applevine,islandgame_oce
 $(eval $(call secondary-tileset-macro,islandgame_lumine_rocky_path,islandgame_lumine_general))
 $(eval $(call secondary-tileset-macro,islandgame_lumine_bellehaven,islandgame_lumine_general))
 $(eval $(call secondary-tileset-macro,islandgame_lumine_bellehaven,islandgame_lumine_general))
-$(eval $(call secondary-tileset-macro,islandgame_lumine_aetheria,islandgame_lumine_general))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_aetheria_secondary,islandgame_lumine_general))
 $(eval $(call secondary-tileset-macro,islandgame_lumine_azure_path,islandgame_lumine_general))
 $(eval $(call secondary-tileset-macro,islandgame_lumine_arboria,islandgame_lumine_general))
 $(eval $(call secondary-tileset-macro,islandgame_lumine_sierra_path,islandgame_lumine_general))
