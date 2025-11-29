@@ -5204,7 +5204,7 @@
     {
       "id": "LAYOUT_ISLANDGAME_BELLEHAVEN",
       "name": "ISLANDGAME_BELLEHAVEN_Layout",
-      "width": 38,
+      "width": 47,
       "height": 40,
       "primary_tileset": "gTileset_islandgame_lumine_general",
       "secondary_tileset": "gTileset_islandgame_lumine_bellehaven",
@@ -5234,10 +5234,10 @@
     {
       "id": "LAYOUT_ISLANDGAME_PLEASANT_AVENUE",
       "name": "ISLANDGAME_PLEASANT_AVENUE_Layout",
-      "width": 36,
+      "width": 51,
       "height": 35,
-      "primary_tileset": "gTileset_islandgame_lumine_general",
-      "secondary_tileset": "gTileset_islandgame_lumine_bellehaven",
+      "primary_tileset": "gTileset_islandgame_lumine_aetheria",
+      "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_PLEASANT_AVENUE/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_PLEASANT_AVENUE/map.bin"
     },
@@ -5246,7 +5246,7 @@
       "name": "ISLANDGAME_AETHERIA_Layout",
       "width": 78,
       "height": 36,
-      "primary_tileset": "gTileset_islandgame_lumine_general",
+      "primary_tileset": "gTileset_islandgame_lumine_aetheria",
       "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA/map.bin"
@@ -5856,7 +5856,7 @@
       "name": "ISLANDGAME_AETHERIA_2_Layout",
       "width": 78,
       "height": 34,
-      "primary_tileset": "gTileset_islandgame_lumine_general",
+      "primary_tileset": "gTileset_islandgame_lumine_aetheria",
       "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/map.bin"

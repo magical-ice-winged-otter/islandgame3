@@ -1283,3 +1283,14 @@ const struct Tileset gTileset_islandgame_kanto_pokemontower =
     .metatileAttributes = gMetatileAttributes_islandgame_kanto_pokemontower,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_islandgame_lumine_aetheria =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_islandgame_lumine_aetheria,
+    .palettes = gTilesetPalettes_islandgame_lumine_aetheria,
+    .metatiles = gMetatiles_islandgame_lumine_aetheria,
+    .metatileAttributes = gMetatileAttributes_islandgame_lumine_aetheria,
+    .callback = NULL,
+};
