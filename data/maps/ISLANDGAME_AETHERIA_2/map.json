@@ -2,14 +2,14 @@
   "id": "MAP_ISLANDGAME_AETHERIA_2",
   "name": "ISLANDGAME_AETHERIA_2",
   "layout": "LAYOUT_ISLANDGAME_AETHERIA_2",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_DP_JUBILIFE_DAY",
+  "region_map_section": "MAPSEC_AETHERIA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
-  "allow_cycling": false,
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
@@ -439,5 +439,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
     }
-  ]
+  ],
+  "night_music": "MUS_DP_JUBILIFE_NIGHT"
 }

@@ -1,1 +1,39 @@
-mapscripts ISLANDGAME_AETHERIA_2_MapScripts {}
+const FLAG_DAYTIME = FLAG_TEMP_2
+const FLAG_NIGHTTIME = FLAG_TEMP_3
+
+mapscripts ISLANDGAME_AETHERIA_2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        gettime
+
+        if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
+            setflag(FLAG_NIGHTTIME) // hides daytime npcs
+            setflag(FLAG_TEMP_5) // (TEMP) cameo battle(s) only occur during daytime
+        }
+        else {
+            setflag(FLAG_DAYTIME) // hides nighttime npcs
+        }
+
+        if(!flag(FLAG_DAILY_AETHERIA_CAMEO_BATTLE)) { // hide npcs if there is a cameo active
+            setflag(FLAG_TEMP_4)
+        }
+        else {
+            setflag(FLAG_TEMP_5)
+        }
+
+    //     switch (var(VAR_AETHERIA_STATE)) {
+    //         case STATE_INITIAL:
+    //         case STATE_FOUND_RIVAL:
+    //         case STATE_DEFEATED_RIVAL:
+    //             // sets up the rival waiting at the bench in the town square
+    //             setobjectxyperm(LOCALID_RIVAL, BENCH_X, BENCH_Y)
+    //         case STATE_EXHIBIT_ROBBED:
+    //         case STATE_FOUND_THIEF:
+    //             if (checkfollowernpc == FALSE) {
+    //                 // rival is waiting near the entrance to aetheria, by pleasant ave
+    //                 setobjectxyperm(LOCALID_RIVAL, ENTRANCE_X, ENTRANCE_Y)
+    //             }
+    //         default:
+    //             setobjectxyperm(LOCALID_RIVAL, POS_HIDDEN_X, POS_HIDDEN_Y)
+    //     }
+    }
+}
