@@ -439,3 +439,10 @@ const u8 gItemEffect_TamatoBerry[10] = {
     [6] = ITEM6_SUBTRACT_EV,
     EV_BERRY_FRIENDSHIP_CHANGE,
 };
+
+const u8 gItemEffect_Pokevial[7] = {
+    [0] = ITEM0_POKEVIAL,
+    [3] = ITEM3_STATUS_ALL,
+    [4] = ITEM4_REVIVE | ITEM4_HEAL_HP | ITEM4_HEAL_PP,
+    [6] = ITEM6_HEAL_HP_FULL | ITEM6_HEAL_PP_FULL,
+};
