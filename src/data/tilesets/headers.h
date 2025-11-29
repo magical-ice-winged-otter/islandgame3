@@ -1009,14 +1009,14 @@ const struct Tileset gTileset_islandgame_lumine_general =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_islandgame_lumine_aetheria =
+const struct Tileset gTileset_islandgame_lumine_aetheria_secondary =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_islandgame_lumine_aetheria,
-    .palettes = gTilesetPalettes_islandgame_lumine_aetheria,
-    .metatiles = gMetatiles_islandgame_lumine_aetheria,
-    .metatileAttributes = gMetatileAttributes_islandgame_lumine_aetheria,
+    .tiles = gTilesetTiles_islandgame_lumine_aetheria_secondary,
+    .palettes = gTilesetPalettes_islandgame_lumine_aetheria_secondary,
+    .metatiles = gMetatiles_islandgame_lumine_aetheria_secondary,
+    .metatileAttributes = gMetatileAttributes_islandgame_lumine_aetheria_secondary,
     .callback = NULL,
 };
 

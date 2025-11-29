@@ -5247,7 +5247,7 @@
       "width": 78,
       "height": 36,
       "primary_tileset": "gTileset_islandgame_lumine_general",
-      "secondary_tileset": "gTileset_islandgame_lumine_aetheria",
+      "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA/map.bin"
     },
@@ -5857,7 +5857,7 @@
       "width": 78,
       "height": 34,
       "primary_tileset": "gTileset_islandgame_lumine_general",
-      "secondary_tileset": "gTileset_islandgame_lumine_aetheria",
+      "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/map.bin"
     }
