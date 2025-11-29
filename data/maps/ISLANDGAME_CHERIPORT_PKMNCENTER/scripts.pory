@@ -48,9 +48,10 @@ script ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2 {
 
 text ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC2_TALK {
     format(
-        "{COLOR DARK_GRAY}They really need to update their selection of literature here. \p"
-        "{COLOR DARK_GRAY}I've already read 'Skitty & Wailord' like a hundred times!"
-        )
+        "The Pokémon Centers in Marya are top notch!\p"
+        "They've got rooms upstairs where you can rest in and pass time for FREE!\p"
+        "The hospitality here is amazing. If only Unova was like this..."
+    )
 }
 
 script ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3 {
@@ -62,7 +63,8 @@ script ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3 {
 
 text ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC3_TALK {
     format(
-        "{COLOR DARK_GRAY}Man, I'm glad there's a Pokémon Center here...\p"
-        "{COLOR DARK_GRAY}Trainers and wild Pokémon here are way tougher than at home!"
-        )
+        "In the path between Cheriport and Camp Persi is a small cave where a scary black Pokémon lives.\p"
+        "It's always sitting atop the rocky hills watching people walk by...\p"
+        "...it's not going to eat us, right? Pokémon don't eat people, right...?"
+    )
 }

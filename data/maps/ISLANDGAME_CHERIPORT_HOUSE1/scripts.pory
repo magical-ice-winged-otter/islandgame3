@@ -9,9 +9,9 @@ script ISLANDGAME_CHERIPORT_TOWN1_EventScript_NPC1Talk {
 
 text NPC1_Text  {
     format(
-        "{COLOR DARK_GRAY}Oranna is home to one of Marya's legendary Isle Guardians. \p"
-        "{COLOR DARK_GRAY}The mythical Pokémon: Articuno! \p"
-        "{COLOR DARK_GRAY}I've never seen it in person, but they say its wings can cause a blizzard!"
+        "Oranna is home to one of Marya's legendary Isle Guardians. \p"
+        "The mythical Wings of Frost: Articuno! \p"
+        "With a single flap of its wings, it can chill the moisture in the air around it, creating snow even in the sweltering tropics of Marya!"
     )
 }
 
@@ -24,7 +24,7 @@ script ISLANDGAME_CHERIPORT_TOWN1_EventScript_NPC2Talk {
 
 text NPC2_Text  {
     format(
-        "{COLOR DARK_GRAY}I used to go to the beach every day. \p"
-        "{COLOR DARK_GRAY}But ever since Cheriport became a hot vacation spot, it's been hard to find space on the sand..."
+        "Marya has really become a hot tourist destination in recent years!\p"
+        "It's interesting seeing so many people from different regions visiting here!"
     )
 }

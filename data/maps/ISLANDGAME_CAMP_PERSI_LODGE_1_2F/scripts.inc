@@ -75,17 +75,19 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC::
 # 63 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	playse SE_PIN
 # 64 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	applymovement 1, ExclaimFacePlayer
+	applymovement 1, Common_Movement_ExclamationMark
 # 65 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	faceplayer
+	applymovement 1, Common_Movement_FacePlayer
 # 66 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	delay 30
+	faceplayer
 # 67 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+	delay 30
+# 68 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_Text_4
-# 71 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 72 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	setvar VAR_CAMP_PERSI_STATE, 1
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_1:
-# 73 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 74 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	release
 	return
 
@@ -116,13 +118,13 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_5:
 
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC2::
-# 77 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	lock
 # 78 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	faceplayer
+	lock
 # 79 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+	faceplayer
+# 80 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC2_Text_0
-# 82 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 83 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	release
 	return
 
@@ -159,7 +161,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_Text_3:
 	.string "like stealing candy from a baby!$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_Text_4:
-# 68 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 69 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	.string "Aiiiiiie! {PAUSE 30} Where did you come from!? How\n"
 	.string "long have you been listening!?\p"
 	.string "I-I was just joking about the stealing\n"
@@ -168,7 +170,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_Text_4:
 	.string "snooping around camp!$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC2_Text_0:
-# 80 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 81 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	.string "I'm not good at remembering type\n"
 	.string "match-ups, so the card game helps me\l"
 	.string "learn them a lot better!$"

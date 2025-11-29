@@ -16,7 +16,9 @@ script ISLANDGAME_CHERIPORT_PKMNMART_EventScript_NPC1 {
 
 text ISLAND_GAME_CHERIPORT_PKMNMART_NPC1_TALK {
     format(
-        "{COLOR DARK_GRAY}Man, where's all the energy drinks? How am I supposed to grind without one?"
+        "I can't believe they don't sell booze to foreigners.\p"
+        "If I'd known of this sooner, I wouldn't have spent a grand just to come here!\p"
+        "These Silverwing guys gotta loosen up. How's anyone supposed to get a workout in without any pregame material?"
     )
 }
 
@@ -28,7 +30,7 @@ script ISLANDGAME_CHERIPORT_PKMNMART_EventScript_NPC2 {
 
 text ISLAND_GAME_CHERIPORT_PKMNMART_NPC2_TALK {
     format(
-        "{COLOR DARK_GRAY}Oh dear, everything here is so expensive..."
+        "Oh dear, everything here is much more expensive compared to Hoenn..."
     )
 }
 

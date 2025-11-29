@@ -28,35 +28,6 @@ mapscripts ISLANDGAME_CHERIPORT_MapScripts {
     }
 }
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NightBeachSodaVendor {
-    lock
-    faceplayer
-    showmoneybox(0, 0)
-    msgbox(format("{COLOR DARK_GRAY}Premium Cheri-Cola made with REAL sugar, only ¥600 a pop!"), MSGBOX_YESNO)
-
-    if (var(VAR_RESULT) == NO) {
-        msgbox("Huh? You're missin' out, bud!")
-        goto(NightBeachSodaVendor_End)
-    }
-
-    checkmoney(600)
-
-    if (!var(VAR_RESULT)) {
-        msgbox(format("{COLOR DARK_GRAY}Oi, this is PREMIUM soda. If you can't afford it, then beat it!"))
-        goto(NightBeachSodaVendor_End)
-    }
-
-    removemoney(600)
-    updatemoneybox
-    msgbox("Here ya go, friend!")
-    hidemoneybox
-    giveitem(ITEM_SODA_POP)
-
-NightBeachSodaVendor_End:
-    hidemoneybox
-    release
-}
-
 script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Eevee_Warning {
     if (!flag(FLAG_PROF_GAVE_EEVEE)) {
         lock
@@ -70,7 +41,7 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Eevee_Warning {
 
 
 text NeedPokemon_Text {
-    format("{COLOR RED}(I should go see Professor Palm before I leave the city.)")
+    format("{COLOR RED}(I should go see Professor Palm before I leave.)")
 }
 
 movement WalkBack {
@@ -132,9 +103,11 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Boy4 {
 }
 
 text NPCBoy_Talk {
-    format("{COLOR DARK_GRAY}While I was exploring the Southern Oranna Path at night, I was attacked by a Pokémon on the mountains. \p"
-           "{COLOR DARK_GRAY}I've never seen anything like it...{PAUSE 60} and I'm too scared to see it again."
-        )
+    format(
+        "Thanks to the advent of Rotom technology, our phones have effectively become pocket-sized supercomputers with processing power rivaling that of even Metagross!\p"
+        "To have gone from the PokéNav to the Rotom Phone in such a short period of time...\p"
+        "Heh... the power of science is quite staggering, isn't it?"
+    )
 }
 
 text MrBrineyTalk {
@@ -145,12 +118,9 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Peeko {
     lock
     faceplayer
     playmoncry(SPECIES_WINGULL,CRY_MODE_NORMAL)
-    msgbox(PeekoTalk)
+    applymovement(3, Common_Movement_Heart)
+    waitmoncry
     release
-}
-
-text PeekoTalk {
-    format("Wrooooar! {COLOR BLUE}(I'm Peeko. Ahoy!)")
 }
 
 script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC1 {
@@ -194,20 +164,6 @@ text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC4_TALK {
 }
 
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC6 {
-    lock
-    faceplayer
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC6_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC6_TALK {
-    format(
-        "{COLOR DARK_GRAY}Hiya! This is Cheriport. We get a lot of visitors from other regions here. \p"
-        "{COLOR DARK_GRAY}I actually moved here from the Johto region not too long ago."
-    )
-}
-
 script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC7 {
     lock
     msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC7_TALK)
@@ -216,7 +172,9 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC7 {
 
 text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC7_TALK {
     format(
-        "{COLOR DARK_GRAY}Come on...{PAUSE 30} Come on...{PAUSE 30} Argh! Not another Magikarp! I need a Horsea!")
+        "Come on...{PAUSE 30} Come on...{PAUSE 30} Argh! Not another Magikarp!\p"
+        "All I want is a {COLOR LIGHT_BLUE}Squirtle{COLOR DARK_GRAY}. Is that too much to ask for!?"
+    )
 }
 
 script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC8 {
@@ -228,8 +186,8 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC8 {
 
 text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC8_TALK {
     format(
-        "{COLOR DARK_GRAY}Cheriport is home to the Cheri Berry! \p"
-        "{COLOR DARK_GRAY}They may not taste good to us, but Pokémon sure love them!"
+        "Oranna is the smallest of the three principal islands in Marya.\p"
+        "Nothing much really happens here, which makes it the perfect place to chill."
     )
 }
 
@@ -328,7 +286,7 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN3 {
 text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN3_DESC {
     format(
         "{COLOR DARK_GRAY}SEASIDE SERVICES \n"
-        "{COLOR DARK_GRAY}Have a drink, it's on us!"
+        "{COLOR DARK_GRAY}Drinks on us!"
     )
 }
 
@@ -341,6 +299,6 @@ script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN4 {
 text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN4_DESC {
     format(
         "{COLOR DARK_GRAY}! WARNING ! \n"
-        "{COLOR DARK_GRAY}NO LIFEGUARD; SWIM AT YOUR OWN RISK!"
+        "{COLOR DARK_GRAY}NO LIFEGUARD! SWIM AT YOUR OWN RISK!"
     )
 }

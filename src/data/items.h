@@ -14777,9 +14777,8 @@ const struct Item gItemsInfo[] =
         .name = ITEM_NAME("Strange Disc"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "Huh? When did I”\n"
-            "get this? Wonder\n"
-            "what's inside..."
+            "Huh? When did I\n"
+            "get this?"
         ),
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

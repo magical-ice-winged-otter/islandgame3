@@ -1225,7 +1225,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 //island-game : Pokeball Items
-#define FLAG_ROOM3_ITEM                                             0x493 
+#define FLAG_ROOM3_ITEM                                             0x493       // not in use
 #define FLAG_ANOMALY01_ITEM                                         0x494
 #define FLAG_FRESA_FARMS_MILK                                       0x495 
 #define FLAG_VERDANT_PATH_TIMER_BALL                                0x496 
@@ -1251,7 +1251,7 @@
 #define FLAG_TRAVELERS_TUNNEL_DUSK_BALL                             0x4AA 
 #define FLAG_COP_1_REVIVE                                           0x4AB 
 #define FLAG_SS_RAIN_TM_CHARGE_BEAM                                 0x4AC 
-#define FLAG_SS_RAIN_MAX_REVIVE                                     0x4AD
+#define FLAG_SS_RAIN_LEFTOVERS                                      0x4AD
 #define FLAG_VERDANT_WOODS_MIMIKIUM_Z                               0x4AE
 #define FLAG_ITEM_COP_FULL_HEAL                                     0x4AF  
 #define FLAG_ITEM_COP_REPEAT_BALL                                   0x4B0

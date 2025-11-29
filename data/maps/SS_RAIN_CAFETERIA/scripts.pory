@@ -2,6 +2,15 @@ const VAR_CURRENT_HOUR = VAR_0x8000
 
 mapscripts SS_RAIN_CAFETERIA_MapScripts {}
 
+// alcremie
+script ISLANDGAME_ORANNA_SSRAIN_Cafeteria_Alcremie {
+    lock
+    msgbox(format(
+        "{COLOR RED}(Despite its appearance, it's just a cake that looks like an Alcremie.)"
+    ))
+    closemessage
+    release
+}
 
 script SS_RAIN_CAFETERIA_NPC1_TALK {
     lock
@@ -95,7 +104,7 @@ script SS_RAIN_CAFETERIA_IceCreamGirl {
     if(!flag(FLAG_SSRAIN_ICECREAM_RECEIVED)) {
         msgbox(format("I don't like how this ice cream tastes... Do you want it?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
-            msgbox(format("But I don't wanna throw it away..."))
+            msgbox(format("But I don't want it!"))
             goto(IceCreamGirl_End)
         }
         checkitemspace(ITEM_CASTELIACONE)

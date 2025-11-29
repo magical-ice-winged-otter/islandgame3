@@ -54,13 +54,13 @@ ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC2::
 
 
 ISLANDGAME_CHERIPORT_PKMNCENTER_EventScript_NPC3::
-# 57 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
-	lock
 # 58 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
-	faceplayer
+	lock
 # 59 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
-	msgbox ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC3_TALK
+	faceplayer
 # 60 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
+	msgbox ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC3_TALK
+# 61 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
 	release
 	return
 
@@ -86,14 +86,19 @@ ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC1_TALK::
 
 ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC2_TALK::
 # 49 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
-	.string "{COLOR DARK_GRAY}They really need to update their\n"
-	.string "selection of literature here.\p"
-	.string "{COLOR DARK_GRAY}I've already read 'Skitty & Wailord' like\n"
-	.string "a hundred times!$"
+	.string "The Pokémon Centers in Marya are top\n"
+	.string "notch!\p"
+	.string "They've got rooms upstairs where you\n"
+	.string "can rest in and pass time for FREE!\p"
+	.string "The hospitality here is amazing. If only\n"
+	.string "Unova was like this...$"
 
 ISLAND_GAME_CHERIPORT_PKMNCENTER_NPC3_TALK::
-# 63 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
-	.string "{COLOR DARK_GRAY}Man, I'm glad there's a Pokémon Center\n"
-	.string "here...\p"
-	.string "{COLOR DARK_GRAY}Trainers and wild Pokémon here are way\n"
-	.string "tougher than at home!$"
+# 64 "data/maps/ISLANDGAME_CHERIPORT_PKMNCENTER/scripts.pory"
+	.string "In the path between Cheriport and Camp\n"
+	.string "Persi is a small cave where a scary\l"
+	.string "black Pokémon lives.\p"
+	.string "It's always sitting atop the rocky hills\n"
+	.string "watching people walk by...\p"
+	.string "...it's not going to eat us, right?\n"
+	.string "Pokémon don't eat people, right...?$"
