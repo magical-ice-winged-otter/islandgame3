@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ISLANDGAME_BELLEHAVEN",
-      "offset": -7,
-      "direction": "right"
-    },
-    {
       "map": "MAP_ISLANDGAME_AETHERIA",
       "offset": -1,
       "direction": "left"
@@ -299,7 +294,15 @@
       "flag": "FLAG_TEMP_9"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 43,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_BELLEHAVEN",
+      "dest_warp_id": "7"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",
