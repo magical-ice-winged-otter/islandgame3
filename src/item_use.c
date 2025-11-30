@@ -88,7 +88,7 @@ static void UsePokevialFieldYes(u8 taskId);
 static void Task_UsePokevialFieldYes(u8 taskId);
 static void UsePokevialFieldNo(u8 taskId);
 static void UsePokevialYesNo(u8);
-static void UsePokevialYes(u8);
+static void UsePokevial(u8);
 void ItemUseOutOfBattle_Pokevial(u8);
 static void PokevialPrintPartyHealed(bool32 isPlayerUsingRegisteredKeyItem, u8 taskId);
 // Pokevial - end
@@ -1615,7 +1615,7 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
 
 static const struct YesNoFuncTable sUsePokevialYesNoFuncTable =
 {
-    .yesFunc = UsePokevialYes,
+    .yesFunc = UsePokevial,
     .noFunc = CloseItemMessage,
 };
 
@@ -1636,7 +1636,7 @@ static void UsePokevialFieldYesNo(u8 taskId)
     DoYesNoFuncWithChoice(taskId, &sYesNoTable_PokevialFieldFuncTable);
 }
 
-static void UsePokevialYes(u8 taskId)
+static void UsePokevial(u8 taskId)
 {
     if (POKEVIAL_SKIP_CUTSCENE)
     {
