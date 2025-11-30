@@ -18,6 +18,7 @@
 #include "pokedex.h"
 #include "pokemon.h"
 #include "pokemon_storage_system.h"
+#include "pokevial.h"
 #include "random.h"
 #include "script.h"
 #include "sprite.h"
@@ -34,6 +35,7 @@ static void HealPlayerBoxes(void);
 
 void HealPlayerParty(void)
 {
+    PokevialRefill();
     u32 i;
     for (i = 0; i < gPlayerPartyCount; i++)
         HealPokemon(&gPlayerParty[i]);
