@@ -253,9 +253,10 @@ gScriptCmdTable::
 	script_cmd_table_entry SCR_OP_DYNMULTIPUSH                  ScrCmd_dynmultipush,                requests_effects=1  @ 0xe4
 	script_cmd_table_entry SCR_OP_SETOBJECTASWILDENCOUNTER      ScrCmd_SetObjectAsWildEncounter,    requests_effects=1  @ 0xe5
 	script_cmd_table_entry SCR_OP_QUESTMENU                     ScrCmd_questmenu                    requests_effects=1  @ 0xe3
-    script_cmd_table_entry SCR_OP_SUBQUESTMENU                  ScrCmd_subquestmenu                 requests_effects=1  @ 0xe4
-    script_cmd_table_entry SCR_OP_RETURNQUESTSTATE              ScrCmd_returnqueststate             requests_effects=1  @ 0xe5
-    script_cmd_table_entry SCR_OP_SETCWILDBATTLE                ScrCmd_setcwildbattle,              requests_effects=1  @ 0xe6
+  script_cmd_table_entry SCR_OP_SETCWILDBATTLE                ScrCmd_setcwildbattle,              requests_effects=1  @ 0xe6
+  script_cmd_table_entry SCR_OP_SUBQUESTMENU                  ScrCmd_subquestmenu                 requests_effects=1  @ 0xe4
+  script_cmd_table_entry SCR_OP_RETURNQUESTSTATE              ScrCmd_returnqueststate             requests_effects=1  @ 0xe5
+  script_cmd_table_entry SCR_OP_POKEVIAL                      ScrCmd_pokevial                     requests_effects=1  @ 0xe7
 
 	.if ALLOCATE_SCRIPT_CMD_TABLE
 gScriptCmdTableEnd::

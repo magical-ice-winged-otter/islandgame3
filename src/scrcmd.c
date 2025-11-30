@@ -39,6 +39,7 @@
 #include "party_menu.h"
 #include "pokedex.h"
 #include "pokemon_storage_system.h"
+#include "pokevial.h"
 #include "quests.h"
 #include "random.h"
 #include "overworld.h"
@@ -3410,4 +3411,51 @@ bool8 ScrCmd_setcwildbattle(struct ScriptContext *ctx)
     CreateScriptedWildMonCustom(spot, species, level, item, nature, abilityNum, evs, ivs, moves, isShiny);
     sIsScriptedWildDouble = FALSE; //manually set it via script if we want doubles
     return FALSE;
+}
+
+bool8 ScrCmd_pokevial(struct ScriptContext *ctx)
+{
+    u8 mode = ScriptReadByte(ctx);
+    u8 parameter = ScriptReadByte(ctx);
+    u8 amount = ScriptReadByte(ctx);
+
+    switch (mode) {
+        case VIAL_GET:
+            switch (parameter) {
+                case VIAL_SIZE:
+                    PokevialGetSize();
+                    break;
+                case VIAL_DOSE:
+                    PokevialGetDose();
+                    break;
+            }
+            break;
+
+        case VIAL_UP:
+            switch (parameter) {
+                case VIAL_SIZE:
+                    PokevialSizeUp(amount);
+                    break;
+                case VIAL_DOSE:
+                    PokevialDoseUp(amount);
+                    break;
+            }
+            break;
+
+        case VIAL_DOWN:
+            switch (parameter) {
+                case VIAL_SIZE:
+                    PokevialSizeDown(amount);
+                    break;
+                case VIAL_DOSE:
+                    PokevialDoseDown(amount);
+                    break;
+            }
+            break;
+
+        case VIAL_REFILL:
+            PokevialRefill();
+            break;
+    }
+    return TRUE;
 }

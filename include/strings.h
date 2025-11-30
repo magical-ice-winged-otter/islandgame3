@@ -2431,4 +2431,6 @@ extern const u8 gText_QuestAnnounce[];
 extern const u8 gText_QuestComplete[];
 extern const u8 gText_QuestActive[];
 
+// Pokevial
+extern const u8 gText_YourPkmnWereRestored[];
 #endif // GUARD_STRINGS_H

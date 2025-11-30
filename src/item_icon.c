@@ -8,6 +8,7 @@
 #include "move.h"
 #include "sprite.h"
 #include "constants/items.h"
+#include "pokevial.h"
 
 // EWRAM vars
 EWRAM_DATA u8 *gItemIconDecompressionBuffer = NULL;
@@ -166,6 +167,8 @@ const void *GetItemIconPic(u16 itemId)
         return gItemIcon_ReturnToFieldArrow; // Use last icon, the "return to field" arrow
     if (itemId >= ITEMS_COUNT)
         return gItemsInfo[0].iconPic;
+    if (itemId == ITEM_POKEVIAL) 
+        return PokevialGetDoseIcon();
     if (gItemsInfo[itemId].pocket == POCKET_TM_HM)
     {
         if (GetItemTMHMIndex(itemId) > NUM_TECHNICAL_MACHINES)

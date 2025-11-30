@@ -295,6 +295,12 @@ struct BerryPickingResults
     u8 field_F;
 };
 
+struct Pokevial
+{
+    u8 Size : 4;
+    u8 Dose : 4;
+}; /* max size 16 bytes */
+
 struct PyramidBag
 {
     u16 itemId[FRONTIER_LVL_MODE_COUNT][PYRAMID_BAG_ITEMS_COUNT];
@@ -1094,7 +1100,8 @@ struct SaveBlock1
     /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
 #endif //FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK1
     /*0x9BC*/ u16 berryBlenderRecords[3];
-    /*0x9C2*/ u8 unused_9C2[6];
+    /*0x9BE*/ struct Pokevial pokevial; //Pokevial Branch
+    /*0x9C2*/ u8 unused_9C2[4];
 #if FREE_MATCH_CALL == FALSE
     /*0x9C8*/ u16 trainerRematchStepCounter;
     /*0x9CA*/ u8 trainerRematches[MAX_REMATCH_ENTRIES];
