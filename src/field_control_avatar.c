@@ -73,6 +73,7 @@ static bool8 TryStartCoordEventScript(struct MapPosition *);
 static bool8 TryStartWarpEventScript(struct MapPosition *, u16);
 static bool8 TryStartMiscWalkingScripts(u16);
 static bool8 TryStartStepCountScript(u16);
+static bool8 TryStartingAutoRunning(void);
 static void UpdateFriendshipStepCounter(void);
 static void UpdateFollowerStepCounter(void);
 #if OW_POISON_DAMAGE < GEN_5
@@ -94,8 +95,8 @@ void FieldClearPlayerInput(struct FieldInput *input)
     input->heldDirection2 = FALSE;
     input->tookStep = FALSE;
     input->pressedBButton = FALSE;
+  input->pressedLButton = FALSE;
     input->pressedRButton = FALSE;
-    input->input_field_1_1 = FALSE;
     input->input_field_1_2 = FALSE;
     input->input_field_1_3 = FALSE;
     input->dpadDirection = 0;
@@ -121,6 +122,8 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
                 input->pressedBButton = TRUE;
             if (newKeys & R_BUTTON && !FlagGet(DN_FLAG_SEARCHING))
                 input->pressedRButton = TRUE;
+            if (newKeys & L_BUTTON)
+                input->pressedLButton = TRUE;
         }
 
         if (heldKeys & (DPAD_UP | DPAD_DOWN | DPAD_LEFT | DPAD_RIGHT))
@@ -236,6 +239,9 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
 
     if (input->pressedRButton && TryStartDexNavSearch())
         return TRUE;
+    
+    if (input->pressedLButton && TryStartingAutoRunning())
+       return TRUE;
 
     if(input->input_field_1_2 && DEBUG_OVERWORLD_MENU && !DEBUG_OVERWORLD_IN_MENU)
     {
@@ -1293,4 +1299,24 @@ void CancelSignPostMessageBox(struct FieldInput *input)
         return;
 
     CreateTask(Task_OpenStartMenu, 8);
+}
+
+
+static bool8 TryStartingAutoRunning(void)
+{
+  if (!FlagGet(FLAG_SYS_B_DASH))
+      return FALSE;
+
+  PlaySE(SE_SELECT);
+  if (gSaveBlock1Ptr->autoRun) 
+  {
+      gSaveBlock1Ptr->autoRun = FALSE;
+      ScriptContext_SetupScript(Common_DisableAutoRun);
+  }
+  else 
+  {
+      gSaveBlock1Ptr->autoRun = TRUE;
+      ScriptContext_SetupScript(Common_EnableAutoRun);
+  }
+  return TRUE; 
 }

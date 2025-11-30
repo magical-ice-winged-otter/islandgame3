@@ -42,69 +42,69 @@ SS_Rain_EventScript_Intro::
 	msgbox SS_Rain_EventScript_Intro_Text_0
 # 29 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	waitmessage
-# 34 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 30 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	closemessage
-# 37 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 31 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	releaseall
 	return
 
 
 ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll1::
-# 41 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 35 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	lock
-# 42 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 36 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	msgbox ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll1_Text_0
-# 46 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 40 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll2::
-# 50 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 44 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	lock
-# 51 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 45 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	msgbox ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll2_Text_0
-# 55 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 49 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	release
 	return
 
 
 SS_Rain_EventScript_NeedRunningShoes::
-# 59 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 53 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	goto_if_unset FLAG_RECEIVED_RUNNING_SHOES, SS_Rain_EventScript_NeedRunningShoes_2
 SS_Rain_EventScript_NeedRunningShoes_1:
-# 69 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 63 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	releaseall
 	return
 
 SS_Rain_EventScript_NeedRunningShoes_2:
-# 60 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 54 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	lockall
-# 61 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 55 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	msgbox SS_Rain_EventScript_NeedRunningShoes_Text_0
-# 64 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 58 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	waitmessage
-# 65 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 59 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	closemessage
-# 66 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 60 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-# 67 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 61 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	waitmovement 0
 	goto SS_Rain_EventScript_NeedRunningShoes_1
 
 
 SS_Rain_EventScript_ItemRunningShoes::
-# 73 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 67 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	lockall
-# 74 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 68 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-# 75 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 69 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	msgbox SS_Rain_EventScript_ItemRunningShoes_Text_0
-# 79 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 73 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	removeobject VAR_LAST_TALKED
-# 80 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 74 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	setflag FLAG_SYS_B_DASH
-# 81 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 75 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	releaseall
 	return
 
@@ -123,26 +123,26 @@ SS_Rain_EventScript_Intro_Text_0:
 	.string "return! Until next time, buh-bye!$"
 
 ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll1_Text_0:
-# 43 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 37 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	.string "{COLOR RED}(It's the Pikachu Doll I got when I was\n"
 	.string "only six years old.)\p"
 	.string "(I can't believe it's already been ten\n"
 	.string "years...)$"
 
 ISLANDGAME_SS_RAIN_PLAYER_ROOM_Doll2_Text_0:
-# 52 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 46 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	.string "{COLOR RED}(It's the Azurill Doll I got from\n"
 	.string "Arthur's Sister during the night I\l"
 	.string "stayed over at their inn.)\p"
 	.string "(It's not shiny like hers, though.)$"
 
 SS_Rain_EventScript_NeedRunningShoes_Text_0:
-# 62 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 56 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	.string "{COLOR RED}(I should probably get my shoes before\n"
 	.string "I leave.)$"
 
 SS_Rain_EventScript_ItemRunningShoes_Text_0:
-# 76 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
+# 70 "data/maps/ISLANDGAME_SS_RAIN_ROOM2/scripts.pory"
 	.string "You changed into your Running Shoes!\p"
-	.string "Pro-Tip: You can press the “R” button\n"
+	.string "Pro-Tip: You can press the “L” button\n"
 	.string "to toggle auto-running!$"

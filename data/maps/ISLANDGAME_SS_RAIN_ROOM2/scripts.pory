@@ -27,13 +27,7 @@ script SS_Rain_EventScript_Intro {
         "We'll be patiently waiting here for your return! Until next time, buh-bye!"
     ))
     waitmessage
-	// special(StartWallClock)
-	// waitstate
-    // delay(30)
-    // setflag(FLAG_SET_WALL_CLOCK)
     closemessage
-    // setflag(FLAG_RECEIVED_RUNNING_SHOES)
-    // setflag(FLAG_SYS_B_DASH)
     releaseall
 }
 
@@ -74,7 +68,7 @@ script SS_Rain_EventScript_ItemRunningShoes {
     setflag(FLAG_RECEIVED_RUNNING_SHOES)
     msgbox(format(
         "You changed into your Running Shoes!\p"
-        "Pro-Tip: You can press the “R” button to toggle auto-running!"
+        "Pro-Tip: You can press the “L” button to toggle auto-running!"
     ))
     removeobject(VAR_LAST_TALKED)
     setflag(FLAG_SYS_B_DASH)

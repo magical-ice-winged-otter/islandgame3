@@ -1,3 +1,19 @@
+
+
+script Common_DisableAutoRun {
+  msgbox(format("Auto Run {COLOR RED}Disabled{COLOR DARK_GRAY}."))
+  waitmessage
+  closemessage
+  end
+}
+
+script Common_EnableAutoRun {
+  msgbox(format("Auto Run {COLOR GREEN}Enabled{COLOR DARK_GRAY}."))
+  waitmessage
+  closemessage
+  end
+}
+
 const LOCALID_NURSE = 1
 const LOOP_BOUND = VAR_TEMP_A
 const LOOP_ITER  = VAR_TEMP_B

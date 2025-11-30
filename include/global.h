@@ -1101,7 +1101,8 @@ struct SaveBlock1
 #endif //FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK1
     /*0x9BC*/ u16 berryBlenderRecords[3];
     /*0x9BE*/ struct Pokevial pokevial; //Pokevial Branch
-    /*0x9C2*/ u8 unused_9C2[4];
+    /*0x9BF*/ bool8 autoRun;
+    /*0x9C2*/ u8 unused_9C2[3];
 #if FREE_MATCH_CALL == FALSE
     /*0x9C8*/ u16 trainerRematchStepCounter;
     /*0x9CA*/ u8 trainerRematches[MAX_REMATCH_ENTRIES];
