@@ -690,4 +690,9 @@ extern const u8 EventScript_MovedTooFast[];
 extern const u8 Common_DisableAutoRun[];
 extern const u8 Common_EnableAutoRun[];
 
+// Islandgame Debug
+#if ISLANDGAME_DEBUG == TRUE
+extern const u8 IslandGame_LoadIn_Message[]; // Extern variable for our script
+#endif
+
 #endif // GUARD_EVENT_SCRIPTS_H

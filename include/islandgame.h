@@ -18,6 +18,7 @@
 #define BERRY_GROWTH_MULTIPLIER 2
 #define DAY_CARE_EXP_MULTIPLIER 0.5f // This should never be greater than 1, or else you could get inf. XP from just depositing and withdrawing.
 
+/// TODO(deprecated)
 /// @brief Different starting points, associating spawn positions with data needed to load a map.
 /// Used to generate a teleportation debug menu.
 /// @note For usage, see src/new_game.c, src/start_menu.c
@@ -30,7 +31,7 @@ typedef struct Location
     const u8* display_name;
 } Location;
 
-// An internal utility to reduce boilerplate from location definitions.
+/// TODO(deprecated): An internal utility to reduce boilerplate from location definitions.
 #define LOCATION(name, identifier, x, y)     \
     {                                       \
         .map_group = MAP_GROUP(identifier), \
@@ -57,6 +58,7 @@ static const u8 nameRockyPath[] = _("Rocky Path");
 static const u8 nameBellehaven[] = _("Bellehaven");
 static const u8 nameAetheria[] = _("Aetheria");
 
+/// TODO(deprecated)
 static const Location LOCATION_DATA[] = {
     // oranna
     /*  0 */ LOCATION(nameSsRain, MAP_ISLANDGAME_SS_RAIN_ROOM2, 6, 7),
@@ -81,8 +83,10 @@ static const Location LOCATION_DATA[] = {
 
 #define LOCATION_COUNT (sizeof(LOCATION_DATA)/sizeof(Location))
 
+/// @brief Sets flags for new-game.
+void IslandGameNewGameSet();
 /// @brief Hooks into the new-game logic, allowing us to perform hack-specific setup.
-void IslandGameCustomStartup();
+void IslandGameDebugStartup();
 
 /*
  *  ISLANDGAME_DEBUG
@@ -102,16 +106,9 @@ void IslandGameCustomStartup();
 
 #if ISLANDGAME_DEBUG == TRUE
 
-#define START_LOC_GAME LOCATION_DATA[12] // applevine
 #define ISLANDGAME_STARTING_MON SPECIES_SHADOW_LUGIA
 #define ISLANDGAME_STARTING_MON_LEVEL 100
 #define ISLANDGAME_STARTING_MON_ITEM ITEM_NONE
-#define ISLANDGAME_PLAYER_NAME "Rain"
-
-#else // Final Game, Production Build
-
-#define START_LOC_GAME LOCATION_DATA[0] // ss rain
-#define ISLANDGAME_PLAYER_NAME "Rain"
 
 #endif
 

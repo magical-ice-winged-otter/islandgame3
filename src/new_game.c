@@ -26,6 +26,7 @@
 #include "mail.h"
 #include "battle_records.h"
 #include "item.h"
+#include "islandgame.h"
 #include "pokedex.h"
 #include "apprentice.h"
 #include "frontier_util.h"
@@ -197,7 +198,7 @@ void NewGameInitData(void)
 #if NEW_GAME_STYLE == NEW_GAME_DEFAULT
     SetWarpDestination(MAP_GROUP(MAP_ISLANDGAME_SS_RAIN_ROOM2), MAP_NUM(MAP_ISLANDGAME_SS_RAIN_ROOM2), WARP_ID_NONE, 6, 7);
 #elif NEW_GAME_STYLE == NEW_GAME_WARP
-    SetWarpDestination(MAP_GROUP(MAP_MAUVILLE_CITY), MAP_NUM(MAP_MAUVILLE_CITY), WARP_ID_NONE, 26, 9);
+    SetWarpDestination(MAP_GROUP(MAP_ISLANDGAME_SS_RAIN_ROOM2), MAP_NUM(MAP_ISLANDGAME_SS_RAIN_ROOM2), WARP_ID_NONE, 6, 7);
 #endif
     WarpIntoMap();
     RunScriptImmediately(EventScript_ResetAllMapFlags);
@@ -223,6 +224,7 @@ void NewGameInitData(void)
     FlagSet(FLAG_SYS_POKEMON_GET);
     ScriptGiveMon(SPECIES_BULBASAUR, 5, ITEM_NONE);
 #endif
+    IslandGameNewGameSet();
 }
 
 static void ResetMiniGamesRecords(void)

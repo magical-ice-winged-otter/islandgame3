@@ -21,48 +21,48 @@ IslandGame_LoadIn_Message::
 	waitbuttonpress
 # 14 "data/scripts/islandgame_debug.pory"
 	releaseall
-	return
+	end
 
 
 TeleportMenu::
-# 23 "data/scripts/islandgame_debug.pory"
-	lockall
 # 24 "data/scripts/islandgame_debug.pory"
-	multichoicedefault 0, 0, MULTI_YESNO, 0, 1
+	lockall
 # 25 "data/scripts/islandgame_debug.pory"
-	switch VAR_RESULT
+	multichoicedefault 0, 0, MULTI_YESNO, 0, 1
 # 26 "data/scripts/islandgame_debug.pory"
+	switch VAR_RESULT
+# 27 "data/scripts/islandgame_debug.pory"
 	case 0, TeleportMenu_3
-# 28 "data/scripts/islandgame_debug.pory"
+# 29 "data/scripts/islandgame_debug.pory"
 	case 1, TeleportMenu_4
 TeleportMenu_1:
-# 31 "data/scripts/islandgame_debug.pory"
+# 32 "data/scripts/islandgame_debug.pory"
 	releaseall
 	end
 
 TeleportMenu_3:
-# 27 "data/scripts/islandgame_debug.pory"
+# 28 "data/scripts/islandgame_debug.pory"
 	goto TP_Yes
 	goto TeleportMenu_1
 
 TeleportMenu_4:
-# 29 "data/scripts/islandgame_debug.pory"
+# 30 "data/scripts/islandgame_debug.pory"
 	goto TP_No
 	goto TeleportMenu_1
 
 
 TP_Yes::
-# 37 "data/scripts/islandgame_debug.pory"
+# 38 "data/scripts/islandgame_debug.pory"
 	releaseall
 	end
 
 
 TP_No::
-# 42 "data/scripts/islandgame_debug.pory"
+# 43 "data/scripts/islandgame_debug.pory"
 	releaseall
 	end
 
 
 IslandGame_LoadIn_Msg::
-# 17 "data/scripts/islandgame_debug.pory"
+# 18 "data/scripts/islandgame_debug.pory"
 	.string "{COLOR BLUE}Added badges$"

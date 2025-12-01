@@ -1,13 +1,18 @@
 #ifndef GUARD_CONFIG_GENERAL_H
 #define GUARD_CONFIG_GENERAL_H
 
+
+// Set this to FALSE for the release game.
+#define ISLANDGAME_DEBUG FALSE
+
 // In the Generation 3 games, Asserts were used in various debug builds.
 // Ruby/Sapphire and Emerald do not have these asserts while Fire Red
 // still has them in the ROM. This is because the developers forgot
 // to define NDEBUG before release, however this has been changed as
 // Ruby's actual debug build does not use the AGBPrint features.
+#if !ISLANDGAME_DEBUG
 #define NDEBUG
-
+#endif
 // To enable printf debugging, comment out "#define NDEBUG". This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
 // See below for enabling different pretty printing versions.
@@ -74,7 +79,8 @@
 // Make sure to check out "NewGameInitData" in new_game.c
 #define DEFAULT_PLAYER_NAME          "rain dan"
 
-#define NEW_GAME_STYLE               NEW_GAME_DEFAULT
+// If we aren't in debug mode, use NEW_GAME_WARP for debug purposes.
+#define NEW_GAME_STYLE               ((ISLANDGAME_DEBUG) ? (NEW_GAME_WARP) : (NEW_GAME_DEFAULT))
 #define NEW_GAME_TRUCK_SEQUENCE      FALSE    // If TRUE, plays the default truck shake sequence.
 
 // General settings

@@ -28,6 +28,7 @@
 #include "gpu_regs.h"
 #include "heal_location.h"
 #include "io_reg.h"
+#include "islandgame.h"
 #include "item.h"
 #include "item_icon.h"
 #include "link.h"
@@ -77,7 +78,6 @@
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
-#include "islandgame.h"
 
 STATIC_ASSERT((B_FLAG_FOLLOWERS_DISABLED == 0 || OW_FOLLOWERS_ENABLED), FollowersFlagAssignedWithoutEnablingThem);
 
@@ -1793,16 +1793,15 @@ void CB2_NewGame(void)
     PlayTimeCounter_Start();
     ScriptContext_Init();
     UnlockPlayerFieldControls();
-    gFieldCallback = NULL;
-#if NEW_GAME_TRUCK_SEQUENCE
-    gFieldCallback = ExecuteTruckSequence;
-#endif
+    gFieldCallback = NEW_GAME_TRUCK_SEQUENCE ? ExecuteTruckSequence : NULL;
     gFieldCallback2 = NULL;
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();
     SetMainCallback1(CB1_Overworld);
     SetMainCallback2(CB2_Overworld);
-    IslandGameCustomStartup();
+#if ISLANDGAME_DEBUG
+    IslandGameDebugStartup();
+#endif
 }
 
 void CB2_WhiteOut(void)
