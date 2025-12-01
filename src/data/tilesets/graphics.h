@@ -2416,4 +2416,4 @@ const u16 gTilesetPalettes_islandgame_lumine_aetheria[][16] =
     INCBIN_U16("data/tilesets/primary/islandgame_lumine_aetheria/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_islandgame_lumine_aetheria[] = INCBIN_U32("data/tilesets/primary/islandgame_lumine_aetheria/tiles.4bpp.lz");
+const u32 gTilesetTiles_islandgame_lumine_aetheria[] = INCBIN_U32("data/tilesets/primary/islandgame_lumine_aetheria/tiles.4bpp.smol");
