@@ -1,5 +1,3 @@
-#include "gen_7.h" // use gen 9 move set as well.
-
 // island-game learnsets
 
 
