@@ -21127,6 +21127,39 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_MalignantChain,
     },
 
+    [MOVE_SHADOW_BLAST] =
+    {
+        .name = COMPOUND_STRING("Shadow Blast"),
+        .description = COMPOUND_STRING( //add shadow blast description, source: https://bulbapedia.bulbagarden.net/wiki/Shadow_Blast_(move)
+            "A wicked blade of air is\n"
+            "formed using a shadowy aura."
+        ),
+        .effect = EFFECT_HIT,
+        .power = 140,
+        .type = TYPE_SHADOW,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .battleAnimScript = gBattleAnimMove_ShadowBlast,
+    },
+
+    [MOVE_BERSERK] = //shadow mon random move
+    {
+        .name = COMPOUND_STRING("Berserk"),
+        .description = COMPOUND_STRING( 
+            "Easter egg"
+        ),
+        .effect = EFFECT_HIT,
+        
+        .power = 70,
+        .type = TYPE_SHADOW,
+        .accuracy = 100,
+        .pp = 5, // doesn't matter
+        .battleAnimScript = gBattleAnimMove_Berserk,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {
