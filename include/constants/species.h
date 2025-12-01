@@ -1657,7 +1657,7 @@
 #define SPECIES_SKITTY_MARYAN                           1541
 #define SPECIES_DELCATTY_MARYAN                         1542
 
-#define SPECIES_EGG                                     (SPECIES_MIMIKYU_BUSTED_TOTEM + 1)
+#define SPECIES_EGG                                     (SPECIES_DELCATTY_MARYAN + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 
