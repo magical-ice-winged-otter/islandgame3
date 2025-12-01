@@ -6154,6 +6154,18 @@ Cry_Terapagos::
 Cry_Pecharunt::
 	.incbin "sound/direct_sound_samples/cries/pecharunt.bin"
 .endif @ P_FAMILY_PECHARUNT
+
+.if P_FAMILY_SHADOW_LUGIA == TRUE
+	.align 2
+Cry_ShadowLugia::
+	.incbin "sound/direct_sound_samples/cries/lugia.bin"
+.endif @ P_FAMILY_SHADOW_LUGIA
+
+.if P_FAMILY_SHADOW_MIGHTYENA == TRUE
+	.align 2
+Cry_ShadowMightyena::
+	.incbin "sound/direct_sound_samples/cries/mightyena.bin"
+.endif @ P_FAMILY_SHADOW_MIGHTYENA
 .endif @ P_CRIES_ENABLED
 
 	.align 2
