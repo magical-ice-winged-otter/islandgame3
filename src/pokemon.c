@@ -5841,6 +5841,8 @@ u16 GetBattleBGM(void)
             // if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))
             //     return MUS_VS_TRAINER;
             return MUS_HG_VS_TRAINER_KANTO;
+        case TRAINER_CLASS_JONAS:
+            return MUS_BW_VS_N_1;
         case TRAINER_CLASS_PATHMASTER:
             return MUS_HG_VS_TRAINER;
         case TRAINER_CLASS_THIEF:

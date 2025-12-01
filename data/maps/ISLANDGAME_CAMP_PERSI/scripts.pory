@@ -72,13 +72,16 @@ text ISLANDGAME_CAMP_PERSI_TrainerBattle1_Text {
 
 script ISLANDGAME_CAMP_PERSI_HanzoKatana {
     lock
-    checkitem(ITEM_ISLANDGAME_MACHETE)
+
     msgbox(format(
         "Naruhodo... It appears I still have a lot to learn...\p"
         "{PLAYER}-san! As my first battle and only loss, please take my ka-ta-na.\p"
         "It will serve you well in your journey, I know of it!"
     ))
-    giveitem(ITEM_ISLANDGAME_MACHETE)
+    checkitem(ITEM_ISLANDGAME_MACHETE)
+    if(!var(VAR_RESULT)) {
+        giveitem(ITEM_ISLANDGAME_MACHETE)
+    }
     closemessage
     release
 }
@@ -198,7 +201,7 @@ script ISLANDGAME_CAMP_PERSI_EventScript_JonasBattleEngage {
         "...\p"
         "Oh? You've come to aid Professor Palm in his research and become a Pokémon trainer?\p"
         "Well, pardon my assumption, then! Welcome to the Maryan Isles, {PLAYER}!\p"
-        "My name is Jonas. I'm a traveling merchant of The Silverwing Order.\p"
+        "My name is {COLOR GREEN}Jonas{COLOR DARK_GRAY}. I'm a traveling merchant of The Silverwing Order.\p"
         "The Silverwing Order is in charge of governing the isles. It's our job to make sure everyone here is comfortable and safe!\p"
         "My role in particular is traveling around to provide goods and inform visitors of the Marya region!\p"
         "But that's enough about me. You said you were a Pokémon trainer, right?\p"
@@ -574,8 +577,7 @@ script ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC3 {
 
 text ISLANDGAME_CAMP_PERSI_OUTSIDE_NPC3Talk {
     format(
-        "{COLOR DARK_GRAY}I'm taking the campers on a nature hike later today. \p"
-        "{COLOR DARK_GRAY}Hopefully this time we don't come into contact with any Stunky..."
+        "{COLOR DARK_GRAY}I'm taking the campers on a nature hike later today."
     )
 }
 
@@ -601,7 +603,7 @@ script ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC5 {
 
 text ISLANDGAME_CAMP_PERSI_OUTSIDE_NPC5Talk {
     format(
-        "{COLOR DARK_GRAY}Um... do you mind?"
+        "{COLOR DARK_GRAY}Um... do you mind? I'm tryna do my business here..."
     )
 }
 

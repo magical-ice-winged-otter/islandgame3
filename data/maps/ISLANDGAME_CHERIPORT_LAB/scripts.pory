@@ -91,7 +91,7 @@ script ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk {
     // Before player defeats Melissa for the first time.
     elif (!flag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)) {
         msgbox(format(
-            "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}Melissa should be somewhere in the {COLOR GREEN}Minty Meadows {COLOR DARK_GRAY}right now.{PAUSE 30} It'll be to the east of her hometown of {COLOR GREEN}Maplegrove{COLOR DARK_GRAY}!\p"
+            "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}Melissa should be somewhere in the {COLOR GREEN}Minty Meadows {COLOR DARK_GRAY}right now.{PAUSE 30} It'll be to the east of her hometown of {COLOR GREEN}Maplegrove{COLOR DARK_GRAY}!"
         ))
         goto(Palm_CheckPokedex)
     }

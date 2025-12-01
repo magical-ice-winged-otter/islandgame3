@@ -38,7 +38,10 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC {
         case 1:
             faceplayer
             msgbox(format(
-                "I-I was just joking about the stealing stuff, okay? And besides, there's no proof that I am anyways, so don't go snooping around camp!"
+                "L-Leave me alone! I already told you, I don't know anything about his missing Charizard!\p"
+                "...\p"
+                "{COLOR RED}(I never mentioned anything about the card being a Charizard...)\p"
+                "(Maybe I should do a little looking around camp...)"
             ))
         case 2:
             faceplayer
@@ -64,11 +67,20 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC {
             applymovement(1, Common_Movement_ExclamationMark)
             applymovement(1, Common_Movement_FacePlayer)
             faceplayer
-            delay(30)
+            delay(60)
             msgbox(format(
-                "Aiiiiiie! {PAUSE 30} Where did you come from!? How long have you been listening!?\p"
-                "I-I was just joking about the stealing stuff, okay? And besides, there's no proof that I am anyways, so don't go snooping around camp!"
+                "Aiiiiiie! {PAUSE 30} Where did you come from!? Don't you know it's rude to eavesdrop on people!?"
             ))
+            closemessage
+            applymovement(1, Common_Movement_QuestionMark)
+            waitmovement(0)
+            delay(60)
+            msgbox(format(
+                "E-Eh? A stolen card? W-Why would I know anything about that?\p"
+                "H-He probably just lost it somewhere in the tall grass or something..."
+            ))
+            applymovement(1, Common_Movement_FaceRight)
+            waitmovement(0)
             setvar(VAR_CAMP_PERSI_STATE, 1)
     }
     release

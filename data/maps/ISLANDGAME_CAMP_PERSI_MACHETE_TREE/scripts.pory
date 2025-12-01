@@ -113,6 +113,8 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
                 "{COLOR RED}(It's just a regular old Gulpin doll.)\p"
                 "(Oh? There seems to be something stashed inside it...)"
             ))
+            setflag(FLAG_FOLLOWERS_DISABLED)
+            destroyfollowernpc
             closemessage
             delay(10)
             playse(SE_EXIT)
@@ -123,63 +125,71 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
             waitmovement(0)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
             waitmovement(0)
-            delay(30)
+            delay(60)
             msgbox(format(
-                "Huh? What're you doing here?"
+                "Huh? What are you doing here?"
             ))
             closemessage
-            delay(30)
+            delay(60)
             playse(SE_PIN)
             applymovement(THIEF_ID, Common_Movement_ExclamationMark)
             waitmovement(0)
             applymovement(THIEF_ID, Common_Movement_WalkInPlaceFasterUp)
             waitmovement(0)
-            delay(30)
+            delay(60)
             msgbox(format(
-                "H-Hey! You were snooping around in my secret base, weren't you!?\p"
+                "H-Hey! You were snooping around in my secret base, weren't you!?"
+            ))
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
+            waitmovement(0)
+            delay(60)
+            msgbox(format(
                 "Mrgrgr... {PAUSE 30}Fine! You got me! I stole it! I'm the one who took that camper's card!\p"
                 "It's not fair! I've been using up my allowance for WEEKS trying to get one, and he pulls it from his FIRST pack?\p"
                 "A card with THAT much power shouldn't be allowed! There's no reason a newbie should be able to beat me so easily!\p"
                 "I'm just leveling the playing field, is all! You understand, right!?\p"
                 "...\p"
-                "-sigh- Now that you know the truth, you're gonna tattle on me, aren't you?"
+                "...Now that you know the truth, you're gonna tattle on me, aren't you?"
             ))
             closemessage
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
             waitmovement(0)
-            delay(30)
+            delay(60)
             applymovement(THIEF_ID, Common_Movement_QuestionMark)
             waitmovement(0)
             msgbox(format(
-                "H-Huh? You'll let me go if I just beat you in a Pokémon battle?\p"
-                "Well... I have no choice but to oblige. I'll show you the power of Bug Pokémon!"
+                "H-Huh? You'll let me go... if I just beat you in a Pokémon battle?\p"
+                "Heh... I guess have no choice but to oblige.\p"
+                "I'll show you the power of my bug Pokémon!"
             ))
             closemessage
             applymovement(THIEF_ID, Common_Movement_WalkUp)
             waitmovement(0)
-            delay(15)
+            delay(60)
             trainerbattle_no_intro(TRAINER_CAMP_PERSI_THIEF, "T-This isn't right! I should've won!")
             applymovement(THIEF_ID, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Backoff)
             waitmovement(0)
-            delay(30)
+            delay(60)
             msgbox(format(
-                "I don't get it... My Pokémon should've won! They're statistically better!\p"
+                "I don't get it... My Pokémon should've won! They're much stronger then yours!\p"
                 "Is... power not all there is to battling? Can weaker Pokémon still beat stronger Pokémon with the right strategy?"
             ))
             closemessage
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
             waitmovement(0)
-            delay(30)
+            delay(60)
             msgbox(format(
                 "I... I see. That's what you were trying to teach me with that battle, wasn't it?\p"
-                "Heh... I sure feel like a real big stupid jerk now...\p"
+                "To show me how foolish it was of me to get so worked up over a trading card...\p"
+                "Heh... I sure feel like a real big stupid jerk now.\p"
                 "Well, I guess it's time for me pay for my crimes..."
             ))
             closemessage
-            delay(30)
+            delay(60)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
             waitmovement(0)
-            delay(30)
+            delay(60)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
             waitmovement(0)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
@@ -187,7 +197,7 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
             msgbox(format(
                 "Huh? You won't tell on me? B-But, I lost...\p"
                 "...\p"
-                "O-Okay. Thank you so much! I won't forget your kindness, trainer! I promise to never steal ever again!"
+                "O-Okay. Thank you so much! I won't forget your kindness, trainer! I promise to never ever steal again!"
             ))
             closemessage
             applymovement(THIEF_ID, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Unlock)
@@ -200,11 +210,12 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
             setvar(VAR_CAMP_PERSI_STATE, 2)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
             waitmovement(0)
-            delay(30)
+            delay(60)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp)
             waitmovement(0)
-            delay(30)
+            delay(60)
             giveitem(ITEM_ISLANDGAME_TRADING_CARD)
+            clearflag(FLAG_FOLLOWERS_DISABLED)
         default:
             msgbox(format("{COLOR RED}(It's just a regular old Gulpin doll.)"))
     }

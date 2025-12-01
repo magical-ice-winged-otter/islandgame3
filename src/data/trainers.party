@@ -215,7 +215,7 @@ Nature: Hardy
 
 === TRAINER_CAMP_PERSI_JONAS ===
 Name: Jonas
-Class: Rival
+Class: TRAINER_CLASS_JONAS
 Pic: Jonas
 Gender: Male
 Music: Male

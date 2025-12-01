@@ -3,7 +3,7 @@
 
 
 // Set this to FALSE for the release game.
-#define ISLANDGAME_DEBUG FALSE
+#define ISLANDGAME_DEBUG TRUE
 
 // In the Generation 3 games, Asserts were used in various debug builds.
 // Ruby/Sapphire and Emerald do not have these asserts while Fire Red

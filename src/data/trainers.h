@@ -370,7 +370,7 @@ F_TRAINER_FEMALE |
 #line 217
         .trainerName = _("Jonas"),
 #line 218
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_JONAS,
 #line 219
         .trainerPic = TRAINER_PIC_JONAS,
         .encounterMusic_gender =
