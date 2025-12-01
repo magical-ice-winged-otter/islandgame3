@@ -687,7 +687,10 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #include "data/pokemon/trainer_class_lookups.h"
 #include "data/pokemon/experience_tables.h"
 
-#if P_LVL_UP_LEARNSETS >= GEN_9
+#if P_LVL_UP_LEARNSETS >= GEN_MARYAN
+#include "data/pokemon/level_up_learnsets/gen_7.h" // Ultra Sun/Ultra Moon
+#include "data/pokemon/level_up_learnsets/gen_shadow.h" // Maryan
+#elif P_LVL_UP_LEARNSETS >= GEN_9
 #include "data/pokemon/level_up_learnsets/gen_9.h" // Scarlet/Violet
 #elif P_LVL_UP_LEARNSETS >= GEN_8
 #include "data/pokemon/level_up_learnsets/gen_8.h" // Sword/Shield

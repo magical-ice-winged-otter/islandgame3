@@ -2424,6 +2424,12 @@ gCryTable::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+.if P_FAMILY_SHADOW_LUGIA == TRUE
+	cry Cry_ShadowLugia
+.endif @ P_FAMILY_SHADOW_LUGIA
+.if P_FAMILY_SHADOW_MIGHTYENA == TRUE
+	cry Cry_ShadowMightyena
+.endif @ P_FAMILY_SHADOW_MIGHTYENA
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4852,4 +4858,10 @@ gCryTable_Reverse::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry_reverse Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+.if P_FAMILY_SHADOW_LUGIA == TRUE
+	cry_reverse Cry_ShadowLugia
+.endif @ P_FAMILY_SHADOW_LUGIA
+.if P_FAMILY_SHADOW_MIGHTYENA == TRUE
+	cry_reverse Cry_ShadowMightyena
+.endif @ P_FAMILY_SHADOW_MIGHTYENA
 .endif @ P_CRIES_ENABLED

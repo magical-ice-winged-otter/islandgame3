@@ -1015,5 +1015,8 @@ extern const u8 gBattleAnimSpecial_SubstituteToMon[];
 extern const u8 gBattleAnimSpecial_MonToSubstitute[];
 extern const u8 gBattleAnimSpecial_CriticalCaptureBallThrow[];
 
+// Maryan Moves
+extern const u8 gBattleAnimMove_ShadowBlast[];
+extern const u8 gBattleAnimMove_Berserk[];
 
 #endif // GUARD_BATTLE_ANIM_SCRIPTS_H

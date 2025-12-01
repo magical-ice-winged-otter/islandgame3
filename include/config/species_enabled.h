@@ -18,6 +18,7 @@
 #define P_GEN_7_POKEMON                  TRUE // Generation 7 Pokémon (SM, USUM, LGPE)
 #define P_GEN_8_POKEMON                  TRUE // Generation 8 Pokémon (SwSh, BDSP, LA)
 #define P_GEN_9_POKEMON                  TRUE // Generation 9 Pokémon (SV)
+#define P_GEN_MARYAN_POKEMON             TRUE // Islandgame Pokémon
 
 // Setting this to TRUE will add the new evolutions to the Regional Dex.
 #define P_NEW_EVOS_IN_REGIONAL_DEX       TRUE
@@ -603,5 +604,22 @@
 #define P_FAMILY_IRON_CROWN              P_GEN_9_POKEMON
 #define P_FAMILY_TERAPAGOS               P_GEN_9_POKEMON
 #define P_FAMILY_PECHARUNT               P_GEN_9_POKEMON
+
+// Shadow Pokemon
+#define P_FAMILY_SHADOW_LUGIA       P_GEN_MARYAN_POKEMON
+#define P_FAMILY_SHADOW_MIGHTYENA   P_GEN_MARYAN_POKEMON
+#define P_FAMILY_SHADOW_AGGRON      P_GEN_MARYAN_POKEMON
+
+// Maryan Regional Variants
+#define P_FAMILY_GOLETT_MARYAN      P_GEN_MARYAN_POKEMON
+#define P_FAMILY_FEEBAS_MARYAN      P_GEN_MARYAN_POKEMON
+#define P_FAMILY_PURRLOIN_MARYAN    P_GEN_MARYAN_POKEMON
+#define P_FAMILY_NINCADA_MARYAN     P_GEN_MARYAN_POKEMON
+#define P_FAMILY_COMBEE_MARYAN      P_GEN_MARYAN_POKEMON
+#define P_FAMILY_SHELLOS_MARYAN     P_GEN_MARYAN_POKEMON
+#define P_FAMILY_SKITTY_MARYAN      P_GEN_MARYAN_POKEMON
+
+// Special/Anomaly
+#define P_FAMILY_ANOMALY_01         P_GEN_MARYAN_POKEMON
 
 #endif // GUARD_CONFIG_SPECIES_ENABLED_H

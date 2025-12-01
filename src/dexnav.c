@@ -2106,6 +2106,7 @@ static const u8 sMoveTypeToOamPaletteNum[NUMBER_OF_MON_TYPES] =
     [TYPE_DRAGON] = TYPE_ICON_PAL_NUM_2,
     [TYPE_DARK] = TYPE_ICON_PAL_NUM_0,
     [TYPE_FAIRY] = TYPE_ICON_PAL_NUM_1,
+    [TYPE_SHADOW] = TYPE_ICON_PAL_NUM_1,
 };
 static void SetTypeIconPosAndPal(u8 typeId, u8 x, u8 y, u8 spriteArrayId)
 {
