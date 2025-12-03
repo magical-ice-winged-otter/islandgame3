@@ -176,6 +176,8 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_1:
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3:
 # 112 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_0
+# 116 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setflag FLAG_FOLLOWERS_DISABLED
 # 117 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	destroyfollowernpc
 # 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
@@ -324,6 +326,8 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3:
 	delay 60
 # 217 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	giveitem ITEM_ISLANDGAME_TRADING_CARD
+# 218 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	clearflag FLAG_FOLLOWERS_DISABLED
 	goto ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_1
 
 
