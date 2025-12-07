@@ -164,12 +164,12 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll::
 	switch VAR_CAMP_PERSI_STATE
 # 111 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	case 1, ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3
-# 220 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 222 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_9
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_1:
-# 222 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 224 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	closemessage
-# 223 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 225 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	release
 	return
 
@@ -179,7 +179,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3:
 # 116 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	setflag FLAG_FOLLOWERS_DISABLED
 # 117 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	destroyfollowernpc
+	hidefollower
 # 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	closemessage
 # 119 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
@@ -253,7 +253,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3:
 # 168 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	waitmovement 0
 # 169 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
+	delay 30
 # 170 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	trainerbattle_no_intro TRAINER_CAMP_PERSI_THIEF, ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_5
 # 171 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
@@ -297,53 +297,57 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_3:
 # 202 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	closemessage
 # 203 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement 2, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Unlock
+	applymovement 2, Common_Movement_FaceDown
 # 204 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement 2, Common_Movement_WalkDown
+	waitmovement 0
 # 205 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement 0
+	applymovement 2, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Unlock
 # 206 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	playse SE_EXIT
+	applymovement 2, Common_Movement_WalkDown
 # 207 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitse
+	waitmovement 0
 # 208 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setobjectxyperm 2, -1, -1
+	playse SE_EXIT
 # 209 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	removeobject 2
+	waitse
 # 210 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setvar VAR_CAMP_PERSI_STATE, 2
+	setobjectxyperm 2, -1, -1
 # 211 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	removeobject 2
 # 212 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement 0
+	setvar VAR_CAMP_PERSI_STATE, 2
 # 213 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 # 214 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-# 215 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	waitmovement 0
-# 216 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 215 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay 60
+# 216 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 # 217 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	giveitem ITEM_ISLANDGAME_TRADING_CARD
+	waitmovement 0
 # 218 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 219 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	giveitem ITEM_ISLANDGAME_TRADING_CARD
+# 220 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	clearflag FLAG_FOLLOWERS_DISABLED
 	goto ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_1
 
 
-# 226 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Backoff:
-# 227 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	face_up
 # 228 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	lock_facing_direction
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Backoff:
 # 229 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	face_up
+# 230 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	lock_facing_direction
+# 231 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 232 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 234 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Unlock:
-# 233 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 235 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	unlock_facing_direction
 	step_end
 
@@ -439,7 +443,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_6:
 # 175 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "I don't get it... My Pokémon should've\n"
 	.string "won! They're much stronger then yours!\p"
-	.string "Is... power not all there is to battling?\n"
+	.string "Is...{PAUSE 30} power not all there is to battling?\n"
 	.string "Can weaker Pokémon still beat stronger\l"
 	.string "Pokémon with the right strategy?$"
 
@@ -447,8 +451,8 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_7:
 # 183 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "I... I see. That's what you were trying\n"
 	.string "to teach me with that battle, wasn't it?\p"
-	.string "To show me how foolish it was of me to\n"
-	.string "get so worked up over a trading card...\p"
+	.string "To show me how dumb it was of me to get\n"
+	.string "so worked up over a trading card...\p"
 	.string "Heh... I sure feel like a real big stupid\n"
 	.string "jerk now.\p"
 	.string "Well, I guess it's time for me pay for my\n"
@@ -464,5 +468,5 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_8:
 	.string "promise to never ever steal again!$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll_Text_9:
-# 220 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 222 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "{COLOR RED}(It's just a regular old Gulpin doll.)$"

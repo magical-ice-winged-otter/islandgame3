@@ -209,6 +209,8 @@ script ISLANDGAME_CAMP_PERSI_EventScript_JonasBattleEngage {
     ))
 
     setflag(FLAG_NO_WHITEOUT)
+    setflag(FLAG_FOLLOWERS_DISABLED)
+    hidefollower
     trainerbattle_no_intro(TRAINER_CAMP_PERSI_JONAS, ISLANDGAME_CAMP_PERSI_Jonas_Defeated_Text)
     clearflag(FLAG_NO_WHITEOUT)
     specialvar(VAR_RESULT, GetBattleOutcome)
@@ -246,6 +248,7 @@ script ISLANDGAME_CAMP_PERSI_EventScript_JonasBattleEngage {
         "It was a pleasure meeting you, {PLAYER}.\p"
         "By Lugia, may our paths cross again."
     ))
+    clearflag(FLAG_FOLLOWERS_DISABLED)
     closemessage
     return
 }

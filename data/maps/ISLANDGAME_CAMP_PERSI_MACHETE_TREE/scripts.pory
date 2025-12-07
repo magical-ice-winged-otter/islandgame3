@@ -114,7 +114,7 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
                 "(Oh? There seems to be something stashed inside it...)"
             ))
             setflag(FLAG_FOLLOWERS_DISABLED)
-            destroyfollowernpc
+            hidefollower
             closemessage
             delay(10)
             playse(SE_EXIT)
@@ -166,14 +166,14 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
             closemessage
             applymovement(THIEF_ID, Common_Movement_WalkUp)
             waitmovement(0)
-            delay(60)
+            delay(30)
             trainerbattle_no_intro(TRAINER_CAMP_PERSI_THIEF, "T-This isn't right! I should've won!")
             applymovement(THIEF_ID, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Backoff)
             waitmovement(0)
             delay(60)
             msgbox(format(
                 "I don't get it... My Pokémon should've won! They're much stronger then yours!\p"
-                "Is... power not all there is to battling? Can weaker Pokémon still beat stronger Pokémon with the right strategy?"
+                "Is...{PAUSE 30} power not all there is to battling? Can weaker Pokémon still beat stronger Pokémon with the right strategy?"
             ))
             closemessage
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown)
@@ -181,7 +181,7 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
             delay(60)
             msgbox(format(
                 "I... I see. That's what you were trying to teach me with that battle, wasn't it?\p"
-                "To show me how foolish it was of me to get so worked up over a trading card...\p"
+                "To show me how dumb it was of me to get so worked up over a trading card...\p"
                 "Heh... I sure feel like a real big stupid jerk now.\p"
                 "Well, I guess it's time for me pay for my crimes..."
             ))
@@ -200,6 +200,8 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_GulpinDoll {
                 "O-Okay. Thank you so much! I won't forget your kindness, trainer! I promise to never ever steal again!"
             ))
             closemessage
+            applymovement(THIEF_ID, Common_Movement_FaceDown)
+            waitmovement(0)
             applymovement(THIEF_ID, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Unlock)
             applymovement(THIEF_ID, Common_Movement_WalkDown)
             waitmovement(0)

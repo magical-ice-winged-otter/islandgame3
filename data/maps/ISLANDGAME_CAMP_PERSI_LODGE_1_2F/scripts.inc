@@ -118,7 +118,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_4:
 # 48 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_Text_1
 # 54 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
-	giveitem ITEM_TM54
+	giveitem ITEM_TM53
 # 55 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	setvar VAR_CAMP_PERSI_STATE, 3
 	goto ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC_1

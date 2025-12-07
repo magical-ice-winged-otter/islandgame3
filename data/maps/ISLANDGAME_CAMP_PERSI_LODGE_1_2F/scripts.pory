@@ -51,7 +51,7 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC {
                 "Thank you for teaching that to me, and also keeping the whole thing a secret between us...\p"
                 "Here, take this Technical Machine as thanks. It's my favorite move, and I know a trainer like you will make good use of it."
             ))
-            giveitem(ITEM_TM54)
+            giveitem(ITEM_TM53)
             setvar(VAR_CAMP_PERSI_STATE, 3)
         case 3:
             faceplayer

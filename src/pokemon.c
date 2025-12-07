@@ -5845,7 +5845,9 @@ u16 GetBattleBGM(void)
             //     return MUS_VS_TRAINER;
             return MUS_HG_VS_TRAINER_KANTO;
         case TRAINER_CLASS_JONAS:
-            return MUS_BW_VS_N_1;
+            return MUS_HG_VS_TRAINER_KANTO;
+        case TRAINER_CLASS_MELISSA:
+            return MUS_BW_VS_RIVAL;
         case TRAINER_CLASS_PATHMASTER:
             return MUS_HG_VS_TRAINER;
         case TRAINER_CLASS_THIEF:
@@ -5871,6 +5873,8 @@ u16 GetBattleBGM(void)
         {
         case SPECIES_ROTOM:
             return MUS_DP_VS_LEGEND;
+        case SPECIES_ANOMALY_01:
+            return MUS_HG_RADIO_UNOWN;
         default:
             return MUS_DP_VS_WILD;
         }

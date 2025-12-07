@@ -196,7 +196,7 @@ text ISLANDGAME_MINTY_MEADOWS_HOUSE_SkipsTalk {
 script ISLANDGAME_MINTY_MEADOWS_HOUSE_Benson {
     lock
     faceplayer
-    playmoncry(SPECIES_BLACEPHALON,CRY_MODE_NORMAL)
+    playmoncry(SPECIES_DRIFBLIM,CRY_MODE_NORMAL)
     msgbox(format(
         "MORDECAI AND RIGBY GO AND GET US SOME FRESH MINTS OR YOU'RE BOTH FIRED!!!\p"
         "Huh? Oh, sorry. I didn't mean to startle you.\p"

@@ -387,6 +387,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_ARTIST] = { _("Artist") },
     [TRAINER_CLASS_RIVAL_HOENN] = { _("{PKMN} Trainer") },
     [TRAINER_CLASS_JONAS] = { _("Silverwing") },
+    [TRAINER_CLASS_MELISSA] = { _("{PKMN} Trainer") },
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =
@@ -5513,8 +5514,11 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_LEADER:
             PlayBGM(MUS_VICTORY_GYM_LEADER);
             break;
+        case TRAINER_CLASS_JONAS:
+        case TRAINER_CLASS_MELISSA:
+            PlayBGM(MUS_BW_VICTORY_TRAINER);
         default:
-            PlayBGM(MUS_VICTORY_TRAINER);
+            PlayBGM(MUS_DP_VICTORY_TRAINER);
             break;
         }
     }

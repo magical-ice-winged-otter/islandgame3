@@ -53,7 +53,8 @@
     F(SNATCH) \
     F(OVERHEAT) \
     F(CHARGE_BEAM) \
-    F(FALSE_SWIPE) 
+    F(FALSE_SWIPE) \
+    F(INFESTATION)
 
 #define FOREACH_HM(F) \
     F(CUT) \

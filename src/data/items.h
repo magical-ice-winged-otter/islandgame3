@@ -11656,7 +11656,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM51] = // Charge Beam
     {
         .name = ITEM_NAME("TM51"),
         .price = 3000,
@@ -11669,7 +11669,7 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM52] = // False Swipe
     {
         .name = ITEM_NAME("TM52"),
         .price = 3000,
@@ -11683,11 +11683,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM53] = // Infestation
     {
         .name = ITEM_NAME("TM53"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Foe cannot escape\n"
+            "and takes damage\n"
+            "for 4-5 turns."), 
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -14716,6 +14719,22 @@ const struct Item gItemsInfo[] =
         .importance = 1,
         .iconPic = gItemIcon_IslandgameTradingCard,
         .iconPalette = gItemIconPalette_IslandgameTradingCard,
+    },
+
+    [ITEM_ISLANDGAME_ROMANS_LETTER] =
+    {
+        .name = ITEM_NAME("Love Letter"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A love letter from\n"
+            "Roman to his one\n"
+            "true love: Julie."
+        ),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .importance = 1,
+        .iconPic = gItemIcon_WaveMail,
+        .iconPalette = gItemIconPalette_WaveMail,
     },
 
     [ITEM_ISLANDGAME_JULIES_LETTER] =
