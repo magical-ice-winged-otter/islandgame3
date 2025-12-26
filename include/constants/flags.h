@@ -1229,7 +1229,7 @@
 #define FLAG_ANOMALY01_ITEM                                         0x494
 #define FLAG_FRESA_FARMS_MILK                                       0x495 
 #define FLAG_VERDANT_PATH_TIMER_BALL                                0x496 
-#define FLAG_ITEM_COP_2_SUN_STONE                                   0x497
+#define FLAG_ITEM_COP_KEE_BERRY                                     0x497
 #define FLAG_ITEM_MINTY_MEADOWS_BRIGHT_POWDER                       0x498
 #define FLAG_ITEM_TM_RETURN                                         0x499 
 #define FLAG_ITEM_CAMP_PERSI_POTION                                 0x49A 

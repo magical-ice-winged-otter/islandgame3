@@ -5849,7 +5849,7 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MELISSA:
             return MUS_BW_VS_RIVAL;
         case TRAINER_CLASS_PATHMASTER:
-            return MUS_HG_VS_TRAINER;
+            return MUS_BW_VS_SUBWAY_TRAINER;
         case TRAINER_CLASS_THIEF:
             return MUS_DP_VS_GALACTIC_COMMANDER;
         case TRAINER_CLASS_ELITE_FOUR:
@@ -5871,6 +5871,9 @@ u16 GetBattleBGM(void)
     {
         switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
         {
+        case SPECIES_SHADOW_MIGHTYENA:
+        case SPECIES_SHADOW_AGGRON:
+            return MUS_HG_VS_ENTEI;
         case SPECIES_ROTOM:
             return MUS_DP_VS_LEGEND;
         case SPECIES_ANOMALY_01:

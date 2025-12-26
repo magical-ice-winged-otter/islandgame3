@@ -292,318 +292,360 @@ ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1::
 # 156 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
 # 157 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_0
-# 162 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerWalkOver1
-# 163 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	waitmovement 0
-# 168 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 158 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	delay 30
+# 159 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playbgm MUS_BW_MUSICAL_STARDOM, TRUE
+# 160 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_0
+# 165 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerWalkOver1
+# 166 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 0
+# 171 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_1
-# 173 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 176 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 8, Movement_DELCATTYAttack
 # 177 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 8
-# 178 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playmoncry SPECIES_DELCATTY, CRY_MODE_NORMAL
-# 179 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmoncry
+	closemessage
 # 180 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_M_DOUBLE_SLAP
+	applymovement 8, Movement_DELCATTYAttack
 # 181 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
+	waitmovement 8
 # 182 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_M_DOUBLE_SLAP
+	playmoncry SPECIES_DELCATTY, CRY_MODE_NORMAL
 # 183 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
+	waitmoncry
 # 184 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	playse SE_M_DOUBLE_SLAP
 # 185 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
 # 186 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playmoncry SPECIES_LOMBRE, CRY_MODE_WEAK
+	applymovement 17, Common_Movement_WalkInPlaceLeft
 # 187 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmoncry
+	waitse
+# 188 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playse SE_M_DOUBLE_SLAP
+# 189 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
 # 190 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2
+	applymovement 17, Common_Movement_WalkInPlaceLeft
+# 191 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitse
+# 192 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playse SE_M_DOUBLE_SLAP
 # 193 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
+# 194 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 17, Common_Movement_WalkInPlaceLeft
+# 195 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitse
 # 196 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 1, Movement_PrimWalkAway
+	playmoncry SPECIES_LOMBRE, CRY_MODE_WEAK
 # 197 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 8, Movement_DELCATTYWalkAway
+	waitmoncry
 # 200 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 1
-# 201 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 8
-# 204 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 1
-# 205 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 8
-# 209 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_WalkInPlaceDown
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2
+# 203 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	closemessage
+# 206 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 1, Movement_PrimWalkAway
+# 207 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Movement_DELCATTYWalkAway
 # 210 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
+	waitmovement 1
 # 211 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
-# 212 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 213 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_3
+	waitmovement 8
 # 214 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	removeobject 1
 # 215 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_WalkInPlaceDown
-# 216 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 217 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_Delay32
-# 218 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 219 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_4
+	removeobject 8
 # 220 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	savebgm MUS_DUMMY
 # 221 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_WalkInPlaceDown
-# 222 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
+	fadedefaultbgm
 # 223 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
+	applymovement 3, Common_Movement_WalkInPlaceDown
 # 224 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	waitmovement 0
 # 225 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_5
+	applymovement 3, Common_Movement_Delay32
 # 226 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	waitmovement 0
+# 227 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_3
 # 228 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_PIN
+	closemessage
 # 229 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_ExclamationMark
+	applymovement 5, Common_Movement_WalkInPlaceDown
 # 230 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_ExclamationMark
+	waitmovement 0
 # 231 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
+	applymovement 5, Common_Movement_Delay32
 # 232 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	waitmovement 0
 # 233 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_4
 # 234 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
+	closemessage
 # 235 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
+	applymovement 3, Common_Movement_WalkInPlaceDown
 # 236 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	waitmovement 0
 # 237 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_FaceRight
+	applymovement 3, Common_Movement_Delay32
 # 238 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_FaceRight
+	waitmovement 0
 # 239 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_6
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_5
 # 240 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	closemessage
-# 241 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Movement_Fan3WalkAway
 # 242 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Movement_Fan4WalkAway
+	playse SE_PIN
+# 243 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_ExclamationMark
 # 244 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
+	applymovement 5, Common_Movement_ExclamationMark
 # 245 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	waitmovement 3
 # 246 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 3
+	waitmovement 5
 # 247 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 5
+	applymovement 3, Common_Movement_Delay32
+# 248 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_Delay32
 # 249 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	setflag FLAG_NORANNA_PRIM_CUTSCENE_FINISHED
+	waitmovement 3
 # 250 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	waitmovement 5
 # 251 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_FaceRight
+# 252 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_FaceRight
+# 253 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_6
+# 254 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	closemessage
+# 255 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Movement_Fan3WalkAway
+# 256 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 5, Movement_Fan4WalkAway
+# 258 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 3
+# 259 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 5
+# 260 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	removeobject 3
+# 261 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	removeobject 5
+# 263 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	setflag FLAG_NORANNA_PRIM_CUTSCENE_FINISHED
+# 264 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 265 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2::
-# 256 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	lock
-# 257 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
-# 258 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2_Text_0
-# 263 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 264 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerWalkOver2
-# 265 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
 # 270 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_1
+	lock
+# 271 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+# 272 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 0
+# 273 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	delay 30
+# 274 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playbgm MUS_BW_MUSICAL_STARDOM, TRUE
 # 275 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 278 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 8, Movement_DELCATTYAttack
-# 279 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 8
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_0
 # 280 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playmoncry SPECIES_DELCATTY, CRY_MODE_NORMAL
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_PlayerWalkOver2
 # 281 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmoncry
-# 282 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_M_DOUBLE_SLAP
-# 283 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
-# 284 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_M_DOUBLE_SLAP
-# 285 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
+	waitmovement 0
 # 286 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_M_DOUBLE_SLAP
-# 287 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitse
-# 288 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playmoncry SPECIES_LOMBRE, CRY_MODE_WEAK
-# 289 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmoncry
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_1
 # 292 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2
+	closemessage
 # 295 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 298 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 1, Movement_PrimWalkAway
-# 299 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 8, Movement_DELCATTYWalkAway
-# 302 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 1
-# 303 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Movement_DELCATTYAttack
+# 296 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	waitmovement 8
+# 297 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playmoncry SPECIES_DELCATTY, CRY_MODE_NORMAL
+# 298 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmoncry
+# 299 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playse SE_M_DOUBLE_SLAP
+# 300 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
+# 301 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 17, Common_Movement_WalkInPlaceLeft
+# 302 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitse
+# 303 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playse SE_M_DOUBLE_SLAP
+# 304 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
+# 305 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 17, Common_Movement_WalkInPlaceLeft
 # 306 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 1
+	waitse
 # 307 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 8
+	playse SE_M_DOUBLE_SLAP
+# 308 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceFasterRight
+# 309 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 17, Common_Movement_WalkInPlaceLeft
+# 310 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitse
 # 311 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_WalkInPlaceDown
+	playmoncry SPECIES_LOMBRE, CRY_MODE_WEAK
 # 312 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 313 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
-# 314 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
+	waitmoncry
 # 315 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_3
-# 316 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 317 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_WalkInPlaceDown
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2
 # 318 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 319 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_Delay32
-# 320 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
+	closemessage
 # 321 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_4
+	applymovement 1, Movement_PrimWalkAway
 # 322 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
-# 323 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_WalkInPlaceDown
-# 324 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
+	applymovement 8, Movement_DELCATTYWalkAway
 # 325 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
+	waitmovement 1
 # 326 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 0
-# 327 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_5
-# 328 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	waitmovement 8
+# 329 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	removeobject 1
 # 330 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	playse SE_PIN
-# 331 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_ExclamationMark
-# 332 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Common_Movement_ExclamationMark
-# 333 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
-# 334 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	removeobject 8
 # 335 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
+	savebgm MUS_DUMMY
 # 336 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_Delay32
-# 337 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
+	fadedefaultbgm
 # 338 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	applymovement 3, Common_Movement_WalkInPlaceDown
 # 339 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_FaceRight
+	waitmovement 0
 # 340 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Common_Movement_FaceRight
+	applymovement 3, Common_Movement_Delay32
 # 341 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_6
+	waitmovement 0
 # 342 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	closemessage
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_3
 # 343 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 3, Movement_Fan3WalkAway
+	closemessage
 # 344 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	applymovement 5, Movement_Fan4WalkAway
+	applymovement 5, Common_Movement_WalkInPlaceDown
+# 345 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 0
 # 346 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 3
+	applymovement 5, Common_Movement_Delay32
 # 347 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	waitmovement 5
+	waitmovement 0
 # 348 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 3
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_4
 # 349 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	removeobject 5
+	closemessage
+# 350 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_WalkInPlaceDown
 # 351 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	setflag FLAG_NORANNA_PRIM_CUTSCENE_FINISHED
+	waitmovement 0
 # 352 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	applymovement 3, Common_Movement_Delay32
 # 353 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 0
+# 354 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_5
+# 355 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	closemessage
+# 357 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	playse SE_PIN
+# 358 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_ExclamationMark
+# 359 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 5, Common_Movement_ExclamationMark
+# 360 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 3
+# 361 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 5
+# 362 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_Delay32
+# 363 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_Delay32
+# 364 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 3
+# 365 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 5
+# 366 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_FaceRight
+# 367 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Common_Movement_FaceRight
+# 368 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_6
+# 369 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	closemessage
+# 370 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 3, Movement_Fan3WalkAway
+# 371 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	applymovement 5, Movement_Fan4WalkAway
+# 373 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 3
+# 374 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	waitmovement 5
+# 375 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	removeobject 3
+# 376 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	removeobject 5
+# 378 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	setflag FLAG_NORANNA_PRIM_CUTSCENE_FINISHED
+# 379 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 380 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLoser::
-# 357 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 384 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	lock
-# 358 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 385 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLoser_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLombre::
-# 362 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 389 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	lock
-# 363 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	playmoncry SPECIES_LOMBRE, CRY_MODE_WEAK
-# 364 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 391 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLombre_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec1::
-# 368 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec1_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec2::
-# 372 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 399 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	lock
-# 373 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 400 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	faceplayer
-# 374 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 401 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec2_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec3::
-# 383 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 410 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	lock
-# 384 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 411 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	faceplayer
-# 385 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 412 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	msgbox ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec3_Text_0, MSGBOX_NPC
 	return
 
@@ -722,69 +764,61 @@ ISLANDGAME_CENTRAL_ORANNA_PATH_2_Battle_Ranger_Text_2:
 	.string "another chance...$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_0:
-# 158 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 161 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "KYAAA!{PAUSE 30} PRIM YOU'RE SO COOL!\p"
-	.string "That girl... isn't she the newest member\n"
+	.string "That girl...{PAUSE 30} isn't she the newest member\n"
 	.string "of STARLIGHT?\p"
 	.string "Her Delcatty is so pretty... I wish I had\n"
 	.string "one too!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_1:
-# 170 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this.$"
+# 173 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this. Delcatty!\n"
+	.string "Finish this with a double-slap!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2:
-# 191 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}-sigh- What a waste of time...$"
+# 201 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Humph. What a waste of time...$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_3:
-# 213 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	.string "{COLOR DARK_GRAY}Yeah! You should've just let her have\n"
-	.string "it! She has better things to do than\l"
+# 227 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+	.string "{COLOR DARK_GRAY}Yeah! She has better things to do than\n"
 	.string "spender her time dealing with scrubs\l"
 	.string "like you!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_4:
-# 219 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 233 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "{COLOR DARK_GRAY}Yeah! She's Lady Primrose, the greatest\n"
 	.string "idol to ever exist! She and Delcatty are\l"
 	.string "gonna take Marya by storm!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_5:
-# 225 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 239 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "{COLOR DARK_GRAY}You better believe she is! We stand with\n"
 	.string "Her Majesty!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_6:
-# 239 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 253 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "{COLOR DARK_GRAY}E-Eh? W-Wait for us, Prim! C'mon Jess,\n"
 	.string "let's ditch these goobers!$"
 
-ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2_Text_0:
-# 259 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	.string "KYAAA! PRIM YOU'RE SO COOL!\p"
-	.string "That girl... isn't she the newest member\n"
-	.string "of STARLIGHT?\p"
-	.string "Her Delcatty is so pretty... I wish I had\n"
-	.string "one too!$"
-
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLoser_Text_0:
-# 358 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 385 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "N-No way... She beat me without taking\n"
 	.string "any damage...$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightLombre_Text_0:
-# 364 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 391 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "L-Lom...\p"
 	.string "{COLOR RED}(Looks like Lombre took a thrashing.)$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec1_Text_0:
-# 368 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "Prim's Pokémon fight so elegantly... As\n"
 	.string "expected from an idol!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec2_Text_0:
-# 375 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 402 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "Apparently Primrose just became a\n"
 	.string "member of STARLIGHT a few months ago.\p"
 	.string "Huh? You don't know what STARLIGHT is?\n"
@@ -796,7 +830,7 @@ ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec2_Text_0:
 	.string "festival tournament in the bag.$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Interact_PrimFightSpec3_Text_0:
-# 386 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
+# 413 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
 	.string "Ruka gets so many challenge requests\n"
 	.string "that she can only take a limited number\l"
 	.string "of them per day.\p"

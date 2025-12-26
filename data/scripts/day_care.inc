@@ -272,11 +272,11 @@ EventScript_EggHatch::
 	end
 
 Route117_Text_SeeWifeIfYoudLikeMeToRaiseMon:
-	.string "I'm the DAY-CARE MAN.\p"
-	.string "I help take care of the precious\n"
-	.string "POKéMON of TRAINERS.\p"
-	.string "If you'd like me to raise your POKéMON,\n"
-	.string "have a word with my wife.$"
+	.string "Howdy there, trainer. Welcome to Fresa\n"
+	.string "Farms!\p"
+	.string "Right behind me is our Pokémon Daycare.\n"
+	.string "If you'd like us to take care of your\p"
+	.string "Pokemon, go right inside!$" 
 
 Route117_Text_DoYouWantEgg:
 	.string "Ah, it's you!\p"

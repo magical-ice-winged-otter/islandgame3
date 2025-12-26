@@ -154,11 +154,15 @@ movement Movement_PlayerWalkOver2 {
 script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
+    waitmovement(0)
+    delay(30)
+	playbgm(MUS_BW_MUSICAL_STARDOM,TRUE)
     msgbox(format(
         "KYAAA!{PAUSE 30} PRIM YOU'RE SO COOL!\p"
-        "That girl... isn't she the newest member of STARLIGHT?\p"
+        "That girl...{PAUSE 30} isn't she the newest member of STARLIGHT?\p"
         "Her Delcatty is so pretty... I wish I had one too!"
     ))
+    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerWalkOver1)
     waitmovement(0)
 
@@ -168,6 +172,7 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
     msgbox(
         format(
             "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this."
+            "Delcatty! Finish this with a double-slap!"
             )
         )
     closemessage
@@ -178,17 +183,23 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
     playmoncry(SPECIES_DELCATTY, CRY_MODE_NORMAL)
     waitmoncry
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playmoncry(SPECIES_LOMBRE, CRY_MODE_WEAK)
     waitmoncry
 
     // prim roasts the opponent for losing
     msgbox(
-        format("{COLOR GREEN}Primrose: {COLOR DARK_GRAY}-sigh- What a waste of time...")
+        format("{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Humph. What a waste of time...")
         )
     closemessage
 
@@ -206,11 +217,15 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
     // removeobject(LOCALID_FAN_1)
     // removeobject(LOCALID_FAN_2)
 
+    
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    
     applymovement(LOCALID_FAN_3, Common_Movement_WalkInPlaceDown)
     waitmovement(0)
     applymovement(LOCALID_FAN_3, Common_Movement_Delay32)
     waitmovement(0)
-    msgbox(format("{COLOR DARK_GRAY}Yeah! You should've just let her have it! She has better things to do than spender her time dealing with scrubs like you!"))
+    msgbox(format("{COLOR DARK_GRAY}Yeah! She has better things to do than spend her her time dealing with scrubs like you!"))
     closemessage
     applymovement(LOCALID_FAN_4, Common_Movement_WalkInPlaceDown)
     waitmovement(0)
@@ -255,9 +270,12 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
 script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2 {
     lock
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
+    waitmovement(0)
+    delay(30)
+	playbgm(MUS_BW_MUSICAL_STARDOM,TRUE)
     msgbox(format(
-        "KYAAA! PRIM YOU'RE SO COOL!\p"
-        "That girl... isn't she the newest member of STARLIGHT?\p"
+        "KYAAA!{PAUSE 30} PRIM YOU'RE SO COOL!\p"
+        "That girl...{PAUSE 30} isn't she the newest member of STARLIGHT?\p"
         "Her Delcatty is so pretty... I wish I had one too!"
     ))
     closemessage
@@ -270,6 +288,7 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2 {
     msgbox(
         format(
             "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this."
+            "Delcatty! Finish this with a double-slap!"
             )
         )
     closemessage
@@ -280,17 +299,23 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2 {
     playmoncry(SPECIES_DELCATTY, CRY_MODE_NORMAL)
     waitmoncry
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playse(SE_M_DOUBLE_SLAP)
+    applymovement(LOCALID_DELCATTY, Common_Movement_WalkInPlaceFasterRight)
+    applymovement(17, Common_Movement_WalkInPlaceLeft)
     waitse
     playmoncry(SPECIES_LOMBRE, CRY_MODE_WEAK)
     waitmoncry
 
     // prim roasts the opponent for losing
     msgbox(
-        format("{COLOR GREEN}Primrose: {COLOR DARK_GRAY}-sigh- What a waste of time...")
+        format("{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Humph. What a waste of time...")
         )
     closemessage
 
@@ -308,11 +333,15 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2 {
     // removeobject(LOCALID_FAN_1)
     // removeobject(LOCALID_FAN_2)
 
+    
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    
     applymovement(LOCALID_FAN_3, Common_Movement_WalkInPlaceDown)
     waitmovement(0)
     applymovement(LOCALID_FAN_3, Common_Movement_Delay32)
     waitmovement(0)
-    msgbox(format("{COLOR DARK_GRAY}Yeah! You should've just let her have it! She has better things to do than spender her time dealing with scrubs like you!"))
+    msgbox(format("{COLOR DARK_GRAY}Yeah! She has better things to do than spend her time dealing with scrubs like you!"))
     closemessage
     applymovement(LOCALID_FAN_4, Common_Movement_WalkInPlaceDown)
     waitmovement(0)
