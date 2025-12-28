@@ -137,7 +137,7 @@ ISLANDGAME_TIDALCOVE_Interact_BeachLifeguard_Floatzel::
 # 89 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	playmoncry SPECIES_FLOATZEL, CRY_MODE_NORMAL
 # 90 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachLifeguard_Floatzel_Text_0, MSGBOX_NPC
+	waitmoncry
 # 91 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 92 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
@@ -178,176 +178,138 @@ ISLANDGAME_TIDALCOVE_Interact_BeachDude_2:
 	goto ISLANDGAME_TIDALCOVE_Interact_BeachDude_1
 
 
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer::
-# 117 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	lock
-# 118 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	faceplayer
-# 119 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	goto_if_set FLAG_DAILY_TIDALCOVE_YACHE_GIRL, ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_2
-# 126 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_1, MSGBOX_NPC
-# 128 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	checkitemspace ITEM_YACHE_BERRY
-# 130 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_5
-# 136 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_3, MSGBOX_NPC
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_1:
-# 139 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	closemessage
-# 140 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	release
-	return
-
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_2:
-# 120 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_0
-	goto ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_1
-
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_5:
-# 131 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_2, MSGBOX_NPC
-# 132 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	giveitem ITEM_YACHE_BERRY
-# 133 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	setflag FLAG_DAILY_TIDALCOVE_YACHE_GIRL
-	goto ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_1
-
-
 ISLANDGAME_TIDALCOVE_Interact_BeachFisher::
-# 144 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 118 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 145 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 119 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 146 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 120 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachFisher_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_BeachGazer::
-# 150 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 124 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 151 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 125 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 152 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 126 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_BeachGazer_Text_0
-# 153 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 127 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	closemessage
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearCycleRoad::
-# 157 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 131 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 158 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 132 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 159 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 133 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearCycleRoad_Text_0, MSGBOX_NPC
-# 165 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 139 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance::
-# 169 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 143 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 170 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 144 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 171 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 145 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearBikeShop::
-# 178 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 152 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 179 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 153 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 180 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 154 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearBikeShop_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Middle::
-# 189 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 161 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 190 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 162 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 191 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Middle_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Top::
-# 197 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 169 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 198 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 170 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 199 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 171 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Top_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_BikeDude::
-# 209 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 181 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 210 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 182 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 211 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 183 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_BikeDude_Text_0, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle::
-# 222 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 194 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	lock
-# 223 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 195 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	faceplayer
-# 224 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 196 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	playmoncry SPECIES_SQUIRTLE, CRY_MODE_NORMAL
-# 226 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 198 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	goto_if_unset FLAG_TIDALCOVE_SQUIRTLE_GIFT, ISLANDGAME_TIDALCOVE_Interact_Squirtle_2
-# 247 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 219 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_2
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_1:
-# 251 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 223 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 SquirtleGiftEvent_End:
-# 252 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 224 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	waitmoncry
-# 253 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 225 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	release
 	return
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_2:
-# 227 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 199 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_0, MSGBOX_YESNO
-# 233 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 205 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq ISLANDGAME_TIDALCOVE_Interact_Squirtle_6
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_5:
-# 237 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 209 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	checkitemspace ITEM_WATER_GEM
-# 238 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 210 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_TIDALCOVE_Interact_Squirtle_9
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_8:
-# 243 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 215 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	giveitem ITEM_WATER_GEM
-# 244 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 216 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	setflag FLAG_TIDALCOVE_SQUIRTLE_GIFT
 	goto ISLANDGAME_TIDALCOVE_Interact_Squirtle_1
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_6:
-# 234 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 206 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	goto SquirtleGiftEvent_End
 	goto ISLANDGAME_TIDALCOVE_Interact_Squirtle_5
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_9:
-# 239 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 211 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	msgbox ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_1
-# 240 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 212 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	goto SquirtleGiftEvent_End
 	goto ISLANDGAME_TIDALCOVE_Interact_Squirtle_8
 
@@ -355,9 +317,7 @@ ISLANDGAME_TIDALCOVE_Interact_Squirtle_9:
 ISLANDGAME_TIDALCOVE_Interact_EntranceSign_Text_0:
 # 23 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "TIDALCOVE\n"
-	.string "Crack open a cold one on our beach!\p"
-	.string "(By cold one, we mean a non-alcoholic\n"
-	.string "beverage, obviously.)$"
+	.string "Crack open a cold one on our beach!$"
 
 ISLANDGAME_TIDALCOVE_Interact_BehindGymSign_Text_0:
 # 27 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
@@ -387,9 +347,7 @@ ISLANDGAME_TIDALCOVE_Interact_GymSponsorBlocking_Text_0:
 	.string "{COLOR RED}(Hmm. It seems like the gym has reached\n"
 	.string "its limit of challengers for the day...)\p"
 	.string "(I should see what else Oranna has to\n"
-	.string "offer in the meantime.)\p"
-	.string "(Perhaps there's something west I can\n"
-	.string "check out?)$"
+	.string "offer in the meantime.)$"
 
 ISLANDGAME_TIDALCOVE_Interact_PrimFan1_Text_0:
 # 51 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
@@ -420,10 +378,6 @@ ISLANDGAME_TIDALCOVE_Interact_BeachLifeguard_Text_0:
 	.string "If someone is in trouble, me and my\n"
 	.string "Floatzel will swim out to save them!$"
 
-ISLANDGAME_TIDALCOVE_Interact_BeachLifeguard_Floatzel_Text_0:
-# 90 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "{COLOR RED}(Floatzel is wearing a lifeguard shirt.)$"
-
 ISLANDGAME_TIDALCOVE_Interact_BeachDude_Text_0:
 # 99 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "If I lose it all, slip and fall, will you\n"
@@ -437,38 +391,18 @@ ISLANDGAME_TIDALCOVE_Interact_BeachDude_Text_2:
 # 108 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "If I lose it all, lose it all, lose it all...$"
 
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_0:
-# 121 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "I usually pick my berries right after I\n"
-	.string "wake up!\p"
-	.string "If you want, I can give you another one\n"
-	.string "tommorrow.$"
-
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_1:
-# 126 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "Yache Berries are a great way to cool\n"
-	.string "off in Marya's sweltering heat.$"
-
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_2:
-# 131 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "Try one for yourself!$"
-
-ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer_Text_3:
-# 136 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "I'd give you one if you had more room!$"
-
 ISLANDGAME_TIDALCOVE_Interact_BeachFisher_Text_0:
-# 146 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 120 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Hm... Your sense of fashion is severely\n"
 	.string "lacking.$"
 
 ISLANDGAME_TIDALCOVE_Interact_BeachGazer_Text_0:
-# 152 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 126 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Did you know Galarians can't say\n"
 	.string "“bottle of water”?$"
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearCycleRoad_Text_0:
-# 160 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 134 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "I'm training for the festival\n"
 	.string "trialthalon!\p"
 	.string "I got swimming down, just about got\n"
@@ -479,7 +413,7 @@ ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearCycleRoad_Text_0:
 	.string "going to fall behind otherwise!$"
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance_Text_0:
-# 172 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 146 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "{COLOR LIGHT_BLUE}Ruka's Milotic {COLOR DARK_GRAY}is so pretty. I wish I one\n"
 	.string "too, but I heard they're notoriously\l"
 	.string "hard to find.\p"
@@ -487,20 +421,18 @@ ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance_Text_0:
 	.string "the bottom of the Maryan Sea.$"
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearBikeShop_Text_0:
-# 181 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 155 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Ruka is an ice-type specialist. Just\n"
 	.string "like that one gym leader from Sinnoh!\p"
-	.string "Ummm.. what was her name again?\p"
-	.string "...\p"
-	.string "Drats. You're too hip to fall for that.$"
+	.string "Ummm.. what was her name again?$"
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Middle_Text_0:
-# 192 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 164 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Would be weird if I asked Ruka to sign\n"
 	.string "my body pillow of her?$"
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Top_Text_0:
-# 200 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 172 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Ruka's presence has garnered a lot of\n"
 	.string "foot traffic into Tidalcove.\p"
 	.string "I think it's neat seeing so many\n"
@@ -514,7 +446,7 @@ ISLANDGAME_TIDALCOVE_Interact_TownCitizen_Top_Text_0:
 	.string "about her? Yes? No? Maybe?$"
 
 ISLANDGAME_TIDALCOVE_Interact_BikeDude_Text_0:
-# 212 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 184 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "Welcome to the Seaside Bike Path,\n"
 	.string "trainer! Lumine Island is just up ahead.\p"
 	.string "Remember to stay on your bike! Oh, and\n"
@@ -528,15 +460,15 @@ ISLANDGAME_TIDALCOVE_Interact_BikeDude_Text_0:
 	.string "out of the waters earlier today...$"
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_0:
-# 229 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 201 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "{COLOR RED}(Huh? It looks like Squirtle is trying to\n"
 	.string "give me something.)\p"
 	.string "{COLOR RED}(Should I take it?)$"
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_1:
-# 239 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 211 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "{COLOR RED}(I don't have enough space to carry it.)$"
 
 ISLANDGAME_TIDALCOVE_Interact_Squirtle_Text_2:
-# 247 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
+# 219 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
 	.string "{COLOR DARK_GRAY}Squirtle!$"

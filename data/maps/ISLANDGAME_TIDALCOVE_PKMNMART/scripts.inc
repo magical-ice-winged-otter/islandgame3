@@ -105,27 +105,23 @@ Tidalcove_MartItems:
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1_Text_0:
 # 6 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "I liked this store before it became\n"
-	.string "affiliated with Ruka.\p"
-	.string "Now everything's marked up at a\n"
-	.string "whopping two-hundred percent.$"
+	.string "Yeesh... $800 for a glass of pop? Just\n"
+	.string "'cause it's got Ruka on it? There's no\l"
+	.string "way anyone would pay that much just\l"
+	.string "for a bottle.$"
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins_Text_0:
 # 12 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	.string "{COLOR RED}(There's rows upon rows of exorbitantly\n"
-	.string "priced vitamins.)\p"
-	.string "(They all claim that taking them will\n"
-	.string "make you look like Ruka.)$"
+	.string "priced vitamins. They feature Ruka.)$"
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks_Text_0:
 # 18 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "{COLOR RED}(Half of the drinks here have a photo of\n"
-	.string "Ruka on them in a swimsuit.)$"
+	.string "{COLOR RED}(All of the drinks here feature Ruka.)$"
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General_Text_0:
 # 24 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "{COLOR RED}(Almost all of these goods have Ruka on\n"
-	.string "them.)$"
+	.string "{COLOR RED}(All of these goods feature Ruka.)$"
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Employee_Text_0:
 # 31 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"

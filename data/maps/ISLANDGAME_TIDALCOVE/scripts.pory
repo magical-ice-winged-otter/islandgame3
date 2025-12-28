@@ -20,7 +20,7 @@ mapscripts ISLANDGAME_TIDALCOVE_MapScripts {
 }
 
 script ISLANDGAME_TIDALCOVE_Interact_EntranceSign {
-    msgbox(format("TIDALCOVE\nCrack open a cold one on our beach!\p(By cold one, we mean a non-alcoholic beverage, obviously.)"), MSGBOX_SIGN)
+    msgbox(format("TIDALCOVE\nCrack open a cold one on our beach!"), MSGBOX_SIGN)
 }
 
 script ISLANDGAME_TIDALCOVE_Interact_BehindGymSign {
@@ -41,7 +41,7 @@ script ISLANDGAME_TIDALCOVE_Interact_GymSign {
 
 script ISLANDGAME_TIDALCOVE_Interact_GymSponsorBlocking {
     lock
-    msgbox(format("I am sorry, but I cannot let anyone else inside the gym for the day.\p{COLOR RED}(Hmm. It seems like the gym has reached its limit of challengers for the day...)\p(I should see what else Oranna has to offer in the meantime.)\p(Perhaps there's something west I can check out?)"))
+    msgbox(format("I am sorry, but I cannot let anyone else inside the gym for the day.\p{COLOR RED}(Hmm. It seems like the gym has reached its limit of challengers for the day...)\p(I should see what else Oranna has to offer in the meantime.)"))
     closemessage
     release
 }
@@ -87,7 +87,7 @@ script ISLANDGAME_TIDALCOVE_Interact_BeachLifeguard_Floatzel {
     lock
     faceplayer
     playmoncry(SPECIES_FLOATZEL, CRY_MODE_NORMAL)
-    msgbox(format("{COLOR RED}(Floatzel is wearing a lifeguard shirt.)"), MSGBOX_NPC)
+    waitmoncry
     applymovement(VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection)
     waitmovement(0)
 }
@@ -113,32 +113,6 @@ script ISLANDGAME_TIDALCOVE_Interact_BeachDude {
     release
 }
 
-script ISLANDGAME_TIDALCOVE_Interact_BeachMiddleWanderer {
-    lock
-    faceplayer
-    if (flag(FLAG_DAILY_TIDALCOVE_YACHE_GIRL)) {
-        msgbox(format(
-            "I usually pick my berries right after I wake up!\p"
-            "If you want, I can give you another one tommorrow.")
-        MSGBOX_NPC)
-    }
-    else {
-        msgbox(format("Yache Berries are a great way to cool off in Marya's sweltering heat."), MSGBOX_NPC)
-
-        checkitemspace(ITEM_YACHE_BERRY)
-
-        if (var(VAR_RESULT)) {
-            msgbox(format("Try one for yourself!"), MSGBOX_NPC)
-            giveitem(ITEM_YACHE_BERRY)
-            setflag(FLAG_DAILY_TIDALCOVE_YACHE_GIRL)
-        }
-        else {
-            msgbox(format("I'd give you one if you had more room!"), MSGBOX_NPC)
-        }
-    }
-    closemessage
-    release
-}
 
 script ISLANDGAME_TIDALCOVE_Interact_BeachFisher {
     lock
@@ -179,9 +153,7 @@ script ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearBikeShop {
     faceplayer
     msgbox(format(
         "Ruka is an ice-type specialist. Just like that one gym leader from Sinnoh!\p"
-        "Ummm.. what was her name again?\p"
-        "...\p"
-        "Drats. You're too hip to fall for that."
+        "Ummm.. what was her name again?"
     ), MSGBOX_NPC)
 }
 

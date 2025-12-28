@@ -1182,11 +1182,22 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Ball: Dive Ball
 Nature: Hardy
 - Aurora Veil
-- Snowscape
+- Ice Shard
 - Icy Wind
 - Water Pulse
 
-Lapras @ Icy Rock
+Frosmoth @ Bright Powder
+Level: 24
+Ability: Snow Cloak
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ball: Dive Ball
+Nature: Hardy
+- Aurora Beam
+- Struggle Bug
+- Snowscape
+- Aurora Veil
+
+Lapras @ Sitrus Berry
 Level: 24
 Ability: Shell Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1194,7 +1205,7 @@ Ball: Dive Ball
 Nature: Hardy
 - Ice Shard
 - Water Pulse
-- Confuse Ray
+- Avalanche
 - Snowscape
 
 Milotic Maryan @ Ice Gem
@@ -1204,7 +1215,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Ball: Dive Ball
 Nature: Hardy
 - Dragon Breath
-- Water Pulse
+- Chilling Water
 - Aurora Beam
 - Snowscape
 

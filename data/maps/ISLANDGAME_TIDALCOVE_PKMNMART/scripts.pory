@@ -3,25 +3,25 @@ mapscripts ISLANDGAME_TIDALCOVE_PKMNMART_MapScripts {}
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1 {
     lock
     faceplayer
-    msgbox(format("I liked this store before it became affiliated with Ruka.\pNow everything's marked up at a whopping two-hundred percent."))
+    msgbox(format("Yeesh... $800 for a glass of pop? Just 'cause it's got Ruka on it? There's no way anyone would pay that much just for a bottle."))
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins {
     lock
-    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced vitamins.)\p(They all claim that taking them will make you look like Ruka.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced vitamins. They feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks {
     lock
-    msgbox(format("{COLOR RED}(Half of the drinks here have a photo of Ruka on them in a swimsuit.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(All of the drinks here feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General {
     lock
-    msgbox(format("{COLOR RED}(Almost all of these goods have Ruka on them.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(All of these goods feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 

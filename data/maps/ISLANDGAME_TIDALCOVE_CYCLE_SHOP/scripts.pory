@@ -16,7 +16,7 @@ script ISLANDGAME_TIDALCOVE_CYCLE_SHOP_Interact_Owner {
         checkitem(ITEM_BIKE_VOUCHER)
 
         if (var(VAR_RESULT)) {
-            msgbox(format("Yooo, you got a voucher? That means you got your first badge! Grats, brah!\pIght, here's your ELITE bike, carefully crafted by yours truly!"), MSGBOX_NPC)
+            msgbox(format("Yooo, you got a voucher? That means you got your first badge! Grats, brah!\pIght, here's your ELITE bike, carefully crafted by none other than moi!"), MSGBOX_NPC)
             giveitem(ITEM_MACH_BIKE)
             removeitem(ITEM_BIKE_VOUCHER)
             setflag(FLAG_RECEIVED_BIKE)
@@ -36,7 +36,7 @@ script ISLANDGAME_TIDALCOVE_CYCLE_SHOP_InteractNPC1 {
 
 script ISLANDGAME_TIDALCOVE_CYCLE_SHOP_InteractNPC2 {
     lock
-    msgbox(format("That's right... maintain your balance!"))
+    msgbox(format("Mach bikes can be quite difficult to control as a beginner.\pIf you keep bumping into things, try turning a little bit earlier."))
     closemessage
     release
 }

@@ -84,7 +84,7 @@ ISLANDGAME_TIDALCOVE_CYCLE_SHOP_Interact_Owner_Text_2:
 	.string "Yooo, you got a voucher? That means\n"
 	.string "you got your first badge! Grats, brah!\p"
 	.string "Ight, here's your ELITE bike, carefully\n"
-	.string "crafted by yours truly!$"
+	.string "crafted by none other than moi!$"
 
 ISLANDGAME_TIDALCOVE_CYCLE_SHOP_InteractNPC1_Text_0:
 # 32 "data/maps/ISLANDGAME_TIDALCOVE_CYCLE_SHOP/scripts.pory"
@@ -92,4 +92,7 @@ ISLANDGAME_TIDALCOVE_CYCLE_SHOP_InteractNPC1_Text_0:
 
 ISLANDGAME_TIDALCOVE_CYCLE_SHOP_InteractNPC2_Text_0:
 # 39 "data/maps/ISLANDGAME_TIDALCOVE_CYCLE_SHOP/scripts.pory"
-	.string "That's right... maintain your balance!$"
+	.string "Mach bikes can be quite difficult to\n"
+	.string "control as a beginner.\p"
+	.string "If you keep bumping into things, try\n"
+	.string "turning a little bit earlier.$"
