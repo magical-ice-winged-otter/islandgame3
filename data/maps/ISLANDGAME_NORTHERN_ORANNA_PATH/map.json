@@ -185,9 +185,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_WATER_STONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_TM54",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NOR_WATER_STONE"
+      "flag": "FLAG_ITEM_NOR_TM_DEFOG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
@@ -216,7 +216,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_AVERAGE)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_SMALL)",
       "x": 63,
       "y": 14,
       "elevation": 0,
@@ -229,7 +229,7 @@
       "flag": "FLAG_TEMP_5"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_AVERAGE)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_SUPER)",
       "x": 7,
       "y": 4,
       "elevation": 0,
@@ -255,7 +255,7 @@
       "flag": "FLAG_TEMP_4"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_AVERAGE)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PUMPKABOO_LARGE)",
       "x": 37,
       "y": 6,
       "elevation": 0,
@@ -349,9 +349,7 @@
       "dest_warp_id": "8"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

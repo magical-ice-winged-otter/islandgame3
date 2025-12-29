@@ -8,7 +8,7 @@
     F(CALM_MIND) \
     F(ROAR) \
     F(TOXIC) \
-    F(HAIL) \
+    F(SNOWSCAPE) \
     F(BULK_UP) \
     F(BULLET_SEED) \
     F(HIDDEN_POWER) \
@@ -54,7 +54,8 @@
     F(OVERHEAT) \
     F(CHARGE_BEAM) \
     F(FALSE_SWIPE) \
-    F(INFESTATION)
+    F(INFESTATION) \
+    F(DEFOG)
 
 #define FOREACH_HM(F) \
     F(CUT) \
