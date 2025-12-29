@@ -138,6 +138,8 @@ script ISLANDGAME_ROSEVALE_INN_Interact_ArthurDad {
 
 script ISLANDGAME_ROSEVALE_INN_Interact_LockedDoor {
     lock
+    playse(SE_M_COMET_PUNCH)
+    waitse
     msgbox(format(
         "Oi, the sign says “DO NOT DISTURB”. What part of that do you not get!?"
     ))

@@ -38765,7 +38765,6 @@ static const u16 sNinjaskMaryanTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BUG_BITE,
     MOVE_DOUBLE_TEAM,
-    MOVE_DEFOG,
     MOVE_FACADE,
     MOVE_FALSE_SWIPE,
     MOVE_FURY_CUTTER,

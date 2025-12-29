@@ -179,8 +179,12 @@ ISLANDGAME_ROSEVALE_INN_Interact_LockedDoor::
 # 140 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
 	lock
 # 141 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
+	playse SE_M_COMET_PUNCH
+# 142 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
+	waitse
+# 143 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
 	msgbox ISLANDGAME_ROSEVALE_INN_Interact_LockedDoor_Text_0
-# 144 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
+# 146 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
 	release
 	return
 
@@ -285,6 +289,6 @@ ISLANDGAME_ROSEVALE_INN_Interact_ArthurDad_Text_1:
 	.string "I'm glad that you met each other.$"
 
 ISLANDGAME_ROSEVALE_INN_Interact_LockedDoor_Text_0:
-# 142 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
+# 144 "data/maps/ISLANDGAME_ROSEVALE_INN/scripts.pory"
 	.string "Oi, the sign says “DO NOT DISTURB”.\n"
 	.string "What part of that do you not get!?$"

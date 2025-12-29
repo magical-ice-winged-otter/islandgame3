@@ -342,7 +342,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Main {
 	waitmovement(0)
 	applymovement(RIVAL_OW_ID, Common_Movement_Delay48)
 	waitmovement(0)
-	playbgm(MUS_BW_FOLLOW_ME_2,TRUE)
+	playbgm(MUS_HG_LYRA,TRUE)
     // mel walks down towards you
     applymovement(RIVAL_OW_ID, ISLANDGAME_MINTY_MEADOWS_2_RivalWalkDown)
     waitmovement(RIVAL_OW_ID)

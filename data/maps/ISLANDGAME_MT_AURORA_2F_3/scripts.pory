@@ -91,7 +91,7 @@ script ISLANDGAME_MT_AURORA_2F_3_Azurill_Interact {
     lock
     faceplayer
     playmoncry(SPECIES_AZURILL, CRY_MODE_WEAK)
-    msgbox(format("Azu... {COLOR BLUE}(pls saef me frum meen ladi)"))
+    msgbox(format("Azu... {COLOR BLUE}(pls halp)"))
     release
 }
 
@@ -160,7 +160,6 @@ script(local) ThiefDefeated {
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
     waitmovement(0)
-    msgbox(format("{COLOR RED}(Huh? What was that sound?)"))
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
@@ -176,7 +175,7 @@ script(local) ThiefDefeated {
 
     // articuno scares thief and they run
     playmoncry(SPECIES_ARTICUNO, CRY_MODE_NORMAL)
-    msgbox(format("Cuuuuun!"))
+    waitmoncry
     closemessage
     applymovement(LOCALID_THIEF, Common_Movement_FaceUp)
     waitmovement(0)
@@ -216,7 +215,7 @@ script(local) ThiefDefeated {
     removeobject(LOCALID_THIEF)
     waitmovement(0)
     playmoncry(SPECIES_ARTICUNO, CRY_MODE_NORMAL)
-    msgbox(format("Cuuuuun..."))
+    waitmoncry
     closemessage
     applymovement(LOCALID_ARTHUR, Common_Movement_FaceUp)
     waitmovement(0)

@@ -2876,7 +2876,7 @@ F_TRAINER_FEMALE |
 #line 1223
         .trainerName = _("Arthur"),
 #line 1224
-        .trainerClass = TRAINER_CLASS_RIVAL,
+        .trainerClass = TRAINER_CLASS_ARTHUR,
 #line 1225
         .trainerPic = TRAINER_PIC_ARTHUR,
         .encounterMusic_gender =

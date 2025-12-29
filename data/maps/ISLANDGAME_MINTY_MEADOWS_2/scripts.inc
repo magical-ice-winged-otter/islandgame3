@@ -555,7 +555,7 @@ ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Main::
 # 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement 0
 # 345 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	playbgm MUS_BW_FOLLOW_ME_2, TRUE
+	playbgm MUS_HG_LYRA, TRUE
 # 347 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement 8, ISLANDGAME_MINTY_MEADOWS_2_RivalWalkDown
 # 348 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"

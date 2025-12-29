@@ -276,7 +276,7 @@ ISLANDGAME_ROSEVALE_Interact_PuddleMon::
 # 171 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	playmoncry SPECIES_CHARMANDER, CRY_MODE_WEAK
 # 172 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	msgbox ISLANDGAME_ROSEVALE_Interact_PuddleMon_Text_0
+	waitmoncry
 # 173 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	release
 	return
@@ -368,7 +368,7 @@ ISLANDGAME_ROSEVALE_Interact_Talonflame::
 # 230 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	playmoncry SPECIES_TALONFLAME, CRY_MODE_NORMAL
 # 231 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	msgbox ISLANDGAME_ROSEVALE_Interact_Talonflame_Text_0
+	waitmoncry
 # 232 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection
 # 233 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
@@ -500,141 +500,147 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight::
 # 323 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	closemessage
 # 324 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	addobject 4
+	playbgm MUS_HG_CLAIR, FALSE
 # 325 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	setobjectxy 4, 19, 12
+	addobject 4
 # 326 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 4, Movement_Arthur_WalkUpToExit
+	setobjectxy 4, 19, 12
 # 327 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+	applymovement 4, Movement_Arthur_WalkUpToExit
 # 328 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
+# 329 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	waitmovement 0
-# 331 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 332 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_1, MSGBOX_NPC
-# 343 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 344 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	trainerbattle_no_intro TRAINER_ROSEVALE_ARTHUR, ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_2
-# 347 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 349 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	playbgm MUS_BW_EMOTION, FALSE
+# 350 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_3, MSGBOX_NPC
-# 357 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	closemessage
 # 360 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	addobject 5
-# 361 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	setobjectxy 5, 19, 12
-# 362 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 5, Movement_ArthurDad_WalkUpToArthur
-# 363 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 4, Movement_Arthur_SeesDad
-# 364 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	waitmovement 5
-# 365 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	waitmovement 4
-# 368 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_4, MSGBOX_NPC
-# 377 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_5, MSGBOX_NPC
-# 386 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 4, Common_Movement_FaceRight
-# 387 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	waitmovement 0
-# 388 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_6
-# 391 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	closemessage
-# 394 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 5, Movement_ArthurDad_WalkAway
-# 395 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	applymovement 4, Movement_Arthur_WalkAway
-# 396 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	waitmovement 4
-# 397 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 363 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	addobject 5
+# 364 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	setobjectxy 5, 19, 12
+# 365 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	applymovement 5, Movement_ArthurDad_WalkUpToArthur
+# 366 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	applymovement 4, Movement_Arthur_SeesDad
+# 367 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	waitmovement 5
+# 368 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	waitmovement 4
+# 371 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_4, MSGBOX_NPC
+# 380 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_5, MSGBOX_NPC
+# 389 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	applymovement 4, Common_Movement_FaceRight
+# 390 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	waitmovement 0
+# 391 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_6
+# 394 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	closemessage
+# 397 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	applymovement 5, Movement_ArthurDad_WalkAway
 # 398 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	removeobject 4
+	applymovement 4, Movement_Arthur_WalkAway
 # 399 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	removeobject 5
+	waitmovement 4
+# 400 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	waitmovement 5
 # 401 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	setvar VAR_ROSEVALE_STATE, 4
+	removeobject 4
 # 402 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	removeobject 5
+# 404 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	setvar VAR_ROSEVALE_STATE, 4
+# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	fadedefaultbgm
+# 407 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	release
 	return
 
 
-# 405 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 410 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 Movement_ArthurDad_WalkUpToArthur:
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
-# 406 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_right
 	step_end
 
-# 409 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 414 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 Movement_Arthur_SeesDad:
-# 410 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 415 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 410 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 415 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 410 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 415 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 410 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 415 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 411 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	face_left
-# 412 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 417 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 415 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 420 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 Movement_ArthurDad_WalkAway:
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 416 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
 	step_end
 
-# 419 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 424 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 Movement_Arthur_WalkAway:
-# 420 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 425 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 420 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 425 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 420 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 425 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 420 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 425 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	delay_16
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
-# 421 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 426 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	walk_left
 	step_end
 
@@ -688,10 +694,6 @@ ISLANDGAME_ROSEVALE_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_0_Text_5:
 	.string "{COLOR RED}(I spent the rest of the night talking\n"
 	.string "to Arthur about my journey thus far...)$"
 
-ISLANDGAME_ROSEVALE_Interact_PuddleMon_Text_0:
-# 172 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	.string "Char... {COLOR BLUE}(water scary :c)$"
-
 ISLANDGAME_ROSEVALE_Interact_PuddleTrainer_Text_0:
 # 194 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "It's ok! The water isn't going to hurt\n"
@@ -714,10 +716,6 @@ ISLANDGAME_ROSEVALE_Interact_NPC2_Text_0:
 	.string "here.\p"
 	.string "Talonflame! Warm up my hands, will ya? I\n"
 	.string "hate being on watch duty...$"
-
-ISLANDGAME_ROSEVALE_Interact_Talonflame_Text_0:
-# 231 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	.string "Talooon!$"
 
 ISLANDGAME_ROSEVALE_Interact_NPC3_Text_0:
 # 241 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
@@ -763,7 +761,7 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_0:
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}{PLAYER}!$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_1:
-# 332 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 333 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "Before you go...\p"
 	.string "Please...\p"
 	.string "Face me in a Pokémon battle! I couldn't\n"
@@ -784,12 +782,12 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_1:
 	.string "Prepare yourself, {PLAYER}!$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_2:
-# 343 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 344 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "...\p"
 	.string "I lost again...$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_3:
-# 348 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 351 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}...\p"
 	.string "{COLOR DARK_GRAY}Heh...{PAUSE 30} You're truly an amazing trainer,\n"
 	.string "{PLAYER}.\p"
@@ -806,7 +804,7 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_3:
 	.string "true.$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_4:
-# 369 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 372 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "Losing just means you have more to\n"
 	.string "learn. It doesn't mean you're a failure.\p"
 	.string "Failure only comes when you give up.\n"
@@ -823,7 +821,7 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_4:
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}-sniff- Mhm.$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_5:
-# 378 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 381 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "{COLOR GREEN}Arthur's Dad: {COLOR DARK_GRAY}I know I may have been a\n"
 	.string "little harsh on you earlier, but it's only\l"
 	.string "because I want the best for you.\p"
@@ -845,7 +843,7 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_5:
 	.string "I wish you all the best in your travels.$"
 
 ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_6:
-# 389 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+# 392 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	.string "{COLOR GREEN}Arthur:{COLOR DARK_GRAY} {PLAYER}! I swear the next\n"
 	.string "time we battle, I'll be stronger!$"
 

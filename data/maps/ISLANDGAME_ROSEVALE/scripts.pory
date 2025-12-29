@@ -169,7 +169,7 @@ script ISLANDGAME_ROSEVALE_Interact_PuddleMon {
     lock
     faceplayer
     playmoncry(SPECIES_CHARMANDER, CRY_MODE_WEAK)
-    msgbox(format("Char... {COLOR BLUE}(water scary :c)"))
+    waitmoncry
     release
 }
 
@@ -228,7 +228,7 @@ script ISLANDGAME_ROSEVALE_Interact_Talonflame {
     lock
     faceplayer
     playmoncry(SPECIES_TALONFLAME, CRY_MODE_NORMAL)
-    msgbox(format("Talooon!"))
+    waitmoncry
     applymovement(VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection)
     waitmovement(0)
     release
@@ -321,6 +321,7 @@ script ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight {
     // arthur walks up
     msgbox(format("{COLOR GREEN}Arthur: {COLOR DARK_GRAY}{PLAYER}!"))
     closemessage
+	playbgm(MUS_HG_CLAIR,TRUE)
     addobject(LOCALID_ARTHUR)
     setobjectxy(LOCALID_ARTHUR, 19, 12)
     applymovement(LOCALID_ARTHUR, Movement_Arthur_WalkUpToExit)
@@ -344,6 +345,8 @@ script ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight {
 
 
     // arthur talks about fight
+    fadedefaultbgm
+    playbgm(MUS_BW_EMOTION, FALSE)
     msgbox(format(
         "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}...\p"
         "{COLOR DARK_GRAY}Heh...{PAUSE 30} You're truly an amazing trainer, {PLAYER}.\p"
@@ -399,6 +402,8 @@ script ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight {
     removeobject(LOCALID_ARTHUR_DAD)
 
     setvar(VAR_ROSEVALE_STATE, STATE_FINAL)
+
+    fadedefaultbgm
     release
 }
 

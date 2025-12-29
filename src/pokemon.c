@@ -5848,6 +5848,8 @@ u16 GetBattleBGM(void)
             return MUS_HG_VS_TRAINER_KANTO;
         case TRAINER_CLASS_MELISSA:
             return MUS_BW_VS_RIVAL;
+        case TRAINER_CLASS_ARTHUR:
+            return MUS_HG_VS_TRAINER;
         case TRAINER_CLASS_PATHMASTER:
             return MUS_BW_VS_SUBWAY_TRAINER;
         case TRAINER_CLASS_THIEF:

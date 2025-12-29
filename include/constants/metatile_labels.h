@@ -439,9 +439,6 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x21E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
-// gTileset_PorytilesPrimaryTest
-#define METATILE_PorytilesPrimaryTest_Door_PokeCenter  0x025
-
 // gTileset_Rustboro
 #define METATILE_Rustboro_Door_Gray  0x21F
 #define METATILE_Rustboro_Door_Tan   0x22F
@@ -846,22 +843,23 @@
 #define METATILE_islandgame_ss_rain_general_door_01  0x071
 
 // Other
-#define METATILE_FireRed_General_Test_Door       0x071
-#define METATILE_IslandgameTidalcove_Door01      0x22A
-#define METATILE_IslandgameTidalcove_Door02      0x252
-#define METATILE_Islandgame_Door                 0x021
-#define METATILE_Islandgame_Door_PokeCenter      0x061
-#define METATILE_Islandgame_icecave_Ice_Broken   0x2DB
-#define METATILE_Islandgame_icecave_Ice_Cracked  0x2DA
-#define METATILE_Persi_Door                      0x26C
-#define METATILE_RSMossdeepGym_RedArrow_Down     0x205
-#define METATILE_RSMossdeepGym_RedArrow_Left     0x20C
-#define METATILE_RSMossdeepGym_RedArrow_Right    0x204
-#define METATILE_RSMossdeepGym_RedArrow_Up       0x20D
-#define METATILE_RSMossdeepGym_Switch_Down       0x239
-#define METATILE_RSMossdeepGym_Switch_Up         0x238
-#define METATILE_islandgame_maplegrove_Door01    0x248
-#define METATILE_islandgame_maplegrove_Door02    0x287
-#define METATILE_islandgame_rosevale_Door        0x3A1
+#define METATILE_FireRed_General_Test_Door             0x071
+#define METATILE_IslandgameTidalcove_Door01            0x22A
+#define METATILE_IslandgameTidalcove_Door02            0x252
+#define METATILE_Islandgame_Door                       0x021
+#define METATILE_Islandgame_Door_PokeCenter            0x061
+#define METATILE_Islandgame_icecave_Ice_Broken         0x2DB
+#define METATILE_Islandgame_icecave_Ice_Cracked        0x2DA
+#define METATILE_Persi_Door                            0x26C
+#define METATILE_PorytilesPrimaryTest_Door_PokeCenter  0x025
+#define METATILE_RSMossdeepGym_RedArrow_Down           0x205
+#define METATILE_RSMossdeepGym_RedArrow_Left           0x20C
+#define METATILE_RSMossdeepGym_RedArrow_Right          0x204
+#define METATILE_RSMossdeepGym_RedArrow_Up             0x20D
+#define METATILE_RSMossdeepGym_Switch_Down             0x239
+#define METATILE_RSMossdeepGym_Switch_Up               0x238
+#define METATILE_islandgame_maplegrove_Door01          0x248
+#define METATILE_islandgame_maplegrove_Door02          0x287
+#define METATILE_islandgame_rosevale_Door              0x3A1
 
 #endif // GUARD_METATILE_LABELS_H
