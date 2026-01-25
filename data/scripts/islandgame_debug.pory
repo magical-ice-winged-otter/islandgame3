@@ -43,3 +43,77 @@ script TP_No {
     releaseall
     end
 }
+
+// In order to update this script, you would have to add:
+// - a new dynmultipush entry
+// - a corresponding switch case entry
+script Debug_EventScript_LocationTeleportMenu {
+    // Oranna Locations
+    dynmultipush("S.S. Rain", MAP_ISLANDGAME_SS_RAIN_ROOM2)
+    dynmultipush("Cheriport", MAP_ISLANDGAME_CHERIPORT)
+    dynmultipush("Minty Meadows", MAP_ISLANDGAME_MINTY_MEADOWS)
+    dynmultipush("Traveler's Tunnel", MAP_ISLANDGAME_TRAVELERS_TUNNEL)
+    dynmultipush("Camp Persi", MAP_ISLANDGAME_CAMP_PERSI)
+    dynmultipush("Verdant Path", MAP_ISLANDGAME_VERDANT_PATH)
+    dynmultipush("Verdant Wood", MAP_ISLANDGAME_VERDANT_WOODS)
+    dynmultipush("Fresa Farms", MAP_ISLANDGAME_FRESA_FARMS)
+    dynmultipush("Northern Oranna", MAP_ISLANDGAME_TIDALCOVE)
+    dynmultipush("Central Oranna", MAP_ISLANDGAME_NORTHERN_ORANNA_PATH)
+    dynmultipush("Tidalcove", MAP_ISLANDGAME_CENTRAL_ORANNA_PATH_1)
+    dynmultipush("Rosevale", MAP_ISLANDGAME_ROSEVALE)
+
+    // Lumine Locations
+    dynmultipush("Applevine", MAP_ISLANDGAME_APPLEVINE)
+    dynmultipush("Rocky Path", MAP_ISLANDGAME_ROCKY_PATH)
+    dynmultipush("Bellehaven", MAP_ISLANDGAME_BELLEHAVEN)
+    dynmultipush("Aetheria", MAP_ISLANDGAME_AETHERIA)
+    dynmultistack(0,0,TRUE,8,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+
+    switch (var(VAR_RESULT)) {
+        case MAP_ISLANDGAME_SS_RAIN_ROOM2:          warp(MAP_ISLANDGAME_SS_RAIN_ROOM2, 6, 7)
+        case MAP_ISLANDGAME_CHERIPORT:              warp(MAP_ISLANDGAME_CHERIPORT, 10, 26)
+        case MAP_ISLANDGAME_MINTY_MEADOWS:          warp(MAP_ISLANDGAME_MINTY_MEADOWS, 1, 26)
+        case MAP_ISLANDGAME_TRAVELERS_TUNNEL:       warp(MAP_ISLANDGAME_TRAVELERS_TUNNEL, 10, 16)
+        case MAP_ISLANDGAME_CAMP_PERSI:             warp(MAP_ISLANDGAME_CAMP_PERSI, 1, 24)
+        case MAP_ISLANDGAME_VERDANT_PATH:           warp(MAP_ISLANDGAME_VERDANT_PATH, 10, 10)
+        case MAP_ISLANDGAME_VERDANT_WOODS:          warp(MAP_ISLANDGAME_VERDANT_WOODS, 35, 17)
+        case MAP_ISLANDGAME_FRESA_FARMS:            warp(MAP_ISLANDGAME_FRESA_FARMS, 10, 10)
+        case MAP_ISLANDGAME_TIDALCOVE:              warp(MAP_ISLANDGAME_TIDALCOVE, 18, 21)
+        case MAP_ISLANDGAME_NORTHERN_ORANNA_PATH:   warp(MAP_ISLANDGAME_NORTHERN_ORANNA_PATH, 33, 19)
+        case MAP_ISLANDGAME_CENTRAL_ORANNA_PATH_1:  warp(MAP_ISLANDGAME_CENTRAL_ORANNA_PATH_1, 18, 1)
+        case MAP_ISLANDGAME_ROSEVALE:               warp(MAP_ISLANDGAME_ROSEVALE, 19, 13)
+        case MAP_ISLANDGAME_APPLEVINE:              warp(MAP_ISLANDGAME_APPLEVINE, 39, 17)
+        case MAP_ISLANDGAME_ROCKY_PATH:             warp(MAP_ISLANDGAME_ROCKY_PATH, 63, 40)
+        case MAP_ISLANDGAME_BELLEHAVEN:             warp(MAP_ISLANDGAME_BELLEHAVEN, 21, 28)
+        case MAP_ISLANDGAME_AETHERIA:               warp(MAP_ISLANDGAME_AETHERIA, 60, 26)
+    }
+	  release
+}
+
+script Debug_EventScript_Script_2 {
+	  release
+}
+
+script Debug_EventScript_Script_3 {
+	  release
+}
+
+script Debug_EventScript_Script_4 {
+	  release
+}
+
+script Debug_EventScript_Script_5 {
+	  release
+}
+
+script Debug_EventScript_Script_6 {
+	  release
+}
+
+script Debug_EventScript_Script_7 {
+	  release
+}
+
+script Debug_EventScript_Script_8 {
+	  release
+}
