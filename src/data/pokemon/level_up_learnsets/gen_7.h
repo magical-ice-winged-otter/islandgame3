@@ -9102,6 +9102,7 @@ static const struct LevelUpMove sWhiscashLevelUpLearnset[] = {
     LEVEL_UP_MOVE(39, MOVE_MUDDY_WATER),
     LEVEL_UP_MOVE(45, MOVE_FUTURE_SIGHT),
     LEVEL_UP_MOVE(52, MOVE_FISSURE),
+    LEVEL_UP_MOVE(55, MOVE_DRAGON_DANCE),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_BARBOACH

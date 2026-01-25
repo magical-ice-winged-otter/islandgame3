@@ -350,12 +350,7 @@ const struct SpeciesInfo gSpeciesInfoGenShadow[] =
         )
         .levelUpLearnset = sFeebasMaryanLevelUpLearnset,
         .teachableLearnset = sFeebasMaryanTeachableLearnset,
-        .evolutions = EVOLUTION(
-            {EVO_LEVEL, 0, SPECIES_MILOTIC_MARYAN, 
-                CONDITIONS(
-                    {IF_HOLD_ITEM,ITEM_PRISM_SCALE}
-                )
-            }),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_PRISM_SCALE, SPECIES_MILOTIC_MARYAN}),
     },
 
     [SPECIES_MILOTIC_MARYAN] =

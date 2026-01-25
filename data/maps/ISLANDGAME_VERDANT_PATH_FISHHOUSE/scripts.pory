@@ -1,8 +1,10 @@
+
+const CATCH_OF_THE_DAY = VAR_TEMP_E
 // 0 = Magikarp
 // 1 = Wishiwashi
 // 2 = Slowpoke
 // 3 = Shellder
-const CATCH_OF_THE_DAY = VAR_TEMP_E
+// 4 = Barboach
 
 const LOOP_BOUND = VAR_TEMP_A
 const LOOP_ITER  = VAR_TEMP_B
@@ -13,25 +15,57 @@ mapscripts ISLANDGAME_VERDANT_PATH_FISHHOUSE_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         // handle Catch of the Day random Pokemon
         if (!flag(FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL)) {
-            random(100)
-            copyvar(VAR_VERDANT_PATH_STATE, VAR_RESULT)
-            setflag(FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL)
 
-            if (var(VAR_VERDANT_PATH_STATE) < 50) {
-                setvar(CATCH_OF_THE_DAY, 0)
-                copyvar(VAR_VERDANT_PATH_STATE, 0)
+            // Pokemon pool prior to beating Ruka
+            if(!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
+                random(100)
+                copyvar(VAR_VERDANT_PATH_STATE, VAR_RESULT)
+                setflag(FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL)
+
+                if (var(VAR_VERDANT_PATH_STATE) < 50) {
+                    setvar(CATCH_OF_THE_DAY, 0)
+                    copyvar(VAR_VERDANT_PATH_STATE, 0)
+                }
+                elif (var(VAR_VERDANT_PATH_STATE) < 50 + 30) {
+                    setvar(CATCH_OF_THE_DAY, 1)
+                    copyvar(VAR_VERDANT_PATH_STATE, 1)
+                }
+                elif (var(VAR_VERDANT_PATH_STATE) < 50 + 30 + 15) {
+                    setvar(CATCH_OF_THE_DAY, 2)
+                    copyvar(VAR_VERDANT_PATH_STATE, 2)
+                }
+                else {
+                    setvar(CATCH_OF_THE_DAY, 3)
+                    copyvar(VAR_VERDANT_PATH_STATE, 3)
+                }
             }
-            elif (var(VAR_VERDANT_PATH_STATE) < 50 + 30) {
-                setvar(CATCH_OF_THE_DAY, 1)
-                copyvar(VAR_VERDANT_PATH_STATE, 1)
-            }
-            elif (var(VAR_VERDANT_PATH_STATE) < 50 + 30 + 15) {
-                setvar(CATCH_OF_THE_DAY, 2)
-                copyvar(VAR_VERDANT_PATH_STATE, 2)
-            }
+
+            // Pokemon pool after beating Ruka
             else {
-                setvar(CATCH_OF_THE_DAY, 3)
-                copyvar(VAR_VERDANT_PATH_STATE, 3)
+                random(100)
+                copyvar(VAR_VERDANT_PATH_STATE, VAR_RESULT)
+                setflag(FLAG_DAILY_VERDANT_PATH_ARNIE_ROLL)
+
+                if (var(VAR_VERDANT_PATH_STATE) < 30) {
+                    setvar(CATCH_OF_THE_DAY, 0)
+                    copyvar(VAR_VERDANT_PATH_STATE, 0)
+                }
+                elif (var(VAR_VERDANT_PATH_STATE) < 30 + 30) {
+                    setvar(CATCH_OF_THE_DAY, 1)
+                    copyvar(VAR_VERDANT_PATH_STATE, 1)
+                }
+                elif (var(VAR_VERDANT_PATH_STATE) < 30 + 30 + 20) {
+                    setvar(CATCH_OF_THE_DAY, 2)
+                    copyvar(VAR_VERDANT_PATH_STATE, 2)
+                }
+                elif (var(VAR_VERDANT_PATH_STATE) < 30 + 30 + 20 + 10) {
+                    setvar(CATCH_OF_THE_DAY, 3)
+                    copyvar(VAR_VERDANT_PATH_STATE, 3)
+                }
+                else {
+                    setvar(CATCH_OF_THE_DAY, 4)
+                    copyvar(VAR_VERDANT_PATH_STATE, 4)
+                }
             }
         }
         else {
@@ -46,7 +80,7 @@ mapscripts ISLANDGAME_VERDANT_PATH_FISHHOUSE_MapScripts {
 
         // hide extra trade fishermen unless player has progressed far enough for them to appear
         if (!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
-            // setflag(FLAG_TEMP_1)
+            setflag(FLAG_TEMP_1)
         }
     }
 }
@@ -232,9 +266,14 @@ script ISLANDGAME_VERDANT_PATH_FISHHOUSE_RodReceived {
                     else {
                         removemoney(1000)
                         updatemoneybox
-                        playse(SE_PIN)
+                        playse(SE_SHOP)
                         waitse
-                        givemon(SPECIES_WISHIWASHI, 5)
+                        if(!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
+                            givemon(SPECIES_WISHIWASHI, 5)
+                        }
+                        else {
+                            givemon(SPECIES_WISHIWASHI, 20)
+                        }
                         playfanfare(MUS_OBTAIN_ITEM)
                         bufferspeciesname(STR_VAR_1, SPECIES_WISHIWASHI)
                         msgbox(format("You received a Wishiwashi!"))
@@ -268,9 +307,14 @@ script ISLANDGAME_VERDANT_PATH_FISHHOUSE_RodReceived {
                     else {
                         removemoney(1500)
                         updatemoneybox
-                        playse(SE_PIN)
+                        playse(SE_SHOP)
                         waitse
-                        givemon(SPECIES_SLOWPOKE, 5,,,,2)
+                        if(!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
+                            givemon(SPECIES_SLOWPOKE, 5,,,,2)
+                        }
+                        else {
+                            givemon(SPECIES_SLOWPOKE, 20,,,,2)
+                        }
                         playfanfare(MUS_OBTAIN_ITEM)
                         bufferspeciesname(STR_VAR_1, SPECIES_SLOWPOKE)
                         msgbox(format("You received a Slowpoke!"))
@@ -305,12 +349,54 @@ script ISLANDGAME_VERDANT_PATH_FISHHOUSE_RodReceived {
                     else {
                         removemoney(2000)
                         updatemoneybox
-                        playse(SE_PIN)
+                        playse(SE_SHOP)
                         waitse
-                        givemon(SPECIES_SHELLDER,5,,,,1,,,,,,,,,,,,,,MOVE_ICICLE_SPEAR,MOVE_ROCK_BLAST,MOVE_RAPID_SPIN, MOVE_TWINEEDLE)
+                        if(!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
+                            givemon(SPECIES_SHELLDER,5,,,,1,,,,,,,,,,,,,,MOVE_ICICLE_SPEAR,MOVE_ROCK_BLAST,MOVE_RAPID_SPIN, MOVE_TWINEEDLE)
+                        }
+                        else {
+                            givemon(SPECIES_SHELLDER,20,,,,1,,,,,,,,,,,,,,MOVE_ICICLE_SPEAR,MOVE_ROCK_BLAST,MOVE_RAPID_SPIN, MOVE_TWINEEDLE)
+                        }
                         playfanfare(MUS_OBTAIN_ITEM)
                         bufferspeciesname(STR_VAR_1, SPECIES_SHELLDER)
                         msgbox(format("You received a Shellder!"))
+                        waitfanfare 
+                        msgbox(format(
+                            "Enjoy the fresh catch!"
+                        ))
+                        hidemoneybox
+                        goto(ArnieServices)
+                    }
+                }
+                else {
+                    hidemoneybox
+                    goto(ArnieServices)
+                }
+            case 4: // Barboach
+                msgbox(format(
+                    "Our catch of the day lurks beneath the murky depths of Lumine Cave...\p"
+                    "Barboach, the Whiskers Pokémon!\p"
+                    "Its slimy body allows it to escape from predators with ease, and its whiskers allow it to not only detect prey, but also smell and flavor!\p"
+                    "For ¥2,500, this small little serpent could belong to you!"
+                ), MSGBOX_YESNO)
+                if (var(VAR_RESULT) == YES) {
+                    checkmoney(2000)
+                    if (!var(VAR_RESULT)) {
+                        msgbox(format(
+                            "Sorry, ya don't got enough clams."
+                        ))
+                        hidemoneybox
+                        goto(ArnieServices)
+                    }
+                    else {
+                        removemoney(2000)
+                        updatemoneybox
+                        playse(SE_SHOP)
+                        waitse
+                        givemon(SPECIES_BARBOACH,20,,,,0,,,,,,,,,,,,,,MOVE_DRAGON_DANCE, MOVE_MUDDY_WATER, MOVE_SPARK, MOVE_EARTH_POWER)
+                        playfanfare(MUS_OBTAIN_ITEM)
+                        bufferspeciesname(STR_VAR_1, SPECIES_SHELLDER)
+                        msgbox(format("You received a Barboach!"))
                         waitfanfare 
                         msgbox(format(
                             "Enjoy the fresh catch!"
@@ -340,9 +426,14 @@ script ISLANDGAME_VERDANT_PATH_FISHHOUSE_RodReceived {
                     else {
                         removemoney(500)
                         updatemoneybox
-                        playse(SE_PIN)
+                        playse(SE_SHOP)
                         waitse
-                        givemon(SPECIES_MAGIKARP, 5)
+                        if(!flag(FLAG_TIDALCOVE_RUKA_DEFEATED)) {
+                            givemon(SPECIES_MAGIKARP, 5)
+                        }
+                        else {
+                            givemon(SPECIES_MAGIKARP, 20)
+                        }
                         playfanfare(MUS_OBTAIN_ITEM)
                         bufferspeciesname(STR_VAR_1, SPECIES_MAGIKARP)
                         msgbox(format("You received a Magikarp!"))

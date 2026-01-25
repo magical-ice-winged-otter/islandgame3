@@ -500,7 +500,7 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight::
 # 323 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	closemessage
 # 324 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
-	playbgm MUS_HG_CLAIR, FALSE
+	playbgm MUS_HG_CLAIR, TRUE
 # 325 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	addobject 4
 # 326 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
@@ -515,6 +515,8 @@ ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight::
 	msgbox ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_1, MSGBOX_NPC
 # 344 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	trainerbattle_no_intro TRAINER_ROSEVALE_ARTHUR, ISLANDGAME_ROSEVALE_Trigger_TryLeaveArthurFight_Text_2
+# 348 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
+	fadedefaultbgm
 # 349 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
 	playbgm MUS_BW_EMOTION, FALSE
 # 350 "data/maps/ISLANDGAME_ROSEVALE/scripts.pory"
