@@ -475,6 +475,17 @@
 	map \map
 	.endm
 
+  @ Warps to a map, and plays the script passed to it
+  @ TODO(ISLANDGAME) : We can make this script better by creating a task that waits for the map popup to pass. 
+  @ Unaware if this is needed right now, so this is left as a TODO.
+	.macro warpcontinuescript map:req, X:req, Y:req, script:req, startBlack=TRUE
+	.byte SCR_OP_WARPCONTINUESCRIPT
+	.2byte \map
+	.2byte \X
+	.2byte \Y
+	.4byte \script
+	.endm
+
 	@ Warps the player to the specified map using a teleport effect. Effect is similar to warpspinenter but
 	@ this warp has a fade out first and doesn't maintain the original facing direction.
 	@ Warp commands can be given either the id of which warp location to go to on the destination map
