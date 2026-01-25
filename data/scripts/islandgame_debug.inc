@@ -218,44 +218,54 @@ Debug_EventScript_LocationTeleportMenu_18:
 	goto Debug_EventScript_LocationTeleportMenu_1
 
 
-Debug_EventScript_Script_2::
-# 94 "data/scripts/islandgame_debug.pory"
+Debug_EventScript_JonasFightTrigger::
+# 95 "data/scripts/islandgame_debug.pory"
+	fadescreen FADE_FROM_BLACK
+	return
+
+
+Debug_EventScript_JonasFight::
+# 99 "data/scripts/islandgame_debug.pory"
+	fadescreen FADE_TO_BLACK
+# 100 "data/scripts/islandgame_debug.pory"
+	warpcontinuescript MAP_ISLANDGAME_CAMP_PERSI, 59, 11, Debug_EventScript_JonasFightTrigger
+# 101 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_3::
-# 98 "data/scripts/islandgame_debug.pory"
+# 105 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_4::
-# 102 "data/scripts/islandgame_debug.pory"
+# 109 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_5::
-# 106 "data/scripts/islandgame_debug.pory"
+# 113 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_6::
-# 110 "data/scripts/islandgame_debug.pory"
+# 117 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_7::
-# 114 "data/scripts/islandgame_debug.pory"
+# 121 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_8::
-# 118 "data/scripts/islandgame_debug.pory"
+# 125 "data/scripts/islandgame_debug.pory"
 	release
 	return
 

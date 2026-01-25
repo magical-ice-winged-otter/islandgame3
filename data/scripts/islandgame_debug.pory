@@ -90,8 +90,15 @@ script Debug_EventScript_LocationTeleportMenu {
 	  release
 }
 
-script Debug_EventScript_Script_2 {
-	  release
+// Helper script to fadescreen
+script Debug_EventScript_JonasFightTrigger {
+  fadescreen(FADE_FROM_BLACK)
+}
+
+script Debug_EventScript_JonasFight {
+    fadescreen(FADE_TO_BLACK)
+    warpcontinuescript(MAP_ISLANDGAME_CAMP_PERSI, 59, 11, Debug_EventScript_JonasFightTrigger)
+    release
 }
 
 script Debug_EventScript_Script_3 {

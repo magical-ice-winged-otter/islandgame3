@@ -348,7 +348,7 @@ extern const u8 Debug_EventScript_CheckIVs[];
 extern const u8 Debug_EventScript_InflictStatus1[];
 extern const u8 Debug_EventScript_SetHiddenNature[];
 extern const u8 Debug_EventScript_LocationTeleportMenu[];
-extern const u8 Debug_EventScript_Script_2[];
+extern const u8 Debug_EventScript_JonasFight[];
 extern const u8 Debug_EventScript_Script_3[];
 extern const u8 Debug_EventScript_Script_4[];
 extern const u8 Debug_EventScript_Script_5[];
@@ -607,7 +607,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Player[] =
 static const struct DebugMenuOption sDebugMenu_Actions_Scripts[] =
 {
     { COMPOUND_STRING("Teleport Menu"), DebugAction_ExecuteScript, Debug_EventScript_LocationTeleportMenu },
-    { COMPOUND_STRING("Script 2"), DebugAction_ExecuteScript, Debug_EventScript_Script_2 },
+    { COMPOUND_STRING("Trigger Jonas Fight"), DebugAction_ExecuteScript, Debug_EventScript_JonasFight },
     { COMPOUND_STRING("Script 3"), DebugAction_ExecuteScript, Debug_EventScript_Script_3 },
     { COMPOUND_STRING("Script 4"), DebugAction_ExecuteScript, Debug_EventScript_Script_4 },
     { COMPOUND_STRING("Script 5"), DebugAction_ExecuteScript, Debug_EventScript_Script_5 },
