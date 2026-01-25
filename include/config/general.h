@@ -10,8 +10,10 @@
 // still has them in the ROM. This is because the developers forgot
 // to define NDEBUG before release, however this has been changed as
 // Ruby's actual debug build does not use the AGBPrint features.
-#if !ISLANDGAME_DEBUG
-#define NDEBUG
+#if ISLANDGAME_DEBUG == FALSE
+// NOTE: the above condition doesn't and I don't know why. 
+// If you see this and you are wondering why nothing is printing, you have to comment out the below line.
+// #define NDEBUG
 #endif
 // To enable printf debugging, comment out "#define NDEBUG". This allows
 // the various AGBPrint functions to be used. (See include/gba/isagbprint.h).
