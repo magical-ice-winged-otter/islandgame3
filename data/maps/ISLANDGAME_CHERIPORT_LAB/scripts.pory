@@ -73,6 +73,8 @@ script ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk {
         msgbox(ProfTalk_Third_Text)
         // Give Pokeballs
         giveitem(ITEM_POKE_BALL, 30)
+        // Give exp share as a key item so that the player can turn off the feature if they want.
+	      giveitem(ITEM_EXP_SHARE)
         msgbox(format(
             "And with that, {PLAYER}, you're all set to begin your journey!\p"
             "Get out there, explore all that the isles have to offer, and aid me in completing the Pokédex!"
