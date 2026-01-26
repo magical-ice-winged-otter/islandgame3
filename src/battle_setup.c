@@ -451,7 +451,10 @@ void BattleSetup_StartScriptedDoubleWildBattle(void)
 {
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_DOUBLE;
+    if (FollowerNPCIsBattlePartner())
+        gBattleTypeFlags =  BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_INGAME_PARTNER;
+    else
+        gBattleTypeFlags = BATTLE_TYPE_DOUBLE;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -606,6 +609,15 @@ static void CB2_EndScriptedWildBattle(void)
 {
     CpuFill16(0, (void *)(BG_PLTT), BG_PLTT_SIZE);
     ResetOamRange(0, 128);
+
+    if (FollowerNPCIsBattlePartner())
+    {
+        RestorePartyAfterFollowerNPCBattle();
+        if (FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE != 0
+         && (FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE == FNPC_ALWAYS
+         || FlagGet(FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE)))
+            HealPlayerParty();
+    }
 
     if (IsPlayerDefeated(gBattleOutcome) == TRUE)
     {
