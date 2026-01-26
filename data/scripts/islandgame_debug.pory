@@ -102,6 +102,7 @@ script Debug_EventScript_JonasFight {
 }
 
 script Debug_EventScript_Script_3 {
+    warp(MAP_ISLANDGAME_MINTY_MEADOWS_2, 27, 11)
 	  release
 }
 

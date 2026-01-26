@@ -236,36 +236,38 @@ Debug_EventScript_JonasFight::
 
 Debug_EventScript_Script_3::
 # 105 "data/scripts/islandgame_debug.pory"
+	warp MAP_ISLANDGAME_MINTY_MEADOWS_2, 27, 11
+# 106 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_4::
-# 109 "data/scripts/islandgame_debug.pory"
+# 110 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_5::
-# 113 "data/scripts/islandgame_debug.pory"
+# 114 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_6::
-# 117 "data/scripts/islandgame_debug.pory"
+# 118 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_7::
-# 121 "data/scripts/islandgame_debug.pory"
+# 122 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_8::
-# 125 "data/scripts/islandgame_debug.pory"
+# 126 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
