@@ -3,6 +3,7 @@
 #include "field_move.h"
 #include "fldeff.h"
 #include "fldeff_misc.h"
+#include "item.h"
 #include "party_menu.h"
 #include "constants/field_move.h"
 #include "constants/moves.h"
@@ -10,42 +11,42 @@
 
 static bool32 IsFieldMoveUnlocked_Cut(void)
 {
-    return FlagGet(FLAG_BADGE01_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_MACHETE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Flash(void)
 {
-    return FlagGet(FLAG_BADGE02_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_LANTERN, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_RockSmash(void)
 {
-    return FlagGet(FLAG_BADGE03_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_PICKAXE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Strength(void)
 {
-    return FlagGet(FLAG_BADGE04_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_POWERGLOVE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Surf(void)
 {
-    return FlagGet(FLAG_BADGE05_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_RAFT, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Fly(void)
 {
-    return FlagGet(FLAG_BADGE06_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_WHISTLE, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Dive(void)
 {
-    return FlagGet(FLAG_BADGE07_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_RAFT, 1);
 }
 
 static bool32 IsFieldMoveUnlocked_Waterfall(void)
 {
-    return FlagGet(FLAG_BADGE08_GET);
+    return CheckBagHasItem(ITEM_ISLANDGAME_RAFT, 1);
 }
 
 #if OW_ROCK_CLIMB_FIELD_MOVE == TRUE
