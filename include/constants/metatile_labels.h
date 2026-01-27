@@ -814,9 +814,12 @@
 #define METATILE_islandgame_oranna_cheriport_door  0x24C
 
 // gTileset_islandgame_oranna_general
-#define METATILE_islandgame_oranna_general_MuddySlope  0x082
-#define METATILE_islandgame_oranna_general_door_00     0x0C1
-#define METATILE_islandgame_oranna_general_door_01     0x0A1
+#define METATILE_islandgame_oranna_general_MuddySlope_Frame0  0x082
+#define METATILE_islandgame_oranna_general_MuddySlope_Frame1  0x0E3
+#define METATILE_islandgame_oranna_general_MuddySlope_Frame2  0x0E4
+#define METATILE_islandgame_oranna_general_MuddySlope_Frame3  0x0E5
+#define METATILE_islandgame_oranna_general_door_00            0x0C1
+#define METATILE_islandgame_oranna_general_door_01            0x0A1
 
 // gTileset_islandgame_oranna_maplegrove
 #define METATILE_islandgame_oranna_maplegrove_door_00  0x244
