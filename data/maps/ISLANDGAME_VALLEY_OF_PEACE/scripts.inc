@@ -137,94 +137,94 @@ ISLANDGAME_VALLEY_OF_PEACE_Trainer3::
 ISLANDGAME_VALLEY_OF_PEACE_Trainer4::
 # 144 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_4, ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_1
-# 153 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 152 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5::
-# 159 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 158 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_5, ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_1
-# 166 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 165 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2::
-# 172 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 171 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_5, ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_1
-# 179 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer6::
-# 185 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 184 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_6, ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_1
-# 192 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 191 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer7::
-# 199 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 198 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_7, ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_1
-# 206 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 205 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer8::
-# 214 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 213 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_8, ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_1
-# 222 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 221 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer9::
-# 231 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 230 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	trainerbattle_single TRAINER_VALLEY_OF_PEACE_9, ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_0, ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_1
-# 238 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 237 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1::
-# 263 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 262 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 264 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 263 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	faceplayer
-# 265 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 264 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 266 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 265 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setcwildbattle 0, SPECIES_SINISTEA_PHONY, 27, ITEM_NONE, NUM_NATURES, 0
-# 267 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 266 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_SINISTEA, CRY_MODE_ENCOUNTER
-# 268 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 267 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 269 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 268 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 270 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 269 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	dowildbattle
-# 271 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 270 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 272 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 271 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 274 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 273 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	switch VAR_RESULT
-# 275 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 274 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_3
-# 277 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 276 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_4
-# 279 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 278 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_5
-# 281 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 280 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_6
-# 284 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 283 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_1:
-# 286 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 285 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
@@ -235,51 +235,51 @@ ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_4:
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_5:
-# 280 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 279 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_6:
-# 282 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 281 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea1_1
 
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2::
-# 290 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 289 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 291 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 290 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	faceplayer
-# 292 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 291 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 293 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 292 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setcwildbattle 0, SPECIES_SINISTEA_PHONY, 27, ITEM_NONE, NUM_NATURES, 1
-# 294 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 293 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_SINISTEA, CRY_MODE_ENCOUNTER
-# 295 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 294 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 296 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 295 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 297 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 296 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	dowildbattle
-# 298 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 297 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 299 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 298 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 301 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 300 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	switch VAR_RESULT
-# 302 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 301 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_3
-# 304 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 303 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_4
-# 306 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 305 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_5
-# 308 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 307 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_6
-# 311 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 310 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_1:
-# 313 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 312 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
@@ -290,51 +290,51 @@ ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_4:
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_5:
-# 307 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 306 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_6:
-# 309 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 308 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Sinistea2_1
 
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1::
-# 317 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 316 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 318 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 317 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	faceplayer
-# 319 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 318 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 320 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 319 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setcwildbattle 0, SPECIES_POLTCHAGEIST_COUNTERFEIT, 27, ITEM_NONE, NUM_NATURES, 0
-# 321 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 320 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_POLTCHAGEIST, CRY_MODE_ENCOUNTER
-# 322 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 321 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 323 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 322 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 324 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 323 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	dowildbattle
-# 325 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 324 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 326 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 325 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 328 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 327 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	switch VAR_RESULT
-# 329 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 328 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_3
-# 331 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 330 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_4
-# 333 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 332 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_5
-# 335 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 334 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_6
-# 338 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 337 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_1:
-# 340 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 339 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
@@ -345,51 +345,51 @@ ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_4:
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_5:
-# 334 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 333 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_6:
-# 336 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 335 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist1_1
 
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2::
-# 344 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 343 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 345 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 344 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	faceplayer
-# 346 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 345 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 347 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 346 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setcwildbattle 0, SPECIES_POLTCHAGEIST_COUNTERFEIT, 27, ITEM_NONE, NUM_NATURES, 1
-# 348 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 347 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_POLTCHAGEIST, CRY_MODE_ENCOUNTER
-# 349 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 348 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 350 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 349 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 351 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 350 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	dowildbattle
-# 352 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 351 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 353 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 352 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 355 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 354 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	switch VAR_RESULT
-# 356 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 355 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_3
-# 358 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 357 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_4
-# 360 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 359 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_5
-# 362 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 361 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_CAUGHT, ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_6
-# 365 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 364 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_1:
-# 367 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 366 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
@@ -400,324 +400,324 @@ ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_4:
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_5:
-# 361 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 360 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_1
 
 ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_6:
-# 363 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 362 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto ISLANDGAME_LUMINE_CAVE_1F_2_Poltchageist2_1
 
 
-# 393 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 392 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement1:
+# 393 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	face_up
 # 394 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	face_up
+	delay_16
 # 395 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 396 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_4
+# 396 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	face_right
 # 397 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	face_right
+	delay_16
 # 398 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
+	delay_8
 # 399 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_8
-# 400 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_left
+# 400 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
 # 401 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
+	delay_8
 # 402 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_8
-# 403 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_down
+# 403 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
 # 404 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 405 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_right
+# 405 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
 # 406 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 407 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_8
-# 408 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 407 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_up
-# 409 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 408 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
-# 410 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 409 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	step_end
 
-# 413 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 412 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_GengarMovement1:
-# 414 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 413 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_up
+# 413 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_up
 # 414 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	jump_up
+# 415 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_up
 # 415 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	jump_up
-# 416 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_up
+# 415 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_up
 # 416 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_up
-# 416 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_up
-# 417 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_left
-# 418 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 417 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	jump_in_place_left
-# 418 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 417 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	jump_in_place_left
 	step_end
 
-# 421 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 420 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement2:
+# 421 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	jump_left
 # 422 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 422 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 422 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 423 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	jump_left
 # 423 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 423 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 423 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
+	jump_left
 # 424 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	jump_left
+	walk_fast_left
 # 424 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	jump_left
-# 425 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
-# 425 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 424 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
-# 425 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 425 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 424 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 	step_end
 
-# 428 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 427 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_GengarMovement2:
-# 429 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 428 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 428 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 # 429 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
+	jump_left
 # 430 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 430 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 430 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 431 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	jump_left
 # 431 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 431 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 431 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
+	jump_left
 # 432 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	jump_left
-# 432 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	jump_left
-# 433 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
-# 433 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 432 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 	step_end
 
 ISLANDGAME_VALLEY_OF_PEACE_CuboneTrigger::
-# 438 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 437 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
+# 438 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	applymovement 10, ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement1
 # 439 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	applymovement 10, ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement1
+	waitmovement 0
 # 440 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 441 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
+# 441 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmoncry
 # 442 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmoncry
-# 443 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_WalkLeft
+# 443 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 444 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 445 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement1
+# 445 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 446 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 447 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_WalkDown
+# 447 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 448 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
+	playmoncry SPECIES_CUBONE, CRY_MODE_WEAK
 # 449 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	playmoncry SPECIES_CUBONE, CRY_MODE_WEAK
-# 450 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 451 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 450 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_CuboneTrigger_Text_0
-# 455 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 454 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	closemessage
-# 456 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 455 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
-# 457 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 456 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 0
-# 460 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 459 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_ExclamationMark
+# 460 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 461 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 462 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playse SE_PIN
-# 463 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 462 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitse
-# 464 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 463 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 20
-# 471 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 470 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_FaceRight
+# 471 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 472 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 473 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 30
-# 474 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 473 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_CUBONE, CRY_MODE_WEAK
-# 475 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 474 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-# 476 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 475 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, ISLANDGAME_VALLEY_OF_PEACE_CuboneMovement2
-# 477 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 476 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 0
-# 478 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 477 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 10
-# 480 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 479 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_VALLEY_OF_PEACE_STATE, 1
-# 481 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 480 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	removeobject 10
-# 485 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 484 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_TEMP_9
-# 486 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 485 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectxyperm 10, 17, 25
-# 487 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 486 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	showobjectat 10, MAP_ISLANDGAME_VALLEY_OF_PEACE
-# 488 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 487 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectxyperm 31, 19, 25
-# 489 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 488 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	showobjectat 31, MAP_ISLANDGAME_VALLEY_OF_PEACE
-# 490 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 489 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectmovementtype 10, MOVEMENT_TYPE_RUN_IN_PLACE_RIGHT
-# 491 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 490 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectmovementtype 31, MOVEMENT_TYPE_WALK_IN_PLACE_LEFT
 	return
 
 
 ISLANDGAME_VALLEY_OF_PEACE_CuboneInteract::
-# 497 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 496 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 498 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 497 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_CUBONE, CRY_MODE_WEAK
-# 499 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 498 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 500 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 499 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
 
-# 503 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 502 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_GengarMovement3:
-# 504 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 503 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock_facing_direction
-# 505 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 504 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_right
-# 506 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 505 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	unlock_facing_direction
 	step_end
 
-# 509 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 508 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_GengarMovement4:
+# 509 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
 # 510 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 511 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	jump_2_down
+# 511 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
 # 512 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 513 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 512 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 # 513 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 514 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_down
-# 514 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 513 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_down
-# 514 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 513 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 517 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 516 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_CaretakerMovement1:
-# 518 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 517 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 517 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_down
 # 518 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 519 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 518 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 518 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 # 519 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
+	walk_fast_down
 # 519 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 520 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_down
+# 519 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_down
 # 520 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
+	walk_fast_left
 # 520 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_down
-# 521 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 520 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_fast_left
+# 520 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_fast_left
 # 521 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 521 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 521 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_fast_left
-# 522 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_down
 	step_end
 
-# 525 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 524 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_CaretakerMovement2:
-# 526 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 525 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_right
-# 527 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 526 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	face_down
 	step_end
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract::
-# 531 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 530 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
-# 532 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 531 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	faceplayer
-# 533 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 532 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 534 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 533 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_NO_CATCHING
-# 535 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 534 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_NO_RUNNING
-# 536 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 535 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setcwildbattle 0, SPECIES_GENGAR, 45, ITEM_SITRUS_BERRY, NUM_NATURES, 0, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_SLUDGE_WAVE, MOVE_DREAM_EATER
-# 537 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 536 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setwilddoubleflag
-# 538 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 537 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_GENGAR, CRY_MODE_ENCOUNTER
-# 539 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 538 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 540 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 539 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	dowildbattle
-# 541 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 540 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 542 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 541 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_NO_CATCHING
-# 543 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 542 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	clearflag FLAG_NO_RUNNING
-# 545 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 544 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 546 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 545 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	switch VAR_RESULT
-# 547 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 546 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_LOST, ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_3
-# 549 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 548 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_3
-# 551 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 550 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	case B_OUTCOME_WON, ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_4
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_1:
-# 629 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 628 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	return
 
@@ -725,218 +725,218 @@ ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_3:
 	goto ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_1
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_4:
-# 552 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 551 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 553 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 552 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_0x8000, 18
-# 554 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 553 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_0x8001, 25
-# 555 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 554 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	callnative TeleportCamera
-# 556 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 555 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 18, 25
+# 556 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
 # 557 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 558 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 31, Common_Movement_FaceLeft
+# 558 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 559 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 560 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	fadescreen FADE_FROM_BLACK
+# 561 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay 30
 # 562 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay 30
-# 563 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight
+# 563 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 564 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 565 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playse SE_M_STRENGTH
-# 566 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 565 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitse
-# 567 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 566 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 31, ISLANDGAME_VALLEY_OF_PEACE_GengarMovement3
-# 568 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 567 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_GENGAR, CRY_MODE_WEAK
+# 568 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmoncry
 # 569 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmoncry
+	delay 30
 # 570 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay 30
-# 571 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-# 572 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 571 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_FaceDown
-# 573 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 572 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 31, ISLANDGAME_VALLEY_OF_PEACE_GengarMovement4
+# 573 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 574 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 575 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	removeobject 31
+# 576 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay 60
 # 577 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay 60
-# 578 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_WalkInPlaceRight
+# 578 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 579 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 580 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
+# 580 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmoncry
 # 581 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmoncry
-# 582 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-# 583 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 582 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_0
+# 585 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	closemessage
 # 586 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	closemessage
-# 587 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceLeft
+# 587 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 588 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 589 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 20
-# 590 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 589 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_1
-# 594 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 593 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	closemessage
-# 597 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 596 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	addobject 32
-# 598 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 597 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setobjectxy 32, 24, 19
-# 603 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 602 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 32, ISLANDGAME_VALLEY_OF_PEACE_CaretakerMovement1
-# 604 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 603 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 30
-# 605 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 604 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 606 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 605 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 60
-# 607 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 606 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 608 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 607 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 10, Common_Movement_FaceUp
-# 609 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 608 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 32
-# 610 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 609 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_2
-# 614 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 613 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	closemessage
-# 615 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 614 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	playmoncry SPECIES_CUBONE, CRY_MODE_WEAK
-# 616 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 615 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmoncry
-# 617 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 616 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 32, ISLANDGAME_VALLEY_OF_PEACE_CaretakerMovement2
-# 618 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 617 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 0
-# 619 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 618 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	msgbox ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_3
-# 622 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 621 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	warp MAP_ISLANDGAME_BELLEHAVEN_FOSTER_HOME, 5, 5
-# 623 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 622 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_VALLEY_OF_PEACE_STATE, 2
-# 624 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 623 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
 	goto ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_1
 
 
 ISLANDGAME_VALLEY_OF_PEACE_Primrose::
-# 636 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 635 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock
+# 636 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay 60
 # 637 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay 60
-# 638 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 4, ISLANDGAME_VALLEY_OF_PEACE_Primrose1
+# 638 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 639 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 640 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 4, Common_Movement_FaceRight
-# 641 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 640 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 27, Common_Movement_FaceRight
+# 641 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	waitmovement 0
 # 642 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	waitmovement 0
-# 643 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 60
-# 644 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 643 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 4, ISLANDGAME_VALLEY_OF_PEACE_Primrose2
-# 645 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 644 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	applymovement 27, ISLANDGAME_VALLEY_OF_PEACE_Primrose2
-# 646 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 645 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 0
-# 647 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 646 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	release
-# 648 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 647 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 649 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 648 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_TEMP_1A
-# 650 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 649 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	removeobject 4
-# 651 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 650 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	removeobject 27
-# 652 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 651 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setflag FLAG_VALLEY_OF_PEACE_PRIMROSE
 	return
 
 
-# 655 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 654 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_Primrose1:
-# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 655 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	emote_thinking
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 656 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 657 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 658 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	lock_facing_direction
-# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 658 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_up
-# 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 659 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 660 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_in_place_up
+# 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_in_place_up
-# 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	delay_16
+# 661 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 # 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 662 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	delay_16
-# 663 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_down
-# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 663 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	unlock_facing_direction
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
-# 665 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 664 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay_16
 	step_end
 
-# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 667 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 ISLANDGAME_VALLEY_OF_PEACE_Primrose2:
-# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_down
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+	walk_down
+# 668 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_down
 # 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_down
+	walk_left
 # 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_down
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	walk_left
-# 670 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 669 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	walk_left
 	step_end
 
@@ -957,8 +957,7 @@ ISLANDGAME_VALLEY_OF_PEACE_NPC2_Text_0:
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer1_Text_0:
 # 107 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	.string "This valley exudes a powerful aura... Do\n"
-	.string "not interrupt my aura farming!$"
+	.string "This valley exudes a powerful aura...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer1_Text_1:
 # 110 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
@@ -999,82 +998,80 @@ ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_0:
 # 146 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Yoooo chat, y'all won't believe what I\n"
 	.string "found in the woods!\p"
-	.string "AN UN-ALIVED TRAINER!!!\p"
-	.string "Huh? Outta my way! Can't you see I'm\n"
-	.string "tryna record a video!?$"
+	.string "A FAINTED POKÉMON!!!!!!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_1:
-# 151 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 150 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Bro! Relax! It's not that serious! It's\n"
 	.string "just a Pokémon battle!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer4_Text_2:
-# 154 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 153 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "S-Shut up, chat! Stop spamming that I\n"
 	.string "got destroyed!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_0:
-# 161 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 160 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "We're here to honor our ol' Miltank for\n"
 	.string "providin' milk to our family fer decades.$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_1:
-# 164 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Heh... yer as tough of a fighter as she\n"
 	.string "was.$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_Text_2:
-# 167 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 166 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Remember to cherish the time you spend\n"
 	.string "with yer Pokémon. You never know when\l"
 	.string "that time will end.$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_0:
-# 174 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 173 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "I miss our Miltank already... Maybe a\n"
 	.string "battle will get my mind off her...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_1:
-# 177 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 176 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "-sniff-\n"
 	.string "Well now I just feel even worse...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer5_2_Text_2:
-# 180 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 179 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "I've known our Miltank since I was just\n"
 	.string "a wee li'l sprout... I used to ride on top\l"
 	.string "o' her every day. Good times...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_0:
-# 187 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 186 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "This is MY territory, punk! I'll teach\n"
 	.string "you to come here uninvited!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_1:
-# 190 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 189 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Tch... you got lucky, punk!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer6_Text_2:
-# 193 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 192 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Those jerks from the Goon Gang didn't\n"
 	.string "let me join their gang 'cause my bike\l"
 	.string "wasn't “hip” enough...\p"
-	.string "W-Well, I'll show those Gooners! I'll\n"
-	.string "just start my own gang, one where ALL\l"
-	.string "bikes are allowed!$"
+	.string "W-Well, I'll show those goons! I'll just\n"
+	.string "start my own gang, one where ALL bikes\l"
+	.string "are allowed!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_0:
-# 201 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 200 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Heehee... do you see something unique\n"
 	.string "about my adorable little ceramics?$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_1:
-# 204 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 203 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Mhm! They're both a hundred percent\n"
 	.string "authentic!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_2:
-# 207 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 206 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Despite the similarities between\n"
 	.string "Sinistea and Poltchageist, they are\l"
 	.string "actually completely different species!\p"
@@ -1085,18 +1082,18 @@ ISLANDGAME_VALLEY_OF_PEACE_Trainer7_Text_2:
 	.string "about authentic ones...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_0:
-# 216 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 215 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Young trainer-san! I have brought\n"
 	.string "great dishonor to my Pokémon!\p"
 	.string "Please! Face me in a duel so that I may\n"
 	.string "claim redemption!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_1:
-# 220 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 219 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "A shameful performance...$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_2:
-# 223 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 222 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "I am no longer worthy to wield Pokémon...\p"
 	.string "I am sorry, my Gallade. Your master has\n"
 	.string "failed you, just like he has failed his\l"
@@ -1107,44 +1104,44 @@ ISLANDGAME_VALLEY_OF_PEACE_Trainer8_Text_2:
 	.string "them!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_0:
-# 233 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 232 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Aiiiiiiiiiiiiiiiie!{PAUSE 30}\n"
 	.string "A g-g-g-g-g-g-g-g-g-GHOOOOOOST!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_1:
-# 236 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 235 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Zoinks!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_Trainer9_Text_2:
-# 239 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 238 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Like, you just totally scared the pants\n"
 	.string "off of me, man!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_CuboneTrigger_Text_0:
-# 452 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 451 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Cuu... {COLOR BLUE}(Mama... Where is Mama...?)\p"
 	.string "{COLOR DARK_GRAY}Cuu.... {COLOR BLUE}(Cubone want Mama... Scary\n"
 	.string "without Mama...)$"
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_0:
-# 584 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 583 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Cuu... {COLOR BLUE}(Hooman... save Cubone?)$"
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_1:
-# 591 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 590 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Cuu...{COLOR BLUE} (Cubone thank hooman. Thought\n"
 	.string "was like scary ones who took Mama...)\p"
 	.string "{COLOR DARK_GRAY}Ah! You found him!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_2:
-# 611 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 610 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "It's dangerous to run off in the night\n"
 	.string "by yourself like that!\p"
 	.string "You could've gotten hurt, or even\n"
 	.string "worse...!$"
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_Text_3:
-# 620 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
+# 619 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	.string "Thank you for helping us find Cubone,\n"
 	.string "trainer! Why don't you spend the night\l"
 	.string "at our foster home? Don't worry, we've\l"

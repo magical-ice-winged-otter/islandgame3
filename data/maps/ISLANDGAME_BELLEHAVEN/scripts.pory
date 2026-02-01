@@ -69,6 +69,7 @@ script ISLANDGAME_BELLEHAVEN_MapScripts_Azurill {
 
 script ISLANDGAME_BELLEHAVEN_MapScripts_Tyrogue {
     lock
+    faceplayer
     playmoncry(SPECIES_TYROGUE, CRY_MODE_NORMAL)
     msgbox(format(
         "Tyro! {COLOR BLUE}(Heya! My name's Wilt. How's it hangin'?)"

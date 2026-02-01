@@ -545,48 +545,50 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble::
 # 384 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	delay 30
 # 385 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	addobject 20
+	setflag FLAG_FOLLOWERS_DISABLED
 # 386 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	addobject 21
+	addobject 20
 # 387 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy 20, 25, 13
+	addobject 21
 # 388 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy 21, 27, 13
+	setobjectxy 20, 25, 13
 # 389 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 20, LaironApproach
+	setobjectxy 21, 27, 13
 # 390 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 21, LaironApproach
+	applymovement 20, LaironApproach
 # 391 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 21, LaironApproach
+# 392 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	waitmovement 0
-# 393 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_NO_CATCHING
 # 394 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_NO_RUNNING
+	setflag FLAG_NO_CATCHING
 # 395 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	createmon B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_LAIRON, 40, ITEM_STEEL_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL
+	setflag FLAG_NO_RUNNING
 # 396 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	createmon B_SIDE_OPPONENT, B_FLANK_RIGHT, SPECIES_LAIRON, 40, ITEM_ROCK_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL
+	createmon B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_LAIRON, 40, ITEM_STEEL_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL
 # 397 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setwilddoubleflag
+	createmon B_SIDE_OPPONENT, B_FLANK_RIGHT, SPECIES_LAIRON, 40, ITEM_ROCK_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL
 # 398 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	playmoncry SPECIES_LAIRON, CRY_MODE_ENCOUNTER
+	setwilddoubleflag
 # 399 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_LAIRON, CRY_MODE_ENCOUNTER
 # 400 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmoncry
+# 401 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	dowildbattle
-# 402 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	clearflag FLAG_NO_CATCHING
 # 403 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	clearflag FLAG_NO_RUNNING
+	clearflag FLAG_NO_CATCHING
 # 404 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	specialvar VAR_RESULT, GetBattleOutcome
+	clearflag FLAG_NO_RUNNING
 # 405 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	switch VAR_RESULT
+	specialvar VAR_RESULT, GetBattleOutcome
 # 406 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble_2
+	switch VAR_RESULT
 # 407 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble_2
+# 408 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble_2
-# 410 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 411 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	goto ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron
 	return
 
@@ -595,98 +597,98 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble_2:
 
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron::
-# 415 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	lock
 # 416 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	lock
 # 417 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setvar VAR_0x8000, 26
+	fadescreen FADE_TO_BLACK
 # 418 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setvar VAR_0x8001, 7
+	setvar VAR_0x8000, 26
 # 419 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	callnative TeleportCamera
+	setvar VAR_0x8001, 7
 # 420 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy OBJ_EVENT_ID_PLAYER, 26, 7
+	callnative TeleportCamera
 # 421 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setobjectxy OBJ_EVENT_ID_PLAYER, 26, 7
 # 422 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	playmoncry SPECIES_LAIRON, CRY_MODE_WEAK
+	fadescreen FADE_FROM_BLACK
 # 423 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_LAIRON, CRY_MODE_WEAK
 # 424 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
-# 425 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 426 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 20, LaironStepBack
-# 427 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	delay 60
-# 428 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 21, LaironStepBack
-# 429 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	delay 60
-# 430 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 8, Common_Movement_WalkInPlaceDown
-# 431 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 432 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	delay 60
-# 433 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	playse SE_PIN
-# 434 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-# 435 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 436 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 437 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 438 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	delay 30
-# 439 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 8, Common_Movement_WalkInPlaceDown
-# 440 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 441 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	delay 30
-# 442 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	playmoncry SPECIES_AGGRON, CRY_MODE_ENCOUNTER
-# 443 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	waitmoncry
-# 444 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 8, Common_Movement_WalkDown
-# 445 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 425 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+# 426 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	waitmovement 0
+# 427 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 20, LaironStepBack
+# 428 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	delay 60
+# 429 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 21, LaironStepBack
+# 430 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	delay 60
+# 431 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceDown
+# 432 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 433 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	delay 60
+# 434 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	playse SE_PIN
+# 435 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+# 436 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 437 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 438 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 439 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	delay 30
+# 440 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceDown
+# 441 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 442 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	delay 30
+# 443 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	playmoncry SPECIES_AGGRON, CRY_MODE_ENCOUNTER
+# 444 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmoncry
+# 445 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 8, Common_Movement_WalkDown
 # 446 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_SMART_WILD_AI
+	waitmovement 0
 # 447 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_NO_CATCHING
+	setflag FLAG_SMART_WILD_AI
 # 448 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_NO_RUNNING
+	setflag FLAG_NO_CATCHING
 # 449 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	createmon B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_SHADOW_AGGRON, 45, ITEM_LUM_BERRY, NATURE_RELAXED, 2, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_IRON_TAIL, MOVE_BULLDOZE, MOVE_ROCK_SLIDE, MOVE_REST
+	setflag FLAG_NO_RUNNING
 # 450 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setwilddoubleflag
+	createmon B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_SHADOW_AGGRON, 45, ITEM_LUM_BERRY, NATURE_RELAXED, 2, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_IRON_TAIL, MOVE_BULLDOZE, MOVE_ROCK_SLIDE, MOVE_REST
 # 451 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	dowildbattle
+	setwilddoubleflag
 # 452 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	clearflag FLAG_SMART_WILD_AI
+	dowildbattle
 # 453 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	clearflag FLAG_NO_CATCHING
+	clearflag FLAG_SMART_WILD_AI
 # 454 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	clearflag FLAG_NO_RUNNING
+	clearflag FLAG_NO_CATCHING
 # 455 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	clearflag FLAG_NO_RUNNING
+# 456 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 457 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	switch VAR_RESULT
 # 458 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_3
+	switch VAR_RESULT
 # 459 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	case B_OUTCOME_LOST, ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_3
+# 460 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	case B_OUTCOME_RAN, ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_3
-# 462 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 463 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	goto ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight
 ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_1:
-# 464 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 465 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	release
 	return
 
@@ -694,336 +696,338 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_3:
 	goto ISLANDGAME_LUMINE_CAVE_B1F_2_ShadowAggron_1
 
 
-# 467 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 468 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 AlbaWalkToPlayer:
-# 468 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_up
-# 468 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_up
-# 468 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_up
-# 468 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_up
 	step_end
 
-# 471 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 LittenGirlZoom:
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_faster_up
-# 472 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_faster_up
 # 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_faster_up
+# 474 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	jump_in_place_up
-# 473 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 474 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	jump_in_place_up
 	step_end
 
-# 476 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 477 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 LittenGirlWalkToPlayer:
-# 477 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_down
-# 477 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_down
-# 477 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 478 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
 # 478 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_down
+# 478 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_down
+# 479 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_left
 	step_end
 
-# 481 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 482 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 LittenHop:
-# 482 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 483 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	jump_in_place_down
-# 482 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 483 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	jump_in_place_down
 	step_end
 
-# 485 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 486 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 LittenWalkToGirl:
-# 486 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_down
-# 486 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_down
-# 486 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	walk_down
-# 486 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 487 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
 # 487 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_down
+# 487 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_down
+# 487 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	walk_down
+# 488 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	face_left
 	step_end
 
-# 490 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 LumineCaveWalkAway:
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
-# 491 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 492 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	walk_down
 	step_end
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight::
-# 495 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	lock
 # 496 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setflag FLAG_LUMINE_CAVE_AGGRON_DEFEATED
+	lock
 # 497 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	setflag FLAG_LUMINE_CAVE_AGGRON_DEFEATED
 # 498 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	fadescreen FADE_TO_BLACK
 # 499 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 # 500 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 8
+	waitmovement 0
 # 501 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 20
+	removeobject 8
 # 502 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 21
+	removeobject 20
 # 503 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 22
+	removeobject 21
 # 504 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 23
+	removeobject 22
 # 505 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 24
+	removeobject 23
 # 506 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 25
+	removeobject 24
 # 507 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 26
+	removeobject 25
 # 508 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	addobject 1
+	removeobject 26
 # 509 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	addobject 2
+	addobject 1
 # 510 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	addobject 11
+	addobject 2
 # 511 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 8, 47, 0
+	addobject 11
 # 512 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 20, 47, 0
+	setobjectxyperm 8, 47, 0
 # 513 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 21, 47, 0
+	setobjectxyperm 20, 47, 0
 # 514 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 22, 47, 0
+	setobjectxyperm 21, 47, 0
 # 515 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 23, 47, 0
+	setobjectxyperm 22, 47, 0
 # 516 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 24, 47, 0
+	setobjectxyperm 23, 47, 0
 # 517 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 25, 47, 0
+	setobjectxyperm 24, 47, 0
 # 518 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 26, 47, 0
+	setobjectxyperm 25, 47, 0
 # 519 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy 1, 26, 13
+	setobjectxyperm 26, 47, 0
 # 520 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy 2, 26, 14
+	setobjectxy 1, 26, 13
 # 521 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxy 11, 28, 13
+	setobjectxy 2, 26, 14
 # 522 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectmovementtype 11, MOVEMENT_TYPE_FACE_UP
+	setobjectxy 11, 28, 13
 # 523 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	setobjectmovementtype 11, MOVEMENT_TYPE_FACE_UP
+# 524 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 525 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 526 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_0
-# 531 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 532 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	closemessage
-# 534 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 535 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	playbgm MUS_DP_ENCOUNTER_SUSPICIOUS, TRUE
-# 536 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, AlbaWalkToPlayer
 # 537 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 2, AlbaWalkToPlayer
+	applymovement 1, AlbaWalkToPlayer
 # 538 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
+	applymovement 2, AlbaWalkToPlayer
 # 539 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
 # 540 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
 # 541 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	waitmovement 0
 # 542 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 543 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 544 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 546 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_1
-# 552 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 554 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 555 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 556 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
-# 557 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 558 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 559 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 561 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_2
-# 568 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 570 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
-# 571 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 572 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 573 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 574 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_QuestionMark
-# 575 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 576 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 577 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 578 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_3
-# 586 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 589 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
-# 590 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 591 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 592 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 593 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_4
-# 597 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 599 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	savebgm MUS_DUMMY
-# 600 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	fadedefaultbgm
-# 602 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 11, LittenGirlZoom
-# 603 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 604 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_5
-# 607 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 608 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 16, LittenHop
-# 609 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 610 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	playmoncry SPECIES_LITTEN, CRY_MODE_WEAK
-# 611 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmoncry
-# 612 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 11, LittenGirlWalkToPlayer
-# 613 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 614 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 615 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 616 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 617 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 618 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_6
-# 621 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	giveitem ITEM_QUICK_CLAW
-# 622 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 624 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 16, LittenWalkToGirl
-# 625 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 626 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 11, Common_Movement_FaceRight
-# 627 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 628 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_Delay48
-# 629 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
-# 630 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_7
-# 633 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	closemessage
-# 635 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-# 636 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 11, LumineCaveWalkAway
-# 637 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 16, LumineCaveWalkAway
-# 638 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 543 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	waitmovement 0
-# 640 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_8
-# 645 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 544 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 545 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 547 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_1
+# 553 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	closemessage
-# 648 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 555 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 556 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 557 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+# 558 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 559 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 560 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 562 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_2
+# 569 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 571 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+# 572 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 573 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 574 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 575 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_QuestionMark
+# 576 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 577 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 578 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 579 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_3
+# 587 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 590 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
+# 591 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 592 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 593 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 594 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_4
+# 598 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 600 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	savebgm MUS_DUMMY
+# 601 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	fadedefaultbgm
+# 603 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 11, LittenGirlZoom
+# 604 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 605 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_5
+# 608 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 609 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 16, LittenHop
+# 610 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 611 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	playmoncry SPECIES_LITTEN, CRY_MODE_WEAK
+# 612 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmoncry
+# 613 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 11, LittenGirlWalkToPlayer
+# 614 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 615 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+# 616 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 617 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 618 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 619 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_6
+# 622 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	giveitem ITEM_QUICK_CLAW
+# 623 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 625 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 16, LittenWalkToGirl
+# 626 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 627 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 11, Common_Movement_FaceRight
+# 628 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 629 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, Common_Movement_Delay48
+# 630 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 631 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_7
+# 634 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 636 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+# 637 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 11, LumineCaveWalkAway
+# 638 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 16, LumineCaveWalkAway
+# 639 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	waitmovement 0
+# 641 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	msgbox ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_8
+# 646 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	closemessage
+# 649 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	playbgm MUS_DP_ENCOUNTER_SUSPICIOUS, FALSE
-# 650 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, Common_Movement_WalkDown
 # 651 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 2, Common_Movement_WalkUp
+	applymovement 1, Common_Movement_WalkDown
 # 652 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	waitmovement 0
+	applymovement 2, Common_Movement_WalkUp
 # 653 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 1, LumineCaveWalkAway
-# 654 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	applymovement 2, LumineCaveWalkAway
-# 655 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	waitmovement 0
+# 654 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 1, LumineCaveWalkAway
+# 655 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	applymovement 2, LumineCaveWalkAway
 # 656 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 1
+	waitmovement 0
 # 657 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 2
+	removeobject 1
 # 658 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 11
+	removeobject 2
 # 659 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	removeobject 16
+	removeobject 11
 # 660 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 1, 47, 0
+	removeobject 16
 # 661 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 2, 47, 0
+	setobjectxyperm 1, 47, 0
 # 662 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 11, 47, 0
+	setobjectxyperm 2, 47, 0
 # 663 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setobjectxyperm 16, 47, 0
+	setobjectxyperm 11, 47, 0
 # 664 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	setvar VAR_TEMP_0, 1
+	setobjectxyperm 16, 47, 0
 # 665 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	setvar VAR_TEMP_0, 1
+# 666 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	release
 # 668 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
-	savebgm MUS_DUMMY
+	clearflag FLAG_FOLLOWERS_DISABLED
 # 669 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+	savebgm MUS_DUMMY
+# 670 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	fadedefaultbgm
 	return
 
@@ -1234,7 +1238,7 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_Litten_Text_0:
 	.string "Mew... {COLOR BLUE}(git mes out)$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_0:
-# 526 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 527 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "{COLOR RED}(Phew... Seems like defeating the Aggron\n"
 	.string "caused the other Pokémon to flee...)\p"
 	.string "(That Aggron... It was exuding the same\n"
@@ -1245,7 +1249,7 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_0:
 	.string "very own eyes...$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_1:
-# 547 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 548 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "My apologies, but I never caught your\n"
 	.string "name. May I ask it by chance?\p"
 	.string "...\p"
@@ -1255,7 +1259,7 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_1:
 	.string "power of your Pokémon?$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_2:
-# 562 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 563 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "Hm... I see...{PAUSE 30} You believe it is your\n"
 	.string "ability to understand and talk to\l"
 	.string "Pokémon that enables you to form\l"
@@ -1273,7 +1277,7 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_2:
 	.string "Pokémon continues...$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_3:
-# 579 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 580 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "Hm? Did I notice anything strange\n"
 	.string "about the Aggron?\p"
 	.string "Not particularly...{PAUSE 30} Did you happen to\n"
@@ -1286,7 +1290,7 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_3:
 	.string "Mightyena with the same traits as well?$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_4:
-# 594 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 595 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "That is rather worrisome, if what you\n"
 	.string "say is true...{PAUSE 30} I was unable to observe\l"
 	.string "anything like that from the Aggron.\p"
@@ -1294,23 +1298,23 @@ ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_4:
 	.string "analysis...$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_5:
-# 605 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 606 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "My precious little Litten! I'm never\n"
 	.string "gonna let you out of my sight again!$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_6:
-# 619 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 620 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "Thank you, thank you, thank you,\n"
 	.string "trainer! Here, I know it's not much, but\l"
 	.string "please take it for saving my Litten!$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_7:
-# 631 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 632 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "The first thing we'll be doing at\n"
 	.string "Bellehaven is getting you a leash!$"
 
 ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight_Text_8:
-# 641 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
+# 642 "data/maps/ISLANDGAME_LUMINE_CAVE_B1F_2/scripts.pory"
 	.string "{COLOR GREEN}Alba: {COLOR DARK_GRAY}...and with that, I believe it is\n"
 	.string "about time I take my leave as well.\p"
 	.string "Our battle was quite fruitful,\n"

@@ -1138,9 +1138,9 @@ Items: Full Restore
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Frosmoth
-Level: 24
-Ability: Ice Scales
+Cryogonal
+Level: 25
+Ability: Levitate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 
@@ -1160,7 +1160,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 
 Froslass
-Level: 23
+Level: 24
 Ability: Snow Cloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
@@ -2112,11 +2112,13 @@ AI: Check Bad Move / Try To Faint / Check Viability
 
 Sinistea Antique
 Level: 35
+Ability: Water Absorb
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 
 Poltchageist Artisan
 Level: 35
+Ability: Healer
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 

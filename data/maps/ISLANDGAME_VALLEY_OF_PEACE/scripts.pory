@@ -67,6 +67,13 @@ script ISLANDGAME_VALLEY_OF_PEACE_Sign {
     ), MSGBOX_SIGN)
 }
 
+script ISLANDGAME_VALLEY_OF_PEACE_Shrine {
+    msgbox(format(
+        "“Fear not to speak your mind. The Lord's divine wind will guide your words to the dearly departed, just as it guided their souls to the afterlife .”"
+    ), MSGBOX_SIGN)
+}
+
+
 script ISLANDGAME_VALLEY_OF_PEACE_NPC1 {
     lock
     msgbox(format(
@@ -96,15 +103,11 @@ script ISLANDGAME_VALLEY_OF_PEACE_NPC2 {
 
 
 
-
-
-
-
 // trainers
 script ISLANDGAME_VALLEY_OF_PEACE_Trainer1 {
     trainerbattle_single(TRAINER_VALLEY_OF_PEACE_1,
         format(
-            "This valley exudes a powerful aura... Do not interrupt my aura farming!"
+            "This valley exudes a powerful aura..."
         ),
         format(
             "No... my precious aura...!"
@@ -144,8 +147,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_Trainer4 {
     trainerbattle_single(TRAINER_VALLEY_OF_PEACE_4,
         format(
             "Yoooo chat, y'all won't believe what I found in the woods!\p"
-            "AN UN-ALIVED TRAINER!!!\p"
-            "Huh? Outta my way! Can't you see I'm tryna record a video!?"
+            "A FAINTED POKÉMON!!!!!!"
         ),
         format(
             "Bro! Relax! It's not that serious! It's just a Pokémon battle!"
@@ -191,7 +193,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_Trainer6 {
         ))
     msgbox(format(
         "Those jerks from the Goon Gang didn't let me join their gang 'cause my bike wasn't “hip” enough...\p"
-        "W-Well, I'll show those Gooners! I'll just start my own gang, one where ALL bikes are allowed!"
+        "W-Well, I'll show those goons! I'll just start my own gang, one where ALL bikes are allowed!"
     ), MSGBOX_AUTOCLOSE)  
 }
 
@@ -233,10 +235,10 @@ script ISLANDGAME_VALLEY_OF_PEACE_Trainer9 {
             "Aiiiiiiiiiiiiiiiie!{PAUSE 30}\nA g-g-g-g-g-g-g-g-g-GHOOOOOOST!"
         ),
         format(
-            "Zoinks!"
+            "Oh, it's just a trainer..."
         ))
     msgbox(format(
-        "Like, you just totally scared the pants off of me, man!"
+        "You totally scared the pants off of me!"
     ), MSGBOX_AUTOCLOSE)
 }
 

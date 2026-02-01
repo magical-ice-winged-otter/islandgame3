@@ -371,8 +371,8 @@ script ISLANDGAME_APPLEVINE_NPC9 {
     lock
     faceplayer
     msgbox(format(
-        "Earlier today I was hungry, so I picked up a random apple on the ground and took a big bite out of it, not realizing there was a Pokémon living inside!"
-        "That entire event has traumatized me. I don't think I can ever eat fruit again."
+        "Earlier today I was hungry, so I picked up a random apple on the ground and took a big bite out of it...\p...not realizing there was a Pokémon living inside!\p"
+        "That entire event has traumatized me... I don't think I can ever eat fruit again."
     ))
     closemessage
     release

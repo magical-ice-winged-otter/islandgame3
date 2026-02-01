@@ -20002,6 +20002,7 @@ static const struct LevelUpMove sPolteageistLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_TEATIME),
     LEVEL_UP_MOVE( 1, MOVE_TEATIME),
     LEVEL_UP_MOVE( 1, MOVE_STRENGTH_SAP),
+    LEVEL_UP_MOVE( 1, MOVE_SCALD),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),
     LEVEL_UP_MOVE( 1, MOVE_WITHDRAW),
     LEVEL_UP_MOVE( 1, MOVE_AROMATIC_MIST),
@@ -22988,6 +22989,7 @@ static const struct LevelUpMove sPoltchageistLevelUpLearnset[] = {
 
 static const struct LevelUpMove sSinistchaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_MATCHA_GOTCHA),
+    LEVEL_UP_MOVE( 1, MOVE_SCALD),
     LEVEL_UP_MOVE( 1, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE( 1, MOVE_WITHDRAW),
     LEVEL_UP_MOVE( 1, MOVE_ASTONISH),

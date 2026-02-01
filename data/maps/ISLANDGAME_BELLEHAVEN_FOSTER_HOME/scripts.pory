@@ -22,16 +22,16 @@ mapscripts ISLANDGAME_BELLEHAVEN_FOSTER_HOME_MapScripts {
         if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
             setflag(FLAG_NIGHTTIME) // controls daytime npcs
 
-            returnqueststate(QUEST_VALLEY_OF_PEACE_CUBONE) // Hides caretaker until cubone quest is active
-            switch(var(VAR_RESULT)) {
-                case 1: setflag(FLAG_TEMP_4)
-                default:
-            }
-
         }
         else {
             setflag(FLAG_DAYTIME) // controls nighttime npcs
         }
+        
+        returnqueststate(QUEST_VALLEY_OF_PEACE_CUBONE) // Hides caretaker until cubone quest is active
+        if(var(VAR_RESULT) == 1) {
+            setflag(FLAG_TEMP_4)
+        }
+
     }    
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_VALLEY_OF_PEACE_STATE, 2 {

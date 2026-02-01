@@ -164,7 +164,7 @@
       "flag": "FLAG_TEMP_6"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_VETERAN",
+      "graphics_id": "OBJ_EVENT_GFX_MARTIAL_ARTIST",
       "x": 51,
       "y": 32,
       "elevation": 0,
@@ -359,7 +359,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELCATTY)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELCATTY_MARYAN)",
       "x": 19,
       "y": 22,
       "elevation": 0,
@@ -598,6 +598,14 @@
       "elevation": 0,
       "item": "ITEM_CLEANSE_TAG",
       "flag": "FLAG_HIDDEN_ITEM_VALLEY_OF_PEACE_CLEANSETAG"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ISLANDGAME_VALLEY_OF_PEACE_Shrine"
     }
   ]
 }
