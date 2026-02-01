@@ -115,7 +115,7 @@ script ISLANDGAME_APPLEVINE_COCOS_HOUSE_PikachuInteract {
     faceplayer
     msgbox(format(
         "Pika Pika! {COLOR BLUE}(I'm helping my trainer build a new PC!)\p"
-        "{COLOR DARK_GRAY}Pika Pi... {COLOR BLUE}(I could really use some help. The motherboard keeps shocking me.)"
+        "{COLOR DARK_GRAY}Pika Pi... {COLOR BLUE}(I could really use some help. For some reason the motherboard keeps breaking when I touch it.)"
     ))
     applymovement(2, Common_Movement_FaceLeft)
     closemessage

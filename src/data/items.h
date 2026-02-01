@@ -1204,10 +1204,13 @@ const struct Item gItemsInfo[] =
 
     [ITEM_PEWTER_CRUNCHIES] =
     {
-        .name = ITEM_NAME("Pewter Crunchies"),
-        .pluralName = ITEM_PLURAL_NAME("Pewter Crunchies"),
+        .name = ITEM_NAME("Sera-Snaxx"),
+        .pluralName = ITEM_PLURAL_NAME("Sera-Snaxx"),
         .price = 250,
-        .description = sFullHealDesc,
+        .description = COMPOUND_STRING(
+            "A yummy treat\n"
+            "that heals all\n"
+            "status problems."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -1221,9 +1224,12 @@ const struct Item gItemsInfo[] =
 
     [ITEM_RAGE_CANDY_BAR] =
     {
-        .name = ITEM_NAME("Rage Candy Bar"),
-        .price = (I_PRICE >= GEN_7) ? 350 : 300,
-        .description = sFullHealDesc,
+        .name = ITEM_NAME("Candy Bar"),
+        .price = (I_PRICE >= GEN_7) ? 1000 : 1000,
+        .description = COMPOUND_STRING(
+            "A yummy treat\n"
+            "that heals all\n"
+            "status problems."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -1237,10 +1243,10 @@ const struct Item gItemsInfo[] =
 
     [ITEM_LAVA_COOKIE] =
     {
-        .name = ITEM_NAME("Lava Cookie"),
-        .price = (I_PRICE >= GEN_7) ? 350 : 200,
+        .name = ITEM_NAME("Cookie"),
+        .price = (I_PRICE >= GEN_7) ? 1000 : 1000,
         .description = COMPOUND_STRING(
-            "A local specialty\n"
+            "A yummy treat\n"
             "that heals all\n"
             "status problems."),
         .pocket = POCKET_ITEMS,
@@ -1256,10 +1262,13 @@ const struct Item gItemsInfo[] =
 
     [ITEM_OLD_GATEAU] =
     {
-        .name = ITEM_NAME("Old Gateau"),
-        .pluralName = ITEM_PLURAL_NAME("Old Gateaux"),
-        .price = (I_PRICE >= GEN_7) ? 350 : 200,
-        .description = sFullHealDesc,
+        .name = ITEM_NAME("Pudding"),
+        .pluralName = ITEM_PLURAL_NAME("Pudding"),
+        .price = (I_PRICE >= GEN_7) ? 1000 : 1000,
+        .description = COMPOUND_STRING(
+            "A yummy treat\n"
+            "that heals all\n"
+            "status problems."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_STATUS_RECOVERY,
         .type = ITEM_USE_PARTY_MENU,
@@ -4177,7 +4186,7 @@ const struct Item gItemsInfo[] =
     [ITEM_SWEET_APPLE] =
     {
         .name = ITEM_NAME("Sweet Apple"),
-        .price = 2200,
+        .price = 50,
         .description = COMPOUND_STRING(
             "A very sweet apple\n"
             "that makes certain\n"
@@ -4195,7 +4204,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TART_APPLE] =
     {
         .name = ITEM_NAME("Tart Apple"),
-        .price = 2200,
+        .price = 50,
         .description = COMPOUND_STRING(
             "A very tart apple\n"
             "that makes certain\n"

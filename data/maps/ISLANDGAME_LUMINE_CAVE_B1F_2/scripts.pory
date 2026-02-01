@@ -381,6 +381,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble {
     playse(SE_PIN)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
     waitmovement(0)
+    setflag(FLAG_FOLLOWERS_DISABLED)
     delay(30)
     addobject(20)
     addobject(21)
@@ -665,6 +666,8 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight {
     release
 
 
+    clearflag(FLAG_FOLLOWERS_DISABLED)
+    
     savebgm(MUS_DUMMY)
     fadedefaultbgm
 }
