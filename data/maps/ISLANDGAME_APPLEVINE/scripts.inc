@@ -1187,10 +1187,11 @@ ISLANDGAME_APPLEVINE_NPC9_Text_0:
 # 374 "data/maps/ISLANDGAME_APPLEVINE/scripts.pory"
 	.string "Earlier today I was hungry, so I picked\n"
 	.string "up a random apple on the ground and\l"
-	.string "took a big bite out of it, not realizing\l"
-	.string "there was a Pokémon living inside! That\l"
-	.string "entire event has traumatized me. I\l"
-	.string "don't think I can ever eat fruit again.$"
+	.string "took a big bite out of it...\p"
+	.string "...not realizing there was a Pokémon\n"
+	.string "living inside!\p"
+	.string "That entire event has traumatized me...\n"
+	.string "I don't think I can ever eat fruit again.$"
 
 ISLANDGAME_APPLEVINE_NPC10_Text_0:
 # 385 "data/maps/ISLANDGAME_APPLEVINE/scripts.pory"

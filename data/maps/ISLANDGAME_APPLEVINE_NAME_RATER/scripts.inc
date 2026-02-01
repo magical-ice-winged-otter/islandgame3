@@ -256,7 +256,8 @@ ISLANDGAME_APPLEVINE_COCOS_HOUSE_PikachuInteract_Text_0:
 	.string "Pika Pika! {COLOR BLUE}(I'm helping my trainer build a\n"
 	.string "new PC!)\p"
 	.string "{COLOR DARK_GRAY}Pika Pi... {COLOR BLUE}(I could really use some help.\n"
-	.string "The motherboard keeps shocking me.)$"
+	.string "For some reason the motherboard keeps\l"
+	.string "breaking when I touch it.)$"
 
 ISLANDGAME_APPLEVINE_COCOS_HOUSE_CocoInteract_Text_0:
 # 129 "data/maps/ISLANDGAME_APPLEVINE_NAME_RATER/scripts.pory"
