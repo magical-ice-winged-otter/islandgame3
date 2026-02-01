@@ -13,6 +13,7 @@
 #include "main.h"
 #include "menu.h"
 #include "overworld.h"
+#include "event_object_movement.h"
 #include "palette.h"
 #include "party_menu.h"
 #include "pokedex.h"
@@ -45,6 +46,7 @@ void HealPlayerParty(void)
     // Recharge Tera Orb, if possible.
     if (B_FLAG_TERA_ORB_CHARGED != 0 && CheckBagHasItem(ITEM_TERA_ORB, 1))
         FlagSet(B_FLAG_TERA_ORB_CHARGED);
+    UpdateFollowingPokemon();
 }
 
 static void HealPlayerBoxes(void)

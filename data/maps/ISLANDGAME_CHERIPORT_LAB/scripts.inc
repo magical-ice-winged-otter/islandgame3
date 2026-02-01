@@ -54,101 +54,101 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk::
 	faceplayer
 # 44 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_unset FLAG_PROF_GAVE_EEVEE, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_2
-# 92 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 94 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_unset FLAG_MINTY_MEADOWS_RIVAL_DEFEATED, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_3
-# 103 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 105 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	returnqueststate QUEST_POKEDEX_COMPLETION
-# 106 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 108 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, QUEST_COMPLETED
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_13
-# 113 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 115 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_unset FLAG_TEMP_10, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_19
-# 147 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 149 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_6
-# 150 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 152 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_CheckPokedex
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1:
-# 156 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 158 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 Palm_CheckPokedex:
-# 157 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 159 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_7, MSGBOX_YESNO
-# 160 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 162 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_8
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_7:
-# 163 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 165 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_8
-# 166 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	setvar VAR_0x8004, 1
-# 167 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	specialvar VAR_RESULT, ScriptGetPokedexInfo
 # 168 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	copyvar VAR_0x8008, VAR_0x8005
+	setvar VAR_0x8004, 1
 # 169 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	copyvar VAR_0x8009, VAR_0x8006
+	specialvar VAR_RESULT, ScriptGetPokedexInfo
 # 170 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	buffernumberstring STR_VAR_1, VAR_0x8008
+	copyvar VAR_0x8008, VAR_0x8005
 # 171 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	buffernumberstring STR_VAR_2, VAR_0x8009
+	copyvar VAR_0x8009, VAR_0x8006
 # 172 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	buffernumberstring STR_VAR_1, VAR_0x8008
+# 173 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	buffernumberstring STR_VAR_2, VAR_0x8009
+# 174 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_9
-# 177 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 179 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 30
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_17
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_16:
-# 188 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 190 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 60
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_23
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_22:
-# 199 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 201 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 90
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_37
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_36:
-# 211 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 213 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 120
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_42
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_41:
-# 222 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 224 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 150
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_47
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_46:
-# 234 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 236 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 180
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_52
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_51:
-# 245 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 247 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 210
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_57
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_56:
-# 257 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 259 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 240
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_62
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_61:
-# 268 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 270 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 270
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_67
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_66:
-# 279 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 281 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 300
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_72
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_71:
-# 290 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 292 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 330
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_77
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_76:
-# 301 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 303 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 360
 	goto_if_ge ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_82
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_81:
-# 316 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 318 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_0x8009, 400
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_87
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_86:
-# 332 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-Palm_End:
-# 333 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	closemessage
 # 334 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+Palm_End:
+# 335 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	closemessage
+# 336 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	release
 	return
 
@@ -197,29 +197,31 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_10:
 	msgbox ProfTalk_Third_Text
 # 75 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_POKE_BALL, 30
-# 76 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 77 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	giveitem ITEM_EXP_SHARE
+# 78 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_0
-# 80 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 82 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	startquest QUEST_POKEDEX_COMPLETION
-# 81 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 83 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_1
-# 86 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	setrespawn HEAL_LOCATION_CHERIPORT
-# 87 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	startquest QUEST_MINTY_MEADOWS_MELISSA
 # 88 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	setrespawn HEAL_LOCATION_CHERIPORT
+# 89 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	startquest QUEST_MINTY_MEADOWS_MELISSA
+# 90 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_End
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_3:
-# 93 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 95 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_2
-# 96 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 98 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_CheckPokedex
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_8:
-# 161 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_End
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_7
 
@@ -231,348 +233,348 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_11:
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_10
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_13:
-# 107 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 109 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_3
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_17:
-# 178 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 180 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_1
-# 179 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 181 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_25
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_16
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_19:
-# 114 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 116 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	setflag FLAG_TEMP_10
-# 117 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 119 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_set FLAG_MINTY_MEADOWS_RIVAL_DEFEATED, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_33
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_31:
-# 127 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 129 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_set FLAG_TIDALCOVE_RUKA_DEFEATED, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_30
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_29:
-# 138 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 140 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_6
-# 141 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 143 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_CheckPokedex
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_23:
-# 189 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 191 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_2
-# 190 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 192 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_39
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_22
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_25:
-# 180 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 182 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_10
-# 184 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 186 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_TM53
-# 185 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 187 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_1
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_16
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_27:
-# 118 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 120 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_4
-# 123 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 125 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_CheckPokedex
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_28:
-# 128 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 130 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_5
-# 133 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 135 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto Palm_CheckPokedex
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_1
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_30:
-# 127 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 129 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	goto_if_unset FLAG_LUMINE_CAVE_AGGRON_DEFEATED, ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_28
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_29
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_33:
-# 117 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 119 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_ROSEVALE_STATE, 4
 	goto_if_ne ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_27
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_31
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_37:
-# 200 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 202 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_3
-# 201 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 203 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_44
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_36
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_39:
-# 191 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 193 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_11
-# 195 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 197 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_NEST_BALL, 15
-# 196 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 198 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_2
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_22
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_42:
-# 212 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 214 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_4
-# 213 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 215 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_49
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_41
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_44:
-# 202 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 204 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_12
-# 207 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 209 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 5
-# 208 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 210 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_3
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_36
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_47:
-# 223 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 225 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_5
-# 224 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 226 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_54
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_46
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_49:
-# 214 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 216 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_13
-# 218 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 220 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_LEVEL_BALL, 30
-# 219 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 221 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_4
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_41
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_52:
-# 235 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 237 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_6
-# 236 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 238 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_59
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_51
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_54:
-# 225 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 227 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_14
-# 230 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 232 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_ABILITY_CAPSULE, 7
-# 231 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 233 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_5
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_46
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_57:
-# 246 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 248 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_7
-# 247 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 249 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_64
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_56
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_59:
-# 237 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 239 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_15
-# 241 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 243 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_ULTRA_BALL, 45
-# 242 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 244 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_6
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_51
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_62:
-# 258 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 260 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_8
-# 259 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 261 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_69
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_61
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_64:
-# 248 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 250 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_16
-# 253 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 255 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_ABILITY_PATCH, 9
-# 254 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 256 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_7
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_56
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_67:
-# 269 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 271 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_9
-# 270 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 272 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_74
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_66
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_69:
-# 260 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 262 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_17
-# 264 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 266 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_QUICK_BALL, 60
-# 265 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 267 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_8
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_61
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_72:
-# 280 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 282 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_10
-# 281 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 283 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_79
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_71
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_74:
-# 271 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 273 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_18
-# 275 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 277 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_CATCHING_CHARM
-# 276 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 278 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_9
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_66
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_77:
-# 291 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 293 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_11
-# 292 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 294 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_84
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_76
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_79:
-# 282 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 284 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_19
-# 286 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 288 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_EXP_CHARM
-# 287 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 289 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_10
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_71
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_82:
-# 302 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 304 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_12
-# 303 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 305 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_89
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_81
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_84:
-# 293 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 295 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_20
-# 297 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 299 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_OVAL_CHARM
-# 298 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 300 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_11
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_76
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_87:
-# 317 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 319 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_CHECK_COMPLETE, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_13
-# 318 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 320 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_91
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_86
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_89:
-# 304 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 306 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_21
-# 308 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 310 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	giveitem ITEM_MASTER_BALL
-# 309 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 311 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_22
-# 312 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 314 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_12
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_81
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_91:
-# 319 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 321 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_23
-# 325 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	giveitem ITEM_AURORA_TICKET
-# 326 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_12
 # 327 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	giveitem ITEM_AURORA_TICKET
+# 328 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	subquestmenu QUEST_MENU_COMPLETE_QUEST, QUEST_POKEDEX_COMPLETION, SUB_QUEST_POKEDEX_MILESTONE_12
+# 329 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	completequest QUEST_PERSI_BERRY_MANIAC
 	goto ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_86
 
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist1Talk::
-# 403 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	lock
-# 404 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	faceplayer
 # 405 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox Scientist1Talk_Text
+	lock
 # 406 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	faceplayer
+# 407 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	msgbox Scientist1Talk_Text
+# 408 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk::
-# 410 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	lock
-# 411 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_0
 # 412 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	playse SE_PIN
+	lock
 # 413 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	applymovement 3, Common_Movement_ExclamationMark
+	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_0
 # 414 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	waitmovement 0
+	playse SE_PIN
 # 415 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	applymovement 3, Common_Movement_FacePlayer
+	applymovement 3, Common_Movement_ExclamationMark
 # 416 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	waitmovement 0
 # 417 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	applymovement 3, Common_Movement_Delay48
+	applymovement 3, Common_Movement_FacePlayer
 # 418 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	waitmovement 0
 # 419 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_1
-# 420 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	applymovement 3, Common_Movement_QuestionMark
-# 421 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	waitmovement 0
-# 422 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	applymovement 3, Common_Movement_Delay48
+# 420 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	waitmovement 0
+# 421 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_1
+# 422 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	applymovement 3, Common_Movement_QuestionMark
 # 423 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	waitmovement 0
 # 424 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_2
+	applymovement 3, Common_Movement_Delay48
 # 425 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	applymovement 3, Common_Movement_FaceOriginalDirection
-# 426 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	waitmovement 0
+# 426 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	msgbox ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_2
 # 427 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	applymovement 3, Common_Movement_FaceOriginalDirection
+# 428 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	waitmovement 0
+# 429 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_CocoTalk::
-# 431 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	lock
-# 432 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox CocoTalk_Text
 # 433 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	lock
+# 434 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	msgbox CocoTalk_Text
+# 435 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Vigoroth::
-# 454 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	lock
-# 455 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	msgbox ISLANDGAME_CHERIPORT_LAB_VigorothTalk
 # 456 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	playmoncry SPECIES_VIGOROTH, CRY_MODE_NORMAL
+	lock
 # 457 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
-	waitmoncry
+	msgbox ISLANDGAME_CHERIPORT_LAB_VigorothTalk
 # 458 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	playmoncry SPECIES_VIGOROTH, CRY_MODE_NORMAL
+# 459 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+	waitmoncry
+# 460 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	release
 	return
 
@@ -588,7 +590,7 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_Gible_Text_0:
 	.string "be stronger! Believe it!)$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_0:
-# 77 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 79 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "And with that, {PLAYER}, you're all set\n"
 	.string "to begin your journey!\p"
 	.string "Get out there, explore all that the\n"
@@ -596,7 +598,7 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_0:
 	.string "completing the Pokédex!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_1:
-# 82 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 84 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "I recommend you meet up with my other\n"
 	.string "apprentice first, though!\p"
 	.string "Her name is {COLOR GREEN}Melissa{COLOR DARK_GRAY}, and she's a new and\n"
@@ -608,20 +610,20 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_1:
 	.string "there!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_2:
-# 94 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 96 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}Melissa should be somewhere\n"
 	.string "in the {COLOR GREEN}Minty Meadows {COLOR DARK_GRAY}right now.{PAUSE 30} It'll be\l"
 	.string "to the east of her hometown of\l"
 	.string "{COLOR GREEN}Maplegrove{COLOR DARK_GRAY}!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_3:
-# 108 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 110 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}Your name will be etched in\n"
 	.string "Marya's history, as well as our hearts,\l"
 	.string "forever, {PLAYER}.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_4:
-# 119 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 121 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}{PLAYER}! It's good to see\n"
 	.string "you again! I see you and Melissa have\l"
 	.string "finally met.\p"
@@ -633,7 +635,7 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_4:
 	.string "journey. I'm glad you're both alright.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_5:
-# 129 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 131 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}{PLAYER}! It's good to see\n"
 	.string "you again! Congrats on getting your\l"
 	.string "first gym badge in the Marya League!\p"
@@ -643,28 +645,28 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_5:
 	.string "Island, if you were wondering.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_6:
-# 139 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 141 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}{PLAYER}! It's good to see\n"
 	.string "you again!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_7:
-# 158 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 160 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Did you also want me to check on the\n"
 	.string "progress of your Pokédex so far?$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_8:
-# 164 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 166 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Let's see how you're doing with your\n"
 	.string "Pokédex...$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_9:
-# 173 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 175 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "It looks like you've seen a total of\n"
 	.string "{STR_VAR_1} Pokémon, and caught a\l"
 	.string "total of {STR_VAR_2} Pokémon!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_10:
-# 181 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 183 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 30 Pokémon?\n"
 	.string "Fantastic work, {PLAYER}!\p"
 	.string "Here, take this Technical Machine as a\n"
@@ -672,14 +674,14 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_10:
 	.string "catching Pokémon!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_11:
-# 192 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 194 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 60 Pokémon?\n"
 	.string "Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Nest Balls as a\n"
 	.string "little reward!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_12:
-# 203 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 205 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 90 Pokémon?\n"
 	.string "Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Rare Candies\n"
@@ -690,14 +692,14 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_12:
 	.string "They're not very delectable to humans.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_13:
-# 215 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 217 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 120\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Level Balls as\n"
 	.string "a little reward.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_14:
-# 226 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 228 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 150\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Ability\n"
@@ -712,14 +714,14 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_14:
 	.string "later reward...$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_15:
-# 238 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 240 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 180\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Ultra Balls as\n"
 	.string "a little reward.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_16:
-# 249 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 251 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 210\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these super rare\n"
@@ -728,14 +730,14 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_16:
 	.string "them their hidden ability!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_17:
-# 261 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 263 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 240\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take some of these Quick Balls as\n"
 	.string "a little reward.$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_18:
-# 272 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 274 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 270\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take this charm. It'll increase the\n"
@@ -743,14 +745,14 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_18:
 	.string "when you use any Pokéball!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_19:
-# 283 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 285 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 300\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take this charm. It'll increase the\n"
 	.string "experience your Pokémon gain!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_20:
-# 294 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 296 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 330\n"
 	.string "Pokémon? Fantastic work, {PLAYER}!\p"
 	.string "Here, take this charm. It'll increase the\n"
@@ -758,7 +760,7 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_20:
 	.string "the daycare at Fresa Farms!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_21:
-# 305 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 307 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Oh? You've caught at least 360 Pokémon\n"
 	.string "now? Amazing work, {PLAYER}! You're\l"
 	.string "nearing completion of the Pokédex!\l"
@@ -768,12 +770,12 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_21:
 	.string "make use of it!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_22:
-# 310 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 312 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "You're nearly there, {PLAYER}! I know\n"
 	.string "you can do it!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_23:
-# 320 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 322 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "I cannot believe my aging eyes... You've\n"
 	.string "done it! You've seen and caught all\l"
 	.string "{STR_VAR_1} Pokémon, {PLAYER}!\p"
@@ -790,21 +792,21 @@ ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk_Text_23:
 	.string "that title than you!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_0:
-# 411 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 413 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Heheh...{PAUSE 60} Yeah...{PAUSE 120} H-Huh?$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_1:
-# 419 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 421 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "I-It's not what you think! I was just\n"
 	.string "doing research!$"
 
 ISLANDGAME_CHERIPORT_LAB_EventScript_Scientist2Talk_Text_2:
-# 424 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 426 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "Huh? You're not the professor...{PAUSE 60} G-Go\n"
 	.string "away! I'm doing grown-up stuff!$"
 
 ProfTalk_First_Text::
-# 363 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 365 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR GREEN}Prof. Palm: {COLOR DARK_GRAY}{PLAYER}! It's a pleasure\n"
 	.string "to finally meet you in person!\p"
 	.string "How are you enjoying the isles so far?\n"
@@ -828,7 +830,7 @@ ProfTalk_First_Text::
 	.string "you your very first companion!$"
 
 ProfTalk_Second_Text::
-# 374 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 376 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "That Eevee is quite the rare and\n"
 	.string "peculiar Pokémon! Treat it with care\l"
 	.string "and respect, and it'll return the favor!\p"
@@ -837,11 +839,11 @@ ProfTalk_Second_Text::
 	.string "designed by yours truly!$"
 
 Prof_Recieved_Pokedex_Text::
-# 381 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 383 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "You recieved a Pokédex!$"
 
 ProfTalk_Third_Text::
-# 387 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 389 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "The Pokédex is a highly advanced piece\n"
 	.string "of tech that will automatically record\l"
 	.string "the data of any Pokémon you see or\l"
@@ -856,23 +858,23 @@ ProfTalk_Third_Text::
 	.string "wild Pokémon!$"
 
 Scientist1Talk_Text::
-# 436 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 438 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "You kids today sure are lucky to get to\n"
 	.string "travel around the Maryan Isles.\p"
 	.string "During my apprenticeship, all Palm had\n"
 	.string "me do was write research papers.$"
 
 CocoTalk_Text::
-# 443 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 445 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR RED}(She seems preoccupied... I should leave\n"
 	.string "her be.)$"
 
 ReceivedEevee_Text::
-# 449 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 451 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "You recieved {STR_VAR_1}, the\n"
 	.string "Evolution Pokémon!$"
 
 ISLANDGAME_CHERIPORT_LAB_VigorothTalk::
-# 461 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
+# 463 "data/maps/ISLANDGAME_CHERIPORT_LAB/scripts.pory"
 	.string "{COLOR RED}(It looks like the Pokémon is hard at\n"
 	.string "work.)$"
