@@ -69,7 +69,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_Sign {
 
 script ISLANDGAME_VALLEY_OF_PEACE_Shrine {
     msgbox(format(
-        "“Fear not to speak your mind. The Lord's divine wind will guide your words to the dearly departed, just as it guided their souls to the afterlife .”"
+        "“Fear not to speak your mind, for The Lord's divine wind shall guide your words to the departed, just as it guided their souls to the afterlife.”"
     ), MSGBOX_SIGN)
 }
 

@@ -6803,3 +6803,4 @@ static const struct SpriteFrameImage sPicTable_DelcattyMaryan[] = {
 #endif //P_FAMILY_SKITTY_MARYAN
 
 #endif //OW_POKEMON_OBJECT_EVENTS
+

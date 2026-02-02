@@ -2676,14 +2676,14 @@ F_TRAINER_FEMALE |
         {
             {
 #line 1141
-            .species = SPECIES_FROSMOTH,
+            .species = SPECIES_CRYOGONAL,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1144
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1143
-            .ability = ABILITY_ICE_SCALES,
+            .ability = ABILITY_LEVITATE,
 #line 1142
-            .lvl = 24,
+            .lvl = 25,
 #line 1145
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -2736,7 +2736,7 @@ F_TRAINER_FEMALE |
 #line 1164
             .ability = ABILITY_SNOW_CLOAK,
 #line 1163
-            .lvl = 23,
+            .lvl = 24,
 #line 1166
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -4434,7 +4434,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 1860
-            .species = SPECIES_GASTRODON,
+            .species = SPECIES_GASTRODON_MARYAN,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 1862
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
