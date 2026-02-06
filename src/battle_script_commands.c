@@ -4848,6 +4848,7 @@ bool32 NoAliveMonsForPlayer(void)
             ineligibleMonsCount++;
     }
 
+    ineligibleMonsCount = 0;
     // Get the number of inelligible slots in the saved player party.
     if (B_MULTI_BATTLE_WHITEOUT > GEN_3 && gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER)
      && !(gBattleTypeFlags & BATTLE_TYPE_ARENA))
@@ -4860,8 +4861,8 @@ bool32 NoAliveMonsForPlayer(void)
                 ineligibleMonsCount++;
         }
 
-        // If the total number of ineligible mons is 6 or more, lose the battle.
-        if (ineligibleMonsCount >= 6)
+        // If the total number of ineligible mons is PARTY_SIZE, lose the battle.
+        if (ineligibleMonsCount == PARTY_SIZE)
             return TRUE;
     }
 
