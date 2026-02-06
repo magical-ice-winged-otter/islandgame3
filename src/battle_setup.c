@@ -451,10 +451,15 @@ void BattleSetup_StartScriptedDoubleWildBattle(void)
 {
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = 0;
     if (FollowerNPCIsBattlePartner())
-        gBattleTypeFlags =  BATTLE_TYPE_MULTI | BATTLE_TYPE_DOUBLE | BATTLE_TYPE_INGAME_PARTNER;
+    {
+        gBattleTypeFlags |= (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER | BATTLE_TYPE_DOUBLE);
+    }
     else
-        gBattleTypeFlags = BATTLE_TYPE_DOUBLE;
+    {
+        gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
+    }
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
