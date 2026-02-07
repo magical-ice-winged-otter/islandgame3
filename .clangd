@@ -1,0 +1,3 @@
+CompileFlags:
+    Remove: [-mthumb-interwork, -fhex-asm]
+    Add: [--include=include/global.h, --include=include/gba/types.h, -Wno-pointer-sign, -D __APPLE__] # include GBA global to fix type errors, silence pointer warnings for text, and use define to silence other warnings
