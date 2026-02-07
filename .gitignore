@@ -59,3 +59,5 @@ __pycache__
 **/porytiles-data/top.png
 **/porytiles-data/middle.png
 **/porytiles-data/bottom.png
+compile_commands.json
+.cache
