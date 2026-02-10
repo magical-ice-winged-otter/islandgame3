@@ -1,8 +1,6 @@
 #ifndef GUARD_GLOBAL_H
 #define GUARD_GLOBAL_H
 
-#include <string.h>
-#include <limits.h>
 #include "config/general.h" // we need to define config before gba headers as print stuff needs the functions nulled before defines.
 #include "gba/gba.h"
 #include "siirtc.h"
@@ -21,6 +19,8 @@
 #include "constants/items.h"
 #include "constants/quests.h"
 #include "config/save.h"
+#include <string.h>
+#include <limits.h>
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");

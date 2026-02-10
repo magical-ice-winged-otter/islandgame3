@@ -24,24 +24,23 @@ if not make.exists() or not make.is_file() or not src.exists() or not src.is_dir
     sys.exit(1)
 
 args = [
-    "arm-none-eabi-gcc",
-    "-mthumb",
     "-O0",
-    "-mabi=apcs-gnu",
-    "-mtune=arm7tdmi",
-    "-march=armv4t",
-    "-Wno-pointer-to-int-cast",
     "-std=gnu17",
     "-Wall",
+    "-Wno-gnu-alignof-expression",
     "-Wno-strict-aliasing",
     "-Wno-attribute-alias",
     "-Wno-trigraphs",
     "-Woverride-init",
+    "-Wno-int-to-void-pointer-cast",
+    "-Wno-pointer-to-int-cast",
+    "-Wno-int-to-pointer-cast",
     f"-I{str(inc)}",
     f"-I{str(src)}",
     "-include global.h",  # Always include the global header
     "-D__INTELLISENSE__", # Enable macro overrides in global.h
     "-DMODERN=1",         # Enable modern-specific definitions
+    "-DTESTING=0",        # Disable testing-only flag
 ]
 
 commands: list[Command] = []

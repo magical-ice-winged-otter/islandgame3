@@ -1,21 +1,2 @@
-CompileFlags:
-    Remove: [
-      -mthumb-interwork,
-      -fhex-asm
-    ]
-    Add: [
-      -Iinclude,
-      --include=include/global.h,
-      --include=include/gba/types.h,
-      --include=include/battle.h,
-      # possibly add more
-      -DMODERN=0,
-      -DTESTING=0,
-      -Wno-int-to-void-pointer-cast,
-      -Wno-pointer-to-int-cast,
-      -Wno-int-to-pointer-cast,
-      -D__INTELLISENSE__,
-    ]
-
 Diagnostics:
   UnusedIncludes: None
