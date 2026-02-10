@@ -1,3 +1,21 @@
 CompileFlags:
-    Remove: [-mthumb-interwork, -fhex-asm]
-    Add: [--include=include/global.h, --include=include/gba/types.h, -Wno-pointer-sign, -D __APPLE__] # include GBA global to fix type errors, silence pointer warnings for text, and use define to silence other warnings
+    Remove: [
+      -mthumb-interwork,
+      -fhex-asm
+    ]
+    Add: [
+      -Iinclude,
+      --include=include/global.h,
+      --include=include/gba/types.h,
+      --include=include/battle.h,
+      # possibly add more
+      -DMODERN=0,
+      -DTESTING=0,
+      -Wno-int-to-void-pointer-cast,
+      -Wno-pointer-to-int-cast,
+      -Wno-int-to-pointer-cast,
+      -D__INTELLISENSE__,
+    ]
+
+Diagnostics:
+  UnusedIncludes: None
