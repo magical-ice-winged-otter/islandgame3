@@ -5834,20 +5834,20 @@
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_SEWERS_MAIN",
       "name": "ISLANDGAME_AETHERIA_SEWERS_MAIN_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 78,
+      "height": 34,
+      "primary_tileset": "gTileset_IslandgameGeneral",
+      "secondary_tileset": "gTileset_islandgame_cave_1",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_MAIN/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_MAIN/map.bin"
     },
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_SEWERS_HIDDEN",
       "name": "ISLANDGAME_AETHERIA_SEWERS_HIDDEN_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "width": 78,
+      "height": 36,
+      "primary_tileset": "gTileset_IslandgameGeneral",
+      "secondary_tileset": "gTileset_islandgame_cave_1",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_SEWERS_HIDDEN/map.bin"
     },
