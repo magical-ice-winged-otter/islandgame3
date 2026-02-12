@@ -1143,6 +1143,10 @@
 #undef B_FLAG_INVERSE_BATTLE
 #define B_FLAG_INVERSE_BATTLE            TESTING_FLAG_INVERSE_BATTLE
 
+// Battle
+#undef B_EXP_CAP_TYPE
+#define B_EXP_CAP_TYPE                   EXP_CAP_NONE
+
 // Compression DebugPrintf switch
 #define T_COMPRESSION_SHOULD_PRINT FALSE
 
