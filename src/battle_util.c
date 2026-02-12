@@ -7454,7 +7454,7 @@ u8 GetAttackerObedienceForAction()
     u8 levelReferenced;
 
     // island-game: disable level disobedience entirely
-    return 0;
+    return OBEYS;
     
     if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
         return OBEYS;
