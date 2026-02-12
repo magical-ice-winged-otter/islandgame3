@@ -117,7 +117,7 @@ INCLUDE_CPP_ARGS := $(INCLUDE_DIRS:%=-iquote %)
 INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 
 ifeq ($(DEBUG),1)
-O_LEVEL ?= g
+O_LEVEL ?= 0
 else
 O_LEVEL ?= 2
 endif
