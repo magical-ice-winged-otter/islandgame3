@@ -26,6 +26,7 @@ WILD_BATTLE_TEST("Pokemon gain exp after catching a Pokemon")
 
 #endif // B_EXP_CATCH
 
+#if B_EXP_CAP_TYPE == EXP_CAP_NONE
 WILD_BATTLE_TEST("Higher leveled Pokemon give more exp", s32 exp)
 {
     u8 level = 0;
@@ -46,6 +47,7 @@ WILD_BATTLE_TEST("Higher leveled Pokemon give more exp", s32 exp)
         EXPECT_GT(results[1].exp, results[0].exp);
     }
 }
+#endif
 
 WILD_BATTLE_TEST("Lucky Egg boosts gained exp points by 50%", s32 exp)
 {

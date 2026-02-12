@@ -1,5 +1,3 @@
-
-
 script Common_DisableAutoRun {
   msgbox(format("Auto Run {COLOR RED}Disabled{COLOR DARK_GRAY}."))
   waitmessage
