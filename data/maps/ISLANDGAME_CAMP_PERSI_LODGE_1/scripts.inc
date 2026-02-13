@@ -272,15 +272,13 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu::
 	dynmultipush ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_3, OPTIONS_BATTLE_SCENE_3X
 # 189 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	dynmultipush ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_4, OPTIONS_BATTLE_SCENE_4X
-# 190 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	dynmultipush ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_5, OPTIONS_BATTLE_SCENE_DISABLED
 # 191 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	dynmultistack 0, 0, FALSE, 5, FALSE, NO, DYN_MULTICHOICE_CB_NONE
 # 192 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	compare VAR_BATTLE_SPEED, VAR_RESULT
 	goto_if_ne ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_2
 # 200 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_7
+	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_6
 ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_1:
 # 204 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	closemessage
@@ -292,7 +290,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_2:
 # 194 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	playmoncry SPECIES_MAGNEZONE, CRY_MODE_HIGH_PITCH
 # 195 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_6
+	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_5
 	goto ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_1
 
 
@@ -366,13 +364,9 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_4:
 	.string "x4$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_5:
-# 190 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
-	.string "Disable$"
-
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_6:
 # 196 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	.string "> SPEED SET!$"
 
-ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_7:
+ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu_Text_6:
 # 201 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	.string "> SPEED IS ALREADY SET TO THIS!$"

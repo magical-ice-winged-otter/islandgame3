@@ -470,7 +470,8 @@ static void OpponentHandleChooseMove(u32 battler)
         else if (IsDoubleBattle())
         {
             do {
-                target = GetBattlerAtPosition(Random() & 2);
+                enum BattlerPosition pos = RandomPercentage(RNG_WILD_MON_TARGET, 50) ? B_POSITION_PLAYER_LEFT : B_POSITION_PLAYER_RIGHT;
+                target = GetBattlerAtPosition(pos);
             } while (!CanTargetBattler(battler, target, move));
 
             // Don't bother to check if they're enemies if the move can't attack ally
@@ -482,7 +483,7 @@ static void OpponentHandleChooseMove(u32 battler)
 
                 bool32 isPartnerEnemy = IsNaturalEnemy(speciesAttacker, speciesTarget);
 
-                if (isPartnerEnemy && CanTargetBattler(battler, target, move))
+                if (isPartnerEnemy && CanTargetBattler(battler, GetBattlerAtPosition(BATTLE_PARTNER(battler)), move))
                     BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_EXEC_SCRIPT, (chosenMoveIndex) | (GetBattlerAtPosition(BATTLE_PARTNER(battler)) << 8));
                 else
                     BtlController_EmitTwoReturnValues(battler, B_COMM_TO_ENGINE, B_ACTION_EXEC_SCRIPT, (chosenMoveIndex) | (target << 8));

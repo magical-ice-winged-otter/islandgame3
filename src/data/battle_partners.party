@@ -52,6 +52,7 @@ Pic: Melissa
 Gender: Female
 Music: Female
 Back Pic: Melissa
+AI: AI_FLAG_BASIC_TRAINER
 
 Rockruff
 Hardy Nature
@@ -90,6 +91,7 @@ Pic: TRAINER_PIC_HIKER
 Gender: Male
 Music: TRAINER_ENCOUNTER_MUSIC_MALE
 Back Pic: TRAINER_BACK_PIC_WALLY
+AI: AI_FLAG_BASIC_TRAINER
 
 SPECIES_ALTARIA (M) @ ITEM_SITRUS_BERRY
 Level: 36

@@ -187,7 +187,7 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_1F_EventScript_BattleSpeed_Menu {
     dynmultipush("x2", OPTIONS_BATTLE_SCENE_2X)
     dynmultipush("x3", OPTIONS_BATTLE_SCENE_3X)
     dynmultipush("x4", OPTIONS_BATTLE_SCENE_4X)
-    dynmultipush("Disable", OPTIONS_BATTLE_SCENE_DISABLED)
+    // dynmultipush("Disable", OPTIONS_BATTLE_SCENE_DISABLED)
     dynmultistack(0, 0, FALSE, 5, FALSE, NO, DYN_MULTICHOICE_CB_NONE)
     if (var(VAR_BATTLE_SPEED) != VAR_RESULT) {
         copyvar(VAR_BATTLE_SPEED, VAR_RESULT)

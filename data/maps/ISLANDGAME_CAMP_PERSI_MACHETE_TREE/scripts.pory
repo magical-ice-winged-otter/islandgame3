@@ -39,6 +39,7 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_ReturnFromHell {
             "(What in the world was all of that? Was it all just a dream?)\p"
             "(Seems like the program's deleted itself as well...)"
         ))
+        removeitem(ITEM_ISLANDGAME_STRANGE_DISC)
         closemessage
         release
     }
