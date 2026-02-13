@@ -229,7 +229,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger6 {
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet {
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(RIVAL_OW_ID)
     setobjectxyperm(RIVAL_OW_ID, POS_HIDDEN_X, POS_HIDDEN_Y)
 
@@ -243,7 +243,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet {
     // addobject(RIVAL_OW_ID)
     // setobjectxyperm(RIVAL_OW_ID, 34, 10)
     // setobjectxy(RIVAL_OW_ID, 34, 11)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     // create follower
     createfollowernpc(OBJ_EVENT_GFX_MELISSA, FNPC_ALL, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL)
@@ -515,10 +515,10 @@ script ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene {
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
     setobjectxy(OBJ_EVENT_ID_PLAYER, 61, 16)
     setobjectxy(RIVAL_OW_ID, 60, 16)
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     removeobject(MIGHTYENA_OW_ID) 
     setobjectxyperm(MIGHTYENA_OW_ID, POS_HIDDEN_X, POS_HIDDEN_Y)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     // rival comments on stuff
     msgbox(
@@ -568,7 +568,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene {
     closemessage
 
     // tp back to old man
-    fadescreen(FADE_TO_BLACK)
+    fadescreenswapbuffers(FADE_TO_BLACK)
     setvar(VAR_0x8000, 11)
     setvar(VAR_0x8001, 8)
     callnative(TeleportCamera) // this is some magic, shoutout to the pret discord (and see src/islandgame_scrcmd.c)
@@ -586,7 +586,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene {
     setobjectxy(RIVAL_OW_ID, 10, 8)
     setobjectxy(OLD_MAN_OW_ID, 11, 6)
     setobjectxy(MAREEP_OW_ID, 10, 6)
-    fadescreen(FADE_FROM_BLACK)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
 
     // old man thanks them, gives lucky egg
     msgbox(
@@ -752,7 +752,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
                     msgbox(format("Okay... Please come back as soon as you can!"))
                     closemessage
 
-                    fadescreen(FADE_TO_BLACK)
+                    fadescreenswapbuffers(FADE_TO_BLACK)
 
                     setvar(VAR_0x8000, 30) 
                     setvar(VAR_0x8001, 10)
@@ -764,7 +764,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
                     addobject(RIVAL_OW_ID)
                     setobjectxyperm(RIVAL_OW_ID, 34, 10)
                     
-                    fadescreen(FADE_FROM_BLACK)
+                    fadescreenswapbuffers(FADE_FROM_BLACK)
 
                     // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
                     // waitmovement(OBJ_EVENT_ID_PLAYER)
@@ -792,7 +792,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
                     msgbox(format("Okay... Please come back as soon as you can!"))
                     closemessage
 
-                    fadescreen(FADE_TO_BLACK)
+                    fadescreenswapbuffers(FADE_TO_BLACK)
 
                     setvar(VAR_0x8000, 30) 
                     setvar(VAR_0x8001, 10)
@@ -804,7 +804,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_CantLeave {
                     addobject(RIVAL_OW_ID)
                     setobjectxyperm(RIVAL_OW_ID, 34, 10)
                     
-                    fadescreen(FADE_FROM_BLACK)
+                    fadescreenswapbuffers(FADE_FROM_BLACK)
 
                     // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
                     // waitmovement(OBJ_EVENT_ID_PLAYER)

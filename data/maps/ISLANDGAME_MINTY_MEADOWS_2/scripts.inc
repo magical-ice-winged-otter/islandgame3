@@ -346,7 +346,7 @@ ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger6::
 
 ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet::
 # 232 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	removeobject 8
 # 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -362,7 +362,7 @@ ISLANDGAME_MINTY_MEADOWS_2_TeleportGauntlet::
 # 241 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 34, 11
 # 246 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 249 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	createfollowernpc OBJ_EVENT_GFX_MELISSA, FNPC_ALL, ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact, PARTNER_MEADOWS_RIVAL
 	return
@@ -707,13 +707,13 @@ ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene::
 # 517 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxy 8, 60, 16
 # 518 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 519 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	removeobject 7
 # 520 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxyperm 7, -3, 1
 # 521 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 524 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene_Text_0
 # 531 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -761,7 +761,7 @@ ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene::
 # 568 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	closemessage
 # 571 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 572 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_0x8000, 11
 # 573 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -797,7 +797,7 @@ ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene::
 # 588 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxy 6, 10, 6
 # 589 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 592 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_PostFightCutscene_Text_6
 # 599 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -1016,7 +1016,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_7:
 # 753 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	closemessage
 # 755 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 757 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_0x8000, 30
 # 758 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -1034,7 +1034,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_7:
 # 765 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxyperm 8, 34, 10
 # 767 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	goto ISLANDGAME_MINTY_MEADOWS_2_CantLeave_1
 
 ISLANDGAME_MINTY_MEADOWS_2_CantLeave_8:
@@ -1056,7 +1056,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_10:
 # 793 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	closemessage
 # 795 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 797 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_0x8000, 30
 # 798 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
@@ -1074,7 +1074,7 @@ ISLANDGAME_MINTY_MEADOWS_2_CantLeave_10:
 # 805 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjectxyperm 8, 34, 10
 # 807 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 	goto ISLANDGAME_MINTY_MEADOWS_2_CantLeave_1
 
 ISLANDGAME_MINTY_MEADOWS_2_CantLeave_11:
