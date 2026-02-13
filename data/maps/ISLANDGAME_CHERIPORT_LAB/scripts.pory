@@ -73,8 +73,11 @@ script ISLANDGAME_CHERIPORT_LAB_EventScript_ProfTalk {
         msgbox(ProfTalk_Third_Text)
         // Give Pokeballs
         giveitem(ITEM_POKE_BALL, 30)
-        // Give exp share as a key item so that the player can turn off the feature if they want.
-	      giveitem(ITEM_EXP_SHARE)
+        msgbox(format(
+            "I'd also like you to have this device too! While active, it will distribute the experience earned from battles across all of your Pokémon!\p"
+            "It can also be turned off if you wish not to use it!"
+        ))
+        giveitem(ITEM_EXP_SHARE)
         msgbox(format(
             "And with that, {PLAYER}, you're all set to begin your journey!\p"
             "Get out there, explore all that the isles have to offer, and aid me in completing the Pokédex!"
@@ -390,7 +393,7 @@ text ProfTalk_Third_Text {
     format(
             "The Pokédex is a highly advanced piece of tech that will automatically record the data of any Pokémon you see or catch.\p"
             "And thanks to new implementations by yours truly, it will also tell you all the Pokémon you've seen or caught in each area!\p"
-            "Speaking of catching, you'll also need some of these too. They're special devices that will allow you to catch wild Pokémon!"
+            "Speaking of catching, you'll also need some of these too. They're special tools that will allow you to catch wild Pokémon!"
     )
 }
 

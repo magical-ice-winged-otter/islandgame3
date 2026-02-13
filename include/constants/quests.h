@@ -37,8 +37,7 @@
 #define QUEST_ROCKY_PATH_NURSE            11
 #define QUEST_VALLEY_OF_PEACE_CUBONE      12
 #define QUEST_GOON_GANG_ENCOUNTER         13
-#define QUEST_MISSINGNO                   14 // this should always be the last quest
-#define QUEST_COUNT                       15 // This number is literally how many to show in the UI (keep it accurate!)
+#define QUEST_COUNT                       14 // This number is literally how many to show in the UI (keep it accurate!)
 
 #define SUB_QUEST_POKEDEX_MILESTONE_1      0
 #define SUB_QUEST_POKEDEX_MILESTONE_2      1
@@ -83,14 +82,6 @@
 #define SUB_QUEST_COUCH_POTATO_5           34
 #define SUB_QUEST_COUNT_COUCH_POTATO       5
 
-#define SUB_QUEST_MISSINGNO_1              35
-#define SUB_QUEST_MISSINGNO_2              36
-#define SUB_QUEST_MISSINGNO_3              37
-#define SUB_QUEST_MISSINGNO_4              38
-#define SUB_QUEST_MISSINGNO_5              39
-#define SUB_QUEST_MISSINGNO_6              40
-#define SUB_QUEST_COUNT_MISSINGNO          6
-
 #define SUB_QUEST_CUBONE_1                 41
 #define SUB_QUEST_CUBONE_2                 42
 #define SUB_QUEST_CUBONE_3                 43
@@ -105,7 +96,7 @@
 #define SUB_QUEST_ARNIE_FISHING_QUEST_7    50
 #define SUB_QUEST_COUNT_ARNIE              7
 
-#define SUB_QUEST_COUNT (SUB_QUEST_COUNT_POKEDEX_MILESTONE + SUB_QUEST_COUNT_PERSI_BERRY + SUB_QUEST_COUNT_GYM_CHALLENGE + SUB_QUEST_COUNT_COUCH_POTATO + SUB_QUEST_COUNT_CUBONE + SUB_QUEST_COUNT_MISSINGNO + SUB_QUEST_COUNT_ARNIE)
+#define SUB_QUEST_COUNT (SUB_QUEST_COUNT_POKEDEX_MILESTONE + SUB_QUEST_COUNT_PERSI_BERRY + SUB_QUEST_COUNT_GYM_CHALLENGE + SUB_QUEST_COUNT_COUCH_POTATO + SUB_QUEST_COUNT_CUBONE + SUB_QUEST_COUNT_ARNIE)
 
 // We want to allocate more space in the saveblock for quests than we need,
 // so we don't make breaking changes in the future.

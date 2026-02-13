@@ -503,13 +503,6 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_BELLE_CATACOMBS",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 57,
-      "y": 33,
-      "elevation": 0,
-      "dest_map": "MAP_ISLANDGAME_BELLE_CATACOMBS",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -594,7 +587,7 @@
     {
       "type": "hidden_item",
       "x": 18,
-      "y": 20,
+      "y": 21,
       "elevation": 0,
       "item": "ITEM_CLEANSE_TAG",
       "flag": "FLAG_HIDDEN_ITEM_VALLEY_OF_PEACE_CLEANSETAG"

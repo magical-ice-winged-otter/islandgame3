@@ -1570,7 +1570,7 @@
 #define FLAG_BELLEHAVEN_CHARCOAL                    (SYSTEM_FLAGS + 0xB9)
 #define FLAG_VERDANT_PATH_TRADE_2                   (SYSTEM_FLAGS + 0xBA)
 #define FLAG_VALLEY_OF_PEACE_PRIMROSE               (SYSTEM_FLAGS + 0xBB)
-#define FLAG_UNUSED_0x91C                           (SYSTEM_FLAGS + 0xBC) // Unused Flag
+#define FLAG_CATACOMBS_COMPLETED                    (SYSTEM_FLAGS + 0xBC)
 #define FLAG_UNUSED_0x91D                           (SYSTEM_FLAGS + 0xBD) // Unused Flag
 #define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag

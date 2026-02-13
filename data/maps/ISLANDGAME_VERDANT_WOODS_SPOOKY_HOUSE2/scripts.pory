@@ -16,7 +16,7 @@ const POS_HIDDEN_Y = 1
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_TV {
     if(flag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)) {
         msgbox(format(
-            "{COLOR RED}(There's nothing but static. Why is the TV even turned on...?)"
+            "{COLOR RED}(There's nothing but static.)"
         ), MSGBOX_SIGN)
     }
     else {
@@ -70,6 +70,10 @@ movement spookyInch {
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu1 {
     lock
     setvar(VAR_SPOOKY_HOUSE_STATE, 7)
+    
+    setflag(FLAG_FOLLOWERS_DISABLED)
+    hidefollower
+
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_NORMAL)
     waitmoncry
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
@@ -103,6 +107,9 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu1 {
     clearflag(FLAG_SMART_WILD_AI)
     specialvar(VAR_RESULT, GetBattleOutcome)
         
+
+    clearflag(FLAG_FOLLOWERS_DISABLED)
+
     switch(var(VAR_RESULT)) {
         case B_OUTCOME_LOST:
         case B_OUTCOME_RAN:
@@ -125,6 +132,10 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu1 {
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu2 {
     lock
     setvar(VAR_SPOOKY_HOUSE_STATE, 7)
+
+    setflag(FLAG_FOLLOWERS_DISABLED)
+    hidefollower
+
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_NORMAL)
     waitmoncry
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
@@ -163,6 +174,8 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu2 {
     dowildbattle
     clearflag(FLAG_SMART_WILD_AI)
     specialvar(VAR_RESULT, GetBattleOutcome)
+
+    clearflag(FLAG_FOLLOWERS_DISABLED)
         
     switch(var(VAR_RESULT)) {
         case B_OUTCOME_LOST:

@@ -266,7 +266,7 @@ movement SOP_Absol_Run_3 {
 script ISLANDGAME_Southern_Oranna_Path_EventScript_SeenAbsol {
     setvar(VAR_TEMP_1, 1)
     setflag(FLAG_SEEN_ABSOL)
-    playmoncry(SPECIES_ABSOL, CRY_MODE_ENCOUNTER)
+    playmoncry(SPECIES_ABSOL_MEGA, CRY_MODE_ENCOUNTER)
     applymovement(ABSOL_OW_ID, SOP_Absol_Surprised)
     waitmovement(ABSOL_OW_ID)
     //maybe a message here?

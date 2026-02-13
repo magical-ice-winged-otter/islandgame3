@@ -34,6 +34,8 @@ mapscripts ISLANDGAME_VALLEY_OF_PEACE_MapScripts {
             setflag(FLAG_NIGHTTIME) // hides daytime npcs
             setflag(FLAG_TEMP_4)
             setflag(FLAG_TEMP_5)
+            setflag(FLAG_PRIMROSE) // Prim will only be here at daytime
+            setvar(VAR_TEMP_0, 1)
 
             switch (var(VAR_VALLEY_OF_PEACE_STATE)) {
                 case 1:
@@ -535,7 +537,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_GengarInteract {
     setflag(FLAG_SMART_WILD_AI)
     setflag(FLAG_NO_CATCHING)
     setflag(FLAG_NO_RUNNING)
-    setcwildbattle(0, SPECIES_GENGAR, 45, ITEM_SITRUS_BERRY, NUM_NATURES, 0, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_SLUDGE_WAVE, MOVE_DREAM_EATER)
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_GENGAR, 45, ITEM_SITRUS_BERRY, NUM_NATURES, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_SLUDGE_WAVE, MOVE_DREAM_EATER)
     setwilddoubleflag
     playmoncry(SPECIES_GENGAR, CRY_MODE_ENCOUNTER)
     waitmoncry

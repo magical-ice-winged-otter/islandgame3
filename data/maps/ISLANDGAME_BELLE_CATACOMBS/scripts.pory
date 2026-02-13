@@ -1,1 +1,8 @@
-mapscripts ISLANDGAME_BELLE_CATACOMBS_MapScripts {}
+mapscripts ISLANDGAME_BELLE_CATACOMBS_MapScripts {
+        MAP_SCRIPT_ON_TRANSITION {
+            if(!flag(FLAG_CATACOMBS_COMPLETED)) {
+                setweather(WEATHER_FOG_HORIZONTAL)
+                doweather
+            }
+        }
+}

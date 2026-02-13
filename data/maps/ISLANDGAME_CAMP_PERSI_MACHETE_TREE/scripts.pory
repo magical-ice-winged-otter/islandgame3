@@ -37,17 +37,8 @@ script ISLANDGAME_CAMP_PERSI_TREEHOUSE_EventScript_ReturnFromHell {
             "...\p"
             "{COLOR RED}(Augh... my head...)\p"
             "(What in the world was all of that? Was it all just a dream?)\p"
-            "(Seems like the program's deleted itself as well...)\p"
-            "(That voice... who was that?)"
+            "(Seems like the program's deleted itself as well...)"
         ))
-        returnqueststate(QUEST_MISSINGNO)
-        switch(var(VAR_RESULT)) {
-            case QUEST_INACTIVE:
-                startquest(QUEST_MISSINGNO)
-                subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_MISSINGNO, 0)
-            default:
-                subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_MISSINGNO, 0)
-        }
         closemessage
         release
     }

@@ -277,55 +277,13 @@ ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook3::
 # 153 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
 	setobjectxyperm 3, -3, 1
 # 154 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	msgbox ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook3_Text_0
-# 155 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook4::
-# 159 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	lock
-# 160 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 161 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	playse SE_M_NIGHTMARE
-# 162 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	addobject 4
-# 163 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	setobjectxy 4, 19, 3
-# 164 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 165 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-# 166 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
-# 167 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	waitmovement 0
-# 168 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
-# 169 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	waitmovement 0
-# 170 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	playmoncry SPECIES_GOTHITELLE, CRY_MODE_NORMAL
-# 171 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	waitmoncry
-# 172 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	applymovement 4, spookySpin
-# 173 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	waitmovement 0
-# 174 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	applymovement 4, spookyTP
-# 175 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	waitmovement 0
-# 176 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	removeobject 4
 # 177 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	setobjectxyperm 4, -3, 1
-# 178 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
 	setvar VAR_SPOOKY_HOUSE_STATE, 4
-# 179 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	release
 	return
 
 
@@ -338,7 +296,3 @@ ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook1_Text_0:
 # 117 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
 	.string "Leave this place...\p"
 	.string "While you still can...$"
-
-ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook3_Text_0:
-# 154 "data/maps/ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE/scripts.pory"
-	.string "{COLOR RED}(Huh...?)$"

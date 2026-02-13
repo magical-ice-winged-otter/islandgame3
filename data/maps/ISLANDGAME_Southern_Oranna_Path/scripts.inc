@@ -277,7 +277,7 @@ ISLANDGAME_Southern_Oranna_Path_EventScript_SeenAbsol::
 # 268 "data/maps/ISLANDGAME_Southern_Oranna_Path/scripts.pory"
 	setflag FLAG_SEEN_ABSOL
 # 269 "data/maps/ISLANDGAME_Southern_Oranna_Path/scripts.pory"
-	playmoncry SPECIES_ABSOL, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_ABSOL_MEGA, CRY_MODE_ENCOUNTER
 # 270 "data/maps/ISLANDGAME_Southern_Oranna_Path/scripts.pory"
 	applymovement 7, SOP_Absol_Surprised
 # 271 "data/maps/ISLANDGAME_Southern_Oranna_Path/scripts.pory"

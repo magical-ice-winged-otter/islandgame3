@@ -151,30 +151,29 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook3 {
     waitmovement(0)
     removeobject(LOCALID_ITEM)
     setobjectxyperm(LOCALID_ITEM, POS_HIDDEN_X, POS_HIDDEN_Y)
-    msgbox(format("{COLOR RED}(Huh...?)"))
     release
 }
 
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook4 {
-    lock
-    fadescreen(FADE_TO_BLACK)
-    playse(SE_M_NIGHTMARE)
-    addobject(LOCALID_GHOST)
-    setobjectxy(LOCALID_GHOST, 19, 3)
-    fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
-    playmoncry(SPECIES_GOTHITELLE, CRY_MODE_NORMAL)
-    waitmoncry
-    applymovement(LOCALID_GHOST, spookySpin)
-    waitmovement(0)
-    applymovement(LOCALID_GHOST, spookyTP)
-    waitmovement(0)
-    removeobject(LOCALID_GHOST)
-    setobjectxyperm(LOCALID_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
+    // lock
+    // fadescreen(FADE_TO_BLACK)
+    // playse(SE_M_NIGHTMARE)
+    // addobject(LOCALID_GHOST)
+    // setobjectxy(LOCALID_GHOST, 19, 3)
+    // fadescreen(FADE_FROM_BLACK)
+    // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
+    // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    // waitmovement(0)
+    // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
+    // waitmovement(0)
+    // playmoncry(SPECIES_GOTHITELLE, CRY_MODE_NORMAL)
+    // waitmoncry
+    // applymovement(LOCALID_GHOST, spookySpin)
+    // waitmovement(0)
+    // applymovement(LOCALID_GHOST, spookyTP)
+    // waitmovement(0)
+    // removeobject(LOCALID_GHOST)
+    // setobjectxyperm(LOCALID_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
     setvar(VAR_SPOOKY_HOUSE_STATE, 4)
-    release
+    // release
 }

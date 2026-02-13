@@ -671,63 +671,6 @@ static const struct SubQuest sSubQuests_ValleyOfPeaceCubone[SUB_QUEST_COUNT_CUBO
     },
 };
 
-static const struct SubQuest sSubQuests_MissingNo[SUB_QUEST_COUNT_MISSINGNO] = 
-{
-    {
-        .id = SUB_QUEST_MISSINGNO_1,
-        .name = COMPOUND_STRING("けつばん-01"),
-        .desc = COMPOUND_STRING("01010111"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_ISLANDGAME_STRANGE_DISC,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-    {
-        .id = SUB_QUEST_MISSINGNO_2,
-        .name = COMPOUND_STRING("けつばん-02"),
-        .desc = COMPOUND_STRING("01000001"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_TM05,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-    {
-        .id = SUB_QUEST_MISSINGNO_3,
-        .name = COMPOUND_STRING("けつばん-03"),
-        .desc = COMPOUND_STRING("01001011"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_TM05,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-    {
-        .id = SUB_QUEST_MISSINGNO_4,
-        .name = COMPOUND_STRING("けつばん-04"),
-        .desc = COMPOUND_STRING("01000101"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_TM05,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-    {
-        .id = SUB_QUEST_MISSINGNO_5,
-        .name = COMPOUND_STRING("けつばん-05"),
-        .desc = COMPOUND_STRING("01010101"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_TM05,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-    {
-        .id = SUB_QUEST_MISSINGNO_6,
-        .name = COMPOUND_STRING("けつばん-06"),
-        .desc = COMPOUND_STRING("01010000"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_TM05,
-        .spritetype = ITEM,
-        .type = sText_Complete
-    },
-};
 
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -904,18 +847,6 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
         .spritetype = OBJECT,
         .subquests = NULL,
         .numSubquests = 0 
-    },
-
-    [QUEST_MISSINGNO] =
-    {
-        .name = COMPOUND_STRING("<?> À GlitŒh エñ tHœ MあtrÏx"),
-        .desc = COMPOUND_STRING("▶▶WARNいNG▶▶ アN ANおMAL¥ HAS BえEN\nD♀TÊCTéD WITH♂N YöUr $àVê FイLE!"),
-        .donedesc = COMPOUND_STRING("01000100 01010010 01000101 01000001 01001101"),
-        .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_ISLANDGAME_STRANGE_DISC,
-        .spritetype = ITEM,
-        .subquests = sSubQuests_MissingNo,
-        .numSubquests = SUB_QUEST_COUNT_MISSINGNO
     },
 };
 
