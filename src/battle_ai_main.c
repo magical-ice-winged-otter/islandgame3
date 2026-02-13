@@ -359,6 +359,19 @@ void SetupAIPredictionData(u32 battler, enum SwitchType switchType)
 void ComputeBattlerDecisions(u32 battler)
 {
     bool32 isAiBattler = (gBattleTypeFlags & BATTLE_TYPE_HAS_AI || IsWildMonSmart()) && (BattlerHasAi(battler) && !(gBattleTypeFlags & BATTLE_TYPE_PALACE));
+
+    // island-game: regression test to make sure we don't accidentally forget to give partners an aiFlag  
+    {
+        bool32 isPartnerBattle = gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER;
+        bool32 battlerIsPartner = battler == B_POSITION_PLAYER_RIGHT;
+        bool32 battlerHasNoFlags = gAiThinkingStruct->aiFlags[battler] == 0;
+
+        if (isPartnerBattle && battlerIsPartner && battlerHasNoFlags)
+        {
+            MgbaPrintf(MGBA_LOG_WARN, "No ai flags set for partner! They will make weird decisions");
+        }
+    }
+
     if (isAiBattler || CanAiPredictMove())
     {
         // If ai is about to flee or chosen to watch player, no need to calc anything
