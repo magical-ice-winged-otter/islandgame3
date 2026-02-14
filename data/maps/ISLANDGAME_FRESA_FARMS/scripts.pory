@@ -29,6 +29,11 @@ mapscripts ISLANDGAME_FRESA_FARMS_MapScripts {
         setflag(FLAG_TEMP_B)
         gettime
 
+        // This hides the rescued mareep until we actually rescue them
+        if (var(VAR_MINTY_MEADOWS_STATE) != 3) {
+            setflag(NOT_DEFEATED_MIGHTYENA)
+        }
+
         if (var(VAR_CURRENT_HOUR) < 6 || var(VAR_CURRENT_HOUR) >= 18) {
             setflag(FLAG_NIGHT)
             setobjectxyperm(MILTANK_ID, 18, 6)
@@ -41,7 +46,6 @@ mapscripts ISLANDGAME_FRESA_FARMS_MapScripts {
             setflag(NOT_DEFEATED_MIGHTYENA)
         }
     }
-
 }
 
 //see daycare.c#updateDaycareGfxVars
