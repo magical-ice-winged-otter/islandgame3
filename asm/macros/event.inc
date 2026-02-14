@@ -3071,3 +3071,20 @@
 
   @ End Pokevial Branch
 
+@ island-game (src/islandgame_scrcmd.c)
+
+  @ Copies state from the current follower onto a local object
+  @ If done carefully, it will let the follower stop following and hang around
+  .macro unsetfollowernpc localId:req
+  setvar VAR_0x8000, \localId
+  callnative UnsetFollower
+  .endm
+
+  @ 
+  .macro teleportcamera x:req, y:req
+  setvar VAR_0x8000, \x
+  setvar VAR_0x8001, \y
+  callnative TeleportCamera
+  .endm
+
+@ end island-game

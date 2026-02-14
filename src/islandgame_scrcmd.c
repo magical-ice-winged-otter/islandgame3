@@ -8,6 +8,8 @@
 #include "clock.h" // for InitTimeBasedEvents
 #include "overworld.h"
 #include "main.h"
+#include "event_object_movement.h"
+#include "follower_npc.h"
 
 void CheckDexCount(void)
 {
@@ -22,6 +24,20 @@ void TeleportCamera(void)
     s16 deltaX = x - gSaveBlock1Ptr->pos.x;
     s16 deltaY = y - gSaveBlock1Ptr->pos.y;
     MoveCameraAndRedrawMap(deltaX,deltaY);
+}
+
+void UnsetFollower(void)
+{
+    if (PlayerHasFollowerNPC())
+    {
+        u8 localId = gSpecialVar_0x8000;
+        struct ObjectEvent *follower = &gObjectEvents[GetFollowerNPCData(FNPC_DATA_OBJ_ID)];
+        struct ObjectEvent *npc = &gObjectEvents[TrySpawnObjectEvent(localId, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup)];
+        FlagClear(GetFollowerNPCData(FNPC_DATA_EVENT_FLAG));
+        MoveObjectEventToMapCoords(npc, follower->currentCoords.x, follower->currentCoords.y);
+        ObjectEventTurn(npc, follower->facingDirection);
+        DestroyFollowerNPC();
+    }
 }
 
 void CheckPartyMon(void) 
