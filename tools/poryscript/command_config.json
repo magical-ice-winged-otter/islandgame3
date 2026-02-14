@@ -98,6 +98,9 @@
     },
     "dynmultistack": {
         "var_name": "VAR_RESULT"
+    },
+    "checkfollowernpc": {
+        "var_name": "VAR_RESULT"
     }
   }
 }
