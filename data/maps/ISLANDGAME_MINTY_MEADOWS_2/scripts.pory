@@ -54,9 +54,10 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_OldMan {
     case STATE_SEARCHING_FOR_MAREEP:
         msgbox(format("I could've sworn it was somewhere in the forest to the east..."), MSGBOX_NPC)
     case STATE_BATTLING_MIGHTYENA:
-        msgbox(format("What? A wild Mightyena was chasing my precious Mareep?\pYou have to save him, please!"), MSGBOX_NPC)
-    case STATE_SAVED_MAREEP:
-        msgbox(format("Thank you so much for saving my precious Mareep!"), MSGBOX_NPC)
+        msgbox(format(
+            "What? A wild Mightyena was chasing my precious Mareep?\p"
+            "You have to save him, please!"
+        ), MSGBOX_NPC)
     }
 }
 
@@ -66,14 +67,12 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Rival {
         msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Hmm... where could it be?"), MSGBOX_NPC)
     case STATE_BATTLING_MIGHTYENA:
         msgbox(format("We need to save that Mareep!"), MSGBOX_NPC)
-    case STATE_SAVED_MAREEP:
-        msgbox(format("Phew... I need to take a break after all that running..."), MSGBOX_NPC)
     }
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mareep {
     playmoncry(SPECIES_MAREEP, CRY_MODE_WEAK)
-    msgbox(format("{COLOR DARK_GRAY}Reep! Reep! {COLOR BLUE}(BRO HELP ME PLZ)"))
+    msgbox(format("Reep! Reep! {COLOR BLUE}(BRO HELP ME PLZ)"), MSGBOX_AUTOCLOSE)
     waitmoncry
 }
 
@@ -116,35 +115,32 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
         "{COLOR RED}(That Mightyena...{PAUSE 30} Something seemed off about it.)\p"
         "{COLOR RED}(It had some sort of dark aura... radiating from it?)\p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Phew... That was an intense fight. Thank goodness we came in time!\p"
-        "{COLOR DARK_GRAY}It looks like Mareep isn't hurt at all. That's a relief..."
-    ))
+        "It looks like Mareep isn't hurt at all. That's a relief..."
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
     applymovement(LOCALID_MAREEP, moves(face_player, jump_in_place_left * 3))
     waitmovement
 
     msgbox(format(
-        "{COLOR DARK_GRAY}Reeeep... \p"
+        "Reeeep... \p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Awh. It's okay. You're safe with us now!"
-    ))
+    ), MSGBOX_AUTOCLOSE)
 
     applymovement(LOCALID_RIVAL, moves(face_player))
     waitmovement
-    msgbox(format("{COLOR DARK_GRAY}Ehe...! We make a pretty solid team, don't we, {PLAYER}?"))
-    closemessage
+    msgbox(format("Ehe...! We make a pretty solid team, don't we, {PLAYER}?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_slow_up))
     waitmovement
     applymovement(LOCALID_RIVAL, moves(face_down, emote_question_mark))
     waitmovement
 
     msgbox(format(
-        "{COLOR DARK_GRAY}...Eh? Something was off about the Pokémon? What do you mean? \p"
-        "{COLOR DARK_GRAY}Red eyes? A wicked dark aura? Hmmmn... I didn't see any of that.\p"
-        "{COLOR DARK_GRAY}Well, either way, what's important is that Mareep is safe! Let's get him back to old man Paulie!"
-    ))
+        "...Eh? Something was off about the Pokémon? What do you mean? \p"
+        "Red eyes? A wicked dark aura? Hmmmn... I didn't see any of that.\p"
+        "Well, either way, what's important is that Mareep is safe! Let's get him back to old man Paulie!"
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
     teleportcamera(11, 8)
     addobject(OBJ_EVENT_ID_PLAYER)
@@ -164,17 +160,15 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
         "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Oh, my precious baby is safe and sound! I am in your debt, trainers! \p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Heheh. It was nothing, really! That big Mightyena didn't stand a chance!\p"
         "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Please, take one of these as a token of my gratitude!"
-    ))
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     applymovement(LOCALID_OLD_MAN, moves(walk_down))
     waitmovement
     giveitem(ITEM_LUCKY_EGG)
     closemessage
     applymovement(LOCALID_OLD_MAN, moves(walk_left, face_down, delay_16 * 3, walk_right, walk_up, face_down))
     waitmovement
-    msgbox(format("{COLOR GREEN}Paul: {COLOR DARK_GRAY}Feel free to visit our farm anytime!"))
-    closemessage
+    msgbox(format("{COLOR GREEN}Paul: {COLOR DARK_GRAY}Feel free to visit our farm anytime!"), MSGBOX_AUTOCLOSE)
     applymovement(LOCALID_OLD_MAN, moves(walk_up * 4))
     waitmovement
     playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
@@ -189,46 +183,46 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     msgbox(format(
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Watching how in sync you and your Pokémon are, despite having just met them...\p"
-        "{COLOR DARK_GRAY}{PLAYER}!{PAUSE 30} You should enter the Silverwing Festival Tournament!"
-    ))
+        "{PLAYER}!{PAUSE 30} You should enter the Silverwing Festival Tournament!"
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, delay_16 * 4))
     waitmovement
     playse(SE_PIN)
 	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, walk_in_place_faster_right, delay_16 * 4)) 
     waitmovement
 
+    // NOTE(poe): We had to split this message up, because originally it was too big for the text buffer
+
     msgbox(format(
-        "{COLOR DARK_GRAY}Eeeh!?{PAUSE 60} You don't know about the tournament!?\p"
-        "{COLOR DARK_GRAY}It's a tournament hosted during the Silverwing Festival where only the best trainers of Marya assemble to compete for the Silverwing Cup!\p"
-        "{COLOR DARK_GRAY}I'm taking part in it, and I think you should to! As a natural trainer, you'd be a great competitor!\p"
-        "{COLOR DARK_GRAY}But in order to qualify...{PAUSE 30} you'll have to complete the Marya Gym Challenge!"
+        "Eeeh!?{PAUSE 60} You don't know about the tournament!?\p"
+        "It's a tournament hosted during the Silverwing Festival where only the best trainers of Marya assemble to compete for the Silverwing Cup!\p"
+        "I'm taking part in it, and I think you should to! As a natural trainer, you'd be a great competitor!\p"
+        "But in order to qualify...{PAUSE 30} you'll have to complete the Marya Gym Challenge!"
     ))
 
     msgbox(format(
-        "{COLOR DARK_GRAY}You'll have to travel across the three main islands of Oranna, Lumine, and Minerva... \p"
-        "{COLOR DARK_GRAY}...and defeat their respective gym leaders in battle! \p"
-        "{COLOR DARK_GRAY}Ooh... I can't wait! I wish the festival was tomorrow!\p"
-        "{COLOR DARK_GRAY}Oh, you're right.{PAUSE 30} Neither of us would qualify if it started tomorrow...\p"
+        "You'll have to travel across the three main islands of Oranna, Lumine, and Minerva... \p"
+        "...and defeat their respective gym leaders in battle! \p"
+        "Ooh... I can't wait! I wish the festival was tomorrow!\p"
+        "Oh, you're right.{PAUSE 30} Neither of us would qualify if it started tomorrow...\p"
         "There I go being silly again, ehe."
     ))
 
     msgbox(format(
-        "{COLOR DARK_GRAY}Well, I'm going to go back to the professor to report my findings.\p"
-        "{COLOR DARK_GRAY}But {PLAYER}, you should go west of Maplegrove and head up to Tidalcove! \p"
-        "{COLOR DARK_GRAY}That's where you'll find the first gym leader: Ruka!\p"
-        "{COLOR DARK_GRAY}Ruka is really famous around here. On top of being a gym leader, she used to be a professional swimmer and swimsuit model!"
+        "Well, I'm going to go back to the professor to report my findings.\p"
+        "But {PLAYER}, you should go west of Maplegrove and head up to Tidalcove! \p"
+        "That's where you'll find the first gym leader: Ruka!\p"
+        "Ruka is really famous around here. On top of being a gym leader, she used to be a professional swimmer and swimsuit model!"
     ))
 
     msgbox(format(
-        "{COLOR DARK_GRAY}With that said, bye-bye for now, {PLAYER}!\p"
-        "{COLOR DARK_GRAY}Oh! I almost forgot! Let's exchange phone numbers so we can keep in touch!\p"
-        "{COLOR DARK_GRAY}Mhm...{PAUSE 30} Alright...{PAUSE 30} and there we go! All set!\p"
-        "{COLOR DARK_GRAY}Let's meet up again soon!"
-    ))
+        "With that said, bye-bye for now, {PLAYER}!\p"
+        "Oh! I almost forgot! Let's exchange phone numbers so we can keep in touch!\p"
+        "Mhm...{PAUSE 30} Alright...{PAUSE 30} and there we go! All set!\p"
+        "Let's meet up again soon!"
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(LOCALID_RIVAL, moves(walk_down * 5, walk_right * 6, walk_down * 5, delay_8 * 6))
     waitmovement
@@ -261,15 +255,24 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon {
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_FlowerSign {
-    msgbox(format("{COLOR DARK_GRAY}MINTY MEADOWS\nBeware of scary Drifloon at night!"), MSGBOX_SIGN)
+    msgbox(format(
+        "MINTY MEADOWS\n"
+        "Beware of scary Drifloon at night!"
+    ), MSGBOX_SIGN)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_TunnelSign {
-    msgbox(format("{COLOR DARK_GRAY}TRAVELER'S TUNNEL\nWARNING: THICK FOG INSIDE!"), MSGBOX_SIGN)
+    msgbox(format(
+        "TRAVELER'S TUNNEL\n"
+        "WARNING: THICK FOG INSIDE!"
+    ), MSGBOX_SIGN)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_PopsHouse {
-    msgbox(format("{COLOR DARK_GRAY}POPS' RESIDENCE\nOwner of Minty Meadows!"), MSGBOX_SIGN)
+    msgbox(format(
+        "POPS' RESIDENCE\n"
+        "Owner of Minty Meadows!"
+    ), MSGBOX_SIGN)
 }
 
 // section: triggers
@@ -314,35 +317,33 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest {
         playse(SE_PIN)
         applymovement(LOCALID_OLD_MAN, moves(emote_exclamation_mark, delay_8 * 6, face_player)) 
         waitmovement
-        msgbox(format("{COLOR DARK_GRAY}Ah, young trainer! Please give me a moment. I am trying to count my Mareep."))
-        closemessage
+        msgbox(format("Ah, young trainer! Please give me a moment. I am trying to count my Mareep."), MSGBOX_AUTOCLOSE)
         applymovement(LOCALID_OLD_MAN, moves(face_original_direction))
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left, face_left))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
         waitmovement
     case STATE_SEARCHING_FOR_MAREEP:
     case STATE_BATTLING_MIGHTYENA:
         if (checkfollowernpc) {
             facefollowernpc
 
-            msgbox(format(
+            message(format(
                 "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Eh? We can't leave yet! We told old man Paulie we'd help find his Mareep!\p"
                 "Do you really have to leave?"
             ))
 
+            waitmessage
             dynmultipush("Yes", YES)
             dynmultipush("No", NO)
 
             switch (dynmultistack(20, 8, TRUE, 3, FALSE, NO, DYN_MULTICHOICE_CB_NONE)) {
             case YES:
-                msgbox(format("Okay... Please come back as soon as you can!"))
-                closemessage
+                msgbox(format("Okay... Please come back as soon as you can!"), MSGBOX_AUTOCLOSE)
                 unsetfollowernpc(LOCALID_RIVAL)
                 applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
                 applymovement(LOCALID_RIVAL, moves(walk_right))
                 waitmovement
             case NO:
-                msgbox(format("Alright! Let's get back to business!"))
-                closemessage
+                msgbox(format("Alright! Let's get back to business!"), MSGBOX_AUTOCLOSE)
                 applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 2))
                 waitmovement
             }
@@ -352,20 +353,17 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest {
             waitmovement
             playse(SE_PIN)
             applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark))
-            msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Let's go get that Mareep!"))
-            closemessage
+            msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Let's go get that Mareep!"), MSGBOX_AUTOCLOSE)
             applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 2))
             waitmovement
             setfollowernpc(LOCALID_RIVAL, FNPC_ALL, 0, PARTNER_MEADOWS_RIVAL)
-            closemessage
         }
     }
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep {
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}We finally found it!"))
-    closemessage
-    applymovement(LOCALID_MIGHTYENA, moves(walk_up, step_end))
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}We finally found it!"), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_MIGHTYENA, moves(walk_up))
     applymovement(LOCALID_MAREEP, moves(emote_exclamation_mark))
     playmoncry(SPECIES_MIGHTYENA, CRY_MODE_ENCOUNTER)
     waitmoncry
@@ -375,14 +373,12 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep {
     playse(SE_PIN)
 	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6, walk_in_place_faster_up)) 
 	waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Agh! Quick, {PLAYER}! We need to save that Mareep!"))
-    closemessage
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Agh! Quick, {PLAYER}! We need to save that Mareep!"), MSGBOX_AUTOCLOSE)
     setvar(VAR_MINTY_MEADOWS_STATE, STATE_BATTLING_MIGHTYENA)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave {
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Huh? We have to help Mareep!"))
-    closemessage
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Huh? We have to help Mareep!"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     waitmovement
 }
@@ -390,32 +386,37 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave {
 // section: trainers
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_11, format("{COLOR DARK_GRAY}Howdy pardner! Howsabout we get a quick scrap in?"), "Well I'll be.")
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_11, format("Howdy pardner! Howsabout we get a quick scrap in?"), format("Well I'll be."))
 	msgbox(format("A mighty fine party of Pokes ya got on ya."), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_12, format("{COLOR DARK_GRAY}My Pokemans are purty cute. Wanna take a gander?"), "Ain't she just the sweetest lil thang\n you've eva laid yer eyes on?")
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_12, format("My Pokemans are purty cute. Wanna take a gander?"), format("Ain't she just the sweetest lil thang you've eva laid yer eyes on?"))
 	msgbox(format("I love my darlin' lil ball of cotton candy. Even if she don't fight too well."), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_13, format("{COLOR DARK_GRAY}I have a super special Bug Pokémon. You literally can't get it.\pHow jealous are you?"), "Ack! My super special bug Pokémon!")
-	msgbox(format("Okay, maybe I should be more specific.\pYou can't catch a Vivillon with the same pattern as mine here in Marya.\pThat's because a Vivillon's pattern is dependent on where it lives!"), MSGBOX_AUTOCLOSE)
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_13, format("I have a super special Bug Pokémon. You literally can't get it.\pHow jealous are you?"), format("Ack! My super special bug Pokémon!"))
+
+	msgbox(format(
+        "Okay, maybe I should be more specific.\p"
+        "You can't catch a Vivillon with the same pattern as mine here in Marya.\p"
+        "That's because a Vivillon's pattern is dependent on where it lives!"
+    ), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_14, format("{COLOR DARK_GRAY}Hi!"), "Heck!")
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_14, format("Hi!"), format("Heck!"))
 	msgbox(format("I'm not a very interesting person, so I don't really say much."), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_15, format("{COLOR DARK_GRAY}POKÉMON IS LOVE! POKÉMON IS LIFE!"), "It's all Kyogre now...")
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_15, format("POKÉMON IS LOVE! POKÉMON IS LIFE!"), format("It's all Kyogre now..."))
 	msgbox(format("I was only nine years old when I met my Riolu. It's the coolest Pokémon ever."), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster {
-    trainerbattle_single(TRAINER_MINTY_MEADOWS_16, format("{COLOR DARK_GRAY}Shorts are awesome. They're so comfy to wear. Don't you agree?"), "I think I'm going to need a new pair of\nshorts...")
+    trainerbattle_single(TRAINER_MINTY_MEADOWS_16, format("Shorts are awesome. They're so comfy to wear. Don't you agree?"), format("I think I'm going to need a new pair of shorts..."))
 	msgbox(format("Shorts are easily an S tier pick for pants!"), MSGBOX_AUTOCLOSE)
 }
 
@@ -435,7 +436,6 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
         delay_8 * 3,
         face_up,
         delay_16,
-        step_end,
         walk_in_place_faster_up,
         delay_16 * 2
     ))
@@ -444,18 +444,16 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
 
     msgbox(format(
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Nnngh...{PAUSE 30} I'm only missing one more Pokémon!{PAUSE 30} Where in the world is it?\p"
-        "{COLOR DARK_GRAY}Waah! I give up! I'm convinced it doesn't even exist! \p"
-        "{COLOR DARK_GRAY}Eh?"
-    ))
+        "Waah! I give up! I'm convinced it doesn't even exist! \p"
+        "Eh?"
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     applymovement(LOCALID_RIVAL, moves(emote_question_mark, face_down, delay_8 * 6))
 	waitmovement
 	playbgm(MUS_HG_LYRA,TRUE)
     applymovement(LOCALID_RIVAL, moves(walk_left * 2, walk_down * 2))
     waitmovement
-    msgbox(format("Hiya there!{PAUSE 30}... Err...{PAUSE 30} umm,{PAUSE 30} have we met before?"))
-    closemessage
+    msgbox(format("Hiya there!{PAUSE 30}... Err...{PAUSE 30} umm,{PAUSE 30} have we met before?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_up, delay_16 * 2))
     waitmovement
     playse(SE_PIN)
@@ -469,10 +467,9 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
         "Hope the isles are treating you kindly so far! I've been here all my life, so if ya ever need guidance, leave it to me!\p"
         "Oh!{PAUSE 30} Now that you're here, let's have a Pokémon battle! I need some action!\p"
         "I might be new just like you... but don't you underestimate me!"
-    ))
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
-    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, "Ack! Looks like I was the one doing the\nunderestimating!")
+    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, format("Ack! Looks like I was the one doing the underestimating!"))
 
     if (specialvar(VAR_RESULT, GetBattleOutcome) != B_OUTCOME_WON) {
         return
@@ -480,51 +477,45 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
 
     msgbox(format(
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Drats, I wasn't expecting to lose to you, {PLAYER}... \p"
-        "{COLOR DARK_GRAY}W-Wait, I didn't mean it like that! I was just surprised at how skilled you are!\p"
-        "{COLOR DARK_GRAY}Sorry... I say things before I speak a lot, ehe..."
-    ))
+        "W-Wait, I didn't mean it like that! I was just surprised at how skilled you are!\p"
+        "Sorry... I say things before I speak a lot, ehe..."
+    ), MSGBOX_AUTOCLOSE)
 
     setflag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)
-    closemessage
 	savebgm(MUS_DUMMY)
 	fadedefaultbgm
     call(ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep)
     addobject(LOCALID_OLD_MAN)
     setobjectxy(LOCALID_OLD_MAN, 18, 12)
-    msgbox(format("{COLOR DARK_GRAY}Excuse me! Young trainers!"))
-    closemessage
+    msgbox(format("Excuse me! Young trainers!"), MSGBOX_AUTOCLOSE)
     applymovement(LOCALID_OLD_MAN, moves(walk_left * 8, walk_up * 3))
-    setobjectxyperm(LOCALID_OLD_MAN, 10, 9)
+    copyobjectxytoperm(LOCALID_OLD_MAN)
     waitmovement
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     waitmovement
 
     msgbox(format(
         "{COLOR GREEN}Farm Owner: {COLOR DARK_GRAY}I'm Paul, I'm one of the owners of Fresa Farms.\p"
-        "{COLOR DARK_GRAY}Have you two seen a Mareep with a blue collar wandering around by chance? \p"
+        "Have you two seen a Mareep with a blue collar wandering around by chance? \p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}I haven't... Did you lose one?\p"
         "{COLOR GREEN}Paul: {COLOR DARK_GRAY}I'm afraid so... When I was counting my Mareep after taking them out to graze, I noticed one was missing."
-    ))
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     playse(SE_PIN)
 	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
 	waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look, right {PLAYER}?"))
-    closemessage
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look, right {PLAYER}?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, delay_16 * 2, walk_in_place_faster_up, delay_16 * 2, face_down, delay_16 * 2))
     waitmovement
 
     msgbox(format(
         "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Really? Oh, I can't thank you two enough! \p"
-        "{COLOR DARK_GRAY}The last place I saw my precious Mareep was in the forest to the east."
-    ))
+        "The last place I saw my precious Mareep was in the forest to the east."
+    ), MSGBOX_AUTOCLOSE)
 
-    closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
     waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Sounds good! {PLAYER}! Let's head over there immediately!"))
-    closemessage
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Sounds good! {PLAYER}! Let's head over there immediately!"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(LOCALID_RIVAL, moves(walk_fast_left, walk_fast_down * 4, walk_fast_right * 9))
     waitmovement
