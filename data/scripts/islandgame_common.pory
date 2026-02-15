@@ -12,7 +12,6 @@ script Common_EnableAutoRun {
   end
 }
 
-const LOCALID_NURSE = 1
 const LOOP_BOUND = VAR_TEMP_A
 const LOOP_ITER  = VAR_TEMP_B
 const QUEST      = VAR_TEMP_C
@@ -40,6 +39,8 @@ script Common_NextSubQuest {
     }
     return
 }
+
+const LOCALID_NURSE = 1
 
 script IslandGame_Common_PokemonCenter_1F_EventScript_Nurse {
     if (!flag(FLAG_PROF_GAVE_EEVEE)) {
@@ -500,4 +501,13 @@ script Common_EventScript_VendingMachine {
         hidemoneybox
         closemessage
         release
+}
+
+script Common_RemoveTemporaryObject {
+  specialvar(VAR_RESULT, GetBattleOutcome)
+  if (flag(FLAG_SYS_CTRL_OBJ_DELETE)) { return }
+  if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON) {
+      removeobject(VAR_LAST_TALKED)
+  }
+  return
 }

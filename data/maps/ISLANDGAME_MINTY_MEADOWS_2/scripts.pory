@@ -10,11 +10,7 @@ const HIDDEN_Y = 1
 mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
     // This hides overworld mons smoothly right before the overworld loads
     MAP_SCRIPT_ON_RESUME {
-        specialvar(VAR_RESULT, GetBattleOutcome)
-
-        if (flag(FLAG_SYS_CTRL_OBJ_DELETE) && (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON)) {
-            removeobject(VAR_LAST_TALKED)
-        }
+        call(Common_RemoveTemporaryObject)
     }
 
     MAP_SCRIPT_ON_TRANSITION {
