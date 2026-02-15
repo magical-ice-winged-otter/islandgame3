@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer1",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer_LowerDoubleLovers",
       "flag": "0"
     },
     {
@@ -48,7 +48,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer1",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer_LowerDoubleLovers",
       "flag": "0"
     },
     {
@@ -61,7 +61,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer4",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer_MiddleFlowerWoman",
       "flag": "0"
     },
     {
@@ -74,7 +74,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer3",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer_LowerJogger",
       "flag": "0"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer6",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer_MiddleBugNerd",
       "flag": "0"
     },
     {
@@ -100,7 +100,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer7",
+      "script": "ISLANDGAME_MINTY_MEADOWS_UpperDoubleCamper",
       "flag": "0"
     },
     {
@@ -113,7 +113,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "ISLANDGAME_MINTY_MEADOWS_Trainer8",
+      "script": "ISLANDGAME_MINTY_MEADOWS_UpperDoublePicnicker",
       "flag": "0"
     },
     {
@@ -204,7 +204,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_FlabebeRed",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Interact_FlabebeRed",
       "flag": "FLAG_TEMP_1"
     },
     {
@@ -217,7 +217,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_FlabebeOrange",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Interact_FlabebeOrange",
       "flag": "FLAG_TEMP_2"
     },
     {
@@ -230,7 +230,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_FlabebeYellow",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Interact_FlabebeYellow",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -243,7 +243,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_FlabebeBlue",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Interact_FlabebeBlue",
       "flag": "FLAG_TEMP_4"
     },
     {
@@ -256,10 +256,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_FlabebeWhite",
+      "script": "ISLANDGAME_MINTY_MEADOWS_Interact_FlabebeWhite",
       "flag": "FLAG_TEMP_5"
     },
     {
+      "local_id": "LOCALID_OVERWORLD_MON_LOWER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 14,
       "y": 23,
@@ -273,6 +274,7 @@
       "flag": "FLAG_TEMP_A"
     },
     {
+      "local_id": "LOCALID_OVERWORLD_MON_UPPER",
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 24,
       "y": 12,
