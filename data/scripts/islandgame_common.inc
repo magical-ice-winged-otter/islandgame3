@@ -759,7 +759,7 @@ Common_RemoveTemporaryObject::
 # 507 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
 # 508 "data/scripts/islandgame_common.pory"
-	goto_if_set FLAG_SYS_CTRL_OBJ_DELETE, Common_RemoveTemporaryObject_2
+	goto_if_unset FLAG_SYS_CTRL_OBJ_DELETE, Common_RemoveTemporaryObject_2
 # 509 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Common_RemoveTemporaryObject_5

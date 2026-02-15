@@ -505,7 +505,7 @@ script Common_EventScript_VendingMachine {
 
 script Common_RemoveTemporaryObject {
   specialvar(VAR_RESULT, GetBattleOutcome)
-  if (flag(FLAG_SYS_CTRL_OBJ_DELETE)) { return }
+  if (!flag(FLAG_SYS_CTRL_OBJ_DELETE)) { return }
   if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON) {
       removeobject(VAR_LAST_TALKED)
   }
