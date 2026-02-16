@@ -1,7 +1,7 @@
 mapscripts ISLANDGAME_FRESA_FARMS_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         // This hides the rescued mareep until we actually rescue them
-        if (var(VAR_MINTY_MEADOWS_STATE) != 3) {
+        if (var(VAR_MINTY_MEADOWS_STATE) != MINTY_MEADOWS_SAVED_MAREEP) {
             setobjecthidden(LOCALID_MAREEP_RESCUED)
             setobjecthidden(LOCALID_MAREEP_TOUGH)
         }

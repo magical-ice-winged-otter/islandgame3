@@ -9,6 +9,8 @@ mapscripts ISLANDGAME_FRESA_FARMS_HOUSE_MapScripts {
     }
 }
 
+// section: interactions
+
 script ISLANDGAME_FRESA_FARMS_HOUSE_Interact_TvKid {
     lock
     faceplayer

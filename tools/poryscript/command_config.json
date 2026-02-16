@@ -107,6 +107,9 @@
     },
     "trade": {
         "var_name": "VAR_RESULT"
+    },
+    "returnqueststate": {
+        "var_name": "VAR_RESULT"
     }
   }
 }

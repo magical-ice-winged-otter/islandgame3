@@ -1,9 +1,3 @@
-// possible values of VAR_MINTY_MEADOWS_STATE
-const STATE_BATTLING_RIVAL = 0
-const STATE_SEARCHING_FOR_MAREEP = 1
-const STATE_BATTLING_MIGHTYENA = 2
-const STATE_SAVED_MAREEP = 3
-
 mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
     // This hides overworld mons smoothly right before the overworld loads
     MAP_SCRIPT_ON_RESUME {
@@ -17,21 +11,21 @@ mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
         }
 
         // The extra mareeps are only visible when battling the rival
-        if (var(VAR_MINTY_MEADOWS_STATE) != STATE_BATTLING_RIVAL) {
+        if (var(VAR_MINTY_MEADOWS_STATE) != MINTY_MEADOWS_BATTLING_RIVAL) {
             call(ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep)
         }
 
         switch (var(VAR_MINTY_MEADOWS_STATE)) {
-        case STATE_SEARCHING_FOR_MAREEP: 
+        case MINTY_MEADOWS_SEARCHING_FOR_MAREEP: 
             setobjectxyperm(LOCALID_OLD_MAN, 10, 9)
             setobjectxyperm(LOCALID_RIVAL, 34, 10)
             setobjectmovementtype(LOCALID_RIVAL, MOVEMENT_TYPE_LOOK_AROUND)
-        case STATE_BATTLING_MIGHTYENA: 
+        case MINTY_MEADOWS_BATTLING_MIGHTYENA: 
             setobjectxyperm(LOCALID_OLD_MAN, 10, 9)
             setobjectxyperm(LOCALID_RIVAL, 66, 18)
             setobjectmovementtype(LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN)
             setobjectxyperm(LOCALID_MIGHTYENA, 61, 15)
-        case STATE_SAVED_MAREEP:
+        case MINTY_MEADOWS_SAVED_MAREEP:
             setobjecthidden(LOCALID_RIVAL)
             setobjecthidden(LOCALID_OLD_MAN)
             setobjecthidden(LOCALID_MAREEP)
@@ -44,9 +38,9 @@ mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_OldMan {
     switch (var(VAR_MINTY_MEADOWS_STATE)) {
-    case STATE_SEARCHING_FOR_MAREEP:
+    case MINTY_MEADOWS_SEARCHING_FOR_MAREEP:
         msgbox(format("I could've sworn it was somewhere in the forest to the east..."), MSGBOX_NPC)
-    case STATE_BATTLING_MIGHTYENA:
+    case MINTY_MEADOWS_BATTLING_MIGHTYENA:
         msgbox(format(
             "What? A wild Mightyena was chasing my precious Mareep?\p"
             "You have to save him, please!"
@@ -56,9 +50,9 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_OldMan {
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_Rival {
     switch (var(VAR_MINTY_MEADOWS_STATE)) {
-    case STATE_SEARCHING_FOR_MAREEP:
+    case MINTY_MEADOWS_SEARCHING_FOR_MAREEP:
         msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Hmm... where could it be?"), MSGBOX_NPC)
-    case STATE_BATTLING_MIGHTYENA:
+    case MINTY_MEADOWS_BATTLING_MIGHTYENA:
         msgbox(format("We need to save that Mareep!"), MSGBOX_NPC)
     }
 }
@@ -102,7 +96,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
         end
     }
 
-    setvar(VAR_MINTY_MEADOWS_STATE, STATE_SAVED_MAREEP)
+    setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SAVED_MAREEP)
 
     msgbox(format(
         "{COLOR RED}(That Mightyena...{PAUSE 30} Something seemed off about it.)\p"
@@ -303,7 +297,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3 {
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest {
     switch (var(VAR_MINTY_MEADOWS_STATE)) {
-    case STATE_BATTLING_RIVAL:
+    case MINTY_MEADOWS_BATTLING_RIVAL:
         playse(SE_PIN)
         applymovement(LOCALID_OLD_MAN, moves(emote_exclamation_mark, delay_8 * 6, face_player)) 
         waitmovement
@@ -311,8 +305,8 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest {
         applymovement(LOCALID_OLD_MAN, moves(face_original_direction))
         applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
         waitmovement
-    case STATE_SEARCHING_FOR_MAREEP:
-    case STATE_BATTLING_MIGHTYENA:
+    case MINTY_MEADOWS_SEARCHING_FOR_MAREEP:
+    case MINTY_MEADOWS_BATTLING_MIGHTYENA:
         if (checkfollowernpc) {
             facefollowernpc
 
@@ -364,7 +358,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep {
 	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6, walk_in_place_faster_up)) 
 	waitmovement
     msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Agh! Quick, {PLAYER}! We need to save that Mareep!"), MSGBOX_AUTOCLOSE)
-    setvar(VAR_MINTY_MEADOWS_STATE, STATE_BATTLING_MIGHTYENA)
+    setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_BATTLING_MIGHTYENA)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave {
@@ -512,7 +506,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
     setobjectxy(LOCALID_RIVAL, 34, 10)
     copyobjectxytoperm(LOCALID_RIVAL)
     special(HealPlayerParty)
-    setvar(VAR_MINTY_MEADOWS_STATE, STATE_SEARCHING_FOR_MAREEP)
+    setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SEARCHING_FOR_MAREEP)
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep {
