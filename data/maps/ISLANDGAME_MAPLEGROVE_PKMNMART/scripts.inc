@@ -2,73 +2,59 @@ ISLANDGAME_MAPLEGROVE_PKMNMART_MapScripts::
 	.byte 0
 
 
-ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee::
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_SickGirl::
 # 4 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee_Text_0
-# 5 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	closemessage
-# 6 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	pokemart Maplegrove_MartItems
-# 7 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee_Text_1
+	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_SickGirl_Text_0, MSGBOX_NPC
+	return
+
+
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Audino::
 # 8 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	closemessage
+	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Audino_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
-ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_NPC1::
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee::
+# 12 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee_Text_0, MSGBOX_AUTOCLOSE
 # 13 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	lock
+	pokemart Maplegrove_MartItems
 # 14 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	faceplayer
-# 15 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_NPC1Talk
-# 16 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	release
-	return
-
-
-ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_NPC2::
-# 26 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	lock
-# 27 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_NPC2Talk
-# 28 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	release
+	msgbox ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee_Text_1, MSGBOX_AUTOCLOSE
 	return
 
 
 	.align 2
-# 37 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 17 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 Maplegrove_MartItems:
-# 38 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 18 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_POKE_BALL
-# 39 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 19 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_POTION
-# 40 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 20 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_PARALYZE_HEAL
-# 41 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 21 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_ANTIDOTE
-# 42 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 22 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_AWAKENING
-# 43 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+# 23 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 
-ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee_Text_0:
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_SickGirl_Text_0:
 # 4 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	.string "Welcome! How may I help you?$"
-
-ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee_Text_1:
-# 7 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	.string "Thank you for shopping with us!$"
-
-ISLANDGAME_MAPLEGROVE_PKMNMART_NPC1Talk::
-# 19 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
-	.string "{COLOR DARK_GRAY}Achoooo!{PAUSE 60} -sniff-{PAUSE 60} Oops, sorry.{PAUSE 30} I didn't\n"
+	.string "Achoooo!{PAUSE 60} -sniff-{PAUSE 60} Oops, sorry.{PAUSE 30} I didn't\n"
 	.string "mean to sneeze all over you.$"
 
-ISLANDGAME_MAPLEGROVE_PKMNMART_NPC2Talk::
-# 31 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Audino_Text_0:
+# 8 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
 	.string "{COLOR RED}(It seems like this Audino is actually\n"
 	.string "an employee at the shop.)$"
+
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee_Text_0:
+# 12 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+	.string "Welcome! How may I help you?$"
+
+ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee_Text_1:
+# 14 "data/maps/ISLANDGAME_MAPLEGROVE_PKMNMART/scripts.pory"
+	.string "Thank you for shopping with us!$"
