@@ -2,42 +2,59 @@ ISLANDGAME_MAPLEGROVE_HOUSE1_MapScripts::
 	.byte 0
 
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor::
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor::
 # 6 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	lock
 # 7 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	faceplayer
-# 8 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorIntro
 # 9 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	showmoneybox 0, 0
-# 10 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorOffer, MSGBOX_YESNO
-# 11 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_1
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_0
 # 15 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	checkmoney 1500
+	showmoneybox 0, 0
 # 16 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_1, MSGBOX_YESNO
+# 17 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	hidemoneybox
+# 19 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_2
+	checkmoney 1500
+# 0 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_5
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_4:
-# 21 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorWhichMon
-# 22 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	setvar VAR_0x8005, MOVE_HIDDEN_POWER
+	goto_if_ne ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_3
+# 43 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_5
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_1:
+# 46 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	release
+	return
+
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_2:
+# 20 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_2
+	goto ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_1
+
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_3:
 # 23 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	special ChooseMonForMoveTutor
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_3
 # 24 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	waitstate
+	setvar VAR_0x8005, MOVE_HIDDEN_POWER
 # 25 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	special ChooseMonForMoveTutor
+# 26 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	waitstate
+# 28 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_8
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_7:
+	goto_if_ne ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_7
+# 39 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_2
+	goto ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_1
+
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_7:
 # 29 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	showmoneybox 0, 0
 # 30 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorMoveLearned
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_4
 # 31 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	closemessage
 # 32 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
@@ -49,107 +66,66 @@ ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_7:
 # 35 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	waitse
 # 36 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	goto HPTutor_End
-	return
-
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_1:
-# 12 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_Text_0
-# 13 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	goto HPTutor_End
-	return
-
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_5:
-# 17 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_Text_1
-# 18 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	goto HPTutor_End
-	goto ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_4
-
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_8:
-# 26 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_Text_0
-# 27 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	goto HPTutor_End
-	goto ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_7
-
-
-HPTutor_End::
-# 41 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	hidemoneybox
-# 42 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	release
-	return
+	goto ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_1
 
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_PKMN::
-# 72 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	lock
-# 73 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	faceplayer
-# 74 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_Togepi::
+# 50 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
 	playmoncry SPECIES_TOGEPI, CRY_MODE_NORMAL
-# 75 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_PKMNTalk
-# 76 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	release
+# 52 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_Togepi_Text_0, MSGBOX_NPC
 	return
 
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_NPC::
-# 88 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	lock
-# 89 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	faceplayer
-# 90 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_NPCTalk
-# 91 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	release
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_TogepiMan::
+# 60 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	msgbox ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_TogepiMan_Text_0, MSGBOX_NPC
 	return
 
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_Text_0:
-# 12 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}What a shame... All that hidden\n"
-	.string "potential gone to waste.$"
-
-ISLANDGAME_MAPLEGROVE_HOUSE1_EventScript_HPTutor_Text_1:
-# 17 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}My services do not come cheap... Come\n"
-	.string "back when you have sufficient funds.$"
-
-ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorIntro::
-# 45 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}Hmm... Your Pokémon possess a dormant\n"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_0:
+# 10 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "Hmm... Your Pokémon possess a dormant\n"
 	.string "power within them...\p"
-	.string "{COLOR DARK_GRAY}Hidden potential just waiting to be\n"
+	.string "Hidden potential just waiting to be\n"
 	.string "unlocked...\p"
-	.string "{COLOR DARK_GRAY}I can help them obtain this hidden\n"
+	.string "I can help them obtain this hidden\n"
 	.string "power... provided you have the funds...$"
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorOffer::
-# 53 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}I will teach your Pokémon its hidden\n"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_1:
+# 16 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "I will teach your Pokémon its hidden\n"
 	.string "power for ¥1500... How's that sound?$"
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorWhichMon::
-# 59 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}Excellent... Whose hidden power do you\n"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_2:
+# 20 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "What a shame... All that hidden\n"
+	.string "potential gone to waste.$"
+
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_3:
+# 23 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "Excellent... Whose hidden power do you\n"
 	.string "want unlocked...?$"
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_HPTutorMoveLearned::
-# 65 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}Your Pokémon's hidden power has been\n"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_4:
+# 30 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "Your Pokémon's hidden power has been\n"
 	.string "unlocked... I will take my payment now.$"
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_PKMNTalk::
-# 79 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}Togepi! {COLOR BLUE}(Hello hooman!)\p"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_HPTutor_Text_5:
+# 43 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "My services do not come cheap... Come\n"
+	.string "back when you have sufficient funds.$"
+
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_Togepi_Text_0:
+# 53 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "Togepi! {COLOR BLUE}(Hello hooman!)\p"
 	.string "{COLOR DARK_GRAY}Togi-togi! {COLOR BLUE}(Wow! You can understand me?\n"
 	.string "That's amazing!)\p"
 	.string "{COLOR DARK_GRAY}Pi-pi. {COLOR BLUE}(You must be really special.)$"
 
-ISLANDGAME_MAPLEGROVE_HOUSE1_NPCTalk::
-# 94 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
-	.string "{COLOR DARK_GRAY}My Togepi is very talkative. I wish I\n"
+ISLANDGAME_MAPLEGROVE_HOUSE1_Interact_TogepiMan_Text_0:
+# 60 "data/maps/ISLANDGAME_MAPLEGROVE_HOUSE1/scripts.pory"
+	.string "My Togepi is very talkative. I wish I\n"
 	.string "could understand what he was saying...$"
