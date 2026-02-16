@@ -1,92 +1,51 @@
 mapscripts ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_MapScripts {}
 
+// section: interactions
 
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Bed {
-    lock
-    msgbox(format(
-        "{COLOR RED}(...This seems wrong.)"
-    ))
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkLeft)
-    waitmovement(0)
-    release
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_WailmerDoll {
+    msgbox(format("{COLOR RED}(It's jumbo-sized Wailmer plush. It's very squishy.)\p(Squish squish)"), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_WailmerDoll {
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_WooperDoll {
     lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_WailmerInspect)
-    release
-}
+    msgbox(format("{COLOR RED}(It's a Wooper doll. There's a button on it. Should I press it?)"), MSGBOX_YESNO)
 
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_WailmerInspect {
-    format(
-        "{COLOR RED}(It's jumbo-sized Wailmer plush. It's very squishy.) \p"
-        "{COLOR RED}(Squish squish.)"
-    )
-}
-
-
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_WooperDoll {
-    lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_WooperInspect, MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
-        playmoncry(SPECIES_WOOPER,CRY_MODE_NORMAL)
+        playmoncry(SPECIES_WOOPER, CRY_MODE_NORMAL)
         msgbox(format("Woopa!"))
     }
+
     release
 }
 
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_WooperInspect {
-    format(
-        "{COLOR RED}(It's a Wooper doll. There's a button on it. Should I press it?)"
-    )
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Drawer {
+    msgbox(format(
+        "{COLOR RED}(It's a drawer full of Melissa's clothes.)\p"
+        "(I should probably stop looking through it.)"
+    ), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Drawer {
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Computer {
+    msgbox(format(
+        "{COLOR RED}(It looks like Melissa left her computer on.)\p"
+        "(Seems like she was watching “PokéLive Summer Splash Highlights”.)"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Book {
+    msgbox(format("{COLOR RED}(It's the latest issue of “Attack on Galar”.)"),MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Gamecube {
+    msgbox(format("{COLOR RED}(It's Melissa's GameCube.)"), MSGBOX_AUTOCLOSE)
+}
+
+// section: triggers
+
+script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Trigger_Bed {
     lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_DrawerInspect)
+    msgbox(format("{COLOR RED}(...This seems wrong.)"))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    waitmovement
     release
-}
-
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_DrawerInspect {
-    format(
-        "{COLOR RED}(It's a drawer full of Melissa's clothes.) \p"
-        "{COLOR RED}(I should probably stop looking through it.)"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Computer {
-    lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_ComputerInspect)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_ComputerInspect {
-    format(
-        "{COLOR RED}(It looks like Melissa left her computer on.) \p"
-        "{COLOR RED}(Seems like she was watching “PokéLive Summer Splash Highlights”.)"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Book {
-    lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_BookInspect)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_BookInspect {
-    format(
-        "{COLOR RED}(It's the latest issue of “Attack on Galar”.)"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Gamecube {
-    lock
-    msgbox(ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_GamecubeInspect)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_GamecubeInspect {
-    format(
-        "{COLOR RED}(It's Melissa's GameCube.)"
-    )
 }

@@ -12,7 +12,7 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_WooperDoll",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_WooperDoll",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_WailmerDoll",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_WailmerDoll",
       "flag": "0"
     }
   ],
@@ -58,7 +58,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Bed"
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Trigger_Bed"
     }
   ],
   "bg_events": [
@@ -68,7 +68,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Drawer"
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Drawer"
     },
     {
       "type": "sign",
@@ -76,7 +76,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Computer"
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Computer"
     },
     {
       "type": "sign",
@@ -84,7 +84,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Book"
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Book"
     },
     {
       "type": "sign",
@@ -92,7 +92,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_EventScript_Gamecube"
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_2F_Interact_Gamecube"
     }
   ]
 }
