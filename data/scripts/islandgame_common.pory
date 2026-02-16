@@ -503,11 +503,45 @@ script Common_EventScript_VendingMachine {
         release
 }
 
-script Common_RemoveTemporaryObject {
+script Common_TryRemoveTemporaryObject {
   specialvar(VAR_RESULT, GetBattleOutcome)
   if (!flag(FLAG_SYS_CTRL_OBJ_DELETE)) { return }
   if (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON) {
+      setobjecthidden(VAR_LAST_TALKED)
       removeobject(VAR_LAST_TALKED)
   }
   return
+}
+
+script Common_AttemptTrade {
+    // VAR_0x8000 is the trade ID passed in from the caller
+    setorcopyvar(VAR_0x8008, VAR_0x8000)
+    copyvar(VAR_0x8004, VAR_0x8008)
+    specialvar(VAR_RESULT, GetInGameTradeSpeciesInfo)
+    copyvar(VAR_0x8009, VAR_RESULT)
+    special(ChoosePartyMon)
+    waitstate
+    copyvar(VAR_0x800A, VAR_0x8004)
+
+    if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
+        setvar(VAR_RESULT, TRADE_CANCELED)
+        return
+    }
+
+    copyvar(VAR_0x8005, VAR_0x800A)
+    specialvar(VAR_RESULT, GetTradeSpecies)
+    copyvar(VAR_0x800B, VAR_RESULT)
+
+    if(var(VAR_RESULT) != VAR_0x8009) {
+        setvar(VAR_RESULT, TRADE_WRONG_SPECIES)
+        return
+    }
+
+    copyvar(VAR_0x8004, VAR_0x8008)
+    copyvar(VAR_0x8005, VAR_0x800A)
+    special(CreateInGameTradePokemon)
+    special(DoInGameTradeScene)
+    waitstate
+    setvar(VAR_RESULT, TRADE_SUCCESS)
+    return
 }

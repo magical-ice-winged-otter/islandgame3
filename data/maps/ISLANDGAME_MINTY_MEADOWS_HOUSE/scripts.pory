@@ -5,7 +5,7 @@ mapscripts ISLANDGAME_MINTY_MEADOWS_HOUSE_MapScripts {}
 script ISLANDGAME_MINTY_MEADOWS_HOUSE_Interact_Pops {
     lock
     faceplayer
-    goto_if_set(FLAG_MINTY_MEADOWS_FREE_MINT, RepeatCustomer)
+    goto_if_set(FLAG_MINTY_MEADOWS_FREE_MINT, MintRepeatCustomer)
 
     msgbox(format(
         "Salutations! My name is Pops. Would you like to try one of our Meadow Mints?\p"
@@ -14,14 +14,15 @@ script ISLANDGAME_MINTY_MEADOWS_HOUSE_Interact_Pops {
 
     if (var(VAR_RESULT) == YES) {
         msgbox(format("Good show! Which scent would you like? The first one you get is free!"), MSGBOX_AUTOCLOSE)
-        goto(Shop)
+        goto(MintShop)
     }
     else {
         msgbox(format("Oh... bad show..."), MSGBOX_AUTOCLOSE)
-        goto(End)
+        release
+        end
     }
 
-RepeatCustomer:
+MintRepeatCustomer:
     msgbox(format("Welcome back, trainer! Here to try another of our fresh mints?"))
     showmoneybox(18, 0)
     msgbox(format("For the price of ¥1000, I will happily sell you one of them!"), MSGBOX_YESNO)
@@ -30,21 +31,23 @@ RepeatCustomer:
         if (checkmoney(1000)) {
             hidemoneybox
             delay(15)
-            goto(Shop)
+            goto(MintShop)
         }
         else {
-            msgbox(format("Oh dear... I'm afraid I can't give you a mint if you don't have enough money."))
+            msgbox(format("Oh dear... I'm afraid I can't give you a mint if you don't have enough money."), MSGBOX_AUTOCLOSE)
             hidemoneybox
-            goto(End)
+            release
+            end
         }
     }
     else {
         hidemoneybox
         msgbox(format("Oh... bad show..."), MSGBOX_AUTOCLOSE)
-        goto(End)
+        release
+        end
     }
 
-Shop:
+MintShop:
     dynmultipush("I'll decide later!", 0)
     dynmultipush("Lonely Mint", ITEM_LONELY_MINT)
     dynmultipush("Adamant Mint", ITEM_ADAMANT_MINT)
@@ -69,10 +72,13 @@ Shop:
     dynmultipush("Serious Mint", ITEM_SERIOUS_MINT)
     dynmultistack(0, 0, TRUE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
 
-    if (var(VAR_RESULT) != 0) {
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Alright. Come back when you've made a decision!"), MSGBOX_AUTOCLOSE)
+    }
+    else {
         giveitem(VAR_RESULT)
 
-        if(flag(FLAG_MINTY_MEADOWS_FREE_MINT)) {
+        if (flag(FLAG_MINTY_MEADOWS_FREE_MINT)) {
             showmoneybox(18, 0)
             msgbox(format("Jolly good show! Thank you for your patronage!"), MSGBOX_AUTOCLOSE)
             removemoney(1000)
@@ -86,11 +92,7 @@ Shop:
             msgbox(format("Jolly good show! I hope your Pokémon likes it!"), MSGBOX_AUTOCLOSE)
         }
     }
-    else {
-        msgbox(format("Alright. Come back when you've made a decision!"), MSGBOX_AUTOCLOSE)
-    }
 
-End:
     release
 }
 

@@ -1,16 +1,8 @@
-const HIDDEN_X = 51
-const HIDDEN_Y = 35
-
 mapscripts ISLANDGAME_MINTY_MEADOWS_MapScripts {
     MAP_SCRIPT_ON_RESUME {
-        specialvar(VAR_RESULT, GetBattleOutcome)
-
-        if (flag(FLAG_SYS_CTRL_OBJ_DELETE) && (var(VAR_RESULT) == B_OUTCOME_CAUGHT || var(VAR_RESULT) == B_OUTCOME_WON)) {
-            removeobject(VAR_LAST_TALKED)
-            setobjectxy(VAR_LAST_TALKED, HIDDEN_X, HIDDEN_Y)
-            copyobjectxytoperm(VAR_LAST_TALKED)
-        }
+        call(Common_TryRemoveTemporaryObject)
     }
+
     MAP_SCRIPT_ON_TRANSITION {
         setobjectaswildencounter(LOCALID_OVERWORLD_MON_LOWER, ENCOUNTER_LAND)
         setobjectaswildencounter(LOCALID_OVERWORLD_MON_UPPER, ENCOUNTER_LAND)

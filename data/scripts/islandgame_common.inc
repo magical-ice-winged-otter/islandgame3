@@ -755,27 +755,81 @@ Common_EventScript_VendingMachine_32:
 	goto Common_EventScript_VendingMachine_31
 
 
-Common_RemoveTemporaryObject::
+Common_TryRemoveTemporaryObject::
 # 507 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
 # 508 "data/scripts/islandgame_common.pory"
-	goto_if_unset FLAG_SYS_CTRL_OBJ_DELETE, Common_RemoveTemporaryObject_2
+	goto_if_unset FLAG_SYS_CTRL_OBJ_DELETE, Common_TryRemoveTemporaryObject_2
 # 509 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
-	goto_if_eq Common_RemoveTemporaryObject_5
+	goto_if_eq Common_TryRemoveTemporaryObject_5
 # 509 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
-	goto_if_eq Common_RemoveTemporaryObject_5
-Common_RemoveTemporaryObject_4:
+	goto_if_eq Common_TryRemoveTemporaryObject_5
+Common_TryRemoveTemporaryObject_4:
 	return
 
-Common_RemoveTemporaryObject_2:
+Common_TryRemoveTemporaryObject_2:
 	return
 
-Common_RemoveTemporaryObject_5:
+Common_TryRemoveTemporaryObject_5:
 # 510 "data/scripts/islandgame_common.pory"
+	setobjecthidden VAR_LAST_TALKED
+# 511 "data/scripts/islandgame_common.pory"
 	removeobject VAR_LAST_TALKED
-	goto Common_RemoveTemporaryObject_4
+	goto Common_TryRemoveTemporaryObject_4
+
+
+Common_AttemptTrade::
+# 518 "data/scripts/islandgame_common.pory"
+	setorcopyvar VAR_0x8008, VAR_0x8000
+# 519 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x8004, VAR_0x8008
+# 520 "data/scripts/islandgame_common.pory"
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+# 521 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x8009, VAR_RESULT
+# 522 "data/scripts/islandgame_common.pory"
+	special ChoosePartyMon
+# 523 "data/scripts/islandgame_common.pory"
+	waitstate
+# 524 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x800A, VAR_0x8004
+# 526 "data/scripts/islandgame_common.pory"
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_eq Common_AttemptTrade_2
+# 531 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x8005, VAR_0x800A
+# 532 "data/scripts/islandgame_common.pory"
+	specialvar VAR_RESULT, GetTradeSpecies
+# 533 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x800B, VAR_RESULT
+# 535 "data/scripts/islandgame_common.pory"
+	compare VAR_RESULT, VAR_0x8009
+	goto_if_ne Common_AttemptTrade_5
+# 540 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x8004, VAR_0x8008
+# 541 "data/scripts/islandgame_common.pory"
+	copyvar VAR_0x8005, VAR_0x800A
+# 542 "data/scripts/islandgame_common.pory"
+	special CreateInGameTradePokemon
+# 543 "data/scripts/islandgame_common.pory"
+	special DoInGameTradeScene
+# 544 "data/scripts/islandgame_common.pory"
+	waitstate
+# 545 "data/scripts/islandgame_common.pory"
+	setvar VAR_RESULT, TRADE_SUCCESS
+	return
+
+Common_AttemptTrade_2:
+# 527 "data/scripts/islandgame_common.pory"
+	setvar VAR_RESULT, TRADE_CANCELED
+	return
+
+Common_AttemptTrade_5:
+# 536 "data/scripts/islandgame_common.pory"
+	setvar VAR_RESULT, TRADE_WRONG_SPECIES
+	return
 
 
 Common_DisableAutoRun_Text_0:

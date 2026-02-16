@@ -4,19 +4,16 @@ const STATE_SEARCHING_FOR_MAREEP = 1
 const STATE_BATTLING_MIGHTYENA = 2
 const STATE_SAVED_MAREEP = 3
 
-const HIDDEN_X = -3
-const HIDDEN_Y = 1
-
 mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
     // This hides overworld mons smoothly right before the overworld loads
     MAP_SCRIPT_ON_RESUME {
-        call(Common_RemoveTemporaryObject)
+        call(Common_TryRemoveTemporaryObject)
     }
 
     MAP_SCRIPT_ON_TRANSITION {
         // drifloon can only appear at night
         if (gettimeofday != TIME_NIGHT) {
-            setobjectxyperm(LOCALID_DRIFLOON, HIDDEN_X, HIDDEN_Y) 
+            setobjecthidden(LOCALID_DRIFLOON)
         }
 
         // The extra mareeps are only visible when battling the rival
@@ -35,10 +32,10 @@ mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
             setobjectmovementtype(LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN)
             setobjectxyperm(LOCALID_MIGHTYENA, 61, 15)
         case STATE_SAVED_MAREEP:
-            setobjectxyperm(LOCALID_RIVAL, HIDDEN_X, HIDDEN_Y)
-            setobjectxyperm(LOCALID_OLD_MAN, HIDDEN_X, HIDDEN_Y)
-            setobjectxyperm(LOCALID_MAREEP, HIDDEN_X, HIDDEN_Y)
-            setobjectxyperm(LOCALID_MIGHTYENA, HIDDEN_X, HIDDEN_Y)
+            setobjecthidden(LOCALID_RIVAL)
+            setobjecthidden(LOCALID_OLD_MAN)
+            setobjecthidden(LOCALID_MAREEP)
+            setobjecthidden(LOCALID_MIGHTYENA)
         }
     }
 }
@@ -222,12 +219,9 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     applymovement(LOCALID_RIVAL, moves(walk_down * 5, walk_right * 6, walk_down * 5, delay_8 * 6))
     waitmovement
-    removeobject(LOCALID_RIVAL)
-    removeobject(LOCALID_MAREEP)
-    removeobject(LOCALID_OLD_MAN)
-    setobjectxyperm(LOCALID_RIVAL, HIDDEN_X, HIDDEN_Y)
-    setobjectxyperm(LOCALID_OLD_MAN, HIDDEN_X, HIDDEN_Y)
-    setobjectxyperm(LOCALID_MAREEP, HIDDEN_X, HIDDEN_Y)
+    setobjecthidden(LOCALID_RIVAL)
+    setobjecthidden(LOCALID_OLD_MAN)
+    setobjecthidden(LOCALID_MAREEP)
     special(HealPlayerParty)
     completequest(QUEST_MINTY_MEADOWS_MELISSA)
     startquest(QUEST_MARYA_GYM_CHALLENGE)
@@ -522,8 +516,8 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
 }
 
 script ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep {
-    setobjectxyperm(LOCALID_MAREEP_EXTRA1, HIDDEN_X, HIDDEN_Y)
-    setobjectxyperm(LOCALID_MAREEP_EXTRA2, HIDDEN_X, HIDDEN_Y)
-    setobjectxyperm(LOCALID_MAREEP_EXTRA3, HIDDEN_X, HIDDEN_Y)
+    setobjecthidden(LOCALID_MAREEP_EXTRA1)
+    setobjecthidden(LOCALID_MAREEP_EXTRA2)
+    setobjecthidden(LOCALID_MAREEP_EXTRA3)
     return
 }

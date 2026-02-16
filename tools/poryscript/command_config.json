@@ -101,6 +101,12 @@
     },
     "checkfollowernpc": {
         "var_name": "VAR_RESULT"
+    },
+    "checkpartymon": {
+        "var_name": "VAR_RESULT"
+    },
+    "trade": {
+        "var_name": "VAR_RESULT"
     }
   }
 }
