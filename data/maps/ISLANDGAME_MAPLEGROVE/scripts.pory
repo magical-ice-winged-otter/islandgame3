@@ -1,59 +1,42 @@
-const FLAG_DAYTIME = FLAG_TEMP_2
-const FLAG_NIGHTTIME = FLAG_TEMP_3
-
 mapscripts ISLANDGAME_MAPLEGROVE_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        gettime
-
-        if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
-            setflag(FLAG_NIGHTTIME) // hide daytime npcs
-        }
-        else {
-            setflag(FLAG_DAYTIME) // hide nighttime npcs
+        if (gettimeofday == TIME_NIGHT) {
+            setobjecthidden(LOCALID_MAZE_BUNEARY)
+            setobjecthidden(LOCALID_MAZE_GIRL)
         }
     }
 }
 
+// section: interactions
 
-
-// pkmn npcs
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN1 {
-    lock
+script ISLANDGAME_MAPLEGROVE_Interact_MazeBuneary {
     faceplayer
     playmoncry(SPECIES_BUNEARY,CRY_MODE_NORMAL)
-    
-    if(!flag(FLAG_MAPLEGROVE_BUNEARY_GIFT)) {
-        msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN1Talk, MSGBOX_YESNO)
-        if (var(VAR_RESULT) == NO) {
-            goto(PKMN1Event_End)
-        }
+    goto_if_unset(FLAG_MAPLEGROVE_BUNEARY_GIFT, BunearyGift)
+    msgbox(format("Konpeko Konpeko Konpeko!"), MSGBOX_AUTOCLOSE)
+    end
 
-        checkitemspace(ITEM_NORMAL_GEM)
-        if (!var(VAR_RESULT)) {
-            msgbox(format("{COLOR RED}(I don't have enough space to carry it.)"))
-            goto(PKMN1Event_End)
-        }
+BunearyGift:
+    msgbox(format(
+        "{COLOR RED}(Huh? It looks like Buneary is trying to give me something.)\p"
+        "(Should I take it?)"
+    ), MSGBOX_YESNO)
 
+    if (var(VAR_RESULT) == NO) {
+        // nothing to do
+    }
+    elif (checkitemspace(ITEM_NORMAL_GEM)) {
         giveitem(ITEM_NORMAL_GEM)
         setflag(FLAG_MAPLEGROVE_BUNEARY_GIFT)
     }
     else {
-        msgbox(format("{COLOR DARK_GRAY}Konpeko Konpeko Konpeko!"))
+        msgbox(format("{COLOR RED}(I don't have enough space to carry it.)"))
     }
-    
-    
-    PKMN1Event_End:
-        release
+
+    closemessage
 }
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN1Talk {
-    format(
-        "{COLOR RED}(Huh? It looks like Buneary is trying to give me something.) \p"
-        "{COLOR RED}(Should I take it?)"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN2 {
+script ISLANDGAME_MAPLEGROVE_Interact_MazeMudkip {
     lock
     faceplayer
     playmoncry(SPECIES_MUDKIP,CRY_MODE_NORMAL)
@@ -61,122 +44,66 @@ script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN2 {
     release
 }
 
-
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN3 {
-    lock
-    faceplayer
-    playmoncry(SPECIES_SURSKIT,CRY_MODE_NORMAL)
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN3Talk)
-    release
+script ISLANDGAME_MAPLEGROVE_Interact_MazeGirl {
+    msgbox(format(
+        "Be kind to Pokémon, and they'll be kind to you. \p"
+        "That's what my big sister told me. Now I'm friends with all the Pokémon here!"
+    ), MSGBOX_NPC)
 }
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN3Talk {
-    format(
-        "{COLOR DARK_GRAY}A"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN4 {
-    lock
-    faceplayer
+script ISLANDGAME_MAPLEGROVE_Interact_LawnCottonee {
     playmoncry(SPECIES_COTTONEE,CRY_MODE_WEAK)
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN4Talk)
-    release
-}
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN4Talk {
-    format(
-        "{COLOR DARK_GRAY}Nee...\p"
+    msgbox(format(
+        "Nee...\p"
         "{COLOR RED}(It seems like Cottonee is trying to tell me something.) \p"
-        "{COLOR RED}(She says her name is CJ and that she hates the Fletchling over there.)\p"
-        "{COLOR RED}(She says it's because she stole her boyfriend from her.)\p"
-        "{COLOR RED}(...How does that even work?)"
-    )
+        "(She says her name is CJ and that she hates the Fletchling over there.)\p"
+        "(She says it's because she stole her boyfriend from her.)\p"
+        "(...How does that even work?)"
+    ), MSGBOX_NPC)
 }
 
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN5 {
-    lock
-    faceplayer
+script ISLANDGAME_MAPLEGROVE_Interact_LawnFletchling {
     playmoncry(SPECIES_FLETCHLING,CRY_MODE_NORMAL)
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN5Talk)
-    release
-}
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_PKMN5Talk {
-    format(
-        "{COLOR DARK_GRAY}Chirp chirp...\p"
+    msgbox(format(
+        "Chirp chirp...\p"
         "{COLOR RED}(It seems like Fletchling is trying to tell me something.) \p"
-        "{COLOR RED}(She says her name is Margaret and that she hates the Cottonee over there.)\p"
-        "{COLOR RED}(She says it's because she stole her boyfriend from her.)\p"
-        "{COLOR RED}(...How does that even work?)"
-    )
+        "(She says her name is Margaret and that she hates the Cottonee over there.)\p"
+        "(She says it's because she stole her boyfriend from her.)\p"
+        "(...How does that even work?)"
+    ), MSGBOX_NPC)
 }
 
-
-
-
-// npcs
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC1 {
-    lock
-    faceplayer
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC1Talk)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC1Talk {
-    format(
-        "{COLOR DARK_GRAY}Be kind to Pokémon, and they'll be kind to you. \p"
-        "{COLOR DARK_GRAY}That's what my big sister told me. Now I'm friends with all the Pokémon here!"
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC2 {
-    lock
-    faceplayer
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC2Talk)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC2Talk {
-    format(
-        "{COLOR DARK_GRAY}Maplegrove has been one with nature since its construction many years ago. \p"
-        "{COLOR DARK_GRAY}Our bond with the Pokémon here is unbreakable."
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC3 {
-    lock
-    if(!flag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)) {
-        msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC3Talk)
+script ISLANDGAME_MAPLEGROVE_Interact_LawnMan {
+    if (var(VAR_MINTY_MEADOWS_STATE) != MINTY_MEADOWS_SAVED_MAREEP) {
+        msgbox(format(
+            "Hrm... Only two of you little ones here today? \p"
+            "That pack of savage Mightyena must be frightening the little critters... \p"
+            "I do hope something gets done about them. Those feral beasts have been terrorizing this place for long enough!"
+        ), MSGBOX_AUTOCLOSE)
     }
     else {
-        msgbox(format(
-            "These two Pokémon don't get along at all. I don't know why."
-        ))
+        msgbox(format("These two Pokémon don't get along at all. I don't know why."), MSGBOX_NPC)
     }
-    release
 }
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_NPC3Talk {
-    format(
-        "{COLOR DARK_GRAY}Hrm... Only two of you little ones here today? \p"
-        "{COLOR DARK_GRAY}That pack of savage Mightyena must be frightening the little critters... \p"
-        "{COLOR DARK_GRAY}I do hope something gets done about them. Those feral beasts have been terrorizing this place for long enough!"
-    )
+script ISLANDGAME_MAPLEGROVE_Interact_PondSurskit {
+    playmoncry(SPECIES_SURSKIT,CRY_MODE_NORMAL)
+    msgbox(format("A"), MSGBOX_NPC)
 }
 
-
-// signs
-script ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_SIGN {
-    lock
-    faceplayer
-    msgbox(ISLANDGAME_MAPLEGROVE_OUTSIDE_SIGNText)
-    release
+script ISLANDGAME_MAPLEGROVE_Interact_PondLady {
+    msgbox(format(
+        "Maplegrove has been one with nature since its construction many years ago. \p"
+        "Our bond with the Pokémon here is unbreakable."
+    ), MSGBOX_NPC)
 }
 
-text ISLANDGAME_MAPLEGROVE_OUTSIDE_SIGNText {
-    format(
-        "{COLOR DARK_GRAY}MAPLEGROVE \n"
-        "{COLOR DARK_GRAY}The Sylvan Sanctuary"
-    )
+script ISLANDGAME_MAPLEGROVE_Interact_Sign {
+    msgbox(format(
+        "MAPLEGROVE \n"
+        "The Sylvan Sanctuary"
+    ), MSGBOX_SIGN)
 }
+

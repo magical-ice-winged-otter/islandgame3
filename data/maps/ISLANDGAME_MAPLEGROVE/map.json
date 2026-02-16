@@ -53,10 +53,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN2",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_MazeMudkip",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAZE_BUNEARY",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BUNEARY)",
       "x": 27,
       "y": 29,
@@ -66,8 +67,8 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN1",
-      "flag": "FLAG_TEMP_3"
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_MazeBuneary",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FLETCHLING)",
@@ -79,7 +80,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN5",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_LawnFletchling",
       "flag": "0"
     },
     {
@@ -92,7 +93,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN4",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_LawnCottonee",
       "flag": "0"
     },
     {
@@ -105,7 +106,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_PKMN3",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_PondSurskit",
       "flag": "0"
     },
     {
@@ -118,7 +119,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC2",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_PondLady",
       "flag": "0"
     },
     {
@@ -131,10 +132,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC3",
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_LawnMan",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAZE_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
       "x": 34,
       "y": 26,
@@ -144,8 +146,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_NPC1",
-      "flag": "FLAG_TEMP_3"
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_MazeGirl",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -219,7 +221,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MAPLEGROVE_OUTSIDE_EventScript_SIGN"
+      "script": "ISLANDGAME_MAPLEGROVE_Interact_Sign"
     },
     {
       "type": "hidden_item",
