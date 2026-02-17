@@ -12,7 +12,7 @@
   "allow_running": false,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL_DOLL",
@@ -24,16 +24,12 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_ANOMALY01_3F_EventScript_InteractDoll",
+      "script": "ISLANDGAME_ANOMALY01_3F_Interact_Doll",
       "flag": "FLAG_ANOMALY01_DEFEATED"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
+  "warp_events": [],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -41,7 +37,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_ANOMALY01_3F_EventScript_InteractLaptop"
+      "script": "ISLANDGAME_ANOMALY01_3F_Interact_Laptop"
     },
     {
       "type": "sign",
@@ -49,7 +45,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_ANOMALY01_3F_EventScript_InteractGrave"
+      "script": "ISLANDGAME_ANOMALY01_3F_Interact_Grave"
     }
   ]
 }

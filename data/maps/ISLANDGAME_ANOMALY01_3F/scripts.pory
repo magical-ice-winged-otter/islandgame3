@@ -1,56 +1,61 @@
 mapscripts ISLANDGAME_ANOMALY01_3F_MapScripts {}
 
-script ISLANDGAME_ANOMALY01_3F_EventScript_InteractDoll {
-    setflag(FLAG_SMART_WILD_AI)
-    setflag(FLAG_NO_CATCHING)
-    setflag(FLAG_NO_RUNNING)
+// section: interactions
+
+script ISLANDGAME_ANOMALY01_3F_Interact_Doll {
     msgbox(format(
         "He died...{PAUSE 60}\p"
         "...but you'll soon be joining him...{PAUSE 60}"
-    ))
-    
-    setwilddoubleflag
-    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_ANOMALY_01, 25, ITEM_FIRIUM_Z, ITEM_POKE_BALL, NUM_NATURES, 0, 252, 252, 252, 252, 252, 252, 31, 31, 31, 31, 31, 31, 31, MOVE_INFERNAL_PARADE, MOVE_CONFUSE_RAY, MOVE_PAIN_SPLIT, MOVE_FIRE_SPIN)
+    ), MSGBOX_AUTOCLOSE)
+
     playmoncry(SPECIES_UNOWN, CRY_MODE_ENCOUNTER)
     waitmoncry
-    dowildbattle
 
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_ANOMALY_01, 25, 
+        ITEM_FIRIUM_Z, ITEM_POKE_BALL, NUM_NATURES, 0, MON_GENDERLESS,
+        252, 252, 252, 252, 252, 252, 
+        31, 31, 31, 31, 31, 31,
+        MOVE_INFERNAL_PARADE, MOVE_CONFUSE_RAY, MOVE_PAIN_SPLIT, MOVE_FIRE_SPIN)
+
+    setflag(FLAG_SMART_WILD_AI)
+    setflag(FLAG_NO_CATCHING)
+    setflag(FLAG_NO_RUNNING)
+    setwilddoubleflag
+    dowildbattle
     clearflag(FLAG_SMART_WILD_AI)
     clearflag(FLAG_NO_CATCHING)
     clearflag(FLAG_NO_RUNNING)
 
     specialvar(VAR_RESULT, GetBattleOutcome)
-    switch(var(VAR_RESULT)) {
-        case B_OUTCOME_LOST:
-            break
-        case B_OUTCOME_RAN:
-            break
-        default:
-            removeobject(1)
-            setflag(FLAG_ANOMALY01_DEFEATED)
+
+    if (var(VAR_RESULT) != B_OUTCOME_LOST && var(VAR_RESULT) != B_OUTCOME_RAN) {
+        removeobject(VAR_LAST_TALKED)
+        setflag(FLAG_ANOMALY01_DEFEATED)
     }
 }
 
-script ISLANDGAME_ANOMALY01_3F_EventScript_InteractGrave {
-    lock
-    msgbox(format(
-        "R.I.P\n..."
-    ))
-    closemessage
-    release
+script ISLANDGAME_ANOMALY01_3F_Interact_Grave {
+    msgbox(format("R.I.P\n..."), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_ANOMALY01_3F_EventScript_InteractLaptop {
+script ISLANDGAME_ANOMALY01_3F_Interact_Laptop {
     lock
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark))
     setvar(VAR_RESULT, 0)
     playse(SE_ORB)
     special(DoOrbEffect)
-    givemon(SPECIES_CELEBI,1,ITEM_LUM_BERRY,ITEM_STRANGE_BALL,NUM_NATURES,0,,,,,,,,31,31,31,31,31,31,MOVE_PERISH_SONG,,,,TRUE)
+
+    givemon(SPECIES_CELEBI, 1, 
+        ITEM_LUM_BERRY, ITEM_STRANGE_BALL, NUM_NATURES, 0, MON_GENDERLESS,
+        0, 0, 0, 0, 0, 0,
+        31, 31, 31, 31, 31, 31,
+        MOVE_PERISH_SONG, MOVE_NONE, MOVE_NONE, MOVE_NONE,
+        TRUE)
+
     delay(300)
     special(FadeOutOrbEffect)
     applymovement(OBJ_EVENT_ID_PLAYER, spookySpin)
-    waitmovement(0)
+    waitmovement
     warp(MAP_ISLANDGAME_CAMP_PERSI_MACHETE_TREE, 1, 3)
     release
 }
