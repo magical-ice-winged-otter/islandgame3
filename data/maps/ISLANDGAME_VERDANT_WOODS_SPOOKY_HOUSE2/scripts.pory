@@ -6,46 +6,35 @@ mapscripts ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_MapScripts {
     }
 }
 
-const LOCALID_GHOST = 1
-const LOCALID_ITEM = 3
-const LOCALID_MIMIKYU = 2
-const POS_HIDDEN_X = -3
-const POS_HIDDEN_Y = 1
-
-
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_TV {
     if(flag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)) {
-        msgbox(format(
-            "{COLOR RED}(There's nothing but static.)"
-        ), MSGBOX_SIGN)
+        msgbox(format("{COLOR RED}(There's nothing but static.)"), MSGBOX_SIGN)
     }
     else {
-        msgbox(format(
-            "ThIS roOm wiLl bE yOUR ToMB ThIS roOm wiLl bE yOUR ToMB gWauhAUhauahAHAHA"
-        ), MSGBOX_SIGN)
+        msgbox(format("ThIS roOm wiLl bE yOUR ToMB ThIS roOm wiLl bE yOUR ToMB gWauhAUhauahAHAHA"), MSGBOX_SIGN)
     }
 }
 
-
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Spook {
     lock
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
-    addobject(LOCALID_GHOST)
-    setobjectxy(LOCALID_GHOST, 9, 2)
+    addobject(LOCALID_SPOOK_HOUSE_2F_GHOST)
+    setobjectxy(LOCALID_SPOOK_HOUSE_2F_GHOST, 9, 2)
     fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
-    msgbox(format("This is your final chance... Please don't end up like the rest of us..."))
-    closemessage
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_question_mark))
+    waitmovement
+    delay(32)
+    msgbox(format("This is your final chance... Please don't end up like the rest of us..."), MSGBOX_AUTOCLOSE)
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
-    removeobject(LOCALID_GHOST)
-    setobjectxyperm(LOCALID_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
+    removeobject(LOCALID_SPOOK_HOUSE_2F_GHOST)
+    setobjecthidden(LOCALID_SPOOK_HOUSE_2F_GHOST)
     fadescreen(FADE_FROM_BLACK)
+
     setvar(VAR_SPOOKY_HOUSE_STATE, 5)
     release
 }
@@ -53,144 +42,129 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Spook {
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Item {
     lock
     finditem(ITEM_MIMIKIUM_Z)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
-    waitmovement(0)
-    msgbox(format("{COLOR RED}(Brrr...{PAUSE 60} Did the air suddenly just get colder?)"))
-    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark, walk_in_place_faster_down))
+    waitmovement
+    msgbox(format("{COLOR RED}(Brrr...{PAUSE 60} Did the air suddenly just get colder?)"), MSGBOX_AUTOCLOSE)
     setvar(VAR_SPOOKY_HOUSE_STATE, 6)
     release
-}
-
-movement spookyInch {
-    walk_down
 }
 
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu1 {
     lock
     setvar(VAR_SPOOKY_HOUSE_STATE, 7)
-    
     setflag(FLAG_FOLLOWERS_DISABLED)
     hidefollower
-
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_NORMAL)
     waitmoncry
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
+    waitmovement
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
-    addobject(LOCALID_MIMIKYU)
-    setobjectxy(LOCALID_MIMIKYU, 21, 3)
+    addobject(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    setobjectxy(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, 21, 3)
     fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
-    applymovement(LOCALID_MIMIKYU, spookyInch)
+    applymovement(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, moves(walk_down))
     fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
-    applymovement(LOCALID_MIMIKYU, spookyInch)
+    applymovement(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, moves(walk_down))
     fadescreen(FADE_FROM_BLACK)
 
-    // battle
-    setflag(FLAG_SMART_WILD_AI)
-    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_MIMIKYU, 30, 0, NUM_NATURES, 0, MON_GENDERLESS, 0, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_SHADOW_SNEAK, MOVE_MIMIC, MOVE_COPYCAT, MOVE_FEINT_ATTACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
+    waitmovement
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_ENCOUNTER)
     waitmoncry
-    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_MIMIKYU, 30,
+        ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 0, MON_GENDERLESS, 
+        0, 0, 0, 0, 0, 0, 
+        31, 31, 31, 31, 31, 31, 
+        MOVE_SHADOW_SNEAK, MOVE_MIMIC, MOVE_COPYCAT, MOVE_FEINT_ATTACK)
+
+    setflag(FLAG_SMART_WILD_AI)
     dowildbattle
     clearflag(FLAG_SMART_WILD_AI)
-    specialvar(VAR_RESULT, GetBattleOutcome)
-        
+
+    switch(specialvar(VAR_RESULT, GetBattleOutcome)) {
+    case B_OUTCOME_LOST:
+    case B_OUTCOME_RAN:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    case B_OUTCOME_WON:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    case B_OUTCOME_CAUGHT:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+        setflag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)
+    default:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    }
 
     clearflag(FLAG_FOLLOWERS_DISABLED)
-
-    switch(var(VAR_RESULT)) {
-        case B_OUTCOME_LOST:
-        case B_OUTCOME_RAN:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-        case B_OUTCOME_WON:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-        case B_OUTCOME_CAUGHT:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-            setflag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)
-        default:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-    }
 }
-
 
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE2_Mimikyu2 {
     lock
     setvar(VAR_SPOOKY_HOUSE_STATE, 7)
-
     setflag(FLAG_FOLLOWERS_DISABLED)
     hidefollower
-
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_NORMAL)
     waitmoncry
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
+    waitmovement
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
     waitse
-    addobject(LOCALID_MIMIKYU)
-    setobjectxy(LOCALID_MIMIKYU, 22, 3)
+    addobject(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    setobjectxy(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, 22, 3)
     fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
     waitse
-    applymovement(LOCALID_MIMIKYU, spookyInch)
+    applymovement(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, moves(walk_down))
     fadescreen(FADE_FROM_BLACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
+    delay(32)
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
     waitse
-    applymovement(LOCALID_MIMIKYU, spookyInch)
+    applymovement(LOCALID_SPOOK_HOUSE_2F_MIMIKYU, moves(walk_down))
     fadescreen(FADE_FROM_BLACK)
 
-    // battle
-    setflag(FLAG_SMART_WILD_AI)
-    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_MIMIKYU, 30, 0, NUM_NATURES, 0, MON_GENDERLESS, 0, 0, 0, 0, 0, 0, 0, 31, 31, 31, 31, 31, 31, MOVE_SHADOW_SNEAK, MOVE_MIMIC, MOVE_COPYCAT, MOVE_FEINT_ATTACK)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, emote_exclamation_mark))
+    waitmovement
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_ENCOUNTER)
     waitmoncry
-    setflag(FLAG_SYS_CTRL_OBJ_DELETE)
+
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_MIMIKYU, 30, 
+        ITEM_NONE, ITEM_POKE_BALL, NUM_NATURES, 0, MON_GENDERLESS,
+        0, 0, 0, 0, 0, 0, 
+        31, 31, 31, 31, 31, 31, 
+        MOVE_SHADOW_SNEAK, MOVE_MIMIC, MOVE_COPYCAT, MOVE_FEINT_ATTACK)
+
+    setflag(FLAG_SMART_WILD_AI)
     dowildbattle
     clearflag(FLAG_SMART_WILD_AI)
-    specialvar(VAR_RESULT, GetBattleOutcome)
+
+    switch (specialvar(VAR_RESULT, GetBattleOutcome)) {
+    case B_OUTCOME_LOST:
+    case B_OUTCOME_RAN:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    case B_OUTCOME_WON:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    case B_OUTCOME_CAUGHT:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+        setflag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)
+    default:
+        setobjecthidden(LOCALID_SPOOK_HOUSE_2F_MIMIKYU)
+    }
 
     clearflag(FLAG_FOLLOWERS_DISABLED)
-        
-    switch(var(VAR_RESULT)) {
-        case B_OUTCOME_LOST:
-        case B_OUTCOME_RAN:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-        case B_OUTCOME_WON:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-        case B_OUTCOME_CAUGHT:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-            setflag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED)
-        default:
-            removeobject(LOCALID_MIMIKYU)
-            setobjectxyperm(LOCALID_MIMIKYU, POS_HIDDEN_X, POS_HIDDEN_Y)
-    }
 }
