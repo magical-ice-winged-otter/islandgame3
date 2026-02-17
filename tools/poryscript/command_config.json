@@ -110,6 +110,9 @@
     },
     "returnqueststate": {
         "var_name": "VAR_RESULT"
+    },
+    "subquestmenu": {
+        "var_name": "VAR_RESULT"
     }
   }
 }

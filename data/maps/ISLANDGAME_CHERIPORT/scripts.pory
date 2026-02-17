@@ -4,6 +4,21 @@ mapscripts ISLANDGAME_CHERIPORT_MapScripts {
     }
 }
 
+// section: misc
+
+script ISLANDGAME_CHERIPORT_GiveTownMap {
+    msgbox(format(
+        "Welcome to the Maryan Isles, traveler.\p"
+        "Please take this map. It will aid you in traversing the region."
+    ), MSGBOX_NPC)
+
+    giveitem(ITEM_TOWN_MAP)
+    closemessage
+    setflag(FLAG_RECEIVED_TOWN_MAP)
+    return
+}
+
+
 // section: interactions
 
 script ISLANDGAME_CHERIPORT_Interact_SilverwingGreeter {
@@ -117,18 +132,3 @@ script ISLANDGAME_CHERIPORT_Trigger_LeavingOcean {
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
     waitmovement
 }
-
-// section: misc
-
-script ISLANDGAME_CHERIPORT_GiveTownMap {
-    msgbox(format(
-        "Welcome to the Maryan Isles, traveler.\p"
-        "Please take this map. It will aid you in traversing the region."
-    ), MSGBOX_NPC)
-
-    giveitem(ITEM_TOWN_MAP)
-    closemessage
-    setflag(FLAG_RECEIVED_TOWN_MAP)
-    return
-}
-

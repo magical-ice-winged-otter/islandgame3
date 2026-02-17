@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_BERRY_MANIAC",
       "graphics_id": "OBJ_EVENT_GFX_BARD",
       "x": 8,
       "y": 2,
@@ -24,7 +25,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_EventScript_BerryManiac",
+      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_Interact_BerryManiac",
       "flag": "0"
     },
     {
@@ -37,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_EventScript_BerryShopkeep",
+      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_Interact_Shopkeep",
       "flag": "0"
     },
     {
@@ -50,7 +51,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_EventScript_BerryDonor",
+      "script": "ISLANDGAME_CAMP_PERSI_BERRY_HOUSE_Interact_Woman",
       "flag": "0"
     }
   ],
@@ -70,10 +71,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

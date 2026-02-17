@@ -34,6 +34,118 @@ mapscripts ISLANDGAME_MINTY_MEADOWS_2_MapScripts {
     }
 }
 
+// section: misc
+
+script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
+    applymovement(LOCALID_RIVAL, moves(
+        face_up,
+        delay_16, delay_4,
+        face_right,
+        delay_8 * 3,
+        face_left,
+        delay_8 * 3,
+        face_down,
+        delay_16,
+        face_right,
+        delay_8 * 3,
+        face_up,
+        delay_16,
+        walk_in_place_faster_up,
+        delay_16 * 2
+    ))
+
+    waitmovement
+
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Nnngh...{PAUSE 30} I'm only missing one more Pokémon!{PAUSE 30} Where in the world is it?\p"
+        "Waah! I give up! I'm convinced it doesn't even exist! \p"
+        "Eh?"
+    ), MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_RIVAL, moves(emote_question_mark, face_down, delay_8 * 6))
+	waitmovement
+	playbgm(MUS_HG_LYRA,TRUE)
+    applymovement(LOCALID_RIVAL, moves(walk_left * 2, walk_down * 2))
+    waitmovement
+    msgbox(format("Hiya there!{PAUSE 30}... Err...{PAUSE 30} umm,{PAUSE 30} have we met before?"), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_up, delay_16 * 2))
+    waitmovement
+    playse(SE_PIN)
+	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
+	waitmovement
+
+    msgbox(format(
+        "Ooooh! You're {PLAYER}? The professor told me about you earlier today!\p"
+        "It's good to meet you! I'm Melissa, a rising Pokémon trainer just like you!\p"
+        "I was trying to fill out my Pokédex here, but I couldn't find a Scorbunny, no matter how hard I looked...\p"
+        "Hope the isles are treating you kindly so far! I've been here all my life, so if ya ever need guidance, leave it to me!\p"
+        "Oh!{PAUSE 30} Now that you're here, let's have a Pokémon battle! I need some action!\p"
+        "I might be new just like you... but don't you underestimate me!"
+    ), MSGBOX_AUTOCLOSE)
+
+    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, format("Ack! Looks like I was the one doing the underestimating!"))
+
+    if (specialvar(VAR_RESULT, GetBattleOutcome) != B_OUTCOME_WON) {
+        return
+    }
+
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Drats, I wasn't expecting to lose to you, {PLAYER}... \p"
+        "W-Wait, I didn't mean it like that! I was just surprised at how skilled you are!\p"
+        "Sorry... I say things before I speak a lot, ehe..."
+    ), MSGBOX_AUTOCLOSE)
+
+    setflag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)
+	savebgm(MUS_DUMMY)
+	fadedefaultbgm
+    call(ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep)
+    addobject(LOCALID_OLD_MAN)
+    setobjectxy(LOCALID_OLD_MAN, 18, 12)
+    msgbox(format("Excuse me! Young trainers!"), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_OLD_MAN, moves(walk_left * 8, walk_up * 3))
+    copyobjectxytoperm(LOCALID_OLD_MAN)
+    waitmovement
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    waitmovement
+
+    msgbox(format(
+        "{COLOR GREEN}Farm Owner: {COLOR DARK_GRAY}I'm Paul, I'm one of the owners of Fresa Farms.\p"
+        "Have you two seen a Mareep with a blue collar wandering around by chance? \p"
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}I haven't... Did you lose one?\p"
+        "{COLOR GREEN}Paul: {COLOR DARK_GRAY}I'm afraid so... When I was counting my Mareep after taking them out to graze, I noticed one was missing."
+    ), MSGBOX_AUTOCLOSE)
+
+    playse(SE_PIN)
+	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
+	waitmovement
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look, right {PLAYER}?"), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, delay_16 * 2, walk_in_place_faster_up, delay_16 * 2, face_down, delay_16 * 2))
+    waitmovement
+
+    msgbox(format(
+        "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Really? Oh, I can't thank you two enough! \p"
+        "The last place I saw my precious Mareep was in the forest to the east."
+    ), MSGBOX_AUTOCLOSE)
+
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Sounds good! {PLAYER}! Let's head over there immediately!"), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+    applymovement(LOCALID_RIVAL, moves(walk_fast_left, walk_fast_down * 4, walk_fast_right * 9))
+    waitmovement
+    setobjectxy(LOCALID_RIVAL, 34, 10)
+    copyobjectxytoperm(LOCALID_RIVAL)
+    special(HealPlayerParty)
+    setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SEARCHING_FOR_MAREEP)
+}
+
+script ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep {
+    setobjecthidden(LOCALID_MAREEP_EXTRA1)
+    setobjecthidden(LOCALID_MAREEP_EXTRA2)
+    setobjecthidden(LOCALID_MAREEP_EXTRA3)
+    return
+}
+
 // section: interactions
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_OldMan {
@@ -402,116 +514,4 @@ script ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac {
 script ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster {
     trainerbattle_single(TRAINER_MINTY_MEADOWS_16, format("Shorts are awesome. They're so comfy to wear. Don't you agree?"), format("I think I'm going to need a new pair of shorts..."))
 	msgbox(format("Shorts are easily an S tier pick for pants!"), MSGBOX_AUTOCLOSE)
-}
-
-// section: misc
-
-script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
-    applymovement(LOCALID_RIVAL, moves(
-        face_up,
-        delay_16, delay_4,
-        face_right,
-        delay_8 * 3,
-        face_left,
-        delay_8 * 3,
-        face_down,
-        delay_16,
-        face_right,
-        delay_8 * 3,
-        face_up,
-        delay_16,
-        walk_in_place_faster_up,
-        delay_16 * 2
-    ))
-
-    waitmovement
-
-    msgbox(format(
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Nnngh...{PAUSE 30} I'm only missing one more Pokémon!{PAUSE 30} Where in the world is it?\p"
-        "Waah! I give up! I'm convinced it doesn't even exist! \p"
-        "Eh?"
-    ), MSGBOX_AUTOCLOSE)
-
-    applymovement(LOCALID_RIVAL, moves(emote_question_mark, face_down, delay_8 * 6))
-	waitmovement
-	playbgm(MUS_HG_LYRA,TRUE)
-    applymovement(LOCALID_RIVAL, moves(walk_left * 2, walk_down * 2))
-    waitmovement
-    msgbox(format("Hiya there!{PAUSE 30}... Err...{PAUSE 30} umm,{PAUSE 30} have we met before?"), MSGBOX_AUTOCLOSE)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_up, delay_16 * 2))
-    waitmovement
-    playse(SE_PIN)
-	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
-	waitmovement
-
-    msgbox(format(
-        "Ooooh! You're {PLAYER}? The professor told me about you earlier today!\p"
-        "It's good to meet you! I'm Melissa, a rising Pokémon trainer just like you!\p"
-        "I was trying to fill out my Pokédex here, but I couldn't find a Scorbunny, no matter how hard I looked...\p"
-        "Hope the isles are treating you kindly so far! I've been here all my life, so if ya ever need guidance, leave it to me!\p"
-        "Oh!{PAUSE 30} Now that you're here, let's have a Pokémon battle! I need some action!\p"
-        "I might be new just like you... but don't you underestimate me!"
-    ), MSGBOX_AUTOCLOSE)
-
-    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, format("Ack! Looks like I was the one doing the underestimating!"))
-
-    if (specialvar(VAR_RESULT, GetBattleOutcome) != B_OUTCOME_WON) {
-        return
-    }
-
-    msgbox(format(
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Drats, I wasn't expecting to lose to you, {PLAYER}... \p"
-        "W-Wait, I didn't mean it like that! I was just surprised at how skilled you are!\p"
-        "Sorry... I say things before I speak a lot, ehe..."
-    ), MSGBOX_AUTOCLOSE)
-
-    setflag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)
-	savebgm(MUS_DUMMY)
-	fadedefaultbgm
-    call(ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep)
-    addobject(LOCALID_OLD_MAN)
-    setobjectxy(LOCALID_OLD_MAN, 18, 12)
-    msgbox(format("Excuse me! Young trainers!"), MSGBOX_AUTOCLOSE)
-    applymovement(LOCALID_OLD_MAN, moves(walk_left * 8, walk_up * 3))
-    copyobjectxytoperm(LOCALID_OLD_MAN)
-    waitmovement
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
-    waitmovement
-
-    msgbox(format(
-        "{COLOR GREEN}Farm Owner: {COLOR DARK_GRAY}I'm Paul, I'm one of the owners of Fresa Farms.\p"
-        "Have you two seen a Mareep with a blue collar wandering around by chance? \p"
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}I haven't... Did you lose one?\p"
-        "{COLOR GREEN}Paul: {COLOR DARK_GRAY}I'm afraid so... When I was counting my Mareep after taking them out to graze, I noticed one was missing."
-    ), MSGBOX_AUTOCLOSE)
-
-    playse(SE_PIN)
-	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
-	waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look, right {PLAYER}?"), MSGBOX_AUTOCLOSE)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, delay_16 * 2, walk_in_place_faster_up, delay_16 * 2, face_down, delay_16 * 2))
-    waitmovement
-
-    msgbox(format(
-        "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Really? Oh, I can't thank you two enough! \p"
-        "The last place I saw my precious Mareep was in the forest to the east."
-    ), MSGBOX_AUTOCLOSE)
-
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-    waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Sounds good! {PLAYER}! Let's head over there immediately!"), MSGBOX_AUTOCLOSE)
-    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
-    applymovement(LOCALID_RIVAL, moves(walk_fast_left, walk_fast_down * 4, walk_fast_right * 9))
-    waitmovement
-    setobjectxy(LOCALID_RIVAL, 34, 10)
-    copyobjectxytoperm(LOCALID_RIVAL)
-    special(HealPlayerParty)
-    setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SEARCHING_FOR_MAREEP)
-}
-
-script ISLANDGAME_MINTY_MEADOWS_2_HideExtraMareep {
-    setobjecthidden(LOCALID_MAREEP_EXTRA1)
-    setobjecthidden(LOCALID_MAREEP_EXTRA2)
-    setobjecthidden(LOCALID_MAREEP_EXTRA3)
-    return
 }
