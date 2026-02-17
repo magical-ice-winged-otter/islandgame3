@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_2F_GHOST",
       "graphics_id": "OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN",
       "x": 4,
       "y": -6,
@@ -28,6 +29,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_2F_MIMIKYU",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MIMIKYU_DISGUISED)",
       "x": 3,
       "y": -6,
@@ -41,6 +43,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_2F_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 21,
       "y": 3,

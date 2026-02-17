@@ -1,386 +1,249 @@
-const MILTANK_ID = 6
-const OLD_MAN_OW_ID = 12
-const FLAG_NIGHT = FLAG_TEMP_1
-const FLAG_DAY = FLAG_TEMP_2
-const NOT_DEFEATED_MIGHTYENA = FLAG_TEMP_3
-const VAR_CURRENT_HOUR = VAR_0x8000
-
 mapscripts ISLANDGAME_FRESA_FARMS_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        // specialvar(VAR_RESULT, GetDaycareState)
-        // switch (var(VAR_RESULT)) {
-        // case DAYCARE_NO_MONS:
-        //     setflag(FLAG_TEMP_A)
-        //     setflag(FLAG_TEMP_B)
-        //     return
-        // case DAYCARE_TWO_MONS:
-        //     //setvar(VAR_OBJ_GFX_ID_B, VAR_0x800B)
-        //     //setvar(VAR_OBJ_GFX_ID_A, VAR_0x800A)
-        //     clearflag(FLAG_TEMP_B)
-        //     clearflag(FLAG_TEMP_A)
-        //     return
-        // case DAYCARE_ONE_MON:
-        //     //setvar(VAR_OBJ_GFX_ID_A, VAR_0x800A)
-        //     setflag(FLAG_TEMP_B)
-        //     clearflag(FLAG_TEMP_A)
-        //     return
-        // }   
-        setflag(FLAG_TEMP_A)
-        setflag(FLAG_TEMP_B)
-        gettime
-
-        if (var(VAR_CURRENT_HOUR) < 6 || var(VAR_CURRENT_HOUR) >= 18) {
-            setflag(FLAG_NIGHT)
-            setobjectxyperm(MILTANK_ID, 18, 6)
-        }
-        else {
-            setflag(FLAG_DAY)
+        // This hides the rescued mareep until we actually rescue them
+        if (var(VAR_MINTY_MEADOWS_STATE) != MINTY_MEADOWS_SAVED_MAREEP) {
+            setobjecthidden(LOCALID_MAREEP_RESCUED)
+            setobjecthidden(LOCALID_MAREEP_TOUGH)
         }
 
-        if (!flag(FLAG_MINTY_MEADOWS_RIVAL_DEFEATED)) {
-            setflag(NOT_DEFEATED_MIGHTYENA)
+        if (gettimeofday == TIME_NIGHT) {
+            setobjectxyperm(LOCALID_MILTANK, 18, 6)
+            setobjectxyperm(LOCALID_TORCHIC, 14, 9)
+            setobjectxyperm(LOCALID_TEPIG, 16, 8)
+            setobjectmovementtype(LOCALID_TORCHIC, MOVEMENT_TYPE_WANDER_AROUND)
+            setobjectmovementtype(LOCALID_TEPIG, MOVEMENT_TYPE_WANDER_AROUND)
+            setobjectmovementradius(LOCALID_TORCHIC, 1, 1)
+            setobjecthidden(LOCALID_MILK_VENDOR)
+            setobjecthidden(LOCALID_TEPIG_BOY)
+            setobjecthidden(LOCALID_DUDE)
+            setobjecthidden(LOCALID_FIDOUGH_GIRL)
         }
     }
-
 }
 
-//see daycare.c#updateDaycareGfxVars
-script ISLANDGAME_FRESA_FARMS_Daycare_Mon1 {
-    lock
-    msgbox(ISLANDGAME_FRESA_FARMS_Daycare_Mon1_Text, MSGBOX_NPC)
-    release
-}
+// section: interactions
 
-text ISLANDGAME_FRESA_FARMS_Daycare_Mon1_Text {
-    format("{STR_VAR_1} looks happy!")
-}
-
-script ISLANDGAME_FRESA_FARMS_Daycare_Mon2 {
-    lock
-    msgbox(ISLANDGAME_FRESA_FARMS_Daycare_Mon2_Text, MSGBOX_NPC)
-    release
-}
-
-text ISLANDGAME_FRESA_FARMS_Daycare_Mon2_Text {
-    format("{STR_VAR_2} stares at you intently.")
-}
-
-// script ISLANDGAME_FRESA_FARMS_OldMan_Request {
-//     lock
-//     applymovement(OLD_MAN_OW_ID, Common_Movement_FaceLeft)
-//     waitmovement(OLD_MAN_OW_ID)
-//     applymovement(OLD_MAN_OW_ID, Common_Movement_ExclamationMark)
-//     waitmovement(OLD_MAN_OW_ID)
-//     goto(ISLANDGAME_FRESA_FARMS_OldMan_Talk)
-// }
-
-// text ISLANDGAME_FRESA_FARMS_OldMan_RequestMessage {
-//     format(
-//         "Oh, its you!\p"
-//         "I couldn't help but notice your battle earlier.\p"
-//         "I was wondering if you could help us with our missing Mareep.\p"
-//         "She usually goes off by herself to the center of the plains, but we haven't seen her since."
-//     )
-// }
-
-// text ISLANDGAME_FRESA_FARMS_OldMan_RequestFulfilledMessage {
-//     format("{COLOR DARK_GRAY}Thank you very much!")
-// }
-
-// script ISLANDGAME_FRESA_FARMS_OldMan_Talk {
-//     lock
-//     switch (var(VAR_MINTY_MEADOWS_STATE)) {
-//         case 0: // initial
-//             msgbox(ISLANDGAME_FRESA_FARMS_OldMan_RequestMessage)
-//             // startquest(QUEST_FRESA_FARMS_LOST_MAREEP)
-//         case 4:
-//             msgbox(ISLANDGAME_FRESA_FARMS_OldMan_RequestFulfilledMessage)
-//         default:
-//             msgbox(ISLANDGAME_FRESA_FARMS_OldMan_RequestMessage)
-//     }
-//     release
-// }
-
-
-script ISLANDGAME_FRESA_FARMS_Sign {
-    msgbox(format("FRESA FARMS\nPaulie and Marion"), MSGBOX_SIGN)
-}
-
-// script ISLANDGAME_FRESA_FARMS_Man {
-//     lock
-//     faceplayer
-//     msgbox(format("My parents established this farm a long time ago.\pOne day, it'll be all mine..."))
-//     release
-// }
-
-script ISLANDGAME_FRESA_FARMS_Miltank_Interact {
-    if(flag(FLAG_NIGHT)) {
-        lock
-        msgbox(format("{COLOR RED}(Miltank is fast asleep.)"))
-    }
-    else {
-        lock
-        faceplayer
-        playmoncry(SPECIES_MILTANK, CRY_MODE_NORMAL)
-        msgbox(format("Moo. {COLOR BLUE}(Moo.)"))
-    }
-    closemessage
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Chansey_Interact {
-    lock
-    faceplayer
-    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
-    msgbox(format("Chansey. {COLOR BLUE}(Most humans can't understand us, but some are born with a special ability to comprehend what Pokémon are saying.)\p""{COLOR DARK_GRAY}Chansey. {COLOR BLUE}(You're one of them,{PAUSE 30} aren't you?)"))
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Mareep1 {
-    lock
-    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
-    if(flag(FLAG_NIGHT)) {
-        msgbox(format("Reeep. {COLOR BLUE}(Heh. That dumb dog's snoozing on his job again!)\p""{COLOR DARK_GRAY}Reep reep. {COLOR BLUE}(Time to sneak out and have some fun with Chansey...)\p""{COLOR DARK_GRAY}Reep? {COLOR BLUE}(Huh?)"))
-        closemessage
-        applymovement(2, Common_Movement_FacePlayer)
-        playse(SE_PIN)
-        applymovement(2, Common_Movement_ExclamationMark)
-        waitmovement(0)
-        delay(60)
-        msgbox(format("{COLOR DARK_GRAY}Reep... {COLOR BLUE}(Oh, it's just a random kid. Good thing they can't understand me.)\p""{COLOR DARK_GRAY}Reep! {COLOR BLUE}(Go away! I've got big plans for tonight!)\p""{COLOR DARK_GRAY}Reep. {COLOR BLUE}(Oh wait... They don't understand me.)"))
-        applymovement(2, Common_Movement_FaceOriginalDirection)
-        waitmovement(0)
-    }
-    else {
-        msgbox(format("{COLOR DARK_GRAY}Reep... {COLOR BLUE}(This mutt is a pain in my fluffy behind...)\p{COLOR DARK_GRAY}Reep. {COLOR BLUE}(I got important business to attend to at night!)"))
+script ISLANDGAME_FRESA_FARMS_Interact_FidoughGirl {
+    if (flag(FLAG_FRESA_FARMS_TRADE_DONE)) {
+        msgbox(format(
+            "Fidough are a real gift from Arceus to us farmers!"
+            "When they eventually grow up into Daschbuns, their sweet scent helps our wheat grow up real fast n' good!"
+        ), MSGBOX_NPC)
+        end
     }
 
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Mareep2 {
-    lock
-    faceplayer
-    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
-    msgbox(format("Reep. {COLOR BLUE}(I'm just saying man, if it was me against that Mightyena, hoo boy.)\p""{COLOR DARK_GRAY}Reep! {COLOR BLUE}(I would'a messed that Mightyena up real good, ya feel me?)\p""{COLOR DARK_GRAY}Reep? {COLOR BLUE}(Huh? Why are you looking me like that? I'm fo' realzies!)"))
-    closemessage
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Mareep3 {
-    lock
-    faceplayer
-    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
-    if(!flag(FLAG_FRESA_FARMS_MAREEP_GIFT)) {
-        msgbox(format("Reep! {COLOR BLUE}(Hey there! Thanks for saving my butt from that scary Mightyena.)\p""{COLOR DARK_GRAY}Reep. {COLOR BLUE}(Please take this as a gift.)"))
-        checkitemspace(ITEM_ELECTRIC_GEM)
-        if(!var(VAR_RESULT)) {
-            msgbox(format("Reep. {COLOR BLUE}(Oh, you don't have enough space for this.)"))
-        }
-        else {
-            setflag(FLAG_FRESA_FARMS_MAREEP_GIFT)
-            giveitem(ITEM_ELECTRIC_GEM)
-        }
+    if (checkpartymon(SPECIES_FIDOUGH)) {
+        goto(FidoughRequestTrade)
     }
-    else {
-        msgbox(format("Reep. {COLOR BLUE}(I found it wandering around today. Hope it helps you out!)"))
 
-    }
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Mareep4 {
-    lock
-    faceplayer
-    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
-    waitmoncry
-    closemessage
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_EventScripts_MilkVendor {
-    lock
-    faceplayer
     msgbox(format(
-        "Our milk is sourced from the healthiest Miltank in all of Marya, Lady Moona!"
-    ))
-    showmoneybox(0,0)
+        "Fidough are just the cutest li'l doggos in the whole wide world!\p"
+        "I wish I had one of my own, but they're just so gosh-darn hard to find, and I'm always too busy with chores to go out and look fer one. Oh hum..."
+    ), MSGBOX_NPC)
+    end
+
+FidoughRequestTrade:
+    lock
+    faceplayer
+    playse(SE_PIN)
+    applymovement(LOCALID_FIDOUGH_GIRL, moves(emote_exclamation_mark, delay_16 * 2))
+    waitmovement
+
     msgbox(format(
-        "We are selling it in packs of six for only ¥7000! Would you like a pack?{PAUSE 30}"
+        "Ooooo! Is that an sweet widdle Fidough I see?\p"
+        "Pleeeeeease trade me it! I got another adorable puppy to make it worth yer while!"
     ), MSGBOX_YESNO)
+
     if (var(VAR_RESULT) == YES) {
-        checkmoney(7000)
-        if(!var(VAR_RESULT)) {
-            msgbox(format(
-                "Oh dear, you don't have enough money, sweetie."
-            ))
-            goto(MilkVendor_End)
+        switch (trade(INGAME_TRADE_RIOLU)) {
+        case TRADE_CANCELED:
+            msgbox(format("Aw, shucks."), MSGBOX_AUTOCLOSE)
+        case TRADE_WRONG_SPECIES:
+            msgbox(format("Eeeeh? That ain't no Fidough."), MSGBOX_AUTOCLOSE)
+        case TRADE_SUCCESS:
+            msgbox(format("Eeeeee! 'Preciate your kindness, trainer! Hope ye like yer new pet as well. She may look small, but she's a real tough boxer!"), MSGBOX_AUTOCLOSE)
+            setflag(FLAG_FRESA_FARMS_TRADE_DONE)
+        }
+    }
+    else {
+        msgbox(format("Aw, shucks."), MSGBOX_AUTOCLOSE)
+    }
+
+    release
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_MilkVendor {
+    lock
+    faceplayer
+    msgbox(format("Our milk is sourced from the healthiest Miltank in all of Marya, Lady Moona!"))
+    showmoneybox(0,0)
+    msgbox(format("We are selling it in packs of six for only ¥7000! Would you like a pack?{PAUSE 30}"), MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        if (!checkmoney(7000)) {
+            msgbox(format("Oh dear, you don't have enough money, sweetie."), MSGBOX_AUTOCLOSE)
+            hidemoneybox
         }
         else {
             removemoney(7000)
+            updatemoneybox
             playse(SE_SHOP)
             waitse
-            updatemoneybox
             hidemoneybox
             giveitem(ITEM_MOOMOO_MILK, 6)
-            msgbox(format(
-                "Thank you for your patronage!"
-            ))
+            msgbox(format("Thank you for your patronage!"), MSGBOX_AUTOCLOSE)
         }
     }
-
-    MilkVendor_End:
+    else {
         hidemoneybox
-        closemessage
-        release
+    }
+
+    release
 }
 
-script ISLANDGAME_FRESA_FARMS_Torchic {
+script ISLANDGAME_FRESA_FARMS_Interact_MareepRescued {
     lock
     faceplayer
-    playmoncry(SPECIES_TORCHIC, CRY_MODE_NORMAL)
-    waitmoncry
+    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
+    goto_if_unset(FLAG_FRESA_FARMS_MAREEP_GIFT, MareepGiveGift)
+    msgbox(format("Reep. {COLOR BLUE}(I found it wandering around today. Hope it helps you out!)"), MSGBOX_AUTOCLOSE)
+    release
+    end
+
+MareepGiveGift:
+    msgbox(format(
+        "Reep! {COLOR BLUE}(Hey there! Thanks for saving my butt from that scary Mightyena.)\p"
+        "{COLOR DARK_GRAY}Reep. {COLOR BLUE}(Please take this as a gift.)"
+    ))
+
+    if (checkitemspace(ITEM_ELECTRIC_GEM)) {
+        setflag(FLAG_FRESA_FARMS_MAREEP_GIFT)
+        giveitem(ITEM_ELECTRIC_GEM)
+    }
+    else {
+        msgbox(format("Reep. {COLOR BLUE}(Oh, you don't have enough space for this.)"))
+    }
+
     closemessage
     release
 }
 
-script ISLANDGAME_FRESA_FARMS_Tepig {
+script ISLANDGAME_FRESA_FARMS_Interact_MareepDogWatching {
     lock
-    if(flag(FLAG_DAY)) {
+    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
+
+    if (gettimeofday == TIME_NIGHT) {
         msgbox(format(
-            "{COLOR RED}(Tepig is busy chowing down a bowl of well-done berries.)"
-        ))
+            "Reeep. {COLOR BLUE}(Heh. That dumb dog's snoozing on his job again!)\p"
+            "{COLOR DARK_GRAY}Reep reep. {COLOR BLUE}(Time to sneak out and have some fun with Chansey...)\p"
+            "{COLOR DARK_GRAY}Reep? {COLOR BLUE}(Huh?)"
+        ), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_MAREEP_DOGWATCHING, moves(face_player))
+        playse(SE_PIN)
+        applymovement(LOCALID_MAREEP_DOGWATCHING, moves(emote_exclamation_mark, delay_16 * 4))
+        waitmovement
+
+        msgbox(format(
+            "Reep... {COLOR BLUE}(Oh, it's just a random kid. Good thing they can't understand me.)\p"
+            "{COLOR DARK_GRAY}Reep! {COLOR BLUE}(Go away! I've got big plans for tonight!)\p"
+            "{COLOR DARK_GRAY}Reep. {COLOR BLUE}(Oh wait... They don't understand me.)"
+        ), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_MAREEP_DOGWATCHING, moves(face_original_direction))
+        waitmovement
+    }
+    else {
+        msgbox(format(
+            "Reep... {COLOR BLUE}(This mutt is a pain in my fluffy behind...)\p"
+            "{COLOR DARK_GRAY}Reep. {COLOR BLUE}(I got important business to attend to at night!)"
+        ), MSGBOX_AUTOCLOSE)
+    }
+
+    release
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_MareepTough {
+    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
+
+    msgbox(format(
+        "Reep. {COLOR BLUE}(I'm just saying man, if it was me against that Mightyena, hoo boy.)\p"
+        "{COLOR DARK_GRAY}Reep! {COLOR BLUE}(I would'a messed that Mightyena up real good, ya feel me?)\p"
+        "{COLOR DARK_GRAY}Reep? {COLOR BLUE}(Huh? Why are you looking me like that? I'm fo' realzies!)"
+    ), MSGBOX_NPC)
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_Tepig {
+    lock
+
+    if (gettimeofday != TIME_NIGHT) {
+        msgbox(format("{COLOR RED}(Tepig is busy chowing down a bowl of well-done berries.)"), MSGBOX_AUTOCLOSE)
     }
     else {
         faceplayer
         playmoncry(SPECIES_TEPIG, CRY_MODE_NORMAL)
         waitmoncry
     }
-    closemessage
+
     release
 }
 
-script ISLANDGAME_FRESA_FARMS_Mudsdale {
+script ISLANDGAME_FRESA_FARMS_Interact_Miltank {
+    if (gettimeofday == TIME_NIGHT) {
+        msgbox(format("{COLOR RED}(Miltank is fast asleep.)"), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        faceplayer
+        playmoncry(SPECIES_MILTANK, CRY_MODE_NORMAL)
+        msgbox(format("Moo. {COLOR BLUE}(Moo.)"), MSGBOX_NPC)
+    }
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_Chansey {
+    playmoncry(SPECIES_CHANSEY, CRY_MODE_NORMAL)
+
+    msgbox(format(
+        "Chansey. {COLOR BLUE}(Most humans can't understand us, but some are born with a special ability to comprehend what Pokémon are saying.)\p"
+        "{COLOR DARK_GRAY}Chansey. {COLOR BLUE}(You're one of them,{PAUSE 30} aren't you?)"
+    ), MSGBOX_NPC)
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_Mareep {
     lock
     faceplayer
+    playmoncry(SPECIES_MAREEP, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_Torchic {
+    lock
+    faceplayer
+    playmoncry(SPECIES_TORCHIC, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+script ISLANDGAME_FRESA_FARMS_Interact_Mudsdale {
     playmoncry(SPECIES_MUDSDALE, CRY_MODE_NORMAL)
-    msgbox(format(
-        "Hee-haw! {COLOR BLUE}(Hee-ho!)"
-    ))
-    closemessage
-    release
+    msgbox(format("Hee-haw! {COLOR BLUE}(Hee-ho!)"), MSGBOX_NPC)
 }
 
-script ISLANDGAME_FRESA_FARMS_Dude {
-    lock
-    faceplayer
-    msgbox(format(
-        "I wonder what came first... the Pokémon, or the egg?"
-    ))
-    closemessage
-    release
-}
-
-script ISLANDGAME_FRESA_FARMS_Boy {
-    lock
-    faceplayer
+script ISLANDGAME_FRESA_FARMS_Interact_TepigBoy {
     msgbox(format(
         "By breeding two Pokémon in the same family together, sometimes its child will inherit one of its parents' moves!\p"
         "These inherited moves are called egg moves, and most of them can't be learned any other way!\p"
         "My Tepig knows a “super powerful” move thanks to its mom! Isn't that awesome?"
-    ))
-    closemessage
-    release
+    ), MSGBOX_NPC)
 }
 
+script ISLANDGAME_FRESA_FARMS_Interact_Dude {
+    msgbox(format("I wonder what came first... the Pokémon, or the egg?"), MSGBOX_NPC)
+}
 
-script ISLANDGAME_FRESA_FARMS_Girl {
-    lockall
-    faceplayer
-    if (flag(FLAG_FRESA_FARMS_TRADE_DONE)) {
-        msgbox(format(
-            "Fidough are a real gift from Arceus to us farmers! When they eventually grow up into Daschbuns, their sweet scent helps our wheat grow up real fast n' good!"
-        ))
-        goto(FresaFarms_TradeEnd)
-    }
-    if (flag(FLAG_TEMP_5)) {
-        msgbox(format(
-            "Ooooo! Is that an pwetty widdle Fidough I see?\p"
-            "Pleeeeeease trade me it! I got another adorable puppy to make it worth yer while!"
-        ), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            goto(FresaFarms_TradeInitiate)
-        }   
-        else {
-            goto(FresaFarms_TradeDecline)
-        }   
-    }
+script ISLANDGAME_FRESA_FARMS_Interact_Sign {
     msgbox(format(
-        "Fidough are just the cutest li'l doggos in the whole wide world!\p"
-        "I wish I had one of my own, but they're just so gosh-darn hard to find, and I'm always too busy with chores to go out and look fer one. Oh hum..."
-    ))
-    closemessage
-    
-    setvar(VAR_0x8000, SPECIES_FIDOUGH)
-    callnative(CheckPartyMon)
-    if (var(VAR_RESULT)) {
-        setflag(FLAG_TEMP_5)
-        playse(SE_PIN)
-        applymovement(21, Common_Movement_ExclamationMark)
-        waitmovement(0)
-        delay(30)
-        msgbox(format(
-            "Ooooo! Is that an sweet widdle Fidough I see?\p"
-            "Pleeeeeease trade me it! I got another adorable puppy to make it worth yer while!"
-        ), MSGBOX_YESNO)
-        if (var(VAR_RESULT) == YES) {
-            goto(FresaFarms_TradeInitiate)
-        }   
-        else {
-            goto(FresaFarms_TradeDecline)
-        }   
-    }
-
-    goto(FresaFarms_TradeEnd)
-    
-
-    FresaFarms_TradeInitiate:
-        setvar(VAR_0x8008, INGAME_TRADE_RIOLU)
-        copyvar(VAR_0x8004, VAR_0x8008)
-        specialvar(VAR_RESULT, GetInGameTradeSpeciesInfo)
-        copyvar(VAR_0x8009, VAR_RESULT)
-        special(ChoosePartyMon)
-        waitstate
-        copyvar(VAR_0x800A, VAR_0x8004)
-        if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN) {
-            goto(FresaFarms_TradeDecline)
-        }
-        copyvar(VAR_0x8005, VAR_0x800A)
-        specialvar(VAR_RESULT, GetTradeSpecies)
-        copyvar(VAR_0x800B, VAR_RESULT)
-        if(var(VAR_RESULT) != VAR_0x8009) {
-            msgbox(format(
-                "Eeeeh? That ain't no Fidough."
-            ))
-            goto(FresaFarms_TradeEnd)
-        }
-        copyvar(VAR_0x8004, VAR_0x8008)
-        copyvar(VAR_0x8005, VAR_0x800A)
-        special(CreateInGameTradePokemon)
-        special(DoInGameTradeScene)
-        waitstate
-        bufferspeciesname(STR_VAR_1, VAR_0x8009)
-        msgbox(format(
-            "Eeeeee! 'Preciate your kindness, trainer! Hope ye like yer new pet as well. She may look small, but she's a real tough boxer!"
-        ))
-        setflag(FLAG_FRESA_FARMS_TRADE_DONE)
-        goto(FresaFarms_TradeEnd)
-
-    FresaFarms_TradeDecline:
-        msgbox(format(
-            "Aw, shucks."
-        ))
-    FresaFarms_TradeEnd:
-        closemessage
-        release
+        "FRESA FARMS\n"
+        "Paulie and Marion"
+    ), MSGBOX_SIGN)
 }

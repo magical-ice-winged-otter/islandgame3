@@ -1,10 +1,3 @@
-const LOCALID_TWIN1 = 1
-const LOCALID_TWIN2 = 2
-const LOCALID_GHOST = 4
-const LOCALID_ITEM = 3
-const POS_HIDDEN_X = -3
-const POS_HIDDEN_Y = 1
-
 mapscripts ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         if(!flag(FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED) && var(VAR_SPOOKY_HOUSE_STATE) < 4) {
@@ -12,9 +5,9 @@ mapscripts ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_MapScripts {
         }
 
         if (var(VAR_SPOOKY_HOUSE_STATE) > 3) {
-            removeobject(LOCALID_TWIN1)
-            removeobject(LOCALID_TWIN2)
-            removeobject(LOCALID_ITEM)
+            removeobject(LOCALID_SPOOK_HOUSE_TWIN1)
+            removeobject(LOCALID_SPOOK_HOUSE_TWIN2)
+            removeobject(LOCALID_SPOOK_HOUSE_ITEM)
         }
     }
 }
@@ -24,8 +17,7 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_GetOut {
     playmoncry(SPECIES_MIMIKYU, CRY_MODE_NORMAL)
     waitmoncry
     setvar(VAR_SPOOKY_HOUSE_STATE, 1)
-    msgbox(format("LeAVe mY HoUSE nOW NoW nOW NOw NOW grAWUghhH"))
-    closemessage
+    msgbox(format("LeAVe mY HoUSE nOW NoW nOW NOw NOW grAWUghhH"), MSGBOX_AUTOCLOSE)
     release
 }
 
@@ -34,52 +26,13 @@ movement spookyApproach {
 }
 
 movement spookySpin {
-    face_left
-	delay_2
-	face_up
-	delay_2
-	face_right
-	delay_2
-	face_down
-	delay_2
-	face_left
-	delay_2
-	face_up
-	delay_2
-	face_right
-	delay_2
-	face_down
-	delay_2
-	face_left
-	delay_2
-	face_up
-	delay_2
-	face_right
-	delay_2
-	face_down
-	delay_2
-	face_left
-	delay_2
-	face_up
-	delay_2
-	face_right
-	delay_2
-	face_down
-	delay_2
-	face_left
-	delay_2
-	face_up
-	delay_2
-	face_right
-	delay_2
-	face_down
-	delay_2
-	face_left
-	delay_2
-	face_up
-	delay_2
-	face_player
-	step_end
+    face_left delay_2 face_up delay_2 face_right delay_2 face_down delay_2
+	face_left delay_2 face_up delay_2 face_right delay_2 face_down delay_2
+	face_left delay_2 face_up delay_2 face_right delay_2 face_down delay_2
+	face_left delay_2 face_up delay_2 face_right delay_2 face_down delay_2
+	face_left delay_2 face_up delay_2 face_right delay_2 face_down delay_2
+	face_left delay_2 face_up delay_2 
+    face_player
 }
 
 movement spookyTP {
@@ -91,38 +44,33 @@ movement spookyTP {
 	slide_up
 	slide_up
 	slide_up
-	step_end
-}
-
-movement spookyHover {
-    slide_up
-    delay_16 * 3
-    walk_right * 8
 }
 
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook1 {
     lock
     playse(SE_M_NIGHTMARE)
     waitse
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
-    waitmovement(0)
-    addobject(LOCALID_TWIN1)
-    setobjectxy(LOCALID_TWIN1, 4, 8)
-    addobject(LOCALID_TWIN2)
-    setobjectxy(LOCALID_TWIN2, 5, 8)
-    applymovement(LOCALID_TWIN1, spookyApproach)
-    applymovement(LOCALID_TWIN2, spookyApproach)
-    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
+    waitmovement
+    addobject(LOCALID_SPOOK_HOUSE_TWIN1)
+    setobjectxy(LOCALID_SPOOK_HOUSE_TWIN1, 4, 8)
+    addobject(LOCALID_SPOOK_HOUSE_TWIN2)
+    setobjectxy(LOCALID_SPOOK_HOUSE_TWIN2, 5, 8)
+    applymovement(LOCALID_SPOOK_HOUSE_TWIN1, spookyApproach)
+    applymovement(LOCALID_SPOOK_HOUSE_TWIN2, spookyApproach)
+    waitmovement
+
     msgbox(format(
         "Leave this place...\p"
         "While you still can..."
     ))
+
     fadescreen(FADE_TO_BLACK)
     playse(SE_M_NIGHTMARE)
-    removeobject(LOCALID_TWIN1)
-    removeobject(LOCALID_TWIN2)
-    setobjectxyperm(LOCALID_TWIN1, POS_HIDDEN_X, POS_HIDDEN_Y)
-    setobjectxyperm(LOCALID_TWIN2, POS_HIDDEN_X, POS_HIDDEN_Y)
+    removeobject(LOCALID_SPOOK_HOUSE_TWIN1)
+    removeobject(LOCALID_SPOOK_HOUSE_TWIN2)
+    setobjecthidden(LOCALID_SPOOK_HOUSE_TWIN1)
+    setobjecthidden(LOCALID_SPOOK_HOUSE_TWIN2)
     setvar(VAR_SPOOKY_HOUSE_STATE, 3)
     fadescreen(FADE_FROM_BLACK)
     release
@@ -132,25 +80,24 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook1 {
 //     lock
 //     playse(SE_M_NIGHTMARE)
 //     waitse
-//     applymovement(LOCALID_GHOST, spookySpin)
+//     applymovement(LOCALID_SPOOK_HOUSE_GHOST, spookySpin)
 //     waitmovement(0)
 //     msgbox(format(""))
-//     applymovement(LOCALID_GHOST, spookyTP)
+//     applymovement(LOCALID_SPOOK_HOUSE_GHOST, spookyTP)
 //     waitmovement(0)
-//     removeobject(LOCALID_GHOST)
-//     setobjectxyperm(LOCALID_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
+//     removeobject(LOCALID_SPOOK_HOUSE_GHOST)
+//     setobjectxyperm(LOCALID_SPOOK_HOUSE_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
 // }
 
 script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook3 {
     lock
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark)
+    delay(32)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
     playse(SE_M_NIGHTMARE)
-    applymovement(LOCALID_ITEM, spookyHover)
-    waitmovement(0)
-    removeobject(LOCALID_ITEM)
-    setobjectxyperm(LOCALID_ITEM, POS_HIDDEN_X, POS_HIDDEN_Y)
+    applymovement(LOCALID_SPOOK_HOUSE_ITEM, moves(slide_up, delay_16 * 3, walk_right * 8))
+    waitmovement
+    removeobject(LOCALID_SPOOK_HOUSE_ITEM)
+    setobjecthidden(LOCALID_SPOOK_HOUSE_ITEM)
     release
 }
 
@@ -158,8 +105,8 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook4 {
     // lock
     // fadescreen(FADE_TO_BLACK)
     // playse(SE_M_NIGHTMARE)
-    // addobject(LOCALID_GHOST)
-    // setobjectxy(LOCALID_GHOST, 19, 3)
+    // addobject(LOCALID_SPOOK_HOUSE_GHOST)
+    // setobjectxy(LOCALID_SPOOK_HOUSE_GHOST, 19, 3)
     // fadescreen(FADE_FROM_BLACK)
     // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
     // applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark)
@@ -168,12 +115,12 @@ script ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook4 {
     // waitmovement(0)
     // playmoncry(SPECIES_GOTHITELLE, CRY_MODE_NORMAL)
     // waitmoncry
-    // applymovement(LOCALID_GHOST, spookySpin)
+    // applymovement(LOCALID_SPOOK_HOUSE_GHOST, spookySpin)
     // waitmovement(0)
-    // applymovement(LOCALID_GHOST, spookyTP)
+    // applymovement(LOCALID_SPOOK_HOUSE_GHOST, spookyTP)
     // waitmovement(0)
-    // removeobject(LOCALID_GHOST)
-    // setobjectxyperm(LOCALID_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
+    // removeobject(LOCALID_SPOOK_HOUSE_GHOST)
+    // setobjectxyperm(LOCALID_SPOOK_HOUSE_GHOST, POS_HIDDEN_X, POS_HIDDEN_Y)
     setvar(VAR_SPOOKY_HOUSE_STATE, 4)
     // release
 }

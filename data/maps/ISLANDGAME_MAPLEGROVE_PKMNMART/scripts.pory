@@ -1,37 +1,17 @@
 mapscripts ISLANDGAME_MAPLEGROVE_PKMNMART_MapScripts {}
 
-script ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_Employee {
-    msgbox(format("Welcome! How may I help you?"))
-    closemessage
+script ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_SickGirl {
+    msgbox(format("Achoooo!{PAUSE 60} -sniff-{PAUSE 60} Oops, sorry.{PAUSE 30} I didn't mean to sneeze all over you."), MSGBOX_NPC)
+}
+
+script ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Audino {
+    msgbox(format("{COLOR RED}(It seems like this Audino is actually an employee at the shop.)"), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_MAPLEGROVE_PKMNMART_Interact_Employee {
+    msgbox(format("Welcome! How may I help you?"), MSGBOX_AUTOCLOSE)
     pokemart(Maplegrove_MartItems)
-    msgbox(format("Thank you for shopping with us!"))
-    closemessage
-}
-
-
-script ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_NPC1 {
-    lock
-    faceplayer
-    msgbox(ISLANDGAME_MAPLEGROVE_PKMNMART_NPC1Talk)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_PKMNMART_NPC1Talk {
-    format(
-        "{COLOR DARK_GRAY}Achoooo!{PAUSE 60} -sniff-{PAUSE 60} Oops, sorry.{PAUSE 30} I didn't mean to sneeze all over you."
-    )
-}
-
-script ISLANDGAME_MAPLEGROVE_PKMNMART_EventScript_NPC2 {
-    lock
-    msgbox(ISLANDGAME_MAPLEGROVE_PKMNMART_NPC2Talk)
-    release
-}
-
-text ISLANDGAME_MAPLEGROVE_PKMNMART_NPC2Talk {
-    format(
-        "{COLOR RED}(It seems like this Audino is actually an employee at the shop.)"
-    )
+    msgbox(format("Thank you for shopping with us!"), MSGBOX_AUTOCLOSE)
 }
 
 mart Maplegrove_MartItems {

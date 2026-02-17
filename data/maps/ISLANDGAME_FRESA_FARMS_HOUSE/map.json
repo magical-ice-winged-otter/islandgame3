@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_TABLE_WOMAN",
       "graphics_id": "OBJ_EVENT_GFX_COWGIRL",
       "x": 5,
       "y": 4,
@@ -24,10 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_EventScripts_NPC1",
-      "flag": "FLAG_TEMP_2"
+      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_Interact_TableWoman",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_TV_KID",
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 11,
       "y": 3,
@@ -37,10 +39,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_EventScripts_NPC2",
-      "flag": "FLAG_TEMP_2"
+      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_Interact_TvKid",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_TORCHIC_MAN",
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 13,
       "y": 7,
@@ -50,8 +53,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_EventScripts_NPC3",
-      "flag": "FLAG_TEMP_2"
+      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_Interact_TorchicMan",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TORCHIC_DOLL",
@@ -67,6 +70,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_KITCHEN_WOMAN",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_7",
       "x": 2,
       "y": 2,
@@ -76,8 +80,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_EventScripts_NPC4",
-      "flag": "FLAG_TEMP_2"
+      "script": "ISLANDGAME_FRESA_FARMS_HOUSE_Interact_KitchenWoman",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -96,10 +100,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

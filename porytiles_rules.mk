@@ -28,7 +28,7 @@ AUTO_GEN_TARGETS += $(patsubst %/$(ASEPRITE_FILE),%/bottom.png,$(shell find $(TI
 
 # == Porytiles ==
 # -disable-attribute-generation disables using an attributes.csv file so that we can use porymap instead to set the attributes.
-PORYTILES_FLAGS := -disable-attribute-generation -Wall
+PORYTILES_FLAGS := -disable-attribute-generation -Wall -Wno-color-precision-loss
 
 #  Book keeping
 METATILE_BEHAVIORS_DIR := include/constants/metatile_behaviors.h

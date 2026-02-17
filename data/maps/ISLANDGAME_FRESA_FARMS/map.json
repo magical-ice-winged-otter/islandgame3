@@ -34,6 +34,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_DOGWATCHING",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
       "x": 8,
       "y": 18,
@@ -43,10 +44,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Mareep1",
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_MareepDogWatching",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_TOUGH",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
       "x": 10,
       "y": 19,
@@ -56,8 +58,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Mareep2",
-      "flag": "FLAG_TEMP_3"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_MareepTough",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
@@ -69,10 +71,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Mareep4",
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Mareep",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_RESCUED",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
       "x": 13,
       "y": 17,
@@ -82,10 +85,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Mareep3",
-      "flag": "FLAG_TEMP_3"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_MareepRescued",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_MILTANK",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MILTANK)",
       "x": 24,
       "y": 10,
@@ -95,7 +99,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Miltank_Interact",
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Miltank",
       "flag": "0"
     },
     {
@@ -108,34 +112,8 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Chansey_Interact",
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Chansey",
       "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_B",
-      "x": 3,
-      "y": 10,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
-      "movement_range_x": 2,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Daycare_Mon2",
-      "flag": "FLAG_TEMP_B"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_VAR_A",
-      "x": 4,
-      "y": 11,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Daycare_Mon1",
-      "flag": "FLAG_TEMP_A"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -164,6 +142,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MILK_VENDOR",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_7",
       "x": 25,
       "y": 10,
@@ -173,8 +152,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_EventScripts_MilkVendor",
-      "flag": "FLAG_TEMP_1"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_MilkVendor",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -190,30 +169,18 @@
       "flag": "FLAG_FRESA_FARMS_MILK"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORCHIC)",
-      "x": 14,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Torchic",
-      "flag": "FLAG_TEMP_2"
-    },
-    {
+      "local_id": "LOCALID_TEPIG",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TEPIG)",
-      "x": 16,
-      "y": 8,
+      "x": 9,
+      "y": 14,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Tepig",
-      "flag": "FLAG_TEMP_2"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Tepig",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MUDSDALE)",
@@ -225,10 +192,11 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Mudsdale",
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Mudsdale",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_DUDE",
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
       "x": 25,
       "y": 20,
@@ -238,10 +206,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Dude",
-      "flag": "FLAG_TEMP_1"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Dude",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_TORCHIC",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORCHIC)",
       "x": 26,
       "y": 19,
@@ -251,10 +220,11 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Torchic",
-      "flag": "FLAG_TEMP_1"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Torchic",
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_TEPIG_BOY",
       "graphics_id": "OBJ_EVENT_GFX_SCHOOL_KID_M",
       "x": 12,
       "y": 14,
@@ -264,23 +234,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Boy",
-      "flag": "FLAG_TEMP_1"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_TepigBoy",
+      "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TEPIG)",
-      "x": 9,
-      "y": 14,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Tepig",
-      "flag": "FLAG_TEMP_1"
-    },
-    {
+      "local_id": "LOCALID_FIDOUGH_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_COWGIRL",
       "x": 33,
       "y": 7,
@@ -290,8 +248,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_FRESA_FARMS_Girl",
-      "flag": "FLAG_TEMP_1"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_FidoughGirl",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
@@ -344,7 +302,7 @@
       "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_FRESA_FARMS_Sign"
+      "script": "ISLANDGAME_FRESA_FARMS_Interact_Sign"
     }
   ]
 }

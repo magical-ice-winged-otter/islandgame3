@@ -3071,3 +3071,60 @@
 
   @ End Pokevial Branch
 
+@ island-game (src/islandgame_scrcmd.c)
+
+  @ Copies state from the current follower onto a local object
+  @ If done carefully, it will let the follower stop following and hang around
+  .macro unsetfollowernpc localId:req
+  setorcopyvar VAR_0x8000, \localId
+  callnative UnsetFollower
+  .endm
+
+  .macro teleportcamera x:req, y:req
+  setorcopyvar VAR_0x8000, \x
+  setorcopyvar VAR_0x8001, \y
+  callnative TeleportCamera
+  .endm
+
+  @ Attempts to hide an object and its template where the player will never see them
+  .macro setobjecthidden localId:req
+  getobjectxy \localId, TEMPLATE_POSITION, VAR_0x8000, VAR_0x8001
+  addvar VAR_0x8000, 999
+  addvar VAR_0x8001, 999
+  setobjectxy \localId, VAR_0x8000, VAR_0x8001
+  setobjectxyperm \localId, VAR_0x8000, VAR_0x8001
+  .endm
+
+  @ Attempts to unhide an object and its template to the original, unhidden position
+  .macro setobjectvisible localId:req
+  getobjectxy \localId, TEMPLATE_POSITION, VAR_0x8000, VAR_0x8001
+  subvar VAR_0x8000, 999
+  subvar VAR_0x8001, 999
+  setobjectxy \localId, VAR_0x8000, VAR_0x8001
+  setobjectxyperm \localId, VAR_0x8000, VAR_0x8001
+  .endm
+
+  .macro setobjectmovementradius localId:req, x:req, y:req
+  setorcopyvar VAR_0x8000, \localId
+  setorcopyvar VAR_0x8001, \x
+  setorcopyvar VAR_0x8002, \y
+  callnative SetObjectMovementRadius
+  .endm
+
+  @ Updates VAR_RESULT to true if the player has the species in their party, false otherwise
+  .macro checkpartymon species:req
+  setorcopyvar VAR_0x8000, \species
+  callnative CheckPartyMon
+  .endm
+
+  .set TRADE_CANCELED, 0        @ The player exited without choosing a mon
+  .set TRADE_WRONG_SPECIES, 1   @ The player tried to choose a mon that the npc didn't want 
+  .set TRADE_SUCCESS, 2         @ The trade finished without problems
+
+  @ Attempts to perform an ingame trade and writes the result to VAR_RESULT
+  .macro trade tradeId:req
+  setorcopyvar VAR_0x8000, \tradeId
+  call Common_AttemptTrade
+  .endm
+
+@ end island-game

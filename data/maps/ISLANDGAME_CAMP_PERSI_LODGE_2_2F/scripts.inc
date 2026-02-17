@@ -2,19 +2,13 @@ ISLANDGAME_CAMP_PERSI_LODGE_2_2F_MapScripts::
 	.byte 0
 
 
-ISLANDGAME_CAMP_PERSI_LODGE_2_2F_Girl::
-# 5 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
-	lock
+ISLANDGAME_CAMP_PERSI_LODGE_2_2F_Interact_Girl::
 # 6 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
-	faceplayer
-# 7 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_LODGE_2_2F_GirlTalk
-# 8 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
-	release
+	msgbox ISLANDGAME_CAMP_PERSI_LODGE_2_2F_Interact_Girl_Text_0, MSGBOX_NPC
 	return
 
 
-ISLANDGAME_CAMP_PERSI_LODGE_2_2F_GirlTalk::
-# 11 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
+ISLANDGAME_CAMP_PERSI_LODGE_2_2F_Interact_Girl_Text_0:
+# 7 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_2_2F/scripts.pory"
 	.string "Weeeeeeeeeeeeeeeeeeeeeeeeeeee!!\p"
 	.string "Sowwy, I had a lot of sugar today.$"

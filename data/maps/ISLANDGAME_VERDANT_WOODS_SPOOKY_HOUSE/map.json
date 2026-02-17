@@ -12,9 +12,10 @@
   "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_TWIN1",
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 21,
       "y": 19,
@@ -28,6 +29,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_TWIN2",
       "graphics_id": "OBJ_EVENT_GFX_TWIN",
       "x": 20,
       "y": 19,
@@ -41,6 +43,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 4,
       "y": 4,
@@ -54,6 +57,7 @@
       "flag": "FLAG_VERDANT_WOODS_MIMIKYU_DEFEATED"
     },
     {
+      "local_id": "LOCALID_SPOOK_HOUSE_GHOST",
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
       "x": 20,
       "y": 20,
@@ -155,7 +159,5 @@
       "script": "ISLANDGAME_VERDANT_WOODS_SPOOKY_HOUSE_Spook4"
     }
   ],
-  "bg_events": [
-
-  ]
+  "bg_events": []
 }

@@ -92,6 +92,27 @@
     },
     "msgbox": {
       "var_name": "VAR_RESULT"
+    },
+    "gettimeofday": {
+        "var_name": "VAR_0x8000"
+    },
+    "dynmultistack": {
+        "var_name": "VAR_RESULT"
+    },
+    "checkfollowernpc": {
+        "var_name": "VAR_RESULT"
+    },
+    "checkpartymon": {
+        "var_name": "VAR_RESULT"
+    },
+    "trade": {
+        "var_name": "VAR_RESULT"
+    },
+    "returnqueststate": {
+        "var_name": "VAR_RESULT"
+    },
+    "subquestmenu": {
+        "var_name": "VAR_RESULT"
     }
   }
 }

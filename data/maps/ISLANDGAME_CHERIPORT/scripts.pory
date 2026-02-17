@@ -1,304 +1,134 @@
-const FLAG_NIGHT = FLAG_TEMP_1
-const FLAG_DAY = FLAG_TEMP_2
-const VAR_CURRENT_HOUR = VAR_0x8000
-
 mapscripts ISLANDGAME_CHERIPORT_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-
-        if (!flag(FLAG_LEFT_SS_RAIN)) {
-            setflag(FLAG_LEFT_SS_RAIN)
-        }
-
-        if (flag(FLAG_PROF_GAVE_EEVEE)) {
-            setvar(VAR_TEMP_1, 1)
-        }
-        if (flag(FLAG_RECEIVED_TOWN_MAP)) {
-            setvar(VAR_TEMP_2, 1)
-        }
-
-        // todo: I want to turn this into a single macro - setnightflag(FLAG_NIGHT)
-        gettime
-
-        if (var(VAR_CURRENT_HOUR) < 6 || var(VAR_CURRENT_HOUR) >= 18) {
-            setflag(FLAG_NIGHT)
-        }
-        else {
-            setflag(FLAG_DAY)
-        }
+        setflag(FLAG_LEFT_SS_RAIN)
     }
 }
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Eevee_Warning {
-    if (!flag(FLAG_PROF_GAVE_EEVEE)) {
-        lock
-        msgbox(NeedPokemon_Text)
-        waitmessage
-        release
-        applymovement(OBJ_EVENT_ID_PLAYER, WalkBack)
-        waitmovement(0)
-    }
-}
+// section: misc
 
-
-text NeedPokemon_Text {
-    format("{COLOR RED}(I should go see Professor Palm before I leave.)")
-}
-
-movement WalkBack {
-    walk_left
-    step_end
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_LeaveIsles {
-    lock
-    msgbox(ISLANDGAME_CHERIPORT_OUTSIDE_StayHere)
-    waitmessage
-    release
-    applymovement(OBJ_EVENT_ID_PLAYER, WalkBack2)
-    waitmovement(0)
-}
-
-
-text ISLANDGAME_CHERIPORT_OUTSIDE_StayHere {
-    format("{COLOR RED}(There's nothing past here but the vast ocean.)")
-}
-
-movement WalkBack2 {
-    walk_right
-    step_end
-}
-
-
-
-
-
-
-
-
-
-
-// npcs
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_MrBriney {
-    lock
-    msgbox(MrBrineyTalk)
-    release
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Girl3 {
-    lock
-    faceplayer
-    msgbox(NPCGirl_Talk)
-    release
-}
-
-text NPCGirl_Talk {
-    format("{COLOR DARK_GRAY}The islands are known for their tropical weather, though at times there have been bad storms that have even scared POKéMON.")
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Boy4 {
-    lock
-    faceplayer
-    msgbox(NPCBoy_Talk)
-    release
-}
-
-text NPCBoy_Talk {
-    format(
-        "Thanks to the advent of Rotom technology, our phones have effectively become pocket-sized supercomputers with processing power rivaling that of even Metagross!\p"
-        "To have gone from the PokéNav to the Rotom Phone in such a short period of time...\p"
-        "Heh... the power of science is quite staggering, isn't it?"
-    )
-}
-
-text MrBrineyTalk {
-    format("{COLOR DARK_GRAY}This beach reminds you a lot of Slateport, doesn't it, Peeko?")
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Peeko {
-    lock
-    faceplayer
-    playmoncry(SPECIES_WINGULL,CRY_MODE_NORMAL)
-    applymovement(3, Common_Movement_Heart)
-    waitmoncry
-    release
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC1 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC1_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC1_TALK {
-    format("{COLOR DARK_GRAY}Nuh-uh! Nuh-uh!")
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC2 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC2_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC2_TALK {
-    format("{COLOR DARK_GRAY}Hey! I tagged you!")
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC3 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC3_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC3_TALK {
-    format("{COLOR DARK_GRAY}Ugh... I can't see anything on my Game Boy because of the sun!")
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC4 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC4_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC4_TALK {
-    format("{COLOR DARK_GRAY}Left! Right! Left! Right! Huh? I'm in the middle of my training! Shoo!")
-}
-
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC7 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC7_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC7_TALK {
-    format(
-        "Come on...{PAUSE 30} Come on...{PAUSE 30} Argh! Not another Magikarp!\p"
-        "All I want is a {COLOR LIGHT_BLUE}Squirtle{COLOR DARK_GRAY}. Is that too much to ask for!?"
-    )
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC8 {
-    lock
-    faceplayer
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC8_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC8_TALK {
-    format(
-        "Oranna is the smallest of the three principal islands in Marya.\p"
-        "Nothing much really happens here, which makes it the perfect place to chill."
-    )
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_NPC9 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_NPC9_TALK)
-    release
-}
-
-text ISLAND_GAME_CHERIPORT_OUTSIDE_NPC9_TALK {
-    format(
-        "{COLOR DARK_GRAY}-sigh-{PAUSE 30} If only you were still here with us..."
-    )
-}
-
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Greeter {
-    lock
-    faceplayer
-    if(!flag(FLAG_RECEIVED_TOWN_MAP)) {
-        msgbox(format(
-            "Welcome to the Maryan Isles, traveler.\p"
-            "Please take this map. It will aid you in traversing the region."
-        ))
-        giveitem(ITEM_TOWN_MAP)
-    }
-    else {
-        msgbox(format(
-            "We, The Silverwing Order, pray you have a pleasant stay."
-        ))
-    }
-    closemessage
-    setvar(VAR_TEMP_2, 1)
-    setflag(FLAG_RECEIVED_TOWN_MAP)
-    release
-}
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_Greeter2 {
-    lock
-    playse(SE_PIN)
-    applymovement(8, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    applymovement(8, Common_Movement_Delay32)
-    waitmovement(0)
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+script ISLANDGAME_CHERIPORT_GiveTownMap {
     msgbox(format(
         "Welcome to the Maryan Isles, traveler.\p"
         "Please take this map. It will aid you in traversing the region."
-    ))
+    ), MSGBOX_NPC)
+
     giveitem(ITEM_TOWN_MAP)
-    setvar(VAR_TEMP_2, 1)
-    setflag(FLAG_RECEIVED_TOWN_MAP)
     closemessage
-    release
+    setflag(FLAG_RECEIVED_TOWN_MAP)
+    return
 }
 
 
+// section: interactions
 
-
-
-
-
-// Signs
-
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN1 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN1_DESC)
-    release
+script ISLANDGAME_CHERIPORT_Interact_SilverwingGreeter {
+    if(flag(FLAG_RECEIVED_TOWN_MAP)) {
+        msgbox(format("We, The Silverwing Order, pray you have a pleasant stay."), MSGBOX_NPC)
+    }
+    else {
+        call(ISLANDGAME_CHERIPORT_GiveTownMap)
+    }
 }
 
-text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN1_DESC {
-    format(
-        "{COLOR DARK_GRAY}WELCOME TO CHERIPORT\n"
-        "{COLOR DARK_GRAY}Take a rest on our soft and sandy beach!"
-    )
+script ISLANDGAME_CHERIPORT_Interact_BeachGameBoyKid {
+    msgbox(format("Ugh... I can't see anything on my Game Boy because of the sun!"), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN2 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN2_DESC)
-    release
+script ISLANDGAME_CHERIPORT_Interact_BeachWoman {
+    msgbox(format("-sigh-{PAUSE 30} If only you were still here with us..."), MSGBOX_AUTOCLOSE)
 }
 
-text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN2_DESC {
-    format(
-        "{COLOR DARK_GRAY}PROFESSOR PALM'S LABORATORY"
-    )
+script ISLANDGAME_CHERIPORT_Interact_BeachTuberBoy {
+    msgbox(format("Nuh-uh! Nuh-uh!"), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN3 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN3_DESC)
-    release
+script ISLANDGAME_CHERIPORT_Interact_BeachTuberGirl {
+    msgbox(format("Hey! I tagged you!"), MSGBOX_AUTOCLOSE)
 }
 
-text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN3_DESC {
-    format(
-        "{COLOR DARK_GRAY}SEASIDE SERVICES \n"
-        "{COLOR DARK_GRAY}Drinks on us!"
-    )
+script ISLANDGAME_CHERIPORT_Interact_MrBriney {
+    msgbox(format( "This beach reminds you a lot of Slateport, doesn't it, Peeko?"), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_CHERIPORT_OUTSIDE_EventScript_SIGN4 {
-    lock
-    msgbox(ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN4_DESC)
-    release
+script ISLANDGAME_CHERIPORT_Interact_Peeko {
+    playmoncry(SPECIES_WINGULL,CRY_MODE_NORMAL)
+    applymovement(LOCALID_PEEKO, moves(emote_heart))
+    waitmoncry
 }
 
-text ISLAND_GAME_CHERIPORT_OUTSIDE_SIGN4_DESC {
-    format(
-        "{COLOR DARK_GRAY}! WARNING ! \n"
-        "{COLOR DARK_GRAY}NO LIFEGUARD! SWIM AT YOUR OWN RISK!"
-    )
+script ISLANDGAME_CHERIPORT_Interact_TownBoy {
+    msgbox(format(
+        "Thanks to the advent of Rotom technology, our phones have effectively become pocket-sized supercomputers with processing power rivaling that of even Metagross!\p"
+        "To have gone from the PokéNav to the Rotom Phone in such a short period of time...\p"
+        "Heh... the power of science is quite staggering, isn't it?"
+    ), MSGBOX_NPC) 
+}
+
+script ISLANDGAME_CHERIPORT_Interact_LeavingTownGirl {
+    msgbox(format(
+        "Oranna is the smallest of the three principal islands in Marya.\p"
+        "Nothing much really happens here, which makes it the perfect place to chill."
+    ), MSGBOX_NPC)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_Fisherman {
+    msgbox(format(
+        "Come on...{PAUSE 30} Come on...{PAUSE 30} Argh! Not another Magikarp!\p"
+        "All I want is a {COLOR LIGHT_BLUE}Squirtle{COLOR DARK_GRAY}. Is that too much to ask for!?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_BeachSwimmer {
+    msgbox(format("Left! Right! Left! Right! Huh? I'm in the middle of my training! Shoo!"), MSGBOX_NPC)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_Sign_Welcome {
+    msgbox(format(
+        "WELCOME TO CHERIPORT\n"
+        "Take a rest on our soft and sandy beach!"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_Sign_House {
+    msgbox(format(
+        "SEASIDE SERVICES\n"
+        "Drinks on us!"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_Sign_Beach {
+    msgbox(format(
+        "! WARNING !\n"
+        "NO LIFEGUARD! SWIM AT YOUR OWN RISK!"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_CHERIPORT_Interact_Sign_Laboratory {
+    msgbox(format("PROFESSOR PALM'S LABORATORY"), MSGBOX_SIGN)
+}
+
+// section: triggers
+
+script ISLANDGAME_CHERIPORT_Trigger_EnteringTown {
+    if (!flag(FLAG_RECEIVED_TOWN_MAP)) {
+        playse(SE_PIN)
+        applymovement(LOCALID_SILVERWING_GREETER, moves(emote_exclamation_mark, delay_16 * 2))
+        waitmovement
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+        call(ISLANDGAME_CHERIPORT_GiveTownMap)
+    }
+}
+
+script ISLANDGAME_CHERIPORT_Trigger_LeavingInland {
+    if (!flag(FLAG_PROF_GAVE_EEVEE)) {
+        msgbox(format("{COLOR RED}(I should go see Professor Palm before I leave.)"), MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+        waitmovement
+    }
+}
+
+script ISLANDGAME_CHERIPORT_Trigger_LeavingOcean {
+    msgbox(format("{COLOR RED}(There's nothing past here but the vast ocean.)"), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+    waitmovement
 }

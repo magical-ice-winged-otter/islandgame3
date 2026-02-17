@@ -45,7 +45,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer8",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster",
       "flag": "0"
     },
     {
@@ -58,7 +58,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer3",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher",
       "flag": "0"
     },
     {
@@ -71,7 +71,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer4",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl",
       "flag": "0"
     },
     {
@@ -84,7 +84,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer7",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac",
       "flag": "0"
     },
     {
@@ -101,55 +101,59 @@
       "flag": "FLAG_TEMP_19"
     },
     {
+      "local_id": "LOCALID_MAREEP",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
-      "x": -3,
-      "y": 3,
+      "x": 61,
+      "y": 13,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Mareep",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_Mareep",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MIGHTYENA",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MIGHTYENA)",
-      "x": -4,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_BattleMightyena",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_MELISSA",
-      "x": -4,
-      "y": 4,
+      "x": 61,
+      "y": 15,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Interact",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": -2,
+      "local_id": "LOCALID_RIVAL",
+      "graphics_id": "OBJ_EVENT_GFX_MELISSA",
+      "x": 12,
       "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_Rival",
+      "flag": "FLAG_HIDE_MINTY_MEADOWS_RIVAL"
+    },
+    {
+      "local_id": "LOCALID_OLD_MAN",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 32,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_OldMan_Interact",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_OldMan",
       "flag": "0"
     },
     {
@@ -188,7 +192,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer6",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass",
       "flag": "0"
     },
     {
@@ -201,13 +205,14 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_Rival_Trainer5",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_EXTRA1",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
-      "x": -2,
-      "y": 7,
+      "x": 35,
+      "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 0,
@@ -218,9 +223,10 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_EXTRA2",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
-      "x": -3,
-      "y": 7,
+      "x": 34,
+      "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -231,9 +237,10 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_MAREEP_EXTRA3",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MAREEP)",
-      "x": -4,
-      "y": 7,
+      "x": 33,
+      "y": 12,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
       "movement_range_x": 1,
@@ -244,6 +251,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_DRIFLOON",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DRIFLOON)",
       "x": 19,
       "y": 3,
@@ -253,7 +261,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_DrifloonBattle",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon",
       "flag": "FLAG_DAILY_MINTY_MEADOWS_DRIFLOON"
     }
   ],
@@ -281,7 +289,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_SeeMareep_2"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep"
     },
     {
       "type": "trigger",
@@ -290,7 +298,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_SeeMareep_2"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep"
     },
     {
       "type": "trigger",
@@ -299,7 +307,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_SeeMareep_2"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep"
     },
     {
       "type": "trigger",
@@ -308,7 +316,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger1"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right2"
     },
     {
       "type": "trigger",
@@ -317,7 +325,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger2"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right1"
     },
     {
       "type": "trigger",
@@ -326,7 +334,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger3"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight"
     },
     {
       "type": "trigger",
@@ -335,7 +343,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger4"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1"
     },
     {
       "type": "trigger",
@@ -344,7 +352,7 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger5"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2"
     },
     {
       "type": "trigger",
@@ -353,52 +361,34 @@
       "elevation": 0,
       "var": "VAR_MINTY_MEADOWS_STATE",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Trigger6"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3"
     },
     {
       "type": "trigger",
       "x": 31,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_MINTY_MEADOWS_STATE",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_OldMan_PreRival"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest"
     },
     {
       "type": "trigger",
       "x": 31,
       "y": 11,
       "elevation": 0,
-      "var": "VAR_MINTY_MEADOWS_STATE",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_OldMan_PreRival"
-    },
-    {
-      "type": "trigger",
-      "x": 32,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_TEMP_4",
-      "var_value": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_CantLeave"
-    },
-    {
-      "type": "trigger",
-      "x": 32,
-      "y": 10,
-      "elevation": 0,
-      "var": "VAR_TEMP_4",
-      "var_value": "1",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_CantLeave"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest"
     },
     {
       "type": "trigger",
       "x": 61,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_5",
-      "var_value": "0",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_CantLeave2"
+      "var": "VAR_MINTY_MEADOWS_STATE",
+      "var_value": "2",
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave"
     }
   ],
   "bg_events": [
@@ -408,7 +398,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_TunnelSign_Interact"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_TunnelSign"
     },
     {
       "type": "sign",
@@ -416,7 +406,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_FlowerSign_Interact"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_FlowerSign"
     },
     {
       "type": "hidden_item",
@@ -440,7 +430,7 @@
       "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_MINTY_MEADOWS_2_PopsHouse_Interact"
+      "script": "ISLANDGAME_MINTY_MEADOWS_2_Interact_PopsHouse"
     }
   ]
 }
