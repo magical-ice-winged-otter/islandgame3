@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_CandyBoy",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_CandyBoy",
       "flag": "0"
     },
     {
@@ -48,7 +48,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_CookieGirl",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_CookieGirl",
       "flag": "0"
     },
     {
@@ -61,7 +61,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC1",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_CounselorBoy",
       "flag": "0"
     },
     {
@@ -74,7 +74,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC2",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_Gamer",
       "flag": "0"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC3",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_CounselorGirl",
       "flag": "0"
     },
     {
@@ -100,7 +100,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC4",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Upper_CamperGirl",
       "flag": "0"
     },
     {
@@ -113,7 +113,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC5",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Upper_PeeingGuy",
       "flag": "0"
     },
     {
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC6",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Upper_CounselorBoy",
       "flag": "0"
     },
     {
@@ -139,7 +139,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC7",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Upper_CamperBoy",
       "flag": "0"
     },
     {
@@ -152,7 +152,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC8",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_ZigzagoonGirl",
       "flag": "0"
     },
     {
@@ -165,7 +165,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC9",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Upper_CounselorGirl",
       "flag": "0"
     },
     {
@@ -178,10 +178,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_TrainerBattle1",
+      "script": "ISLANDGAME_CAMP_PERSI_Trainer_Hanzo",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_JONAS",
       "graphics_id": "OBJ_EVENT_GFX_JONAS",
       "x": 59,
       "y": 3,
@@ -204,7 +205,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_Zigzag",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Zigzagoon",
       "flag": "0"
     },
     {
@@ -217,7 +218,7 @@
       "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC12",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_Hiker",
       "flag": "0"
     },
     {
@@ -230,7 +231,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC10",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_CamperBoy",
       "flag": "0"
     },
     {
@@ -243,7 +244,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC11",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Middle_CamperGirl",
       "flag": "0"
     },
     {
@@ -256,7 +257,7 @@
       "movement_range_y": 4,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC13",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Lower_CamperBoy",
       "flag": "0"
     },
     {
@@ -269,7 +270,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_TrainerBattle3",
+      "script": "ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo",
       "flag": "0"
     },
     {
@@ -282,7 +283,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_TrainerBattle5",
+      "script": "ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina",
       "flag": "0"
     },
     {
@@ -295,7 +296,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_TrainerBattle2",
+      "script": "ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward",
       "flag": "0"
     },
     {
@@ -308,7 +309,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_TrainerBattle4",
+      "script": "ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy",
       "flag": "0"
     },
     {
@@ -338,6 +339,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_CARD_KID",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_CAMPER",
       "x": 41,
       "y": 27,
@@ -347,8 +349,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_NPC14",
-      "flag": "FLAG_TEMP_3"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_CardKid",
+      "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
@@ -360,7 +362,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_WaterGirl",
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_WaterGirl",
       "flag": "0"
     },
     {
@@ -416,6 +418,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SNORUNT",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SNORUNT)",
       "x": 59,
       "y": 2,
@@ -429,6 +432,7 @@
       "flag": "FLAG_CAMP_PERSI_JONAS_DEFEATED"
     },
     {
+      "local_id": "LOCALID_OVERWORLD_MON_1",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 22,
       "y": 12,
@@ -442,6 +446,7 @@
       "flag": "FLAG_TEMP_8"
     },
     {
+      "local_id": "LOCALID_OVERWORLD_MON_2",
       "graphics_id": "OBJ_EVENT_GFX_VAR_1",
       "x": 14,
       "y": 10,
@@ -498,45 +503,45 @@
       "x": 59,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_JonasEncounterMiddle"
+      "script": "ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Middle"
     },
     {
       "type": "trigger",
       "x": 58,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_JonasEncounterLeft"
+      "script": "ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Left"
     },
     {
       "type": "trigger",
       "x": 57,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_JonasEncounterFarLeft"
+      "script": "ISLANDGAME_CAMP_PERSI_Trigger_Jonas_FarLeft"
     },
     {
       "type": "trigger",
       "x": 60,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_JonasEncounterRight"
+      "script": "ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Right"
     },
     {
       "type": "trigger",
       "x": 61,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_JonasEncounterFarRight"
+      "script": "ISLANDGAME_CAMP_PERSI_Trigger_Jonas_FarRight"
     }
   ],
   "bg_events": [
@@ -546,7 +551,7 @@
       "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN1"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_Welcome"
     },
     {
       "type": "sign",
@@ -554,7 +559,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN2"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_WildSide"
     },
     {
       "type": "sign",
@@ -562,7 +567,7 @@
       "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN3"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_Lake"
     },
     {
       "type": "sign",
@@ -570,7 +575,7 @@
       "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN4"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_BerryShop"
     },
     {
       "type": "sign",
@@ -578,7 +583,7 @@
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_MacheteTreeEntrance"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_MacheteTreeEntrance"
     },
     {
       "type": "sign",
@@ -586,7 +591,7 @@
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_MacheteTreeEntrance"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_MacheteTreeEntrance"
     },
     {
       "type": "sign",
@@ -594,7 +599,7 @@
       "y": 42,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN5"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Radio"
     },
     {
       "type": "sign",
@@ -602,7 +607,7 @@
       "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_SIGN7"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_Directions"
     },
     {
       "type": "hidden_item",
@@ -626,7 +631,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ISLANDGAME_CAMP_PERSI_OUTSIDE_EventScript_WARNING"
+      "script": "ISLANDGAME_CAMP_PERSI_Interact_Sign_NuzlockeWarning"
     }
   ]
 }
