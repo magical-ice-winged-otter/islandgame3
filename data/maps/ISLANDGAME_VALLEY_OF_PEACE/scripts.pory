@@ -553,7 +553,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_GengarInteract {
         case B_OUTCOME_RAN:
             break
         case B_OUTCOME_WON:
-            fadescreen(FADE_TO_BLACK)
+            fadescreenswapbuffers(FADE_TO_BLACK)
             setvar(VAR_0x8000, 18)
             setvar(VAR_0x8001, 25)
             callnative(TeleportCamera)
@@ -561,7 +561,7 @@ script ISLANDGAME_VALLEY_OF_PEACE_GengarInteract {
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
             applymovement(OW_GENGAR, Common_Movement_FaceLeft)
             waitmovement(0)
-            fadescreen(FADE_FROM_BLACK)
+            fadescreenswapbuffers(FADE_FROM_BLACK)
 
             delay(30)
             applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceRight)

@@ -162,7 +162,7 @@ mapscripts ISLANDGAME_BELLEHAVEN_FOSTER_HOME_MapScripts {
 
             giveitem(ITEM_ISLANDGAME_CUBONES_POKEBALL)
             startquest(QUEST_VALLEY_OF_PEACE_CUBONE)
-            completesubquest(QUEST_VALLEY_OF_PEACE_CUBONE, SUB_QUEST_CUBONE_1)
+            subquestmenu(QUEST_MENU_COMPLETE_QUEST, QUEST_VALLEY_OF_PEACE_CUBONE, 0)
             removeobject(10)
             setobjectxy(10, 18, 14) // clear pokeball
             applymovement(8, Common_Movement_WalkInPlaceDown)

@@ -736,7 +736,7 @@ ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_3:
 
 ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_4:
 # 556 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	fadescreen FADE_TO_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
 # 557 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	setvar VAR_0x8000, 18
 # 558 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
@@ -752,7 +752,7 @@ ISLANDGAME_VALLEY_OF_PEACE_GengarInteract_4:
 # 563 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	waitmovement 0
 # 564 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 566 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"
 	delay 30
 # 567 "data/maps/ISLANDGAME_VALLEY_OF_PEACE/scripts.pory"

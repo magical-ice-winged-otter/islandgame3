@@ -299,7 +299,7 @@ script ISLANDGAME_AETHERIA_NPC1 {
     else {
         msgbox(format(
             "Ugggg... I'm tired of waking up at the crack of dawn just to sail this darn detective out into the great blue sea for the entire day...\p"
-            "All in search of some secret island where the “global elite” supposedly gather to discuss world domination...?\p"
+            "All in search of some secret island where a devious cabal is plotting world domination?\p"
             "I ain't even sure why we even entertainin' him. We found 'em washed ashore the beaches, and he's been nonstop yappin' bout this ever since.\p"
         ))
     }
@@ -361,7 +361,7 @@ script ISLANDGAME_AETHERIA_NPC5 {
 script ISLANDGAME_AETHERIA_NPC6 {
     lock
     msgbox(format(
-        "It's fine, dearie! He won't bite! He's not a real Larvitar!"
+        "It's fine, dearie! He won't bite! He's not a real Pokémon!"
     ))
     closemessage
     release
@@ -391,7 +391,7 @@ script ISLANDGAME_AETHERIA_NPC8 {
         "Since you foreigners clearly don't know how to read, I'll spell it out for you:\p"
         "LITTERING IS A F-E-L-O-N-Y IN MARYA! DO YOU UNDERSTAND THAT!?\p"
         "Ever since we opened the city to tourists, it's been absolutely riddled with garbage everywhere!\p"
-        "And I've got the sneaking suspicion it's those dang Unovans dirtying our beautiful beaches..."
+        "And I've got the sneaking suspicion I know exactly who's causing all of it..."
 
     ))
     closemessage
@@ -566,7 +566,7 @@ script ISLANDGAME_AETHERIA_NPC24 {
     lock
     faceplayer
     msgbox(format(
-        "If you see anything suspicious, like a big bald guy riding a motorcycle, please report it to us immediately! Do NOT engage him, word has it that he used to be a five-time Festival Champion..."
+        "If you see anything suspicious, like a big bald guy riding a motorcycle, please report it to us immediately!\pDo NOT engage him, word has it that he used to be a five-time Festival Champion..."
     ))
     closemessage
     release
@@ -624,8 +624,10 @@ script ISLANDGAME_AETHERIA_NPC28 {
 // fisherman by the docks
 script ISLANDGAME_AETHERIA_NPC29 {
     lock
+    faceplayer
     msgbox(format(
-        ""
+        "While I respect Detective Rio's tenacity, I think he's just wasting his time with these search missions.\p"
+        "We've been scouring the sea for weeks. If there was some supposed secret island, don't you think we would have found it by now?"
     ))
     closemessage
     release
