@@ -6,7 +6,8 @@ mapscripts ISLANDGAME_CAMP_PERSI_LODGE_1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setobjecthidden(LOCALID_LODGE_PORYGON)
 
-        if (returnqueststate(QUEST_PERSI_FAVORITE_CARD) != QUEST_COMPLETED) {
+        // the kids only play during the day if the card is returned and the rewards have been given
+        if (returnqueststate(QUEST_PERSI_FAVORITE_CARD) != QUEST_COMPLETED || var(VAR_CAMP_PERSI_STATE) != CAMP_PERSI_CLAIMED_LOSER_REWARD || gettimeofday == TIME_NIGHT) {
             setobjecthidden(LOCALID_LODGE_CARD_KID)
             setobjecthidden(LOCALID_LODGE_CARD_LOSER)
         }
@@ -136,7 +137,7 @@ script ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Trigger_BlockingTV {
         waitmovement
         delay(48)
         msgbox(format("MOVE YOUR BIG FAT HEAD OUT OF THE FREAKING WAY!"), MSGBOX_AUTOCLOSE)
-        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right, face_left))
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right * 2, face_left))
         waitmovement
     }
 }

@@ -1,97 +1,79 @@
-const FLAG_DAYTIME = FLAG_TEMP_2
-const FLAG_NIGHTTIME = FLAG_TEMP_3
-
 mapscripts ISLANDGAME_CAMP_PERSI_LODGE_1_2F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        returnqueststate(QUEST_PERSI_FAVORITE_CARD)
-        if(var(VAR_RESULT) == QUEST_INACTIVE) {
-            setflag(FLAG_TEMP_4)
+        // the loser is always missing until we start the search quest
+        if (returnqueststate(QUEST_PERSI_FAVORITE_CARD) == QUEST_INACTIVE) {
+            setobjecthidden(LOCALID_LODGE_2F_CARD_LOSER)
+        }
+        // after the quest is finished and the reward is claimed, the loser + card kid play downstairs during the day
+        elif (var(VAR_CAMP_PERSI_STATE) == CAMP_PERSI_CLAIMED_LOSER_REWARD && returnqueststate(QUEST_PERSI_FAVORITE_CARD) == QUEST_COMPLETED && gettimeofday != TIME_NIGHT) {
+            setobjecthidden(LOCALID_LODGE_2F_CARD_LOSER)
         }
 
-        gettime
-
-        if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
-            setflag(FLAG_NIGHTTIME) // controls daytime npcs
-            returnqueststate(QUEST_PERSI_FAVORITE_CARD)
-            switch (var(VAR_RESULT)) {
-                case QUEST_COMPLETED:
-                    break
-                default: setflag(FLAG_TEMP_5)
-            }
-
+        // the card kid is missing until he gets his card back
+        if (returnqueststate(QUEST_PERSI_FAVORITE_CARD) != QUEST_COMPLETED) {
+            setobjecthidden(LOCALID_LODGE_2F_CARD_KID)
         }
-        else {
-            setflag(FLAG_DAYTIME) // controls nighttime npcs
-            setflag(FLAG_TEMP_5)
-            returnqueststate(QUEST_PERSI_FAVORITE_CARD)
-            switch (var(VAR_RESULT)) {
-                case QUEST_COMPLETED: setflag(FLAG_TEMP_4)
-                default: 
-            }
+        // once the kid has his card back and the loser has given his reward, they play downstairs during the day
+        elif (var(VAR_CAMP_PERSI_STATE) == CAMP_PERSI_CLAIMED_LOSER_REWARD && gettimeofday != TIME_NIGHT) {
+            setobjecthidden(LOCALID_LODGE_2F_CARD_KID)
         }
     }    
 }
 
-script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC {
-    lock
+// section: interactions
+
+script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser {
     switch(var(VAR_CAMP_PERSI_STATE)) {
-        case 1:
-            faceplayer
-            msgbox(format(
-                "L-Leave me alone! I already told you, I don't know anything about his missing Charizard!\p"
-                "...\p"
-                "{COLOR RED}(I never mentioned anything about the card being a Charizard...)\p"
-                "(Maybe I should do a little looking around camp...)"
-            ))
-        case 2:
-            faceplayer
-            msgbox(format(
-                "Ever since our battle, I've really learned a lot.\p"
-                "I now realize that winning takes more than just the stronger Pokémon to win.\p"
-                "Thank you for teaching that to me, and also keeping the whole thing a secret between us...\p"
-                "Here, take this Technical Machine as thanks. It's my favorite move, and I know a trainer like you will make good use of it."
-            ))
+    case CAMP_PERSI_SEARCHING_FOR_CLUES:
+        msgbox(format("That was just too easy! It was literally like stealing candy from a baby!"), MSGBOX_AUTOCLOSE)
+        playse(SE_PIN)
+        applymovement(LOCALID_LODGE_2F_CARD_LOSER, moves(emote_exclamation_mark, face_player))
+        delay(60)
+        msgbox(format("Aiiiiiie!{PAUSE 30} Where did you come from!? Don't you know it's rude to eavesdrop on people!?"), MSGBOX_AUTOCLOSE)
+        applymovement(LOCALID_LODGE_2F_CARD_LOSER, moves(emote_question_mark))
+        waitmovement
+        delay(60)
+
+        msgbox(format(
+            "E-Eh? A stolen card? W-Why would I know anything about that?\p"
+            "H-He probably just lost it somewhere in the tall grass or something..."
+        ), MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_LODGE_2F_CARD_LOSER, moves(face_right))
+        waitmovement
+        setvar(VAR_CAMP_PERSI_STATE, CAMP_PERSI_SEARCHING_FOR_CARD)
+
+    case CAMP_PERSI_SEARCHING_FOR_CARD:
+        msgbox(format(
+            "L-Leave me alone! I already told you, I don't know anything about his missing Charizard!\p"
+            "...\p"
+            "{COLOR RED}(I never mentioned anything about the card being a Charizard...)\p"
+            "(Maybe I should do a little looking around camp...)"
+        ), MSGBOX_NPC)
+
+    case CAMP_PERSI_DEFEATED_LOSER:
+        msgbox(format(
+            "Ever since our battle, I've really learned a lot.\p"
+            "I now realize that winning takes more than just the stronger Pokémon to win.\p"
+            "Thank you for teaching that to me, and also keeping the whole thing a secret between us..."
+        ), MSGBOX_NPC)
+
+        if (!checkitemspace(ITEM_TM53)) {
+            msgbox(format("I have a Technical Machine that I'd like to give you as a reward, but it seems you don't have room for it."), MSGBOX_AUTOCLOSE)
+        }
+        else {
+            msgbox(format("Here, take this Technical Machine as thanks. It's my favorite move, and I know a trainer like you will make good use of it."), MSGBOX_AUTOCLOSE)
             giveitem(ITEM_TM53)
-            setvar(VAR_CAMP_PERSI_STATE, 3)
-        case 3:
-            faceplayer
-            msgbox(format(
-                "I'll figure out a way to beat that kid's Charizard fair and square!"
-            ))
-        default:
-            msgbox(format(
-                "That was just too easy! It was literally like stealing candy from a baby!"
-                ))
+            setvar(VAR_CAMP_PERSI_STATE, CAMP_PERSI_CLAIMED_LOSER_REWARD)
             closemessage
-            playse(SE_PIN)
-            applymovement(1, Common_Movement_ExclamationMark)
-            applymovement(1, Common_Movement_FacePlayer)
-            faceplayer
-            delay(60)
-            msgbox(format(
-                "Aiiiiiie! {PAUSE 30} Where did you come from!? Don't you know it's rude to eavesdrop on people!?"
-            ))
-            closemessage
-            applymovement(1, Common_Movement_QuestionMark)
-            waitmovement(0)
-            delay(60)
-            msgbox(format(
-                "E-Eh? A stolen card? W-Why would I know anything about that?\p"
-                "H-He probably just lost it somewhere in the tall grass or something..."
-            ))
-            applymovement(1, Common_Movement_FaceRight)
-            waitmovement(0)
-            setvar(VAR_CAMP_PERSI_STATE, 1)
+        }
+
+    case CAMP_PERSI_CLAIMED_LOSER_REWARD:
+        msgbox(format("I'll figure out a way to beat that kid's Charizard fair and square!"), MSGBOX_NPC)
     }
-    release
 }
 
-script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_EventScript_NPC2 {
-    lock
-    faceplayer
-    msgbox(format(
-        "I'm not good at remembering type match-ups, so the card game helps me learn them a lot better!"
-    ))
-    release
+script ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardKid {
+    msgbox(format("I'm not good at remembering type match-ups, so the card game helps me learn them a lot better!"), MSGBOX_NPC)
 }
 
