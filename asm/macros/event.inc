@@ -3088,8 +3088,20 @@
 
   @ Attempts to hide an object and its template where the player will never see them
   .macro setobjecthidden localId:req
-  setobjectxy \localId, 999, 999
-  setobjectxyperm \localId, 999, 999
+  getobjectxy \localId, TEMPLATE_POSITION, VAR_0x8000, VAR_0x8001
+  addvar VAR_0x8000, 999
+  addvar VAR_0x8001, 999
+  setobjectxy \localId, VAR_0x8000, VAR_0x8001
+  setobjectxyperm \localId, VAR_0x8000, VAR_0x8001
+  .endm
+
+  @ Attempts to unhide an object and its template to the original, unhidden position
+  .macro setobjectvisible localId:req
+  getobjectxy \localId, TEMPLATE_POSITION, VAR_0x8000, VAR_0x8001
+  subvar VAR_0x8000, 999
+  subvar VAR_0x8001, 999
+  setobjectxy \localId, VAR_0x8000, VAR_0x8001
+  setobjectxyperm \localId, VAR_0x8000, VAR_0x8001
   .endm
 
   .macro setobjectmovementradius localId:req, x:req, y:req
