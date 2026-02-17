@@ -72,7 +72,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser::
 	case CAMP_PERSI_SEARCHING_FOR_CARD, ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_3
 # 54 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	case CAMP_PERSI_DEFEATED_LOSER, ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_4
-# 70 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 71 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	case CAMP_PERSI_CLAIMED_LOSER_REWARD, ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_5
 	return
 
@@ -121,10 +121,12 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_4:
 	giveitem ITEM_TM53
 # 67 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	setvar VAR_CAMP_PERSI_STATE, CAMP_PERSI_CLAIMED_LOSER_REWARD
+# 68 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+	closemessage
 	return
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_5:
-# 71 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 72 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_Text_7, MSGBOX_NPC
 	return
 
@@ -135,7 +137,7 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_6:
 
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardKid::
-# 76 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 77 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardKid_Text_0, MSGBOX_NPC
 	return
 
@@ -213,12 +215,12 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_Text_6:
 	.string "use of it.$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardLoser_Text_7:
-# 71 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 72 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	.string "I'll figure out a way to beat that kid's\n"
 	.string "Charizard fair and square!$"
 
 ISLANDGAME_CAMP_PERSI_LODGE_1_2F_Interact_CardKid_Text_0:
-# 76 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
+# 77 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1_2F/scripts.pory"
 	.string "I'm not good at remembering type\n"
 	.string "match-ups, so the card game helps me\l"
 	.string "learn them a lot better!$"

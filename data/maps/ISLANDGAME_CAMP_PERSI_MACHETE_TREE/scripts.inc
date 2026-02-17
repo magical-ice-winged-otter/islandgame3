@@ -14,194 +14,10 @@ ISLANDGAME_CAMP_PERSI_MACHETE_TREE_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 	.2byte 0
 
 
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop::
-# 15 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	goto_if_set FLAG_ANOMALY01_DEFEATED, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_1
-# 19 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_1
-	checkitem ITEM_ISLANDGAME_STRANGE_DISC
-# 0 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_ne ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_4
-	return
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_1:
-# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_0, MSGBOX_AUTOCLOSE
-	return
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_4:
-# 25 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_2, MSGBOX_YESNO
-# 27 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	compare VAR_RESULT, YES
-	goto_if_eq ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_6
-	return
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_6:
-# 28 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	closemessage
-# 29 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	special Script_FadeOutMapMusic
-# 30 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitstate
-# 32 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_3, MSGBOX_AUTOCLOSE
-# 39 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Movement_0
-# 40 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setvar VAR_RESULT, 0
-# 41 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	playse SE_ORB
-# 42 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	special DoOrbEffect
-# 43 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 300
-# 44 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	special FadeOutOrbEffect
-# 45 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, spookySpin
-# 46 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 47 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	warp MAP_ISLANDGAME_ANOMALY01_1F, 8, 15
-	return
-
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_TV::
-# 54 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_TV_Text_0, MSGBOX_AUTOCLOSE
-	return
-
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll::
-# 61 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	compare VAR_CAMP_PERSI_STATE, CAMP_PERSI_SEARCHING_FOR_CARD
-	goto_if_ne ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_1
-# 65 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_1, MSGBOX_AUTOCLOSE
-# 70 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setflag FLAG_FOLLOWERS_DISABLED
-# 71 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	hidefollower
-# 72 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 10
-# 73 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	playse SE_EXIT
-# 74 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	addobject LOCALID_TREE_CARD_LOSER
-# 75 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setobjectxy LOCALID_TREE_CARD_LOSER, 4, 4
-# 76 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 30
-# 77 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0
-# 78 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 79 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_1
-# 80 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 81 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 82 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_2, MSGBOX_AUTOCLOSE
-# 83 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 84 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	playse SE_PIN
-# 85 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2
-# 86 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 87 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 88 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_3, MSGBOX_AUTOCLOSE
-# 89 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3
-# 90 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 91 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 93 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_4, MSGBOX_AUTOCLOSE
-# 102 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3
-# 103 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 104 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 105 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0
-# 106 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 108 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_5, MSGBOX_AUTOCLOSE
-# 114 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_4
-# 115 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 116 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 30
-# 117 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	trainerbattle_no_intro TRAINER_CAMP_PERSI_THIEF, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_6
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_5
-# 119 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 120 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 122 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_7, MSGBOX_AUTOCLOSE
-# 127 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3
-# 128 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 129 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 131 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_8, MSGBOX_AUTOCLOSE
-# 138 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	delay 60
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_6
-# 140 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_9, MSGBOX_AUTOCLOSE
-# 148 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_7
-# 149 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 150 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	playse SE_EXIT
-# 151 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitse
-# 152 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setobjecthidden LOCALID_TREE_CARD_LOSER
-# 153 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	setvar VAR_CAMP_PERSI_STATE, CAMP_PERSI_DEFEATED_LOSER
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_8
-# 155 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	waitmovement
-# 156 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	giveitem ITEM_ISLANDGAME_TRADING_CARD
-# 157 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	clearflag FLAG_FOLLOWERS_DISABLED
-	return
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_1:
-# 62 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_0, MSGBOX_AUTOCLOSE
-	return
-
-
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell::
-# 162 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 15 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0
 	checkitem ITEM_ISLANDGAME_STRANGE_DISC
 # 0 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
@@ -210,153 +26,352 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell::
 	return
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_1:
-# 166 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 19 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_0
-# 167 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 20 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	waitmovement
-# 168 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 21 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay 60
-# 169 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0
-# 170 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 22 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_1
+# 23 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	waitmovement
-# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 25 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_1, MSGBOX_AUTOCLOSE
-# 179 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 32 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	removeitem ITEM_ISLANDGAME_STRANGE_DISC
 	return
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_2:
-# 165 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 18 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	goto_if_set FLAG_ANOMALY01_DEFEATED, ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_1
 	return
 
 
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop::
 # 39 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Movement_0:
-# 39 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	emote_exclamation_mark
+	goto_if_set FLAG_ANOMALY01_DEFEATED, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_1
+# 43 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_1, MSGBOX_AUTOCLOSE
+	checkitem ITEM_ISLANDGAME_STRANGE_DISC
+# 0 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_4
+	return
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_1:
+# 40 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_4:
+# 49 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_2, MSGBOX_YESNO
+# 51 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_6
+	return
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_6:
+# 52 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	closemessage
+# 53 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	special Script_FadeOutMapMusic
+# 54 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitstate
+# 56 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_3, MSGBOX_AUTOCLOSE
+# 63 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Movement_0
+# 64 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setvar VAR_RESULT, 0
+# 65 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	playse SE_ORB
+# 66 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	special DoOrbEffect
+# 67 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 300
+# 68 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	special FadeOutOrbEffect
+# 69 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, spookySpin
+# 70 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 71 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	warp MAP_ISLANDGAME_ANOMALY01_1F, 8, 15
+	return
+
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_TV::
+# 78 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_TV_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll::
+# 85 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	compare VAR_CAMP_PERSI_STATE, CAMP_PERSI_SEARCHING_FOR_CARD
+	goto_if_ne ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_1
+# 89 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_1, MSGBOX_AUTOCLOSE
+# 94 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setflag FLAG_FOLLOWERS_DISABLED
+# 95 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	hidefollower
+# 96 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 10
+# 97 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	playse SE_EXIT
+# 98 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	addobject LOCALID_TREE_CARD_LOSER
+# 99 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setobjectxy LOCALID_TREE_CARD_LOSER, 4, 4
+# 100 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 30
+# 101 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_1
+# 102 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 103 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0
+# 104 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 105 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 106 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_2, MSGBOX_AUTOCLOSE
+# 107 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 108 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	playse SE_PIN
+# 109 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_1
+# 110 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 111 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 112 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_3, MSGBOX_AUTOCLOSE
+# 113 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2
+# 114 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 115 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 117 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_4, MSGBOX_AUTOCLOSE
+# 126 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2
+# 127 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 128 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 129 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_1
+# 130 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 132 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_5, MSGBOX_AUTOCLOSE
+# 138 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3
+# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 140 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 30
+# 141 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	trainerbattle_no_intro TRAINER_CAMP_PERSI_THIEF, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_6
+# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_4
+# 143 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 144 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 146 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_7, MSGBOX_AUTOCLOSE
+# 151 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2
+# 152 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 153 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 155 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_8, MSGBOX_AUTOCLOSE
+# 162 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	delay 60
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_5
+# 164 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 166 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_9, MSGBOX_AUTOCLOSE
+# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement LOCALID_TREE_CARD_LOSER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_6
+# 173 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 174 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	playse SE_EXIT
+# 175 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitse
+# 176 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setobjecthidden LOCALID_TREE_CARD_LOSER
+# 177 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	setvar VAR_CAMP_PERSI_STATE, CAMP_PERSI_DEFEATED_LOSER
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_7
+# 179 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	waitmovement
+# 180 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	giveitem ITEM_ISLANDGAME_TRADING_CARD
+# 181 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	clearflag FLAG_FOLLOWERS_DISABLED
+# 182 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	closemessage
+	return
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_1:
+# 86 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+# 19 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_0:
+# 19 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	face_up
 	step_end
 
-# 77 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0:
-# 77 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 22 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_1:
+# 22 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	emote_question_mark
 	step_end
 
-# 79 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_1:
-# 79 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 63 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Movement_0:
+# 63 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	emote_exclamation_mark
+	step_end
+
+# 103 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_0:
+# 103 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_down
 	step_end
 
-# 85 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2:
-# 85 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 109 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_1:
+# 109 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	emote_exclamation_mark
-# 85 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 109 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_in_place_faster_up
 	step_end
 
-# 89 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3:
-# 89 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 113 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_2:
+# 113 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 114 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_4:
-# 114 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 138 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_3:
+# 138 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_up
 	step_end
 
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_5:
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_4:
+# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_up
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	lock_facing_direction
-# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 142 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_6:
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_5:
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_up
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_down
-# 139 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 148 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_7:
-# 148 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_6:
+# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_down
-# 148 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	unlock_facing_direction
-# 148 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 172 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_down
 	step_end
 
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_8:
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_7:
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	face_up
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	walk_in_place_faster_up
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
-# 154 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 178 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	delay_16
 	step_end
 
-# 166 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Movement_0:
-# 166 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	face_up
-	step_end
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0:
+# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	.string "hi$"
+
+ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_1:
+# 26 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+	.string "...\p"
+	.string "{COLOR RED}(Augh... my head...)\p"
+	.string "(What in the world was all of that? Was\n"
+	.string "it all just a dream?)\p"
+	.string "(Seems like the program's deleted itself\n"
+	.string "as well...)$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_0:
-# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 40 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "> You try to open “LostSilver.exe”, but\n"
 	.string "it just results in an error.$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_1:
-# 20 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 44 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "It's a dusty old laptop. It looks like\n"
 	.string "it's been here for years.\p"
 	.string "There seems to still be some power in it.\n"
 	.string "You could probably still use it.$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_2:
-# 25 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 49 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "Insert the strange disc into the\n"
 	.string "laptop?$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_3:
-# 33 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 57 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "> You booted up the laptop and inserted\n"
 	.string "the disc.\p"
 	.string "“LostSilver.exe” is automatically\n"
@@ -366,33 +381,33 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_Laptop_Text_3:
 	.string "while attempting to run the game.)$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_TV_Text_0:
-# 55 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 79 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "It's a really old television set riddled\n"
 	.string "with cobwebs.\p"
 	.string "You tried to turn it on, but nothing\n"
 	.string "happened.$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_0:
-# 62 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 86 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "{COLOR RED}(It's just a regular old Gulpin doll.)$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_1:
-# 66 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 90 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "{COLOR RED}(It's just a regular old Gulpin doll.)\p"
 	.string "(Oh? There seems to be something\n"
 	.string "stashed inside it...)$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_2:
-# 82 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 106 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "Huh? What are you doing here?$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_3:
-# 88 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 112 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "H-Hey! You were snooping around in my\n"
 	.string "secret base, weren't you!?$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_4:
-# 94 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 118 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "Mrgrgr... {PAUSE 30}Fine! You got me! I stole it! I'm\n"
 	.string "the one who took that camper's card!\p"
 	.string "It's not fair! I've been using up my\n"
@@ -408,7 +423,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_4:
 	.string "gonna tattle on me, aren't you?$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_5:
-# 109 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 133 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "H-Huh? You'll let me go... if I just beat\n"
 	.string "you in a Pokémon battle?\p"
 	.string "Heh... I guess have no choice but to\n"
@@ -417,11 +432,11 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_5:
 	.string "Pokémon!$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_6:
-# 117 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 141 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "T-This isn't right! I should've won!$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_7:
-# 123 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 147 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "I don't get it... My Pokémon should've\n"
 	.string "won! They're much stronger then yours!\p"
 	.string "Is...{PAUSE 30} power not all there is to battling?\n"
@@ -429,7 +444,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_7:
 	.string "Pokémon with the right strategy?$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_8:
-# 132 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 156 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "I... I see. That's what you were trying\n"
 	.string "to teach me with that battle, wasn't it?\p"
 	.string "To show me how dumb it was of me to get\n"
@@ -440,23 +455,10 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_8:
 	.string "crimes...$"
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Text_9:
-# 143 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
+# 167 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "Huh? You won't tell on me? B-But, I\n"
 	.string "lost...\p"
 	.string "...\p"
 	.string "O-Okay. Thank you so much! I won't\n"
 	.string "forget your kindness, trainer! I\l"
 	.string "promise to never ever steal again!$"
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0:
-# 163 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	.string "hi$"
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_1:
-# 173 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	.string "...\p"
-	.string "{COLOR RED}(Augh... my head...)\p"
-	.string "(What in the world was all of that? Was\n"
-	.string "it all just a dream?)\p"
-	.string "(Seems like the program's deleted itself\n"
-	.string "as well...)$"

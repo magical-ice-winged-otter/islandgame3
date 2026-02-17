@@ -272,6 +272,8 @@ ISLANDGAME_CAMP_PERSI_LODGE_1_1F_Trigger_BlockingTV_Movement_0:
 # 140 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	walk_right
 # 140 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
+	walk_right
+# 140 "data/maps/ISLANDGAME_CAMP_PERSI_LODGE_1/scripts.pory"
 	face_left
 	step_end
 
