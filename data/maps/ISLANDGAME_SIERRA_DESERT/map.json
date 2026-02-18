@@ -5,7 +5,7 @@
   "music": "MUS_HG_VERMILION",
   "region_map_section": "MAPSEC_SIERRA_PATH",
   "requires_flash": false,
-  "weather": "WEATHER_NONE",
+  "weather": "WEATHER_SANDSTORM",
   "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,

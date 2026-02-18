@@ -1,4 +1,19 @@
 mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {
     MAP_SCRIPT_ON_LOAD {
+        mapgen_init
+        mapgen_addspace(1, 1, 18, 12)
+        mapgen_spawn(8, 19, 12, 22)
+        mapgen_spawn(4, 19, 6, 22)
+        mapgen_spawn(16, 21, 18, 22)
+        mapgen_spawn(1, 19, 2, 20)
+        mapgen_spawn(1, 19, 2, 20)
+        mapgen_spawn(1, 19, 2, 20)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
+        mapgen_spawn(1, 22, 1, 22)
     }
 }
