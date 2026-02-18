@@ -5,26 +5,29 @@ struct Mapgen_Coordinates
     int x, y;
 };
 
-static unsigned int Mapgen_Random(struct Mapgen_Map *map);
-static int Mapgen_RandomRange(struct Mapgen_Map *map, int minInclusive, int maxInclusive);
-static int Mapgen_RandomWeightedArray(struct Mapgen_Map *map, const int *weights, int weightCount, int weightSum);
-static int Mapgen_FindSpace(struct Mapgen_Map *map, int width, int height);
-static void Mapgen_FreeSpace(struct Mapgen_Map *map, int spaceIndex);
-static struct Mapgen_Coordinates Mapgen_GetRandomPositionInSpace(struct Mapgen_Map *map, int spaceIndex, int width, int height);
-static void Mapgen_SliceSpace(struct Mapgen_Map *map, int spaceIndex, int x, int y, int w, int h);
+// TODO(poe): Update random generator to use u16 seeds?
+// TODO(poe): Optimize by avoiding modulo operations? (see: base game random code)
 
-void Mapgen_Init(struct Mapgen_Map *map, int randomSeed)
+static unsigned int Mapgen_Random(struct Mapgen_Generator *generator);
+static int Mapgen_RandomRange(struct Mapgen_Generator *generator, int minInclusive, int maxInclusive);
+static int Mapgen_RandomWeightedArray(struct Mapgen_Generator *generator, const int *weights, int weightCount, int weightSum);
+static int Mapgen_FindSpace(struct Mapgen_Generator *generator, int width, int height);
+static void Mapgen_FreeSpace(struct Mapgen_Generator *generator, int spaceIndex);
+static struct Mapgen_Coordinates Mapgen_GetRandomPositionInSpace(struct Mapgen_Generator *generator, int spaceIndex, int width, int height);
+static void Mapgen_SplitSpace(struct Mapgen_Generator *generator, int spaceIndex, int x, int y, int w, int h);
+
+void Mapgen_Init(struct Mapgen_Generator *generator, int randomSeed)
 {
-    map->spaceCount = 0;
-    map->randomSeed = randomSeed;
+    generator->spaceCount = 0;
+    generator->randomSeed = randomSeed;
 }
 
-void Mapgen_AddSpace_LRTB(struct Mapgen_Map *map, int left, int right, int top, int bottom)
+void Mapgen_AddSpace_LRTB(struct Mapgen_Generator *generator, int left, int right, int top, int bottom)
 {
-    if (map->spaceCount < MAPGEN_MAX_SPACES)
+    if (generator->spaceCount < MAPGEN_MAX_SPACES)
     {
         struct Mapgen_Space *space;
-        space = &map->spaces[map->spaceCount++];
+        space = &generator->spaces[generator->spaceCount++];
         space->x = left;
         space->y = top;
         space->width = right - left;
@@ -32,12 +35,12 @@ void Mapgen_AddSpace_LRTB(struct Mapgen_Map *map, int left, int right, int top, 
     }
 }
 
-void Mapgen_AddSpace_XYWH(struct Mapgen_Map *map, int x, int y, int width, int height)
+void Mapgen_AddSpace_XYWH(struct Mapgen_Generator *generator, int x, int y, int width, int height)
 {
-    if (map->spaceCount < MAPGEN_MAX_SPACES)
+    if (generator->spaceCount < MAPGEN_MAX_SPACES)
     {
         struct Mapgen_Space *space;
-        space = &map->spaces[map->spaceCount++];
+        space = &generator->spaces[generator->spaceCount++];
         space->x = x;
         space->y = y;
         space->width = width;
@@ -45,21 +48,21 @@ void Mapgen_AddSpace_XYWH(struct Mapgen_Map *map, int x, int y, int width, int h
     }
 }
 
-struct Mapgen_Result Mapgen_GenerateNoSplit(struct Mapgen_Map *map, int width, int height)
+struct Mapgen_Result Mapgen_GenerateNoSplit(struct Mapgen_Generator *generator, int width, int height)
 {
     struct Mapgen_Result result;
     int spaceIndex;
-    spaceIndex = Mapgen_FindSpace(map, width, height);
+    spaceIndex = Mapgen_FindSpace(generator, width, height);
 
-    if (spaceIndex == map->spaceCount)
+    if (spaceIndex == generator->spaceCount)
     {
         result.isValid = FALSE;
     }
     else
     {
         struct Mapgen_Coordinates randomPosition;
-        randomPosition = Mapgen_GetRandomPositionInSpace(map, spaceIndex, width, height);
-        Mapgen_FreeSpace(map, spaceIndex);
+        randomPosition = Mapgen_GetRandomPositionInSpace(generator, spaceIndex, width, height);
+        Mapgen_FreeSpace(generator, spaceIndex);
 
         result.x = randomPosition.x;
         result.y = randomPosition.y;
@@ -69,21 +72,21 @@ struct Mapgen_Result Mapgen_GenerateNoSplit(struct Mapgen_Map *map, int width, i
     return result;
 }
 
-struct Mapgen_Result Mapgen_Generate(struct Mapgen_Map *map, int width, int height)
+struct Mapgen_Result Mapgen_Generate(struct Mapgen_Generator *generator, int width, int height)
 {
     struct Mapgen_Result result;
     int spaceIndex;
-    spaceIndex = Mapgen_FindSpace(map, width, height);
+    spaceIndex = Mapgen_FindSpace(generator, width, height);
 
-    if (spaceIndex == map->spaceCount)
+    if (spaceIndex == generator->spaceCount)
     {
         result.isValid = FALSE;
     }
     else
     {
         struct Mapgen_Coordinates randomPosition;
-        randomPosition = Mapgen_GetRandomPositionInSpace(map, spaceIndex, width, height);
-        Mapgen_SliceSpace(map, spaceIndex, randomPosition.x, randomPosition.y, width, height);
+        randomPosition = Mapgen_GetRandomPositionInSpace(generator, spaceIndex, width, height);
+        Mapgen_SplitSpace(generator, spaceIndex, randomPosition.x, randomPosition.y, width, height);
 
         result.x = randomPosition.x;
         result.y = randomPosition.y;
@@ -93,30 +96,30 @@ struct Mapgen_Result Mapgen_Generate(struct Mapgen_Map *map, int width, int heig
     return result;
 }
 
-static unsigned int Mapgen_Random(struct Mapgen_Map *map)
+static unsigned int Mapgen_Random(struct Mapgen_Generator *generator)
 {
     // xorshift-32: https://en.wikipedia.org/wiki/Xorshift
     unsigned int x;
-    x = map->randomSeed;
+    x = generator->randomSeed;
     x ^= x << 13;
     x ^= x >> 17;
     x ^= x << 5;
-    map->randomSeed = x;
+    generator->randomSeed = x;
     return x;
 }
 
-static int Mapgen_RandomRange(struct Mapgen_Map *map, int minInclusive, int maxInclusive)
+static int Mapgen_RandomRange(struct Mapgen_Generator *generator, int minInclusive, int maxInclusive)
 {
     unsigned int range = maxInclusive - minInclusive + 1;
-    unsigned int offset = Mapgen_Random(map) % range;
+    unsigned int offset = Mapgen_Random(generator) % range;
     return minInclusive + offset;
 }
 
-static int Mapgen_RandomWeightedArray(struct Mapgen_Map *map, const int *weights, int weightCount, int weightSum)
+static int Mapgen_RandomWeightedArray(struct Mapgen_Generator *generator, const int *weights, int weightCount, int weightSum)
 {
     // https://github.com/rh-hideout/pokeemerald-expansion/blob/56f22adc158ca840eba154152fccb456e7083bd6/src/random.c#L191
     int i, targetSum;
-    targetSum = Mapgen_RandomRange(map, 0, weightSum);
+    targetSum = Mapgen_RandomRange(generator, 0, weightSum);
 
     for (i = 0; i < weightCount - 1; i++)
     {
@@ -131,82 +134,87 @@ static int Mapgen_RandomWeightedArray(struct Mapgen_Map *map, const int *weights
     return weightCount - 1;
 }
 
-static int spaceIndices[MAPGEN_MAX_SPACES];
-static int spaceWeights[MAPGEN_MAX_SPACES];
+#define MAPGEN_MAX_VALID_SPACES 5
 
 // Returns a random free space from all of the spaces that are big enough, with bigger spaces more likely to be chosen 
-static int Mapgen_FindSpace(struct Mapgen_Map *map, int width, int height)
+static int Mapgen_FindSpace(struct Mapgen_Generator *generator, int width, int height)
 {
-    int spaceIndexCount = 0;
+    int validSpaceIndices[MAPGEN_MAX_VALID_SPACES];
+    int validSpaceWeights[MAPGEN_MAX_VALID_SPACES];
+    int validSpaceCount = 0;
     int totalWeight = 0;
     int i;
 
-    for (i = 0; i < map->spaceCount; i++)
+    for (i = 0; i < generator->spaceCount; i++)
     {
-        int spaceWidth = map->spaces[i].width;
-        int spaceHeight = map->spaces[i].height;
+        int spaceWidth = generator->spaces[i].width;
+        int spaceHeight = generator->spaces[i].height;
 
         if (spaceWidth >= width && spaceHeight >= height)
         {
-            int index = spaceIndexCount++;
             int weight = spaceWidth * spaceHeight;
-            spaceIndices[index] = i;
-            spaceWeights[index] = weight;
+            validSpaceIndices[validSpaceCount] = i;
+            validSpaceWeights[validSpaceCount] = weight;
             totalWeight += weight;
+
+            if (validSpaceCount++ >= MAPGEN_MAX_VALID_SPACES)
+            {
+                break;
+            }
         }
     }
 
-    if (spaceIndexCount == 0)
+    if (validSpaceCount == 0)
     {
-        return map->spaceCount;
+        return generator->spaceCount;
     }
     else 
     {
-        int randomIndex = Mapgen_RandomWeightedArray(map, spaceWeights, spaceIndexCount, totalWeight);
-        int randomSpaceIndex = spaceIndices[randomIndex];
+        int randomIndex = Mapgen_RandomWeightedArray(generator, validSpaceWeights, validSpaceCount, totalWeight);
+        int randomSpaceIndex = validSpaceIndices[randomIndex];
         return randomSpaceIndex;
     }
 }
 
-static struct Mapgen_Coordinates Mapgen_GetRandomPositionInSpace(struct Mapgen_Map *map, int spaceIndex, int width, int height)
+static struct Mapgen_Coordinates Mapgen_GetRandomPositionInSpace(struct Mapgen_Generator *generator, int spaceIndex, int width, int height)
 {
     struct Mapgen_Space space;
     struct Mapgen_Coordinates coordinates;
-    space = map->spaces[spaceIndex];
-    coordinates.x = Mapgen_RandomRange(map, space.x, space.x + (space.width - width));
-    coordinates.y = Mapgen_RandomRange(map, space.y, space.y + (space.height - height));
+    space = generator->spaces[spaceIndex];
+    coordinates.x = Mapgen_RandomRange(generator, space.x, space.x + (space.width - width));
+    coordinates.y = Mapgen_RandomRange(generator, space.y, space.y + (space.height - height));
     return coordinates;
 }
 
-static void Mapgen_FreeSpace(struct Mapgen_Map *map, int spaceIndex)
+static void Mapgen_FreeSpace(struct Mapgen_Generator *generator, int spaceIndex)
 {
-    map->spaces[spaceIndex] = map->spaces[map->spaceCount - 1];
-    map->spaceCount--;
+    generator->spaces[spaceIndex] = generator->spaces[generator->spaceCount - 1];
+    generator->spaceCount--;
 }
 
-static void Mapgen_SliceSpace(struct Mapgen_Map *map, int spaceIndex, int x, int y, int w, int h)
+static void Mapgen_SplitSpace(struct Mapgen_Generator *generator, int spaceIndex, int x, int y, int w, int h)
 {
     int leftBorder, rightBorder, topBorder, bottomBorder;
     int leftSplit, rightSplit, topSplit, bottomSplit;
     int leftDistance, rightDistance, topDistance, bottomDistance;
 
     leftSplit = x;
-    leftBorder = map->spaces[spaceIndex].x;
+    leftBorder = generator->spaces[spaceIndex].x;
     leftDistance = leftSplit - leftBorder;
 
     topSplit = y;
-    topBorder = map->spaces[spaceIndex].y;
+    topBorder = generator->spaces[spaceIndex].y;
     topDistance = topSplit - topBorder;
 
     rightSplit = x + w;
-    rightBorder = leftBorder + map->spaces[spaceIndex].width;
+    rightBorder = leftBorder + generator->spaces[spaceIndex].width;
     rightDistance = rightBorder - rightSplit;
 
     bottomSplit = y + h;
-    bottomBorder = topBorder + map->spaces[spaceIndex].height;
+    bottomBorder = topBorder + generator->spaces[spaceIndex].height;
     bottomDistance = bottomBorder - bottomSplit;
 
-    Mapgen_FreeSpace(map, spaceIndex);
+    Mapgen_FreeSpace(generator, spaceIndex);
 
     // We want to avoid small spaces, so prioritize whichever sides are larger 
     if (leftDistance + rightDistance > bottomDistance + topDistance)
@@ -220,22 +228,22 @@ static void Mapgen_SliceSpace(struct Mapgen_Map *map, int spaceIndex, int x, int
 
         if (leftDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftBorder, leftSplit, topBorder, bottomBorder);
+            Mapgen_AddSpace_LRTB(generator, leftBorder, leftSplit, topBorder, bottomBorder);
         }
 
         if (rightDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, rightSplit, rightBorder, topBorder, bottomBorder);
+            Mapgen_AddSpace_LRTB(generator, rightSplit, rightBorder, topBorder, bottomBorder);
         }
 
         if (bottomDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftSplit, rightSplit, bottomSplit, bottomBorder);
+            Mapgen_AddSpace_LRTB(generator, leftSplit, rightSplit, bottomSplit, bottomBorder);
         }
 
         if (topDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftSplit, rightSplit, topBorder, topSplit);
+            Mapgen_AddSpace_LRTB(generator, leftSplit, rightSplit, topBorder, topSplit);
         }
     }
     else
@@ -249,22 +257,22 @@ static void Mapgen_SliceSpace(struct Mapgen_Map *map, int spaceIndex, int x, int
 
         if (leftDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftBorder, leftSplit, topSplit, bottomSplit);
+            Mapgen_AddSpace_LRTB(generator, leftBorder, leftSplit, topSplit, bottomSplit);
         }
 
         if (rightDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, rightSplit, rightBorder, topSplit, bottomSplit);
+            Mapgen_AddSpace_LRTB(generator, rightSplit, rightBorder, topSplit, bottomSplit);
         }
 
         if (bottomDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftBorder, rightBorder, bottomSplit, bottomBorder);
+            Mapgen_AddSpace_LRTB(generator, leftBorder, rightBorder, bottomSplit, bottomBorder);
         }
 
         if (topDistance > 0)
         {
-            Mapgen_AddSpace_LRTB(map, leftBorder, rightBorder, topBorder, topSplit);
+            Mapgen_AddSpace_LRTB(generator, leftBorder, rightBorder, topBorder, topSplit);
         }
     }
 }
