@@ -61,6 +61,7 @@ script Debug_EventScript_LocationTeleportMenu {
     dynmultipush("Rocky Path", MAP_ISLANDGAME_ROCKY_PATH)
     dynmultipush("Bellehaven", MAP_ISLANDGAME_BELLEHAVEN)
     dynmultipush("Aetheria", MAP_ISLANDGAME_AETHERIA)
+    dynmultipush("Sierra Desert", MAP_ISLANDGAME_SIERRA_DESERT)
     dynmultistack(0,0,TRUE,8,FALSE,0,DYN_MULTICHOICE_CB_NONE)
 
     switch (var(VAR_RESULT)) {
@@ -80,6 +81,7 @@ script Debug_EventScript_LocationTeleportMenu {
         case MAP_ISLANDGAME_ROCKY_PATH:             warp(MAP_ISLANDGAME_ROCKY_PATH, 63, 40)
         case MAP_ISLANDGAME_BELLEHAVEN:             warp(MAP_ISLANDGAME_BELLEHAVEN, 21, 28)
         case MAP_ISLANDGAME_AETHERIA:               warp(MAP_ISLANDGAME_AETHERIA, 60, 26)
+        case MAP_ISLANDGAME_SIERRA_DESERT:          warp(MAP_ISLANDGAME_SIERRA_DESERT, 9, 7)
     }
 	  release
 }

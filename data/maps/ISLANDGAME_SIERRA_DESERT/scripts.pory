@@ -1,1 +1,4 @@
-mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {}
+mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {
+    MAP_SCRIPT_ON_LOAD {
+    }
+}

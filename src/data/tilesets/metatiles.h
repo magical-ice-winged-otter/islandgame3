@@ -332,3 +332,6 @@ const u16 gMetatileAttributes_islandgame_kanto_pokemontower[] = INCBIN_U16("data
 
 const u16 gMetatiles_islandgame_lumine_aetheria[] = INCBIN_U16("data/tilesets/primary/islandgame_lumine_aetheria/metatiles.bin");
 const u16 gMetatileAttributes_islandgame_lumine_aetheria[] = INCBIN_U16("data/tilesets/primary/islandgame_lumine_aetheria/metatile_attributes.bin");
+
+const u16 gMetatiles_islandgame_lumine_sierra_desert[] = INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/metatiles.bin");
+const u16 gMetatileAttributes_islandgame_lumine_sierra_desert[] = INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/metatile_attributes.bin");

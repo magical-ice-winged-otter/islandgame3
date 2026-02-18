@@ -12,6 +12,9 @@
 #include "main.h"
 #include "event_object_movement.h"
 #include "follower_npc.h"
+#include "islandgame_mapgen.h"
+#include "random.h"
+#include "fieldmap.h"
 
 void CheckDexCount(void)
 {
@@ -86,4 +89,45 @@ void setTime(void)
     u16 minutes = gSpecialVar_0x800B;
     u16 seconds = gSpecialVar_0x8014;
     RtcCalcLocalTimeOffset(days, hours, minutes, seconds);
+}
+
+static struct Mapgen_Map sMapGenerator;
+
+void Script_MapgenInit(void)
+{
+    Mapgen_Init(&sMapGenerator, Random());
+}
+
+void Script_MapgenAddSpace(void)
+{
+    u16 xMin = gSpecialVar_0x8000;
+    u16 yMin = gSpecialVar_0x8001;
+    u16 xMax = gSpecialVar_0x8002;
+    u16 yMax = gSpecialVar_0x8003;
+    Mapgen_AddSpace_XYWH(&sMapGenerator, xMin, yMin, xMax - xMin, yMax - yMin);
+}
+
+void Script_MapgenSpawn(void)
+{
+    u16 xMin = gSpecialVar_0x8000;
+    u16 yMin = gSpecialVar_0x8001;
+    u16 xMax = gSpecialVar_0x8002;
+    u16 yMax = gSpecialVar_0x8003;
+    int width = xMax - xMin + 1;
+    int height = yMax - yMin + 1;
+    struct Mapgen_Result result = Mapgen_Generate(&sMapGenerator, width, height);
+
+    if (result.isValid)
+    {
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                u32 metatileId = MapGridGetMetatileIdAt(xMin + x + MAP_OFFSET, yMin + y + MAP_OFFSET);
+                MapGridSetMetatileIdAt(result.x + x + MAP_OFFSET, result.y + y + MAP_OFFSET, metatileId);
+            }
+        }
+
+        DrawWholeMapView();
+    }
 }

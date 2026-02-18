@@ -3127,4 +3127,24 @@
   call Common_AttemptTrade
   .endm
 
+  .macro mapgen_init
+  callnative Script_MapgenInit
+  .endm
+
+  .macro mapgen_addspace xMin:req, yMin:req, xMax:req, yMax:req
+  setorcopyvar VAR_0x8000, \xMin
+  setorcopyvar VAR_0x8001, \yMin
+  setorcopyvar VAR_0x8002, \xMax
+  setorcopyvar VAR_0x8003, \yMax
+  callnative Script_MapgenAddSpace
+  .endm
+
+  .macro mapgen_spawn xMin:req, yMin:req, xMax:req, yMax:req
+  setorcopyvar VAR_0x8000, \xMin
+  setorcopyvar VAR_0x8001, \yMin
+  setorcopyvar VAR_0x8002, \xMax
+  setorcopyvar VAR_0x8003, \yMax
+  callnative Script_MapgenSpawn
+  .endm
+
 @ end island-game
