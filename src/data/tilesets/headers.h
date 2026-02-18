@@ -1294,3 +1294,14 @@ const struct Tileset gTileset_islandgame_lumine_aetheria =
     .metatileAttributes = gMetatileAttributes_islandgame_lumine_aetheria,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_islandgame_lumine_sierra_desert =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_islandgame_lumine_sierra_desert,
+    .palettes = gTilesetPalettes_islandgame_lumine_sierra_desert,
+    .metatiles = gMetatiles_islandgame_lumine_sierra_desert,
+    .metatileAttributes = gMetatileAttributes_islandgame_lumine_sierra_desert,
+    .callback = NULL,
+};

@@ -3127,4 +3127,57 @@
   call Common_AttemptTrade
   .endm
 
+  @ Mapgen
+  @ TODO(poe): probably better for these to be scrcmds and not clobber variables?
+
+  .macro mapgen_begin
+  callnative Mapgen_Script_Begin
+  .endm
+
+  .macro mapgen_end
+  callnative Mapgen_Script_End
+  .endm
+
+  .macro mapgen_set_seed seed:req
+  setorcopyvar VAR_0x8000, \seed
+  callnative Mapgen_Script_SetSeed
+  .endm
+
+  .macro mapgen_set_prefab id:req, xMin:req, yMin:req, xMax:req, yMax:req
+  setorcopyvar VAR_0x8000, \id
+  setorcopyvar VAR_0x8001, \xMin
+  setorcopyvar VAR_0x8002, \yMin
+  setorcopyvar VAR_0x8003, \xMax
+  setorcopyvar VAR_0x8004, \yMax
+  callnative Mapgen_Script_SetPrefab
+  .endm
+
+  .macro mapgen_space xMin:req, yMin:req, xMax:req, yMax:req
+  setorcopyvar VAR_0x8000, \xMin
+  setorcopyvar VAR_0x8001, \yMin
+  setorcopyvar VAR_0x8002, \xMax
+  setorcopyvar VAR_0x8003, \yMax
+  callnative Mapgen_Script_Space
+  .endm
+
+  .macro mapgen_spawn id:req, count:req
+  setorcopyvar VAR_0x8000, \id
+  setorcopyvar VAR_0x8001, \count
+  callnative Mapgen_Script_Spawn
+  .endm
+
+  .macro mapgen_spawn_single xMin:req, yMin:req, xMax:req, yMax:req
+  setorcopyvar VAR_0x8000, \xMin
+  setorcopyvar VAR_0x8001, \yMin
+  setorcopyvar VAR_0x8002, \xMax
+  setorcopyvar VAR_0x8003, \yMax
+  callnative Mapgen_Script_SpawnSingle
+  .endm
+
+  .macro mapgen_spawn_nosplit id:req, count:req
+  setorcopyvar VAR_0x8000, \id
+  setorcopyvar VAR_0x8001, \count
+  callnative Mapgen_Script_SpawnNoSplit
+  .endm
+
 @ end island-game

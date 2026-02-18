@@ -2417,3 +2417,22 @@ const u16 gTilesetPalettes_islandgame_lumine_aetheria[][16] =
 };
 
 const u32 gTilesetTiles_islandgame_lumine_aetheria[] = INCBIN_U32("data/tilesets/primary/islandgame_lumine_aetheria/tiles.4bpp.smol");
+
+const u16 gTilesetPalettes_islandgame_lumine_sierra_desert[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_islandgame_lumine_sierra_desert[] = INCBIN_U32("data/tilesets/secondary/islandgame_lumine_sierra_desert/tiles.4bpp.lz");

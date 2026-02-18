@@ -88,6 +88,7 @@ $(eval $(call secondary-tileset-macro,islandgame_lumine_therion_path,islandgame_
 $(eval $(call secondary-tileset-macro,islandgame_cave_1,islandgame_general))
 $(eval $(call secondary-tileset-macro,islandgame_kanto_pokemontower,islandgame_kanto_building))
 $(eval $(call secondary-tileset-macro,islandgame_kanto_powerplant,islandgame_kanto_building))
+$(eval $(call secondary-tileset-macro,islandgame_lumine_sierra_desert,islandgame_general))
 
 # To debug the macro, try this info log:
 # $(info The generated rule string is: [$(call secondary-tileset-macro,test-secondary,general2)])

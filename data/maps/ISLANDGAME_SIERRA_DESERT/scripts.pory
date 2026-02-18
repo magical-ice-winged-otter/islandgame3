@@ -1,1 +1,34 @@
-mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {}
+const PREFAB_LARGE_ROCK = 0
+const PREFAB_MEDIUM_ROCK = 1
+const PREFAB_SMALL_ROCK = 2
+const PREFAB_TINY_ROCK = 3
+
+mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {
+    MAP_SCRIPT_ON_LOAD {
+        mapgen_begin
+        mapgen_set_seed(VAR_MAPGEN_SEED)
+        mapgen_set_prefab(PREFAB_LARGE_ROCK, 4, 19, 6, 22)
+        mapgen_set_prefab(PREFAB_MEDIUM_ROCK, 16, 21, 18, 22)
+        mapgen_set_prefab(PREFAB_SMALL_ROCK, 1, 19, 2, 20)
+        mapgen_set_prefab(PREFAB_TINY_ROCK, 1, 22, 1, 22)
+        mapgen_space(1, 1, 18, 12)
+        mapgen_spawn_single(15, 18, 17, 20) // update seed sign
+        mapgen_spawn_single(8, 19, 12, 22) // huge rock
+        mapgen_spawn(PREFAB_LARGE_ROCK, 2)
+        mapgen_spawn(PREFAB_MEDIUM_ROCK, 3)
+        mapgen_spawn_nosplit(PREFAB_SMALL_ROCK, 4)
+        mapgen_spawn_nosplit(PREFAB_TINY_ROCK, 5)
+        mapgen_end
+    }
+}
+
+script ISLANDGAME_SIERRA_DESERT_Interact_Sign_UpdateSeed {
+    msgbox(format("Would you like to update the seed?"), MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        random(100)
+        copyvar(VAR_MAPGEN_SEED, VAR_RESULT)
+    }
+
+    closemessage
+}

@@ -57,6 +57,7 @@ static const u8 nameApplevine[] = _("Applevine");
 static const u8 nameRockyPath[] = _("Rocky Path");
 static const u8 nameBellehaven[] = _("Bellehaven");
 static const u8 nameAetheria[] = _("Aetheria");
+static const u8 nameSierraDesert[] = _("Sierra Desert");
 
 /// TODO(deprecated)
 static const Location LOCATION_DATA[] = {
@@ -79,6 +80,7 @@ static const Location LOCATION_DATA[] = {
     /* 13 */ LOCATION(nameRockyPath, MAP_ISLANDGAME_ROCKY_PATH, 63, 40),
     /* 14 */ LOCATION(nameBellehaven, MAP_ISLANDGAME_BELLEHAVEN, 21, 28),
     /* 15 */ LOCATION(nameAetheria, MAP_ISLANDGAME_AETHERIA, 60, 26),
+    /* 16 */ LOCATION(nameSierraDesert, MAP_ISLANDGAME_SIERRA_DESERT, 9, 7),
 };
 
 #define LOCATION_COUNT (sizeof(LOCATION_DATA)/sizeof(Location))

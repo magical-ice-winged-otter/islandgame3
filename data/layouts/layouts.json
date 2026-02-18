@@ -5286,8 +5286,8 @@
       "name": "ISLANDGAME_SIERRA_PATH_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_islandgame_lumine_general",
-      "secondary_tileset": "gTileset_islandgame_lumine_sierra_path",
+      "primary_tileset": "gTileset_islandgame_oranna_general",
+      "secondary_tileset": "gTileset_islandgame_oranna_cheriport",
       "border_filepath": "data/layouts/ISLANDGAME_SIERRA_PATH/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_SIERRA_PATH/map.bin"
     },
@@ -5295,9 +5295,9 @@
       "id": "LAYOUT_ISLANDGAME_SIERRA_DESERT",
       "name": "ISLANDGAME_SIERRA_DESERT_Layout",
       "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_islandgame_lumine_general",
-      "secondary_tileset": "gTileset_islandgame_lumine_sierra_path",
+      "height": 24,
+      "primary_tileset": "gTileset_islandgame_oranna_general",
+      "secondary_tileset": "gTileset_islandgame_oranna_cheriport",
       "border_filepath": "data/layouts/ISLANDGAME_SIERRA_DESERT/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_SIERRA_DESERT/map.bin"
     },
