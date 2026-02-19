@@ -5245,7 +5245,7 @@
       "id": "LAYOUT_ISLANDGAME_AETHERIA",
       "name": "ISLANDGAME_AETHERIA_Layout",
       "width": 78,
-      "height": 36,
+      "height": 37,
       "primary_tileset": "gTileset_islandgame_lumine_aetheria",
       "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA/border.bin",
@@ -5286,8 +5286,8 @@
       "name": "ISLANDGAME_SIERRA_PATH_Layout",
       "width": 20,
       "height": 20,
-      "primary_tileset": "gTileset_islandgame_oranna_general",
-      "secondary_tileset": "gTileset_islandgame_oranna_cheriport",
+      "primary_tileset": "gTileset_islandgame_lumine_general",
+      "secondary_tileset": "gTileset_islandgame_lumine_sierra_path",
       "border_filepath": "data/layouts/ISLANDGAME_SIERRA_PATH/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_SIERRA_PATH/map.bin"
     },
@@ -5295,9 +5295,9 @@
       "id": "LAYOUT_ISLANDGAME_SIERRA_DESERT",
       "name": "ISLANDGAME_SIERRA_DESERT_Layout",
       "width": 20,
-      "height": 24,
-      "primary_tileset": "gTileset_islandgame_oranna_general",
-      "secondary_tileset": "gTileset_islandgame_oranna_cheriport",
+      "height": 20,
+      "primary_tileset": "gTileset_islandgame_lumine_general",
+      "secondary_tileset": "gTileset_islandgame_lumine_sierra_path",
       "border_filepath": "data/layouts/ISLANDGAME_SIERRA_DESERT/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_SIERRA_DESERT/map.bin"
     },
@@ -5855,11 +5855,21 @@
       "id": "LAYOUT_ISLANDGAME_AETHERIA_2",
       "name": "ISLANDGAME_AETHERIA_2_Layout",
       "width": 78,
-      "height": 34,
+      "height": 33,
       "primary_tileset": "gTileset_islandgame_lumine_aetheria",
       "secondary_tileset": "gTileset_islandgame_lumine_aetheria_secondary",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_BATTLE_CAFE",
+      "name": "ISLANDGAME_AETHERIA_BATTLE_CAFE_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/map.bin"
     }
   ]
 }

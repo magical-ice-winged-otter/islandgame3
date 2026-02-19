@@ -434,11 +434,10 @@ script ISLANDGAME_AETHERIA_NPC12 {
     lock
     faceplayer
     msgbox(format(
-        "Ever imagined what it would be like to send out one of the Isle Guardians out into battle? Or how about even the great Guardian of the Sea?\p"
+        "Ever imagined what it would be like to send out one of the Isle Guardians out into battle?\pOr how about even the great Guardian of the Sea?\p"
         "Well now you can, with our newest Pokémon TCG special expansion, Maryan Masters!\p"
         "This special mega set contains ALL of the Pokémon that can be found here in the isles, including regional variants, the legendary Isle Guardians, and you guessed it... our lord and savior, Lugia!\p"
-        "What are you waiting for? Go inside and buy some product before we run out!\p"
-        "Due to high demand, we are limiting 1 booster pack per customer per day. All sales are final."
+        "What are you waiting for? Go inside and buy some product before we run out!"
     ))
     closemessage
     release
@@ -523,7 +522,7 @@ script ISLANDGAME_AETHERIA_NPC19 {
 script ISLANDGAME_AETHERIA_NPC20 {
     lock
     msgbox(format(
-        "How do I look?"
+        "Ehe... How do I look?"
     ))
     closemessage
     release
@@ -555,7 +554,7 @@ script ISLANDGAME_AETHERIA_NPC23 {
     lock
     faceplayer
     msgbox(format(
-        "THIS IS MY BICYCLE! THERE ARE MANY LIKE IT, BUT THIS ONE IS MINE! WITHOUT ME, MY BICYCLE IS USELESS! WITHOUT MY BICYCLE, I AM USELESS!"
+        "THIS IS MY BICYCLE!\pTHERE ARE MANY LIKE IT, BUT THIS ONE IS MINE!\pWITHOUT ME, MY BICYCLE IS USELESS!\pWITHOUT MY BICYCLE, I AM USELESS!"
     ))
     closemessage
     release
@@ -566,7 +565,7 @@ script ISLANDGAME_AETHERIA_NPC24 {
     lock
     faceplayer
     msgbox(format(
-        "If you see anything suspicious, like a big bald guy riding a motorcycle, please report it to us immediately!\pDo NOT engage him, word has it that he used to be a five-time Festival Champion..."
+        "If you see anyone suspicious, like a big bald guy riding a motorcycle, please report it to us immediately!"
     ))
     closemessage
     release
@@ -633,7 +632,43 @@ script ISLANDGAME_AETHERIA_NPC29 {
     release
 }
 
+// cafe girl
+script ISLANDGAME_AETHERIA_NPC30 {
+    lock
+    faceplayer
+    if(flag(FLAG_NIGHTTIME)) {
+        msgbox(format(
+            "Haiyoooo! Join us for trivia at Café Precioso for a chance to win fabulous prizes!"
+        ))
+    }
+    else {
+        msgbox(format(
+            "Haiyoooo! Come have some hotcakes with us at Café Precioso, made with our signature Magia Preciosa!"
+        ))
+    }
+    closemessage
+    release
+}
 
+// night woman
+script ISLANDGAME_AETHERIA_NPC31 {
+    lock
+    faceplayer
+    checkplayergender
+    if(var(VAR_RESULT) == MALE) {
+        msgbox(format(
+            "Ah... I'm flattered that I caught your eye, but I'm afraid you are much too young for me...\p"
+            "Perhaps you would find better luck in say... that café by the coast...?"
+        ))
+    }
+    else {
+        msgbox(format(
+            "Hmm? May I help you, small child?"
+        ))
+    }
+    closemessage
+    release
+}
 
 script ISLANDGAME_AETHERIA_Camellia {
     lock
