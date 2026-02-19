@@ -21,15 +21,15 @@ ISLANDGAME_SIERRA_DESERT_MapScripts_MAP_SCRIPT_ON_LOAD:
 # 15 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
 	mapgen_spawn_single 15, 18, 17, 20
 # 16 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
-	mapgen_spawn_single 8, 19, 12, 22
+	mapgen_spawn_single 8, 18, 12, 22
 # 17 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
 	mapgen_spawn 0, 2
 # 18 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
 	mapgen_spawn 1, 3
 # 19 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
-	mapgen_spawn_nosplit 2, 4
+	mapgen_spawn 2, 4
 # 20 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
-	mapgen_spawn_nosplit 3, 5
+	mapgen_spawn 3, 5
 # 21 "data/maps/ISLANDGAME_SIERRA_DESERT/scripts.pory"
 	mapgen_end
 	return

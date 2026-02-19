@@ -1,4 +1,5 @@
 #include "islandgame_mapgen.h"
+#include "gba/isagbprint.h"
 
 struct Mapgen_Coordinates
 {
@@ -157,7 +158,7 @@ static int Mapgen_FindSpace(struct Mapgen_Generator *generator, int width, int h
             validSpaceWeights[validSpaceCount] = weight;
             totalWeight += weight;
 
-            if (validSpaceCount++ >= MAPGEN_MAX_VALID_SPACES)
+            if (++validSpaceCount >= MAPGEN_MAX_VALID_SPACES)
             {
                 break;
             }
