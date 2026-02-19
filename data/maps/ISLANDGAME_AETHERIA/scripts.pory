@@ -636,16 +636,9 @@ script ISLANDGAME_AETHERIA_NPC29 {
 script ISLANDGAME_AETHERIA_NPC30 {
     lock
     faceplayer
-    if(flag(FLAG_NIGHTTIME)) {
-        msgbox(format(
-            "Haiyoooo! Join us for trivia at Café Precioso for a chance to win fabulous prizes!"
-        ))
-    }
-    else {
-        msgbox(format(
-            "Haiyoooo! Come have some hotcakes with us at Café Precioso, made with our signature Magia Preciosa!"
-        ))
-    }
+    msgbox(format(
+        "Haiyooo! Come have some hotcakes with us at Café Lumi, the best in Marya!"
+    ))
     closemessage
     release
 }
@@ -692,7 +685,7 @@ script ISLANDGAME_AETHERIA_Diancie {
     faceplayer
     playmoncry(SPECIES_DIANCIE, CRY_MODE_NORMAL)
     msgbox(format(
-        "Diiian...{COLOR BLUE}(These papa-rotsy guys are relentless. Being an idol is tough work.)"
+        "Diiian...{COLOR BLUE}(These paparazzi guys are relentless. Being an idol is tough work.)"
     ))
     waitmoncry
     release

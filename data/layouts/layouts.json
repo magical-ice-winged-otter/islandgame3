@@ -5864,10 +5864,10 @@
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_BATTLE_CAFE",
       "name": "ISLANDGAME_AETHERIA_BATTLE_CAFE_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_islandgame_kanto_building",
-      "secondary_tileset": "gTileset_GenericBuilding",
+      "width": 19,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/map.bin"
     }
