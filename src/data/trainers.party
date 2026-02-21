@@ -223,7 +223,7 @@ Items: Energy Powder / Heal Powder
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn
 
-Snorunt @ Starf Berry
+Snorunt (F) @ Starf Berry
 Level: 10
 Ability: Moody
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -447,7 +447,7 @@ Music: Female
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Switching
 
-Rockruff
+Rockruff (F)
 Level: 15
 Ability: Vital Spirit
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -457,7 +457,7 @@ Nature: Hardy
 - Fire Fang
 - Thunder Fang
 
-Drilbur
+Drilbur (M)
 Level: 15
 Ability: Mold Breaker
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -467,7 +467,7 @@ Nature: Hardy
 - Hone Claws
 - Rapid Spin
 
-Gible
+Gible (M)
 Level: 15
 Ability: Rough Skin
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1175,7 +1175,7 @@ Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Ace Pokemon
 Mugshot: Blue
 
-Glaceon @ Light Clay
+Glaceon (F) @ Light Clay
 Level: 24
 Ability: Snow Warning
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1186,7 +1186,7 @@ Nature: Hardy
 - Icy Wind
 - Water Pulse
 
-Frosmoth @ Bright Powder
+Frosmoth (F) @ Bright Powder
 Level: 24
 Ability: Snow Cloak
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1197,7 +1197,7 @@ Nature: Hardy
 - Snowscape
 - Aurora Veil
 
-Lapras @ Sitrus Berry
+Lapras (F) @ Sitrus Berry
 Level: 24
 Ability: Shell Armor
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1208,7 +1208,7 @@ Nature: Hardy
 - Avalanche
 - Snowscape
 
-Milotic Maryan @ Ice Gem
+Milotic Maryan (F) @ Ice Gem
 Level: 25
 Ability: Ice Body
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1228,7 +1228,7 @@ Music: Male
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Switching
 
-Scraggy
+Scraggy (M)
 Level: 23
 Ability: Intimidate
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1238,7 +1238,7 @@ Nature: Hardy
 - Swagger
 - Fake Out
 
-Flaaffy
+Flaaffy (F)
 Level: 23
 Ability: Static
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1248,7 +1248,7 @@ Nature: Hardy
 - Signal Beam
 - Confuse Ray
 
-Azumarill @ Sitrus Berry
+Azumarill (M) @ Sitrus Berry
 Level: 24
 Ability: Sap Sipper
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1290,7 +1290,7 @@ Items: Super Potion / Full Heal
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Prefer Status Moves / Smart Switching / Ace Pokemon
 
-Liepard Maryan
+Liepard Maryan (F)
 Level: 24
 Ability: Prankster
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1301,7 +1301,7 @@ Nature: Hardy
 - Thief
 - Parting Shot
 
-Sableye
+Sableye (M)
 Level: 23
 Ability: Prankster
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1312,7 +1312,7 @@ Nature: Hardy
 - Fake Out
 - Will O Wisp
 
-Sneasel
+Sneasel (M)
 Level: 23
 Ability: Pickpocket
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -1323,7 +1323,7 @@ Nature: Hardy
 - Pursuit
 - Fake Out
 
-Umbreon @ Sitrus Berry
+Umbreon (M) @ Sitrus Berry
 Level: 23
 Ability: Magic Guard
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe

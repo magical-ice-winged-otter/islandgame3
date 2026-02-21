@@ -1283,7 +1283,7 @@ const struct Item gItemsInfo[] =
     // modified
     [ITEM_CASTELIACONE] =
     {
-        .name = ITEM_NAME("Ice Cream"),
+        .name = ITEM_NAME("Nice Cream"),
         .price = (I_PRICE >= GEN_7) ? 350 : 100,
         .holdEffectParam = 30,
         .description = COMPOUND_STRING(

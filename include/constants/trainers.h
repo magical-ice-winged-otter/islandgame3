@@ -153,6 +153,8 @@
 #define TRAINER_PIC_TAMER                132
 #define TRAINER_PIC_PAINTER              133
 #define TRAINER_PIC_CUEBALL              134
+
+
 #define TRAINER_PIC_COUNT                135
 
 

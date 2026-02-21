@@ -619,6 +619,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_OliviaWatering,        OBJ_EVENT_PAL_TAG_OLIVIA_WATERING},
     {gObjectEventPal_OliverWatering,        OBJ_EVENT_PAL_TAG_OLIVER_WATERING},
     {gObjectEventPal_OliviaSurfing,         OBJ_EVENT_PAL_TAG_OLIVIA_SURFING},
+    {gObjectEventPal_OliverSurfing,         OBJ_EVENT_PAL_TAG_OLIVER_SURFING},
     {gObjectEventPal_Melissa,               OBJ_EVENT_PAL_TAG_MELISSA},
     {gObjectEventPal_FieldEffects,          OBJ_EVENT_PAL_TAG_FIELD_EFFECTS},
     {gObjectEventPal_AceTrainerF,           OBJ_EVENT_PAL_TAG_ACE_TRAINER_F},
@@ -658,7 +659,6 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_AceTrainerM_2,        OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_2},
     {gObjectEventPal_AceTrainerF_2,        OBJ_EVENT_PAL_TAG_ACE_TRAINER_F_2},
     {gObjectEventPal_AceTrainerSnow,       OBJ_EVENT_PAL_TAG_ACE_TRAINER_SNOW},
-
     {gObjectEventPal_NinjaBoy2,            OBJ_EVENT_PAL_TAG_NINJA_BOY_2},
     {gObjectEventPal_LittleGirl2,          OBJ_EVENT_PAL_TAG_LITTLE_GIRL_2},
     {gObjectEventPal_Beauty2,              OBJ_EVENT_PAL_TAG_BEAUTY_2},
@@ -675,6 +675,20 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Veteran,              OBJ_EVENT_PAL_TAG_VETERAN},
     {gObjectEventPal_Brendan2,             OBJ_EVENT_PAL_TAG_BRENDAN_2},
     {gObjectEventPal_May2,                 OBJ_EVENT_PAL_TAG_MAY_2},
+
+    
+    {gObjectEventPal_Waiter,               OBJ_EVENT_PAL_TAG_WAITER},
+    {gObjectEventPal_Waitress,             OBJ_EVENT_PAL_TAG_WAITRESS},
+    {gObjectEventPal_YoungCoupleM,         OBJ_EVENT_PAL_TAG_YOUNG_COUPLE_M},
+    {gObjectEventPal_YoungCoupleF,         OBJ_EVENT_PAL_TAG_YOUNG_COUPLE_F},
+    {gObjectEventPal_ParasolLady,          OBJ_EVENT_PAL_TAG_PARASOL_LADY},
+    {gObjectEventPal_Idol,                 OBJ_EVENT_PAL_TAG_IDOL},
+    {gObjectEventPal_BeautyDP,             OBJ_EVENT_PAL_TAG_BEAUTY_DP},
+    {gObjectEventPal_Cynthia,              OBJ_EVENT_PAL_TAG_CYNTHIA},
+    {gObjectEventPal_Painter,              OBJ_EVENT_PAL_TAG_PAINTER},
+    {gObjectEventPal_Rocker,               OBJ_EVENT_PAL_TAG_ROCKER},
+    {gObjectEventPal_Socialite,            OBJ_EVENT_PAL_TAG_SOCIALITE},
+    {gObjectEventPal_NurseM,               OBJ_EVENT_PAL_TAG_NURSE_M},
 
 
     

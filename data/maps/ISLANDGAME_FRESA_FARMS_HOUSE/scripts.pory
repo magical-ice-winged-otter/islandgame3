@@ -1,6 +1,6 @@
 mapscripts ISLANDGAME_FRESA_FARMS_HOUSE_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        if (gettimeofday == TIME_NIGHT) {
+        if (gettimeofday == TIME_DAY) {
             setobjecthidden(LOCALID_TV_KID)
             setobjecthidden(LOCALID_TABLE_WOMAN)
             setobjecthidden(LOCALID_TORCHIC_MAN)

@@ -140,9 +140,10 @@ script ISLANDGAME_FRESA_FARMS_Interact_MareepDogWatching {
         ), MSGBOX_AUTOCLOSE)
 
         applymovement(LOCALID_MAREEP_DOGWATCHING, moves(face_player))
-        playse(SE_PIN)
-        applymovement(LOCALID_MAREEP_DOGWATCHING, moves(emote_exclamation_mark, delay_16 * 4))
+        applymovement(LOCALID_MAREEP_DOGWATCHING, moves(emote_exclamation_mark))
         waitmovement
+        playse(SE_PIN)
+        waitse
 
         msgbox(format(
             "Reep... {COLOR BLUE}(Oh, it's just a random kid. Good thing they can't understand me.)\p"

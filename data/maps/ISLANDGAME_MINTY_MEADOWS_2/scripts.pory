@@ -202,7 +202,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
     }
 
     unsetfollowernpc(LOCALID_RIVAL)
-    setobjectmovementtype(LOCALID_RIVAL,MOVEMENT_TYPE_FACE_DOWN)
+    // setobjectmovementtype(LOCALID_RIVAL,MOVEMENT_TYPE_FACE_DOWN)
 
     if (specialvar(VAR_RESULT, GetBattleOutcome) == B_OUTCOME_LOST) {
         end
@@ -210,10 +210,29 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     setvar(VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SAVED_MAREEP)
 
+
+    setvar(VAR_0x8000, 61)
+    setvar(VAR_0x8001, 16)
+    callnative(TeleportCamera) // this is some magic, shoutout to the pret discord (and see src/islandgame_scrcmd.c)
+    applymovement(LOCALID_RIVAL, Common_Movement_FaceUp)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    setobjectxy(OBJ_EVENT_ID_PLAYER, 61, 16)
+    setobjectxy(LOCALID_RIVAL, 60, 16)
+
+
     msgbox(format(
         "{COLOR RED}(That Mightyena...{PAUSE 30} Something seemed off about it.)\p"
-        "{COLOR RED}(It had some sort of dark aura... radiating from it?)\p"
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Phew... That was an intense fight. Thank goodness we came in time!\p"
+        "{COLOR RED}(It had some sort of dark aura... radiating from it?)"
+    ), MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_RIVAL, moves(walk_in_place_slow_up))
+    waitmovement
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Phew... That was an intense fight. Thank goodness we came in time!"
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_RIVAL, moves(walk_up * 3, face_right))
+    waitmovement
+    msgbox(format(
         "It looks like Mareep isn't hurt at all. That's a relief..."
     ), MSGBOX_AUTOCLOSE)
 
@@ -222,11 +241,10 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
     waitmovement
 
     msgbox(format(
-        "Reeeep... \p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Awh. It's okay. You're safe with us now!"
     ), MSGBOX_AUTOCLOSE)
 
-    applymovement(LOCALID_RIVAL, moves(face_player))
+    applymovement(LOCALID_RIVAL, moves(face_down))
     waitmovement
     msgbox(format("Ehe...! We make a pretty solid team, don't we, {PLAYER}?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_slow_up))

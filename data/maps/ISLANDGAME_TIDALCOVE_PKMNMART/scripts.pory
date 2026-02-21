@@ -3,7 +3,8 @@ mapscripts ISLANDGAME_TIDALCOVE_PKMNMART_MapScripts {}
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1 {
     lock
     faceplayer
-    msgbox(format("Yeesh... $800 for a glass of pop? Just 'cause it's got Ruka on it? There's no way anyone would pay that much just for a bottle."))
+    msgbox(format("Yeesh. $800 for a glass of pop just 'cause it's got Ruka on it? There's no way anyone would pay that much just for a bottle."))
+    closemessage
     release
 }
 

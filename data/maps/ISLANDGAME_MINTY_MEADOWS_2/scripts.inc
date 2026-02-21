@@ -272,143 +272,167 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena::
 	goto_if_eq ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_2
 # 204 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	unsetfollowernpc LOCALID_RIVAL
-# 205 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjectmovementtype LOCALID_RIVAL, MOVEMENT_TYPE_FACE_DOWN
 	specialvar VAR_RESULT, GetBattleOutcome
 # 0 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_LOST
 	goto_if_eq ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_5
 # 211 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_SAVED_MAREEP
-# 213 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_0, MSGBOX_AUTOCLOSE
+# 214 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setvar VAR_0x8000, 61
+# 215 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setvar VAR_0x8001, 16
+# 216 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	callnative TeleportCamera
+# 217 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, Common_Movement_FaceUp
+# 218 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 219 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjectxy OBJ_EVENT_ID_PLAYER, 61, 16
 # 220 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	playmoncry SPECIES_MAREEP, CRY_MODE_NORMAL
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_0
-# 222 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 224 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_1, MSGBOX_AUTOCLOSE
+	setobjectxy LOCALID_RIVAL, 60, 16
+# 223 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_0, MSGBOX_AUTOCLOSE
+# 228 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_0
 # 229 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_1
+	waitmovement
 # 230 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 231 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_2, MSGBOX_AUTOCLOSE
-# 232 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_2
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_1, MSGBOX_AUTOCLOSE
 # 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_3
-# 235 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 237 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_3, MSGBOX_AUTOCLOSE
-# 243 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 244 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	teleportcamera 11, 8
-# 245 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	addobject OBJ_EVENT_ID_PLAYER
-# 246 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	addobject LOCALID_RIVAL
-# 247 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	addobject LOCALID_OLD_MAN
-# 248 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	addobject LOCALID_MAREEP
-# 249 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_6
-# 250 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_8
-# 251 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_8
-# 252 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjectxy OBJ_EVENT_ID_PLAYER, 11, 8
-# 253 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjectxy LOCALID_RIVAL, 10, 8
-# 254 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjectxy LOCALID_OLD_MAN, 11, 6
-# 255 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjectxy LOCALID_MAREEP, 10, 6
-# 256 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 258 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_4, MSGBOX_AUTOCLOSE
-# 264 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_4
-# 265 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 266 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	giveitem ITEM_LUCKY_EGG
-# 267 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	closemessage
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_5
-# 269 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 270 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_5, MSGBOX_AUTOCLOSE
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_6
-# 272 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 273 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	playmoncry SPECIES_MAREEP, CRY_MODE_NORMAL
-# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_7
-# 275 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 276 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmoncry
-# 277 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_6
-# 278 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 279 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_1
-# 280 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 281 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_8
-# 283 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 235 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_2, MSGBOX_AUTOCLOSE
+# 239 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	playmoncry SPECIES_MAREEP, CRY_MODE_NORMAL
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_2
+# 241 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 243 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_3, MSGBOX_AUTOCLOSE
+# 247 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_6
+# 248 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 249 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_4, MSGBOX_AUTOCLOSE
+# 250 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_0
+# 251 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 252 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_3
+# 253 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 255 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_5, MSGBOX_AUTOCLOSE
+# 261 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
+# 262 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	teleportcamera 11, 8
+# 263 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	addobject OBJ_EVENT_ID_PLAYER
+# 264 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	addobject LOCALID_RIVAL
+# 265 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	addobject LOCALID_OLD_MAN
+# 266 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	addobject LOCALID_MAREEP
+# 267 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_6
+# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_8
+# 269 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_8
+# 270 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjectxy OBJ_EVENT_ID_PLAYER, 11, 8
+# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjectxy LOCALID_RIVAL, 10, 8
+# 272 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjectxy LOCALID_OLD_MAN, 11, 6
+# 273 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjectxy LOCALID_MAREEP, 10, 6
+# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 276 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_6, MSGBOX_AUTOCLOSE
+# 282 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_4
+# 283 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 284 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	giveitem ITEM_LUCKY_EGG
+# 285 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	closemessage
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_5
+# 287 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
 # 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_9
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_7, MSGBOX_AUTOCLOSE
 # 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
+	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_6
 # 290 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	playse SE_PIN
+	waitmovement
 # 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_10
+	playmoncry SPECIES_MAREEP, CRY_MODE_NORMAL
 # 292 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_7
+# 293 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
+# 294 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmoncry
+# 295 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_6
 # 296 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_7
-# 303 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_8
-# 311 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_9
-# 318 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_10, MSGBOX_AUTOCLOSE
-# 325 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_6
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_11
-# 327 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 328 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	setobjecthidden LOCALID_RIVAL
+# 297 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_8
+# 298 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 299 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_9
+# 301 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_8, MSGBOX_AUTOCLOSE
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_10
+# 307 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 308 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	playse SE_PIN
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_11
+# 310 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 314 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_9
+# 321 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_10
 # 329 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_11
+# 336 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_12, MSGBOX_AUTOCLOSE
+# 343 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_6
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_12
+# 345 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 346 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	setobjecthidden LOCALID_RIVAL
+# 347 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjecthidden LOCALID_OLD_MAN
-# 330 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 348 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setobjecthidden LOCALID_MAREEP
-# 331 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 349 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	special HealPlayerParty
-# 332 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 350 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	completequest QUEST_MINTY_MEADOWS_MELISSA
-# 333 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 351 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	startquest QUEST_MARYA_GYM_CHALLENGE
 	return
 
@@ -420,139 +444,139 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_5:
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon::
-# 337 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 355 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	faceplayer
-# 338 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 356 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playmoncry SPECIES_DRIFLOON, CRY_MODE_ENCOUNTER
-# 339 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 357 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmoncry
-# 340 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 358 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setflag FLAG_SMART_WILD_AI
-# 341 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 359 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-# 342 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 360 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setwildbattle SPECIES_DRIFLOON, 13
-# 343 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 361 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	dowildbattle
-# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 362 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-# 345 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 363 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 346 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 364 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 348 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 366 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon_1
-# 348 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 366 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon_1
 	return
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Drifloon_1:
-# 349 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 367 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setflag FLAG_DAILY_MINTY_MEADOWS_DRIFLOON
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_FlowerSign::
-# 354 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 372 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_FlowerSign_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_TunnelSign::
-# 361 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 379 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_TunnelSign_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_PopsHouse::
-# 368 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 386 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Interact_PopsHouse_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right2::
-# 377 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right2_Movement_0
-# 378 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 396 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 379 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 397 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right1::
-# 383 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 401 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right1_Movement_0
-# 384 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 402 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 385 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 403 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight::
-# 389 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
-	return
-
-
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1::
-# 393 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1_Movement_0
-# 394 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
-	return
-
-
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2::
-# 399 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2_Movement_0
-# 400 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
-# 401 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
-	return
-
-
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3::
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3_Movement_0
-# 406 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	waitmovement
 # 407 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
 	return
 
 
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest::
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1::
 # 411 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	switch VAR_MINTY_MEADOWS_STATE
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1_Movement_0
 # 412 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 413 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
+	return
+
+
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2::
+# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2_Movement_0
+# 418 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 419 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
+	return
+
+
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3::
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3_Movement_0
+# 424 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	waitmovement
+# 425 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	goto ISLANDGAME_MINTY_MEADOWS_2_RivalFight
+	return
+
+
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest::
+# 429 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	switch VAR_MINTY_MEADOWS_STATE
+# 430 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case MINTY_MEADOWS_BATTLING_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_2
-# 420 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 438 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case MINTY_MEADOWS_SEARCHING_FOR_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_3
-# 421 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 439 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case MINTY_MEADOWS_BATTLING_MIGHTYENA, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_3
 	return
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_2:
-# 413 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 431 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playse SE_PIN
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_0
-# 415 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 433 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 416 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 434 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_0, MSGBOX_AUTOCLOSE
-# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 435 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_OLD_MAN, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_1
-# 418 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 436 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_2
-# 419 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 437 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
 	return
 
@@ -561,152 +585,152 @@ ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_3:
 # 0 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_4
-# 448 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 466 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_5
-# 449 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 467 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 450 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 468 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playse SE_PIN
-# 451 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_6
-# 452 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_6, MSGBOX_AUTOCLOSE
-# 453 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 471 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_4
-# 454 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 472 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 455 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 473 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setfollowernpc LOCALID_RIVAL, FNPC_ALL, 0, PARTNER_MEADOWS_RIVAL
 	return
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_4:
-# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 441 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	facefollowernpc
-# 425 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	message ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_1
-# 430 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 448 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmessage
-# 431 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 449 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	dynmultipush ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_2, YES
-# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 450 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	dynmultipush ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_3, NO
-# 434 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 452 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	dynmultistack 20, 8, TRUE, 3, FALSE, NO, DYN_MULTICHOICE_CB_NONE
 # 0 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	switch VAR_RESULT
-# 435 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 453 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case YES, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_8
-# 441 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 459 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	case NO, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_9
 	return
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_8:
-# 436 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 454 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_4, MSGBOX_AUTOCLOSE
-# 437 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 455 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	unsetfollowernpc LOCALID_RIVAL
-# 438 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 456 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_2
-# 439 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 457 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_3
-# 440 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 458 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
 	return
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_9:
-# 442 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 460 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_5, MSGBOX_AUTOCLOSE
-# 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_4
-# 444 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 462 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep::
-# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 479 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Text_0, MSGBOX_AUTOCLOSE
-# 462 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 480 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_MIGHTYENA, ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Movement_0
-# 463 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 481 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_MAREEP, ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_6
-# 464 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 482 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playmoncry SPECIES_MIGHTYENA, CRY_MODE_ENCOUNTER
-# 465 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 483 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmoncry
-# 466 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 484 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playmoncry SPECIES_MAREEP, CRY_MODE_WEAK
-# 467 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 485 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement LOCALID_MIGHTYENA
-# 468 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 486 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmoncry
-# 469 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 487 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	playse SE_PIN
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement LOCALID_RIVAL, ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Movement_1
-# 471 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 489 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
-# 472 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 490 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Text_1, MSGBOX_AUTOCLOSE
-# 473 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 491 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	setvar VAR_MINTY_MEADOWS_STATE, MINTY_MEADOWS_BATTLING_MIGHTYENA
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave::
-# 477 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 495 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave_Text_0, MSGBOX_AUTOCLOSE
-# 478 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 496 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_4
-# 479 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 497 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	waitmovement
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher::
-# 485 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 503 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_11, ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_1
-# 486 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 504 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl::
-# 490 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 508 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_12, ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_1
-# 491 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 509 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher::
-# 495 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 513 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_13, ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_1
-# 497 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 515 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass::
-# 505 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 523 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_14, ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_1
-# 506 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 524 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac::
-# 510 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 528 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_15, ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_1
-# 511 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 529 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_2, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster::
-# 515 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 533 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	trainerbattle_single TRAINER_MINTY_MEADOWS_16, ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_0, ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_1
-# 516 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 534 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	msgbox ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_2, MSGBOX_AUTOCLOSE
 	return
 
@@ -911,299 +935,311 @@ ISLANDGAME_MINTY_MEADOWS_2_RivalFight_Movement_9:
 	walk_fast_right
 	step_end
 
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 228 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_0:
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_player
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	jump_in_place_left
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	jump_in_place_left
-# 221 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	jump_in_place_left
-	step_end
-
-# 229 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_1:
-# 229 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_player
-	step_end
-
-# 232 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_2:
-# 232 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 228 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_in_place_slow_up
 	step_end
 
-# 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_1:
+# 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_up
+# 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_up
+# 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_up
+# 233 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_right
+	step_end
+
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_2:
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_player
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	jump_in_place_left
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	jump_in_place_left
+# 240 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	jump_in_place_left
+	step_end
+
+# 252 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_3:
-# 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 252 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	face_down
-# 234 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 252 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	emote_question_mark
 	step_end
 
-# 264 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 282 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_4:
-# 264 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 282 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_down
 	step_end
 
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_5:
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_left
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	face_down
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_16
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_16
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_16
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_right
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
-# 268 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 286 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	face_down
 	step_end
 
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_6:
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
-# 271 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 289 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
 	step_end
 
-# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 292 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_7:
-# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 292 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	jump_in_place_down
-# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 292 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	jump_in_place_down
-# 274 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 292 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	jump_in_place_down
 	step_end
 
-# 281 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 297 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_8:
-# 281 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_left
-	step_end
-
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_9:
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	emote_question_mark
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-	step_end
-
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_10:
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	emote_exclamation_mark
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_in_place_faster_right
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-# 291 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_16
-	step_end
-
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_11:
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_down
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 326 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-	step_end
-
-# 377 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right2_Movement_0:
-# 377 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 377 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 377 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_up
-	step_end
-
-# 383 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right1_Movement_0:
-# 383 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_right
-# 383 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_up
-	step_end
-
-# 393 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1_Movement_0:
-# 393 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 393 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_up
-	step_end
-
-# 399 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2_Movement_0:
-# 399 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 399 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 399 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_up
-	step_end
-
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3_Movement_0:
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	walk_left
-# 405 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	face_up
-	step_end
-
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_0:
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	emote_exclamation_mark
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	delay_8
-# 414 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 297 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	face_player
 	step_end
 
+# 299 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_9:
+# 299 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_left
+	step_end
+
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_10:
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	emote_question_mark
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 306 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+	step_end
+
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_11:
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	emote_exclamation_mark
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_in_place_faster_right
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+# 309 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_16
+	step_end
+
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Movement_12:
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_down
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 344 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+	step_end
+
+# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right2_Movement_0:
+# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 395 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_up
+	step_end
+
+# 401 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Right1_Movement_0:
+# 401 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_right
+# 401 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_up
+	step_end
+
+# 411 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left1_Movement_0:
+# 411 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 411 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_up
+	step_end
+
 # 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left2_Movement_0:
+# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_up
+	step_end
+
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_RivalFight_Left3_Movement_0:
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	walk_left
+# 423 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_up
+	step_end
+
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_0:
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	emote_exclamation_mark
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	delay_8
+# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+	face_player
+	step_end
+
+# 435 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_1:
-# 417 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 435 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	face_original_direction
 	step_end
 
-# 418 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 436 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_2:
-# 418 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 436 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_left
 	step_end
 
-# 439 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 457 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_3:
-# 439 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 457 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_right
 	step_end
 
-# 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_4:
-# 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_right
-# 443 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_right
 	step_end
 
-# 448 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 466 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_5:
-# 448 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 466 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_in_place_left
 	step_end
 
-# 451 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Movement_6:
-# 451 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 469 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 462 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 480 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Movement_0:
-# 462 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 480 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_up
 	step_end
 
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Movement_1:
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	emote_exclamation_mark
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	delay_8
-# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 488 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	walk_in_place_faster_up
 	step_end
 
@@ -1308,29 +1344,34 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mareep_Text_0:
 	.string "Reep! Reep! {COLOR BLUE}(BRO HELP ME PLZ)$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_0:
-# 214 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 224 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR RED}(That Mightyena...{PAUSE 30} Something seemed off\n"
 	.string "about it.)\p"
 	.string "{COLOR RED}(It had some sort of dark aura...\n"
-	.string "radiating from it?)\p"
+	.string "radiating from it?)$"
+
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_1:
+# 231 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Phew... That was an intense\n"
-	.string "fight. Thank goodness we came in time!\p"
+	.string "fight. Thank goodness we came in time!$"
+
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_2:
+# 236 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "It looks like Mareep isn't hurt at all.\n"
 	.string "That's a relief...$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_1:
-# 225 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
-	.string "Reeeep...\p"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_3:
+# 244 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Awh. It's okay. You're safe with\n"
 	.string "us now!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_2:
-# 231 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_4:
+# 249 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Ehe...! We make a pretty solid team,\n"
 	.string "don't we, {PLAYER}?$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_3:
-# 238 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_5:
+# 256 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "...Eh? Something was off about the\n"
 	.string "Pokémon? What do you mean?\p"
 	.string "Red eyes? A wicked dark aura? Hmmmn... I\n"
@@ -1339,8 +1380,8 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_3:
 	.string "that Mareep is safe! Let's get him back\l"
 	.string "to old man Paulie!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_4:
-# 259 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_6:
+# 277 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Oh, my precious baby is safe and\n"
 	.string "sound! I am in your debt, trainers!\p"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Heheh. It was nothing, really!\n"
@@ -1349,21 +1390,21 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_4:
 	.string "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Please, take one of these as a\n"
 	.string "token of my gratitude!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_5:
-# 270 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_7:
+# 288 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Paul: {COLOR DARK_GRAY}Feel free to visit our farm\n"
 	.string "anytime!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_6:
-# 284 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_8:
+# 302 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Watching how in sync you and\n"
 	.string "your Pokémon are, despite having just\l"
 	.string "met them...\p"
 	.string "{PLAYER}!{PAUSE 30} You should enter the\n"
 	.string "Silverwing Festival Tournament!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_7:
-# 297 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_9:
+# 315 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Eeeh!?{PAUSE 60} You don't know about the\n"
 	.string "tournament!?\p"
 	.string "It's a tournament hosted during the\n"
@@ -1376,8 +1417,8 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_7:
 	.string "But in order to qualify...{PAUSE 30} you'll have to\n"
 	.string "complete the Marya Gym Challenge!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_8:
-# 304 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_10:
+# 322 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "You'll have to travel across the three\n"
 	.string "main islands of Oranna, Lumine, and\l"
 	.string "Minerva...\p"
@@ -1389,8 +1430,8 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_8:
 	.string "qualify if it started tomorrow...\p"
 	.string "There I go being silly again, ehe.$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_9:
-# 312 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_11:
+# 330 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Well, I'm going to go back to the\n"
 	.string "professor to report my findings.\p"
 	.string "But {PLAYER}, you should go west of\n"
@@ -1402,8 +1443,8 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_9:
 	.string "be a professional swimmer and swimsuit\l"
 	.string "model!$"
 
-ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_10:
-# 319 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_12:
+# 337 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "With that said, bye-bye for now,\n"
 	.string "{PLAYER}!\p"
 	.string "Oh! I almost forgot! Let's exchange\n"
@@ -1412,106 +1453,106 @@ ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena_Text_10:
 	.string "Let's meet up again soon!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_FlowerSign_Text_0:
-# 355 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 373 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "MINTY MEADOWS\n"
 	.string "Beware of scary Drifloon at night!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_TunnelSign_Text_0:
-# 362 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 380 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "TRAVELER'S TUNNEL\n"
 	.string "WARNING: THICK FOG INSIDE!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Interact_PopsHouse_Text_0:
-# 369 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 387 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "POPS' RESIDENCE\n"
 	.string "Owner of Minty Meadows!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_0:
-# 416 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 434 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Ah, young trainer! Please give me a\n"
 	.string "moment. I am trying to count my Mareep.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_1:
-# 426 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 444 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Eh? We can't leave yet! We told\n"
 	.string "old man Paulie we'd help find his Mareep!\p"
 	.string "Do you really have to leave?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_2:
-# 431 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 449 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Yes$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_3:
-# 432 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 450 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "No$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_4:
-# 436 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 454 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Okay... Please come back as soon as you\n"
 	.string "can!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_5:
-# 442 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 460 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Alright! Let's get back to business!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Forest_Text_6:
-# 452 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 470 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Let's go get that Mareep!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Text_0:
-# 461 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 479 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}We finally found it!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_SeeMareep_Text_1:
-# 472 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 490 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Agh! Quick, {PLAYER}! We need\n"
 	.string "to save that Mareep!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trigger_Cave_Text_0:
-# 477 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 495 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Huh? We have to help Mareep!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_0:
-# 485 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 503 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Howdy pardner! Howsabout we get a\n"
 	.string "quick scrap in?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_1:
-# 485 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 503 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Well I'll be.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Rancher_Text_2:
-# 486 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 504 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "A mighty fine party of Pokes ya got on\n"
 	.string "ya.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_0:
-# 490 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 508 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "My Pokemans are purty cute. Wanna take\n"
 	.string "a gander?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_1:
-# 490 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 508 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Ain't she just the sweetest lil thang\n"
 	.string "you've eva laid yer eyes on?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_UpperDouble_Cowgirl_Text_2:
-# 491 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 509 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "I love my darlin' lil ball of cotton\n"
 	.string "candy. Even if she don't fight too well.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_0:
-# 495 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 513 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "I have a super special Bug Pokémon. You\n"
 	.string "literally can't get it.\p"
 	.string "How jealous are you?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_1:
-# 495 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 513 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Ack! My super special bug Pokémon!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_2:
-# 498 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 516 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Okay, maybe I should be more specific.\p"
 	.string "You can't catch a Vivillon with the same\n"
 	.string "pattern as mine here in Marya.\p"
@@ -1519,42 +1560,42 @@ ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_BugCatcher_Text_2:
 	.string "dependent on where it lives!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_0:
-# 505 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 523 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Hi!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_1:
-# 505 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 523 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Heck!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_LowerDouble_Lass_Text_2:
-# 506 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 524 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "I'm not a very interesting person, so I\n"
 	.string "don't really say much.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_0:
-# 510 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 528 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "POKÉMON IS LOVE! POKÉMON IS LIFE!$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_1:
-# 510 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 528 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "It's all Kyogre now...$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Maniac_Text_2:
-# 511 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 529 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "I was only nine years old when I met my\n"
 	.string "Riolu. It's the coolest Pokémon ever.$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_0:
-# 515 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 533 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Shorts are awesome. They're so comfy to\n"
 	.string "wear. Don't you agree?$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_1:
-# 515 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 533 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "I think I'm going to need a new pair of\n"
 	.string "shorts...$"
 
 ISLANDGAME_MINTY_MEADOWS_2_Trainer_FinalDouble_Youngster_Text_2:
-# 516 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
+# 534 "data/maps/ISLANDGAME_MINTY_MEADOWS_2/scripts.pory"
 	.string "Shorts are easily an S tier pick for\n"
 	.string "pants!$"

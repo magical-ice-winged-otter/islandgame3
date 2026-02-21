@@ -513,16 +513,16 @@ script ISLANDGAME_VERDANT_WOODS_EventScript_ObtainSkitty {
 script ISLANDGAME_VERDANT_WOODS_EventScript_NPC3 {
     lock
     faceplayer
-    goto_if_set(FLAG_VERDANT_WOODS_SEED_RECEIVED, ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven)
+    goto_if_set(FLAG_VERDANT_WOODS_POWDER_RECEIVED, ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven)
     msgbox(ISLANDGAME_VERDANT_WOODS_NPC3Talk)
-	giveitem(ITEM_MIRACLE_SEED)
+	giveitem(ITEM_SILVER_POWDER)
 	goto_if_eq(VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull)
-	setflag(FLAG_VERDANT_WOODS_SEED_RECEIVED)
+	setflag(FLAG_VERDANT_WOODS_POWDER_RECEIVED)
     release
 }
 
 script ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven {
-    msgbox(format("{COLOR DARK_GRAY}That's a Miracle Seed. It's not good for cooking, but it's great for powering up grass-type Pokémon in a battle!"))
+    msgbox(format("{COLOR DARK_GRAY}That's Silver Powder. It's great for powering up Bug-type Pokémon in a battle!"))
 	release
 }
 

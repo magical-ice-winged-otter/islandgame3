@@ -171,8 +171,8 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1 {
     // prim commands DELCATTY to finish it
     msgbox(
         format(
-            "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this."
-            "Delcatty! Finish this with a double-slap!"
+            "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this.\p"
+            "Delcatty!{PAUSE 30} Finish this with a double-slap!"
             )
         )
     closemessage
@@ -287,8 +287,8 @@ script ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene2 {
     // prim commands DELCATTY to finish it
     msgbox(
         format(
-            "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this."
-            "Delcatty! Finish this with a double-slap!"
+            "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this.\p"
+            "Delcatty!{PAUSE 30} Finish this with a double-slap!"
             )
         )
     closemessage

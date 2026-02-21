@@ -31,7 +31,7 @@ script ISLANDGAME_MT_AURORA_2F_3_Trigger_ThiefCutscene {
     applymovement(LOCALID_THIEF, Common_Movement_Delay32)
     waitmovement(0)
     msgbox(format(
-        "{COLOR GREEN}Thief: {COLOR DARK_GRAY}Pfft. THAT was your attempt at battling? You didn't even land a single hit on any of my Pokémon! \p"
+        "{COLOR GREEN}Thief: {COLOR DARK_GRAY}Pfft. THAT was your attempt at battling?\pYou didn't even land a single hit on any of my Pokémon!\p"
         "{COLOR DARK_GRAY}And you came ALL this way just to try and stop me? How pathetic."
     ))
     closemessage
@@ -135,6 +135,16 @@ movement Movement_ArticunoAscend {
 script(local) ThiefDefeated {
     lock
     
+
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    setvar(VAR_0x8000, 12)
+    setvar(VAR_0x8001, 15)
+    callnative(TeleportCamera) // this is some magic, shoutout to the pret discord (and see src/islandgame_scrcmd.c)
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp)
+    setobjectxy(OBJ_EVENT_ID_PLAYER, 12, 15)
+    fadescreenswapbuffers(FADE_FROM_BLACK)
+
+
     // thief refuses to surrender mon
     applymovement(LOCALID_ARTHUR, Common_Movement_FaceUp)
     applymovement(LOCALID_ARTHUR, WalkInPlaceUp)
@@ -145,13 +155,13 @@ script(local) ThiefDefeated {
     ))
     applymovement(LOCALID_THIEF, Common_Movement_FaceDown)
     msgbox(format(
-        "{COLOR GREEN}Edea: {COLOR DARK_GRAY}In your dreams, squirt! I'm not giving this Pokémon up! It's worth more than your dinky little inn!\p"
+        "{COLOR GREEN}Edea: {COLOR DARK_GRAY}In your dreams, squirt! I'm not giving this Pokémon up! It's worth more money than you'll ever amount to!\p"
         "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}H-Huh? But you have to! We beat you, fair and square!\p"
-        "{COLOR GREEN}Edea: {COLOR DARK_GRAY}And? What are you gonna do, tell on me to the Pokémon gods? I'm taking this Azurill with me! Peace out, losers!\p"
-        "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}W-Wait!"
+        "{COLOR GREEN}Edea: {COLOR DARK_GRAY}And? Who said winning means I have to give my precious cargo up? I'm taking this Azurill with me! Peace out, losers!\p"
+        "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}No! W-Wait!"
     ))
     closemessage
-    playmoncry(SPECIES_ARTICUNO, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER)
     waitmoncry
 
     applymovement(LOCALID_THIEF, Common_Movement_QuestionMark)
@@ -174,9 +184,6 @@ script(local) ThiefDefeated {
     waitmovement(0)
 
     // articuno scares thief and they run
-    playmoncry(SPECIES_ARTICUNO, CRY_MODE_NORMAL)
-    waitmoncry
-    closemessage
     applymovement(LOCALID_THIEF, Common_Movement_FaceUp)
     waitmovement(0)
     applymovement(LOCALID_AZURILL, Common_Movement_FaceUp)
@@ -238,7 +245,7 @@ script(local) ThiefDefeated {
     waitmovement(0)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown)
     msgbox(format(
-        "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}Holy heck...{PAUSE 60} Was that Articuno in the flesh just now!?\p"
+        "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}Holy moly...{PAUSE 60} Was that... Articuno!?\p"
         "It left before we could say anything...{PAUSE 60} T-Thank you for the help, Articuno!"
     ))
 

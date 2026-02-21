@@ -390,7 +390,8 @@ F_TRAINER_FEMALE |
             {
 #line 226
             .species = SPECIES_SNORUNT,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 226
+            .gender = TRAINER_MON_FEMALE,
 #line 226
             .heldItem = ITEM_STARF_BERRY,
 #line 229
@@ -948,7 +949,8 @@ F_TRAINER_FEMALE |
             {
 #line 450
             .species = SPECIES_ROCKRUFF,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 450
+            .gender = TRAINER_MON_FEMALE,
 #line 453
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 452
@@ -969,7 +971,8 @@ F_TRAINER_FEMALE |
             {
 #line 460
             .species = SPECIES_DRILBUR,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 460
+            .gender = TRAINER_MON_MALE,
 #line 463
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 462
@@ -990,7 +993,8 @@ F_TRAINER_FEMALE |
             {
 #line 470
             .species = SPECIES_GIBLE,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 470
+            .gender = TRAINER_MON_MALE,
 #line 473
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 472
@@ -2771,7 +2775,8 @@ F_TRAINER_FEMALE |
             {
 #line 1178
             .species = SPECIES_GLACEON,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1178
+            .gender = TRAINER_MON_FEMALE,
 #line 1178
             .heldItem = ITEM_LIGHT_CLAY,
 #line 1181
@@ -2796,7 +2801,8 @@ F_TRAINER_FEMALE |
             {
 #line 1189
             .species = SPECIES_FROSMOTH,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1189
+            .gender = TRAINER_MON_FEMALE,
 #line 1189
             .heldItem = ITEM_BRIGHT_POWDER,
 #line 1192
@@ -2821,7 +2827,8 @@ F_TRAINER_FEMALE |
             {
 #line 1200
             .species = SPECIES_LAPRAS,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1200
+            .gender = TRAINER_MON_FEMALE,
 #line 1200
             .heldItem = ITEM_SITRUS_BERRY,
 #line 1203
@@ -2846,7 +2853,8 @@ F_TRAINER_FEMALE |
             {
 #line 1211
             .species = SPECIES_MILOTIC_MARYAN,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1211
+            .gender = TRAINER_MON_FEMALE,
 #line 1211
             .heldItem = ITEM_ICE_GEM,
 #line 1214
@@ -2894,7 +2902,8 @@ F_TRAINER_FEMALE |
             {
 #line 1231
             .species = SPECIES_SCRAGGY,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1231
+            .gender = TRAINER_MON_MALE,
 #line 1234
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1233
@@ -2915,7 +2924,8 @@ F_TRAINER_FEMALE |
             {
 #line 1241
             .species = SPECIES_FLAAFFY,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1241
+            .gender = TRAINER_MON_FEMALE,
 #line 1244
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1243
@@ -2936,7 +2946,8 @@ F_TRAINER_FEMALE |
             {
 #line 1251
             .species = SPECIES_AZUMARILL,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1251
+            .gender = TRAINER_MON_MALE,
 #line 1251
             .heldItem = ITEM_SITRUS_BERRY,
 #line 1254
@@ -3038,7 +3049,8 @@ F_TRAINER_FEMALE |
             {
 #line 1293
             .species = SPECIES_LIEPARD_MARYAN,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1293
+            .gender = TRAINER_MON_FEMALE,
 #line 1296
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1295
@@ -3061,7 +3073,8 @@ F_TRAINER_FEMALE |
             {
 #line 1304
             .species = SPECIES_SABLEYE,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1304
+            .gender = TRAINER_MON_MALE,
 #line 1307
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1306
@@ -3084,7 +3097,8 @@ F_TRAINER_FEMALE |
             {
 #line 1315
             .species = SPECIES_SNEASEL,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1315
+            .gender = TRAINER_MON_MALE,
 #line 1318
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 1317
@@ -3107,7 +3121,8 @@ F_TRAINER_FEMALE |
             {
 #line 1326
             .species = SPECIES_UMBREON,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 1326
+            .gender = TRAINER_MON_MALE,
 #line 1326
             .heldItem = ITEM_SITRUS_BERRY,
 #line 1329

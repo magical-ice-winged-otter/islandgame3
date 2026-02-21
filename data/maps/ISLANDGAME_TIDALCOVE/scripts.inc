@@ -414,7 +414,7 @@ ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearCycleRoad_Text_0:
 
 ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance_Text_0:
 # 146 "data/maps/ISLANDGAME_TIDALCOVE/scripts.pory"
-	.string "{COLOR LIGHT_BLUE}Ruka's Milotic {COLOR DARK_GRAY}is so pretty. I wish I one\n"
+	.string "Ruka's {COLOR LIGHT_BLUE}Milotic {COLOR DARK_GRAY}is so pretty. I wish I one\n"
 	.string "too, but I heard they're notoriously\l"
 	.string "hard to find.\p"
 	.string "It's rumored that they only reside at\n"

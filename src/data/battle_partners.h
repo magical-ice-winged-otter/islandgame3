@@ -131,7 +131,8 @@ F_TRAINER_FEMALE |
             {
 #line 57
             .species = SPECIES_ROCKRUFF,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 57
+            .gender = TRAINER_MON_FEMALE,
 #line 60
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 61
@@ -152,7 +153,8 @@ F_TRAINER_FEMALE |
             {
 #line 67
             .species = SPECIES_DRILBUR,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 67
+            .gender = TRAINER_MON_MALE,
 #line 70
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 71
@@ -173,7 +175,8 @@ F_TRAINER_FEMALE |
             {
 #line 77
             .species = SPECIES_GIBLE,
-            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 77
+            .gender = TRAINER_MON_MALE,
 #line 80
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 81

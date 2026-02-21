@@ -18,7 +18,7 @@ script ISLANDGAME_ROSEVALE_INN_1F_ROOM1_RED {
                         "..."
                     )
                 )
-                giveitem(ITEM_LIGHT_BALL)
+                giveitem(ITEM_PIKANIUM_Z)
                 setflag(FLAG_ROSEVALE_RED)
             default: // loss 
                 special(HealPlayerParty)

@@ -143,7 +143,7 @@ script ISLANDGAME_TIDALCOVE_Interact_TownCitizen_NearEntrance {
     lock
     faceplayer
     msgbox(format(
-        "{COLOR LIGHT_BLUE}Ruka's Milotic {COLOR DARK_GRAY}is so pretty. I wish I one too, but I heard they're notoriously hard to find.\p"
+        "Ruka's {COLOR LIGHT_BLUE}Milotic {COLOR DARK_GRAY}is so pretty. I wish I one too, but I heard they're notoriously hard to find.\p"
         "It's rumored that they only reside at the bottom of the Maryan Sea."
     ), MSGBOX_NPC)
 }

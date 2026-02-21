@@ -352,15 +352,15 @@ ISLANDGAME_VERDANT_WOODS_EventScript_NPC3::
 # 515 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
 	faceplayer
 # 516 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
-	goto_if_set FLAG_VERDANT_WOODS_SEED_RECEIVED, ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven
+	goto_if_set FLAG_VERDANT_WOODS_POWDER_RECEIVED, ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven
 # 517 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
 	msgbox ISLANDGAME_VERDANT_WOODS_NPC3Talk
 # 518 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
-	giveitem ITEM_MIRACLE_SEED
+	giveitem ITEM_SILVER_POWDER
 # 519 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 # 520 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
-	setflag FLAG_VERDANT_WOODS_SEED_RECEIVED
+	setflag FLAG_VERDANT_WOODS_POWDER_RECEIVED
 # 521 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
 	release
 	return
@@ -753,9 +753,9 @@ ISLANDGAME_VERDANT_WOODS_EventScript_NPC2_Text_0:
 
 ISLANDGAME_VERDANT_WOODS_NPC3_MiracleSeedGiven_Text_0:
 # 525 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"
-	.string "{COLOR DARK_GRAY}That's a Miracle Seed. It's not good for\n"
-	.string "cooking, but it's great for powering up\l"
-	.string "grass-type Pokémon in a battle!$"
+	.string "{COLOR DARK_GRAY}That's Silver Powder. It's great for\n"
+	.string "powering up Bug-type Pokémon in a\l"
+	.string "battle!$"
 
 ISLANDGAME_VERDANT_WOODS_EventScript_SIGN2_Text_0:
 # 561 "data/maps/ISLANDGAME_VERDANT_WOODS/scripts.pory"

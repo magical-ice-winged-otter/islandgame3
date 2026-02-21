@@ -337,7 +337,23 @@
 #define OBJ_EVENT_GFX_VETERAN                    ISLAND_START + 80
 #define OBJ_EVENT_GFX_BRENDAN_2                  ISLAND_START + 81
 #define OBJ_EVENT_GFX_MAY_2                      ISLAND_START + 82
-#define ISLAND_END                               OBJ_EVENT_GFX_MAY_2
+
+
+#define OBJ_EVENT_GFX_WAITER                     ISLAND_START + 83
+#define OBJ_EVENT_GFX_WAITRESS                   ISLAND_START + 84
+#define OBJ_EVENT_GFX_YOUNG_COUPLE_M             ISLAND_START + 85
+#define OBJ_EVENT_GFX_YOUNG_COUPLE_F             ISLAND_START + 86
+#define OBJ_EVENT_GFX_PARASOL_LADY               ISLAND_START + 87
+#define OBJ_EVENT_GFX_IDOL                       ISLAND_START + 88
+#define OBJ_EVENT_GFX_BEAUTY_DP                  ISLAND_START + 89
+#define OBJ_EVENT_GFX_CYNTHIA                    ISLAND_START + 90
+#define OBJ_EVENT_GFX_PAINTER                    ISLAND_START + 91
+#define OBJ_EVENT_GFX_ROCKER                     ISLAND_START + 92
+#define OBJ_EVENT_GFX_SOCIALITE                  ISLAND_START + 93
+#define OBJ_EVENT_GFX_NURSE_M                    ISLAND_START + 94
+
+
+#define ISLAND_END                               OBJ_EVENT_GFX_NURSE_M
 
 #define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
 
@@ -587,7 +603,7 @@
 #define OBJ_EVENT_PAL_TAG_MAY_2                   0x1237
 #define OBJ_EVENT_PAL_TAG_NPC_67                  0x1238 // unused
 #define OBJ_EVENT_PAL_TAG_NPC_68                  0x1239 // unused
-#define OBJ_EVENT_PAL_TAG_NPC_69                  0x123A // unused
+#define OBJ_EVENT_PAL_TAG_OLIVER_SURFING          0x123A
 #define OBJ_EVENT_PAL_TAG_BOY_5                   0x123B
 #define OBJ_EVENT_PAL_TAG_OLIVIA_FISHING          0x123C
 #define OBJ_EVENT_PAL_TAG_OLIVIA_BIKE             0x123D
@@ -640,6 +656,20 @@
 #define OBJ_EVENT_PAL_TAG_ACE_TRAINER_M_2         0x126C
 #define OBJ_EVENT_PAL_TAG_ACE_TRAINER_F_2         0x126D
 #define OBJ_EVENT_PAL_TAG_ACE_TRAINER_SNOW        0x127E
+
+
+#define OBJ_EVENT_PAL_TAG_WAITER                  0x127F
+#define OBJ_EVENT_PAL_TAG_WAITRESS                0x1280
+#define OBJ_EVENT_PAL_TAG_YOUNG_COUPLE_M          0x1281
+#define OBJ_EVENT_PAL_TAG_YOUNG_COUPLE_F          0x1282
+#define OBJ_EVENT_PAL_TAG_PARASOL_LADY            0x1283
+#define OBJ_EVENT_PAL_TAG_IDOL                    0x1284
+#define OBJ_EVENT_PAL_TAG_BEAUTY_DP               0x1285
+#define OBJ_EVENT_PAL_TAG_CYNTHIA                 0x1286
+#define OBJ_EVENT_PAL_TAG_PAINTER                 0x1287
+#define OBJ_EVENT_PAL_TAG_ROCKER                  0x1288
+#define OBJ_EVENT_PAL_TAG_SOCIALITE               0x1289
+#define OBJ_EVENT_PAL_TAG_NURSE_M                 0x128A
 
 // This + localId is used as the tileTag
 // for compressed graphicsInfos

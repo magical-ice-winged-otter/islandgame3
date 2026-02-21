@@ -777,8 +777,9 @@ ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_0:
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_1:
 # 174 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"
-	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this. Delcatty!\n"
-	.string "Finish this with a double-slap!$"
+	.string "{COLOR GREEN}Primrose: {COLOR DARK_GRAY}Time to end this.\p"
+	.string "Delcatty!{PAUSE 30} Finish this with a\n"
+	.string "double-slap!$"
 
 ISLANDGAME_CENTRAL_ORANNA_PATH_2_Trigger_PrimFightCutscene1_Text_2:
 # 202 "data/maps/ISLANDGAME_CENTRAL_ORANNA_PATH_2/scripts.pory"

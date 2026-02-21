@@ -391,18 +391,6 @@ const u8 gTrainerBackPic_Steven[] = INCBIN_U8("graphics/trainers/back_pics/steve
 const u16 gTrainerBackPicPalette_Red[] = INCBIN_U16("graphics/trainers/back_pics/red.gbapal");
 const u16 gTrainerBackPicPalette_Leaf[] = INCBIN_U16("graphics/trainers/back_pics/leaf.gbapal");
 
-const u32 gTrainerFrontPic_Arthur[] = INCBIN_U32("graphics/trainers/front_pics/arthur.4bpp.smol");
-const u16 gTrainerPalette_Arthur[] = INCBIN_U16("graphics/trainers/front_pics/arthur.gbapal");
-
-const u32 gTrainerFrontPic_Edea[] = INCBIN_U32("graphics/trainers/front_pics/edea.4bpp.smol");
-const u16 gTrainerPalette_Edea[] = INCBIN_U16("graphics/trainers/front_pics/edea.gbapal");
-
-const u32 gTrainerFrontPic_Jonas[] = INCBIN_U32("graphics/trainers/front_pics/jonas.4bpp.smol");
-const u16 gTrainerPalette_Jonas[] = INCBIN_U16("graphics/trainers/front_pics/jonas.gbapal");
-
-const u32 gTrainerFrontPic_Ruka[] = INCBIN_U32("graphics/trainers/front_pics/ruka.4bpp.smol");
-const u16 gTrainerPalette_Ruka[] = INCBIN_U16("graphics/trainers/front_pics/ruka.gbapal");
-
 
 // island-game
 const u32 gTrainerFrontPic_Oliver[] = INCBIN_U32("graphics/trainers/front_pics/oliver.4bpp.smol");
@@ -420,7 +408,17 @@ const u16 gTrainerPalette_Melissa[] = INCBIN_U16("graphics/trainers/front_pics/m
 const u8 gTrainerBackPic_Melissa[] = INCBIN_U8("graphics/trainers/back_pics/melissa.4bpp");
 const u16 gTrainerBackPicPalette_Melissa[] = INCBIN_U16("graphics/trainers/back_pics/melissa.gbapal");
 
+const u32 gTrainerFrontPic_Arthur[] = INCBIN_U32("graphics/trainers/front_pics/arthur.4bpp.smol");
+const u16 gTrainerPalette_Arthur[] = INCBIN_U16("graphics/trainers/front_pics/arthur.gbapal");
 
+const u32 gTrainerFrontPic_Edea[] = INCBIN_U32("graphics/trainers/front_pics/edea.4bpp.smol");
+const u16 gTrainerPalette_Edea[] = INCBIN_U16("graphics/trainers/front_pics/edea.gbapal");
+
+const u32 gTrainerFrontPic_Jonas[] = INCBIN_U32("graphics/trainers/front_pics/jonas.4bpp.smol");
+const u16 gTrainerPalette_Jonas[] = INCBIN_U16("graphics/trainers/front_pics/jonas.gbapal");
+
+const u32 gTrainerFrontPic_Ruka[] = INCBIN_U32("graphics/trainers/front_pics/ruka.4bpp.smol");
+const u16 gTrainerPalette_Ruka[] = INCBIN_U16("graphics/trainers/front_pics/ruka.gbapal");
 
 
 // The first two parameters invoke a front pic and palette by

@@ -260,7 +260,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliviaWater
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverMachBike;
-// extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverSurfing;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverSurfing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverFieldMove;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverFishing;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OliverWatering;
@@ -336,6 +336,20 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Veteran;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Brendan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_May2;
 
+
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waiter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Waitress;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungCoupleM;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_YoungCoupleF;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ParasolLady;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Idol;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BeautyDP;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cynthia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Painter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rocker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Socialite;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_NurseM;
+
 // end
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -349,7 +363,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OLIVIA_FISHING] =           &gObjectEventGraphicsInfo_OliviaFishing,
     [OBJ_EVENT_GFX_OLIVER_NORMAL] =            &gObjectEventGraphicsInfo_OliverNormal,
     [OBJ_EVENT_GFX_OLIVER_MACH_BIKE] =         &gObjectEventGraphicsInfo_OliverMachBike,
-    // [OBJ_EVENT_GFX_OLIVER_SURFING] =           &gObjectEventGraphicsInfo_OliverSurfing,
+    [OBJ_EVENT_GFX_OLIVER_SURFING] =           &gObjectEventGraphicsInfo_OliverSurfing,
     [OBJ_EVENT_GFX_OLIVER_FIELD_MOVE] =        &gObjectEventGraphicsInfo_OliverFieldMove,
     [OBJ_EVENT_GFX_OLIVER_FISHING] =           &gObjectEventGraphicsInfo_OliverFishing,
     [OBJ_EVENT_GFX_OLIVIA_WATERING] =          &gObjectEventGraphicsInfo_OliviaWatering,
@@ -408,6 +422,20 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_VETERAN] =                  &gObjectEventGraphicsInfo_Veteran,
     [OBJ_EVENT_GFX_BRENDAN_2] =                &gObjectEventGraphicsInfo_Brendan2,
     [OBJ_EVENT_GFX_MAY_2] =                    &gObjectEventGraphicsInfo_May2,
+
+    
+    [OBJ_EVENT_GFX_WAITER] =                    &gObjectEventGraphicsInfo_Waiter,
+    [OBJ_EVENT_GFX_WAITRESS] =                  &gObjectEventGraphicsInfo_Waitress,
+    [OBJ_EVENT_GFX_YOUNG_COUPLE_M] =            &gObjectEventGraphicsInfo_YoungCoupleM,
+    [OBJ_EVENT_GFX_YOUNG_COUPLE_F] =            &gObjectEventGraphicsInfo_YoungCoupleF,
+    [OBJ_EVENT_GFX_PARASOL_LADY] =              &gObjectEventGraphicsInfo_ParasolLady,
+    [OBJ_EVENT_GFX_IDOL] =                      &gObjectEventGraphicsInfo_Idol,
+    [OBJ_EVENT_GFX_BEAUTY_DP] =                 &gObjectEventGraphicsInfo_BeautyDP,
+    [OBJ_EVENT_GFX_CYNTHIA] =                   &gObjectEventGraphicsInfo_Cynthia,
+    [OBJ_EVENT_GFX_PAINTER] =                   &gObjectEventGraphicsInfo_Painter,
+    [OBJ_EVENT_GFX_ROCKER] =                    &gObjectEventGraphicsInfo_Rocker,
+    [OBJ_EVENT_GFX_SOCIALITE] =                 &gObjectEventGraphicsInfo_Socialite,
+    [OBJ_EVENT_GFX_NURSE_M] =                   &gObjectEventGraphicsInfo_NurseM,
 
 
 

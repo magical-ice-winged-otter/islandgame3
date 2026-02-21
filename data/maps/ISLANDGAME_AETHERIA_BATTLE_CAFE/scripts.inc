@@ -1,0 +1,3 @@
+ISLANDGAME_AETHERIA_BATTLE_CAFE_MapScripts::
+	.byte 0
+
