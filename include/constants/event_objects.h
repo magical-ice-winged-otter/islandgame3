@@ -670,6 +670,7 @@
 #define OBJ_EVENT_PAL_TAG_ROCKER                  0x1288
 #define OBJ_EVENT_PAL_TAG_SOCIALITE               0x1289
 #define OBJ_EVENT_PAL_TAG_NURSE_M                 0x128A
+#define OBJ_EVENT_PAL_TAG_NURSE                   0x128B
 
 // This + localId is used as the tileTag
 // for compressed graphicsInfos
