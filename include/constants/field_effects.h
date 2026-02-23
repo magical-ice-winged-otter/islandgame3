@@ -7,7 +7,7 @@
 #define FLDEFF_SHADOW                    3
 #define FLDEFF_TALL_GRASS                4
 #define FLDEFF_RIPPLE                    5
-#define FLDEFF_FIELD_MOVE_SHOW_MON       6
+#define FLDEFF_FIELD_MOVE_SHOW_SPRITE    6
 #define FLDEFF_ASH                       7
 #define FLDEFF_SURF_BLOB                 8
 #define FLDEFF_USE_SURF                  9

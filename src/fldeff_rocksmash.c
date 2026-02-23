@@ -89,7 +89,7 @@ static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId)
 
 static void Task_DoFieldMove_WaitForMon(u8 taskId)
 {
-    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         gFieldEffectArguments[1] = GetPlayerFacingDirection();
         if (gFieldEffectArguments[1] == DIR_SOUTH)
@@ -102,7 +102,7 @@ static void Task_DoFieldMove_WaitForMon(u8 taskId)
             gFieldEffectArguments[2] = 3;
         ObjectEventSetGraphicsId(&gObjectEvents[gPlayerAvatar.objectEventId], GetPlayerAvatarGraphicsIdByCurrentState());
         StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], gFieldEffectArguments[2]);
-        FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON);
+        FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
         gTasks[taskId].func = Task_DoFieldMove_RunFunc;
     }
 }

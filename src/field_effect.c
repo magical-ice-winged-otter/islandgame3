@@ -1980,7 +1980,7 @@ static bool8 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent 
 
 static bool8 WaterfallFieldEffect_WaitForShowMon(struct Task *task, struct ObjectEvent *objectEvent)
 {
-    if (FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         return FALSE;
     }
@@ -2054,7 +2054,7 @@ static bool8 DiveFieldEffect_TryWarp(struct Task *task)
     PlayerGetDestCoords(&mapPosition.x, &mapPosition.y);
 
     // Wait for show mon first
-    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         TryDoDiveWarp(&mapPosition, gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior);
         DestroyTask(FindTaskIdByFunc(Task_UseDive));
@@ -2831,7 +2831,7 @@ bool8 FldEff_FieldMoveShowMonInit(void)
     gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
     gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
     gFieldEffectArguments[0] |= noDucking;
-    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
+    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;
 }
@@ -2839,7 +2839,7 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 bool8 FldEff_FieldMoveShowItemInit(void)
 {
     // We know that gFieldEffectArguments[0] contains the item id.
-    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
+    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     return FALSE;
 }
@@ -2966,7 +2966,7 @@ static void FieldMoveShowSpriteOutdoorsEffect_End(struct Task *task)
     SetVBlankCallback(callback);
     InitTextBoxGfxAndPrinters();
     FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
-    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON);
+    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     DestroyTask(FindTaskIdByFunc(Task_FieldMoveShowSpriteOutdoors));
 }
 
@@ -3095,7 +3095,7 @@ static void FieldMoveShowSpriteIndoorsEffect_End(struct Task *task)
     SetVBlankCallback(intrCallback);
     InitTextBoxGfxAndPrinters();
     FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
-    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON);
+    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     DestroyTask(FindTaskIdByFunc(Task_FieldMoveShowSpriteIndoors));
 }
 
@@ -3305,7 +3305,7 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
 static void SurfFieldEffect_JumpOnSurfBlob(struct Task *task)
 {
     struct ObjectEvent *objectEvent;
-    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
@@ -3479,7 +3479,7 @@ static void FlyOutFieldEffect_ShowMon(struct Task *task)
 
 static void FlyOutFieldEffect_BirdLeaveBall(struct Task *task)
 {
-    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         struct ObjectEvent *objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
         if (task->tAvatarFlags & PLAYER_AVATAR_FLAG_SURFING)
@@ -4297,7 +4297,7 @@ static bool8 RockClimb_ShowMon(struct Task *task, struct ObjectEvent *objectEven
 
 static bool8 RockClimb_JumpOnRockClimbBlob(struct Task *task, struct ObjectEvent *objectEvent)
 {
-    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_MON))
+    if (!FieldEffectActiveListContains(FLDEFF_FIELD_MOVE_SHOW_SPRITE))
     {
         objectEvent->noShadow = TRUE; // hide shadow
         ObjectEventSetGraphicsId(objectEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
