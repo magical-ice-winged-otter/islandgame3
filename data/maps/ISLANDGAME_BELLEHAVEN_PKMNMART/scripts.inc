@@ -68,15 +68,17 @@ ISLANDGAME_BELLEHAVEN_PKMNMART_Skitty::
 	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
 # 38 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
 	waitmoncry
+# 39 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
+	release
 	return
 
 
 ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1::
-# 42 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
-	lock
 # 43 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
-	faceplayer
+	lock
 # 44 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
+	faceplayer
+# 45 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1_Text_0
 # 48 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
 	closemessage
@@ -108,13 +110,12 @@ ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_Employee_Text_1:
 	.string "Have a nice rest of your day!$"
 
 ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1_Text_0:
-# 45 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
+# 46 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
 	.string "Unbelievable. I can't even get a pack of\n"
 	.string "Poké Puffs for a reasonable price\l"
-	.string "'cause of this economy.\p"
-	.string "Thanks a lot, Silverwing Ding-a-lings.$"
+	.string "anymore.$"
 
 ISLANDGAME_BELLEHAVEN_PKMNMART_NPC2_Text_0:
 # 56 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
-	.string "Ooooh the rizzory... How I wish I had a\n"
+	.string "Ooooh the misery... How I wish I had a\n"
 	.string "Fezanskibidi...$"

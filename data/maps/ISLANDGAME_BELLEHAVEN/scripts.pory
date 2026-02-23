@@ -102,7 +102,7 @@ script ISLANDGAME_BELLEHAVEN_MapScripts_NPC_3 {
     lock
     faceplayer
     msgbox(format(
-        "That's the last time I take my litty kitty out for a walk in Lumine Cave..."
+        "That's the last time I take my lil kitty out for a walk in Lumine Cave..."
     ))
     applymovement(8, Common_Movement_FaceOriginalDirection)
     waitmovement(0)
@@ -114,9 +114,7 @@ script ISLANDGAME_BELLEHAVEN_MapScripts_Litten {
     lock
     faceplayer
     playmoncry(SPECIES_LITTEN, CRY_MODE_NORMAL)
-    msgbox(format(
-        "Mreow... {COLOR BLUE}(I hate mondays.)"
-    ))
+    waitmoncry
     applymovement(9, Common_Movement_FaceOriginalDirection)
     waitmovement(0)
     closemessage

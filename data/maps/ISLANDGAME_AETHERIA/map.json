@@ -494,7 +494,7 @@
       "flag": "FLAG_TEMP_3"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_6",
+      "graphics_id": "OBJ_EVENT_GFX_WAITRESS",
       "x": 7,
       "y": 28,
       "elevation": 0,
@@ -540,6 +540,13 @@
       "y": 32,
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_AETHERIA",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 27,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_BATTLE_CAFE",
       "dest_warp_id": "0"
     }
   ],

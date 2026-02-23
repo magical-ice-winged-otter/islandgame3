@@ -153,65 +153,65 @@ ISLANDGAME_BELLEHAVEN_MapScripts_Litten::
 # 116 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	playmoncry SPECIES_LITTEN, CRY_MODE_NORMAL
 # 117 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
-	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_Litten_Text_0
-# 120 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+	waitmoncry
+# 118 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	applymovement 9, Common_Movement_FaceOriginalDirection
-# 121 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 119 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	waitmovement 0
-# 122 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 120 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	closemessage
-# 123 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 121 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_4::
-# 127 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 125 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	lock
-# 128 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 126 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	faceplayer
-# 129 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 127 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_NPC_4_Text_0
-# 133 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 131 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	closemessage
-# 134 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 132 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2::
-# 138 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 136 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	lock
-# 139 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 137 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	faceplayer
-# 140 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 138 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_0, MSGBOX_YESNO
-# 143 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 141 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_2
-# 149 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 147 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_2
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_1:
-# 155 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 153 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	closemessage
-# 156 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 154 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	release
 	return
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_2:
-# 144 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 142 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_1
 	goto ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_1
 
 
 ISLANDGAME_BELLEHAVEN_MapScripts_WallofGrookey::
-# 160 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 158 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	lock
-# 161 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 159 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	msgbox ISLANDGAME_BELLEHAVEN_MapScripts_WallofGrookey_Text_0
-# 164 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 162 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	closemessage
-# 165 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 163 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	release
 	return
 
@@ -273,37 +273,33 @@ ISLANDGAME_BELLEHAVEN_MapScripts_NPC_1_Text_0:
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_3_Text_0:
 # 105 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
-	.string "That's the last time I take my litty\n"
-	.string "kitty out for a walk in Lumine Cave...$"
-
-ISLANDGAME_BELLEHAVEN_MapScripts_Litten_Text_0:
-# 118 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
-	.string "Mreow... {COLOR BLUE}(I hate mondays.)$"
+	.string "That's the last time I take my lil kitty\n"
+	.string "out for a walk in Lumine Cave...$"
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_4_Text_0:
-# 130 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 128 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	.string "I sense a premonition of impending\n"
 	.string "doom... Can you feel it too?\p"
 	.string "Ah, of course you cannot. You are not a\n"
 	.string "cosmic adept like me.$"
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_0:
-# 141 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 139 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	.string "Hey...{PAUSE 60} do you think ghosts are real?$"
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_1:
-# 145 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 143 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	.string "Hmm...{PAUSE 30} I wonder if ghost Pokémon also\n"
 	.string "count as real ghosts or not...$"
 
 ISLANDGAME_BELLEHAVEN_MapScripts_NPC_2_Text_2:
-# 150 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 148 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	.string "You don't? I must be imagining that\n"
 	.string "white hand on your shoulder then...\p"
 	.string "...\p"
 	.string "Ha! Made you look!$"
 
 ISLANDGAME_BELLEHAVEN_MapScripts_WallofGrookey_Text_0:
-# 162 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
+# 160 "data/maps/ISLANDGAME_BELLEHAVEN/scripts.pory"
 	.string "{COLOR RED}(For some strange reason, a troop of\n"
 	.string "Grookeys are blocking the way.)$"

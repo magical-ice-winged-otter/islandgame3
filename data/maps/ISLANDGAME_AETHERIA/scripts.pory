@@ -637,7 +637,7 @@ script ISLANDGAME_AETHERIA_NPC30 {
     lock
     faceplayer
     msgbox(format(
-        "Haiyooo! Come have some hotcakes with us at Café Lumi, the best in Marya!"
+        "Haiyooo! Come have some hotcakes with us at Café Lumi! {COLOR GREEN}(='u'=)"
     ))
     closemessage
     release

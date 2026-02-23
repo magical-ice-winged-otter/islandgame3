@@ -35,25 +35,11 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_SALT {
     release
 }
 
-script ISLANDGAME_LUMINE_CAVE_B1F_2_Temp {
-    lock
-    msgbox(format(
-        "{COLOR RED}(...It appears a blockade of giant Wailmer dolls is impedeing my ability to progress.)\p"
-        "(Huh? There's a note attached to one of them.)\p"
-        "{COLOR BLUE}Thanks for playing the 1.5 release of our Pokémon hack! Unfortunately, this is where the road ends for now. Be sure to check our forum page for future updates. :)"
-    ))
-    closemessage
-    release
-}
-
 script ISLANDGAME_LUMINE_CAVE_B1F_2_Cringe {
     lock
     faceplayer
     msgbox(format(
-        "STICKING OUT YOUR GYATT FOR THE GRAVELER\p"
-        "YOU'RE SO CARBINK\nYOU'RE SO GIGALITH\p"
-        "I JUST WANNA BE YOUR CRADILY\p"
-        "C'MON, SING IT WITH ME!"
+        "I'm hoping to find some diamonds here tonight!"
     ))
     closemessage
     release
@@ -73,9 +59,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_TempNPC2 {
     lock
     faceplayer
     playmoncry(SPECIES_EXCADRILL, CRY_MODE_NORMAL)
-    msgbox(format(
-        "Doryuzu... {COLOR BLUE}(What a shame... I was ready to GROUND POUND that Aggron!)"
-    ))
+    waitmoncry
     closemessage
     release
 }
@@ -88,16 +72,11 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_PorygonInteract {
     faceplayer
     if(!defeated(TRAINER_LUMINE_CAVE_ALBA)) {
         playmoncry(SPECIES_PORYGON2, CRY_MODE_NORMAL)
-        msgbox(format(
-            "I AM DESIGNATED AS PORYGON2: DEFINITIVE EDITION REMASTERED!\p"
-            "WHAT'S QUACKALACKIN'?"
-        ))
+        waitmoncry
     }
     else {
         playmoncry(SPECIES_PORYGON2, CRY_MODE_WEAK)
-        msgbox(format(
-            "YOU REALLY DUCKED US UP, TRAINER! I WILL REMEMBER OUR FIGHT!"
-        ))
+        waitmoncry
     }
     closemessage
     release
@@ -248,7 +227,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_LittenGirl {
     faceplayer
     if (flag(FLAG_LUMINE_CAVE_SPOKE_TO_ALBA)) {
         msgbox(format(
-            "Please save my litty kitty! D:"
+            "Please save my kitty!"
         ))
     }
     else {
@@ -328,7 +307,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_NPC5 {
     lock
     faceplayer
     msgbox(format(
-        "Heck... I'm gonna miss out on meeting STARLIGHT cause of this DUMB Aggron!"
+        "I'm gonna miss out on meeting STARLIGHT cause of this DUMB Aggron!"
     ))
     closemessage
     release
@@ -344,7 +323,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_NPC6 {
     else {
         faceplayer
         msgbox(format(
-            "Huh? What do you mean, this isn't the same salt you put on food?"
+            "Huh? What do you mean, it's not the same?"
         ))
     }
     closemessage
@@ -383,6 +362,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble {
     waitmovement(0)
     delay(30)
     setflag(FLAG_FOLLOWERS_DISABLED)
+    hidefollower
     addobject(20)
     addobject(21)
     setobjectxy(20, 25,13)
@@ -390,16 +370,17 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_LaironAssemble {
     applymovement(20, LaironApproach)
     applymovement(21, LaironApproach)
     waitmovement(0)
-    // setflag(FLAG_SMART_WILD_AI)
+    setflag(FLAG_SMART_WILD_AI)
     setflag(FLAG_NO_CATCHING)
-    setflag(FLAG_NO_RUNNING)
-    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_LAIRON, 40, ITEM_STEEL_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL)
-    createmon(B_SIDE_OPPONENT, B_FLANK_RIGHT, SPECIES_LAIRON, 40, ITEM_ROCK_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL)
+    setflag(FLAG_NO_RUNNING) 
+
+    createmon(B_SIDE_OPPONENT, B_FLANK_LEFT, SPECIES_LAIRON, 40, ITEM_NONE, ITEM_STEEL_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL)
+    createmon(B_SIDE_OPPONENT, B_FLANK_RIGHT, SPECIES_LAIRON, 40, ITEM_NONE, ITEM_ROCK_GEM, NATURE_RELAXED, 0, MON_GENDERLESS, 252, 252, 252, 252, 252, 0, 31, 31, 31, 31, 31, 0, MOVE_METAL_BURST, MOVE_ROCK_SLIDE, MOVE_ENDEAVOR, MOVE_REVERSAL)
     setwilddoubleflag
     playmoncry(SPECIES_LAIRON, CRY_MODE_ENCOUNTER)
     waitmoncry
     dowildbattle
-    // clearflag(FLAG_SMART_WILD_AI)
+    clearflag(FLAG_SMART_WILD_AI)
     clearflag(FLAG_NO_CATCHING)
     clearflag(FLAG_NO_RUNNING)
     specialvar(VAR_RESULT, GetBattleOutcome)
@@ -470,7 +451,7 @@ movement AlbaWalkToPlayer {
 }
 
 movement LittenGirlZoom {
-    walk_faster_up * 8
+    walk_faster_up * 9
     jump_in_place_up * 2
 }
 
@@ -527,7 +508,7 @@ script ISLANDGAME_LUMINE_CAVE_B1F_2_AggronPostFight {
         "{COLOR RED}(Phew... Seems like defeating the Aggron caused the other Pokémon to flee...)\p"
         "(That Aggron... It was exuding the same shadowy aura as the Mightyena I fought with Melissa...)\p"
         "(What's going on here...?){PAUSE 60}\p"
-        "{COLOR GREEN}Alba: {COLOR DARK_GRAY}Incredible...{PAUSE 30} I cannot believe my very own eyes..."
+        "{COLOR GREEN}Alba: {COLOR DARK_GRAY}Incredible...{PAUSE 30} I cannot believe my eyes..."
     ))
     closemessage
 

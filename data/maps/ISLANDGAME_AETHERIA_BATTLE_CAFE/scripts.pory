@@ -1,1 +1,34 @@
 mapscripts ISLANDGAME_AETHERIA_BATTLE_CAFE_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
+    lock
+    faceplayer
+    msgbox(format(
+        "Haiyo! Welcome to Café Lumi! Have you come to try our famous hotcakes?"
+    ), MSGBOX_YESNO)
+
+    if (var(VAR_RESULT) == YES) {
+        msgbox(format(
+            "Wonderful! What kind of hotcakes would you like? {COLOR GREEN}(='u'=)"
+        ))
+        dynmultipush("Classic :)", 0)
+        dynmultipush("Apple-Cinnamon :P", 1)
+        dynmultipush("Funfetti! :D", 2)
+        dynmultipush("Super Secret Special??? :O", 3)
+        dynmultipush("Nevermind :(", 4)
+        dynmultistack(0, 0, TRUE, 5, FALSE, 0, DYN_MULTICHOICE_CB_SHOW_ITEM)
+
+
+    }   
+
+    else {
+        msgbox(format(
+            "Awwh. If you change your mind, we'll be here to serve you! {COLOR GREEN}(='w'=)"
+        ))
+    }
+
+    AetheriaBattleCafeBarista_End:
+        closemessage
+        release
+}

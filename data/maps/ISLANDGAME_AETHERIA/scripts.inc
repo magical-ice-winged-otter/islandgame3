@@ -1233,7 +1233,7 @@ ISLANDGAME_AETHERIA_NPC29_Text_0:
 ISLANDGAME_AETHERIA_NPC30_Text_0:
 # 640 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Haiyooo! Come have some hotcakes with\n"
-	.string "us at Café Lumi, the best in Marya!$"
+	.string "us at Café Lumi! {COLOR GREEN}(='u'=)$"
 
 ISLANDGAME_AETHERIA_NPC31_Text_0:
 # 653 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"

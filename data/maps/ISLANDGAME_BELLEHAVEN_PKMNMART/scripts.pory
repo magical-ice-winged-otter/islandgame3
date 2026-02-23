@@ -36,14 +36,14 @@ script ISLANDGAME_BELLEHAVEN_PKMNMART_Skitty {
     applymovement(2, ISLANDGAME_BELLEHAVEN_PKMNMART_SkittyHeart)
     playmoncry(SPECIES_SKITTY, CRY_MODE_NORMAL)
     waitmoncry
+    release
 }
 
 script ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1 {
     lock
     faceplayer
     msgbox(format(
-        "Unbelievable. I can't even get a pack of Poké Puffs for a reasonable price 'cause of this economy.\p"
-        "Thanks a lot, Silverwing Ding-a-lings."
+        "Unbelievable. I can't even get a pack of Poké Puffs for a reasonable price anymore."
     ))
     closemessage
     release
@@ -53,7 +53,7 @@ script ISLANDGAME_BELLEHAVEN_PKMNMART_NPC2 {
     lock
     faceplayer
     msgbox(format(
-        "Ooooh the rizzory... How I wish I had a Fezanskibidi..."
+        "Ooooh the misery... How I wish I had a Fezanskibidi..."
     ))
     closemessage
     release

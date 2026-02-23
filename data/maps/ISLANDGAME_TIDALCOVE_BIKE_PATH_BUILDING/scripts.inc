@@ -31,13 +31,15 @@ ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck::
 # 37 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 # 38 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_Text_1, MSGBOX_NPC
+	waitmovement
 # 39 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
-	setflag FLAG_SYS_CYCLING_ROAD
+	msgbox ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_Text_1, MSGBOX_NPC
 # 40 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
+	setflag FLAG_SYS_CYCLING_ROAD
+# 41 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
 	setvar VAR_TEMP_1, 1
 ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_1:
-# 43 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
+# 44 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
 	release
 	return
 
@@ -53,9 +55,9 @@ ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_2:
 	goto ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_1
 
 
-# 46 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
-Tidalcove_Movement_PushPlayerFromCounter:
 # 47 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
+Tidalcove_Movement_PushPlayerFromCounter:
+# 48 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
 	walk_left
 	step_end
 
@@ -71,6 +73,6 @@ ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_Text_0:
 	.string "bike path without a bike!$"
 
 ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING_Trigger_BikeCheck_Text_1:
-# 38 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
+# 39 "data/maps/ISLANDGAME_TIDALCOVE_BIKE_PATH_BUILDING/scripts.pory"
 	.string "Welcome to the Seaside Bike Path!\n"
 	.string "Please be aware of other bikers.$"

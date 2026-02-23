@@ -223,208 +223,212 @@ ThiefDefeated:
 # 136 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	lock
 # 139 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	setvar VAR_0x8000, 11
+	fadescreenswapbuffers FADE_TO_BLACK
 # 140 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	setvar VAR_0x8001, 16
+	setvar VAR_0x8000, 12
 # 141 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	callnative TeleportCamera
+	setvar VAR_0x8001, 15
 # 142 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	callnative TeleportCamera
 # 143 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	setobjectxy OBJ_EVENT_ID_PLAYER, 11, 16
-# 147 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_FaceUp
-# 148 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, WalkInPlaceUp
-# 149 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_Delay32
-# 150 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
-# 151 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	msgbox ThiefDefeated_Text_0
-# 154 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Common_Movement_FaceDown
-# 155 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	msgbox ThiefDefeated_Text_1
-# 161 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	closemessage
-# 162 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
-# 163 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmoncry
-# 165 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Common_Movement_QuestionMark
-# 166 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_QuestionMark
-# 167 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Common_Movement_QuestionMark
-# 168 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
-# 169 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
-# 170 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
-# 171 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	closemessage
-# 172 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 144 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	setobjectxy OBJ_EVENT_ID_PLAYER, 12, 15
+# 145 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 149 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, Common_Movement_FaceUp
+# 150 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, WalkInPlaceUp
+# 151 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, Common_Movement_Delay32
+# 152 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
+# 153 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	msgbox ThiefDefeated_Text_0
+# 156 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 3, Common_Movement_FaceDown
+# 157 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	msgbox ThiefDefeated_Text_1
+# 163 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	closemessage
+# 164 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+# 165 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmoncry
+# 167 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 3, Common_Movement_QuestionMark
+# 168 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, Common_Movement_QuestionMark
+# 169 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 4, Common_Movement_QuestionMark
+# 170 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+# 171 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay32
+# 172 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
 # 173 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	closemessage
 # 174 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 175 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+# 176 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
-# 177 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	fadescreen FADE_TO_WHITE
-# 178 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	addobject 2
 # 179 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	setobjectxy 2, 12, 9
+	fadescreen FADE_TO_WHITE
 # 180 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	fadescreen FADE_FROM_WHITE
+	addobject 2
 # 181 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 2, Movement_ArticunoDescend
+	setobjectxy 2, 12, 9
 # 182 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
-# 185 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Common_Movement_FaceUp
-# 186 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	fadescreen FADE_FROM_WHITE
+# 183 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 2, Movement_ArticunoDescend
+# 184 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 187 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Common_Movement_FaceUp
+	applymovement 3, Common_Movement_FaceUp
 # 188 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 189 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	playse SE_PIN
+	applymovement 4, Common_Movement_FaceUp
 # 190 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Common_Movement_ExclamationMark
-# 191 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 191 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	playse SE_PIN
 # 192 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_ExclamationMark
+	applymovement 3, Common_Movement_ExclamationMark
 # 193 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 194 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Common_Movement_ExclamationMark
+	applymovement 5, Common_Movement_ExclamationMark
 # 195 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 196 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	applymovement 4, Common_Movement_ExclamationMark
 # 197 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 198 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 # 199 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 200 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Common_Movement_WalkInPlaceFasterUp
-# 201 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+# 201 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
 # 202 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
+	applymovement 3, Common_Movement_WalkInPlaceFasterUp
+# 203 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 # 204 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	msgbox ThiefDefeated_Text_2
-# 209 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	closemessage
-# 211 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Movement_AzurillOutOfWay
-# 212 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 3, Movement_ThiefRunAway
-# 213 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 206 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	msgbox ThiefDefeated_Text_2
+# 211 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	closemessage
+# 213 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 4, Movement_AzurillOutOfWay
 # 214 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_FaceDown
+	applymovement 3, Movement_ThiefRunAway
 # 215 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 216 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement 5, Common_Movement_FaceDown
 # 217 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 218 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Common_Movement_FaceDown
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
 # 219 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 220 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	removeobject 3
+	applymovement 4, Common_Movement_FaceDown
 # 221 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 222 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	playmoncry SPECIES_ARTICUNO, CRY_MODE_NORMAL
+	removeobject 3
 # 223 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmoncry
-# 224 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	closemessage
-# 225 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_FaceUp
-# 226 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 224 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_NORMAL
+# 225 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmoncry
+# 226 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	closemessage
 # 227 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Common_Movement_FaceUp
+	applymovement 5, Common_Movement_FaceUp
 # 228 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 229 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 4, Common_Movement_FaceUp
 # 230 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
-# 233 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	delay 30
-# 234 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 2, Movement_ArticunoAscend
+# 231 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 232 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
 # 235 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
+	delay 30
 # 236 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	fadescreen FADE_TO_WHITE
+	applymovement 2, Movement_ArticunoAscend
 # 237 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	removeobject 2
-# 238 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	fadescreen FADE_FROM_WHITE
-# 240 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, WalkInPlaceUp
-# 241 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 238 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	fadescreen FADE_TO_WHITE
+# 239 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	removeobject 2
+# 240 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	fadescreen FADE_FROM_WHITE
 # 242 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_Delay32
+	applymovement 5, WalkInPlaceUp
 # 243 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
 # 244 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+	applymovement 5, Common_Movement_Delay32
 # 245 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
+# 246 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
+# 247 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	msgbox ThiefDefeated_Text_3
-# 250 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
-# 251 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 4, Movement_AzurillHappy
 # 252 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
 # 253 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_FaceLeft
+	applymovement 4, Movement_AzurillHappy
 # 254 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
+# 255 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, Common_Movement_FaceLeft
+# 256 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	msgbox ThiefDefeated_Text_4
-# 257 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement 5, Common_Movement_FaceUp
-# 258 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	waitmovement 0
 # 259 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	msgbox ThiefDefeated_Text_5
-# 262 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	closemessage
-# 263 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
-# 264 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement 5, Common_Movement_FaceUp
+# 260 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 261 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	msgbox ThiefDefeated_Text_5
+# 264 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	closemessage
 # 265 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceDown
 # 266 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	waitmovement 0
+# 267 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 # 268 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	waitmovement 0
+# 270 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	msgbox ThiefDefeated_Text_6
-# 273 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	setvar VAR_ROSEVALE_STATE, 2
 # 275 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 276 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
-	delay 30
+	setvar VAR_ROSEVALE_STATE, 2
 # 277 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 278 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+	delay 30
+# 279 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	removeobject 5
-# 280 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 282 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	warp MAP_ISLANDGAME_ROSEVALE, 13, 26
 	return
 
@@ -482,12 +486,12 @@ ISLANDGAME_MT_AURORA_2F_3_EdeaInteract_Text_1:
 	.string "I-Impossible! Just who are you!?$"
 
 ThiefDefeated_Text_0:
-# 152 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 154 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}Ha! You lost!{PAUSE 60} Now, give me back\n"
 	.string "my sister's Azurill!$"
 
 ThiefDefeated_Text_1:
-# 156 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 158 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "{COLOR GREEN}Edea: {COLOR DARK_GRAY}In your dreams, squirt! I'm not\n"
 	.string "giving this Pokémon up! It's worth more\l"
 	.string "money than you'll ever amount to!\p"
@@ -500,7 +504,7 @@ ThiefDefeated_Text_1:
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}No! W-Wait!$"
 
 ThiefDefeated_Text_2:
-# 205 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 207 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "{COLOR GREEN}Edea: {COLOR DARK_GRAY}W-What!? Articuno!? Where in the\n"
 	.string "blazes did you come from!?\p"
 	.string "Ngggh...{PAUSE 60} F-Fine! I'll give back their\n"
@@ -509,24 +513,24 @@ ThiefDefeated_Text_2:
 	.string "you don't mind me...{PAUSE 60} I'm outta here!$"
 
 ThiefDefeated_Text_3:
-# 246 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 248 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}Holy moly...{PAUSE 60} Was that...\n"
 	.string "Articuno!?\p"
 	.string "It left before we could say anything...{PAUSE 60}\n"
 	.string "T-Thank you for the help, Articuno!$"
 
 ThiefDefeated_Text_4:
-# 255 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 257 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "Azurill! I'm so sorry for not being more\n"
 	.string "watchful. I should've never left you\l"
 	.string "and my little sister out of sight.$"
 
 ThiefDefeated_Text_5:
-# 260 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 262 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "Oh, and thank you too! Er...$"
 
 ThiefDefeated_Text_6:
-# 269 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
+# 271 "data/maps/ISLANDGAME_MT_AURORA_2F_3/scripts.pory"
 	.string "{COLOR GREEN}Arthur: {COLOR DARK_GRAY}{PLAYER}? Well, I owe you big\n"
 	.string "and Articuno big time for helping me.\p"
 	.string "I couldn't do anything... If it weren't\n"
