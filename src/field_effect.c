@@ -14,6 +14,7 @@
 #include "fldeff.h"
 #include "follower_npc.h"
 #include "gpu_regs.h"
+#include "item.h"
 #include "main.h"
 #include "malloc.h"
 #include "mirage_tower.h"
@@ -2839,8 +2840,9 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 bool8 FldEff_FieldMoveShowItemInit(void)
 {
     // We know that gFieldEffectArguments[0] contains the item id.
+    gFieldEffectArguments[0] = SanitizeItemId((u16) gFieldEffectArguments[0]);
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
-    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+    FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
     return FALSE;
 }
 
