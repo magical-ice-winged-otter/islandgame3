@@ -144,11 +144,9 @@ static void Mapgen_CopyMetatiles(int dstX, int dstY, int srcX, int srcY, int wid
     {
         for (int ix = 0; ix < width; ix++)
         {
-            u32 metatileId = MapGridGetMetatileIdAt(srcX + ix + MAP_OFFSET, srcY + iy + MAP_OFFSET);
-            MapGridSetMetatileIdAt(dstX + ix + MAP_OFFSET, dstY + iy + MAP_OFFSET, metatileId);
-
-            bool32 hasCollision = MapGridGetCollisionAt(srcX + ix + MAP_OFFSET, srcY + iy + MAP_OFFSET);
-            MapGridSetMetatileImpassabilityAt(dstX + ix + MAP_OFFSET, dstY + iy + MAP_OFFSET, hasCollision);
+            u32 dst = (dstX + ix + MAP_OFFSET) + gBackupMapLayout.width * (dstY + iy + MAP_OFFSET);
+            u32 src = (srcX + ix + MAP_OFFSET) + gBackupMapLayout.width * (srcY + iy + MAP_OFFSET);
+            gBackupMapLayout.map[dst] = gBackupMapLayout.map[src];
         }
     }
 }
@@ -191,6 +189,11 @@ void Mapgen_Script_SetSeed(void)
 
     if (Mapgen_HasGeneratorOtherwiseWarn())
     {
+        if (seed == 0)
+        {
+            seed = Random();
+        }
+
         sMapGenerator->randomSeed = seed;
     }
 }
@@ -226,7 +229,7 @@ void Mapgen_Script_Space(void)
 
     if (Mapgen_HasGeneratorOtherwiseWarn())
     {
-        Mapgen_AddSpace_XYWH(sMapGenerator, xMin, yMin, xMax - xMin, yMax - yMin);
+        Mapgen_AddSpace_XYWH(sMapGenerator, xMin, yMin, xMax - xMin + 1, yMax - yMin + 1);
     }
 }
 

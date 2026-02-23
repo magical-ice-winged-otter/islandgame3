@@ -13,11 +13,11 @@ mapscripts ISLANDGAME_SIERRA_DESERT_MapScripts {
         mapgen_set_prefab(PREFAB_TINY_ROCK, 1, 22, 1, 22)
         mapgen_space(1, 1, 18, 12)
         mapgen_spawn_single(15, 18, 17, 20) // update seed sign
-        mapgen_spawn_single(8, 19, 12, 22) // huge rock
+        mapgen_spawn_single(8, 18, 12, 22) // huge rock
         mapgen_spawn(PREFAB_LARGE_ROCK, 2)
         mapgen_spawn(PREFAB_MEDIUM_ROCK, 3)
-        mapgen_spawn_nosplit(PREFAB_SMALL_ROCK, 4)
-        mapgen_spawn_nosplit(PREFAB_TINY_ROCK, 5)
+        mapgen_spawn(PREFAB_SMALL_ROCK, 4)
+        mapgen_spawn(PREFAB_TINY_ROCK, 5)
         mapgen_end
     }
 }

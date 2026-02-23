@@ -14,7 +14,7 @@ struct Mapgen_Generator
 {
     struct Mapgen_Space spaces[MAPGEN_MAX_SPACES];
     int spaceCount;
-    int randomSeed;
+    u32 randomSeed;
 };
 
 struct Mapgen_Result
