@@ -66,7 +66,6 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_ShowSecretPowerShrub      @ FLDEFF_SECRET_POWER_SHRUB
 	.4byte gFieldEffectScript_ShowCutGrass              @ FLDEFF_CUT_GRASS
 	.4byte gFieldEffectScript_FieldMoveShowMonInit      @ FLDEFF_FIELD_MOVE_SHOW_MON_INIT
-	.4byte gFieldEffectScript_FieldMoveShowItemInit     @ FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT
 	.4byte gFieldEffectScript_UsePuzzleEffect           @ FLDEFF_USE_TOMB_PUZZLE_EFFECT
 	.4byte gFieldEffectScript_SecretBaseBootPC          @ FLDEFF_PCTURN_ON
 	.4byte gFieldEffectScript_HallOfFameRecord          @ FLDEFF_HALL_OF_FAME_RECORD
@@ -86,6 +85,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_RockClimbDust             @ FLDEFF_ROCK_CLIMB_DUST
 	.4byte gFieldEffectScript_TalkingIcon               @ FLDEFF_TALKING_ICON
 	.4byte gFieldEffectScript_ThinkingIcon              @ FLDEFF_THINKING_ICON
+	.4byte gFieldEffectScript_FieldMoveShowItemInit     @ FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT
 
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -111,7 +111,6 @@ gFieldEffectScript_Ripple::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_Ripple
 	field_eff_end
 
-@ TODO rename to gFieldEffectScript_FieldMoveShowSprite
 gFieldEffectScript_FieldMoveShowSprite::
 	field_eff_callnative FldEff_FieldMoveShowSprite
 	field_eff_end
