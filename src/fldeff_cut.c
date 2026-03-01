@@ -278,7 +278,7 @@ bool32 SetUpFieldMove_Cut(void)
 static void FieldCallback_CutGrass(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
-    gFieldEffectArguments[7] = 0;
+    gFieldEffectArguments[7] = 1;
     ScriptContext_SetupScript(EventScript_UseCutGrass);
 }
 
@@ -295,7 +295,7 @@ bool8 FldEff_UseCutOnGrass(void)
 static void FieldCallback_CutTree(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
-    gFieldEffectArguments[7] = 0;
+    gFieldEffectArguments[7] = 1;
     ScriptContext_SetupScript(EventScript_UseCut);
 }
 

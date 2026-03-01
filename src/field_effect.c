@@ -2815,7 +2815,6 @@ bool8 FldEff_FieldMoveShowSprite(void)
     else
         taskId = CreateTask(Task_FieldMoveShowSpriteIndoors, 0xff);
 
-    DebugPrintf("Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
     if (gFieldEffectArguments[7] == 0)
       gTasks[taskId].tSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     else if (gFieldEffectArguments[7] == 1) {
@@ -2974,7 +2973,11 @@ static void FieldMoveShowSpriteOutdoorsEffect_End(struct Task *task)
     LoadWordFromTwoHalfwords((u16 *)&task->data[13], (u32 *)&callback);
     SetVBlankCallback(callback);
     InitTextBoxGfxAndPrinters();
-    FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
+
+    if (gSprites[task->tSpriteId].sSpecies == SPECIES_NONE)
+        FieldEffectFreeGraphicsResources(&gSprites[task->tSpriteId]);
+    else
+        FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     DestroyTask(FindTaskIdByFunc(Task_FieldMoveShowSpriteOutdoors));
 }
@@ -3103,7 +3106,11 @@ static void FieldMoveShowSpriteIndoorsEffect_End(struct Task *task)
     LoadWordFromTwoHalfwords((u16 *)&task->data[13], (u32 *)&intrCallback);
     SetVBlankCallback(intrCallback);
     InitTextBoxGfxAndPrinters();
-    FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
+
+    if (gSprites[task->tSpriteId].sSpecies == SPECIES_NONE)
+        FieldEffectFreeGraphicsResources(&gSprites[task->tSpriteId]);
+    else
+        FreeResourcesAndDestroySprite(&gSprites[task->tSpriteId], task->tSpriteId);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     DestroyTask(FindTaskIdByFunc(Task_FieldMoveShowSpriteIndoors));
 }
@@ -3206,13 +3213,14 @@ static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
 static u8 InitFieldMoveItemSprite(u16 item)
 {
     u8 itemSprite;
-    struct Sprite *sprite;
+  
+    DebugPrintf("InitFieldMoveItemSprite: Making sprite for item=%d.", item);
     itemSprite = AddItemIconSprite(2110, 2110, item);
     gSprites[itemSprite].y = 0x50;
     gSprites[itemSprite].x = 0x140;
-    sprite = &gSprites[itemSprite];
-    sprite->callback = SpriteCallbackDummy;
-    sprite->oam.priority = 0;
+    gSprites[itemSprite].callback = SpriteCallbackDummy;
+    gSprites[itemSprite].oam.priority = 0;
+    gSprites[itemSprite].sSpecies = SPECIES_NONE;
     return itemSprite;
 }
 
