@@ -6395,16 +6395,21 @@ void IsFollowerFieldMoveUser(struct ScriptContext *ctx)
     Script_RequestWriteVar(varId);
 
     u16 *var = GetVarPointer(varId);
-    u16 userIndex = gFieldEffectArguments[0]; // field move user index
     struct Pokemon *follower = GetFirstLiveMon();
     struct ObjectEvent *obj = GetFollowerObject();
     if (var == NULL)
         return;
+    
+    if (gFieldEffectArguments[7] == 1)
+    {
+        *var = FALSE;
+        return;
+    }
     *var = FALSE;
     if (follower && obj && !obj->invisible)
     {
         u16 followIndex = ((u32)follower - (u32)gPlayerParty) / sizeof(struct Pokemon);
-        *var = userIndex == followIndex;
+        *var = gFieldEffectArguments[0] == followIndex;
     }
 }
 

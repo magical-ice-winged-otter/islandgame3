@@ -46,6 +46,7 @@ bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
 
 u8 CreateFieldMoveTask(void)
 {
+    DebugPrintf("CreateFieldMoveTask: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
     GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
     return CreateTask(Task_DoFieldMove_Init, 8);
 }
@@ -57,6 +58,8 @@ static void Task_DoFieldMove_Init(u8 taskId)
     LockPlayerFieldControls();
     gPlayerAvatar.preventStep = TRUE;
     objEventId = gPlayerAvatar.objectEventId;
+
+    DebugPrintf("Task_DoFieldMove_Init: Pre if check");
     if (!ObjectEventIsMovementOverridden(&gObjectEvents[objEventId])
      || ObjectEventClearHeldMovementIfFinished(&gObjectEvents[objEventId]))
     {
@@ -65,7 +68,12 @@ static void Task_DoFieldMove_Init(u8 taskId)
             // Skip field move pose underwater, or if arg3 is nonzero
             if (gFieldEffectArguments[3])
                 gFieldEffectArguments[3] = 0;
-            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+
+            DebugPrintf("Task_DoFieldMove_Init: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
+            if (gFieldEffectArguments[7] == 0)
+                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+            else if (gFieldEffectArguments[7] == 1)
+                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
             gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
         }
         else
@@ -82,7 +90,12 @@ static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId)
 {
     if (ObjectEventCheckHeldMovementStatus(&gObjectEvents[gPlayerAvatar.objectEventId]) == TRUE)
     {
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+
+        DebugPrintf("Task_DoFieldMove_ShowMonAfterPose: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
+        if (gFieldEffectArguments[7] == 0)
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        else if (gFieldEffectArguments[7] == 1)
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
         gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
     }
 }

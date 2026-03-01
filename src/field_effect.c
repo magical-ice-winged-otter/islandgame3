@@ -1,3 +1,4 @@
+#include "gba/isagbprint.h"
 #include "global.h"
 #include "data.h"
 #include "decompress.h"
@@ -2814,10 +2815,12 @@ bool8 FldEff_FieldMoveShowSprite(void)
     else
         taskId = CreateTask(Task_FieldMoveShowSpriteIndoors, 0xff);
 
+    DebugPrintf("Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
     if (gFieldEffectArguments[7] == 0)
       gTasks[taskId].tSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
-    else if (gFieldEffectArguments[7] == 1) 
-      gTasks[taskId].tSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    else if (gFieldEffectArguments[7] == 1) {
+      gTasks[taskId].tSpriteId = InitFieldMoveItemSprite(gFieldEffectArguments[0]);
+    }
     return FALSE;
 }
 
@@ -2831,6 +2834,7 @@ bool8 FldEff_FieldMoveShowMonInit(void)
     gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
     gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
     gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
+    gFieldEffectArguments[7] = 0;
     gFieldEffectArguments[0] |= noDucking;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
@@ -2841,6 +2845,9 @@ bool8 FldEff_FieldMoveShowItemInit(void)
 {
     // We know that gFieldEffectArguments[0] contains the item id.
     gFieldEffectArguments[0] = SanitizeItemId((u16) gFieldEffectArguments[0]);
+    gFieldEffectArguments[7] = 1;
+
+    DebugPrintf("FldEff_FieldMoveShowItemInit: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
     return FALSE;
