@@ -1,8 +1,10 @@
+#include "constants/items.h"
 #include "global.h"
 #include "event_data.h"
 #include "event_scripts.h"
 #include "field_effect.h"
 #include "fldeff.h"
+#include "item.h"
 #include "party_menu.h"
 #include "script.h"
 #include "string_util.h"
@@ -29,7 +31,8 @@ bool32 SetUpFieldMove_Strength(void)
 
 static void FieldCallback_Strength(void)
 {
-    gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[0] = ITEM_ISLANDGAME_POWERGLOVE;
+    gFieldEffectArguments[7] = 1;
     ScriptContext_SetupScript(EventScript_UseStrength);
 }
 
@@ -38,7 +41,7 @@ bool8 FldEff_UseStrength(void)
     u8 taskId = CreateFieldMoveTask();
     gTasks[taskId].data[8] = (u32)StartStrengthFieldEffect >> 16;
     gTasks[taskId].data[9] = (u32)StartStrengthFieldEffect;
-    GetMonNickname(&gPlayerParty[gFieldEffectArguments[0]], gStringVar1);
+    StringCopy(gStringVar1, GetItemName((u16) gFieldEffectArguments[0]));
     return FALSE;
 }
 
