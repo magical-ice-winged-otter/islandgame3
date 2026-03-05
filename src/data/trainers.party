@@ -2349,6 +2349,11 @@ Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 
+
+
+
+
+/* Aetheria */
 === TRAINER_AETHERIA_BRENDAN ===
 Name: Brendan
 Class: TRAINER_CLASS_RIVAL_HOENN
@@ -2421,72 +2426,121 @@ Ability: ABILITY_SPEED_BOOST
 - MOVE_ROCK_SLIDE
 - MOVE_PROTECT
 
-=== TRAINER_CINDY_1 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
+=== TRAINER_BATTLE_CAFE_MARCIE ===
+Name: Marcie
+Class: TRAINER_CLASS_WAITRESS
+Pic: TRAINER_PIC_WAITRESS
 Gender: Female
 Music: Female
-Items: Full Restore
+Items: ITEM_SODA_POP / ITEM_LUMIOSE_GALETTE
 Battle Type: Singles
-AI: Check Bad Move
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY / AI_FLAG_ACE_POKEMON
 
-Zigzagoon @ Nugget
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-Nature: Hardy
+SPECIES_LAMPENT
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_FLAME_BODY
+- MOVE_WILL_O_WISP
+- MOVE_HEX
+- MOVE_FLAME_BURST
+- MOVE_CONFUSE_RAY
 
-=== TRAINER_DAPHNE ===
-Name: DAPHNE
-Class: Lady
-Pic: Lady
+SPECIES_SINISTCHA_UNREMARKABLE
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_HEATPROOF
+- MOVE_MATCHA_GOTCHA
+- MOVE_HEX
+- MOVE_STRENGTH_SAP
+- MOVE_STUN_SPORE
+
+SPECIES_POLTEAGEIST_PHONY @ ITEM_CUSTAP_BERRY
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_WEAK_ARMOR
+- MOVE_GIGA_DRAIN
+- MOVE_STRENGTH_SAP
+- MOVE_NASTY_PLOT
+- MOVE_SHADOW_BALL
+
+=== TRAINER_BATTLE_CAFE_MAMI ===
+Name: Mami
+Class: TRAINER_CLASS_WAITRESS
+Pic: TRAINER_PIC_WAITRESS
 Gender: Female
 Music: Female
-Items: Full Restore
+Items: ITEM_LEMONADE / ITEM_LUMIOSE_GALETTE
 Battle Type: Singles
-AI: Check Bad Move
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY / AI_FLAG_ACE_POKEMON
 
-Luvdisc @ Nugget
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-Nature: Hardy
-- Attract
-- Sweet Kiss
-- Flail
-- Water Pulse
+SPECIES_DIPPLIN
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_SUPERSWEET_SYRUP
+- MOVE_RECOVER
+- MOVE_DRAGON_PULSE
+- MOVE_SYRUP_BOMB
+- MOVE_SUCKER_PUNCH
 
-Luvdisc @ Nugget
-Level: 39
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-Nature: Hardy
-- Attract
-- Safeguard
-- Take Down
-- Water Pulse
+SPECIES_APPLETUN
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_THICK_FAT
+- MOVE_APPLE_ACID
+- MOVE_RECOVER
+- MOVE_LEECH_SEED
+- MOVE_DRAGON_PULSE
 
-=== TRAINER_GRUNT_SPACE_CENTER_2 ===
-Name: GRUNT
-Class: Team Magma
-Pic: Magma Grunt M
-Gender: Male
-Music: Magma
+SPECIES_FLAPPLE @ ITEM_LIECHI_BERRY
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_GLUTTONY
+- MOVE_DRAGON_DANCE
+- MOVE_GRAV_APPLE
+- MOVE_ACROBATICS
+- MOVE_OUTRAGE
+
+=== TRAINER_BATTLE_CAFE_MISU ===
+Name: Misu
+Class: TRAINER_CLASS_WAITRESS
+Pic: TRAINER_PIC_WAITRESS
+Gender: Female
+Music: Female
+Items: ITEM_MOOMOO_MILK / ITEM_LUMIOSE_GALETTE
 Battle Type: Singles
-AI: Check Bad Move
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY / AI_FLAG_ACE_POKEMON
 
-Mightyena
-Level: 26
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-Nature: Hardy
+SPECIES_SLURPUFF
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_SWEET_VEIL
+- MOVE_ENERGY_BALL
+- MOVE_DRAINING_KISS
+- MOVE_YAWN
+- MOVE_STICKY_WEB
 
-Mightyena
-Level: 28
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-Nature: Hardy
+SPECIES_DACHSBUN
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_WELL_BAKED_BODY
+- MOVE_PLAY_ROUGH
+- MOVE_YAWN
+- MOVE_WISH
+- MOVE_BITE
 
-Numel
-Level: 30
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-Nature: Hardy
+Alcremie @ ITEM_KEE_BERRY
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Ability: ABILITY_AROMA_VEIL
+- MOVE_DAZZLING_GLEAM
+- MOVE_GIGA_DRAIN
+- MOVE_CALM_MIND
+- MOVE_PSYSHOCK
+
+
+
+
+
 
 === TRAINER_CINDY_2 ===
 Name: CINDY

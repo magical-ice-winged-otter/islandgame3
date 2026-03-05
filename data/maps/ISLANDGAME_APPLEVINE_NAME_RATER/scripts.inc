@@ -190,7 +190,7 @@ ISLANDGAME_APPLEVINE_COCOS_HOUSE_DollInteract_Text_4:
 	.string "{COLOR GREEN}Subaru: {COLOR DARK_GRAY}STARLIGHT is an idol group\n"
 	.string "based in the Maryan Isles consisting of\l"
 	.string "five members: Lucia as its front and\l"
-	.string "center, Camille, Azalea, Serafina, and\l"
+	.string "center, Camellia, Azalea, Serafina, and\l"
 	.string "its newest member, Primrose. STARLIGHT\l"
 	.string "is managed by Eden Productions, a\l"
 	.string "talent agency stationed in the big city\l"

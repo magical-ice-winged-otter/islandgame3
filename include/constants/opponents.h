@@ -270,13 +270,19 @@
 
 // Aetheria
 #define TRAINER_AETHERIA_BRENDAN            112
-#define TRAINER_VALERIE_4                   TRAINER_AETHERIA_BRENDAN
 #define TRAINER_AETHERIA_MAY                113
+#define TRAINER_VALERIE_4                   TRAINER_AETHERIA_BRENDAN
 #define TRAINER_VALERIE_5                   TRAINER_AETHERIA_MAY
 
-#define TRAINER_CINDY_1                     114
-#define TRAINER_DAPHNE                      115
-#define TRAINER_GRUNT_SPACE_CENTER_2        116
+#define TRAINER_BATTLE_CAFE_MARCIE          114
+#define TRAINER_BATTLE_CAFE_MISU            115
+#define TRAINER_BATTLE_CAFE_MAMI            116
+#define TRAINER_CINDY_1                     TRAINER_BATTLE_CAFE_MARCIE
+#define TRAINER_DAPHNE                      TRAINER_BATTLE_CAFE_MISU
+#define TRAINER_GRUNT_SPACE_CENTER_2        TRAINER_BATTLE_CAFE_MAMI
+
+
+
 #define TRAINER_CINDY_2                     117
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
