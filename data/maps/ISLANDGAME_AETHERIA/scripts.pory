@@ -18,6 +18,11 @@ const FLAG_NIGHTTIME = FLAG_TEMP_3
 
 mapscripts ISLANDGAME_AETHERIA_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
+        
+        if (var(VAR_AETHERIA_STATE) == 0) { // marks that the player has entered Aetheria for the first time
+            setvar(VAR_AETHERIA_STATE, 1)
+        }
+
         gettime
 
         if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {

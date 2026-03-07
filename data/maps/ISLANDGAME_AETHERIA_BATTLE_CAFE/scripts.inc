@@ -7,1067 +7,1153 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista::
-# 12 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	lock
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami::
 # 13 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	faceplayer
+	lock
 # 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_NPC_2, ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami_Movement_0
+# 15 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami_Text_0, MSGBOX_AUTOCLOSE
+# 18 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Misu::
+# 22 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 23 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Misu_Text_0, MSGBOX_AUTOCLOSE
+# 26 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron1::
+# 30 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 31 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	faceplayer
+# 32 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron1_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron2::
+# 38 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 39 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	faceplayer
+# 40 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron2_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron3::
+# 46 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 47 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron3_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingMother::
+# 53 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 54 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingMother_Text_0, MSGBOX_AUTOCLOSE
+# 58 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingChild::
+# 62 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 63 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingChild_Text_0, MSGBOX_AUTOCLOSE
+# 66 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	release
+	return
+
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista::
+# 76 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	lock
+# 77 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	faceplayer
+# 78 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	goto_if_set FLAG_TEMP_1E, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_2
-# 20 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 84 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_1, MSGBOX_YESNO
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_1:
-# 25 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 89 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_6
-# 147 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 211 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	goto AetheriaBattleCafeBarista_Decline
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5:
-# 150 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 214 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 AetheriaBattleCafeBarista_Decline:
-# 151 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_13
-# 154 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 215 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_12
+# 218 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	goto AetheriaBattleCafeBarista_End
-# 156 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 220 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 AetheriaBattleCafeBarista_End:
-# 157 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 221 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 158 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 222 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_2:
-# 15 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 79 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_0, MSGBOX_YESNO
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_1
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_6:
-# 26 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 90 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_2
-# 29 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 93 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	dynmultipush ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_3, 4
-# 30 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 94 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	dynmultipush ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_4, 0
-# 31 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 95 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	dynmultipush ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_5, 1
-# 32 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 96 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	dynmultipush ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_6, 2
-# 33 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checktrainerflag TRAINER_BATTLE_CAFE_MARCIE
-	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_12
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_9:
-# 36 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 100 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	dynmultistack 0, 0, TRUE, 5, FALSE, 4, DYN_MULTICHOICE_CB_NONE
-# 37 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 101 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	switch VAR_RESULT
-# 38 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	case 0, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_17
-# 72 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	case 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_18
-# 106 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	case 2, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_19
-# 141 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 102 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	case 0, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_10
+# 136 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	case 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_11
+# 170 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	case 2, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_12
+# 205 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	goto AetheriaBattleCafeBarista_Decline
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_10:
-# 34 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	dynmultipush ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_7, 3
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_9
+# 103 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	showmoneybox 18, 0
+# 104 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_7, MSGBOX_YESNO
+# 107 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_14
+# 112 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	checkmoney 2500
+# 113 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_23
+# 121 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	removemoney 2500
+# 122 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	updatemoneybox
+# 123 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_SHOP
+# 124 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 125 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidemoneybox
+# 126 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
+# 129 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 130 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setflag FLAG_FOLLOWERS_DISABLED
+# 131 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidefollower
+# 132 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	call ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo
+# 133 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_End
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_11:
-# 33 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checktrainerflag TRAINER_BATTLE_CAFE_MAMI
-	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_10
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_9
+# 137 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	showmoneybox 18, 0
+# 138 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10, MSGBOX_YESNO
+# 141 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_17
+# 146 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	checkmoney 2500
+# 147 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_26
+# 155 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	removemoney 2500
+# 156 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	updatemoneybox
+# 157 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_SHOP
+# 158 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 159 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidemoneybox
+# 160 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
+# 163 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 164 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setflag FLAG_FOLLOWERS_DISABLED
+# 165 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidefollower
+# 166 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	call ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo
+# 167 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_End
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_12:
-# 33 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checktrainerflag TRAINER_BATTLE_CAFE_MISU
-	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_11
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_9
+# 171 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	showmoneybox 18, 0
+# 172 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_11, MSGBOX_YESNO
+# 175 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_20
+# 180 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	checkmoney 2500
+# 181 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_29
+# 189 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	removemoney 2500
+# 190 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	updatemoneybox
+# 191 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_SHOP
+# 192 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 193 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidemoneybox
+# 194 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
+# 197 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 198 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setflag FLAG_FOLLOWERS_DISABLED
+# 199 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidefollower
+# 200 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	call ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo
+# 201 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_End
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_14:
+# 108 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidemoneybox
+# 109 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_Decline
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_17:
-# 39 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	showmoneybox 18, 0
-# 40 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8, MSGBOX_YESNO
-# 43 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_21
-# 48 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checkmoney 2500
-# 49 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_30
-# 57 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	removemoney 2500
-# 58 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	updatemoneybox
-# 59 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_SHOP
-# 60 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 61 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 142 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	hidemoneybox
-# 62 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10
-# 65 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 66 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setflag FLAG_FOLLOWERS_DISABLED
-# 67 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidefollower
-# 68 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	call ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo
-# 69 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_End
+# 143 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_Decline
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_18:
-# 73 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	showmoneybox 18, 0
-# 74 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_11, MSGBOX_YESNO
-# 77 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_24
-# 82 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checkmoney 2500
-# 83 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_33
-# 91 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	removemoney 2500
-# 92 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	updatemoneybox
-# 93 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_SHOP
-# 94 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 95 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_20:
+# 176 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	hidemoneybox
-# 96 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10
-# 99 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 100 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setflag FLAG_FOLLOWERS_DISABLED
-# 101 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidefollower
-# 102 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	call ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo
-# 103 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_End
+# 177 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_Decline
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_19:
-# 107 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	showmoneybox 18, 0
-# 108 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_12, MSGBOX_YESNO
-# 111 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, NO
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_27
-# 116 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	checkmoney 2500
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_23:
+# 114 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8
 # 117 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_36
-# 125 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	removemoney 2500
-# 126 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	updatemoneybox
-# 127 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_SHOP
-# 128 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 129 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	hidemoneybox
-# 130 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10
-# 133 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 134 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setflag FLAG_FOLLOWERS_DISABLED
-# 135 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidefollower
-# 136 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	call ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo
-# 137 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_End
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_21:
-# 44 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidemoneybox
-# 45 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_Decline
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_24:
-# 78 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidemoneybox
-# 79 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_Decline
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_27:
-# 112 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidemoneybox
-# 113 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_Decline
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_30:
-# 50 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
-# 53 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidemoneybox
-# 54 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_End
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_33:
-# 84 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
-# 87 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	hidemoneybox
-# 88 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	goto AetheriaBattleCafeBarista_End
-	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_36:
 # 118 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9
-# 121 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_End
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_26:
+# 148 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8
+# 151 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	hidemoneybox
-# 122 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 152 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	goto AetheriaBattleCafeBarista_End
+	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_29:
+# 182 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8
+# 185 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	hidemoneybox
+# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	goto AetheriaBattleCafeBarista_End
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_5
 
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo::
-# 167 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 231 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_SLIDING_DOOR
-# 168 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 232 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
-# 170 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 234 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_TEMP_1F
-# 171 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 235 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_NPC_1
-# 172 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 236 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_1, 0, -2
-# 173 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 237 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_NPC_2
-# 174 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 238 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_2, 0, -2
-# 176 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 240 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8000, 13
-# 177 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 241 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8001, 7
-# 178 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 242 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	callnative TeleportCamera
-# 179 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 243 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 180 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 244 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 13, 7
-# 181 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 245 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_WAITRESS
-# 182 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 246 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_WAITRESS, 11, 9
-# 184 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 248 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_0
-# 187 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 251 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 188 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 252 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_SHINY
-# 189 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 253 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_1
-# 190 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 254 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 191 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 255 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
-# 192 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 256 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 193 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 257 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_0
-# 198 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 262 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_SODA_POP
-# 199 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 263 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_1
-# 206 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 270 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4
-# 209 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 273 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_5
-# 211 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 275 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 212 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 276 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_2
-# 217 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 281 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 0
-# 219 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 283 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	checktrainerflag TRAINER_BATTLE_CAFE_MARCIE
 	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_2
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_1:
-# 222 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 286 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_NO_WHITEOUT
-# 224 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 288 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	trainerbattle_no_intro TRAINER_BATTLE_CAFE_MARCIE, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_3
-# 226 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 290 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_NO_WHITEOUT
-# 228 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 292 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_APPLAUSE
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6
-# 230 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 293 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami_Movement_0
+# 294 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 231 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 295 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_4
-# 235 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 299 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 237 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 301 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 239 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 303 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_5
-# 245 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 309 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_LUMIOSE_GALETTE
-# 246 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 310 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 248 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 312 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_TEMP_1F
-# 249 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 313 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_1
-# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 314 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_1, 12, 7
-# 251 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 315 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_2
-# 252 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 316 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_2, 17, 6
-# 254 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 318 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8000, 4
-# 255 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 319 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8001, 6
-# 256 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 320 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	callnative TeleportCamera
-# 257 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 321 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 258 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 322 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 6
-# 260 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 324 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_WAITRESS
-# 261 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 325 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_WAITRESS, 0, -2
-# 263 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 327 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_7
-# 265 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6
+# 329 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 267 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 331 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_6
-# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	compare VAR_TEMP_F, 0
 	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_5
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_4:
-# 278 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 342 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_8
-# 281 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 345 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_TEMP_1E
-# 282 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 346 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_FOLLOWERS_DISABLED
 	return
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_2:
-# 220 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 284 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 1
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_1
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_5:
-# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 336 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_7
-# 275 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 339 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_CUSTAP_BERRY
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_4
 
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo::
-# 292 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_SLIDING_DOOR
-# 293 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 357 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
-# 295 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 359 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_TEMP_1F
-# 296 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 360 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_NPC_1
-# 297 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 361 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_1, 0, -2
-# 298 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 362 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_NPC_2
-# 299 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_2, 0, -2
-# 301 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 365 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8000, 13
-# 302 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 366 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8001, 7
-# 303 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 367 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	callnative TeleportCamera
-# 304 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 368 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 305 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 369 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 13, 7
-# 306 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 370 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_WAITRESS
-# 307 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 371 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_WAITRESS, 11, 9
-# 309 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 373 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 311 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 375 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_0
-# 312 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 376 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 313 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 377 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_M_SWAGGER
-# 314 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 378 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitse
-# 315 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 379 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
-# 316 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 380 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 317 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 381 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_0
-# 324 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 388 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_LEMONADE
-# 325 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 389 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_1
-# 331 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 395 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 332 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 396 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3
-# 333 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 397 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4
-# 334 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 398 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0
-# 336 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 400 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 337 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 401 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_2
-# 343 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 407 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 0
-# 345 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 409 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	checktrainerflag TRAINER_BATTLE_CAFE_MAMI
 	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_2
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_1:
-# 348 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 412 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_NO_WHITEOUT
-# 350 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 414 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	trainerbattle_no_intro TRAINER_BATTLE_CAFE_MAMI, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_3
-# 352 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 416 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_NO_WHITEOUT
-# 354 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 418 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_APPLAUSE
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_1
-# 356 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 420 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_4
-# 361 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 425 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_2
-# 364 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 428 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay 30
-# 365 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 429 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_3
-# 366 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 430 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay 30
-# 367 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 431 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_4
-# 369 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 433 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 371 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 435 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_5
-# 375 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 439 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_LUMIOSE_GALETTE
-# 376 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 378 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_TEMP_1F
-# 379 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 443 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_1
-# 380 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 444 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_1, 12, 7
-# 381 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 445 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_2
-# 382 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_2, 17, 6
-# 384 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8000, 4
-# 385 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 449 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8001, 6
-# 386 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 450 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	callnative TeleportCamera
-# 387 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 451 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 388 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 452 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 6
-# 390 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 454 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_WAITRESS
-# 391 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 455 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_WAITRESS, 0, -2
-# 393 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 457 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 394 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_7
-# 395 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 458 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6
+# 459 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 397 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 461 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_6
-# 401 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 465 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	compare VAR_TEMP_F, 0
 	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_5
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_4:
-# 408 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 472 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_8
-# 411 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 475 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_TEMP_1E
-# 412 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 476 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_FOLLOWERS_DISABLED
 	return
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_2:
-# 346 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 410 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 1
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_1
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_5:
-# 402 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 466 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_7
-# 405 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_LIECHI_BERRY
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_4
 
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo::
-# 421 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_SLIDING_DOOR
-# 422 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 424 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setflag FLAG_TEMP_1F
-# 425 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	removeobject LOCALID_NPC_1
-# 426 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setobjectxy LOCALID_NPC_1, 0, -2
-# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	removeobject LOCALID_NPC_2
-# 428 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setobjectxy LOCALID_NPC_2, 0, -2
-# 430 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setvar VAR_0x8000, 13
-# 431 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setvar VAR_0x8001, 7
-# 432 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	callnative TeleportCamera
-# 433 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 434 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setobjectxy OBJ_EVENT_ID_PLAYER, 13, 7
-# 435 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	addobject LOCALID_WAITRESS
-# 436 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setobjectxy LOCALID_WAITRESS, 11, 9
-# 438 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_0
-# 441 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_PATRON, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_1
-# 443 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 444 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_PIN
-# 445 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_2
-# 447 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_3
-# 449 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 451 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
-# 452 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 453 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_0
-# 459 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 460 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
-# 461 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_ICE_BREAK
-# 462 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 463 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_2
-# 464 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
-# 465 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_1
-# 468 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_4
-# 470 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_3
-# 471 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	playse SE_WALL_HIT
-# 472 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitse
-# 473 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay 30
-# 474 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_2
-# 478 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 479 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_3
-# 482 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	setobjectxy LOCALID_WAITRESS, 15, 7
-# 483 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
-# 484 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, Common_Movement_FaceLeft
 # 485 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 487 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
+	playse SE_SLIDING_DOOR
+# 486 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	fadescreenswapbuffers FADE_TO_BLACK
 # 488 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
+	setflag FLAG_TEMP_1F
 # 489 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_4
+	removeobject LOCALID_NPC_1
+# 490 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setobjectxy LOCALID_NPC_1, 0, -2
+# 491 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	removeobject LOCALID_NPC_2
 # 492 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	giveitem ITEM_MOOMOO_MILK
-# 493 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_5
+	setobjectxy LOCALID_NPC_2, 0, -2
+# 494 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setvar VAR_0x8000, 13
+# 495 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setvar VAR_0x8001, 7
+# 496 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	callnative TeleportCamera
+# 497 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+# 498 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setobjectxy OBJ_EVENT_ID_PLAYER, 13, 7
+# 499 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	addobject LOCALID_WAITRESS
 # 500 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	closemessage
-# 501 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3
+	setobjectxy LOCALID_WAITRESS, 11, 9
 # 502 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4
-# 503 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	waitmovement 0
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_0
 # 505 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
 # 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_6
+	applymovement LOCALID_PATRON, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_1
+# 507 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 508 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_PIN
+# 509 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 510 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_2
+# 511 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
 # 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_3
+# 513 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 515 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
+# 516 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 517 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_0
+# 523 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 524 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
+# 525 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_ICE_BREAK
+# 526 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 527 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_2
+# 528 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 529 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_1
+# 532 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 533 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_4
+# 534 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_3
+# 535 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	playse SE_WALL_HIT
+# 536 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitse
+# 537 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay 30
+# 538 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_2
+# 542 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 543 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_3
+# 546 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	setobjectxy LOCALID_WAITRESS, 15, 7
+# 547 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight
+# 548 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, Common_Movement_FaceLeft
+# 549 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 551 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2
+# 552 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 553 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_4
+# 556 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	giveitem ITEM_MOOMOO_MILK
+# 557 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_5
+# 564 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	closemessage
+# 565 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3
+# 566 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4
+# 567 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 568 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0
+# 569 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	waitmovement 0
+# 570 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_6
+# 576 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 0
-# 514 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 578 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	checktrainerflag TRAINER_BATTLE_CAFE_MISU
 	goto_if 1, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_2
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_1:
-# 517 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 581 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_NO_WHITEOUT
-# 519 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 583 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	trainerbattle_no_intro TRAINER_BATTLE_CAFE_MISU, ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_7
-# 521 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 585 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_NO_WHITEOUT
-# 523 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 587 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	playse SE_APPLAUSE
-# 524 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 588 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement LOCALID_WAITRESS, ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0
-# 525 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 589 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_8
-# 532 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 596 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 534 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 598 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 536 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 600 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_9
-# 540 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 604 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_LUMIOSE_GALETTE
-# 541 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 605 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	closemessage
-# 543 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 607 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_TEMP_1F
-# 544 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 608 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_1
-# 545 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 609 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_1, 12, 7
-# 546 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 610 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	addobject LOCALID_NPC_2
-# 547 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 611 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_NPC_2, 17, 6
-# 549 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 613 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8000, 4
-# 550 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 614 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_0x8001, 6
-# 551 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 615 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	callnative TeleportCamera
-# 552 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 616 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-# 553 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 617 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy OBJ_EVENT_ID_PLAYER, 4, 6
-# 555 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 619 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	removeobject LOCALID_WAITRESS
-# 556 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 620 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setobjectxy LOCALID_WAITRESS, 0, -2
-# 558 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 622 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	fadescreen FADE_FROM_BLACK
-# 559 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_7
-# 560 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 623 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	applymovement LOCALID_BARISTA, ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6
+# 624 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	waitmovement 0
-# 562 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 626 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_10
-# 566 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 630 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	compare VAR_TEMP_F, 0
 	goto_if_eq ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_5
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_4:
-# 573 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 637 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_8
-# 576 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 640 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setflag FLAG_TEMP_1E
-# 577 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 641 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	clearflag FLAG_FOLLOWERS_DISABLED
 	return
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_2:
-# 515 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 579 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	setvar VAR_TEMP_F, 1
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_1
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_5:
-# 567 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 631 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_7
-# 570 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 634 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	giveitem ITEM_KEE_BERRY
 	goto ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_4
 
 
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_0:
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_left
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_up
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_right
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_down
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_left
-# 186 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-	step_end
-
-# 189 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_1:
-# 189 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	emote_heart
-	step_end
-
-# 191 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2:
-# 191 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_left
-	step_end
-
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3:
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 207 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_left
-	step_end
-
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4:
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_down
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_down
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_right
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_up
-# 208 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_right
-	step_end
-
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_5:
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami_Movement_0:
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	jump_in_place_left
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	jump_in_place_left
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 210 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-	step_end
-
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6:
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	jump_in_place_left
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	jump_in_place_up
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	jump_in_place_right
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	jump_in_place_down
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	jump_in_place_left
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	emote_heart
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 229 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-	step_end
-
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_7:
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_down
-# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_8
-	step_end
-
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0:
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_left
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_left
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 335 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 14 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
 	step_end
 
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_1:
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_faster_left
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_in_place_faster_left
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-# 355 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	delay_16
-	step_end
-
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_2:
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_down
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_down
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_down
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-# 363 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_left
-	step_end
-
-# 365 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_3:
-# 365 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_down
-	step_end
-
-# 367 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_4:
-# 367 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	face_left
-	step_end
-
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_0:
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_0:
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_right
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_up
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_up
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_left
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_8
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_up
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_8
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_right
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_8
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_down
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_8
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_left
-# 440 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 250 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_8
 	step_end
 
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 253 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_1:
+# 253 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	emote_heart
+	step_end
+
+# 255 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_2:
+# 255 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_left
+	step_end
+
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_3:
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 271 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_left
+	step_end
+
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_4:
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_down
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_down
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 272 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_right
+	step_end
+
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_5:
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	jump_in_place_left
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	jump_in_place_left
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 274 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+	step_end
+
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Movement_6:
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_down
+# 328 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+	step_end
+
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_0:
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_left
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_left
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 399 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+	step_end
+
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_1:
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_faster_left
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_in_place_faster_left
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+# 419 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_16
+	step_end
+
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_2:
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_down
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_down
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_down
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+# 427 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_fast_left
+	step_end
+
+# 429 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_3:
+# 429 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_down
+	step_end
+
+# 431 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Movement_4:
+# 431 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_left
+	step_end
+
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_0:
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_right
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_up
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_left
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_up
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_right
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_down
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	face_left
+# 504 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	delay_8
+	step_end
+
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_1:
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	emote_question_mark
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_in_place_right
-# 442 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
 	step_end
 
-# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 510 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_2:
-# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 510 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	emote_exclamation_mark
-# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 510 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 446 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 510 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
 	step_end
 
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_3:
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_down
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_down
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_right
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_right
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_right
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_up
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	walk_fast_up
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	face_left
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
-# 448 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 512 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	delay_16
 	step_end
 
-# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 533 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Movement_4:
-# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	walk_fast_down
-# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	slide_down
-# 469 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 533 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_down
+# 533 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	walk_down
+# 533 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	slide_down
 	step_end
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami_Text_0:
+# 16 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "Ugh, I can't believe I'm doing\n"
+	.string "this...{COLOR GREEN}(=>~>=)$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Misu_Text_0:
+# 24 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "Kyaaa!{PAUSE 30} I-I'm so sorry! I didn't mean to\n"
+	.string "spill your drink!$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron1_Text_0:
+# 33 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "Mami's my favorite. Some might be turned\n"
+	.string "off by her cold indifference, but I\l"
+	.string "think it makes her much cooler!$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron2_Text_0:
+# 41 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "Marcie's joy and energy is infectious.\n"
+	.string "She never fails to cheer me up after a\l"
+	.string "bad day!$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron3_Text_0:
+# 48 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "Oh, don't worry about it...$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingMother_Text_0:
+# 55 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "I don't think this type of café would be\n"
+	.string "appropriate for you, dearie...\p"
+	.string "You still don't have your own Pokémon\n"
+	.string "yet...$"
+
+ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingChild_Text_0:
+# 64 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+	.string "But I want flapjacks... -sniff-$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_0:
-# 16 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 80 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Oooh, already back for more~?$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_1:
-# 21 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 85 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Haiyo~! Welcome to Café Lumi! Home of\n"
 	.string "the STARLIGHT Cinnamon Roll herself,\l"
 	.string "Azalea!\p"
@@ -1075,63 +1161,59 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_1:
 	.string "hotcakes?$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_2:
-# 27 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 91 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Wonderful! Which hotcake combo would\n"
 	.string "you like~? {COLOR GREEN}(='u'=)$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_3:
-# 29 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 93 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Nevermind :($"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_4:
-# 30 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 94 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Classy~$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_5:
-# 31 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 95 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Applin Cinna-Mon!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_6:
-# 32 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 96 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Funfetti!!!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_7:
-# 34 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
-	.string "Super Secret Special???$"
-
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8:
-# 41 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 105 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Oooh~, good choice! It'll just be ¥2,500,\n"
 	.string "is that okidokii~?$"
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9:
-# 51 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_8:
+# 115 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Sowwy... We can't serve you if you can't\n"
 	.string "pay for it... ):$"
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10:
-# 63 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_9:
+# 127 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Fantastic! Please take a seat over\n"
 	.string "there, and your Café Cutie will be right\l"
 	.string "with you, heehee.$"
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_11:
-# 75 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_10:
+# 139 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Hehe, so you like them a little tart,\n"
 	.string "hmm~? It'll be ¥2,500, okidokii~?$"
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_12:
-# 109 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_11:
+# 173 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Yum-yum! I love confetti cake! It'll be\n"
 	.string "¥2,500, okidokiiii~?$"
 
-ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_13:
-# 152 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_12:
+# 216 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Awwh. Let me know if you change your\n"
 	.string "mind! {COLOR GREEN}(='w'=)$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_0:
-# 194 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 258 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Haiyoooo~! My name is Marcie, and I'll be\n"
 	.string "your Café Cuuuutie for today~!\p"
 	.string "Bet'cha didn't expect me to be serving\n"
@@ -1141,7 +1223,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_0:
 	.string "love from yours truly~!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_1:
-# 200 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 264 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "And now... for the main course!\p"
 	.string "A stack of our famous buttermilk\n"
 	.string "hotcakes!\p"
@@ -1153,7 +1235,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_1:
 	.string "Come on up to the stage with me!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_2:
-# 213 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 277 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "To infuse your hotcakes with maximum\n"
 	.string "flavorful goodness, we'll be calling\l"
 	.string "upon the Café gods to grant us their\l"
@@ -1165,18 +1247,18 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_2:
 	.string "trainer!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_3:
-# 224 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 288 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "A splendid show!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_4:
-# 232 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 296 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Yay! What a wonderful performance! The\n"
 	.string "Café gods shine upon us, trainer!\p"
 	.string "And with that... ta-da! Our ritual is\n"
 	.string "complete! Bon appétit~! Hee-hee.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_5:
-# 240 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 304 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "{COLOR GREEN}> You dig into the stack of pancakes,\n"
 	.string "expecting an explosion of flavor!\p"
 	.string "> But to your disappointment, they\n"
@@ -1187,23 +1269,23 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_5:
 	.string "> You decided to save one for the road.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_6:
-# 268 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 332 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Thank you for your patronage, trainer!\n"
 	.string "It was nice meeting you. Our battle was\l"
 	.string "quite fun, heehee~.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_7:
-# 273 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 337 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Ooh, and please take this as well! It's a\n"
 	.string "souvenir, to commemorate our exciting\l"
 	.string "battle!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo_Text_8:
-# 279 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 343 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Please come visit us again! {COLOR GREEN}(=>w<=)$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_0:
-# 318 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 382 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Haiyooo... My name is Mami, and I'll, uh...\p"
 	.string "-ahem-...\p"
 	.string "be your Café Cutie for today...\p"
@@ -1213,7 +1295,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_0:
 	.string "please enjoy it or something...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_1:
-# 326 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 390 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "And now for the main course.\p"
 	.string "A stack of...{PAUSE 60} fruitastic Applin\n"
 	.string "Cinna-Mon hotcakes...\p"
@@ -1224,7 +1306,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_1:
 	.string "to the stage with me.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_2:
-# 338 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 402 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "To infuse your hotcakes with maximum\n"
 	.string "flavor, I'll need to call upon the Café\l"
 	.string "gods to grant us their power.\p"
@@ -1234,12 +1316,12 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_2:
 	.string "our best, I guess.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_3:
-# 350 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 414 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Awesome...\p"
 	.string "I-I mean! W-Whatever, it was alright...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_4:
-# 357 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 421 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "A-Anyways! The Café gods were really\n"
 	.string "happy with our battle, and now your\l"
 	.string "hotcakes will taste a lot better!\p"
@@ -1248,26 +1330,26 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_4:
 	.string "Okay bye!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_5:
-# 372 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 436 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "{COLOR GREEN}> You dig into the stack of pancakes.\n"
 	.string "They're the perfect blend of sweet and\l"
 	.string "tart.\p"
 	.string "> You decided to save one for the road.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_6:
-# 398 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 462 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Thank you for your patronage, trainer!\n"
 	.string "Mami said she a lot of fun with you, but\l"
 	.string "don't let her know I told you, ehe.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo_Text_7:
-# 403 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 467 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Ooh, and please take this souvenir as\n"
 	.string "well, to commemorate the exciting\l"
 	.string "battle between you two!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_0:
-# 454 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 518 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "S-Sorry for the wait! {COLOR GREEN}(=>m<=)\p"
 	.string "{COLOR DARK_GRAY}Let's start you off with a warm glass of\n"
 	.string "soothing Moomoo Milk!\p"
@@ -1278,29 +1360,29 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_0:
 	.string "of...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_1:
-# 466 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 530 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "O-Oh no! I'm so sorry! I didn't mean to\n"
 	.string "do that! H-Here, let me get go get you a\l"
 	.string "new one real quick!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_2:
-# 475 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 539 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Ooowie...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_3:
-# 480 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 544 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "{COLOR GREEN}> You got up and helped Misu off the\n"
 	.string "floor.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_4:
-# 490 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 554 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "S-Sorry for the delay. Here is your warm\n"
 	.string "glass of soothing Moomoo Milk, made\l"
 	.string "with extra extra love to make up for my\l"
 	.string "mistake...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_5:
-# 494 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 558 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "And now, for the main course...\p"
 	.string "A-A stack of super-sweet funfetti\n"
 	.string "hotcakes!\p"
@@ -1311,7 +1393,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_5:
 	.string "come onto the stage with me!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_6:
-# 507 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 571 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "To infuse your hotcakes with maximum\n"
 	.string "flavor, we'll need to call upon the Café\l"
 	.string "gods for them to grant us their power...\p"
@@ -1320,11 +1402,11 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_6:
 	.string "So l-let's do our best, trainer!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_7:
-# 519 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 583 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Amazing...$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_8:
-# 526 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 590 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Heh... That was fun, trainer.\p"
 	.string "T-Thank you for being patient with me.\n"
 	.string "I'm the one who's supposed to be\l"
@@ -1337,7 +1419,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_8:
 	.string "need anything else!$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_9:
-# 537 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 601 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "{COLOR GREEN}> You dig into the stack of pancakes.\n"
 	.string "They bring back memories of childhood\l"
 	.string "nostalgia of when your mother made you\l"
@@ -1345,7 +1427,7 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_9:
 	.string "> You decided to save one for the road.$"
 
 ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo_Text_10:
-# 563 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
+# 627 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Thank you for your patronage, trainer!\n"
 	.string "Please forgive Misu for any mishaps she\l"
 	.string "may have committed during your service.\l"

@@ -1,10 +1,14 @@
 mapscripts ISLANDGAME_CHERIPORT_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setflag(FLAG_LEFT_SS_RAIN)
+
+        if(var(VAR_AETHERIA_STATE) == 0) { // until the player has entered Aetheria, the ferry service is unavailable
+            setflag(FLAG_TEMP_1F)
+        }
     }
 }
 
-// section: misc
+// section: important scripts
 
 script ISLANDGAME_CHERIPORT_GiveTownMap {
     msgbox(format(
@@ -17,6 +21,50 @@ script ISLANDGAME_CHERIPORT_GiveTownMap {
     setflag(FLAG_RECEIVED_TOWN_MAP)
     return
 }
+
+script ISLANDGAME_CHERIPORT_BoatAttendant {
+    lock
+    faceplayer
+    msgbox(format(
+        "Hello traveler. Are you here to ride the ferry?"
+    ), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        goto(ISLANDGAME_CHERIPORT_BoatAttendant_End)
+    } 
+    msgbox(format(
+        "Which island will you be traveling to?"
+    ))
+        dynmultipush("Nevermind", 0)
+        dynmultipush("Lumine (Aetheria)", 1)
+        // dynmultipush("Minerva (Amberidge)", 2)
+        dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+        switch (var(VAR_RESULT)) {
+            case 1: 
+                msgbox(format(
+                    "{COLOR GREEN}Travel to Aetheria?"
+                ), MSGBOX_YESNO)
+                if (var(VAR_RESULT) == NO) {
+                    goto(ISLANDGAME_CHERIPORT_BoatAttendant_End)
+                }
+                msgbox(format(
+                    "Very well. Please board the ferry. We will be departing soon."
+                ))
+                closemessage
+                fadescreen(FADE_TO_BLACK)
+                playse(SE_RG_SS_ANNE_HORN)
+                waitse
+                playse(SE_M_SURF)
+                waitse
+                warp(MAP_ISLANDGAME_AETHERIA_WHARF, 4, 10)
+            default:
+                goto(ISLANDGAME_CHERIPORT_BoatAttendant_End)
+        }
+
+    ISLANDGAME_CHERIPORT_BoatAttendant_End:
+        closemessage
+        release
+}
+
 
 
 // section: interactions
@@ -107,8 +155,10 @@ script ISLANDGAME_CHERIPORT_Interact_Sign_Laboratory {
     msgbox(format("PROFESSOR PALM'S LABORATORY"), MSGBOX_SIGN)
 }
 
-// section: triggers
 
+
+
+// section: triggers
 script ISLANDGAME_CHERIPORT_Trigger_EnteringTown {
     if (!flag(FLAG_RECEIVED_TOWN_MAP)) {
         playse(SE_PIN)

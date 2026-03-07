@@ -8,6 +8,70 @@ mapscripts ISLANDGAME_AETHERIA_BATTLE_CAFE_MapScripts {
 }
 
 
+// NPCs
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami {
+    lock
+    applymovement(LOCALID_NPC_2, moves(delay_16 * 2, jump_in_place_left, jump_in_place_up, jump_in_place_right, jump_in_place_down, jump_in_place_left, emote_heart, delay_16 * 2))
+    msgbox(format(
+        "Ugh, I can't believe I'm doing this...{COLOR GREEN}(=>~>=)"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Misu {
+    lock
+    msgbox(format(
+        "Kyaaa!{PAUSE 30} I-I'm so sorry! I didn't mean to spill your drink!"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron1 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Mami's my favorite. Some might be turned off by her cold indifference, but I think it makes her much cooler!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron2 {
+    lock
+    faceplayer
+    msgbox(format(
+        "Marcie's joy and energy is infectious. She never fails to cheer me up after a bad day!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron3 {
+    lock
+    msgbox(format(
+        "Oh, don't worry about it..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingMother {
+    lock
+    msgbox(format(
+        "I don't think this type of café would be appropriate for you, dearie...\p"
+        "You still don't have your own Pokémon yet..."
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_BATTLE_CAFE_WaitingChild {
+    lock
+    msgbox(format(
+        "But I want flapjacks... -sniff-"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+
+
+
+
+
+// Battle Cafe Functionality
 script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
     lock
     faceplayer
@@ -30,9 +94,9 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
         dynmultipush("Classy~", 0)
         dynmultipush("Applin Cinna-Mon!", 1)
         dynmultipush("Funfetti!!!", 2)
-        if(defeated(TRAINER_BATTLE_CAFE_MARCIE) && defeated(TRAINER_BATTLE_CAFE_MISU) && defeated(TRAINER_BATTLE_CAFE_MAMI)) { // unlocks after you tried all other three combos
-            dynmultipush("Super Secret Special???", 3)
-        }
+        // if(defeated(TRAINER_BATTLE_CAFE_MARCIE) && defeated(TRAINER_BATTLE_CAFE_MISU) && defeated(TRAINER_BATTLE_CAFE_MAMI)) { // unlocks after you tried all other three combos
+        //     dynmultipush("Super Secret Special???", 3)
+        // }
         dynmultistack(0,0,TRUE,5,FALSE,4,DYN_MULTICHOICE_CB_NONE)
         switch (var(VAR_RESULT)) {
             case 0: // Classy

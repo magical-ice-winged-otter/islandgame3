@@ -5870,6 +5870,16 @@
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_BATTLE_CAFE/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_WHARF",
+      "name": "ISLANDGAME_AETHERIA_WHARF_Layout",
+      "width": 24,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_WHARF/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_WHARF/map.bin"
     }
   ]
 }

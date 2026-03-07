@@ -1,0 +1,47 @@
+mapscripts ISLANDGAME_AETHERIA_WHARF_MapScripts {}
+
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_WHARF_BoatAttendant {
+    lock
+    faceplayer
+    msgbox(format(
+        "Hello traveler. Are you here to ride the ferry?"
+    ), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        goto(ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End)
+    } 
+    msgbox(format(
+        "Which island will you be traveling to?"
+    ))
+        dynmultipush("Nevermind", 0)
+        dynmultipush("Oranna (Cheriport)", 1)
+        // dynmultipush("Minerva (Amberidge)", 2)
+        dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+        switch (var(VAR_RESULT)) {
+            case 1: 
+                msgbox(format(
+                    "{COLOR GREEN}Travel to Cheriport?"
+                ), MSGBOX_YESNO)
+                if (var(VAR_RESULT) == NO) {
+                    goto(ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End)
+                }
+                msgbox(format(
+                    "Very well. Please board the ferry. We will be departing soon."
+                ))
+                closemessage
+                fadescreen(FADE_TO_BLACK)
+                playse(SE_RG_SS_ANNE_HORN)
+                waitse
+                playse(SE_M_SURF)
+                waitse
+                warp(MAP_ISLANDGAME_CHERIPORT, 6, 25)
+            default:
+                goto(ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End)
+        }
+
+    ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End:
+        closemessage
+        release
+}

@@ -548,6 +548,13 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_AETHERIA_BATTLE_CAFE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_WHARF",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
