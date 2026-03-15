@@ -32,10 +32,10 @@ script ISLANDGAME_CHERIPORT_BoatAttendant {
         goto(ISLANDGAME_CHERIPORT_BoatAttendant_End)
     } 
     msgbox(format(
-        "Which island will you be traveling to?"
+        "Which port will you be traveling to?"
     ))
         dynmultipush("Nevermind", 0)
-        dynmultipush("Lumine (Aetheria)", 1)
+        dynmultipush("Aetheria", 1)
         // dynmultipush("Minerva (Amberidge)", 2)
         dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
         switch (var(VAR_RESULT)) {

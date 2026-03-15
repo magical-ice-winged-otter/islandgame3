@@ -2,7 +2,7 @@ mapscripts ISLANDGAME_AETHERIA_WHARF_MapScripts {}
 
 
 
-// NPCs
+// Functionality
 script ISLANDGAME_AETHERIA_WHARF_BoatAttendant {
     lock
     faceplayer
@@ -13,10 +13,10 @@ script ISLANDGAME_AETHERIA_WHARF_BoatAttendant {
         goto(ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End)
     } 
     msgbox(format(
-        "Which island will you be traveling to?"
+        "Which port will you be traveling to?"
     ))
         dynmultipush("Nevermind", 0)
-        dynmultipush("Oranna (Cheriport)", 1)
+        dynmultipush("Cheriport", 1)
         // dynmultipush("Minerva (Amberidge)", 2)
         dynmultistack(0,0,TRUE,2,FALSE,0,DYN_MULTICHOICE_CB_NONE)
         switch (var(VAR_RESULT)) {
@@ -44,4 +44,117 @@ script ISLANDGAME_AETHERIA_WHARF_BoatAttendant {
     ISLANDGAME_AETHERIA_WHARF_BoatAttendant_End:
         closemessage
         release
+}
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_WHARF_Worker {
+    lock
+    faceplayer
+    msgbox(format(
+        "We've been takin' a lotta heat after the sinking of our largest cargo ship, the S.S. Marin.\p"
+        "But the story just don't sit right with me...\p"
+        "According to them, the ship began sinking after it struck a coral reef.\p"
+        "We've been testin' the durability of that hull for years! There ain't a reef in Marya that could'a sunk it!"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "The ferry services were temporarily closed for a few weeks due to the disaster that happened with the S.S. Marin.\p"
+        "They've resumed operations, but I'm a little more hesitant to board now..."
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Scientist {
+    lock
+    msgbox(format(
+        "Hrmm.. It just doesn't add up.\p"
+        "The crew has been sailing through this path for years. Surely they would've accounted for the reef?\p"
+        "Even if they did collide with the reef, the ship is equipped with more than enough lifeboats for the crew.\p"
+        "So how did they all go missing...? This is all quite troublesome..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_WHARF_OldMan {
+    lock
+    msgbox(format(
+        "Despite the criticism we've been facing, development of our new submarine must continue.\p"
+        "Just a few more weeks... and we'll finally be able to explore the hidden depths of the Maryan Sea!"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Fisherman {
+    lock
+    faceplayer
+    if(!flag(FLAG_ITEM_AETHERIA_KINGS_ROCK)) {
+        msgbox(format(
+            "While hunting for an {COLOR LIGHT_BLUE}Oshawott{COLOR DARK_GRAY}, I ended up reeling in this item instead.\p"
+            "I'm not sure what it does, but I'm sure you'll find some use for it."
+        ), MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_KINGS_ROCK)
+        setflag(FLAG_ITEM_AETHERIA_KINGS_ROCK)
+    }
+    else {
+        msgbox(format(
+            "It's one weird lookin' rock, that's for sure. Maybe it can be used to evolve a Pokémon, like an evolutionary stone?"
+        ), MSGBOX_AUTOCLOSE)
+    }
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Vigoroth {
+    lock
+    faceplayer
+    playmoncry(SPECIES_VIGOROTH, CRY_MODE_NORMAL)
+    msgbox(format(
+        "{COLOR BLUE}(Me want ride submarine when finish.)\p"
+        "(Me wonder if underwater have bananas.)"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Worker2 {
+    lock
+    faceplayer
+    msgbox(format(
+        "-huff puff-\p"
+        "I shoulda stayed in trainer school...\p"
+        "I'm not cut out for this type of stuff like you, Vigoroth..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Sailor {
+    lock
+    faceplayer
+    msgbox(format(
+        "Lately there's been a rumor that a ghost ship is floating around the outskirts of the Maryan sea.\p"
+        "It seems to only ever appear at night, and only when there's thick fog.\p"
+        "And whenever anyone's tried to get closer to it, it just vanishes into thin air.\p"
+        "They say that the S.S. Marin sank near where the ghost ship has been sighted before.\p"
+        "Do you think...?"
+    ), MSGBOX_AUTOCLOSE)
+    release
+}
+
+script ISLANDGAME_AETHERIA_WHARF_SilverwingMember {
+    lock
+    faceplayer
+    msgbox(format(
+        "The seas have been rather treacherous lately.\p"
+        "Perhaps these tumultuous waves are a message from our Lord?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_WHARF_Starmie {
+    lock
+    faceplayer
+    playmoncry(SPECIES_STARMIE, CRY_MODE_NORMAL)
+    waitmoncry
+    release
 }

@@ -1225,7 +1225,7 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 //island-game : Pokeball Items
-#define FLAG_ROOM3_ITEM                                             0x493       // not in use
+#define FLAG_ITEM_AETHERIA_KINGS_ROCK                               0x493
 #define FLAG_ANOMALY01_ITEM                                         0x494
 #define FLAG_FRESA_FARMS_MILK                                       0x495 
 #define FLAG_VERDANT_PATH_TIMER_BALL                                0x496 
@@ -1287,7 +1287,7 @@
 #define FLAG_ITEM_VALLEY_OF_PEACE_REVIVE                            0x4CE
 #define FLAG_ITEM_VALLEY_OF_PEACE_DUSK_STONE                        0x4CF 
 #define FLAG_ITEM_AETHERIA_PP_UP                                    0x4D0
-#define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag
+#define FLAG_ITEM_AETHERIA_METAL_COAT                               0x4D1
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
