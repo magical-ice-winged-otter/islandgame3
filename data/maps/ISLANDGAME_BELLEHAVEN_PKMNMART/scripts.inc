@@ -118,4 +118,4 @@ ISLANDGAME_BELLEHAVEN_PKMNMART_NPC1_Text_0:
 ISLANDGAME_BELLEHAVEN_PKMNMART_NPC2_Text_0:
 # 56 "data/maps/ISLANDGAME_BELLEHAVEN_PKMNMART/scripts.pory"
 	.string "Ooooh the misery... How I wish I had a\n"
-	.string "Fezanskibidi...$"
+	.string "Fezandipiti...$"

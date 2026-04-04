@@ -238,6 +238,38 @@
       "elevation": 0,
       "item": "ITEM_REVIVE",
       "flag": "FLAG_HIDDEN_ITEM_MAPLEGROVE_REVIVE"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeCenter_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeCenter_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeMart_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeMart_Sign"
     }
   ]
 }

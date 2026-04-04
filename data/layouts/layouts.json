@@ -5880,6 +5880,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_WHARF/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_WHARF/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
+      "name": "ISLANDGAME_AETHERIA_DEPT_STORE_1F_Layout",
+      "width": 19,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_1F/map.bin"
     }
   ]
 }

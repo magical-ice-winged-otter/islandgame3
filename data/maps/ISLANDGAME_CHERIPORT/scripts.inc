@@ -291,7 +291,7 @@ ISLANDGAME_CHERIPORT_BoatAttendant_Text_0:
 
 ISLANDGAME_CHERIPORT_BoatAttendant_Text_1:
 # 35 "data/maps/ISLANDGAME_CHERIPORT/scripts.pory"
-	.string "Which island will you be traveling to?$"
+	.string "Which port will you be traveling to?$"
 
 ISLANDGAME_CHERIPORT_BoatAttendant_Text_2:
 # 37 "data/maps/ISLANDGAME_CHERIPORT/scripts.pory"
@@ -299,7 +299,7 @@ ISLANDGAME_CHERIPORT_BoatAttendant_Text_2:
 
 ISLANDGAME_CHERIPORT_BoatAttendant_Text_3:
 # 38 "data/maps/ISLANDGAME_CHERIPORT/scripts.pory"
-	.string "Lumine (Aetheria)$"
+	.string "Aetheria$"
 
 ISLANDGAME_CHERIPORT_BoatAttendant_Text_4:
 # 44 "data/maps/ISLANDGAME_CHERIPORT/scripts.pory"

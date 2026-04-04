@@ -481,6 +481,38 @@
       "elevation": 0,
       "item": "ITEM_EXP_CANDY_XS",
       "flag": "FLAG_HIDDEN_ITEM_CHERIPORT_EXP_CANDY"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeMart_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 22,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeMart_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeCenter_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "IslandGame_Common_PokeCenter_Sign"
     }
   ],
   "night_music": "MUS_HG_AZALEA"

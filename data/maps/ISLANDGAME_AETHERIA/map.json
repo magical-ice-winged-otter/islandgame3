@@ -555,6 +555,20 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_AETHERIA_WHARF",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
@@ -710,6 +724,14 @@
       "elevation": 0,
       "item": "ITEM_BIG_MUSHROOM",
       "flag": "FLAG_HIDDEN_ITEM_AETHERIA_BIG_MUSHROOM"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ISLANDGAME_AETHERIA_CardShop"
     }
   ]
 }

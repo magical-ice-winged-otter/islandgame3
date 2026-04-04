@@ -144,8 +144,8 @@ ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Books_Text_0:
 
 ISLANDGAME_TIDALCOVE_PKMNCENTER_Interact_BallBoy_Text_0:
 # 51 "data/maps/ISLANDGAME_TIDALCOVE_PKMNCENTER/scripts.pory"
-	.string "My papa works at Poe Industries, one of\n"
-	.string "the biggest companies in Marya!\p"
+	.string "My papa works at PoeTech, one of the\n"
+	.string "biggest companies in Marya!\p"
 	.string "They make lots of cool stuff. One of\n"
 	.string "the things they make are Pokéballs!\p"
 	.string "They gave a bunch of them to my papa,\n"

@@ -1,0 +1,69 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_1F_MapScripts {
+
+}
+
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_Directory {
+    msgbox(format(
+        "1F - Reception\n"
+        "2F - Pharmacy\p"
+        "3F - Groceries\n"
+        "4F - Technology\p"
+        "5F - Souvenirs\n"
+        "Rooftop - Plaza"
+    ), MSGBOX_SIGN)
+}
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Receptionist {
+    lock
+    msgbox(format(
+        "Hello shopper! Welcome to the flagship store of StrixMart!\p"
+        "This building serves not only as a department store, but also as Strix Corporation's company headquarters!\p"
+        "Please refer to the directory between the elevator and stairs for information concerning each floor."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Consoomer {
+    lock
+    faceplayer
+    msgbox(format(
+        "When I arrived here, I promised myself that I'd be on a strict budget.\p"
+        "Things, uh, didn't quite go as planned, as you can see...\p"
+        "I hope my wife is okay with some plushies instead of dinner."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_LittleBoy {
+    lock
+    faceplayer
+    msgbox(format(
+        "I'm in a game of hide-and-seek with papa!\p"
+        "I hope he finds me soon. I'm getting hungry..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_SchoolGirl {
+    lock
+    msgbox(format(
+        "Hehe. Do you like your new wreath? It's the same one Primrose wears!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Bulbasaur {
+    lock
+    applymovement(LOCALID_BULBASAUR, moves(emote_heart))
+    playmoncry(SPECIES_BULBASAUR, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Employee {
+    lock
+    faceplayer
+    msgbox(format(
+        "Our founder, Corvus, established the very first StrixMart here alongside his partner, Mr. Poe.\p"
+        "However, Mr. Poe ultimately parted ways to begin his own company, PoeTech.\p"
+        "Today, Corvus and Mr. Poe are the two richest men in all of Marya."
+    ), MSGBOX_AUTOCLOSE)
+}

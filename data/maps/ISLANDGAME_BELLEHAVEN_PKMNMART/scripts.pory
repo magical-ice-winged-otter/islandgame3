@@ -53,7 +53,7 @@ script ISLANDGAME_BELLEHAVEN_PKMNMART_NPC2 {
     lock
     faceplayer
     msgbox(format(
-        "Ooooh the misery... How I wish I had a Fezanskibidi..."
+        "Ooooh the misery... How I wish I had a Fezandipiti..."
     ))
     closemessage
     release

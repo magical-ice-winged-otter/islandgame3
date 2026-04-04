@@ -40,7 +40,31 @@ script Common_NextSubQuest {
     return
 }
 
+
+
+
+
+
+
+
+
+
 const LOCALID_NURSE = 1
+
+// Mart & Center
+script IslandGame_Common_PokeMart_Sign {
+    msgbox(format(
+        "StrixMart\n"
+        "OPEN 24 HOURS"
+    ), MSGBOX_SIGN)
+}
+
+script IslandGame_Common_PokeCenter_Sign {
+    msgbox(format(
+        "Pokémon Center\n"
+        "Now serving humans upstairs!"
+    ), MSGBOX_SIGN)
+}
 
 script IslandGame_Common_PokemonCenter_1F_EventScript_Nurse {
     if (!flag(FLAG_PROF_GAVE_EEVEE)) {
@@ -61,9 +85,6 @@ script IslandGame_Common_PokemonCenter_1F_EventScript_Nurse {
     }
 }
 
-
-
-// talk to this girl if you want to change the time
 script ISLANDGAME_PKMNCENTER_2F_TimeNPC {
     lock
     faceplayer
@@ -88,8 +109,6 @@ script ISLANDGAME_PKMNCENTER_2F_TimeNPC {
     release
 }
 
-
-// talk to this gentleman if you want to change a mon's name
 script ISLANDGAME_PKMNCENTER_2F_NameRater {
     lock
     faceplayer
@@ -163,8 +182,6 @@ script ISLANDGAME_PKMNCENTER_2F_NameRater {
         release
 }
 
-
-// talk this old guy if you want to delete moves (in a game with no HMs, for whatever reason)
 script ISLANDGAME_PKMNCENTER_2F_MoveDeleter {
     lock
     faceplayer
@@ -237,8 +254,6 @@ script ISLANDGAME_PKMNCENTER_2F_MoveDeleter {
         release
 }
 
-
-// talk this chub if you want to relearn moves
 script ISLANDGAME_PKMNCENTER_2F_MoveRelearner {
     lock
     faceplayer
@@ -316,6 +331,18 @@ script ISLANDGAME_PKMNCENTER_2F_MoveRelearner {
         closemessage
         release
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 script Common_EventScript_OverworldPokemon {
     lock

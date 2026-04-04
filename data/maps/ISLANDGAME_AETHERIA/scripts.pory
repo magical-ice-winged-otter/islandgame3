@@ -198,7 +198,12 @@ script ISLANDGAME_AETHERIA_CardShop {
     ), MSGBOX_SIGN)
 }
 
-
+script ISLANDGAME_AETHERIA_DeptStore {
+    msgbox(format(
+        "StrixCorp MegaMart\n"
+        "“You want it? We got it!”"
+    ), MSGBOX_SIGN)
+}
 
 script ISLANDGAME_AETHERIA_EmptyTrash {
     msgbox(format(

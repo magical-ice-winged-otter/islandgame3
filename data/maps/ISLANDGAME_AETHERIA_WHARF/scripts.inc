@@ -163,37 +163,37 @@ ISLANDGAME_AETHERIA_WHARF_Worker2::
 
 
 ISLANDGAME_AETHERIA_WHARF_Sailor::
-# 132 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
-	lock
 # 133 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
-	faceplayer
+	lock
 # 134 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+	faceplayer
+# 135 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_WHARF_Sailor_Text_0, MSGBOX_AUTOCLOSE
-# 137 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 142 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_WHARF_SilverwingMember::
-# 141 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 146 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	lock
-# 142 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 147 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	faceplayer
-# 143 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 148 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_WHARF_SilverwingMember_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_WHARF_Starmie::
-# 150 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 155 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	lock
-# 151 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 156 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	faceplayer
-# 152 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 157 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	playmoncry SPECIES_STARMIE, CRY_MODE_NORMAL
-# 153 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 158 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	waitmoncry
-# 154 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 159 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	release
 	return
 
@@ -205,7 +205,7 @@ ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_0:
 
 ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_1:
 # 16 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
-	.string "Which island will you be traveling to?$"
+	.string "Which port will you be traveling to?$"
 
 ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_2:
 # 18 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
@@ -213,7 +213,7 @@ ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_2:
 
 ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_3:
 # 19 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
-	.string "Oranna (Cheriport)$"
+	.string "Cheriport$"
 
 ISLANDGAME_AETHERIA_WHARF_BoatAttendant_Text_4:
 # 25 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
@@ -288,16 +288,27 @@ ISLANDGAME_AETHERIA_WHARF_Vigoroth_Text_0:
 ISLANDGAME_AETHERIA_WHARF_Worker2_Text_0:
 # 126 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	.string "-huff puff-\p"
-	.string "I shoulda stayed in trainer school... I'm\n"
-	.string "not cut out for this type of stuff like\l"
-	.string "you, Vigoroth...$"
+	.string "I shoulda stayed in trainer school...\p"
+	.string "I'm not cut out for this type of stuff\n"
+	.string "like you, Vigoroth...$"
 
 ISLANDGAME_AETHERIA_WHARF_Sailor_Text_0:
-# 135 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
-	.string "$"
+# 136 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+	.string "Lately there's been a rumor that a\n"
+	.string "ghost ship is floating around the\l"
+	.string "outskirts of the Maryan sea.\p"
+	.string "It seems to only ever appear at night,\n"
+	.string "and only when there's thick fog.\p"
+	.string "And whenever anyone's tried to get\n"
+	.string "closer to it, it just vanishes into thin\l"
+	.string "air.\p"
+	.string "They say that the S.S. Marin sank near\n"
+	.string "where the ghost ship has been sighted\l"
+	.string "before.\p"
+	.string "Do you think...?$"
 
 ISLANDGAME_AETHERIA_WHARF_SilverwingMember_Text_0:
-# 144 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
+# 149 "data/maps/ISLANDGAME_AETHERIA_WHARF/scripts.pory"
 	.string "The seas have been rather treacherous\n"
 	.string "lately.\p"
 	.string "Perhaps these tumultuous waves are a\n"

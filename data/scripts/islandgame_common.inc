@@ -41,420 +41,432 @@ Common_NextSubQuest_6:
 	return
 
 
-IslandGame_Common_PokemonCenter_1F_EventScript_Nurse::
-# 46 "data/scripts/islandgame_common.pory"
-	goto_if_unset FLAG_PROF_GAVE_EEVEE, IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_1
+IslandGame_Common_PokeMart_Sign::
 # 56 "data/scripts/islandgame_common.pory"
+	msgbox IslandGame_Common_PokeMart_Sign_Text_0, MSGBOX_SIGN
+	return
+
+
+IslandGame_Common_PokeCenter_Sign::
+# 63 "data/scripts/islandgame_common.pory"
+	msgbox IslandGame_Common_PokeCenter_Sign_Text_0, MSGBOX_SIGN
+	return
+
+
+IslandGame_Common_PokemonCenter_1F_EventScript_Nurse::
+# 70 "data/scripts/islandgame_common.pory"
+	goto_if_unset FLAG_PROF_GAVE_EEVEE, IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_1
+# 80 "data/scripts/islandgame_common.pory"
 	setvar VAR_0x800B, 1
-# 57 "data/scripts/islandgame_common.pory"
+# 81 "data/scripts/islandgame_common.pory"
 	call Common_EventScript_PkmnCenterNurse
-# 58 "data/scripts/islandgame_common.pory"
+# 82 "data/scripts/islandgame_common.pory"
 	waitmessage
-# 59 "data/scripts/islandgame_common.pory"
+# 83 "data/scripts/islandgame_common.pory"
 	waitbuttonpress
-# 60 "data/scripts/islandgame_common.pory"
+# 84 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_1:
-# 47 "data/scripts/islandgame_common.pory"
+# 71 "data/scripts/islandgame_common.pory"
 	lock
-# 48 "data/scripts/islandgame_common.pory"
+# 72 "data/scripts/islandgame_common.pory"
 	msgbox IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_Text_0
-# 52 "data/scripts/islandgame_common.pory"
+# 76 "data/scripts/islandgame_common.pory"
 	closemessage
-# 53 "data/scripts/islandgame_common.pory"
+# 77 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC::
-# 68 "data/scripts/islandgame_common.pory"
+# 89 "data/scripts/islandgame_common.pory"
 	lock
-# 69 "data/scripts/islandgame_common.pory"
+# 90 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 70 "data/scripts/islandgame_common.pory"
+# 91 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_0, MSGBOX_YESNO
-# 75 "data/scripts/islandgame_common.pory"
+# 96 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_TimeNPC_2
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_1:
-# 87 "data/scripts/islandgame_common.pory"
+# 108 "data/scripts/islandgame_common.pory"
 	closemessage
-# 88 "data/scripts/islandgame_common.pory"
+# 109 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_2:
-# 76 "data/scripts/islandgame_common.pory"
+# 97 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_TO_BLACK
-# 77 "data/scripts/islandgame_common.pory"
+# 98 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_1
-# 78 "data/scripts/islandgame_common.pory"
+# 99 "data/scripts/islandgame_common.pory"
 	waitmessage
-# 79 "data/scripts/islandgame_common.pory"
+# 100 "data/scripts/islandgame_common.pory"
 	special StartWallClock
-# 80 "data/scripts/islandgame_common.pory"
+# 101 "data/scripts/islandgame_common.pory"
 	waitstate
-# 81 "data/scripts/islandgame_common.pory"
+# 102 "data/scripts/islandgame_common.pory"
 	delay 30
-# 82 "data/scripts/islandgame_common.pory"
+# 103 "data/scripts/islandgame_common.pory"
 	setflag FLAG_SET_WALL_CLOCK
-# 83 "data/scripts/islandgame_common.pory"
+# 104 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_2
 	goto ISLANDGAME_PKMNCENTER_2F_TimeNPC_1
 
 
 ISLANDGAME_PKMNCENTER_2F_NameRater::
-# 94 "data/scripts/islandgame_common.pory"
+# 113 "data/scripts/islandgame_common.pory"
 	lock
-# 95 "data/scripts/islandgame_common.pory"
+# 114 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 96 "data/scripts/islandgame_common.pory"
+# 115 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_0, MSGBOX_YESNO
-# 100 "data/scripts/islandgame_common.pory"
+# 119 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_2
 ISLANDGAME_PKMNCENTER_2F_NameRater_1:
-# 160 "data/scripts/islandgame_common.pory"
+# 179 "data/scripts/islandgame_common.pory"
 NameRater_End:
-# 161 "data/scripts/islandgame_common.pory"
+# 180 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_7
-# 162 "data/scripts/islandgame_common.pory"
+# 181 "data/scripts/islandgame_common.pory"
 	closemessage
-# 163 "data/scripts/islandgame_common.pory"
+# 182 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_2:
-# 101 "data/scripts/islandgame_common.pory"
+# 120 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_1
-# 104 "data/scripts/islandgame_common.pory"
+# 123 "data/scripts/islandgame_common.pory"
 	special ChoosePartyMon
-# 105 "data/scripts/islandgame_common.pory"
+# 124 "data/scripts/islandgame_common.pory"
 	waitstate
-# 106 "data/scripts/islandgame_common.pory"
+# 125 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_ne ISLANDGAME_PKMNCENTER_2F_NameRater_4
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_1
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_4:
-# 107 "data/scripts/islandgame_common.pory"
+# 126 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, ScriptGetPartyMonSpecies
-# 108 "data/scripts/islandgame_common.pory"
+# 127 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, SPECIES_EGG
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_7
 ISLANDGAME_PKMNCENTER_2F_NameRater_6:
-# 114 "data/scripts/islandgame_common.pory"
+# 133 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 115 "data/scripts/islandgame_common.pory"
+# 134 "data/scripts/islandgame_common.pory"
 	special IsMonOTIDNotPlayers
-# 116 "data/scripts/islandgame_common.pory"
+# 135 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_10
 ISLANDGAME_PKMNCENTER_2F_NameRater_9:
-# 125 "data/scripts/islandgame_common.pory"
+# 144 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, MonOTNameNotPlayer
-# 126 "data/scripts/islandgame_common.pory"
+# 145 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 127 "data/scripts/islandgame_common.pory"
+# 146 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_13
 ISLANDGAME_PKMNCENTER_2F_NameRater_12:
-# 136 "data/scripts/islandgame_common.pory"
+# 155 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_4, MSGBOX_YESNO
-# 140 "data/scripts/islandgame_common.pory"
+# 159 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_15
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_1
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_7:
-# 109 "data/scripts/islandgame_common.pory"
+# 128 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_2
-# 112 "data/scripts/islandgame_common.pory"
+# 131 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_6
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_10:
-# 117 "data/scripts/islandgame_common.pory"
+# 136 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_3
-# 123 "data/scripts/islandgame_common.pory"
+# 142 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_9
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_13:
-# 128 "data/scripts/islandgame_common.pory"
+# 147 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_3
-# 134 "data/scripts/islandgame_common.pory"
+# 153 "data/scripts/islandgame_common.pory"
 	goto NameRater_End
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_12
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_15:
-# 141 "data/scripts/islandgame_common.pory"
+# 160 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_5
-# 144 "data/scripts/islandgame_common.pory"
+# 163 "data/scripts/islandgame_common.pory"
 	call Common_EventScript_NameReceivedPartyMon
-# 145 "data/scripts/islandgame_common.pory"
+# 164 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, TryPutNameRaterShowOnTheAir
-# 146 "data/scripts/islandgame_common.pory"
+# 165 "data/scripts/islandgame_common.pory"
 	special BufferMonNickname
-# 147 "data/scripts/islandgame_common.pory"
+# 166 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_NameRater_17
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_1
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_17:
-# 148 "data/scripts/islandgame_common.pory"
+# 167 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_NameRater_Text_6
 	goto ISLANDGAME_PKMNCENTER_2F_NameRater_1
 
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter::
-# 169 "data/scripts/islandgame_common.pory"
+# 186 "data/scripts/islandgame_common.pory"
 	lock
-# 170 "data/scripts/islandgame_common.pory"
+# 187 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 171 "data/scripts/islandgame_common.pory"
+# 188 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_0, MSGBOX_YESNO
-# 175 "data/scripts/islandgame_common.pory"
+# 192 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveDeleter_2
-# 231 "data/scripts/islandgame_common.pory"
+# 248 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_8
-# 232 "data/scripts/islandgame_common.pory"
+# 249 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_1:
-# 235 "data/scripts/islandgame_common.pory"
+# 252 "data/scripts/islandgame_common.pory"
 MoveDeleter_End:
-# 236 "data/scripts/islandgame_common.pory"
+# 253 "data/scripts/islandgame_common.pory"
 	closemessage
-# 237 "data/scripts/islandgame_common.pory"
+# 254 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_2:
-# 176 "data/scripts/islandgame_common.pory"
+# 193 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_1
-# 179 "data/scripts/islandgame_common.pory"
+# 196 "data/scripts/islandgame_common.pory"
 	special ChoosePartyMon
-# 180 "data/scripts/islandgame_common.pory"
+# 197 "data/scripts/islandgame_common.pory"
 	waitstate
-# 181 "data/scripts/islandgame_common.pory"
+# 198 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveDeleter_6
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_5:
-# 188 "data/scripts/islandgame_common.pory"
+# 205 "data/scripts/islandgame_common.pory"
 	special IsSelectedMonEgg
-# 189 "data/scripts/islandgame_common.pory"
+# 206 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, TRUE
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveDeleter_9
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_8:
-# 195 "data/scripts/islandgame_common.pory"
+# 212 "data/scripts/islandgame_common.pory"
 	special GetNumMovesSelectedMonHas
-# 196 "data/scripts/islandgame_common.pory"
+# 213 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveDeleter_12
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_11:
-# 204 "data/scripts/islandgame_common.pory"
+# 221 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_5
-# 207 "data/scripts/islandgame_common.pory"
+# 224 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_TO_BLACK
-# 208 "data/scripts/islandgame_common.pory"
+# 225 "data/scripts/islandgame_common.pory"
 	special MoveDeleterChooseMoveToForget
-# 209 "data/scripts/islandgame_common.pory"
+# 226 "data/scripts/islandgame_common.pory"
 	fadescreen FADE_FROM_BLACK
-# 210 "data/scripts/islandgame_common.pory"
+# 227 "data/scripts/islandgame_common.pory"
 	goto_if_eq VAR_0x8005, MAX_MON_MOVES, ISLANDGAME_PKMNCENTER_2F_MoveDeleter
-# 211 "data/scripts/islandgame_common.pory"
+# 228 "data/scripts/islandgame_common.pory"
 	special BufferMoveDeleterNicknameAndMove
-# 212 "data/scripts/islandgame_common.pory"
+# 229 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_6, MSGBOX_YESNO
-# 215 "data/scripts/islandgame_common.pory"
+# 232 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveDeleter_14
-# 226 "data/scripts/islandgame_common.pory"
+# 243 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_8
-# 227 "data/scripts/islandgame_common.pory"
+# 244 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveDeleter_1
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_6:
-# 182 "data/scripts/islandgame_common.pory"
+# 199 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_2
-# 186 "data/scripts/islandgame_common.pory"
+# 203 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveDeleter_5
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_9:
-# 190 "data/scripts/islandgame_common.pory"
+# 207 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_3
 	goto ISLANDGAME_PKMNCENTER_2F_MoveDeleter_8
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_12:
-# 197 "data/scripts/islandgame_common.pory"
+# 214 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_4
-# 202 "data/scripts/islandgame_common.pory"
+# 219 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveDeleter_11
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_14:
-# 216 "data/scripts/islandgame_common.pory"
+# 233 "data/scripts/islandgame_common.pory"
 	special MoveDeleterForgetMove
-# 217 "data/scripts/islandgame_common.pory"
+# 234 "data/scripts/islandgame_common.pory"
 	playfanfare MUS_MOVE_DELETED
-# 218 "data/scripts/islandgame_common.pory"
+# 235 "data/scripts/islandgame_common.pory"
 	waitfanfare
-# 219 "data/scripts/islandgame_common.pory"
+# 236 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_7
-# 223 "data/scripts/islandgame_common.pory"
+# 240 "data/scripts/islandgame_common.pory"
 	goto MoveDeleter_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveDeleter_1
 
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner::
-# 243 "data/scripts/islandgame_common.pory"
+# 258 "data/scripts/islandgame_common.pory"
 	lock
-# 244 "data/scripts/islandgame_common.pory"
+# 259 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 245 "data/scripts/islandgame_common.pory"
+# 260 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_0
-# 250 "data/scripts/islandgame_common.pory"
+# 265 "data/scripts/islandgame_common.pory"
 	showmoneybox 0, 0
-# 251 "data/scripts/islandgame_common.pory"
+# 266 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_1, MSGBOX_YESNO
-# 254 "data/scripts/islandgame_common.pory"
+# 269 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveRelearner_2
-# 311 "data/scripts/islandgame_common.pory"
+# 326 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_8
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_1:
-# 314 "data/scripts/islandgame_common.pory"
+# 329 "data/scripts/islandgame_common.pory"
 MoveRelearner_End:
-# 315 "data/scripts/islandgame_common.pory"
+# 330 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 316 "data/scripts/islandgame_common.pory"
+# 331 "data/scripts/islandgame_common.pory"
 	closemessage
-# 317 "data/scripts/islandgame_common.pory"
+# 332 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_2:
-# 255 "data/scripts/islandgame_common.pory"
+# 270 "data/scripts/islandgame_common.pory"
 	checkmoney 1000
-# 256 "data/scripts/islandgame_common.pory"
+# 271 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveRelearner_5
-# 263 "data/scripts/islandgame_common.pory"
+# 278 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_3
-# 266 "data/scripts/islandgame_common.pory"
+# 281 "data/scripts/islandgame_common.pory"
 	special ChooseMonForMoveRelearner
-# 267 "data/scripts/islandgame_common.pory"
+# 282 "data/scripts/islandgame_common.pory"
 	waitstate
-# 268 "data/scripts/islandgame_common.pory"
+# 283 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveRelearner_9
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_8:
-# 274 "data/scripts/islandgame_common.pory"
+# 289 "data/scripts/islandgame_common.pory"
 	special IsSelectedMonEgg
-# 275 "data/scripts/islandgame_common.pory"
+# 290 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne ISLANDGAME_PKMNCENTER_2F_MoveRelearner_12
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_11:
-# 281 "data/scripts/islandgame_common.pory"
+# 296 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8005, 0
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveRelearner_15
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_14:
-# 287 "data/scripts/islandgame_common.pory"
+# 302 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_7
-# 290 "data/scripts/islandgame_common.pory"
+# 305 "data/scripts/islandgame_common.pory"
 	special TeachMoveRelearnerMove
-# 291 "data/scripts/islandgame_common.pory"
+# 306 "data/scripts/islandgame_common.pory"
 	waitstate
-# 292 "data/scripts/islandgame_common.pory"
+# 307 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, 0
 	goto_if_eq ISLANDGAME_PKMNCENTER_2F_MoveRelearner_18
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_17:
-# 296 "data/scripts/islandgame_common.pory"
+# 311 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_9
-# 299 "data/scripts/islandgame_common.pory"
+# 314 "data/scripts/islandgame_common.pory"
 	waitmessage
-# 300 "data/scripts/islandgame_common.pory"
+# 315 "data/scripts/islandgame_common.pory"
 	showmoneybox 0, 0
-# 301 "data/scripts/islandgame_common.pory"
+# 316 "data/scripts/islandgame_common.pory"
 	removemoney 1000
-# 302 "data/scripts/islandgame_common.pory"
+# 317 "data/scripts/islandgame_common.pory"
 	updatemoneybox
-# 303 "data/scripts/islandgame_common.pory"
+# 318 "data/scripts/islandgame_common.pory"
 	playse SE_SHOP
-# 304 "data/scripts/islandgame_common.pory"
+# 319 "data/scripts/islandgame_common.pory"
 	waitse
-# 305 "data/scripts/islandgame_common.pory"
+# 320 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_10
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_1
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_5:
-# 257 "data/scripts/islandgame_common.pory"
+# 272 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_2
-# 260 "data/scripts/islandgame_common.pory"
+# 275 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_1
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_9:
-# 269 "data/scripts/islandgame_common.pory"
+# 284 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_4
-# 272 "data/scripts/islandgame_common.pory"
+# 287 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_8
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_12:
-# 276 "data/scripts/islandgame_common.pory"
+# 291 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_5
-# 279 "data/scripts/islandgame_common.pory"
+# 294 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_11
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_15:
-# 282 "data/scripts/islandgame_common.pory"
+# 297 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_6
-# 285 "data/scripts/islandgame_common.pory"
+# 300 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_14
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_18:
-# 293 "data/scripts/islandgame_common.pory"
+# 308 "data/scripts/islandgame_common.pory"
 	msgbox ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_8
-# 294 "data/scripts/islandgame_common.pory"
+# 309 "data/scripts/islandgame_common.pory"
 	goto MoveRelearner_End
 	goto ISLANDGAME_PKMNCENTER_2F_MoveRelearner_17
 
 
 Common_EventScript_OverworldPokemon::
-# 321 "data/scripts/islandgame_common.pory"
+# 348 "data/scripts/islandgame_common.pory"
 	lock
-# 322 "data/scripts/islandgame_common.pory"
+# 349 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 323 "data/scripts/islandgame_common.pory"
+# 350 "data/scripts/islandgame_common.pory"
 	setflag FLAG_SMART_WILD_AI
-# 324 "data/scripts/islandgame_common.pory"
+# 351 "data/scripts/islandgame_common.pory"
 	startwildoverworldencounter
-# 325 "data/scripts/islandgame_common.pory"
+# 352 "data/scripts/islandgame_common.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 326 "data/scripts/islandgame_common.pory"
+# 353 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 328 "data/scripts/islandgame_common.pory"
+# 355 "data/scripts/islandgame_common.pory"
 	switch VAR_RESULT
-# 329 "data/scripts/islandgame_common.pory"
+# 356 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_LOST, Common_EventScript_OverworldPokemon_3
-# 331 "data/scripts/islandgame_common.pory"
+# 358 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_RAN, Common_EventScript_OverworldPokemon_4
-# 333 "data/scripts/islandgame_common.pory"
+# 360 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_WON, Common_EventScript_OverworldPokemon_5
-# 335 "data/scripts/islandgame_common.pory"
+# 362 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_CAUGHT, Common_EventScript_OverworldPokemon_6
-# 338 "data/scripts/islandgame_common.pory"
+# 365 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 Common_EventScript_OverworldPokemon_1:
-# 340 "data/scripts/islandgame_common.pory"
+# 367 "data/scripts/islandgame_common.pory"
 	release
 	return
 
@@ -465,43 +477,43 @@ Common_EventScript_OverworldPokemon_4:
 	goto Common_EventScript_OverworldPokemon_1
 
 Common_EventScript_OverworldPokemon_5:
-# 334 "data/scripts/islandgame_common.pory"
+# 361 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto Common_EventScript_OverworldPokemon_1
 
 Common_EventScript_OverworldPokemon_6:
-# 336 "data/scripts/islandgame_common.pory"
+# 363 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto Common_EventScript_OverworldPokemon_1
 
 
 Common_EventScript_OverworldPokemon_Level::
-# 344 "data/scripts/islandgame_common.pory"
+# 371 "data/scripts/islandgame_common.pory"
 	lock
-# 345 "data/scripts/islandgame_common.pory"
+# 372 "data/scripts/islandgame_common.pory"
 	faceplayer
-# 346 "data/scripts/islandgame_common.pory"
+# 373 "data/scripts/islandgame_common.pory"
 	setflag FLAG_SMART_WILD_AI
-# 347 "data/scripts/islandgame_common.pory"
+# 374 "data/scripts/islandgame_common.pory"
 	startoverworldencounter 23
-# 348 "data/scripts/islandgame_common.pory"
+# 375 "data/scripts/islandgame_common.pory"
 	clearflag FLAG_SMART_WILD_AI
-# 349 "data/scripts/islandgame_common.pory"
+# 376 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 351 "data/scripts/islandgame_common.pory"
+# 378 "data/scripts/islandgame_common.pory"
 	switch VAR_RESULT
-# 352 "data/scripts/islandgame_common.pory"
+# 379 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_LOST, Common_EventScript_OverworldPokemon_Level_3
-# 354 "data/scripts/islandgame_common.pory"
+# 381 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_RAN, Common_EventScript_OverworldPokemon_Level_4
-# 356 "data/scripts/islandgame_common.pory"
+# 383 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_WON, Common_EventScript_OverworldPokemon_Level_5
-# 358 "data/scripts/islandgame_common.pory"
+# 385 "data/scripts/islandgame_common.pory"
 	case B_OUTCOME_CAUGHT, Common_EventScript_OverworldPokemon_Level_6
-# 361 "data/scripts/islandgame_common.pory"
+# 388 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 Common_EventScript_OverworldPokemon_Level_1:
-# 363 "data/scripts/islandgame_common.pory"
+# 390 "data/scripts/islandgame_common.pory"
 	release
 	return
 
@@ -512,258 +524,258 @@ Common_EventScript_OverworldPokemon_Level_4:
 	goto Common_EventScript_OverworldPokemon_Level_1
 
 Common_EventScript_OverworldPokemon_Level_5:
-# 357 "data/scripts/islandgame_common.pory"
+# 384 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto Common_EventScript_OverworldPokemon_Level_1
 
 Common_EventScript_OverworldPokemon_Level_6:
-# 359 "data/scripts/islandgame_common.pory"
+# 386 "data/scripts/islandgame_common.pory"
 	goto Common_EventScript_RemoveStaticPokemon
 	goto Common_EventScript_OverworldPokemon_Level_1
 
 
 Common_EventScript_VendingMachine::
-# 367 "data/scripts/islandgame_common.pory"
+# 394 "data/scripts/islandgame_common.pory"
 	lock
-# 369 "data/scripts/islandgame_common.pory"
+# 396 "data/scripts/islandgame_common.pory"
 Common_VendingMachine:
-# 370 "data/scripts/islandgame_common.pory"
+# 397 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_0
-# 373 "data/scripts/islandgame_common.pory"
+# 400 "data/scripts/islandgame_common.pory"
 	showmoneybox 17, 1
-# 374 "data/scripts/islandgame_common.pory"
+# 401 "data/scripts/islandgame_common.pory"
 	dynmultipush Common_EventScript_VendingMachine_Text_1, 0
-# 375 "data/scripts/islandgame_common.pory"
+# 402 "data/scripts/islandgame_common.pory"
 	dynmultipush Common_EventScript_VendingMachine_Text_2, 35
-# 376 "data/scripts/islandgame_common.pory"
+# 403 "data/scripts/islandgame_common.pory"
 	dynmultipush Common_EventScript_VendingMachine_Text_3, 36
-# 377 "data/scripts/islandgame_common.pory"
+# 404 "data/scripts/islandgame_common.pory"
 	dynmultipush Common_EventScript_VendingMachine_Text_4, 37
-# 378 "data/scripts/islandgame_common.pory"
+# 405 "data/scripts/islandgame_common.pory"
 	dynmultistack 0, 0, TRUE, 4, FALSE, 0, DYN_MULTICHOICE_CB_NONE
-# 379 "data/scripts/islandgame_common.pory"
+# 406 "data/scripts/islandgame_common.pory"
 	switch VAR_RESULT
-# 380 "data/scripts/islandgame_common.pory"
+# 407 "data/scripts/islandgame_common.pory"
 	case 35, Common_EventScript_VendingMachine_3
-# 419 "data/scripts/islandgame_common.pory"
+# 446 "data/scripts/islandgame_common.pory"
 	case 36, Common_EventScript_VendingMachine_4
-# 458 "data/scripts/islandgame_common.pory"
+# 485 "data/scripts/islandgame_common.pory"
 	case 37, Common_EventScript_VendingMachine_5
-# 497 "data/scripts/islandgame_common.pory"
+# 524 "data/scripts/islandgame_common.pory"
 	goto VendingMachine_End
 Common_EventScript_VendingMachine_1:
-# 500 "data/scripts/islandgame_common.pory"
+# 527 "data/scripts/islandgame_common.pory"
 VendingMachine_End:
-# 501 "data/scripts/islandgame_common.pory"
+# 528 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 502 "data/scripts/islandgame_common.pory"
+# 529 "data/scripts/islandgame_common.pory"
 	closemessage
-# 503 "data/scripts/islandgame_common.pory"
+# 530 "data/scripts/islandgame_common.pory"
 	release
 	return
 
 Common_EventScript_VendingMachine_3:
-# 381 "data/scripts/islandgame_common.pory"
+# 408 "data/scripts/islandgame_common.pory"
 	checkmoney 500
-# 382 "data/scripts/islandgame_common.pory"
+# 409 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_8
 Common_EventScript_VendingMachine_7:
-# 388 "data/scripts/islandgame_common.pory"
+# 415 "data/scripts/islandgame_common.pory"
 	removemoney 500
-# 389 "data/scripts/islandgame_common.pory"
+# 416 "data/scripts/islandgame_common.pory"
 	updatemoneybox
-# 390 "data/scripts/islandgame_common.pory"
+# 417 "data/scripts/islandgame_common.pory"
 	playse SE_SHOP
-# 391 "data/scripts/islandgame_common.pory"
+# 418 "data/scripts/islandgame_common.pory"
 	waitse
-# 392 "data/scripts/islandgame_common.pory"
+# 419 "data/scripts/islandgame_common.pory"
 	playse SE_VEND
-# 393 "data/scripts/islandgame_common.pory"
+# 420 "data/scripts/islandgame_common.pory"
 	waitse
-# 394 "data/scripts/islandgame_common.pory"
+# 421 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 397 "data/scripts/islandgame_common.pory"
+# 424 "data/scripts/islandgame_common.pory"
 	random 10
-# 398 "data/scripts/islandgame_common.pory"
+# 425 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_17
 Common_EventScript_VendingMachine_16:
-# 407 "data/scripts/islandgame_common.pory"
+# 434 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_FRESH_WATER
-# 410 "data/scripts/islandgame_common.pory"
+# 437 "data/scripts/islandgame_common.pory"
 	random 5
-# 411 "data/scripts/islandgame_common.pory"
+# 438 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_26
 Common_EventScript_VendingMachine_25:
-# 418 "data/scripts/islandgame_common.pory"
+# 445 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_1
 
 Common_EventScript_VendingMachine_4:
-# 420 "data/scripts/islandgame_common.pory"
+# 447 "data/scripts/islandgame_common.pory"
 	checkmoney 800
-# 421 "data/scripts/islandgame_common.pory"
+# 448 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_11
 Common_EventScript_VendingMachine_10:
-# 427 "data/scripts/islandgame_common.pory"
+# 454 "data/scripts/islandgame_common.pory"
 	removemoney 800
-# 428 "data/scripts/islandgame_common.pory"
+# 455 "data/scripts/islandgame_common.pory"
 	updatemoneybox
-# 429 "data/scripts/islandgame_common.pory"
+# 456 "data/scripts/islandgame_common.pory"
 	playse SE_SHOP
-# 430 "data/scripts/islandgame_common.pory"
+# 457 "data/scripts/islandgame_common.pory"
 	waitse
-# 431 "data/scripts/islandgame_common.pory"
+# 458 "data/scripts/islandgame_common.pory"
 	playse SE_VEND
-# 432 "data/scripts/islandgame_common.pory"
+# 459 "data/scripts/islandgame_common.pory"
 	waitse
-# 433 "data/scripts/islandgame_common.pory"
+# 460 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 436 "data/scripts/islandgame_common.pory"
+# 463 "data/scripts/islandgame_common.pory"
 	random 10
-# 437 "data/scripts/islandgame_common.pory"
+# 464 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_20
 Common_EventScript_VendingMachine_19:
-# 446 "data/scripts/islandgame_common.pory"
+# 473 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_SODA_POP
-# 449 "data/scripts/islandgame_common.pory"
+# 476 "data/scripts/islandgame_common.pory"
 	random 5
-# 450 "data/scripts/islandgame_common.pory"
+# 477 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_29
 Common_EventScript_VendingMachine_28:
-# 457 "data/scripts/islandgame_common.pory"
+# 484 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_1
 
 Common_EventScript_VendingMachine_5:
-# 459 "data/scripts/islandgame_common.pory"
+# 486 "data/scripts/islandgame_common.pory"
 	checkmoney 1200
-# 460 "data/scripts/islandgame_common.pory"
+# 487 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_14
 Common_EventScript_VendingMachine_13:
-# 466 "data/scripts/islandgame_common.pory"
+# 493 "data/scripts/islandgame_common.pory"
 	removemoney 1200
-# 467 "data/scripts/islandgame_common.pory"
+# 494 "data/scripts/islandgame_common.pory"
 	updatemoneybox
-# 468 "data/scripts/islandgame_common.pory"
+# 495 "data/scripts/islandgame_common.pory"
 	playse SE_SHOP
-# 469 "data/scripts/islandgame_common.pory"
+# 496 "data/scripts/islandgame_common.pory"
 	waitse
-# 470 "data/scripts/islandgame_common.pory"
+# 497 "data/scripts/islandgame_common.pory"
 	playse SE_VEND
-# 471 "data/scripts/islandgame_common.pory"
+# 498 "data/scripts/islandgame_common.pory"
 	waitse
-# 472 "data/scripts/islandgame_common.pory"
+# 499 "data/scripts/islandgame_common.pory"
 	hidemoneybox
-# 475 "data/scripts/islandgame_common.pory"
+# 502 "data/scripts/islandgame_common.pory"
 	random 10
-# 476 "data/scripts/islandgame_common.pory"
+# 503 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_23
 Common_EventScript_VendingMachine_22:
-# 485 "data/scripts/islandgame_common.pory"
+# 512 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_LEMONADE
-# 488 "data/scripts/islandgame_common.pory"
+# 515 "data/scripts/islandgame_common.pory"
 	random 5
-# 489 "data/scripts/islandgame_common.pory"
+# 516 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_32
 Common_EventScript_VendingMachine_31:
-# 495 "data/scripts/islandgame_common.pory"
+# 522 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_1
 
 Common_EventScript_VendingMachine_8:
-# 383 "data/scripts/islandgame_common.pory"
+# 410 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_5
-# 386 "data/scripts/islandgame_common.pory"
+# 413 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_7
 
 Common_EventScript_VendingMachine_11:
-# 422 "data/scripts/islandgame_common.pory"
+# 449 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_5
-# 425 "data/scripts/islandgame_common.pory"
+# 452 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_10
 
 Common_EventScript_VendingMachine_14:
-# 461 "data/scripts/islandgame_common.pory"
+# 488 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_5
-# 464 "data/scripts/islandgame_common.pory"
+# 491 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_13
 
 Common_EventScript_VendingMachine_17:
-# 399 "data/scripts/islandgame_common.pory"
+# 426 "data/scripts/islandgame_common.pory"
 	playse SE_TRUCK_UNLOAD
-# 400 "data/scripts/islandgame_common.pory"
+# 427 "data/scripts/islandgame_common.pory"
 	waitse
-# 401 "data/scripts/islandgame_common.pory"
+# 428 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_6
-# 404 "data/scripts/islandgame_common.pory"
+# 431 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_16
 
 Common_EventScript_VendingMachine_20:
-# 438 "data/scripts/islandgame_common.pory"
+# 465 "data/scripts/islandgame_common.pory"
 	playse SE_TRUCK_UNLOAD
-# 439 "data/scripts/islandgame_common.pory"
+# 466 "data/scripts/islandgame_common.pory"
 	waitse
-# 440 "data/scripts/islandgame_common.pory"
+# 467 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_6
-# 443 "data/scripts/islandgame_common.pory"
+# 470 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_19
 
 Common_EventScript_VendingMachine_23:
-# 477 "data/scripts/islandgame_common.pory"
+# 504 "data/scripts/islandgame_common.pory"
 	playse SE_TRUCK_UNLOAD
-# 478 "data/scripts/islandgame_common.pory"
+# 505 "data/scripts/islandgame_common.pory"
 	waitse
-# 479 "data/scripts/islandgame_common.pory"
+# 506 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_6
-# 482 "data/scripts/islandgame_common.pory"
+# 509 "data/scripts/islandgame_common.pory"
 	goto Common_VendingMachine
 	goto Common_EventScript_VendingMachine_22
 
 Common_EventScript_VendingMachine_26:
-# 412 "data/scripts/islandgame_common.pory"
+# 439 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_7
-# 415 "data/scripts/islandgame_common.pory"
+# 442 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_FRESH_WATER
 	goto Common_EventScript_VendingMachine_25
 
 Common_EventScript_VendingMachine_29:
-# 451 "data/scripts/islandgame_common.pory"
+# 478 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_7
-# 454 "data/scripts/islandgame_common.pory"
+# 481 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_SODA_POP
 	goto Common_EventScript_VendingMachine_28
 
 Common_EventScript_VendingMachine_32:
-# 490 "data/scripts/islandgame_common.pory"
+# 517 "data/scripts/islandgame_common.pory"
 	msgbox Common_EventScript_VendingMachine_Text_7
-# 493 "data/scripts/islandgame_common.pory"
+# 520 "data/scripts/islandgame_common.pory"
 	giveitem ITEM_LEMONADE
 	goto Common_EventScript_VendingMachine_31
 
 
 Common_TryRemoveTemporaryObject::
-# 507 "data/scripts/islandgame_common.pory"
+# 534 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetBattleOutcome
-# 508 "data/scripts/islandgame_common.pory"
+# 535 "data/scripts/islandgame_common.pory"
 	goto_if_unset FLAG_SYS_CTRL_OBJ_DELETE, Common_TryRemoveTemporaryObject_2
-# 509 "data/scripts/islandgame_common.pory"
+# 536 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, B_OUTCOME_CAUGHT
 	goto_if_eq Common_TryRemoveTemporaryObject_5
-# 509 "data/scripts/islandgame_common.pory"
+# 536 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq Common_TryRemoveTemporaryObject_5
 Common_TryRemoveTemporaryObject_4:
@@ -773,61 +785,61 @@ Common_TryRemoveTemporaryObject_2:
 	return
 
 Common_TryRemoveTemporaryObject_5:
-# 510 "data/scripts/islandgame_common.pory"
+# 537 "data/scripts/islandgame_common.pory"
 	setobjecthidden VAR_LAST_TALKED
-# 511 "data/scripts/islandgame_common.pory"
+# 538 "data/scripts/islandgame_common.pory"
 	removeobject VAR_LAST_TALKED
 	goto Common_TryRemoveTemporaryObject_4
 
 
 Common_AttemptTrade::
-# 518 "data/scripts/islandgame_common.pory"
+# 545 "data/scripts/islandgame_common.pory"
 	setorcopyvar VAR_0x8008, VAR_0x8000
-# 519 "data/scripts/islandgame_common.pory"
+# 546 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x8004, VAR_0x8008
-# 520 "data/scripts/islandgame_common.pory"
+# 547 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
-# 521 "data/scripts/islandgame_common.pory"
+# 548 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x8009, VAR_RESULT
-# 522 "data/scripts/islandgame_common.pory"
+# 549 "data/scripts/islandgame_common.pory"
 	special ChoosePartyMon
-# 523 "data/scripts/islandgame_common.pory"
+# 550 "data/scripts/islandgame_common.pory"
 	waitstate
-# 524 "data/scripts/islandgame_common.pory"
+# 551 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x800A, VAR_0x8004
-# 526 "data/scripts/islandgame_common.pory"
+# 553 "data/scripts/islandgame_common.pory"
 	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
 	goto_if_eq Common_AttemptTrade_2
-# 531 "data/scripts/islandgame_common.pory"
+# 558 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x8005, VAR_0x800A
-# 532 "data/scripts/islandgame_common.pory"
+# 559 "data/scripts/islandgame_common.pory"
 	specialvar VAR_RESULT, GetTradeSpecies
-# 533 "data/scripts/islandgame_common.pory"
+# 560 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x800B, VAR_RESULT
-# 535 "data/scripts/islandgame_common.pory"
+# 562 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, VAR_0x8009
 	goto_if_ne Common_AttemptTrade_5
-# 540 "data/scripts/islandgame_common.pory"
+# 567 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x8004, VAR_0x8008
-# 541 "data/scripts/islandgame_common.pory"
+# 568 "data/scripts/islandgame_common.pory"
 	copyvar VAR_0x8005, VAR_0x800A
-# 542 "data/scripts/islandgame_common.pory"
+# 569 "data/scripts/islandgame_common.pory"
 	special CreateInGameTradePokemon
-# 543 "data/scripts/islandgame_common.pory"
+# 570 "data/scripts/islandgame_common.pory"
 	special DoInGameTradeScene
-# 544 "data/scripts/islandgame_common.pory"
+# 571 "data/scripts/islandgame_common.pory"
 	waitstate
-# 545 "data/scripts/islandgame_common.pory"
+# 572 "data/scripts/islandgame_common.pory"
 	setvar VAR_RESULT, TRADE_SUCCESS
 	return
 
 Common_AttemptTrade_2:
-# 527 "data/scripts/islandgame_common.pory"
+# 554 "data/scripts/islandgame_common.pory"
 	setvar VAR_RESULT, TRADE_CANCELED
 	return
 
 Common_AttemptTrade_5:
-# 536 "data/scripts/islandgame_common.pory"
+# 563 "data/scripts/islandgame_common.pory"
 	setvar VAR_RESULT, TRADE_WRONG_SPECIES
 	return
 
@@ -840,48 +852,58 @@ Common_EnableAutoRun_Text_0:
 # 9 "data/scripts/islandgame_common.pory"
 	.string "Auto Run {COLOR GREEN}Enabled{COLOR DARK_GRAY}.$"
 
+IslandGame_Common_PokeMart_Sign_Text_0:
+# 57 "data/scripts/islandgame_common.pory"
+	.string "StrixMart\n"
+	.string "OPEN 24 HOURS$"
+
+IslandGame_Common_PokeCenter_Sign_Text_0:
+# 64 "data/scripts/islandgame_common.pory"
+	.string "Pokémon Center\n"
+	.string "Now serving humans upstairs!$"
+
 IslandGame_Common_PokemonCenter_1F_EventScript_Nurse_Text_0:
-# 49 "data/scripts/islandgame_common.pory"
+# 73 "data/scripts/islandgame_common.pory"
 	.string "Welcome to the Maryan isles! This is a\n"
 	.string "Pokémon Center.\p"
 	.string "Trainers can bring their Pokémon here\n"
 	.string "to have them healed free of charge!$"
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_0:
-# 71 "data/scripts/islandgame_common.pory"
+# 92 "data/scripts/islandgame_common.pory"
 	.string "You look tired, trainer. Would you like\n"
 	.string "to take a rest in one of our rooms?\p"
 	.string "{COLOR RED}(Should I take a break and pass the\n"
 	.string "time...?)$"
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_1:
-# 77 "data/scripts/islandgame_common.pory"
+# 98 "data/scripts/islandgame_common.pory"
 	.string "You took a break until...$"
 
 ISLANDGAME_PKMNCENTER_2F_TimeNPC_Text_2:
-# 84 "data/scripts/islandgame_common.pory"
+# 105 "data/scripts/islandgame_common.pory"
 	.string "We hope you had a good rest! Come back\n"
 	.string "if you would like to pass time.$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_0:
-# 97 "data/scripts/islandgame_common.pory"
+# 116 "data/scripts/islandgame_common.pory"
 	.string "How's it going, youngin? I'm Marya's\n"
 	.string "official Name Rater!\p"
 	.string "Would you like me to impart my\n"
 	.string "name-rating wisdom on your Pokémon?$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_1:
-# 102 "data/scripts/islandgame_common.pory"
+# 121 "data/scripts/islandgame_common.pory"
 	.string "Alrighty mate, whose name shall I giveth\n"
 	.string "a critique on?$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_2:
-# 110 "data/scripts/islandgame_common.pory"
+# 129 "data/scripts/islandgame_common.pory"
 	.string "That's an egg, init? I can't judge a\n"
 	.string "Pokémon that hasn't hatched yet!$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_3:
-# 118 "data/scripts/islandgame_common.pory"
+# 137 "data/scripts/islandgame_common.pory"
 	.string "Ah, {STR_VAR_1} is it? A truly\n"
 	.string "spectacular name, I say!\p"
 	.string "Its original trainer must have been a\n"
@@ -892,18 +914,18 @@ ISLANDGAME_PKMNCENTER_2F_NameRater_Text_3:
 	.string "Rater moral code of ethics!$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_4:
-# 137 "data/scripts/islandgame_common.pory"
+# 156 "data/scripts/islandgame_common.pory"
 	.string "Hmm, so it's {STR_VAR_1}? A fitting\n"
 	.string "name for such a fine Pokémon!\p"
 	.string "But if you've a better name, I'm more\n"
 	.string "than happy to change it to that!$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_5:
-# 142 "data/scripts/islandgame_common.pory"
+# 161 "data/scripts/islandgame_common.pory"
 	.string "What'll its new name be?$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_6:
-# 149 "data/scripts/islandgame_common.pory"
+# 168 "data/scripts/islandgame_common.pory"
 	.string "There we are! This Pokemon shall\n"
 	.string "henceforth be known as...\p"
 	.string "{STR_VAR_1}!\p"
@@ -911,38 +933,38 @@ ISLANDGAME_PKMNCENTER_2F_NameRater_Text_6:
 	.string "it's absolutely chuffed to have it!$"
 
 ISLANDGAME_PKMNCENTER_2F_NameRater_Text_7:
-# 161 "data/scripts/islandgame_common.pory"
+# 180 "data/scripts/islandgame_common.pory"
 	.string "If you've any Pokemon whose name you'd\n"
 	.string "like me to rate, I'm always here!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_0:
-# 172 "data/scripts/islandgame_common.pory"
+# 189 "data/scripts/islandgame_common.pory"
 	.string "Why hello there, whippersnapper! I'm\n"
 	.string "the...{PAUSE 30} um...{PAUSE 30} oh! The Move Deleter!\p"
 	.string "Would you like me to have your Pokemon\n"
 	.string "forget one of their moves?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_1:
-# 177 "data/scripts/islandgame_common.pory"
+# 194 "data/scripts/islandgame_common.pory"
 	.string "O-Oh! Splendid! Which Pokémon do you\n"
 	.string "want me to make forget a move?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_2:
-# 183 "data/scripts/islandgame_common.pory"
+# 200 "data/scripts/islandgame_common.pory"
 	.string "Oh... I see. It was foolish of me to get\n"
 	.string "excited...\p"
 	.string "I suppose I will continue being useless\n"
 	.string "in these modern times...$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_3:
-# 191 "data/scripts/islandgame_common.pory"
+# 208 "data/scripts/islandgame_common.pory"
 	.string "Eh? Is this a prank? You think it's\n"
 	.string "funny picking on the elderly?\p"
 	.string "Kids these days... No respect for\n"
 	.string "anyone but themselves.$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_4:
-# 198 "data/scripts/islandgame_common.pory"
+# 215 "data/scripts/islandgame_common.pory"
 	.string "I'm afraid I cannot make a Pokemon\n"
 	.string "forget its only move...\p"
 	.string "Doing so would cause MissingNo. to\n"
@@ -951,29 +973,29 @@ ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_4:
 	.string "baloney? Are you disrespecting me!?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_5:
-# 205 "data/scripts/islandgame_common.pory"
+# 222 "data/scripts/islandgame_common.pory"
 	.string "Alright, which move should be\n"
 	.string "forgotten?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_6:
-# 213 "data/scripts/islandgame_common.pory"
+# 230 "data/scripts/islandgame_common.pory"
 	.string "Ah... {STR_VAR_1}'s {STR_VAR_2}?\n"
 	.string "You want this move to be forgotten?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_7:
-# 220 "data/scripts/islandgame_common.pory"
+# 237 "data/scripts/islandgame_common.pory"
 	.string "Your {STR_VAR_1} has successfully\n"
 	.string "forgotten the move {STR_VAR_2}!\p"
 	.string "If you need another move forgotten,\n"
 	.string "please come again!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveDeleter_Text_8:
-# 226 "data/scripts/islandgame_common.pory"
+# 243 "data/scripts/islandgame_common.pory"
 	.string "I see... I suppose there is no need for a\n"
 	.string "Move Deleter in this world anymore...$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_0:
-# 246 "data/scripts/islandgame_common.pory"
+# 261 "data/scripts/islandgame_common.pory"
 	.string "Hullo! I am the all-powerful guru known\n"
 	.string "as the Move Relearner!\p"
 	.string "I can help your Pokémon relearn moves\n"
@@ -982,86 +1004,86 @@ ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_0:
 	.string "missed out on!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_1:
-# 252 "data/scripts/islandgame_common.pory"
+# 267 "data/scripts/islandgame_common.pory"
 	.string "I can do this, for the low, low price of\n"
 	.string "¥1000! How's that sound?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_2:
-# 258 "data/scripts/islandgame_common.pory"
+# 273 "data/scripts/islandgame_common.pory"
 	.string "Sorry pal, I gotta make a living. I can't\n"
 	.string "do it if ya don't got the money.$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_3:
-# 264 "data/scripts/islandgame_common.pory"
+# 279 "data/scripts/islandgame_common.pory"
 	.string "Awesome. Which Pokémon do you want to\n"
 	.string "relearn a move?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_4:
-# 270 "data/scripts/islandgame_common.pory"
+# 285 "data/scripts/islandgame_common.pory"
 	.string "If you ever need my power, I'll be here,\n"
 	.string "waiting!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_5:
-# 277 "data/scripts/islandgame_common.pory"
+# 292 "data/scripts/islandgame_common.pory"
 	.string "Umm... eggs don't even have moves to\n"
 	.string "learn...$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_6:
-# 283 "data/scripts/islandgame_common.pory"
+# 298 "data/scripts/islandgame_common.pory"
 	.string "There's no moves for this Pokémon to\n"
 	.string "relearn...$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_7:
-# 288 "data/scripts/islandgame_common.pory"
+# 303 "data/scripts/islandgame_common.pory"
 	.string "Which move should I reteach this\n"
 	.string "Pokémon?$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_8:
-# 293 "data/scripts/islandgame_common.pory"
+# 308 "data/scripts/islandgame_common.pory"
 	.string "Well, if you change your mind, I'm always\n"
 	.string "here!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_9:
-# 297 "data/scripts/islandgame_common.pory"
+# 312 "data/scripts/islandgame_common.pory"
 	.string "Okay... {PAUSE 30}annnnnd...{PAUSE 30} done! Your Pokémon\n"
 	.string "has relearned its move!$"
 
 ISLANDGAME_PKMNCENTER_2F_MoveRelearner_Text_10:
-# 306 "data/scripts/islandgame_common.pory"
+# 321 "data/scripts/islandgame_common.pory"
 	.string "Pleasure doin' business with you,\n"
 	.string "trainer!$"
 
 Common_EventScript_VendingMachine_Text_0:
-# 371 "data/scripts/islandgame_common.pory"
+# 398 "data/scripts/islandgame_common.pory"
 	.string "{COLOR RED}(It's a vending machine. What should I\n"
 	.string "get?)$"
 
 Common_EventScript_VendingMachine_Text_1:
-# 374 "data/scripts/islandgame_common.pory"
+# 401 "data/scripts/islandgame_common.pory"
 	.string "Nah, I'm good$"
 
 Common_EventScript_VendingMachine_Text_2:
-# 375 "data/scripts/islandgame_common.pory"
+# 402 "data/scripts/islandgame_common.pory"
 	.string "Fresh Water - ¥500$"
 
 Common_EventScript_VendingMachine_Text_3:
-# 376 "data/scripts/islandgame_common.pory"
+# 403 "data/scripts/islandgame_common.pory"
 	.string "Soda Pop - ¥800$"
 
 Common_EventScript_VendingMachine_Text_4:
-# 377 "data/scripts/islandgame_common.pory"
+# 404 "data/scripts/islandgame_common.pory"
 	.string "Lemonade - ¥1200$"
 
 Common_EventScript_VendingMachine_Text_5:
-# 384 "data/scripts/islandgame_common.pory"
+# 411 "data/scripts/islandgame_common.pory"
 	.string "{COLOR RED}(I don't have enough money.)$"
 
 Common_EventScript_VendingMachine_Text_6:
-# 402 "data/scripts/islandgame_common.pory"
+# 429 "data/scripts/islandgame_common.pory"
 	.string "{COLOR RED}(Looks like the machine got jammed.\n"
 	.string "What a scam.)$"
 
 Common_EventScript_VendingMachine_Text_7:
-# 413 "data/scripts/islandgame_common.pory"
+# 440 "data/scripts/islandgame_common.pory"
 	.string "{COLOR RED}(Huh? Looks like another drink fell\n"
 	.string "along with mine.)$"
