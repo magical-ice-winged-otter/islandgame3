@@ -7,7 +7,7 @@
 #define FLDEFF_SHADOW                    3
 #define FLDEFF_TALL_GRASS                4
 #define FLDEFF_RIPPLE                    5
-#define FLDEFF_FIELD_MOVE_SHOW_MON       6
+#define FLDEFF_FIELD_MOVE_SHOW_SPRITE    6
 #define FLDEFF_ASH                       7
 #define FLDEFF_SURF_BLOB                 8
 #define FLDEFF_USE_SURF                  9
@@ -81,6 +81,7 @@
 #define FLDEFF_ROCK_CLIMB_DUST           76
 #define FLDEFF_TALKING_ICON              77
 #define FLDEFF_THINKING_ICON             78
+#define FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT 79
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1

@@ -12,7 +12,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_Shadow                    @ FLDEFF_SHADOW
 	.4byte gFieldEffectScript_TallGrass                 @ FLDEFF_TALL_GRASS
 	.4byte gFieldEffectScript_Ripple                    @ FLDEFF_RIPPLE
-	.4byte gFieldEffectScript_FieldMoveShowMon          @ FLDEFF_FIELD_MOVE_SHOW_MON
+	.4byte gFieldEffectScript_FieldMoveShowSprite       @ FLDEFF_FIELD_MOVE_SHOW_SPRITE
 	.4byte gFieldEffectScript_Ash                       @ FLDEFF_ASH
 	.4byte gFieldEffectScript_SurfBlob                  @ FLDEFF_SURF_BLOB
 	.4byte gFieldEffectScript_UseSurf                   @ FLDEFF_USE_SURF
@@ -85,6 +85,7 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_RockClimbDust             @ FLDEFF_ROCK_CLIMB_DUST
 	.4byte gFieldEffectScript_TalkingIcon               @ FLDEFF_TALKING_ICON
 	.4byte gFieldEffectScript_ThinkingIcon              @ FLDEFF_THINKING_ICON
+	.4byte gFieldEffectScript_FieldMoveShowItemInit     @ FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT
 
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_callnative FldEff_ExclamationMarkIcon
@@ -110,8 +111,8 @@ gFieldEffectScript_Ripple::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_Ripple
 	field_eff_end
 
-gFieldEffectScript_FieldMoveShowMon::
-	field_eff_callnative FldEff_FieldMoveShowMon
+gFieldEffectScript_FieldMoveShowSprite::
+	field_eff_callnative FldEff_FieldMoveShowSprite
 	field_eff_end
 
 gFieldEffectScript_Ash::
@@ -326,6 +327,10 @@ gFieldEffectScript_ShowCutGrass::
 
 gFieldEffectScript_FieldMoveShowMonInit::
 	field_eff_callnative FldEff_FieldMoveShowMonInit
+	field_eff_end
+
+gFieldEffectScript_FieldMoveShowItemInit::
+	field_eff_callnative FldEff_FieldMoveShowItemInit
 	field_eff_end
 
 gFieldEffectScript_UsePuzzleEffect::
