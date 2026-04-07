@@ -2124,6 +2124,9 @@ const u16 gItemIconPalette_IslandgameLobsterRoll[] = INCBIN_U16("graphics/items/
 const u32 gItemIcon_IslandgameStrangeDisc[] = INCBIN_U32("graphics/items/icons/strange_disc.4bpp.smol");
 const u16 gItemIconPalette_IslandgameStrangeDisc[] = INCBIN_U16("graphics/items/icon_palettes/strange_disc.gbapal");
 
+const u32 gItemIcon_IslandgameLesserRevive[] = INCBIN_U32("graphics/items/icons/lesser_revive.4bpp.smol");
+const u16 gItemIconPalette_IslandgameLesserRevive[] = INCBIN_U16("graphics/items/icon_palettes/revive.gbapal");
+
 // Start Pokevial Branch
 const u32 gItemIcon_Pokevial0[] = INCBIN_U32("graphics/items/icons/pokevial0.4bpp.smol");
 const u32 gItemIcon_Pokevial1[] = INCBIN_U32("graphics/items/icons/pokevial1.4bpp.smol");

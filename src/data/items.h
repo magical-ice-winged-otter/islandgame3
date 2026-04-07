@@ -723,7 +723,7 @@ const struct Item gItemsInfo[] =
     [ITEM_REVIVE] =
     {
         .name = ITEM_NAME("Revive"),
-        .price = (I_PRICE >= GEN_7) ? 3000 : 1500,
+        .price = (I_PRICE >= GEN_7) ? 5000 : 1500, // Price modified; they can only be purchased very late into the game.
         .description = COMPOUND_STRING(
             "Revives a fainted\n"
             "Pokémon with half\n"
@@ -742,7 +742,7 @@ const struct Item gItemsInfo[] =
     [ITEM_MAX_REVIVE] =
     {
         .name = ITEM_NAME("Max Revive"),
-        .price = 6000,
+        .price = 10000, // Price modified; there should only be a finite amount of these.
         .description = sMaxReviveDesc,
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_HEALTH_RECOVERY,
@@ -14839,6 +14839,25 @@ const struct Item gItemsInfo[] =
         .effect = gItemEffect_Pokevial,
         .iconPic = gItemIcon_Pokevial,
         .iconPalette = gItemIconPalette_Pokevial,
+    },
+    [ITEM_ISLANDGAME_LESSER_REVIVE] =
+    {
+        .name = ITEM_NAME("Lesser Revive"),
+        .price = 2500, 
+        .description = COMPOUND_STRING(
+            "Revives a fainted\n"
+            "Pokémon with 1/4\n"
+            "of its HP."
+        ),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_HEALTH_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_REVIVE,
+        .effect = gItemEffect_LesserRevive,
+        .flingPower = 30,
+        .iconPic = gItemIcon_IslandgameLesserRevive,
+        .iconPalette = gItemIconPalette_IslandgameLesserRevive,
     },
 };
 

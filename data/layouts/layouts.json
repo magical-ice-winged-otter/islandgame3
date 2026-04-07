@@ -5884,12 +5884,22 @@
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
       "name": "ISLANDGAME_AETHERIA_DEPT_STORE_1F_Layout",
-      "width": 19,
+      "width": 22,
       "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_1F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_DEPT_STORE_2F",
+      "name": "ISLANDGAME_AETHERIA_DEPT_STORE_2F_Layout",
+      "width": 22,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_2F/map.bin"
     }
   ]
 }

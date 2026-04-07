@@ -430,8 +430,8 @@
       "x": 25,
       "y": 66,
       "elevation": 0,
-      "item": "ITEM_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_ROCKY_PATH_ETHER"
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_HIDDEN_ITEM_ROCKY_PATH_ELIXIR"
     },
     {
       "type": "hidden_item",

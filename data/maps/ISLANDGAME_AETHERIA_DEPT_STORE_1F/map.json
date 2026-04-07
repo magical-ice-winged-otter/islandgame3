@@ -42,8 +42,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN",
-      "x": 12,
-      "y": 6,
+      "x": 15,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -55,8 +55,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
-      "x": 3,
-      "y": 6,
+      "x": 20,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -68,8 +68,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MEOWTH_DOLL",
-      "x": 2,
-      "y": 6,
+      "x": 19,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -81,8 +81,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIG_SNORLAX_DOLL",
-      "x": 3,
-      "y": 5,
+      "x": 20,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -94,8 +94,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL",
-      "x": 2,
-      "y": 7,
+      "x": 19,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -107,8 +107,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PICHU_DOLL",
-      "x": 3,
-      "y": 7,
+      "x": 21,
+      "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DITTO_DOLL",
-      "x": 4,
-      "y": 7,
+      "x": 21,
+      "y": 2,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -134,7 +134,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 0,
-      "y": 3,
+      "y": 6,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -146,8 +146,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 16,
-      "y": 3,
+      "x": 3,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -160,8 +160,8 @@
     {
       "local_id": "LOCALID_BULBASAUR",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
-      "x": 15,
-      "y": 3,
+      "x": 2,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -188,17 +188,10 @@
       "dest_warp_id": "6"
     },
     {
-      "x": 13,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
-      "dest_warp_id": "0"
-    },
-    {
       "x": 17,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ISLANDGAME_AETHERIA_DEPT_STORE_1F",
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_DEPT_STORE_2F",
       "dest_warp_id": "0"
     }
   ],

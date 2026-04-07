@@ -690,7 +690,7 @@
 #define FLAG_HIDDEN_ITEM_APPLEVINE_EXP_CANDY        0x281 
 #define FLAG_HIDDEN_ITEM_APPLEVINE_HEART_SCALE      0x282 
 #define FLAG_HIDDEN_ITEM_ROCKY_PATH_EXP_CANDY_S     0x283
-#define FLAG_HIDDEN_ITEM_ROCKY_PATH_ETHER           0x284 
+#define FLAG_HIDDEN_ITEM_ROCKY_PATH_ELIXIR          0x284 
 #define FLAG_HIDDEN_ITEM_SS_RAIN_ORAN_BERRY         0x285 
 #define FLAG_HIDDEN_ITEM_PLEASANT_AVENUE_NUGGET     0x286 
 #define FLAG_HIDDEN_ITEM_CAMP_PERSI_BERRY_JUICE     0x287
@@ -1233,7 +1233,7 @@
 #define FLAG_ITEM_MINTY_MEADOWS_BRIGHT_POWDER                       0x498
 #define FLAG_ITEM_TM_RETURN                                         0x499 
 #define FLAG_ITEM_CAMP_PERSI_POTION                                 0x49A 
-#define FLAG_ITEM_PERSI_NEST_ETHER                                  0x49B
+#define FLAG_ITEM_PERSI_ETHER                                       0x49B
 #define FLAG_ITEM_FRESA_FARMS_CARBOS                                0x49C 
 #define FLAG_ITEM_MOUNT_AURORA_BIG_PEARL                            0x49D 
 #define FLAG_ITEM_COP_1_RARE_CANDY                                  0x49E

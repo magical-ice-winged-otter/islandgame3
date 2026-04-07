@@ -1012,8 +1012,9 @@
 #define ITEM_ISLANDGAME_LOBSTER_ROLL 839
 #define ITEM_ISLANDGAME_STRANGE_DISC 840
 #define ITEM_ISLANDGAME_CUBONES_POKEBALL 841
+#define ITEM_ISLANDGAME_LESSER_REVIVE 842
 
-#define ITEMS_COUNT 842
+#define ITEMS_COUNT 843
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

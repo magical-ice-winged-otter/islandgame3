@@ -1,0 +1,100 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_2F_MapScripts {}
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Sailor {
+    lock
+    msgbox(format(
+        "Grab as many repels as you can, Froggy! We're gonna find that mythical island!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Frogadier {
+    lock
+    faceplayer
+    playmoncry(SPECIES_FROGADIER, CRY_MODE_NORMAL)
+    msgbox(format(
+        "{COLOR BLUE}(Trainer saw video of Mew sighting in Marya.)\p"
+        "(Believe Mew could be in Maryan outskirts...)"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "Remember to keep your Pokémon in tip-top shape, especially in the heat of battle!\p"
+        "Even just a bit of damage can determine whether your Pokémon faints or not!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Audino {
+    lock
+    faceplayer
+    playmoncry(SPECIES_AUDINO, CRY_MODE_NORMAL)
+    msgbox(format(
+        "{COLOR BLUE}(I wish these tourists would put things back where they belong.)"
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_AUDINO, moves(face_original_direction))
+    waitmovement(0)
+}
+
+// Vendors
+script ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy {
+    lock
+    faceplayer
+    msgbox(format("Welcome to PoeShack! Lookin' for some balls? You've come to the right place!"))
+    pokemart(Aetheria_2F_PoeShack)
+    msgbox(format("Have a ballin' rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_2F_PoeShack {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_ULTRA_BALL
+    ITEM_QUICK_BALL
+    ITEM_NET_BALL
+    ITEM_DIVE_BALL
+    ITEM_REPEAT_BALL
+    ITEM_DUSK_BALL
+    ITEM_TIMER_BALL
+    ITEM_REPEAT_BALL
+    ITEM_LUXURY_BALL
+    ITEM_HEAL_BALL
+    ITEM_LEVEL_BALL
+    ITEM_FAST_BALL
+    ITEM_LURE_BALL
+    ITEM_HEAVY_BALL
+    ITEM_LOVE_BALL
+    ITEM_FRIEND_BALL
+    ITEM_MOON_BALL
+}
+
+script ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart {
+    lock
+    faceplayer
+    msgbox(format("Welcome to StrixMart! How may I help you?"))
+    pokemart(Aetheria_2F_StrixMart)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_2F_StrixMart {
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_HYPER_POTION
+    ITEM_ETHER
+    ITEM_ISLANDGAME_LESSER_REVIVE
+    ITEM_FULL_HEAL
+    ITEM_PARALYZE_HEAL
+    ITEM_ANTIDOTE
+    ITEM_AWAKENING
+    ITEM_ICE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_REPEL
+    ITEM_SUPER_REPEL
+    ITEM_MAX_REPEL
+}

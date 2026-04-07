@@ -6,11 +6,11 @@ mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_1F_MapScripts {
 script ISLANDGAME_AETHERIA_DEPT_STORE_Directory {
     msgbox(format(
         "1F - Reception\n"
-        "2F - Pharmacy\p"
-        "3F - Groceries\n"
-        "4F - Technology\p"
-        "5F - Souvenirs\n"
-        "Rooftop - Plaza"
+        "2F - StrixMart / PoeShack\p"
+        "3F - StrixMart Pharmacy\n"
+        "4F - Vee's Battle Stop\p"
+        "5F - uwu! Souvenirs :3\n"
+        "Rooftop - Aqui's Superfoods"
     ), MSGBOX_SIGN)
 }
 

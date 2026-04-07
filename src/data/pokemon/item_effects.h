@@ -460,3 +460,8 @@ const u8 gItemEffect_Pokevial[7] = {
     [4] = ITEM4_REVIVE | ITEM4_HEAL_HP | ITEM4_HEAL_PP,
     [6] = ITEM6_HEAL_HP_FULL | ITEM6_HEAL_PP_FULL,
 };
+
+const u8 gItemEffect_LesserRevive[7] = {
+    [4] = ITEM4_REVIVE | ITEM4_HEAL_HP,
+    [6] = ITEM6_HEAL_HP_QUARTER,
+};

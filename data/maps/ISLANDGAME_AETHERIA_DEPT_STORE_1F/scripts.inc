@@ -77,11 +77,11 @@ ISLANDGAME_AETHERIA_DEPT_STORE_1F_Bulbasaur_Movement_0:
 ISLANDGAME_AETHERIA_DEPT_STORE_Directory_Text_0:
 # 8 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_1F/scripts.pory"
 	.string "1F - Reception\n"
-	.string "2F - Pharmacy\p"
-	.string "3F - Groceries\n"
-	.string "4F - Technology\p"
-	.string "5F - Souvenirs\n"
-	.string "Rooftop - Plaza$"
+	.string "2F - StrixMart / PoeShack\p"
+	.string "3F - StrixMart Pharmacy\n"
+	.string "4F - Vee's Battle Stop\p"
+	.string "5F - uwu! Souvenirs :3\n"
+	.string "Rooftop - Aqui's Superfoods$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_1F_Receptionist_Text_0:
 # 21 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_1F/scripts.pory"
