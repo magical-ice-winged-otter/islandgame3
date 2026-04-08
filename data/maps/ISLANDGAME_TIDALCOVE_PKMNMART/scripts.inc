@@ -30,7 +30,7 @@ ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks::
 # 18 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	lock
 # 19 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks_Text_0, MSGBOX_SIGN
+	msgbox ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins_Text_0, MSGBOX_SIGN
 # 20 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	release
 	return
@@ -40,7 +40,7 @@ ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General::
 # 24 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	lock
 # 25 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	msgbox ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General_Text_0, MSGBOX_SIGN
+	msgbox ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins_Text_0, MSGBOX_SIGN
 # 26 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	release
 	return
@@ -68,46 +68,34 @@ ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Employee::
 # 39 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 Tidalcove_MartItems:
 # 40 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_POKE_BALL
+	.2byte ITEM_ISLANDGAME_RUKACOLA
 # 41 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_GREAT_BALL
-# 42 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_DIVE_BALL
-# 43 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	.2byte ITEM_FRESH_WATER
-# 44 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
+# 42 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	.2byte ITEM_SODA_POP
+# 43 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
+	.2byte ITEM_POKE_BALL
+# 44 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
+	.2byte ITEM_GREAT_BALL
 # 45 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_DIVE_BALL
 # 46 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
 # 47 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_AWAKENING
+	.2byte ITEM_ANTIDOTE
 # 48 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_AWAKENING
 # 49 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_ICE_HEAL
 # 50 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_REPEL
+	.2byte ITEM_BURN_HEAL
 # 51 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_HP_UP
-# 52 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_PROTEIN
-# 53 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_IRON
-# 54 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_CALCIUM
-# 55 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_ZINC
-# 56 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_CARBOS
-# 57 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.2byte ITEM_PP_UP
+	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1_Text_0:
 # 6 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "Yeesh. $800 for a glass of pop just\n"
+	.string "Yeesh. $1100 for a glass of pop just\n"
 	.string "'cause it's got Ruka on it? There's no\l"
 	.string "way anyone would pay that much just\l"
 	.string "for a bottle.$"
@@ -115,15 +103,7 @@ ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1_Text_0:
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins_Text_0:
 # 13 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
 	.string "{COLOR RED}(There's rows upon rows of exorbitantly\n"
-	.string "priced vitamins. They feature Ruka.)$"
-
-ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks_Text_0:
-# 19 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "{COLOR RED}(All of the drinks here feature Ruka.)$"
-
-ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General_Text_0:
-# 25 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"
-	.string "{COLOR RED}(All of these goods feature Ruka.)$"
+	.string "priced goods. They feature Ruka.)$"
 
 ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Employee_Text_0:
 # 32 "data/maps/ISLANDGAME_TIDALCOVE_PKMNMART/scripts.pory"

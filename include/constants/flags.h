@@ -682,7 +682,7 @@
 #define FLAG_HIDDEN_ITEM_NORANNA_PATH_EXP_CANDY     0x279
 #define FLAG_HIDDEN_ITEM_MT_AURORA_EXP_CANDY        0x27A 
 #define FLAG_HIDDEN_ITEM_VALLEY_OF_PEACE_HP_UP      0x27B
-#define FLAG_HIDDEN_ITEM_NORANNA_PATH_REVIVE        0x27C
+#define FLAG_HIDDEN_ITEM_NORANNA_PATH_LESSER_REVIVE 0x27C
 #define FLAG_HIDDEN_ITEM_CORANNA_PATH_X_DEF         0x27D 
 #define FLAG_HIDDEN_ITEM_NORANNA_PATH_REPEL         0x27E 
 #define FLAG_HIDDEN_ITEM_VALLEY_OF_PEACE_REPEL      0x27F
@@ -698,7 +698,7 @@
 #define FLAG_HIDDEN_ITEM_AETHERIA_MAX_REPEL         0x289
 #define FLAG_HIDDEN_ITEM_VERDANT_WOODS_TINYSHROOM   0x28A 
 #define FLAG_HIDDEN_ITEM_AETHERIA_BIG_MUSHROOM      0x28B
-#define FLAG_HIDDEN_ITEM_MAPLEGROVE_REVIVE          0x28C
+#define FLAG_HIDDEN_ITEM_MAPLEGROVE_LESSER_REVIVE   0x28C
 #define FLAG_HIDDEN_ITEM_MINTY_MEADOWS_REPEL        0x28D 
 #define FLAG_HIDDEN_ITEM_MINTY_MEADOWS_R_FEATHER    0x28E // unused
 #define FLAG_HIDDEN_ITEM_MINTY_MEADOWS_SHROOM       0x28F
@@ -1249,7 +1249,7 @@
 #define FLAG_MINTY_MEADOWS_X_ATK                                    0x4A8 
 #define FLAG_MINTY_MEADOWS_DIRE_HIT                                 0x4A9
 #define FLAG_TRAVELERS_TUNNEL_DUSK_BALL                             0x4AA 
-#define FLAG_COP_1_REVIVE                                           0x4AB 
+#define FLAG_COP_1_LESSER_REVIVE                                    0x4AB 
 #define FLAG_SS_RAIN_TM_CHARGE_BEAM                                 0x4AC 
 #define FLAG_SS_RAIN_LEFTOVERS                                      0x4AD
 #define FLAG_VERDANT_WOODS_MIMIKIUM_Z                               0x4AE
@@ -1273,7 +1273,7 @@
 #define FLAG_ITEM_ROCKY_PATH_FULL_HEAL                              0x4C0 
 #define FLAG_ITEM_MOUNT_AURORA_ICE_GEM                              0x4C1 
 #define FLAG_ITEM_ROCKY_PATH_LEMONADE                               0x4C2
-#define FLAG_ITEM_LUMINE_CAVE_REVIVE                                0x4C3 
+#define FLAG_ITEM_LUMINE_CAVE_LESSER_REVIVE                         0x4C3 
 #define FLAG_ITEM_LUMINE_CAVE_TM_ROCK_TOMB                          0x4C4
 #define FLAG_ITEM_LUMINE_CAVE_HEART_SCALE                           0x4C5 
 #define FLAG_ITEM_LUMINE_CAVE_MOON_STONE                            0x4C6
@@ -1284,7 +1284,7 @@
 #define FLAG_ITEM_CHERIPORT_HP_UP                                   0x4CB 
 #define FLAG_ITEM_BELLEHAVEN_CALCIUM                                0x4CC
 #define FLAG_ITEM_VALLEY_OF_PEACE_SPELL_TAG                         0x4CD
-#define FLAG_ITEM_VALLEY_OF_PEACE_REVIVE                            0x4CE
+#define FLAG_ITEM_VALLEY_OF_PEACE_LESSER_REVIVE                     0x4CE
 #define FLAG_ITEM_VALLEY_OF_PEACE_DUSK_STONE                        0x4CF 
 #define FLAG_ITEM_AETHERIA_PP_UP                                    0x4D0
 #define FLAG_ITEM_AETHERIA_METAL_COAT                               0x4D1

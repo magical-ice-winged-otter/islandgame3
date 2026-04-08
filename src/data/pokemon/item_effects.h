@@ -450,8 +450,7 @@ const u8 gItemEffect_LobsterRoll[7] = {
 
 const u8 gItemEffect_IceCream[7] = {
     [3] = ITEM3_STATUS_ALL,
-    [4] = ITEM4_HEAL_HP,
-    [6] = 30,
+    [6] = ITEM6_HEAL_HP_QUARTER,
 };
 
 const u8 gItemEffect_Pokevial[7] = {
@@ -464,4 +463,9 @@ const u8 gItemEffect_Pokevial[7] = {
 const u8 gItemEffect_LesserRevive[7] = {
     [4] = ITEM4_REVIVE | ITEM4_HEAL_HP,
     [6] = ITEM6_HEAL_HP_QUARTER,
+};
+
+const u8 gItemEffect_RukaCola[7] = {
+    [4] = ITEM4_HEAL_HP,
+    [6] = ITEM6_HEAL_HP_HALF,
 };

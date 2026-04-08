@@ -3,26 +3,26 @@ mapscripts ISLANDGAME_TIDALCOVE_PKMNMART_MapScripts {}
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_NPC1 {
     lock
     faceplayer
-    msgbox(format("Yeesh. $800 for a glass of pop just 'cause it's got Ruka on it? There's no way anyone would pay that much just for a bottle."))
+    msgbox(format("Yeesh. $1100 for a glass of pop just 'cause it's got Ruka on it? There's no way anyone would pay that much just for a bottle."))
     closemessage
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Vitamins {
     lock
-    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced vitamins. They feature Ruka.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced goods. They feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Drinks {
     lock
-    msgbox(format("{COLOR RED}(All of the drinks here feature Ruka.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced goods. They feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 
 script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_General {
     lock
-    msgbox(format("{COLOR RED}(All of these goods feature Ruka.)"), MSGBOX_SIGN)
+    msgbox(format("{COLOR RED}(There's rows upon rows of exorbitantly priced goods. They feature Ruka.)"), MSGBOX_SIGN)
     release
 }
 
@@ -37,22 +37,16 @@ script ISLANDGAME_TIDALCOVE_PKMNMART_Interact_Employee {
 }
 
 mart Tidalcove_MartItems {
+    ITEM_ISLANDGAME_RUKACOLA
+    ITEM_FRESH_WATER
+    ITEM_SODA_POP
     ITEM_POKE_BALL
     ITEM_GREAT_BALL
     ITEM_DIVE_BALL
-    ITEM_FRESH_WATER
-    ITEM_SODA_POP
     ITEM_PARALYZE_HEAL
     ITEM_ANTIDOTE
     ITEM_AWAKENING
     ITEM_ICE_HEAL
     ITEM_BURN_HEAL
     ITEM_REPEL
-    ITEM_HP_UP
-    ITEM_PROTEIN
-    ITEM_IRON
-    ITEM_CALCIUM
-    ITEM_ZINC
-    ITEM_CARBOS
-    ITEM_PP_UP
 }

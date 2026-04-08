@@ -236,8 +236,8 @@
       "x": 22,
       "y": 31,
       "elevation": 0,
-      "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_MAPLEGROVE_REVIVE"
+      "item": "ITEM_ISLANDGAME_LESSER_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_MAPLEGROVE_LESSER_REVIVE"
     },
     {
       "type": "sign",

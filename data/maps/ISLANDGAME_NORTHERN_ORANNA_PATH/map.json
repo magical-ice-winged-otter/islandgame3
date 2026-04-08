@@ -380,8 +380,8 @@
       "x": 5,
       "y": 2,
       "elevation": 0,
-      "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_NORANNA_PATH_REVIVE"
+      "item": "ITEM_ISLANDGAME_LESSER_REVIVE",
+      "flag": "FLAG_HIDDEN_ITEM_NORANNA_PATH_LESSER_REVIVE"
     },
     {
       "type": "sign",

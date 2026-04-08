@@ -3431,5 +3431,7 @@ extern const u32 gItemIcon_IslandgameStrangeDisc[];
 extern const u16 gItemIconPalette_IslandgameStrangeDisc[];
 extern const u32 gItemIcon_IslandgameLesserRevive[];
 extern const u16 gItemIconPalette_IslandgameLesserRevive[];
+extern const u32 gItemIcon_IslandgameRukaCola[];
+extern const u16 gItemIconPalette_IslandgameRukaCola[];
 
 #endif //GUARD_GRAPHICS_H
