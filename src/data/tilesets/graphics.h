@@ -2435,4 +2435,4 @@ const u16 gTilesetPalettes_islandgame_lumine_sierra_desert[][16] =
     INCBIN_U16("data/tilesets/secondary/islandgame_lumine_sierra_desert/palettes/12.gbapal"),
 };
 
-const u32 gTilesetTiles_islandgame_lumine_sierra_desert[] = INCBIN_U32("data/tilesets/secondary/islandgame_lumine_sierra_desert/tiles.4bpp.lz");
+const u32 gTilesetTiles_islandgame_lumine_sierra_desert[] = INCBIN_U32("data/tilesets/secondary/islandgame_lumine_sierra_desert/tiles.4bpp.fastSmol");
