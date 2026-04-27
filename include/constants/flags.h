@@ -1287,7 +1287,7 @@
 #define FLAG_ITEM_VALLEY_OF_PEACE_LESSER_REVIVE                     0x4CE
 #define FLAG_ITEM_VALLEY_OF_PEACE_DUSK_STONE                        0x4CF 
 #define FLAG_ITEM_AETHERIA_PP_UP                                    0x4D0
-#define FLAG_ITEM_AETHERIA_METAL_COAT                               0x4D1
+#define FLAG_ITEM_AETHERIA_ROCKY_HELMET                             0x4D1
 #define FLAG_UNUSED_0x4D2                                           0x4D2 // Unused Flag
 #define FLAG_UNUSED_0x4D3                                           0x4D3 // Unused Flag
 #define FLAG_UNUSED_0x4D4                                           0x4D4 // Unused Flag
@@ -1532,7 +1532,7 @@
 #define FLAG_SSRAIN_ICECREAM_RECEIVED               (SYSTEM_FLAGS + 0x93) 
 #define FLAG_S_ORANNA_PATH_ABSOL_DEFEATED           (SYSTEM_FLAGS + 0x94) 
 #define FLAG_ANOMALY01_DEFEATED                     (SYSTEM_FLAGS + 0x95) 
-#define FLAG_MAPLEGROVE_BUNEARY_GIFT                (SYSTEM_FLAGS + 0x96)
+#define FLAG_MAPLEGROVE_BUNEARY_GIFT                (SYSTEM_FLAGS + 0x96) // unused flag
 #define FLAG_FRESA_FARMS_MAREEP_GIFT                (SYSTEM_FLAGS + 0x97) 
 #define FLAG_TIDALCOVE_LUXBALL_GIFT                 (SYSTEM_FLAGS + 0x98)
 #define FLAG_ROSEVALE_TM_GIFT                       (SYSTEM_FLAGS + 0x99)
@@ -1572,7 +1572,7 @@
 #define FLAG_VALLEY_OF_PEACE_PRIMROSE               (SYSTEM_FLAGS + 0xBB)
 #define FLAG_CATACOMBS_COMPLETED                    (SYSTEM_FLAGS + 0xBC)
 #define FLAG_HIDE_MINTY_MEADOWS_RIVAL               (SYSTEM_FLAGS + 0xBD) // Unused Flag
-#define FLAG_UNUSED_0x91E                           (SYSTEM_FLAGS + 0xBE) // Unused Flag
+#define FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL      (SYSTEM_FLAGS + 0xBE)
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
 
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

@@ -23,8 +23,8 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Woman {
     lock
     faceplayer
     msgbox(format(
-        "Remember to keep your Pokémon in tip-top shape, especially in the heat of battle!\p"
-        "Even just a bit of damage can determine whether your Pokémon faints or not!"
+        "Not too long ago, many of our pharmaceuticals had to be imported from the Hoenn region.\p"
+        "Thanks to StrixCorp, medicine has become much more affordable!"
     ), MSGBOX_AUTOCLOSE)
 }
 
@@ -39,13 +39,15 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Audino {
     waitmovement(0)
 }
 
+
+
 // Vendors
-script ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy {
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy {
     lock
     faceplayer
-    msgbox(format("Welcome to PoeShack! Lookin' for some balls? You've come to the right place!"))
+    msgbox(format("Lookin' for some balls? You've come to the right place!"))
     pokemart(Aetheria_2F_PoeShack)
-    msgbox(format("Have a ballin' rest of your day!"))
+    msgbox(format("Have a ballin' day brah!"))
     closemessage
     release
 }
@@ -72,7 +74,7 @@ mart Aetheria_2F_PoeShack {
     ITEM_MOON_BALL
 }
 
-script ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart {
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart {
     lock
     faceplayer
     msgbox(format("Welcome to StrixMart! How may I help you?"))
@@ -97,4 +99,32 @@ mart Aetheria_2F_StrixMart {
     ITEM_REPEL
     ITEM_SUPER_REPEL
     ITEM_MAX_REPEL
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_2F_Pharmacy {
+    lock
+    faceplayer
+    msgbox(format("Welcome to StrixMart! How may I help you?"))
+    pokemart(Aetheria_2F_StrixMartPharmacy)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_2F_StrixMartPharmacy {
+    ITEM_X_ATTACK
+    ITEM_X_DEFEND
+    ITEM_X_SP_ATK
+    ITEM_X_SP_DEF
+    ITEM_X_SPEED
+    ITEM_X_ACCURACY
+    ITEM_DIRE_HIT
+    ITEM_GUARD_SPEC
+    ITEM_HP_UP
+    ITEM_PROTEIN
+    ITEM_IRON 
+    ITEM_CALCIUM
+    ITEM_ZINC
+    ITEM_CARBOS
+    ITEM_PP_UP
 }

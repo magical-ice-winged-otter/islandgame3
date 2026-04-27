@@ -399,20 +399,20 @@ script Common_EventScript_VendingMachine {
         ))
         showmoneybox(17,1)
         dynmultipush("Nah, I'm good", 0)
-        dynmultipush("Fresh Water - ¥500", 35)
-        dynmultipush("Soda Pop - ¥800", 36)
-        dynmultipush("Lemonade - ¥1200", 37)
+        dynmultipush("Fresh Water - ¥800", 35)
+        dynmultipush("Soda Pop - ¥1100", 36)
+        dynmultipush("Lemonade - ¥1300", 37)
         dynmultistack(0,0,TRUE,4,FALSE,0,DYN_MULTICHOICE_CB_NONE)
         switch (var(VAR_RESULT)) {
             case 35:
-                checkmoney(500)
+                checkmoney(800)
                 if(!var(VAR_RESULT)) {
                     msgbox(format(
                         "{COLOR RED}(I don't have enough money.)"
                     ))
                     goto(Common_VendingMachine)
                 }
-                removemoney(500)
+                removemoney(800)
                 updatemoneybox
                 playse(SE_SHOP)
                 waitse
@@ -444,14 +444,14 @@ script Common_EventScript_VendingMachine {
 
                 goto(Common_VendingMachine)
             case 36:
-                checkmoney(800)
+                checkmoney(1100)
                 if(!var(VAR_RESULT)) {
                     msgbox(format(
                         "{COLOR RED}(I don't have enough money.)"
                     ))
                     goto(Common_VendingMachine)
                 }
-                removemoney(800)
+                removemoney(1100)
                 updatemoneybox
                 playse(SE_SHOP)
                 waitse
@@ -483,14 +483,14 @@ script Common_EventScript_VendingMachine {
                 
                 goto(Common_VendingMachine)
             case 37:
-                checkmoney(1200)
+                checkmoney(1300)
                 if(!var(VAR_RESULT)) {
                     msgbox(format(
                         "{COLOR RED}(I don't have enough money.)"
                     ))
                     goto(Common_VendingMachine)
                 }
-                removemoney(1200)
+                removemoney(1300)
                 updatemoneybox
                 playse(SE_SHOP)
                 waitse

@@ -239,7 +239,7 @@ $(OBJEVENTGFXDIR)/people/woman_9.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 	
 $(OBJEVENTGFXDIR)/people/pokekid.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 2
+	$(GFX) $< $@ -mwidth 2 -mheight 4
 	
 $(OBJEVENTGFXDIR)/people/cue_ball.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4

@@ -286,7 +286,7 @@ ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_26:
 
 ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_27:
 # 127 "data/maps/ISLANDGAME_APPLEVINE_PKMNCENTER/scripts.pory"
-	setvar VAR_0x8005, MOVE_FALSE_SWIPE
+	setvar VAR_0x8005, MOVE_WATER_PULSE
 	goto ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_14
 
 ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_28:
@@ -368,7 +368,7 @@ ISLANDGAME_APPLEVINE_PKMNCENTER_NPC3_Text_1:
 	.string "turn!\p"
 	.string "“The most powerful move in Pokemon is\n"
 	.string "switching.”\p"
-	.string "Wow... Zeale truly has a way with words.\n"
+	.string "Wow... Jamie truly has a way with words.\n"
 	.string "No wonder he's been League Champion\l"
 	.string "for three consecutive years!$"
 
@@ -452,7 +452,7 @@ ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_Text_15:
 
 ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_Text_16:
 # 108 "data/maps/ISLANDGAME_APPLEVINE_PKMNCENTER/scripts.pory"
-	.string "False Swipe$"
+	.string "Water Pulse$"
 
 ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor_Text_17:
 # 109 "data/maps/ISLANDGAME_APPLEVINE_PKMNCENTER/scripts.pory"

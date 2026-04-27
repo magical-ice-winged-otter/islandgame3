@@ -75,9 +75,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_METAL_COAT",
+      "trainer_sight_or_berry_tree_id": "ITEM_ROCKY_HELMET",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_AETHERIA_METAL_COAT"
+      "flag": "FLAG_ITEM_AETHERIA_ROCKY_HELMET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",

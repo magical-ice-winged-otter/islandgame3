@@ -576,13 +576,13 @@ VendingMachine_End:
 
 Common_EventScript_VendingMachine_3:
 # 408 "data/scripts/islandgame_common.pory"
-	checkmoney 500
+	checkmoney 800
 # 409 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_8
 Common_EventScript_VendingMachine_7:
 # 415 "data/scripts/islandgame_common.pory"
-	removemoney 500
+	removemoney 800
 # 416 "data/scripts/islandgame_common.pory"
 	updatemoneybox
 # 417 "data/scripts/islandgame_common.pory"
@@ -615,13 +615,13 @@ Common_EventScript_VendingMachine_25:
 
 Common_EventScript_VendingMachine_4:
 # 447 "data/scripts/islandgame_common.pory"
-	checkmoney 800
+	checkmoney 1100
 # 448 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_11
 Common_EventScript_VendingMachine_10:
 # 454 "data/scripts/islandgame_common.pory"
-	removemoney 800
+	removemoney 1100
 # 455 "data/scripts/islandgame_common.pory"
 	updatemoneybox
 # 456 "data/scripts/islandgame_common.pory"
@@ -654,13 +654,13 @@ Common_EventScript_VendingMachine_28:
 
 Common_EventScript_VendingMachine_5:
 # 486 "data/scripts/islandgame_common.pory"
-	checkmoney 1200
+	checkmoney 1300
 # 487 "data/scripts/islandgame_common.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_VendingMachine_14
 Common_EventScript_VendingMachine_13:
 # 493 "data/scripts/islandgame_common.pory"
-	removemoney 1200
+	removemoney 1300
 # 494 "data/scripts/islandgame_common.pory"
 	updatemoneybox
 # 495 "data/scripts/islandgame_common.pory"
@@ -1064,15 +1064,15 @@ Common_EventScript_VendingMachine_Text_1:
 
 Common_EventScript_VendingMachine_Text_2:
 # 402 "data/scripts/islandgame_common.pory"
-	.string "Fresh Water - ¥500$"
+	.string "Fresh Water - ¥800$"
 
 Common_EventScript_VendingMachine_Text_3:
 # 403 "data/scripts/islandgame_common.pory"
-	.string "Soda Pop - ¥800$"
+	.string "Soda Pop - ¥1100$"
 
 Common_EventScript_VendingMachine_Text_4:
 # 404 "data/scripts/islandgame_common.pory"
-	.string "Lemonade - ¥1200$"
+	.string "Lemonade - ¥1300$"
 
 Common_EventScript_VendingMachine_Text_5:
 # 411 "data/scripts/islandgame_common.pory"

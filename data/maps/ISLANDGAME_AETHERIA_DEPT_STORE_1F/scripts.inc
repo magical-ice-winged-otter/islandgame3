@@ -77,11 +77,11 @@ ISLANDGAME_AETHERIA_DEPT_STORE_1F_Bulbasaur_Movement_0:
 ISLANDGAME_AETHERIA_DEPT_STORE_Directory_Text_0:
 # 8 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_1F/scripts.pory"
 	.string "1F - Reception\n"
-	.string "2F - StrixMart / PoeShack\p"
-	.string "3F - StrixMart Pharmacy\n"
-	.string "4F - Vee's Battle Stop\p"
-	.string "5F - uwu! Souvenirs :3\n"
-	.string "Rooftop - Aqui's Superfoods$"
+	.string "2F - General / Pharmacy\p"
+	.string "3F - Food & Produce\n"
+	.string "4F - The Trainer Zone\p"
+	.string "5F - Gifts & Souvenirs\n"
+	.string "Rooftop - Plaza$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_1F_Receptionist_Text_0:
 # 21 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_1F/scripts.pory"
@@ -117,7 +117,7 @@ ISLANDGAME_AETHERIA_DEPT_STORE_1F_SchoolGirl_Text_0:
 
 ISLANDGAME_AETHERIA_DEPT_STORE_1F_Employee_Text_0:
 # 65 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_1F/scripts.pory"
-	.string "Our founder, Corvus, established the\n"
+	.string "Our founder, Mr. Corvus, established the\n"
 	.string "very first StrixMart here alongside his\l"
 	.string "partner, Mr. Poe.\p"
 	.string "However, Mr. Poe ultimately parted ways\n"

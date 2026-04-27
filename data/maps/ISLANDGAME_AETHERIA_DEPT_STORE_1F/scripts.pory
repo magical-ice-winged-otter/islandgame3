@@ -6,11 +6,11 @@ mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_1F_MapScripts {
 script ISLANDGAME_AETHERIA_DEPT_STORE_Directory {
     msgbox(format(
         "1F - Reception\n"
-        "2F - StrixMart / PoeShack\p"
-        "3F - StrixMart Pharmacy\n"
-        "4F - Vee's Battle Stop\p"
-        "5F - uwu! Souvenirs :3\n"
-        "Rooftop - Aqui's Superfoods"
+        "2F - General / Pharmacy\p"
+        "3F - Food & Produce\n"
+        "4F - The Trainer Zone\p"
+        "5F - Gifts & Souvenirs\n"
+        "Rooftop - Plaza"
     ), MSGBOX_SIGN)
 }
 
@@ -62,7 +62,7 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Employee {
     lock
     faceplayer
     msgbox(format(
-        "Our founder, Corvus, established the very first StrixMart here alongside his partner, Mr. Poe.\p"
+        "Our founder, Mr. Corvus, established the very first StrixMart here alongside his partner, Mr. Poe.\p"
         "However, Mr. Poe ultimately parted ways to begin his own company, PoeTech.\p"
         "Today, Corvus and Mr. Poe are the two richest men in all of Marya."
     ), MSGBOX_AUTOCLOSE)

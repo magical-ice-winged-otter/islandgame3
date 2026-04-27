@@ -10,30 +10,13 @@ mapscripts ISLANDGAME_MAPLEGROVE_MapScripts {
 // section: interactions
 
 script ISLANDGAME_MAPLEGROVE_Interact_MazeBuneary {
+    lock
     faceplayer
     playmoncry(SPECIES_BUNEARY,CRY_MODE_NORMAL)
-    goto_if_unset(FLAG_MAPLEGROVE_BUNEARY_GIFT, BunearyGift)
-    msgbox(format("Konpeko Konpeko Konpeko!"), MSGBOX_AUTOCLOSE)
-    end
-
-BunearyGift:
     msgbox(format(
-        "{COLOR RED}(Huh? It looks like Buneary is trying to give me something.)\p"
-        "(Should I take it?)"
-    ), MSGBOX_YESNO)
-
-    if (var(VAR_RESULT) == NO) {
-        // nothing to do
-    }
-    elif (checkitemspace(ITEM_NORMAL_GEM)) {
-        giveitem(ITEM_NORMAL_GEM)
-        setflag(FLAG_MAPLEGROVE_BUNEARY_GIFT)
-    }
-    else {
-        msgbox(format("{COLOR RED}(I don't have enough space to carry it.)"))
-    }
-
-    closemessage
+        "{COLOR BLUE}Konpekooooo!"
+    ))
+    release
 }
 
 script ISLANDGAME_MAPLEGROVE_Interact_MazeMudkip {

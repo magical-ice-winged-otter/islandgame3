@@ -48,116 +48,169 @@ ISLANDGAME_AETHERIA_DEPT_STORE_2F_Audino::
 	return
 
 
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy::
-# 44 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	lock
-# 45 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	faceplayer
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy::
 # 46 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	msgbox ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy_Text_0
+	lock
 # 47 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	pokemart Aetheria_2F_PoeShack
+	faceplayer
 # 48 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	msgbox ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy_Text_1
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy_Text_0
 # 49 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	closemessage
+	pokemart Aetheria_2F_PoeShack
 # 50 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy_Text_1
+# 51 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	closemessage
+# 52 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	release
 	return
 
 
 	.align 2
-# 53 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-Aetheria_2F_PoeShack:
-# 54 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_POKE_BALL
 # 55 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_GREAT_BALL
+Aetheria_2F_PoeShack:
 # 56 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_POKE_BALL
 # 57 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_QUICK_BALL
+	.2byte ITEM_GREAT_BALL
 # 58 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_NET_BALL
+	.2byte ITEM_ULTRA_BALL
 # 59 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_QUICK_BALL
 # 60 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_REPEAT_BALL
+	.2byte ITEM_NET_BALL
 # 61 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_DUSK_BALL
+	.2byte ITEM_DIVE_BALL
 # 62 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_TIMER_BALL
-# 63 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.2byte ITEM_REPEAT_BALL
+# 63 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_DUSK_BALL
 # 64 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_LUXURY_BALL
+	.2byte ITEM_TIMER_BALL
 # 65 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_HEAL_BALL
+	.2byte ITEM_REPEAT_BALL
 # 66 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_LEVEL_BALL
+	.2byte ITEM_LUXURY_BALL
 # 67 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_FAST_BALL
+	.2byte ITEM_HEAL_BALL
 # 68 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_LURE_BALL
+	.2byte ITEM_LEVEL_BALL
 # 69 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_HEAVY_BALL
+	.2byte ITEM_FAST_BALL
 # 70 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_LOVE_BALL
+	.2byte ITEM_LURE_BALL
 # 71 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_FRIEND_BALL
+	.2byte ITEM_HEAVY_BALL
 # 72 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_LOVE_BALL
+# 73 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_FRIEND_BALL
+# 74 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.2byte ITEM_MOON_BALL
 	.2byte ITEM_NONE
 
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart::
-# 76 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	lock
-# 77 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	faceplayer
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart::
 # 78 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	msgbox ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart_Text_0
+	lock
 # 79 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	pokemart Aetheria_2F_StrixMart
+	faceplayer
 # 80 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	msgbox ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart_Text_1
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_0
 # 81 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	closemessage
+	pokemart Aetheria_2F_StrixMart
 # 82 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_1
+# 83 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	closemessage
+# 84 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	release
 	return
 
 
 	.align 2
-# 85 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-Aetheria_2F_StrixMart:
-# 86 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_POTION
 # 87 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_SUPER_POTION
+Aetheria_2F_StrixMart:
 # 88 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_POTION
 # 89 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_ETHER
+	.2byte ITEM_SUPER_POTION
 # 90 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_ISLANDGAME_LESSER_REVIVE
+	.2byte ITEM_HYPER_POTION
 # 91 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_ETHER
 # 92 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ISLANDGAME_LESSER_REVIVE
 # 93 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_FULL_HEAL
 # 94 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_AWAKENING
+	.2byte ITEM_PARALYZE_HEAL
 # 95 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_ANTIDOTE
 # 96 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_BURN_HEAL
+	.2byte ITEM_AWAKENING
 # 97 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_REPEL
+	.2byte ITEM_ICE_HEAL
 # 98 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_BURN_HEAL
 # 99 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_REPEL
+# 100 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_SUPER_REPEL
+# 101 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_NONE
+
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_Pharmacy::
+# 105 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	lock
+# 106 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	faceplayer
+# 107 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_0
+# 108 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	pokemart Aetheria_2F_StrixMartPharmacy
+# 109 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_1
+# 110 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	closemessage
+# 111 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	release
+	return
+
+
+	.align 2
+# 114 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+Aetheria_2F_StrixMartPharmacy:
+# 115 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_ATTACK
+# 116 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_DEFEND
+# 117 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_SP_ATK
+# 118 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_SP_DEF
+# 119 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_SPEED
+# 120 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_X_ACCURACY
+# 121 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_DIRE_HIT
+# 122 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_GUARD_SPEC
+# 123 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_HP_UP
+# 124 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_PROTEIN
+# 125 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_IRON
+# 126 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_CALCIUM
+# 127 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_ZINC
+# 128 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_CARBOS
+# 129 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.2byte ITEM_PP_UP
 	.2byte ITEM_NONE
 
 # 38 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
@@ -180,31 +233,31 @@ ISLANDGAME_AETHERIA_DEPT_STORE_2F_Frogadier_Text_0:
 
 ISLANDGAME_AETHERIA_DEPT_STORE_2F_Woman_Text_0:
 # 26 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.string "Remember to keep your Pokémon in\n"
-	.string "tip-top shape, especially in the heat\l"
-	.string "of battle!\p"
-	.string "Even just a bit of damage can determine\n"
-	.string "whether your Pokémon faints or not!$"
+	.string "Not too long ago, many of our\n"
+	.string "pharmaceuticals had to be imported\l"
+	.string "from the Hoenn region.\p"
+	.string "Thanks to StrixCorp, medicine has\n"
+	.string "become much more affordable!$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_2F_Audino_Text_0:
 # 36 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.string "{COLOR BLUE}(I wish these tourists would put things\n"
 	.string "back where they belong.)$"
 
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy_Text_0:
-# 46 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.string "Welcome to PoeShack! Lookin' for some\n"
-	.string "balls? You've come to the right place!$"
-
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_BallGuy_Text_1:
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy_Text_0:
 # 48 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
-	.string "Have a ballin' rest of your day!$"
+	.string "Lookin' for some balls? You've come to\n"
+	.string "the right place!$"
 
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart_Text_0:
-# 78 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_BallGuy_Text_1:
+# 50 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+	.string "Have a ballin' day brah!$"
+
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_0:
+# 80 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.string "Welcome to StrixMart! How may I help\n"
 	.string "you?$"
 
-ISLANDGAME_BELLEHAVEN_PKMNMART_Interact_StrixMart_Text_1:
-# 80 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
+ISLANDGAME_AETHERIA_DEPT_STORE_2F_StrixMart_Text_1:
+# 82 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_2F/scripts.pory"
 	.string "Have a great rest of your day!$"

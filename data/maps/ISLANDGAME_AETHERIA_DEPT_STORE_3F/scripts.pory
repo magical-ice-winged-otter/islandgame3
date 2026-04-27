@@ -1,0 +1,89 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_3F_MapScripts {}
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_Cook {
+    lock
+    faceplayer
+    msgbox(format(
+        "Don't underestimate the power of berries in combat!\p"
+        "In fast-paced battles, the effect of a berry is invaluable!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "Remember to keep your Pokémon in tip-top shape, especially in the heat of battle!\p"
+        "Even just a bit of damage can determine whether your Pokémon faints or not!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_Athlete {
+    lock
+    msgbox(format(
+        "Can you believe Cynthia's gonna be here for the festival, Aibo?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_Whimsicott {
+    lock
+    applymovement(LOCALID_WHIMSICOTT, moves(emote_heart))
+    playmoncry(SPECIES_WHIMSICOTT, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+// Vendors
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_BerryGuy {
+    lock
+    faceplayer
+    msgbox(format("Welcome to StrixMart! How may I help you?"))
+    pokemart(Aetheria_3F_BerryMart)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_3F_BerryMart {
+    ITEM_LEPPA_BERRY
+    ITEM_CHERI_BERRY
+    ITEM_CHESTO_BERRY
+    ITEM_PECHA_BERRY
+    ITEM_RAWST_BERRY
+    ITEM_ASPEAR_BERRY
+    ITEM_LUM_BERRY
+    ITEM_SITRUS_BERRY
+    ITEM_FIGY_BERRY
+    ITEM_WIKI_BERRY
+    ITEM_MAGO_BERRY
+    ITEM_AGUAV_BERRY
+    ITEM_IAPAPA_BERRY
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_3F_FoodAndProduce {
+    lock
+    faceplayer
+    msgbox(format("Welcome to StrixMart! How may I help you?"))
+    pokemart(Aetheria_3F_FoodAndProduce)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_3F_FoodAndProduce {
+    ITEM_FRESH_WATER
+    ITEM_SODA_POP
+    ITEM_LEMONADE
+    ITEM_MOOMOO_MILK
+    ITEM_ISLANDGAME_RUKACOLA
+    ITEM_CASTELIACONE
+    ITEM_RAGE_CANDY_BAR
+    ITEM_LAVA_COOKIE
+    ITEM_OLD_GATEAU
+    ITEM_LUMIOSE_GALETTE
+    ITEM_SWEET_APPLE
+    ITEM_TART_APPLE
+    ITEM_SYRUPY_APPLE
+}
+

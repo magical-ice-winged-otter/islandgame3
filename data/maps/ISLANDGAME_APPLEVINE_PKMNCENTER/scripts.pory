@@ -54,7 +54,7 @@ script ISLANDGAME_APPLEVINE_PKMNCENTER_NPC3 {
             "When building your Pokémon team, you should make sure each of them cover's the weaknesses of another!\p"
             "So if you have a Pokémon that's weak to electric moves, you should put a ground-type Pokémon on your team so you can switch into it and get a free turn!\p"
             "“The most powerful move in Pokemon is switching.”\p"
-            "Wow... Zeale truly has a way with words. No wonder he's been League Champion for three consecutive years!"
+            "Wow... Jamie truly has a way with words. No wonder he's been League Champion for three consecutive years!"
         ))
 
     }
@@ -105,7 +105,7 @@ script ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor {
             dynmultipush("Bulldoze", 9)
             dynmultipush("Secret Power", 10)
             dynmultipush("Icy Wind", 11)
-            dynmultipush("False Swipe", 12)
+            dynmultipush("Water Pulse", 12)
             dynmultipush("Venoshock", 13)
             dynmultipush("Recycle", 14)
             dynmultipush("Smack Down", 15)
@@ -124,7 +124,7 @@ script ISLANDGAME_APPLEVINE_PKMNCENTER_MoveTutor {
                     case 9: setvar(VAR_0x8005, MOVE_BULLDOZE)
                     case 10: setvar(VAR_0x8005, MOVE_SECRET_POWER)
                     case 11: setvar(VAR_0x8005, MOVE_ICY_WIND)
-                    case 12: setvar(VAR_0x8005, MOVE_FALSE_SWIPE)
+                    case 12: setvar(VAR_0x8005, MOVE_WATER_PULSE)
                     case 13: setvar(VAR_0x8005, MOVE_VENOSHOCK)
                     case 14: setvar(VAR_0x8005, MOVE_RECYCLE)
                     case 15: setvar(VAR_0x8005, MOVE_SMACK_DOWN)

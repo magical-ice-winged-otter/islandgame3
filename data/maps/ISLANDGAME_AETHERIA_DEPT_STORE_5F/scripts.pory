@@ -1,0 +1,219 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_5F_MapScripts {}
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Schoolgirl {
+    lock
+    faceplayer
+    msgbox(format(
+        "Mnnnnnghh! I can't believe all of the colorful gems are gone!\p"
+        "All that's left are the plain looking ones...\p"
+        "Now I'll have to wait until the festival to get them!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "These colorful flutes were crafted by a legendary glassblower known as The Windmaker!\p"
+        "He lives atop Mt. Ignis in Minerva Island in solitude, but if you bring him the materials, he'll happily make you your own flute!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Boyfriend {
+    lock
+    msgbox(format(
+        "Which one did she want again? Was it a Vaporeon? Or maybe an Umbreon?\p"
+        "Or was it a Sylveon? Arrggh... why couldn't she have just raised a Skitty or something?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Girlfriend {
+    lock
+    faceplayer
+    msgbox(format(
+        "It's me and my boyfriend's two-week anniversary today!\p"
+        "I've been dropping him hints all week on what I want, hehe.\p"
+        "Whichever stone he picks for me will determine whether our relationship will work out or not.."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Pokekid {
+    lock
+    faceplayer
+    if (flag(FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL)) {
+        msgbox(format(
+            "Clefairy! {PAUSE 30}Use Full Moon Rondo on Dragapult! {PAUSE 30} KABOOOOOOM!"
+        ))
+        goto(Aetheria_PokeKid_End)
+    }
+    else {
+        msgbox(format(
+            "Waaaah! I've tried ten times, and I haven't gotten a single Clefairy doll!"
+        ))
+        checkitem(ITEM_POKE_DOLL)
+        if(var(VAR_RESULT) && !flag(FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL)) {
+            msgbox(format(
+                "{COLOR GREEN}> Give your Poké Doll to the kid?"
+            ), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                removeitem(ITEM_POKE_DOLL, 1)
+                msgbox(format(
+                    "Hooray! Thank you, trainer!\p"
+                    "You can have this!"
+                ))
+                giveitem(ITEM_FAIRY_GEM)
+                setflag(FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL)
+                goto(Aetheria_PokeKid_End)
+            }
+            applymovement(LOCALID_POKEKID, moves(face_original_direction))
+            waitmovement(0)
+        }
+    }
+    
+    Aetheria_PokeKid_End:
+        closemessage
+        release
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Maniac {
+    lock
+    msgbox(format(
+        "Ohoho... At long last, I've finally found you, my life-sized Mega Gardevoir doll!\p"
+        "You will be a fine addition to my collection, alongside my Mega Lopunny!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Gardevoir {
+    lock
+    msgbox(format(
+        "{COLOR RED}(Wow. It looks just like the real deal!)"
+    ))
+    closemessage
+    playse(SE_PIN)
+    applymovement(LOCALID_MANIAC, moves(emote_exclamation_mark, delay_16 * 4, walk_in_place_fast_down, delay_16 * 2))
+    waitmovement(0)
+    msgbox(format(
+        "Just what do you think you're doing!?\pGet your grubby hands away from my precious Gardevoir!\pShe's worth more than you will ever amount to be!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+// Gacha Machine
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_GachaMachine {
+    lock
+    showmoneybox(0,0)
+    msgbox(format(
+        "{COLOR GREEN}> It's a capsule vending machine. Spend $500 to play?"
+    ), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        goto(Aetheria_GachaMachine_End)
+    }
+    checkmoney(500)
+    if(!var(VAR_RESULT)) {
+        msgbox(format(
+            "{COLOR GREEN}> You don't have enough money."
+        ))
+        goto(Aetheria_GachaMachine_End)
+    }
+    updatemoneybox
+    removemoney(500)
+    playse(SE_SHOP)
+    waitse
+    delay(30)
+    playse(SE_ROULETTE_BALL)
+    waitse
+    playse(SE_TRUCK_DOOR)
+    waitse
+    hidemoneybox
+    random(8)
+    switch(var(VAR_RESULT)) {
+        case 1: giveitem(ITEM_PRETTY_FEATHER)
+        case 2: giveitem(ITEM_HEALTH_FEATHER)
+        case 3: giveitem(ITEM_RESIST_FEATHER)
+        case 4: giveitem(ITEM_GENIUS_FEATHER)
+        case 5: giveitem(ITEM_CLEVER_FEATHER)
+        case 6: giveitem(ITEM_SWIFT_FEATHER)
+        case 7: giveitem(ITEM_MUSCLE_FEATHER)
+        default: giveitem(ITEM_POKE_DOLL)
+    }
+
+    Aetheria_GachaMachine_End:
+        hidemoneybox
+        closemessage
+        release
+}
+
+
+// Vendors
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_EvoShop {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the gift shop! How may I help you?"))
+    pokemart(Aetheria_5F_EvoShop)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_5F_EvoShop {
+    ITEM_LINKING_CORD
+    ITEM_FIRE_STONE
+    ITEM_WATER_STONE
+    ITEM_THUNDER_STONE
+    ITEM_LEAF_STONE
+    ITEM_MOON_STONE
+    ITEM_SUN_STONE
+    ITEM_SHINY_STONE
+    ITEM_DUSK_STONE
+    ITEM_DAWN_STONE
+    ITEM_ICE_STONE
+    ITEM_EVIOLITE
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_MiscShop {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the gift shop! How may I help you?"))
+    pokemart(Aetheria_5F_MiscShop)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_5F_MiscShop {
+    ITEM_ROTOM_CATALOG
+    ITEM_HEART_SCALE
+    ITEM_CHIPPED_POT
+    ITEM_CRACKED_POT
+    ITEM_UNREMARKABLE_TEACUP
+    ITEM_MASTERPIECE_TEACUP
+    ITEM_BLUE_FLUTE
+    ITEM_YELLOW_FLUTE
+    ITEM_RED_FLUTE
+    ITEM_BLACK_FLUTE
+    ITEM_WHITE_FLUTE
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_5F_HeldShop {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the gift shop! How may I help you?"))
+    pokemart(Aetheria_5F_HeldShop)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+mart Aetheria_5F_HeldShop {
+    ITEM_SILK_SCARF
+    ITEM_BLACK_GLASSES
+    ITEM_BLACK_BELT
+    ITEM_FAIRY_FEATHER
+    ITEM_NORMAL_GEM
+    ITEM_FLYING_GEM
+    ITEM_AIR_BALLOON
+    ITEM_CLEAR_AMULET
+    ITEM_FOCUS_BAND
+    ITEM_RAZOR_CLAW
+    ITEM_KINGS_ROCK
+    ITEM_SMOKE_BALL
+}

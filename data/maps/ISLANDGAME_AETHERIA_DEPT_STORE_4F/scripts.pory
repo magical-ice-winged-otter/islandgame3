@@ -1,0 +1,81 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_4F_MapScripts {}
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_Youngster {
+    lock
+    faceplayer
+    msgbox(format(
+        "Total bummer that Pokémon can only know four moves at a time.\p"
+        "They've gotta get with the times, brah.\pImagine how cool it'd be if Pokémon could have fives moves at a time!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_Gentleman {
+    lock
+    faceplayer
+    msgbox(format(
+        "The evolution of Pokémon is quite remarkable.\p"
+        "In my youth, I had memorized every single known move by heart. There were only about a hundred of them.\p"
+        "Today, there are almost a thousand known moves in the Pokémon world, and that number grows every passing year."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_Stoutland {
+    lock
+    faceplayer
+    playmoncry(SPECIES_STOUTLAND, CRY_MODE_NORMAL)
+    msgbox(format(
+        "Borf!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "The Trainer Zone frequently restocks their Technical Machines, especially during festival season.\p"
+        "If you don't see any TMs that you want now, check back in the future!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+// Vendors
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the Trainer Zone! How may I help you?"))
+    pokemart(Aetheria_4F_TMMart)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_4F_TMMart {
+    ITEM_TM_SHOCK_WAVE
+    ITEM_TM_AERIAL_ACE
+    ITEM_TM_DIG
+    ITEM_TM_FACADE
+    ITEM_TM_STEEL_WING
+    // ITEM_TM_FIRE_BLAST
+    // ITEM_TM_THUNDER
+    // ITEM_TM_BLIZZARD
+    // ITEM_TM_BRICK_BREAK
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGirl {
+    lock
+    faceplayer
+    msgbox(format("Welcome to the Trainer Zone! How may I help you?"))
+    pokemart(Aetheria_4F_TMMart2)
+    msgbox(format("Have a great rest of your day!"))
+    closemessage
+    release
+}
+
+mart Aetheria_4F_TMMart2 {
+    ITEM_TM_BULK_UP
+    ITEM_TM_PROTECT
+    ITEM_TM_LIGHT_SCREEN
+    ITEM_TM_REFLECT
+    ITEM_TM_REST 
+    // ITEM_TM_CALM_MIND
+}
