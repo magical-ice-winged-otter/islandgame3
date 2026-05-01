@@ -236,8 +236,7 @@ static const u8 sDoorAnimPalettes_islandgame_oranna_central_path_02[] = {9,9,9,9
 static const u8 sDoorAnimPalettes_islandgame_oranna_central_path_03[] = {8,8,8,8,8,8,8,8};
 static const u8 sDoorAnimPalettes_islandgame_oranna_verdant[] = {7,7,7,7,7,7,7,7};
 static const u8 sDoorAnimPalettes_islandgame_lumine_rocky_path_00[] = {6,6,6,6,6,6,6,6};
-// static const u8 sDoorAnimPalettes_islandgame_lumine_bellehaven_00[] = {8,8,8,8,6,6,6,6};
-static const u8 sDoorAnimPalettes_islandgame_lumine_bellehaven_00[] = {6,6,6,6,8,8,8,8};
+static const u8 sDoorAnimPalettes_islandgame_lumine_bellehaven_00[] = {7,7,7,7,7,7,7,7};
 static const u8 sDoorAnimPalettes_islandgame_lumine_applevine[] = {12,12,12,12,3,3,12,12};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
