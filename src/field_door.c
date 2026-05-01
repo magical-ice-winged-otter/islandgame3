@@ -267,6 +267,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_islandgame_lumine_rocky_path_door_00,         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_rocky_path_00, sDoorAnimPalettes_islandgame_lumine_rocky_path_00},
     {METATILE_islandgame_lumine_bellehaven_door_00,         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_bellehaven_00, sDoorAnimPalettes_islandgame_lumine_bellehaven_00},
     {METATILE_islandgame_lumine_applevine_door,             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_applevine, sDoorAnimPalettes_islandgame_lumine_applevine},
+    {METATILE_islandgame_lumine_aetheria_door_pkmncenter,   DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_pkmndoor, sDoorAnimPalettes_islandgame_pkmncenter},
 
     {METATILE_General_Door,                                 DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_General, sDoorAnimPalettes_General},
     {METATILE_General_Door_PokeCenter,                      DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},

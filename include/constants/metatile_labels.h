@@ -787,6 +787,9 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_islandgame_lumine_aetheria
+#define METATILE_islandgame_lumine_aetheria_door_pkmncenter  0x0A1
+
 // gTileset_islandgame_lumine_applevine
 #define METATILE_islandgame_lumine_applevine_door  0x2D7
 
