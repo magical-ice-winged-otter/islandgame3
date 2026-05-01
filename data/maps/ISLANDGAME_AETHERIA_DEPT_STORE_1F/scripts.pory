@@ -64,6 +64,6 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_1F_Employee {
     msgbox(format(
         "Our founder, Mr. Corvus, established the very first StrixMart here alongside his partner, Mr. Poe.\p"
         "However, Mr. Poe ultimately parted ways to begin his own company, PoeTech.\p"
-        "Today, Corvus and Mr. Poe are the two richest men in all of Marya."
+        "Today, Mr. Corvus and Mr. Poe are the two richest men in all of Marya."
     ), MSGBOX_AUTOCLOSE)
 }

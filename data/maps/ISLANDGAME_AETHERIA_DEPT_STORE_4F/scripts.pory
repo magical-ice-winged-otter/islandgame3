@@ -33,8 +33,9 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_4F_Woman {
     lock
     faceplayer
     msgbox(format(
-        "The Trainer Zone frequently restocks their Technical Machines, especially during festival season.\p"
-        "If you don't see any TMs that you want now, check back in the future!"
+        "If you were looking to get some of those new rare Technical Machines from the Trainer Zone, you're unfortunately too late.\p"
+        "The shelves were completely picked clean this morning by trainers preparing for the festival.\p"
+        "Don't fret, though. There's bound to be a second wave of them later, so check back in the future!"
     ), MSGBOX_AUTOCLOSE)
 }
 

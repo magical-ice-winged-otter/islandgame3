@@ -122,5 +122,5 @@ ISLANDGAME_AETHERIA_DEPT_STORE_1F_Employee_Text_0:
 	.string "partner, Mr. Poe.\p"
 	.string "However, Mr. Poe ultimately parted ways\n"
 	.string "to begin his own company, PoeTech.\p"
-	.string "Today, Corvus and Mr. Poe are the two\n"
-	.string "richest men in all of Marya.$"
+	.string "Today, Mr. Corvus and Mr. Poe are the\n"
+	.string "two richest men in all of Marya.$"

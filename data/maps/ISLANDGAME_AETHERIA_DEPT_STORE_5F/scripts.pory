@@ -43,7 +43,7 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_5F_Pokekid {
     faceplayer
     if (flag(FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL)) {
         msgbox(format(
-            "Clefairy! {PAUSE 30}Use Full Moon Rondo on Dragapult! {PAUSE 30} KABOOOOOOM!"
+            "Clefairy! {PAUSE 30}Use Full Moon Rondo!"
         ))
         goto(Aetheria_PokeKid_End)
     }
@@ -156,7 +156,6 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_5F_EvoShop {
 }
 
 mart Aetheria_5F_EvoShop {
-    ITEM_LINKING_CORD
     ITEM_FIRE_STONE
     ITEM_WATER_STONE
     ITEM_THUNDER_STONE
@@ -167,7 +166,6 @@ mart Aetheria_5F_EvoShop {
     ITEM_DUSK_STONE
     ITEM_DAWN_STONE
     ITEM_ICE_STONE
-    ITEM_EVIOLITE
 }
 
 script ISLANDGAME_AETHERIA_DEPT_STORE_5F_MiscShop {
@@ -181,6 +179,7 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_5F_MiscShop {
 }
 
 mart Aetheria_5F_MiscShop {
+    ITEM_LINKING_CORD
     ITEM_ROTOM_CATALOG
     ITEM_HEART_SCALE
     ITEM_CHIPPED_POT
@@ -215,5 +214,6 @@ mart Aetheria_5F_HeldShop {
     ITEM_FOCUS_BAND
     ITEM_RAZOR_CLAW
     ITEM_KINGS_ROCK
+    ITEM_EVIOLITE
     ITEM_SMOKE_BALL
 }

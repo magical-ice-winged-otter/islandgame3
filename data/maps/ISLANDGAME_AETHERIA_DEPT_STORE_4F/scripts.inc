@@ -45,68 +45,68 @@ ISLANDGAME_AETHERIA_DEPT_STORE_4F_Woman::
 
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy::
-# 43 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	lock
 # 44 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	faceplayer
+	lock
 # 45 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_0
+	faceplayer
 # 46 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	pokemart Aetheria_4F_TMMart
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_0
 # 47 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_1
+	pokemart Aetheria_4F_TMMart
 # 48 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	closemessage
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_1
 # 49 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+	closemessage
+# 50 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	release
 	return
 
 
 	.align 2
-# 52 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-Aetheria_4F_TMMart:
 # 53 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_SHOCK_WAVE
+Aetheria_4F_TMMart:
 # 54 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_AERIAL_ACE
+	.2byte ITEM_TM_SHOCK_WAVE
 # 55 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_DIG
+	.2byte ITEM_TM_AERIAL_ACE
 # 56 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_FACADE
+	.2byte ITEM_TM_DIG
 # 57 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+	.2byte ITEM_TM_FACADE
+# 58 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	.2byte ITEM_TM_STEEL_WING
 	.2byte ITEM_NONE
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGirl::
-# 65 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	lock
 # 66 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	faceplayer
+	lock
 # 67 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_0
+	faceplayer
 # 68 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	pokemart Aetheria_4F_TMMart2
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_0
 # 69 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_1
+	pokemart Aetheria_4F_TMMart2
 # 70 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	closemessage
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_1
 # 71 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+	closemessage
+# 72 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	release
 	return
 
 
 	.align 2
-# 74 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-Aetheria_4F_TMMart2:
 # 75 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_BULK_UP
+Aetheria_4F_TMMart2:
 # 76 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_PROTECT
+	.2byte ITEM_TM_BULK_UP
 # 77 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_LIGHT_SCREEN
+	.2byte ITEM_TM_PROTECT
 # 78 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.2byte ITEM_TM_REFLECT
+	.2byte ITEM_TM_LIGHT_SCREEN
 # 79 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+	.2byte ITEM_TM_REFLECT
+# 80 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	.2byte ITEM_TM_REST
 	.2byte ITEM_NONE
 
@@ -114,8 +114,8 @@ ISLANDGAME_AETHERIA_DEPT_STORE_4F_Youngster_Text_0:
 # 8 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	.string "Total bummer that Pokémon can only\n"
 	.string "know four moves at a time.\p"
-	.string "They've gotta get with the times, brah.\n"
-	.string "{PAUSE 30}Imagine how cool it'd be if Pokémon\l"
+	.string "They've gotta get with the times, brah.\p"
+	.string "Imagine how cool it'd be if Pokémon\n"
 	.string "could have fives moves at a time!$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_Gentleman_Text_0:
@@ -135,17 +135,22 @@ ISLANDGAME_AETHERIA_DEPT_STORE_4F_Stoutland_Text_0:
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_Woman_Text_0:
 # 36 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
-	.string "The Trainer Zone frequently restocks\n"
-	.string "their Technical Machines, especially\l"
-	.string "during festival season.\p"
-	.string "If you don't see any TMs that you want\n"
-	.string "now, check back in the future!$"
+	.string "If you were looking to get some of\n"
+	.string "those new rare Technical Machines from\l"
+	.string "the Trainer Zone, you're unfortunately\l"
+	.string "too late.\p"
+	.string "The shelves were completely picked\n"
+	.string "clean this morning by trainers\l"
+	.string "preparing for the festival.\p"
+	.string "Don't fret, though. There's bound to be\n"
+	.string "a second wave of them later, so check\l"
+	.string "back in the future!$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_0:
-# 45 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+# 46 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	.string "Welcome to the Trainer Zone! How may I\n"
 	.string "help you?$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_4F_TMGuy_Text_1:
-# 47 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
+# 48 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_4F/scripts.pory"
 	.string "Have a great rest of your day!$"

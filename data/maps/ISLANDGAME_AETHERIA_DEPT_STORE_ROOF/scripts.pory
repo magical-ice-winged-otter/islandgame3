@@ -1,0 +1,114 @@
+mapscripts ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_MapScripts {}
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "A Pokémon's nature determines what flavor of food they like!\p"
+        "Pokémon that are Modest, Timid, Calm, or Bold, dislike spicy flavors, like the taste of a Figy Berry.\p"
+        "Pokémon that are Adamant, Jolly, Careful, or Impish dislike dry flavors, like the taste of a Wiki Berry.\p"
+        "Pokémon that are Brave, Quiet, Sassy, or Relaxed dislike sweet flavors, like the taste of a Mago Berry.\p"
+        "Pokémon that are Naughty, Rash, Naive, or Rash dislike bitter flavors, like the taste of a Aguav Berry.\p"
+        "Pokémon that are Lonely, Mild, Gentle, or Hasty dislike sour flavors, like the taste of a Iapapa Berry.\p"
+        "Pokémon that are Hardy, Bashful, Serious, Quirky, or Docile have no preferences!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_SilverwingF {
+    lock
+    faceplayer
+    msgbox(format(
+        "Always remember to keep your faith, especially in the face of adversity.\p"
+        "Lose it, and you will have lost the battle before it even ends."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Chimecho {
+    lock
+    faceplayer
+    playmoncry(SPECIES_CHIMECHO, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Employee {
+    lock
+    faceplayer
+    msgbox(format(
+        "Hoowee... That STARLIGHT merch drop was an absolute nightmare...\p"
+        "The second I opened the door, chaos immediately ensued!\p"
+        "We ended up turning more than half the customers away because we sold out so quickly...\p"
+        "That's idol power and the fear of missing out for you."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Corpo {
+    lock
+    faceplayer
+    msgbox(format(
+        "Despite having worked at StrixCorp for a year, I've only ever seen Mr. Corvus once.\p"
+        "It was late at night, the day I stayed overtime to finish some paperwork.\p"
+        "When I was getting ready to leave, I saw Mr. Corvus entering the elevator.\p"
+        "I thought it was kind of strange. What could be he doing at the headquarters an hour before midnight?\p"
+        "Being a CEO must be real tough work."
+    ))
+}
+
+script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Scalper {
+    lock
+    faceplayer
+
+    checkitem(ITEM_TM_BRICK_BREAK)
+    if(var(VAR_RESULT)) {
+        msgbox(format(
+            "Heh, good doing business with you."
+        ), MSGBOX_AUTOCLOSE)
+
+        goto(Aetheria_ScalperEnd)  
+    }
+
+    checkitem(ITEM_TM_CALM_MIND)
+    if(var(VAR_RESULT)) {
+        msgbox(format(
+            "Heh, good doing business with you."
+        ), MSGBOX_AUTOCLOSE)
+
+        goto(Aetheria_ScalperEnd)  
+    }
+
+    showmoneybox(18,0)
+    msgbox(format(
+        "Hey kid, I bet you're pretty bummed that all those shiny new TMs in the Trainer Zone got bought out...\p"
+        "Luckily for you, I happened to pick up an extra copy of two of them!\p"
+        "They're $10,000 each, but just for you, I'll do $18,000 for both, how 'bout that?"
+    ), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox(format(
+            "Hmph, your loss."
+        ), MSGBOX_AUTOCLOSE)
+        goto(Aetheria_ScalperEnd)
+    }
+    checkmoney(18000)
+    if(!var(VAR_RESULT)) {
+        msgbox(format(
+            "I can't do lower than that, kid. I'm a vendor. I gotta make a profit too."
+        ))
+        goto(Aetheria_ScalperEnd)
+    }
+    removemoney(18000)
+    updatemoneybox
+    playse(SE_SHOP)
+    waitse
+    giveitem(ITEM_TM_BRICK_BREAK)
+    giveitem(ITEM_TM_CALM_MIND)
+    
+    msgbox(format(
+        "Heh, good doing business with you."
+    ), MSGBOX_AUTOCLOSE)
+
+    Aetheria_ScalperEnd:
+        hidemoneybox
+        release
+}

@@ -453,6 +453,12 @@ const u8 gItemEffect_IceCream[7] = {
     [6] = ITEM6_HEAL_HP_QUARTER,
 };
 
+const u8 gItemEffect_Candy[7] = {
+    [3] = ITEM3_STATUS_ALL,
+    [4] = ITEM4_HEAL_HP,
+    [6] = 30,
+};
+
 const u8 gItemEffect_Pokevial[7] = {
     [0] = ITEM0_POKEVIAL,
     [3] = ITEM3_STATUS_ALL,
