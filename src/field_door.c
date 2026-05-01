@@ -228,8 +228,7 @@ static const u8 sDoorAnimPalettes_islandgame_oranna_general_01[] = {3,3,4,4,4,4,
 static const u8 sDoorAnimPalettes_islandgame_ocean_general_pkmncenter[] = {2,2,2,2,2,2,2,2};
 static const u8 sDoorAnimPalettes_islandgame_ocean_general_pkmnmart[] = {1,1,1,1,1,1,1,1};
 static const u8 sDoorAnimPalettes_islandgame_ocean_general_02[] = {3,3,3,3,3,3,3,3};
-static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_00[] = {2,2,2,2,2,2,2,2};
-static const u8 sDoorAnimPalettes_islandgame_ss_rain_general_01[] = {2,2,2,2,2,2,2,2};
+static const u8 sDoorAnimPalettes_islandgame_ss_rain_general[] = {1,1,1,1,1,1,1,1};
 static const u8 sDoorAnimPalettes_islandgame_oranna_maplegrove_00[] = {9,9,9,9,9,9,9,9};
 static const u8 sDoorAnimPalettes_islandgame_oranna_maplegrove_01[] = {8,8,8,8,8,8,8,8};
 static const u8 sDoorAnimPalettes_islandgame_oranna_persi[] = {7,7,7,7,7,7,7,7};
@@ -252,8 +251,8 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_Forest_Door,                                  DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_Islandgame_Forest, sDoorAnimPalettes_Islandgame_Forest},
     {METATILE_islandgame_oranna_general_door_00,            DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_general_pkmndoor, sDoorAnimPalettes_islandgame_oranna_general_pkmnmart},
     {METATILE_islandgame_oranna_general_door_01,            DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_general_pkmndoor, sDoorAnimPalettes_islandgame_oranna_general_pkmncenter},
-    {METATILE_islandgame_ss_rain_general_door_00,           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ss_rain_general_00, sDoorAnimPalettes_islandgame_ss_rain_general_00},
-    {METATILE_islandgame_ss_rain_general_door_01,           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ss_rain_general_01, sDoorAnimPalettes_islandgame_ss_rain_general_01},
+    {METATILE_islandgame_ss_rain_general_door_00,           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ss_rain_general_00, sDoorAnimPalettes_islandgame_ss_rain_general},
+    {METATILE_islandgame_ss_rain_general_door_01,           DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ss_rain_general_01, sDoorAnimPalettes_islandgame_ss_rain_general},
     {METATILE_islandgame_ocean_general_door_00,             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ocean_general_pkmndoor, sDoorAnimPalettes_islandgame_ocean_general_pkmnmart},
     {METATILE_islandgame_ocean_general_door_01,             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ocean_general_pkmndoor, sDoorAnimPalettes_islandgame_ocean_general_pkmncenter},
     {METATILE_islandgame_ocean_general_door_02,             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_ocean_general_02, sDoorAnimPalettes_islandgame_ocean_general_02},
