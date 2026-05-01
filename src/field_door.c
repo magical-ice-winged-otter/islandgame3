@@ -92,6 +92,7 @@ static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/d
 // island-game
 static const u8 sDoorAnimTiles_Islandgame_Forest[] = INCBIN_U8("graphics/door_anims/islandgame_forest.4bpp");
 static const u8 sDoorAnimTiles_islandgame_pkmndoor[] = INCBIN_U8("graphics/door_anims/islandgame_pkmndoor.4bpp");
+static const u8 sDoorAnimTiles_islandgame_connector[] = INCBIN_U8("graphics/door_anims/islandgame_connector.4bpp");
 static const u8 sDoorAnimTiles_islandgame_ocean_general_02[]    = INCBIN_U8("graphics/door_anims/islandgame_ocean_general_02.4bpp");
 static const u8 sDoorAnimTiles_islandgame_ss_rain_general_00[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_00.4bpp");
 static const u8 sDoorAnimTiles_islandgame_ss_rain_general_01[]   = INCBIN_U8("graphics/door_anims/islandgame_ss_rain_general_01.4bpp");
@@ -102,12 +103,10 @@ static const u8 sDoorAnimTiles_islandgame_oranna_rosevale_00[]   = INCBIN_U8("gr
 static const u8 sDoorAnimTiles_islandgame_oranna_tidalcove_gym[] = INCBIN_U8("graphics/door_anims/islandgame_oranna_tidalcove_gym.4bpp");
 static const u8 sDoorAnimTiles_islandgame_oranna_cheriport[]     = INCBIN_U8("graphics/door_anims/islandgame_oranna_cheriport.4bpp");
 static const u8 sDoorAnimTiles_islandgame_oranna_central_path_01[] = INCBIN_U8("graphics/door_anims/islandgame_oranna_central_path_01.4bpp");
-static const u8 sDoorAnimTiles_islandgame_oranna_central_path_02[] = INCBIN_U8("graphics/door_anims/islandgame_oranna_central_path_02.4bpp");
 static const u8 sDoorAnimTiles_islandgame_oranna_central_path_03[] = INCBIN_U8("graphics/door_anims/islandgame_oranna_central_path_03.4bpp");
 static const u8 sDoorAnimTiles_islandgame_oranna_verdant[]     = INCBIN_U8("graphics/door_anims/islandgame_oranna_verdant.4bpp");
 static const u8 sDoorAnimTiles_islandgame_lumine_rocky_path_00[] = INCBIN_U8("graphics/door_anims/islandgame_lumine_rocky_path_00.4bpp");
 static const u8 sDoorAnimTiles_islandgame_lumine_bellehaven_00[] = INCBIN_U8("graphics/door_anims/islandgame_lumine_bellehaven_00.4bpp");
-static const u8 sDoorAnimTiles_islandgame_lumine_applevine[] = INCBIN_U8("graphics/door_anims/islandgame_lumine_applevine.4bpp");
 
 #define CLOSED_DOOR_TILES_OFFSET 0xFFFF
 
@@ -237,7 +236,7 @@ static const u8 sDoorAnimPalettes_islandgame_oranna_central_path_03[] = {8,8,8,8
 static const u8 sDoorAnimPalettes_islandgame_oranna_verdant[] = {7,7,7,7,7,7,7,7};
 static const u8 sDoorAnimPalettes_islandgame_lumine_rocky_path_00[] = {6,6,6,6,6,6,6,6};
 static const u8 sDoorAnimPalettes_islandgame_lumine_bellehaven_00[] = {7,7,7,7,7,7,7,7};
-static const u8 sDoorAnimPalettes_islandgame_lumine_applevine[] = {12,12,12,12,3,3,12,12};
+static const u8 sDoorAnimPalettes_islandgame_lumine_applevine[] = {8,8,8,8,1,1,8,8};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -258,14 +257,14 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_islandgame_oranna_tidalcove_door_gym,         DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_tidalcove_gym, sDoorAnimPalettes_islandgame_oranna_tidalcove_gym},
     {METATILE_islandgame_oranna_cheriport_door,             DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_cheriport, sDoorAnimPalettes_islandgame_oranna_cheriport},
     {METATILE_islandgame_oranna_central_path_door_01,       DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_central_path_01, sDoorAnimPalettes_islandgame_oranna_central_path_01},
-    {METATILE_islandgame_oranna_central_path_door_02,       DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_central_path_02, sDoorAnimPalettes_islandgame_oranna_central_path_02},
+    {METATILE_islandgame_oranna_central_path_door_02,       DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_connector, sDoorAnimPalettes_islandgame_oranna_central_path_02},
     {METATILE_islandgame_oranna_central_path_door_03,       DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_central_path_03, sDoorAnimPalettes_islandgame_oranna_central_path_03},
     {METATILE_islandgame_oranna_verdant_door,               DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_oranna_verdant, sDoorAnimPalettes_islandgame_oranna_verdant},
     {METATILE_islandgame_lumine_general_door_pkmnmart,      DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_pkmndoor, sDoorAnimPalettes_islandgame_pkmnmart},
     {METATILE_islandgame_lumine_general_door_pkmncenter,    DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_pkmndoor, sDoorAnimPalettes_islandgame_pkmncenter},
     {METATILE_islandgame_lumine_rocky_path_door_00,         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_rocky_path_00, sDoorAnimPalettes_islandgame_lumine_rocky_path_00},
     {METATILE_islandgame_lumine_bellehaven_door_00,         DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_bellehaven_00, sDoorAnimPalettes_islandgame_lumine_bellehaven_00},
-    {METATILE_islandgame_lumine_applevine_door,             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_lumine_applevine, sDoorAnimPalettes_islandgame_lumine_applevine},
+    {METATILE_islandgame_lumine_applevine_door,             DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_connector, sDoorAnimPalettes_islandgame_oranna_central_path_02},
     {METATILE_islandgame_lumine_aetheria_door_pkmncenter,   DOOR_SOUND_SLIDING, DOOR_SIZE_1x2, sDoorAnimTiles_islandgame_pkmndoor, sDoorAnimPalettes_islandgame_pkmncenter},
 
     {METATILE_General_Door,                                 DOOR_SOUND_NORMAL,  DOOR_SIZE_1x2, sDoorAnimTiles_General, sDoorAnimPalettes_General},
