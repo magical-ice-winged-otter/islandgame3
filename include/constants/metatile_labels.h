@@ -794,8 +794,10 @@
 #define METATILE_islandgame_lumine_bellehaven_door_00  0x23D
 
 // gTileset_islandgame_lumine_general
-#define METATILE_islandgame_lumine_general_MuddySlope  0x063
-#define METATILE_islandgame_lumine_general_TallGrass   0x026
+#define METATILE_islandgame_lumine_general_MuddySlope       0x063
+#define METATILE_islandgame_lumine_general_TallGrass        0x026
+#define METATILE_islandgame_lumine_general_door_pkmncenter  0x0A1
+#define METATILE_islandgame_lumine_general_door_pkmnmart    0x0C1
 
 // gTileset_islandgame_lumine_rocky_path
 #define METATILE_islandgame_lumine_rocky_path_door_00  0x239
