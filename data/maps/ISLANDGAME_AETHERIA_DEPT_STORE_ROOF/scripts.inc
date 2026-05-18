@@ -52,7 +52,7 @@ ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Corpo::
 # 49 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_ROOF/scripts.pory"
 	faceplayer
 # 50 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_ROOF/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Corpo_Text_0
+	msgbox ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Corpo_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -205,8 +205,8 @@ ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Scalper_Text_1:
 	.string "Trainer Zone got bought out...\p"
 	.string "Luckily for you, I happened to pick up\n"
 	.string "an extra copy of two of them!\p"
-	.string "They're $10,000 each, but just for you,\n"
-	.string "I'll do $18,000 for both, how 'bout that?$"
+	.string "They're ¥10,000 each, but just for you,\n"
+	.string "I'll do ¥18,000 for both, how 'bout that?$"
 
 ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Scalper_Text_2:
 # 89 "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_ROOF/scripts.pory"

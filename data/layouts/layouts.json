@@ -5940,6 +5940,26 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_ROOF/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_ROOF/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_DEPT_STORE_ELEVATOR",
+      "name": "ISLANDGAME_AETHERIA_DEPT_STORE_ELEVATOR_Layout",
+      "width": 5,
+      "height": 6,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_ELEVATOR/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_DEPT_STORE_ELEVATOR/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CARD_STORE",
+      "name": "ISLANDGAME_AETHERIA_CARD_STORE_Layout",
+      "width": 14,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MossdeepGameCorner",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CARD_STORE/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CARD_STORE/map.bin"
     }
   ]
 }

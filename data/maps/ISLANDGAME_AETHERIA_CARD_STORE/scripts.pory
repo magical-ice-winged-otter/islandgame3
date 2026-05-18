@@ -1,0 +1,58 @@
+mapscripts ISLANDGAME_AETHERIA_CARD_STORE_MapScripts {}
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_CARD_STORE_SaltyPlayer {
+    lock
+    msgbox(format(
+        "Woooow, who could've guessed, another lame ass Crustle player ruining the game for everyone as usual.\p"
+        "Can they just ban that card already? Like are we for real, man? It's just not fair anymore dude like I can't do anything about it.\p"
+        "I didn't pay ¥15000 just to lose to some kid with his degenerate glue-eater stun deck!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_LittleCamper {
+    lock
+    msgbox(format(
+        "Ummmmm, good game...?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Nerd {
+    lock
+    msgbox(format(
+        "You know... if you're looking to get better, we could continue playing at my place...\p"
+        "I'd be happy to teach you some deckbuilding quantum mechanics..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Girl {
+    lock
+    msgbox(format(
+        "Eeeeeh..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_AlakazamPlayer {
+    lock
+    msgbox(format(
+        "Evolve Abra into Kadabra. Use Kadabra ability to draw 2 cards. Evolve Dunsparce into Dudunsparce. Attach Enriching Energy to Dudunsparce to draw 4 cards.\p"
+        "Use Dudunsparce ability, draw 3 cards and shuffle back. Play Poké Pad to add Alakazam. Use Rare Candy to evolve Abra into Alakazam. Use Alakazam ability to draw 3 cards.\p"
+        "Use Wondrous Patch to attach a Psychic Energy to Alakazam. Use my other Dudunsparce ability to draw 3 cards and shuffle it back. Use Fezandipiti ability to draw 3 more cards..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Whiner {
+    lock
+    msgbox(format(
+        "DOES YOUR TURN HAVE AN END!?"
+    ), MSGBOX_AUTOCLOSE)
+
+}
+
+// script ISLANDGAME_AETHERIA_CARD_STORE_Pro {
+//     lock
+//     msgbox(format(
+//         ""
+//     ))
+// }

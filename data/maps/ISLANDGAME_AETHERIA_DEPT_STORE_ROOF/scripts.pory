@@ -53,7 +53,7 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Corpo {
         "When I was getting ready to leave, I saw Mr. Corvus entering the elevator.\p"
         "I thought it was kind of strange. What could be he doing at the headquarters an hour before midnight?\p"
         "Being a CEO must be real tough work."
-    ))
+    ), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Scalper {
@@ -82,7 +82,7 @@ script ISLANDGAME_AETHERIA_DEPT_STORE_ROOF_Scalper {
     msgbox(format(
         "Hey kid, I bet you're pretty bummed that all those shiny new TMs in the Trainer Zone got bought out...\p"
         "Luckily for you, I happened to pick up an extra copy of two of them!\p"
-        "They're $10,000 each, but just for you, I'll do $18,000 for both, how 'bout that?"
+        "They're ¥10,000 each, but just for you, I'll do ¥18,000 for both, how 'bout that?"
     ), MSGBOX_YESNO)
     if (var(VAR_RESULT) == NO) {
         msgbox(format(
