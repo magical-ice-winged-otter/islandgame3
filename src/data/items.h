@@ -14833,6 +14833,63 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_IslandgameRukaCola,
         .iconPalette = gItemIconPalette_IslandgameRukaCola,
     },
+    [ITEM_ISLANDGAME_PANCAKE_MARCIE] =
+    {
+        .name = ITEM_NAME("Marcie's Pancake"),
+        .price = 1000, // modified price
+        .holdEffectParam = 30,
+        .description = COMPOUND_STRING(
+            "Restores 1/4 HP\n"
+            "and heals all\n"
+            "status problems."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_STATUS_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_CURE_STATUS,
+        .effect = gItemEffect_IceCream,
+        .flingPower = 30,
+        .iconPic = gItemIcon_LumioseGalette,
+        .iconPalette = gItemIconPalette_LumioseGalette,
+    },
+    [ITEM_ISLANDGAME_PANCAKE_MAMI] =
+    {
+        .name = ITEM_NAME("Mami's Pancake"),
+        .price = 1000, // modified price
+        .holdEffectParam = 30,
+        .description = COMPOUND_STRING(
+            "Restores 1/4 HP\n"
+            "and heals all\n"
+            "status problems."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_STATUS_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_CURE_STATUS,
+        .effect = gItemEffect_IceCream,
+        .flingPower = 30,
+        .iconPic = gItemIcon_IslandgamePancakeMami,
+        .iconPalette = gItemIconPalette_IslandgamePancakeMami,
+    },
+    [ITEM_ISLANDGAME_PANCAKE_MISU] =
+    {
+        .name = ITEM_NAME("Misu's Pancake"),
+        .price = 1000, // modified price
+        .holdEffectParam = 30,
+        .description = COMPOUND_STRING(
+            "Restores 1/4 HP\n"
+            "and heals all\n"
+            "status problems."),
+        .pocket = POCKET_ITEMS,
+        .sortType = ITEM_TYPE_STATUS_RECOVERY,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Medicine,
+        .battleUsage = EFFECT_ITEM_CURE_STATUS,
+        .effect = gItemEffect_IceCream,
+        .flingPower = 30,
+        .iconPic = gItemIcon_IslandgamePancakeMisu,
+        .iconPalette = gItemIconPalette_IslandgamePancakeMisu,
+    },
 };
 
 #undef ITEM_NAME

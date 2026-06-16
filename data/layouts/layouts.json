@@ -5955,7 +5955,7 @@
       "id": "LAYOUT_ISLANDGAME_AETHERIA_CARD_STORE",
       "name": "ISLANDGAME_AETHERIA_CARD_STORE_Layout",
       "width": 14,
-      "height": 11,
+      "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_MossdeepGameCorner",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CARD_STORE/border.bin",

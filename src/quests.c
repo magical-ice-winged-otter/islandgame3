@@ -614,9 +614,9 @@ static const struct SubQuest sSubQuests_ApplevineCouchPotato[SUB_QUEST_COUNT_COU
     {
         .id = SUB_QUEST_COUCH_POTATO_3,
         .name = COMPOUND_STRING("Delivery Complete!"),
-        .desc = COMPOUND_STRING("You delivered his\nPancake!"),
+        .desc = COMPOUND_STRING("You delivered his\nspecial Pancake!"),
         .map = sText_SideQuestMap_Unknown,
-        .sprite = ITEM_LUMIOSE_GALETTE,
+        .sprite = ITEM_ISLANDGAME_PANCAKE_MARCIE,
         .spritetype = ITEM,
         .type = sText_Complete
     },

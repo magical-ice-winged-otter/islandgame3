@@ -3434,4 +3434,10 @@ extern const u16 gItemIconPalette_IslandgameLesserRevive[];
 extern const u32 gItemIcon_IslandgameRukaCola[];
 extern const u16 gItemIconPalette_IslandgameRukaCola[];
 
+extern const u32 gItemIcon_IslandgamePancakeMami[];
+extern const u16 gItemIconPalette_IslandgamePancakeMami[];
+extern const u32 gItemIcon_IslandgamePancakeMisu[];
+extern const u16 gItemIconPalette_IslandgamePancakeMisu[];
+
+
 #endif //GUARD_GRAPHICS_H

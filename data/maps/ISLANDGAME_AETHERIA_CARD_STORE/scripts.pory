@@ -1,13 +1,42 @@
-mapscripts ISLANDGAME_AETHERIA_CARD_STORE_MapScripts {}
+const FLAG_DAYTIME = FLAG_TEMP_2
+const FLAG_NIGHTTIME = FLAG_TEMP_3
+
+mapscripts ISLANDGAME_AETHERIA_CARD_STORE_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (gettimeofday == TIME_NIGHT) {
+            setflag(FLAG_NIGHTTIME)
+        }
+        else {
+            setflag(FLAG_DAYTIME)
+        }
+    }
+}
+
+// Signs
+script ISLANDGAME_AETHERIA_CARD_STORE_Binder {
+    msgbox(format(
+        "{COLOR RED}(It's a trade binder full of rare cards.)\p"
+        "(It's mostly comprised of different Pikachu, Charizard, and Greninja cards.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Board {
+    msgbox(format(
+        "{COLOR RED}(It's a schedule detailing all of the upcoming events for this month.)"
+    ), MSGBOX_SIGN)
+}
+
+
+
 
 
 // NPCs
 script ISLANDGAME_AETHERIA_CARD_STORE_SaltyPlayer {
     lock
     msgbox(format(
-        "Woooow, who could've guessed, another lame ass Crustle player ruining the game for everyone as usual.\p"
+        "Woooow, who could've guessed, another lame Crustle player ruining the game for everyone as usual.\p"
         "Can they just ban that card already? Like are we for real, man? It's just not fair anymore dude like I can't do anything about it.\p"
-        "I didn't pay ¥15000 just to lose to some kid with his degenerate glue-eater stun deck!"
+        "I didn't pay ¥15000 just to lose to some kid with his degenerate no-skill stun deck!"
     ), MSGBOX_AUTOCLOSE)
 }
 
@@ -50,9 +79,96 @@ script ISLANDGAME_AETHERIA_CARD_STORE_Whiner {
 
 }
 
-// script ISLANDGAME_AETHERIA_CARD_STORE_Pro {
-//     lock
-//     msgbox(format(
-//         ""
-//     ))
-// }
+script ISLANDGAME_AETHERIA_CARD_STORE_Bye {
+    lock
+    faceplayer
+    msgbox(format(
+        "We have an uneven amount of players in the tournament, so I got a bye for the first round."
+    ))
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Owner {
+    lock
+    faceplayer
+    if (gettimeofday == TIME_NIGHT) {
+        msgbox(format(
+            "Welcome to The Top Deck!\p"
+            "Unfortunately, our PTCG tournament has already started, but you're more than welcome to spectate!"
+        ), MSGBOX_AUTOCLOSE) 
+    }
+    else {
+        if(!flag(FLAG_AETHERIA_RED_CARD)) {
+            msgbox(format(
+                "Welcome to The Top Deck!\p"
+                "If you're looking for packs of the newest expansion, I regret to inform you that we just ran out...\p"
+                "Due to complications with the distributor, I'm not sure when we'll get more of it.\p"
+                "In the meantime, please accept this promotional card as apologies for the inconvenience."
+            ))
+            giveitem(ITEM_RED_CARD)
+        }
+        else {
+            msgbox(format(
+                "That right there is a special holographic Red Card!\p"
+                "Not only is it a powerful card in the TCG, but it is also quite useful in Pokémon battles as well!\p"
+                "We're hoping to get at least another wave of Maryan Masters before the festival, so be sure to visit our booth for another chance!"
+            ))
+        }
+    }
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Assistant {
+    lock
+    faceplayer
+    msgbox(format(
+        "As the judge, it's my job to handle any ruling disputes players may have during the course of a match.\p"
+        "It is also my job to diffuse any hostile situations that might arise during the tournament... which I have had to do a couple of times.\p"
+        "Card games are serious business."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_InvestorBro {
+    lock
+    msgbox(format(
+        "This purchase limit is an OUTRAGE!\p"
+        "Why should I be punished for being successful enough to have the funds to purchase a case of the newest set!?\p"
+        "Need I remind you that I alone pay for your store's rent each month!?\p"
+        "I will not tolerate this disrespect of my affluence!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Scalper {
+    lock
+    msgbox(format(
+        "Get your hands off my ETB! I was here first! It's first come, first serve!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Scalper2 {
+    lock
+    msgbox(format(
+        "Yeah, right! My hands were on it first! It belongs to me!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Puller {
+    lock
+    msgbox(format(
+        "C'mon...{PAUSE 30} C'mon...{PAUSE 30} heart of the cards... guide me!!!\p"
+        "Arrgh... not another Whimsicott EX! I already got like three of these!\p"
+        "Man, I negged so hard on this box... I'm never opening product again!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Kid {
+    lock
+    msgbox(format(
+        "Mooooom! Can I get this Greninja pleeaaaaase?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CARD_STORE_Mother {
+    lock
+    msgbox(format(
+        "Oh, sweetie... That one's too  expensive... How about this Budew instead?"
+    ), MSGBOX_AUTOCLOSE)
+}

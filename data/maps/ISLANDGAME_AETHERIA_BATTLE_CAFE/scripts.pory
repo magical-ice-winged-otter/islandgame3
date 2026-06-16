@@ -30,7 +30,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron1 {
     lock
     faceplayer
     msgbox(format(
-        "Mami's my favorite. Some might be turned off by her cold indifference, but I think it makes her much cooler!"
+        "Mami's my favorite.\pSome might be turned off by her cold indifference, but I think it makes her much cooler!"
     ), MSGBOX_AUTOCLOSE)
 }
 
@@ -38,7 +38,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Patron2 {
     lock
     faceplayer
     msgbox(format(
-        "Marcie's joy and energy is infectious. She never fails to cheer me up after a bad day!"
+        "Marcie's joy and energy is infectious.\pShe never fails to cheer me up after a bad day!"
     ), MSGBOX_AUTOCLOSE)
 }
 
@@ -92,7 +92,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
         ))
         dynmultipush("Nevermind :(", 4)
         dynmultipush("Classy~", 0)
-        dynmultipush("Applin Cinna-Mon!", 1)
+        dynmultipush("Appl-in Cinna-mon...", 1)
         dynmultipush("Funfetti!!!", 2)
         // if(defeated(TRAINER_BATTLE_CAFE_MARCIE) && defeated(TRAINER_BATTLE_CAFE_MISU) && defeated(TRAINER_BATTLE_CAFE_MAMI)) { // unlocks after you tried all other three combos
         //     dynmultipush("Super Secret Special???", 3)
@@ -306,7 +306,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo {
         "> Still, you thought the café experience was fun.\p"
         "> You decided to save one for the road."
     ))
-    giveitem(ITEM_LUMIOSE_GALETTE)
+    giveitem(ITEM_ISLANDGAME_PANCAKE_MARCIE)
     closemessage
 
     clearflag(FLAG_HIDE_CUTIES) // revert everything back to normal
@@ -433,10 +433,10 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_AppleCombo {
     fadescreen(FADE_TO_BLACK)
 
     msgbox(format(
-        "{COLOR GREEN}> You dig into the stack of pancakes. They're the perfect blend of sweet and tart.\p"
+        "{COLOR GREEN}> You dig into the stack of pancakes.\pThey're the perfect blend of sweet and tart.\p"
         "> You decided to save one for the road."
     ))
-    giveitem(ITEM_LUMIOSE_GALETTE)
+    giveitem(ITEM_ISLANDGAME_PANCAKE_MAMI)
     closemessage
 
     clearflag(FLAG_HIDE_CUTIES) // revert everything back to normal
@@ -530,7 +530,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo {
         "O-Oh no! I'm so sorry! I didn't mean to do that! H-Here, let me get go get you a new one real quick!"
     ))
     closemessage
-    applymovement(LOCALID_WAITRESS, moves(walk_down * 2, slide_down))
+    applymovement(LOCALID_WAITRESS, moves(walk_fast_down * 3))
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
     playse(SE_WALL_HIT)
     waitse
@@ -543,6 +543,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo {
     msgbox(format(
         "{COLOR GREEN}> You got up and helped Misu off the floor."
     ))
+    closemessage
     setobjectxy(LOCALID_WAITRESS, 15, 7)
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_FaceRight)
     applymovement(LOCALID_WAITRESS, Common_Movement_FaceLeft)
@@ -598,10 +599,10 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_FunfettiCombo {
     fadescreen(FADE_TO_BLACK)
 
     msgbox(format(
-        "{COLOR GREEN}> You dig into the stack of pancakes. They bring back memories of childhood nostalgia of when your mother made you a birthday cake.\p"
+        "{COLOR GREEN}> You dig into the stack of pancakes.\pThey bring back memories of childhood nostalgia of when your mother made you a birthday cake.\p"
         "> You decided to save one for the road."
     ))
-    giveitem(ITEM_LUMIOSE_GALETTE)
+    giveitem(ITEM_ISLANDGAME_PANCAKE_MISU)
     closemessage
 
     clearflag(FLAG_HIDE_CUTIES) // revert everything back to normal

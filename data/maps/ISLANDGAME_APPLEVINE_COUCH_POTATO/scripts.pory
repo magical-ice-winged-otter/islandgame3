@@ -89,7 +89,38 @@ script ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak {
                 hidemoneybox
                 giveitem(ITEM_LEFTOVERS)
                 completequest(QUEST_APPLEVINE_COUCH_POTATO)
-            } else {
+            } 
+            elif (var(LOOP_ITER) == 2) {
+                msgbox(format(
+                    "-gobble- -smack-\p"
+                    "Ooooh... it feels like I'm in heaven... these pancakes were infused with Marcie's love for sure!\p"
+                    "Huh? Oh, right. As compensation for your services, here's a little something for your troubles."
+                ))
+                addmoney(2000)
+                updatemoneybox
+                playse(SE_SHOP)
+                waitse
+                switch (var(LOOP_ITER) ) {
+                    case 1: 
+                        msgbox(format(
+                            "Hmm, I'm still pretty hungry...\pOh, I've always wanted to try one of those boy scout Candy Bars they sell at Camp Persi.\pGo forth, my loyal servant!"
+                        ))
+                    case 2: 
+                        msgbox(format(
+                            "Let's see what else I want to order...\pOooh! I've always dreamed of going to the Battle Café with all those cute girls in Aetheria!\pI've always wanted to get served pancakes by Marcie, the face of the café!\pWell, what are ya waiting for? Go get me some Marcie-made pancakes!"
+                        ))
+                    case 3:
+                        msgbox(format(
+                            "Man, I haven't had a good donut in years. When I lived in Cantalo with my mom, she would always bring me home a jelly-filled donut.\pYo, mind snagging me one of those Jelly Donuts from Cantalo? Be sure to get strawberry, it's my favorite!\p...\pHuh? I said a Jelly Donut, not a Rice Ball, dum-dum! How did you get THAT from what I said!?"
+                        ))
+                    case 4:
+                        msgbox(format(
+                            "...\pOh... {PAUSE 30}my... {PAUSE 30}GOD!\pSERAFINA JUST ANNOUNCED HER NEW COOKIE BRAND, SERA-SNAXX!\pFudgesicles... they're only going to be selling it at her hometown in Minerva...\pAs a devoted tier three subscriber, I MUST have her Sera-Snaxx!\pServer! This is your final task! Get me an order of Sera-Snaxx by ANY means necessary! Money is no object!"
+                        ))
+                    default:
+                }
+            }
+            else {
                 msgbox(format(
                     "Ah, excellent! Present me the goods, server!\p"
                     "Mmmmmm...{PAUSE 60} That's the stuff...\p"
@@ -106,7 +137,7 @@ script ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak {
                         ))
                     case 2: 
                         msgbox(format(
-                            "Let's see what else I want to order...\pOh! Apparently a new café just opened up in Aetheria, and their pancakes are bomb, according to Serafina!\pGet me one of those Sera-approved Pancakes at once!"
+                            "Let's see what else I want to order...\pOooh! I've always dreamed of going to the Battle Café with all those cute girls in Aetheria!\pI've always wanted to get served pancakes by Marcie, the face of the café!\pWell, what are ya waiting for? Go get me some Marcie-made pancakes!"
                         ))
                     case 3:
                         msgbox(format(

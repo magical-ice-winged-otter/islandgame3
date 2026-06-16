@@ -2130,6 +2130,14 @@ const u16 gItemIconPalette_IslandgameLesserRevive[] = INCBIN_U16("graphics/items
 const u32 gItemIcon_IslandgameRukaCola[] = INCBIN_U32("graphics/items/icons/rukacola.4bpp.smol");
 const u16 gItemIconPalette_IslandgameRukaCola[] = INCBIN_U16("graphics/items/icon_palettes/rukacola.gbapal");
 
+const u32 gItemIcon_IslandgamePancakeMami[] = INCBIN_U32("graphics/items/icons/pancake_mami.4bpp.smol");
+const u16 gItemIconPalette_IslandgamePancakeMami[] = INCBIN_U16("graphics/items/icon_palettes/pancake_mami.gbapal");
+
+const u32 gItemIcon_IslandgamePancakeMisu[] = INCBIN_U32("graphics/items/icons/pancake_misu.4bpp.smol");
+const u16 gItemIconPalette_IslandgamePancakeMisu[] = INCBIN_U16("graphics/items/icon_palettes/pancake_misu.gbapal");
+
+
+
 // Start Pokevial Branch
 const u32 gItemIcon_Pokevial0[] = INCBIN_U32("graphics/items/icons/pokevial0.4bpp.smol");
 const u32 gItemIcon_Pokevial1[] = INCBIN_U32("graphics/items/icons/pokevial1.4bpp.smol");

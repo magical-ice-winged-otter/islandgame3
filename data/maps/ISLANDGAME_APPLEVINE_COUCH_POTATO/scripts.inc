@@ -20,14 +20,14 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak::
 	case QUEST_INACTIVE, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_3
 # 42 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	case QUEST_ACTIVE, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_4
-# 123 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 154 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	case QUEST_COMPLETED, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_5
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_1:
-# 134 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 165 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 CouchPotatoSpeakEnd:
-# 135 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 166 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	closemessage
-# 136 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 167 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	release
 	return
 
@@ -89,37 +89,40 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_9:
 	compare VAR_TEMP_B, VAR_TEMP_A
 	goto_if_eq ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_13
 # 93 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_7
-# 98 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	compare VAR_TEMP_B, 2
+	goto_if_eq ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_14
+# 124 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_12
+# 129 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	addmoney 2000
-# 99 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 130 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	updatemoneybox
-# 100 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 131 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	playse SE_SHOP
-# 101 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 132 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	waitse
-# 102 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 133 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	switch VAR_TEMP_B
-# 103 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	case 1, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_17
-# 107 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	case 2, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_18
-# 111 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	case 3, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_19
-# 115 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	case 4, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_20
+# 134 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 1, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_24
+# 138 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 2, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_25
+# 142 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 3, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_26
+# 146 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 4, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_27
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12:
-# 122 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 153 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	hidemoneybox
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_1
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_5:
-# 124 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_12
-# 128 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	faceplayer
-# 129 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 155 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_13
+# 159 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	faceplayer
+# 160 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_14
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_1
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_7:
@@ -157,45 +160,88 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_13:
 	completequest QUEST_APPLEVINE_COUCH_POTATO
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
 
-ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_17:
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_14:
+# 94 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_7
+# 99 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	addmoney 2000
+# 100 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	updatemoneybox
+# 101 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	playse SE_SHOP
+# 102 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	waitse
+# 103 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	switch VAR_TEMP_B
 # 104 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_8
-	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
-
-ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_18:
+	case 1, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_19
 # 108 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_9
+	case 2, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_20
+# 112 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 3, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_21
+# 116 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	case 4, ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_22
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_19:
-# 112 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_10
+# 105 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_8
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_20:
-# 116 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 109 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_9
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_21:
+# 113 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_10
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_22:
+# 117 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_11
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_24:
+# 135 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_8
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_25:
+# 139 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_9
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_26:
+# 143 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_10
+	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_27:
+# 147 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_11
 	goto ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_12
 
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_Munchlax::
-# 140 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 171 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	lock
-# 141 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 172 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	faceplayer
-# 142 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 173 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_Munchlax_Text_0
-# 143 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 174 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	playmoncry SPECIES_MUNCHLAX, CRY_MODE_NORMAL
-# 144 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 175 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	waitmoncry
-# 145 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 176 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_TV::
-# 149 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 180 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	msgbox ISLANDGAME_APPLEVINE_COUCH_POTATO_TV_Text_0, MSGBOX_SIGN
 	return
 
@@ -273,16 +319,17 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_6:
 	.string "It's my most prized possession!$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_7:
-# 94 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
-	.string "Ah, excellent! Present me the goods,\n"
-	.string "server!\p"
-	.string "Mmmmmm...{PAUSE 60} That's the stuff...\p"
+# 95 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	.string "-gobble- -smack-\p"
+	.string "Ooooh... it feels like I'm in heaven...\n"
+	.string "these pancakes were infused with\l"
+	.string "Marcie's love for sure!\p"
 	.string "Huh? Oh, right. As compensation for\n"
 	.string "your services, here's a little something\l"
 	.string "for your troubles.$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_8:
-# 105 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 106 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "Hmm, I'm still pretty hungry...\p"
 	.string "Oh, I've always wanted to try one of\n"
 	.string "those boy scout Candy Bars they sell at\l"
@@ -290,16 +337,19 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_8:
 	.string "Go forth, my loyal servant!$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_9:
-# 109 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 110 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "Let's see what else I want to order...\p"
-	.string "Oh! Apparently a new café just opened\n"
-	.string "up in Aetheria, and their pancakes are\l"
-	.string "bomb, according to Serafina!\p"
-	.string "Get me one of those Sera-approved\n"
-	.string "Pancakes at once!$"
+	.string "Oooh! I've always dreamed of going to\n"
+	.string "the Battle Café with all those cute\l"
+	.string "girls in Aetheria!\p"
+	.string "I've always wanted to get served\n"
+	.string "pancakes by Marcie, the face of the\l"
+	.string "café!\p"
+	.string "Well, what are ya waiting for? Go get me\n"
+	.string "some Marcie-made pancakes!$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_10:
-# 113 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 114 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "Man, I haven't had a good donut in\n"
 	.string "years. When I lived in Cantalo with my\l"
 	.string "mom, she would always bring me home a\l"
@@ -313,7 +363,7 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_10:
 	.string "what I said!?$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_11:
-# 117 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 118 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "...\p"
 	.string "Oh... {PAUSE 30}my... {PAUSE 30}GOD!\p"
 	.string "SERAFINA JUST ANNOUNCED HER NEW\n"
@@ -328,22 +378,31 @@ ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_11:
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_12:
 # 125 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+	.string "Ah, excellent! Present me the goods,\n"
+	.string "server!\p"
+	.string "Mmmmmm...{PAUSE 60} That's the stuff...\p"
+	.string "Huh? Oh, right. As compensation for\n"
+	.string "your services, here's a little something\l"
+	.string "for your troubles.$"
+
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_13:
+# 156 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "Whelp, paying for all those delivery\n"
 	.string "fees completely drained my wallet...\p"
 	.string "How in the world am I going to pay for my\n"
 	.string "monthly subscription now?$"
 
-ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_13:
-# 130 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+ISLANDGAME_APPLEVINE_COUCH_POTATO_CouchPotatoSpeak_Text_14:
+# 161 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "Huh? Just find a job? I-It's not as\n"
 	.string "easy as you say it is! They don't just\l"
 	.string "appear out of thin air!$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_Munchlax_Text_0:
-# 142 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 173 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "{COLOR RED}(How the heck are you 230 pounds?)$"
 
 ISLANDGAME_APPLEVINE_COUCH_POTATO_TV_Text_0:
-# 150 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
+# 181 "data/maps/ISLANDGAME_APPLEVINE_COUCH_POTATO/scripts.pory"
 	.string "It's one of Serafina's private streams.\n"
 	.string "She's just chatting with subscribers.$"
