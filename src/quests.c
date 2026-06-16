@@ -2783,6 +2783,27 @@ void QuestMenu_CopySubquestName(u8 *dst, u8 parentId, u8 childId)
 	StringCopy(dst, sSideQuests[parentId].subquests[childId].name);
 }
 
+void QuestMenu_CopySubquestType(u8 *dst, u8 parentId, u8 childId)
+{
+	struct SubQuest sub_quest = sSideQuests[parentId].subquests[childId];
+	switch (sub_quest.spritetype) 
+	{
+		case OBJECT:
+			break;
+		case ITEM:
+			CopyItemName(sub_quest.sprite, dst);
+			break;
+		case PKMN:
+			StringCopy(dst, GetSpeciesName(sub_quest.sprite));
+			break;
+	}
+}
+
+u16 QuestMenu_Subquest_Sprite(u8 parentId, u8 childId)
+{
+	return sSideQuests[parentId].subquests[childId].sprite;
+}
+
 void QuestMenu_ResetMenuSaveData(void)
 {
 	memset(&gSaveBlock2Ptr->questData, 0,
