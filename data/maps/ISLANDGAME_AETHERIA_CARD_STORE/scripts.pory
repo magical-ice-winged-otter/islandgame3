@@ -84,7 +84,7 @@ script ISLANDGAME_AETHERIA_CARD_STORE_Bye {
     faceplayer
     msgbox(format(
         "We have an uneven amount of players in the tournament, so I got a bye for the first round."
-    ))
+    ), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_AETHERIA_CARD_STORE_Owner {

@@ -12,8 +12,9 @@ mapscripts ISLANDGAME_AETHERIA_BATTLE_CAFE_MapScripts {
 script ISLANDGAME_AETHERIA_BATTLE_CAFE_Mami {
     lock
     applymovement(LOCALID_NPC_2, moves(delay_16 * 2, jump_in_place_left, jump_in_place_up, jump_in_place_right, jump_in_place_down, jump_in_place_left, emote_heart, delay_16 * 2))
+    waitmovement(0)
     msgbox(format(
-        "Ugh, I can't believe I'm doing this...{COLOR GREEN}(=>~>=)"
+        "Ugh, I can't believe I'm doing this...{COLOR GREEN}(=>->=)"
     ), MSGBOX_AUTOCLOSE)
     release
 }
@@ -77,21 +78,21 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
     faceplayer
     if (flag(FLAG_REMEMBER_PLAYER)) {
         msgbox(format(
-            "Oooh, already back for more~?"
+            "Oooh, already back for more?"
         ), MSGBOX_YESNO)
     }
     else {
         msgbox(format(
-            "Haiyo~! Welcome to Café Lumi! Home of the STARLIGHT Cinnamon Roll herself, Azalea!\p"
+            "Haiyo! Welcome to Café Lumi! Home of the STARLIGHT Cinnamon Roll herself, Azalea!\p"
             "Have you come to try our famous hotcakes?"
         ), MSGBOX_YESNO)
     }
     if (var(VAR_RESULT) == YES) {
         msgbox(format(
-            "Wonderful! Which hotcake combo would you like~? {COLOR GREEN}(='u'=)"
+            "Wonderful! Which hotcake combo would you like? {COLOR GREEN}(='u'=)"
         ))
         dynmultipush("Nevermind :(", 4)
-        dynmultipush("Classy~", 0)
+        dynmultipush("Classy", 0)
         dynmultipush("Appl-in Cinna-mon...", 1)
         dynmultipush("Funfetti!!!", 2)
         // if(defeated(TRAINER_BATTLE_CAFE_MARCIE) && defeated(TRAINER_BATTLE_CAFE_MISU) && defeated(TRAINER_BATTLE_CAFE_MAMI)) { // unlocks after you tried all other three combos
@@ -102,7 +103,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
             case 0: // Classy
                 showmoneybox(18,0)
                 msgbox(format(
-                    "Oooh~, good choice! It'll just be ¥2,500, is that okidokii~?"
+                    "Oooh, good choice! It'll just be ¥2,500, is that okidokii?"
                 ), MSGBOX_YESNO)
                 if(var(VAR_RESULT) == NO) {
                     hidemoneybox
@@ -136,7 +137,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
             case 1: // Apple Cinnamon
                 showmoneybox(18,0)
                 msgbox(format(
-                    "Hehe, so you like them a little tart, hmm~? It'll be ¥2,500, okidokii~?"
+                    "Hehe, so you like them a little tart, hmm? It'll be ¥2,500, okidokii?"
                 ), MSGBOX_YESNO)
                 if(var(VAR_RESULT) == NO) {
                     hidemoneybox
@@ -170,7 +171,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
             case 2: // Funfetti
                 showmoneybox(18,0)
                 msgbox(format(
-                    "Yum-yum! I love confetti cake! It'll be ¥2,500, okidokiiii~?"
+                    "Yum-yum! I love confetti cake! It'll be ¥2,500, okidokiiii?"
                 ), MSGBOX_YESNO)
                 if(var(VAR_RESULT) == NO) {
                     hidemoneybox
@@ -255,16 +256,16 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo {
     applymovement(LOCALID_WAITRESS, moves(walk_in_place_left))
     waitmovement(0)
     msgbox(format(
-        "Haiyoooo~! My name is Marcie, and I'll be your Café Cuuuutie for today~!\p"
+        "Haiyoooo! My name is Marcie, and I'll be your Café Cuuuutie for today!\p"
         "Bet'cha didn't expect me to be serving as well, ehe.\p"
-        "First, let's start you off with a fizzy bottle of Lumi-Cola, made with lots of love from yours truly~!"
+        "First, let's start you off with a fizzy bottle of Lumi-Cola, made with lots of love from yours truly!"
     ))
     giveitem(ITEM_SODA_POP)
     msgbox(format(
         "And now... for the main course!\p"
         "A stack of our famous buttermilk hotcakes!\p"
         "But before I can serve them to you... we have to bless it with our super special secret ingredient!\p"
-        "In order to bless your hotcakes, I'll need your help, ehe~.\p"
+        "In order to bless your hotcakes, I'll need your help, ehe.\p"
         "Come on up to the stage with me!"
     ))
     closemessage
@@ -294,7 +295,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo {
     waitmovement(0)
     msgbox(format(
         "Yay! What a wonderful performance! The Café gods shine upon us, trainer!\p"
-        "And with that... ta-da! Our ritual is complete! Bon appétit~! Hee-hee."
+        "And with that... ta-da! Our ritual is complete! Bon appétit! Hee-hee."
     ))
     closemessage
 
@@ -329,7 +330,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_ClassyCombo {
     waitmovement(0)
 
     msgbox(format(
-        "Thank you for your patronage, trainer! It was nice meeting you. Our battle was quite fun, heehee~."
+        "Thank you for your patronage, trainer! It was nice meeting you. Our battle was quite fun, heehee."
     ))
 
     if(var(VAR_TEMP_F) == 0) {

@@ -1,1 +1,58 @@
-mapscripts ISLANDGAME_AETHERIA_PKMNCENTER_MapScripts {}
+mapscripts ISLANDGAME_AETHERIA_PKMNCENTER_MapScripts {
+
+}
+
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_PKMNCENTER_Maniac {
+    lock
+    faceplayer
+    msgbox(format(
+        "STARLIGHT Ghost Hunters was TOTALLY robbed at the Pokéstar Awards Ceremony!\p"
+        "You're telling me some conveyor belt sludge like The Pixelmon Movie deserves movie of the year over a cinematic masterpiece like STARLIGHT Ghost Hunters!?\p"
+        "I am OUTRAGED by the blatant disrespect of foreign films by these snooty and talentless Unovan HACKS!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_Breeder {
+    lock
+    faceplayer
+    msgbox(format(
+        "Not all Pokémon within the same species are the same. Many of them have regional forms, meaning they'll look and behave differently based on where they're found!\p"
+        "But here's where it gets confusing...\p"
+        "Sometimes Pokémon that look very similar are not related at all.\p"
+        "For example, Sinistea and Poltchageist are not actually regional forms, as they are two entirely different species!\p"
+        "We've yet a name for these types of Pokémon, but I've been calling them “convergent species”!"
+    ), MSGBOX_AUTOCLOSE)
+
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_Officer {
+    lock
+    faceplayer
+    msgbox(format(
+        "Please remember to stay vigilant at night, especially as a tourist.\p"
+        "A group of thugs calling themselves the Goon Gang have been prowling the streets at night looking for easy prey.\p"
+        "They can be identified by their black jackets and motorcycles. If you see one, please do not engage in battle."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_Boy {
+    lock
+    faceplayer
+    msgbox(format(
+        "I traded my shiny Wingull for this shiny Pichu, only to find out that it's just a regular one.\p"
+        "That's the last time I do a shiny trade in the dark alleyways of the city..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_Pichu {
+    lock
+    faceplayer
+    playmoncry(SPECIES_PICHU, CRY_MODE_WEAK)
+    msgbox(format(
+        "{COLOR BLUE}(Trainer... no want me? ):)"
+    ))    
+    release
+}

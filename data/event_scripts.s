@@ -1475,3 +1475,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_AETHERIA_DEPT_STORE_ELEVATOR/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_AETHERIA_CARD_STORE/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER_2F/scripts.inc"
