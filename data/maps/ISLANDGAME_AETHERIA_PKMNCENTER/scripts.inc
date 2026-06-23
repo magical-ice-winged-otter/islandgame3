@@ -73,10 +73,11 @@ ISLANDGAME_AETHERIA_PKMNCENTER_Maniac_Text_0:
 ISLANDGAME_AETHERIA_PKMNCENTER_Breeder_Text_0:
 # 22 "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER/scripts.pory"
 	.string "Not all Pokémon within the same species\n"
-	.string "are the same. Many of them have\l"
-	.string "regional forms, meaning they'll look and\l"
-	.string "behave differently based on where\l"
-	.string "they're found!\p"
+	.string "are the same.\p"
+	.string "Many of them have regional forms,\n"
+	.string "meaning they'll look and behave\l"
+	.string "differently based on where they're\l"
+	.string "found!\p"
 	.string "But here's where it gets confusing...\p"
 	.string "Sometimes Pokémon that look very\n"
 	.string "similar are not related at all.\p"
@@ -108,4 +109,4 @@ ISLANDGAME_AETHERIA_PKMNCENTER_Boy_Text_0:
 
 ISLANDGAME_AETHERIA_PKMNCENTER_Pichu_Text_0:
 # 55 "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER/scripts.pory"
-	.string "{COLOR BLUE}(Trainer... no want me? ):)$"
+	.string "{COLOR BLUE}(Trainer... no want me? :( )$"

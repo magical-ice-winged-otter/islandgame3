@@ -19,7 +19,7 @@ script ISLANDGAME_AETHERIA_PKMNCENTER_Breeder {
     lock
     faceplayer
     msgbox(format(
-        "Not all Pokémon within the same species are the same. Many of them have regional forms, meaning they'll look and behave differently based on where they're found!\p"
+        "Not all Pokémon within the same species are the same.\pMany of them have regional forms, meaning they'll look and behave differently based on where they're found!\p"
         "But here's where it gets confusing...\p"
         "Sometimes Pokémon that look very similar are not related at all.\p"
         "For example, Sinistea and Poltchageist are not actually regional forms, as they are two entirely different species!\p"
@@ -52,7 +52,7 @@ script ISLANDGAME_AETHERIA_PKMNCENTER_Pichu {
     faceplayer
     playmoncry(SPECIES_PICHU, CRY_MODE_WEAK)
     msgbox(format(
-        "{COLOR BLUE}(Trainer... no want me? ):)"
+        "{COLOR BLUE}(Trainer... no want me? :( )"
     ))    
     release
 }

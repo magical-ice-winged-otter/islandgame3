@@ -1573,9 +1573,9 @@
 #define FLAG_CATACOMBS_COMPLETED                    (SYSTEM_FLAGS + 0xBC)
 #define FLAG_HIDE_MINTY_MEADOWS_RIVAL               (SYSTEM_FLAGS + 0xBD) // Unused Flag
 #define FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL      (SYSTEM_FLAGS + 0xBE)
-#define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag
+#define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag (do not use, causes compiling errors)
 
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_AETHERIA_SERAFINA_CUTSCENE    0x2B 
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

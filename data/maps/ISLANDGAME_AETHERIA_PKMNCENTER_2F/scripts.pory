@@ -1,1 +1,149 @@
-mapscripts ISLANDGAME_AETHERIA_PKMNCENTER_2F_MapScripts {}
+const FLAG_CUTSCENE_FINISHED = FLAG_TEMP_1
+
+mapscripts ISLANDGAME_AETHERIA_PKMNCENTER_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_SERAFINA_STATE) > 0) {
+            setflag(FLAG_CUTSCENE_FINISHED)
+        }
+        else {
+            setflag(FLAG_TEMP_2)
+        }
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SERAFINA_STATE, 0 {
+            call(ISLANDGAME_AETHERIA_PKMNCENTER_2F_SerafinaCutscene)
+            return
+        }
+    ]
+}
+
+
+// Cutscenes
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_SerafinaCutscene {
+    lock
+    delay(30)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_question_mark))
+    delay(30)
+    applymovement(LOCALID_BOY_3, moves(walk_in_place_right * 2))
+    waitmovement(0)
+    delay(30)
+    msgbox(format(
+        "Huh? What's going on here?"
+    ))
+    closemessage
+	playbgm(MUS_BW_MUSICAL_STARDOM,TRUE)
+    applymovement(LOCALID_LASS, moves(walk_in_place_right * 3))
+    waitmovement(0)
+    delay(30)
+    msgbox(format(
+        "Omigod, no way...\p"
+        "...It's Serafina! STARLIGHT Serafina!"
+    ))
+    closemessage
+    delay(30)
+    applymovement(LOCALID_BOY_4, moves(walk_in_place_right * 1))
+    waitmovement(0)
+    msgbox(format(
+        "Miss Serafina! I looooove you! Please notice me!"
+    ))
+    closemessage
+    delay(30)
+    applymovement(LOCALID_SERAFINA, moves(walk_in_place_left, walk_in_place_down, walk_in_place_right, walk_in_place_up, walk_in_place_left, face_down, face_right, face_up, face_left, jump_in_place_left, emote_heart))
+    waitmovement(0)
+    playse(SE_SHINY)
+    waitse
+    msgbox(format(
+        "Haiiiyooooo! How's it going, my cute little sweetie pies?\p"
+        "It's your sweet little cinnamon swirl, Serafina, here to commemorate the grand renovation of Aetheria's Pokémon Center!\p"
+        "For those who aren't caught up with the lore, this Pokémon Center was the site of my first ever performance, when I was still just a teeny tiny donut hole! Hee-hee.\p"
+        "Sooooo, in honor of their patronage, I'll be giving away these snazzy Sera-ffic Cherish Balls! Please enjoy them!"
+    ))
+    giveitem(ITEM_CHERISH_BALL)
+    msgbox(format(
+        "Ooooh, and don't forget! I'll be performing at Keleu Theater in Amberidge later this week! It'll be my last hoorah before the Silverwing Festival!\p"
+        "Stay scrumptious, my sweetie pies! Hee-hee."
+    ))
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+
+    setflag(FLAG_TEMP_1)
+    clearflag(FLAG_TEMP_2)
+    removeobject(LOCALID_SERAFINA)
+    removeobject(LOCALID_MAWILE)
+    removeobject(LOCALID_LASS)
+    removeobject(LOCALID_BOY_4)
+    removeobject(LOCALID_BEAUTY)
+    removeobject(LOCALID_MAN_5)
+    removeobject(LOCALID_BOY_3)
+    removeobject(LOCALID_WOMAN_2)
+
+    addobject(12)
+    addobject(14)
+    addobject(15)
+    addobject(16)
+    addobject(17)
+    addobject(18)
+
+    setvar(VAR_SERAFINA_STATE, 1)
+
+    fadescreen(FADE_FROM_BLACK)
+
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    release
+}
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Lass {
+    lock
+    faceplayer
+    msgbox(format(
+        "Serafina and Mawile are soooo pretty! I gotta know her makeup routine..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Obsessed {
+    lock
+    msgbox(format(
+        "I can't believe Miss Serafina touched my hand...\p"
+        "I can never wash it ever again!"
+    ), MSGBOX_AUTOCLOSE)
+    
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Lady {
+    lock
+    faceplayer
+    msgbox(format(
+        "Before Serafina joined STARLIGHT, she performed around various Pokémon Centers as an underground idol.\p"
+        "Then suddenly out of nowhere, she exploded in popularity overnight!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Beauty {
+    lock
+    faceplayer
+    msgbox(format(
+        "Normally, idols don't get to design their own outfits, and their wardrobe is usually handled by professional stylists.\p"
+        "But the team at STARLIGHT were so impressed with Serafina's fashion sense that they made her the head of their outfit design!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Simp {
+    lock
+    faceplayer
+    msgbox(format(
+        "I can't believe Sera managed to get the rest of STARLIGHT to play Amoongus on stream yesterday!\p"
+        "I knew becoming a Tier 3 subscriber was worth the one month allowance..."
+    ))
+}
+
+script ISLANDGAME_AETHERIA_PKMNCENTER_2F_Man {
+    lock
+    faceplayer
+    msgbox(format(
+        "I knew that girl seemed familiar...\p"
+        "She was a part of a three-way collaboration with Iono and Canari!"
+    ), MSGBOX_AUTOCLOSE)
+}

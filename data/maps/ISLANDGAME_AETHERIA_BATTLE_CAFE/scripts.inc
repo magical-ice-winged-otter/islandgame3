@@ -1160,8 +1160,8 @@ ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_0:
 ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista_Text_1:
 # 86 "data/maps/ISLANDGAME_AETHERIA_BATTLE_CAFE/scripts.pory"
 	.string "Haiyo! Welcome to Café Lumi! Home of\n"
-	.string "the STARLIGHT Cinnamon Roll herself,\l"
-	.string "Azalea!\p"
+	.string "the STARLIGHT Cinnamon Swirl herself,\l"
+	.string "Serafina!\p"
 	.string "Have you come to try our famous\n"
 	.string "hotcakes?$"
 

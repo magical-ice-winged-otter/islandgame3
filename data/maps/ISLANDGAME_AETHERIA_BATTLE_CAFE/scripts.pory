@@ -83,7 +83,7 @@ script ISLANDGAME_AETHERIA_BATTLE_CAFE_Barista {
     }
     else {
         msgbox(format(
-            "Haiyo! Welcome to Café Lumi! Home of the STARLIGHT Cinnamon Roll herself, Azalea!\p"
+            "Haiyo! Welcome to Café Lumi! Home of the STARLIGHT Cinnamon Swirl herself, Serafina!\p"
             "Have you come to try our famous hotcakes?"
         ), MSGBOX_YESNO)
     }

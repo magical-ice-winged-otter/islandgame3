@@ -127,7 +127,7 @@
 #define VAR_PLEASANT_AVENUE_HIDDEN_GROTTO_STATE          0x406B // island-game: used for pleasant avenue's hidden grotto
 #define VAR_MAPGEN_SEED                                  0x406C // island-game: used in randomly generated maps to persist the RNG seed
 #define VAR_AETHERIA_STATE                               0x406D // island-game: used to track multiple aetheria-related functions
-#define VAR_ROUTE115_STATE                               0x406E // Unused Var
+#define VAR_SERAFINA_STATE                               0x406E // island-game: used to track Serafina-related events
 #define VAR_ROUTE116_STATE                               0x406F
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                               0x4071
