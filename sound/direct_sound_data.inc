@@ -7759,3 +7759,27 @@ DirectSoundWaveData_hg_hoohclap::
 	.align 2
 DirectSoundWaveData_hg_choirc5::
 	.incbin "sound/direct_sound_samples/hg_choirc5.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_crash::
+	.incbin "sound/direct_sound_samples/kyra_crash.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_hihat::
+	.incbin "sound/direct_sound_samples/kyra_hihat.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_kick::
+	.incbin "sound/direct_sound_samples/kyra_kick.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_rim::
+	.incbin "sound/direct_sound_samples/kyra_rim.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_snare::
+	.incbin "sound/direct_sound_samples/kyra_snare.bin"
+
+	.align 2
+DirectSoundWaveData_kyra_tom::
+	.incbin "sound/direct_sound_samples/kyra_tom.bin"

@@ -69,3 +69,9 @@ voice_group allkeysplit_hgss_drum
 	voice_directsound 60, 26, DirectSoundWaveData_dp_cabassa_16, 255, 242, 127, 171
 	voice_directsound 60, 105, DirectSoundWaveData_dp_mute_conga_16, 255, 0, 255, 171
 	voice_directsound 60, 105, DirectSoundWaveData_dp_060conga, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_crash, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_hihat, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_kick, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_rim, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_snare, 255, 0, 255, 171
+    voice_directsound 60, 64, DirectSoundWaveData_kyra_tom, 255, 0, 255, 171
