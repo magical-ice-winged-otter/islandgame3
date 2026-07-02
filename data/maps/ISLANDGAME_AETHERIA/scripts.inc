@@ -987,7 +987,7 @@ ISLANDGAME_AETHERIA_FanClubSign_Text_0:
 
 ISLANDGAME_AETHERIA_CondoSign_Text_0:
 # 191 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	.string "AETHERIA CONDOMINIUMS$"
+	.string "SANTA MARIA CONDOMINIUMS$"
 
 ISLANDGAME_AETHERIA_CardShop_Text_0:
 # 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"

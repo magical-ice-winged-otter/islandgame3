@@ -5970,6 +5970,16 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_PKMNCENTER_2F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_PKMNCENTER_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_1F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_1F_Layout",
+      "width": 15,
+      "height": 18,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/map.bin"
     }
   ]
 }

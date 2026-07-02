@@ -188,7 +188,7 @@ script ISLANDGAME_AETHERIA_FanClubSign {
 
 script ISLANDGAME_AETHERIA_CondoSign {
     msgbox(format(
-        "AETHERIA CONDOMINIUMS"
+        "SANTA MARIA CONDOMINIUMS"
     ), MSGBOX_SIGN)
 }
 
