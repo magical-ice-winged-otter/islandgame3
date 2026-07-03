@@ -87,6 +87,13 @@
       "elevation": 0,
       "dest_map": "MAP_ISLANDGAME_AETHERIA",
       "dest_warp_id": "8"
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_CONDO_2F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

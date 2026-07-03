@@ -1,0 +1,22 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "Throughout your journey as a trainer, you'll meet many kinds of people.\p"
+        "Some will be delightful, while others will be abrasive.\p"
+        "Regardless, it's important to keep an open mind. You never know what might be going on in someone's life."
+    ) MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_Hatterene {
+    lock
+    faceplayer
+    playmoncry(SPECIES_HATTERENE, CRY_MODE_NORMAL)
+    msgbox(format(
+        "{COLOR BLUE}(Humans are fascinating.)\p"
+        "(Even when they are in pain, they choose to smile instead.)"
+    ), MSGBOX_AUTOCLOSE)
+}

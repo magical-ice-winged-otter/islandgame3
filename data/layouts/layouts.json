@@ -5980,6 +5980,36 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_Layout",
+      "width": 15,
+      "height": 8,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F_ROOM1",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F_ROOM2",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2/map.bin"
     }
   ]
 }

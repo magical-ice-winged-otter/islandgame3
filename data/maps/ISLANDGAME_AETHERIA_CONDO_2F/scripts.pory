@@ -1,0 +1,13 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_2F_MapScripts {
+
+}
+ 
+
+script ISLANDGAME_AETHERIA_CONDO_2F_Man {
+    lock
+    faceplayer
+    msgbox(format(
+        "This building is always packed to the brim in the summertime.\p"
+        "For tourists, it's the perfect home away from home."
+    ), MSGBOX_AUTOCLOSE)
+}
