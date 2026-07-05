@@ -281,9 +281,10 @@
 #define TRAINER_DAPHNE                      TRAINER_BATTLE_CAFE_MISU
 #define TRAINER_GRUNT_SPACE_CENTER_2        TRAINER_BATTLE_CAFE_MAMI
 
+#define TRAINER_AETHERIA_CYNTHIA            117
+#define TRAINER_CINDY_2                     TRAINER_AETHERIA_CYNTHIA
 
 
-#define TRAINER_CINDY_2                     117
 #define TRAINER_BRIANNA                     118
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120

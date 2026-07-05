@@ -5835,7 +5835,10 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_LEGEND:
-            return MUS_HG_VS_CHAMPION;
+                if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleNameRed))
+                    return MUS_HG_VS_CHAMPION;
+                else if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleNameCynthia))
+                    return MUS_DP_VS_CHAMPION;
         case TRAINER_CLASS_RIVAL_HOENN:
             return MUS_VS_RIVAL;
         case TRAINER_CLASS_RIVAL:

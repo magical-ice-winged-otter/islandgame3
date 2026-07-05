@@ -1,0 +1,20 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_3F_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_CONDO_3F_Officer {
+    lock
+    faceplayer
+    msgbox(format(
+        "Move along! There's nothing to see here! We're busy doing grown-up stuff!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_3F_OldMan {
+    lock
+    faceplayer
+    msgbox(format(
+        "There is nothing more frightening than finding out that your next door neighbors have been using their room as an criminal hideout all this time...\p"
+        "I thought they were nice young gentlemen... but after overhearing one of the detectives, they might be members of an underground syndicate?\p"
+        "Ooooh, what could've strayed these young lads down this dark path?"
+    ), MSGBOX_AUTOCLOSE)
+}

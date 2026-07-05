@@ -1571,14 +1571,14 @@
 #define FLAG_VERDANT_PATH_TRADE_2                   (SYSTEM_FLAGS + 0xBA)
 #define FLAG_VALLEY_OF_PEACE_PRIMROSE               (SYSTEM_FLAGS + 0xBB)
 #define FLAG_CATACOMBS_COMPLETED                    (SYSTEM_FLAGS + 0xBC)
-#define FLAG_HIDE_MINTY_MEADOWS_RIVAL               (SYSTEM_FLAGS + 0xBD) // Unused Flag
+#define FLAG_HIDE_MINTY_MEADOWS_RIVAL               (SYSTEM_FLAGS + 0xBD) 
 #define FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL      (SYSTEM_FLAGS + 0xBE)
-#define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag (do not use, causes compiling errors)
+#define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag (Causes weird compiling errors if used?) ~ res
 
 #define FLAG_AETHERIA_SERAFINA_CUTSCENE    0x2B 
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
+#define FLAG_AETHERIA_CYNTHIA_JUMPSCARE    0x2C
+#define FLAG_AETHERIA_CYNTHIA_DEFEATED     0x2D 
+#define FLAG_AETHERIA_ROOM_SERVICE         0x2E
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag

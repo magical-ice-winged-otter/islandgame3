@@ -76,6 +76,8 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_
             [TRAINER_SLIDE_PLAYER_LANDS_FIRST_DOWN] = COMPOUND_STRING("You show promise, trainer, but how long\nwill you maintain it?{PAUSE_UNTIL_PRESS}"),
             [TRAINER_SLIDE_PLAYER_LANDS_FIRST_CRITICAL_HIT] = COMPOUND_STRING("How unexpected...{PAUSE 60} my calculations\nwill need a little adjusting...{PAUSE_UNTIL_PRESS}"),
         }
+        [TRAINER_AETHERIA_CYNTHIA]
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Don't count us out yet! This battle is\njust heating up!{PAUSE_UNTIL_PRESS}"),
     },
 };
 
