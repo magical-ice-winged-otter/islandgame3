@@ -6050,6 +6050,16 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_FAN_CLUB",
+      "name": "ISLANDGAME_AETHERIA_FAN_CLUB_Layout",
+      "width": 14,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonFanClub",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/map.bin"
     }
   ]
 }

@@ -61,9 +61,9 @@ script ISLANDGAME_APPLEVINE_COCOS_HOUSE_DollInteract {
             ))
             playmoncry(SPECIES_PORYGON2, CRY_MODE_NORMAL)
             msgbox(format(
-                "{COLOR GREEN}Subaru: {COLOR DARK_GRAY}STARLIGHT is an idol group based in the Maryan Isles consisting of five members: Lucia as its front and center, Camellia, Azalea, Serafina, and its newest member, Primrose."
-                "STARLIGHT is managed by Eden Productions, a talent agency stationed in the big city of Aetheria.\p"
-                "Currently, their official PokéTube channel holds the number two spot for most subscribers on the website, only topped by Paldea's very own Iono!"
+                "{COLOR GREEN}Subaru: {COLOR DARK_GRAY}STARLIGHT is a new idol group based in the Maryan Isles consisting of four members: Camellia as its front and center, Azalea, Serafina, and its newest member, Primrose."
+                "STARLIGHT is managed by Pixi Productions, a talent agency stationed in the big city of Aetheria.\p"
+                "Since their offical debut, they have released four solo tracks for each of the members, with their first track as a group set to release during Marya's annual Silverwing Festival!"
             ))
         }
 

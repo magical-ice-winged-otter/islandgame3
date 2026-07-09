@@ -1,7 +1,7 @@
 mapscripts ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         if(flag(FLAG_AETHERIA_CYNTHIA_JUMPSCARE)) {
-            setvar(VAR_TEMP_0, 0)
+            setvar(VAR_TEMP_0, 1)
         }
     }
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -93,5 +93,6 @@ script ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaBattle {
                 "I'd like to battle again in the future."
             ))
     }
+    setflag(FLAG_AETHERIA_CYNTHIA_JUMPSCARE)
     return
 }
