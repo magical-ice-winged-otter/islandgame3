@@ -132,7 +132,10 @@ script ISLANDGAME_AETHERIA_FAN_CLUB_Jane {
     lock
     faceplayer
     msgbox(format(
-        "Lady Primrose is the greatest of all time! She's never lost a SINGLE battle!"
+        "Lady Primrose is the greatest of all time!\p"
+        "Not only does she have the voice of a goddess, she's never lost a SINGLE battle!\p"
+        "Her song deserves to be the most viewed on the channel more than anyone else!\p"
+        "Hashtag StreamDazzlingGleam!"
     ), MSGBOX_AUTOCLOSE)
 }
 
@@ -140,22 +143,55 @@ script ISLANDGAME_AETHERIA_FAN_CLUB_Jess {
     lock
     faceplayer
     msgbox(format(
-        "Her Majesty is gonna sweep the competition at the Silverwing Festival!\p"
+        "Her Majesty is gonna destroy the competition at the Silverwing Festival!\p"
         "And when she gets the trophy, we'll be standing right by her as her biggest fans!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Schoolgirl {
+    lock
+    faceplayer
+    msgbox(format(
+        "Those Primrose superfans have been seriously killing the vibe here.\p"
+        "Can't we all just support our favorite idols in peace?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Schoolboy {
+    lock
+    faceplayer
+    msgbox(format(
+        "It's tough being the only boy here. The girls here are scary.\p"
+        "Maybe if I hide in this corner and stay quiet, they won't approach me."
     ), MSGBOX_AUTOCLOSE)
 }
 
 script ISLANDGAME_AETHERIA_FAN_CLUB_LittleGirl {
     lock
+    faceplayer
     msgbox(format(
-        "Those big girls over there are scary, Mom..."
+        "Haiyooo! When I grow up, I wanna be just like Cammie!"
+        ""
     ), MSGBOX_AUTOCLOSE)
 }
 
-script ISLANDGAME_AETHERIA_FAN_CLUB_Pokefan {
+script ISLANDGAME_AETHERIA_FAN_CLUB_Lass {
     lock
     faceplayer
     msgbox(format(
-        ""
-    ))
+        "I convinced my brother to give STARLIGHT a chance.\p"
+        "He just recently quit his job just so he can have more time to tune into Serafina's streams.\p"
+        "Mweh-heh-heh... Another successful conversion to the STARLIGHT side!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Waitress {
+    lock
+    faceplayer
+    applymovement(LOCALID_FAN_CLUB_WAITRESS, moves(delay_16 * 2, jump_in_place_left, jump_in_place_up, jump_in_place_right, jump_in_place_down, jump_in_place_left, emote_heart, delay_16 * 2))
+    waitmovement(0)
+    msgbox(format(
+        "One, two, three, four!\nFive, six, seven, eight!\p"
+        "Phew... I'm practicing my dance choreography for my Café Lumi performance!"
+    ), MSGBOX_AUTOCLOSE)
 }

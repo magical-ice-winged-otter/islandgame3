@@ -364,7 +364,7 @@
       "flag": "FLAG_TEMP_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DIANCIE)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(MELOETTA)",
       "x": 61,
       "y": 20,
       "elevation": 0,
@@ -373,7 +373,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Diancie",
+      "script": "ISLANDGAME_AETHERIA_Meloetta",
       "flag": "FLAG_TEMP_3"
     },
     {
