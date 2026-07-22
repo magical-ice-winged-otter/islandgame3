@@ -219,7 +219,9 @@ PetalburgCity_Movement_WallyTutorialWally:
 	step_end
 
 PetalburgCity_EventScript_GymSign::
+	createfieldmugshot MUGSHOT_TEST, EMOTE_NORMAL
 	msgbox PetalburgCity_Text_GymSign, MSGBOX_SIGN
+	removefieldmugshot
 	end
 
 PetalburgCity_EventScript_CitySign::

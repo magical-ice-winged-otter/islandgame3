@@ -3071,6 +3071,30 @@
 
   @ End Pokevial Branch
 
+@ Start Mugshot Branch
+
+  @ example_usage:
+  @ 	createfieldmugshot MUGSHOT_TEST, EMOTE_NORMAL
+  @ 	msgbox test
+  @ 	removefieldmugshot
+  @ 	createfieldmugshot MUGSHOT_TEST, EMOTE_ALT
+  @ 	msgbox test2
+  @ 	removefieldmugshot
+
+  @ spawn a mugshot in the overworld at a specific coordinate
+  .macro createfieldmugshot id:req, emote=0
+  callnative CreateFieldMugshot
+  .2byte \id
+  .2byte \emote
+  .endm
+
+  @ destroys a mugshot in the overworld, if there is one
+  .macro removefieldmugshot
+  callnative RemoveFieldMugshot
+  .endm
+
+@ End Mugshot Branch
+
 @ island-game (src/islandgame_scrcmd.c)
 
   @ Copies state from the current follower onto a local object
