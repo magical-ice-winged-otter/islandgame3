@@ -6307,4 +6307,19 @@ static const u16 sFrigibaxEggMoveLearnset[] = {
     MOVE_ICICLE_SPEAR,
     MOVE_UNAVAILABLE,
 };
+
 #endif //P_FAMILY_FRIGIBAX
+
+
+//island-game
+#if P_FAMILY_SIGILYPH_MARYAN
+static const u16 sSigilyphMaryanEggMoveLearnset[] = {
+    MOVE_STORED_POWER,
+    MOVE_PSYCHO_SHIFT,
+    MOVE_STEEL_WING,
+    MOVE_SKILL_SWAP,
+    MOVE_FUTURE_SIGHT,
+    MOVE_MIRROR_MOVE,
+    MOVE_UNAVAILABLE,
+};
+#endif //P_FAMILY_SIGILYPH_MARYAN

@@ -27031,6 +27031,27 @@ const u16 gMonShinyPalette_Anomaly[] = INCBIN_U16("graphics/pokemon/maryan_anoma
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_SKITTY_MARYAN
 
+#if P_FAMILY_SIGILYPH_MARYAN
+    const u32 gMonFrontPic_SigilyphMaryan[] = INCBIN_U32("graphics/pokemon/maryan_sigilyph/anim_front.4bpp.smol");
+    const u16 gMonPalette_SigilyphMaryan[] = INCBIN_U16("graphics/pokemon/maryan_sigilyph/normal.gbapal");
+    const u32 gMonBackPic_SigilyphMaryan[] = INCBIN_U32("graphics/pokemon/maryan_sigilyph/back.4bpp.smol");
+    const u16 gMonShinyPalette_SigilyphMaryan[] = INCBIN_U16("graphics/pokemon/maryan_sigilyph/shiny.gbapal");
+    const u8 gMonIcon_SigilyphMaryan[] = INCBIN_U8("graphics/pokemon/maryan_sigilyph/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_SigilyphMaryan[] = INCBIN_U8("graphics/pokemon/maryan_sigilyph/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_SigilyphMaryan[] = INCBIN_COMP("graphics/pokemon/maryan_sigilyph/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_SigilyphMaryan[] = INCBIN_U16("graphics/pokemon/maryan_sigilyph/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_SigilyphMaryan[] = INCBIN_U16("graphics/pokemon/maryan_sigilyph/overworld_shiny.gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+#endif //P_FAMILY_SIGILYPH
+
+
+
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.smol");
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
