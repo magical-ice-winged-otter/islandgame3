@@ -27047,7 +27047,7 @@ const u16 gMonShinyPalette_Anomaly[] = INCBIN_U16("graphics/pokemon/maryan_anoma
     const u16 gShinyOverworldPalette_SigilyphMaryan[] = INCBIN_U16("graphics/pokemon/maryan_sigilyph/overworld_shiny.gbapal");
 #endif //OW_PKMN_OBJECTS_SHARE_PALETTES
 #endif //OW_POKEMON_OBJECT_EVENTS
-#endif //P_FAMILY_SIGILYPH
+#endif //P_FAMILY_SIGILYPH_MARYAN
 
 
 

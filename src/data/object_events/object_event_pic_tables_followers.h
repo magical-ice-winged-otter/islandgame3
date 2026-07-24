@@ -6806,7 +6806,7 @@ static const struct SpriteFrameImage sPicTable_DelcattyMaryan[] = {
 static const struct SpriteFrameImage sPicTable_SigilyphMaryan[] = {
     overworld_ascending_frames(gObjectEventPic_SigilyphMaryan, 4, 4),
 };
-#endif //P_FAMILY_SIGILYPH
+#endif //P_FAMILY_SIGILYPH_MARYAN
 
 #endif //OW_POKEMON_OBJECT_EVENTS
 
