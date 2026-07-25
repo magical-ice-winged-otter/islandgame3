@@ -1107,7 +1107,10 @@
 #define MUS_BW_VS_WCS_CHAMPION 1165
 #define MUS_BW_OBTAIN_BERRY 1166
 
-#define END_MUS                     MUS_BW_OBTAIN_BERRY
+#define MUS_WOC_ARBORIA_1      1167
+#define MUS_WOC_ARBORIA_2      1168
+
+#define END_MUS                     MUS_WOC_ARBORIA_2
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
