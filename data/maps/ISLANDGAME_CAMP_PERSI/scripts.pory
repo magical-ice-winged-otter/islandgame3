@@ -379,6 +379,7 @@ script ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Middle {
         call(ISLANDGAME_CAMP_PERSI_JonasStart)
         applymovement(LOCALID_JONAS, ISLANDGAME_CAMP_PERSI_JonasMiddleIntro)
         applymovement(LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleIntro)
+        waitmovement
         call(ISLANDGAME_CAMP_PERSI_JonasMain)
         applymovement(LOCALID_JONAS, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro)
         applymovement(LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro)
@@ -503,11 +504,11 @@ script ISLANDGAME_CAMP_PERSI_JonasStart {
 
 script ISLANDGAME_CAMP_PERSI_JonasMain {
     msgbox(format(
-        "You don't look like you're from around here. Are you a tourist by chance?\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}You don't look like you're from around here. Are you a tourist by chance?\p"
         "...\p"
         "Oh? You've come to aid Professor Palm in his research and become a Pokémon trainer?\p"
-        "Well, pardon my assumption, then! Welcome to the Maryan Isles, {PLAYER}!\p"
-        "My name is {COLOR GREEN}Jonas{COLOR DARK_GRAY}. I'm a traveling merchant of The Silverwing Order.\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_ALT}Well, pardon my assumption, then! Welcome to the Maryan Isles, {PLAYER}!\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}My name is {COLOR GREEN}Jonas{COLOR DARK_GRAY}. I'm a traveling merchant of The Silverwing Order.\p"
         "The Silverwing Order is in charge of governing the isles. It's our job to make sure everyone here is comfortable and safe!\p"
         "My role in particular is traveling around to provide goods and inform visitors of the Marya region!\p"
         "But that's enough about me. You said you were a Pokémon trainer, right?\p"
@@ -526,8 +527,8 @@ script ISLANDGAME_CAMP_PERSI_JonasMain {
 
     if (specialvar(VAR_RESULT, GetBattleOutcome) == B_OUTCOME_WON) {
         msgbox(format(
-            "{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the exciting battle, {PLAYER}. You possess exceptional talent for a beginner!\p"
-            "Here, allow me to heal our Pokémon."
+            "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_ALT}{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the exciting battle, {PLAYER}. You possess exceptional talent for a beginner!\p"
+            "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}Here, allow me to heal our Pokémon."
         ), MSGBOX_AUTOCLOSE)
 
         playfanfare(MUS_HEAL)
@@ -536,24 +537,24 @@ script ISLANDGAME_CAMP_PERSI_JonasMain {
     }
     else {
         msgbox(format(
-            "{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the battle, {PLAYER}. Your Pokémon fought as hard as they could!\p"
-            "Here, allow me to heal our Pokémon."
+            "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_ALT}{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the battle, {PLAYER}. Your Pokémon fought as hard as they could!\p"
+            "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}Here, allow me to heal our Pokémon."
         ), MSGBOX_AUTOCLOSE)
 
         playfanfare(MUS_HEAL)
         waitfanfare
         special(HealPlayerParty)
 
-        msgbox(format("{COLOR GREEN}Jonas: {COLOR DARK_GRAY}I'd also like to give you this. It'll be of great use to you as a beginner!"))
+        msgbox(format("{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}{COLOR GREEN}Jonas: {COLOR DARK_GRAY}I'd also like to give you this. It'll be of great use to you as a beginner!"))
         giveitem(ITEM_ENERGY_POWDER)
     }
 
     msgbox(format(
-        "Unfortunately, this is where our conversation must end. I've got a long day ahead of me, a-ha.\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}Unfortunately, this is where our conversation must end. I've got a long day ahead of me, a-ha.\p"
         "But before I depart, I thought I'd let you know about our upcoming Silverwing Festival!\p"
         "It is a grand celebration we host annually to honor our lord and savior, Lugia, who rescued Marya from destruction thousands of years ago!\p"
-        "It's not for another month, but I implore you to stick around for it!\p"
-        "Ah, I must get going now, lest I fall even further behind schedule.\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_ALT}It's not for another month, but I implore you to stick around for it!\p"
+        "{CREATE_MUGSHOT MUGSHOT_JONAS EMOTE_NORMAL}Ah, I must get going now, lest I fall even further behind schedule.\p"
         "It was a pleasure meeting you, {PLAYER}.\p"
         "By Lugia, may our paths cross again."
     ), MSGBOX_AUTOCLOSE)
