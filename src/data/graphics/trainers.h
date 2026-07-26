@@ -52,8 +52,8 @@ const u16 gTrainerPalette_Rancher[] = INCBIN_U16("graphics/trainers/front_pics/c
 const u32 gTrainerFrontPic_Cowgirl[] = INCBIN_U32("graphics/trainers/front_pics/cowgirl.4bpp.smol");
 const u16 gTrainerPalette_Cowgirl[] = INCBIN_U16("graphics/trainers/front_pics/cowgirl.gbapal");
 
-const u32 gTrainerFrontPic_Cynthia[] = INCBIN_U32("graphics/trainers/front_pics/cynthia.4bpp.smol");
-const u16 gTrainerPalette_Cynthia[] = INCBIN_U16("graphics/trainers/front_pics/cynthia.gbapal");
+const u32 gTrainerFrontPic_Cynthia[] = INCBIN_U32("graphics/trainers/front_pics/cynthia_alt.4bpp.smol");
+const u16 gTrainerPalette_Cynthia[] = INCBIN_U16("graphics/trainers/front_pics/cynthia_alt.gbapal");
 
 const u32 gTrainerFrontPic_FarmerDuo[] = INCBIN_U32("graphics/trainers/front_pics/farmer_duo.4bpp.smol");
 const u16 gTrainerPalette_FarmerDuo[] = INCBIN_U16("graphics/trainers/front_pics/farmer_duo.gbapal");

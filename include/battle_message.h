@@ -332,6 +332,10 @@ extern const u8 gText_RecordBattleToPass[];
 extern const u8 gText_BattleRecordedOnPass[];
 extern const u8 gText_BattleTourney[];
 
+// island-game
+extern const u8 gText_BattleNameRed[];
+extern const u8 gText_BattleNameCynthia[];
+
 extern const u16 gMissStringIds[];
 extern const u16 gStatUpStringIds[];
 

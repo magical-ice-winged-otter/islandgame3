@@ -1,0 +1,98 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if(flag(FLAG_AETHERIA_CYNTHIA_JUMPSCARE)) {
+            setvar(VAR_TEMP_0, 1)
+        }
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaCutscene
+    ]
+}
+
+script ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaCutscene {
+    lockall
+    applymovement(LOCALID_CYNTHIA, moves(walk_in_place_up * 2, delay_16 * 3, walk_in_place_fast_up, delay_16 * 2))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}???: {COLOR DARK_GRAY}Hmm, I'm not quite sure I'm feeling this outfit...\p"
+        "It's a lot more... daring than what I am used to.\p"
+        "...Oh?"
+    ))
+    closemessage
+    applymovement(LOCALID_CYNTHIA, moves(delay_16 * 3, emote_question_mark, delay_16 * 3))
+    waitmovement(0)
+    playse(SE_PIN)
+    applymovement(LOCALID_CYNTHIA, moves(face_down, delay_16, emote_exclamation_mark, delay_16 * 3))
+    waitmovement(0)
+    playbgm(MUS_DP_ENCOUNTER_CHAMPION,TRUE)
+    applymovement(LOCALID_CYNTHIA, moves(walk_down * 2, delay_16 * 3))
+    msgbox(format(
+        "And whom might you be?\p"
+        "...\p"
+        "Ah, {PLAYER}, is it? It's good to meet you.\p"
+        "My name is Cynthia. I am a Pokémon trainer, just like you.\p"
+        "I've come to these exotic isles to research its Pokémon mythology, and to take a little vacation, as is visually apparent, a-ha.\p"
+        "The tale of the great Sea Guardian... it is a story familiar to me in concept, but I hope to learn more in detail in the next coming weeks.\p"
+        "Additionally, I also hope to learn more about the trainers here.\p"
+        "Would you care to be my first investigation opportunity?"
+    ))
+
+    call(ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaBattle)
+
+    setflag(FLAG_AETHERIA_CYNTHIA_JUMPSCARE)
+    setvar(VAR_TEMP_0, 1)
+    savebgm(MUS_DUMMY)
+    fadedefaultbgm
+    release
+}
+
+
+script ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_Cynthia {
+    lock
+    faceplayer
+    if(flag(FLAG_AETHERIA_CYNTHIA_DEFEATED)) {
+        msgbox(format(
+            "{COLOR GREEN}Cynthia: {COLOR DARK_GRAY}What do you think of my beach attire?\p"
+            "Is it befitting of me? Is it too bold?\p"
+            "Ah, perhaps it is not a very appropriate question to be asking of you."
+        ), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        msgbox(format(
+            "{COLOR GREEN}Cynthia: {COLOR DARK_GRAY}Returned for another round, have we?"
+        ), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            call(ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaBattle)
+        }
+    }
+    closemessage
+    release
+}
+
+
+script ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_CynthiaBattle {
+    setflag(FLAG_NO_WHITEOUT)
+    trainerbattle_no_intro(TRAINER_AETHERIA_CYNTHIA, "That was a fun battle, {PLAYER}.\pYou truly are exceptional!")
+    clearflag(FLAG_NO_WHITEOUT)
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    switch(var(VAR_RESULT)) {
+        case B_OUTCOME_WON:
+            msgbox(
+                format(
+                    "{COLOR GREEN}Cynthia:{COLOR DARK_GRAY} What an intense fight!\p"
+                    "It seems that no matter where my travels take me, I always meet a trainer like you, {PLAYER}.\p"
+                    "I'd like you to have this. A gift for providing me with such an exhilarating experience."
+                )
+            )
+            giveitem(ITEM_SHINY_CHARM)
+            setflag(FLAG_AETHERIA_CYNTHIA_DEFEATED)
+        default: // loss 
+            special(HealPlayerParty)
+            msgbox(format(
+                "{COLOR GREEN}Cynthia:{COLOR DARK_GRAY} What a refreshing battle! Your Pokémon fought with vim and vigor, {PLAYER}."
+                "I'd like to battle again in the future."
+            ))
+    }
+    setflag(FLAG_AETHERIA_CYNTHIA_JUMPSCARE)
+    return
+}

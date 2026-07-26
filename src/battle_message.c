@@ -1458,6 +1458,10 @@ static const u8 sText_SpaceIs[] = _(" is");
 static const u8 sText_ApostropheS[] = _("'s");
 const u8 gText_BattleTourney[] = _("BATTLE TOURNEY");
 
+// island-game
+const u8 gText_BattleNameRed[] = _("Red");
+const u8 gText_BattleNameCynthia[] = _("Cynthia");
+
 const u8 *const gRoundsStringTable[DOME_ROUNDS_COUNT] =
 {
     [DOME_ROUND1]    = COMPOUND_STRING("Round 1"),

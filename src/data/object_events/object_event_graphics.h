@@ -142,8 +142,8 @@ const u16 gObjectEventPal_BeautyDP[] = INCBIN_U16("graphics/object_events/pics/p
 const u32 gObjectEventPic_Idol[] = INCBIN_U32("graphics/object_events/pics/people/idol.4bpp");
 const u16 gObjectEventPal_Idol[] = INCBIN_U16("graphics/object_events/pics/people/idol.gbapal");
 
-const u32 gObjectEventPic_Cynthia[] = INCBIN_U32("graphics/object_events/pics/people/cynthia.4bpp");
-const u16 gObjectEventPal_Cynthia[] = INCBIN_U16("graphics/object_events/pics/people/cynthia.gbapal");
+const u32 gObjectEventPic_Cynthia[] = INCBIN_U32("graphics/object_events/pics/people/cynthia_alt.4bpp");
+const u16 gObjectEventPal_Cynthia[] = INCBIN_U16("graphics/object_events/pics/people/cynthia_alt.gbapal");
 
 const u32 gObjectEventPic_Painter[] = INCBIN_U32("graphics/object_events/pics/people/painter.4bpp");
 const u16 gObjectEventPal_Painter[] = INCBIN_U16("graphics/object_events/pics/people/painter.gbapal");

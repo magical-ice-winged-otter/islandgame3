@@ -615,15 +615,15 @@ ISLANDGAME_AETHERIA_StrayPurrloin::
 	return
 
 
-ISLANDGAME_AETHERIA_Diancie::
+ISLANDGAME_AETHERIA_Meloetta::
 # 694 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
 # 695 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	faceplayer
 # 696 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_DIANCIE, CRY_MODE_NORMAL
+	playmoncry SPECIES_MELOETTA, CRY_MODE_NORMAL
 # 697 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_Diancie_Text_0
+	msgbox ISLANDGAME_AETHERIA_Meloetta_Text_0
 # 700 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitmoncry
 # 701 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
@@ -987,7 +987,7 @@ ISLANDGAME_AETHERIA_FanClubSign_Text_0:
 
 ISLANDGAME_AETHERIA_CondoSign_Text_0:
 # 191 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	.string "AETHERIA CONDOMINIUMS$"
+	.string "SANTA MARIA CONDOMINIUMS$"
 
 ISLANDGAME_AETHERIA_CardShop_Text_0:
 # 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
@@ -1272,10 +1272,10 @@ ISLANDGAME_AETHERIA_Camellia_Text_0:
 	.string "-sigh- For the last time, that was my\n"
 	.string "brother...$"
 
-ISLANDGAME_AETHERIA_Diancie_Text_0:
+ISLANDGAME_AETHERIA_Meloetta_Text_0:
 # 698 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	.string "Diiian...{COLOR BLUE}(These paparazzi guys are\n"
-	.string "relentless. Being an idol is tough work.)$"
+	.string "{COLOR BLUE}(These paparazzi guys are relentless.\n"
+	.string "Being an idol is tough work.)$"
 
 ISLANDGAME_AETHERIA_Birb_Text_0:
 # 709 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"

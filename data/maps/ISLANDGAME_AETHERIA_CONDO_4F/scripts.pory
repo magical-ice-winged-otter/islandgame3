@@ -1,0 +1,8 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_4F_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_CONDO_4F_PrimsRoom {
+    msgbox(format(
+        "{COLOR RED}(The door is locked.)"
+    ), MSGBOX_SIGN)
+}

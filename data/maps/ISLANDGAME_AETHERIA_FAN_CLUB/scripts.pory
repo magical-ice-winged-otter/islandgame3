@@ -1,0 +1,197 @@
+mapscripts ISLANDGAME_AETHERIA_FAN_CLUB_MapScripts {}
+
+
+// signs
+script ISLANDGAME_AETHERIA_FAN_CLUB_InspectJigglypuff {
+    msgbox(format(
+        "{COLOR RED}(It's a Jigglypuff doll. It appears to be the mascot for Camellia's fanbase.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_InspectClefairy {
+    msgbox(format(
+        "{COLOR RED}(It's a Clefairy doll. It appears to be the mascot for Azalea's fanbase.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_InspectMarill {
+    msgbox(format(
+        "{COLOR RED}(It's a Marill doll. It appears to be the mascot for Serafina's fanbase.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_InspectSkitty {
+    msgbox(format(
+        "{COLOR RED}(It's a Skitty doll. It appears to be the mascot for Primrose's fanbase.)"
+    ), MSGBOX_SIGN)
+}
+
+
+
+
+// important NPCs
+script ISLANDGAME_AETHERIA_FAN_CLUB_Owner {
+    lock
+    faceplayer
+    if(flag(FLAG_AETHERIA_FAN_CLUB_TM)) {
+        msgbox(format(
+            "STARLIGHT is premiering their first song as a group at the Silverwing Festival this year!\p"
+            "Eeeeeee! I can't wait! {COLOR GREEN}>w<"
+        ))
+    }
+    elif (flag(FLAG_TEMP_1)) {
+        msgbox(format(
+            "Haiyoooo! Have you made a decision yet? :O"
+        ))
+        goto(Aetheria_FanClubSongSelection)
+    }
+    else {
+        msgbox(format(
+            "Haiyooo! Welcome to the official STARLIGHT Fan Club! {COLOR GREEN}=OuO=\p"
+            "{COLOR DARK_GRAY}You look new around here. Who's your bias? I won't judge, hee-hee.\p"
+            "...\p"
+            "Whaaaaat? Say it ain't so! You've NEVER listened to any of their songs before?\p"
+            "Well, I can't just sit by and watch as a poor soul spends another second without having listened to absolute peak!\p"
+            "Luckily for you... I've got a copy of each of their songs!\p"
+            "I'll let you have one of them, so choose wisely! :D"
+        ))
+        setflag(FLAG_TEMP_1)
+
+
+
+        Aetheria_FanClubSongSelection:
+            msgbox(format(
+                "{COLOR RED}(Which song should I choose?)"
+            ))
+            dynmultipush("I'm good", 0)
+            dynmultipush("“Alluring Voice”", 1)
+            dynmultipush("“Draining Kiss”", 2)
+            dynmultipush("“Play Rough”", 3)
+            dynmultipush("“Dazzling Gleam”", 4)
+            dynmultistack(0,0,TRUE,5,FALSE,0,DYN_MULTICHOICE_CB_NONE)
+            switch (var(VAR_RESULT)) {
+                case 1:
+                    msgbox(format(
+                        "Ooooh! Good choice! This is Camellia's signature song, and the first song produced under the STARLIGHT label!\p"
+                        "Camellia is the oldest member of STARLIGHT, and the one with most experience in the industry.\p"
+                        "Her voice is soooo angelic, and she radiates big sister energy!\p"
+                        "Is “Alluring Voice” the song you want?"
+                    ), MSGBOX_YESNO)
+                    if(var(VAR_RESULT) == NO) {
+                        goto(Aetheria_FanClubSongSelection)
+                    }
+                    giveitem(ITEM_TM_ALLURING_VOICE)
+                    setflag(FLAG_AETHERIA_FAN_CLUB_TM)
+                case 2:
+                    msgbox(format(
+                        "Ooooh! Good choice! This is Azalea's signature song, and a spicy one at that!\p"
+                        "Before joining STARLIGHT, Azalea was an acting prodigy, starring in a bunch of TV shows and movies!\p"
+                        "She even got flown out to Unova to cameo in a film at Pokéstar Studios!\p"
+                        "Is “Draining Kiss” the song you want?"
+                    ), MSGBOX_YESNO)
+                    if(var(VAR_RESULT) == NO) {
+                        goto(Aetheria_FanClubSongSelection)
+                    }
+                    giveitem(ITEM_TM_ALLURING_VOICE)
+                    setflag(FLAG_AETHERIA_FAN_CLUB_TM)
+                case 3:
+                    msgbox(format(
+                        "Ooooh! Good choice! This is Serafina's signature track! It really highlights her playful and bubbly nature!\p"
+                        "Before Serafina joined STARLIGHT, she was an influencer on PikPok!\p"
+                        "She still regularly hosts livestreams on her PokéTube channel, and has a subscriber count up there with the other streaming giants like Iono and Canari!\p"
+                        "Is “Play Rough” the song you want?"
+                    ), MSGBOX_YESNO)
+                    if(var(VAR_RESULT) == NO) {
+                        goto(Aetheria_FanClubSongSelection)
+                    }
+                    giveitem(ITEM_TM_PLAY_ROUGH)
+                    setflag(FLAG_AETHERIA_FAN_CLUB_TM)
+                case 4:
+                    msgbox(format(
+                        "Ooooh! Good choice! This is Primrose's signature track! She's got a really unique voice that sets her apart from the other three!\p"
+                        "Primrose is the newest member of STARLIGHT. She joined six months after the original three!\p"
+                        "A lot of her lore is still unknown to us, but that's exactly what makes her so interesting!\p"
+                        "Is “Dazzling Gleam” the song you want?"
+                    ), MSGBOX_YESNO)
+                    if(var(VAR_RESULT) == NO) {
+                        goto(Aetheria_FanClubSongSelection)
+                    }
+                    giveitem(ITEM_TM_DAZZLING_GLEAM)
+                    setflag(FLAG_AETHERIA_FAN_CLUB_TM)
+                default: // 0
+            }
+    }
+    closemessage
+    release
+}
+
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_FAN_CLUB_Jane {
+    lock
+    faceplayer
+    msgbox(format(
+        "Lady Primrose is the greatest of all time!\p"
+        "Not only does she have the voice of a goddess, she's never lost a SINGLE battle!\p"
+        "Her song deserves to be the most viewed on the channel more than anyone else!\p"
+        "Hashtag StreamDazzlingGleam!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Jess {
+    lock
+    faceplayer
+    msgbox(format(
+        "Her Majesty is gonna destroy the competition at the Silverwing Festival!\p"
+        "And when she gets the trophy, we'll be standing right by her as her biggest fans!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Schoolgirl {
+    lock
+    faceplayer
+    msgbox(format(
+        "Those Primrose superfans have been seriously killing the vibe here.\p"
+        "Can't we all just support our favorite idols in peace?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Schoolboy {
+    lock
+    faceplayer
+    msgbox(format(
+        "It's tough being the only boy here. The girls here are scary.\p"
+        "Maybe if I hide in this corner and stay quiet, they won't approach me."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_LittleGirl {
+    lock
+    faceplayer
+    msgbox(format(
+        "Haiyooo! When I grow up, I wanna be just like Cammie!"
+        ""
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Lass {
+    lock
+    faceplayer
+    msgbox(format(
+        "I convinced my brother to give STARLIGHT a chance.\p"
+        "He just recently quit his job just so he can have more time to tune into Serafina's streams.\p"
+        "Mweh-heh-heh... Another successful conversion to the STARLIGHT side!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_FAN_CLUB_Waitress {
+    lock
+    faceplayer
+    applymovement(LOCALID_FAN_CLUB_WAITRESS, moves(delay_16 * 2, jump_in_place_left, jump_in_place_up, jump_in_place_right, jump_in_place_down, jump_in_place_left, emote_heart, delay_16 * 2))
+    waitmovement(0)
+    msgbox(format(
+        "One, two, three, four!\nFive, six, seven, eight!\p"
+        "Phew... I'm practicing my dance choreography for my Café Lumi performance!"
+    ), MSGBOX_AUTOCLOSE)
+}

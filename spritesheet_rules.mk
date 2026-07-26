@@ -279,7 +279,7 @@ $(OBJEVENTGFXDIR)/people/idol.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/beauty_dppt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
-$(OBJEVENTGFXDIR)/people/cynthia.4bpp: %.4bpp: %.png
+$(OBJEVENTGFXDIR)/people/cynthia_alt.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
 $(OBJEVENTGFXDIR)/people/painter.4bpp: %.4bpp: %.png
@@ -341,6 +341,10 @@ $(POKEMONGFXDIR)/maryan_skitty/overworld.4bpp: %.4bpp: %.png
 
 $(POKEMONGFXDIR)/maryan_delcatty/overworld.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
+
+$(POKEMONGFXDIR)/maryan_sigilyph/overworld.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 # end
 
 

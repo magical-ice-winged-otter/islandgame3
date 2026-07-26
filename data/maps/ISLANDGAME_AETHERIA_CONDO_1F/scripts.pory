@@ -1,0 +1,48 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_1F_MapScripts {
+
+}
+
+script ISLANDGAME_AETHERIA_CONDO_1F_TV {
+    msgbox(format(
+        "{COLOR RED}(Serafina seems to be making an appearance at Aetheria's Pokémon Center.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_1F_Deliveryman {
+    lock
+    faceplayer
+    msgbox(format(
+        "According to a tabloid, Primrose was seen entering this condo at night...\p"
+        "That seems pretty suspicious for an idol, doesn't it?\p"
+        "That can only mean one thing...{PAUSE 30} One of these rooms belongs to her!\p"
+        "Or maybe...{PAUSE 30} she's got a secret boyfriend? The plot thickens..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_1F_AceTrainer {
+    lock
+    faceplayer
+    msgbox(format(
+        "Primrose's signature Pokémon is her stylish and snazzy Delcatty.\p"
+        "But it wasn't always her signature Pokémon. In the beginning, her partner used to be a cute little Eevee!\p"
+        "Then one day, she stopped using it.\p"
+        "Don't get me wrong, her Delcatty is amazing, but I can't help but feel bad for her Eevee.\p"
+        "I hope nothing bad happened..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_1F_Fennekin {
+    lock
+    faceplayer
+    playmoncry(SPECIES_FENNEKIN, CRY_MODE_NORMAL)
+    waitmoncry
+    release
+}
+
+script ISLANDGAME_AETHERIA_CONDO_1F_Man {
+    lock
+    msgbox(format(
+        "Great Maryan reef, look at that crowd! All just to see a cute girl celebrate the renovation of a Pokémon Center?\p"
+        "The power of an idol is incredible... I gotta get one to promote my tool shop."
+    ), MSGBOX_AUTOCLOSE)
+}

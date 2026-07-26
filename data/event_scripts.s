@@ -1477,3 +1477,21 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_AETHERIA_CARD_STORE/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_1F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_2F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_3F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_3F_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_4F/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_FAN_CLUB/scripts.inc"

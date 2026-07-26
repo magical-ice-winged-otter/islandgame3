@@ -188,7 +188,7 @@ script ISLANDGAME_AETHERIA_FanClubSign {
 
 script ISLANDGAME_AETHERIA_CondoSign {
     msgbox(format(
-        "AETHERIA CONDOMINIUMS"
+        "SANTA MARIA CONDOMINIUMS"
     ), MSGBOX_SIGN)
 }
 
@@ -690,12 +690,12 @@ script ISLANDGAME_AETHERIA_StrayPurrloin {
     release
 }
 
-script ISLANDGAME_AETHERIA_Diancie {
+script ISLANDGAME_AETHERIA_Meloetta {
     lock
     faceplayer
-    playmoncry(SPECIES_DIANCIE, CRY_MODE_NORMAL)
+    playmoncry(SPECIES_MELOETTA, CRY_MODE_NORMAL)
     msgbox(format(
-        "Diiian...{COLOR BLUE}(These paparazzi guys are relentless. Being an idol is tough work.)"
+        "{COLOR BLUE}(These paparazzi guys are relentless. Being an idol is tough work.)"
     ))
     waitmoncry
     release

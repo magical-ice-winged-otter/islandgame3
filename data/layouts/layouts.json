@@ -5970,6 +5970,96 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_PKMNCENTER_2F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_PKMNCENTER_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_1F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_1F_Layout",
+      "width": 15,
+      "height": 18,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_Layout",
+      "width": 15,
+      "height": 8,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F_ROOM1",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_2F_ROOM2",
+      "name": "ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_3F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_3F_Layout",
+      "width": 15,
+      "height": 8,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_3F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_3F_ROOM1",
+      "name": "ISLANDGAME_AETHERIA_CONDO_3F_ROOM1_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_3F_ROOM1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_3F_ROOM1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_4F",
+      "name": "ISLANDGAME_AETHERIA_CONDO_4F_Layout",
+      "width": 15,
+      "height": 8,
+      "primary_tileset": "gTileset_islandgame_kanto_building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_CONDO_4F_ROOM1",
+      "name": "ISLANDGAME_AETHERIA_CONDO_4F_ROOM1_Layout",
+      "width": 12,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_FAN_CLUB",
+      "name": "ISLANDGAME_AETHERIA_FAN_CLUB_Layout",
+      "width": 14,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonFanClub",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/map.bin"
     }
   ]
 }

@@ -1172,7 +1172,7 @@ Pic: Ruka
 Gender: Female
 Music: Elite Four
 Battle Type: Singles
-AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Ace Pokemon
+AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Smart Switching / Ace Pokemon
 Mugshot: Blue
 
 Glaceon (F) @ Light Clay
@@ -2537,27 +2537,82 @@ Ability: ABILITY_AROMA_VEIL
 - MOVE_CALM_MIND
 - MOVE_PSYSHOCK
 
-
-
-
-
-
-=== TRAINER_CINDY_2 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
+=== TRAINER_AETHERIA_CYNTHIA ===
+Name: Cynthia
+Class: Legend
+Pic: Cynthia
 Gender: Female
 Music: Female
-Items: Full Restore
 Battle Type: Singles
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Smart Switching / Ace Pokemon
 
-Zigzagoon @ Nugget
-Level: 11
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-Nature: Hardy
-- Tackle
-- Tail Whip
+Spiritomb @ ITEM_LEFTOVERS
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 6 Atk / 126 Def / 0 SpA / 126 SpD / 0 Spe
+Ability: ABILITY_PRESSURE
+Nature: Brave
+- MOVE_SUCKER_PUNCH
+- MOVE_WILL_O_WISP
+- MOVE_HEX
+- MOVE_SHADOW_SNEAK
+
+Milotic @ ITEM_FLAME_ORB
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 126 Def / 6 SpA / 126 SpD / 0 Spe
+Ability: ABILITY_MARVEL_SCALE
+Nature: Calm
+- MOVE_CHILLING_WATER
+- MOVE_RECOVER
+- MOVE_TOXIC
+- MOVE_ICY_WIND
+
+Lucario @ ITEM_BLACK_BELT
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 126 Atk / 0 Def / 126 SpA / 0 SpD / 252 Spe
+Ability: ABILITY_INNER_FOCUS
+Nature: Hasty
+- MOVE_AURA_SPHERE
+- MOVE_METEOR_MASH
+- MOVE_BULLET_PUNCH
+- MOVE_VACUUM_WAVE
+
+Roserade @ ITEM_WHITE_HERB
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Ability: ABILITY_POISON_POINT
+Nature: Timid
+- MOVE_DAZZLING_GLEAM
+- MOVE_LEAF_STORM
+- MOVE_SLEEP_POWDER
+- MOVE_SLUDGE_BOMB
+
+Togekiss @ ITEM_ASSAULT_VEST
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 6 SpD / 252 Spe
+Ability: ABILITY_SERENE_GRACE
+Nature: Timid
+- MOVE_AIR_SLASH
+- MOVE_DAZZLING_GLEAM
+- MOVE_AURA_SPHERE
+- MOVE_FLAMETHROWER
+
+Garchomp @ ITEM_YACHE_BERRY
+Level: 37
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 6 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: ABILITY_ROUGH_SKIN
+Nature: Jolly
+- MOVE_DRAGON_CLAW
+- MOVE_POISON_JAB
+- MOVE_ROCK_SLIDE
+- MOVE_EARTHQUAKE
+
+
 
 === TRAINER_BRIANNA ===
 Name: BRIANNA

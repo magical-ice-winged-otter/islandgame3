@@ -1365,6 +1365,84 @@ const struct SpeciesInfo gSpeciesInfoGenShadow[] =
 #endif //P_FAMILY_SKITTY_MARYAN
 
 
+#if P_FAMILY_SIGILYPH_MARYAN
+    [SPECIES_SIGILYPH_MARYAN] =
+    {
+        .baseHP        = 72,
+        .baseAttack    = 58,
+        .baseDefense   = 80,
+        .baseSpeed     = 97,
+        .baseSpAttack  = 103,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_ROCK, TYPE_FLYING),
+        .catchRate = 45,
+        .expYield = 172,
+        .evYield_SpAttack = 2,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FLYING),
+        .abilities = { ABILITY_SAND_STREAM, ABILITY_MAGIC_GUARD, ABILITY_WANDERING_SPIRIT },
+        .bodyColor = BODY_COLOR_BROWN,
+        .speciesName = _("Sigilyph"),
+        .cryId = CRY_SIGILYPH,
+        .natDexNum = NATIONAL_DEX_SIGILYPH_MARYAN,
+        .categoryName = _("Avianoid"),
+        .height = 14,
+        .weight = 140,
+        .description = COMPOUND_STRING(
+            "The guardians of ancient ruins, they\n"
+            "always fly the same route while keeping\n"
+            "watch for invaders. They use their\n"
+            "psychic power to attack enemies."),
+        .pokemonScale = 265,
+        .pokemonOffset = 2,
+        .trainerScale = 262,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_SigilyphMaryan,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 0,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(1, 7),
+            ANIMCMD_FRAME(0, 7),
+            ANIMCMD_FRAME(1, 7),
+            ANIMCMD_FRAME(0, 15),
+            ANIMCMD_FRAME(1, 7),
+            ANIMCMD_FRAME(0, 7),
+            ANIMCMD_FRAME(1, 7),
+            ANIMCMD_FRAME(0, 7),
+        ),
+        .frontAnimId = ANIM_FIGURE_8,
+        .enemyMonElevation = 7,
+        .backPic = gMonBackPic_SigilyphMaryan,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 7,
+        .backAnimId = BACK_ANIM_TRIANGLE_DOWN,
+        .palette = gMonPalette_SigilyphMaryan,
+        .shinyPalette = gMonShinyPalette_SigilyphMaryan,
+        .iconSprite = gMonIcon_SigilyphMaryan,
+        .iconPalIndex = 0,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(3, 18, SHADOW_SIZE_S)
+        FOOTPRINT(SigilyphMaryan)
+        OVERWORLD(
+            sPicTable_SigilyphMaryan,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_SigilyphMaryan,
+            gShinyOverworldPalette_SigilyphMaryan
+        )
+        .levelUpLearnset = sSigilyphMaryanLevelUpLearnset,
+        .teachableLearnset = sSigilyphMaryanTeachableLearnset,
+        .eggMoveLearnset = sSigilyphMaryanEggMoveLearnset,
+    },
+#endif //P_FAMILY_SIGILYPH_MARYAN
+
+
+
 #ifdef __INTELLISENSE__
 };
 #endif

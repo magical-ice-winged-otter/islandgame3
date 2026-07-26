@@ -1,0 +1,19 @@
+mapscripts ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2_Man {
+    lock
+    faceplayer
+    msgbox(format(
+        "I can't believe I'm paying ¥20,000 a day just to stay in this dinky little room...\p"
+        "Everything here is so much smaller in comparison to Unova."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_CONDO_2F_ROOM1_2_Gameboy {
+    lock
+    msgbox(format(
+        "Go away! Can't you see I'm busy sweeping these dirty Uber abusers?\p"
+        "Imagine losing with a team of six legendaries. Couldn't be me!"
+    ), MSGBOX_AUTOCLOSE)
+}

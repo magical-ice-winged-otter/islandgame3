@@ -4,14 +4,14 @@
 #define FOREACH_TM(F) \
     F(FOCUS_BLAST) \
     F(DRAGON_CLAW) \
-    F(WATER_PULSE) \
+    F(ALLURING_VOICE) \
     F(CALM_MIND) \
     F(ROAR) \
     F(TOXIC) \
     F(SNOWSCAPE) \
     F(BULK_UP) \
     F(BULLET_SEED) \
-    F(HIDDEN_POWER) \
+    F(DAZZLING_GLEAM) \
     F(SUNNY_DAY) \
     F(TAUNT) \
     F(ICE_BEAM) \
@@ -22,7 +22,7 @@
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
     F(SAFEGUARD) \
-    F(FRUSTRATION) \
+    F(PLAY_ROUGH) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
@@ -44,7 +44,7 @@
     F(AERIAL_ACE) \
     F(TORMENT) \
     F(FACADE) \
-    F(SECRET_POWER) \
+    F(DRAINING_KISS) \
     F(REST) \
     F(ATTRACT) \
     F(THIEF) \
