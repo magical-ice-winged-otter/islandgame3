@@ -1168,6 +1168,8 @@ gSongTable::
 	song mus_bw_relic_song, 0, 0
 	song mus_bw_vs_wcs_champion, 0, 0
 	song mus_bw_obtain_berry, 2, 2
+	song mus_woc_aetheria_edit_1, 2, 2
+	song mus_woc_aetheria_edit_2, 2, 2
 
 	.align 2
 dummy_song_header:
