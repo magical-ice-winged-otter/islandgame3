@@ -379,6 +379,7 @@ script ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Middle {
         call(ISLANDGAME_CAMP_PERSI_JonasStart)
         applymovement(LOCALID_JONAS, ISLANDGAME_CAMP_PERSI_JonasMiddleIntro)
         applymovement(LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleIntro)
+        waitmovement
         call(ISLANDGAME_CAMP_PERSI_JonasMain)
         applymovement(LOCALID_JONAS, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro)
         applymovement(LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro)
@@ -506,9 +507,10 @@ script ISLANDGAME_CAMP_PERSI_JonasMain {
         "You don't look like you're from around here. Are you a tourist by chance?\p"
         "...\p"
         "Oh? You've come to aid Professor Palm in his research and become a Pokémon trainer?\p"
-        "Well, pardon my assumption, then! Welcome to the Maryan Isles, {PLAYER}!\p"
+        "Well, pardon my assumption then! Welcome to the Maryan Isles, {PLAYER}!\p"
         "My name is {COLOR GREEN}Jonas{COLOR DARK_GRAY}. I'm a traveling merchant of The Silverwing Order.\p"
-        "The Silverwing Order is in charge of governing the isles. It's our job to make sure everyone here is comfortable and safe!\p"
+        "The Silverwing Order is in charge of governing the isles.\p" 
+        "It's our job to make sure everyone here is comfortable and safe!\p"
         "My role in particular is traveling around to provide goods and inform visitors of the Marya region!\p"
         "But that's enough about me. You said you were a Pokémon trainer, right?\p"
         "In that case...{PAUSE 60} mind if I trouble you for a little battle?"
@@ -549,7 +551,7 @@ script ISLANDGAME_CAMP_PERSI_JonasMain {
     }
 
     msgbox(format(
-        "Unfortunately, this is where our conversation must end. I've got a long day ahead of me, a-ha.\p"
+        "Unfortunately, this is where our conversation must end. I've got a long day ahead of me.\p"
         "But before I depart, I thought I'd let you know about our upcoming Silverwing Festival!\p"
         "It is a grand celebration we host annually to honor our lord and savior, Lugia, who rescued Marya from destruction thousands of years ago!\p"
         "It's not for another month, but I implore you to stick around for it!\p"
