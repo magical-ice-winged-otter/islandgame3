@@ -80,6 +80,10 @@ static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINERS_COUNT][TRAINER_
         {
             [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("Don't count us out yet! This battle is\njust heating up!{PAUSE_UNTIL_PRESS}"),
         },
+        [TRAINER_AETHERIA_MELISSA] = 
+        {
+            [TRAINER_SLIDE_LAST_SWITCHIN] = COMPOUND_STRING("I won't hand over your ticket that\neasily!{PAUSE_UNTIL_PRESS}"),
+        },
     },
 };
 

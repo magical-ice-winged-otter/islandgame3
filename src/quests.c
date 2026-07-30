@@ -646,10 +646,10 @@ static const struct SubQuest sSubQuests_ValleyOfPeaceCubone[SUB_QUEST_COUNT_CUBO
         .id = SUB_QUEST_CUBONE_1,
         .name = COMPOUND_STRING("Part I"),
         .desc = COMPOUND_STRING("Hmm... Maybe I can find\nthe hunters around Lumine..."),
-        .map = COMPOUND_STRING("Valley of Peace"),
-        .sprite = SPECIES_GENGAR, 
-        .spritetype = PKMN,
-        .type = sText_Complete
+        .map = COMPOUND_STRING("Lumine Island"),
+        .sprite = OBJ_EVENT_GFX_RUIN_MANIAC, 
+        .spritetype = OBJECT,
+        .type = sText_Active
     },
     {
         .id = SUB_QUEST_CUBONE_2,
@@ -658,19 +658,50 @@ static const struct SubQuest sSubQuests_ValleyOfPeaceCubone[SUB_QUEST_COUNT_CUBO
         .map = COMPOUND_STRING("Lumine"),
         .sprite = OBJ_EVENT_GFX_MAN_5,
         .spritetype = OBJECT,
-        .type = sText_Complete
+        .type = sText_Active
     },
     {
         .id = SUB_QUEST_CUBONE_3,
         .name = COMPOUND_STRING("Part III"),
         .desc = COMPOUND_STRING("TBD"),
-        .map = COMPOUND_STRING("Minerva"),
+        .map = COMPOUND_STRING("TBD"),
         .sprite = OBJ_EVENT_GFX_MAN_5,
         .spritetype = OBJECT,
-        .type = sText_Complete
+        .type = sText_Active
     },
 };
 
+
+static const struct SubQuest sSubQuests_AetheriaMelissa[SUB_QUEST_COUNT_AETHERIA_MELISSA] = 
+{
+    {
+        .id = SUB_QUEST_AETHERIA_MELISSA_1,
+        .name = COMPOUND_STRING("I-It's not a date!"),
+        .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
+        .map = COMPOUND_STRING("Aetheria"),
+        .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
+        .spritetype = ITEM,
+        .type = sText_Active
+    },
+    {
+        .id = SUB_QUEST_AETHERIA_MELISSA_2,
+        .name = COMPOUND_STRING("I-It's not a date!"),
+        .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
+        .map = COMPOUND_STRING("Aetheria"),
+        .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
+        .spritetype = ITEM,
+        .type = sText_Active
+    },
+    {
+        .id = SUB_QUEST_AETHERIA_MELISSA_3,
+        .name = COMPOUND_STRING("I-It's not a date!"),
+        .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
+        .map = COMPOUND_STRING("Aetheria"),
+        .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
+        .spritetype = ITEM,
+        .type = sText_Active
+    },
+};
 
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -791,14 +822,14 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 
     [QUEST_AETHERIA_MELISSA] =
     {
-        .name = COMPOUND_STRING("<!> The City That Never Sleeps"),
+        .name = COMPOUND_STRING("<!> A City That Never Sleeps"),
         .desc = COMPOUND_STRING("Melissa wants to meet up in Aetheria!"),
         .donedesc = COMPOUND_STRING("Looks like Edea got away this time..."),
         .map = COMPOUND_STRING("Aetheria"),
         .sprite = OBJ_EVENT_GFX_MELISSA, 
         .spritetype = OBJECT,
-        .subquests = NULL,
-        .numSubquests = 0
+        .subquests = sSubQuests_AetheriaMelissa,
+        .numSubquests = SUB_QUEST_COUNT_AETHERIA_MELISSA
     },
 
     [QUEST_APPLEVINE_COUCH_POTATO] =
@@ -827,7 +858,7 @@ static const struct SideQuest sSideQuests[QUEST_COUNT] =
 
     [QUEST_VALLEY_OF_PEACE_CUBONE] =
     {
-        .name = COMPOUND_STRING("The Hunters Become The Hunted"),
+        .name = COMPOUND_STRING("Hunters Become The Hunted"),
         .desc = COMPOUND_STRING("Track down the hunters\nwho took Cubone's mother!"),
         .donedesc = COMPOUND_STRING("Righteous retribution\nhas been inflicted."),
         .map = COMPOUND_STRING("Rocky Path"),

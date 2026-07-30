@@ -1,11 +1,11 @@
-// const STATE_INITIAL = 0
-// const STATE_FOUND_RIVAL = 1
-// const STATE_DEFEATED_RIVAL = 2
-// const STATE_ENTERED_MUSEUM = 3
-// const STATE_EXHIBIT_UNLOCKED = 4
-// const STATE_EXHIBIT_ROBBED = 5
-// const STATE_FOUND_THIEF = 6
-// const STATE_FINAL = 7
+const STATE_INITIAL = 0
+const STATE_FOUND_RIVAL = 1
+const STATE_DEFEATED_RIVAL = 2
+const STATE_ENTERED_MUSEUM = 3
+const STATE_EXHIBIT_UNLOCKED = 4
+const STATE_EXHIBIT_ROBBED = 5
+const STATE_FOUND_THIEF = 6
+const STATE_FINAL = 7
 
 // const POS_HIDDEN_X = 0
 // const POS_HIDDEN_Y = 0
@@ -18,13 +18,8 @@ const FLAG_NIGHTTIME = FLAG_TEMP_3
 
 mapscripts ISLANDGAME_AETHERIA_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        
-        if (var(VAR_AETHERIA_STATE) == 0) { // marks that the player has entered Aetheria for the first time
-            setvar(VAR_AETHERIA_STATE, 1)
-        }
 
         gettime
-
         if (var(VAR_0x8000) < 6 || var(VAR_0x8000) >= 18) {
             setflag(FLAG_NIGHTTIME) // hides daytime npcs
             setflag(FLAG_TEMP_5) // (TEMP) cameo battle(s) only occur during daytime
@@ -40,6 +35,11 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
             setflag(FLAG_TEMP_5)
         }
 
+        switch (var(VAR_AETHERIA_STATE)) {
+            case STATE_DEFEATED_RIVAL: // she will be at the museum
+                setobjecthidden(LOCALID_MELISSA)
+            default: 
+        }
     //     switch (var(VAR_AETHERIA_STATE)) {
     //         case STATE_INITIAL:
     //         case STATE_FOUND_RIVAL:
@@ -81,19 +81,132 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
 //     }
 // }
 
-// // TODO(poe): res will do better writing melissa here, so everything
-// // is placeholder dialogue... 
+// script ISLANDGAME_AETHERIA_BattleEdea {
+//     trainerbattle_single(TRAINER_AETHERIA_EDEA,
+//         format("Intro Text Here"),
+//         format("Win Text Here"))
+// }
+
+// script ISLANDGAME_AETHERIA_BattleSewer1 {
+//     trainerbattle_single(TRAINER_AETHERIA_SEWER_1,
+//         format("Intro Text Here"),
+//         format("Win Text Here"))
+// }
+
+// script ISLANDGAME_AETHERIA_BattleSewer2 {
+//     trainerbattle_single(TRAINER_AETHERIA_SEWER_2,
+//         format("Intro Text Here"),
+//         format("Win Text Here"))
+// }
+
+// script ISLANDGAME_AETHERIA_BattleSewer3 {
+//     trainerbattle_single(TRAINER_AETHERIA_SEWER_3,
+//         format("Intro Text Here"),
+//         format("Win Text Here"))
+// }
+
+
+// main quest scripts
+script ISLANDGAME_AETHERIA_Melissa {
+    switch(var(VAR_AETHERIA_STATE)) {
+        case STATE_INITIAL: // the first time player interacts with Melissa
+            setvar(VAR_AETHERIA_STATE, STATE_FOUND_RIVAL)
+            lock
+            faceplayer
+            playbgm(MUS_HG_LYRA,TRUE)
+            msgbox(format(
+                "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}{PLAYER}! What took ya so long? I've been waiting for hours!"
+            ))
+            checkplayergender // unique dialogue based on who the player is larping as
+            if(var(VAR_RESULT) == MALE) {
+                msgbox(format(
+                    "Humph. Don't you know it's rude to stand a cute girl up?"
+                ))
+            } else {
+                msgbox(format(
+                    "Humph. Maybe I should reconsider giving the surprise I had planned for you..."
+                ))
+            }
+            msgbox(format(
+                "...{PAUSE 30}Hehe, just messing with ya! I heard about the commotion at Lumine Cave.\p"
+                "I was a little bit worried, so I'm glad you're still together in one piece!\p"
+                "Now that you're here...{PAUSE 30} Ta-da! Take a looksie at these!\p"
+                "{COLOR GREEN}> Melissa flashes a pair of tickets."
+            ))
+            msgbox(format(
+                "A new exhibit at the Aetheria Museum just recently opened up today!\p"
+                "I figured since you're studying abroad here, we could check it out together!\p"
+                "Buuut, here's the catch... These tickets weren't cheap to get a hold of...\p"
+                "So in exchange, you'll have to entertain me with a battle! How's that sound?"
+            ), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == NO) {
+                msgbox(format(
+                    "Eeeeh? {PAUSE 30}You're not up for it right now?\p"
+                    "Well...{PAUSE 30} Let me know when you are! I'll be here."
+                ))
+                savebgm(MUS_DUMMY)
+                fadedefaultbgm
+                goto(Aetheria_MelissaEnd)
+            }
+            else {
+                call(ISLANDGAME_AETHERIA_Melissa_Battle)
+            }
+        case STATE_FOUND_RIVAL:
+            lock
+            msgbox(format(
+                "Hehe. Ready to earn your ticket, {PLAYER}?"
+            ), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                call(ISLANDGAME_AETHERIA_Melissa_Battle)
+            }
+            else {
+                goto(Aetheria_MelissaEnd)
+            }
+        default:
+    }
+    Aetheria_MelissaEnd:
+        closemessage
+        release
+}
+
+script ISLANDGAME_AETHERIA_Melissa_Battle {
+    msgbox(format(
+        "Get ready... me and Gibby have been itching for a rematch!"
+    ))
+    trainerbattle_no_intro(TRAINER_AETHERIA_MELISSA,
+            format(
+                "I heard that a single trainer managed to quell the outbreak at Lumine Cave.\p"
+                "Ehe... That was you, wasn't it?"
+            ))
+
+    if (specialvar(VAR_RESULT, GetBattleOutcome) == B_OUTCOME_WON) {
+            setvar(VAR_AETHERIA_STATE, STATE_DEFEATED_RIVAL)
+            playbgm(MUS_HG_LYRA,TRUE)
+            msgbox(format(
+                "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oof, Looks like I bit off a little more than I could chew...\p"
+                "Well, a deal's a deal! Dan-da-da-dan! Here's your prize!"
+            ))
+            giveitem(ITEM_ISLANDGAME_MUSEUM_TICKET)
+            msgbox(format(
+                "Meet me inside whenever you're ready! Don't keep me waiting any longer, hehe."
+            ), MSGBOX_AUTOCLOSE)
+            applymovement(LOCALID_MELISSA, moves(jump_right, walk_down * 4))
+            waitmovement(0)
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
+            applymovement(LOCALID_MELISSA, moves(walk_down * 3, walk_left * 4, walk_down * 3))
+            waitmovement(0)
+            savebgm(MUS_DUMMY)
+            fadedefaultbgm
+            removeobject(LOCALID_MELISSA)
+            setobjecthidden(LOCALID_MELISSA)
+            subquestmenu(QUEST_MENU_SET_ACTIVE, QUEST_AETHERIA_MELISSA, 0)
+    }
+}
+
+
+
 // script ISLANDGAME_AETHERIA_Rival {
 //     switch (var(VAR_AETHERIA_STATE)) {
-//         case STATE_INITIAL:
-//             // first time player has encountered rival: long chat, then battle
-//             setvar(VAR_AETHERIA_STATE, STATE_FOUND_RIVAL)
-//             msgbox(format(
-//                 "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Hi {PLAYER}! It's been a while...\p"
-//                 "Blah blah blah... (long chat ensues)"
-//                 "Let's battle!"
-//             ))
-//             call(ISLANDGAME_AETHERIA_RivalBattle)
 //         case STATE_FOUND_RIVAL:
 //             // player lost before, so we get a shorter intro, then battle
 //             msgbox(format(
@@ -132,43 +245,6 @@ mapscripts ISLANDGAME_AETHERIA_MapScripts {
 //     }
 // }
 
-// script ISLANDGAME_AETHERIA_RivalBattle {
-//     trainerbattle_single(TRAINER_AETHERIA_RIVAL,
-//         format("Intro Text Here"),
-//         format("Win Text Here"))
-
-//     if (specialvar(VAR_RESULT, GetBattleOutcome) == B_OUTCOME_WON) {
-//         msgbox(format(
-//             "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Wow too strong\p"
-//             "Lets go to museum"
-//         ))
-//         setvar(VAR_AETHERIA_STATE, STATE_DEFEATED_RIVAL)
-//     }
-// }
-
-// script ISLANDGAME_AETHERIA_BattleEdea {
-//     trainerbattle_single(TRAINER_AETHERIA_EDEA,
-//         format("Intro Text Here"),
-//         format("Win Text Here"))
-// }
-
-// script ISLANDGAME_AETHERIA_BattleSewer1 {
-//     trainerbattle_single(TRAINER_AETHERIA_SEWER_1,
-//         format("Intro Text Here"),
-//         format("Win Text Here"))
-// }
-
-// script ISLANDGAME_AETHERIA_BattleSewer2 {
-//     trainerbattle_single(TRAINER_AETHERIA_SEWER_2,
-//         format("Intro Text Here"),
-//         format("Win Text Here"))
-// }
-
-// script ISLANDGAME_AETHERIA_BattleSewer3 {
-//     trainerbattle_single(TRAINER_AETHERIA_SEWER_3,
-//         format("Intro Text Here"),
-//         format("Win Text Here"))
-// }
 
 
 
@@ -210,12 +286,6 @@ script ISLANDGAME_AETHERIA_EmptyTrash {
         "{COLOR RED}(There's nothing but garbage in here.)"
     ), MSGBOX_SIGN)
 }
-
-script ISLANDGAME_AETHERIA_VendingMachine {
-
-}
-
-
 
 // Special NPCs
 script ISLANDGAME_AETHERIA_TheRecruiter {

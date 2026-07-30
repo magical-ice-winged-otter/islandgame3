@@ -442,7 +442,7 @@ Nature: Hardy
 Name: Melissa
 Class: TRAINER_CLASS_MELISSA
 Pic: Melissa
-Gender: Male
+Gender: Female
 Music: Female
 Battle Type: Singles
 AI: Check Bad Move / Try To Faint / Check Viability / Ace Pokemon / Smart Switching
@@ -473,7 +473,7 @@ Ability: Rough Skin
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 - Sand Tomb
-- Outrage
+- Dragon Breath
 - Sand Attack
 - Metal Claw
 
@@ -2613,21 +2613,60 @@ Nature: Jolly
 - MOVE_EARTHQUAKE
 
 
-
-=== TRAINER_BRIANNA ===
-Name: BRIANNA
-Class: Lady
-Pic: Lady
+=== TRAINER_AETHERIA_MELISSA ===
+Name: Melissa
+Class: TRAINER_CLASS_MELISSA
+Pic: Melissa
 Gender: Female
 Music: Female
-Items: Full Restore
 Battle Type: Singles
-AI: Check Bad Move
+AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / Smart Switching / Ace Pokemon
 
-Seaking @ Nugget
-Level: 40
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-Nature: Hardy
+Sandygast (M) @ ITEM_EVIOLITE
+Level: 34
+Ability: Sand Veil
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 6 Def / 0 SpA / 0 SpD / 0 Spe
+Nature: Bold
+- Sandstorm
+- Bulldoze
+- Hypnosis
+- Giga Drain
+
+Lycanroc Midday (F) @ ITEM_HARD_STONE
+Level: 34
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Adamant
+- Accelerock
+- Rock Slide
+- Fire Fang
+- Thunder Fang
+
+Excadrill (M) @ ITEM_AIR_BALLOON
+Level: 34
+Ability: Sand Rush
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Adamant
+- Drill Run
+- Iron Head
+- Rock Slide
+- X Scissor
+
+Gabite (M) @ ITEM_EXPERT_BELT
+Level: 36
+Ability: Sand Veil
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Jolly
+- Dual Chop
+- Iron Head
+- Bulldoze
+- Rock Slide
+
+
 
 === TRAINER_NAOMI ===
 Name: NAOMI

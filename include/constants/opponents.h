@@ -283,9 +283,11 @@
 
 #define TRAINER_AETHERIA_CYNTHIA            117
 #define TRAINER_CINDY_2                     TRAINER_AETHERIA_CYNTHIA
+#define TRAINER_AETHERIA_MELISSA            118
+#define TRAINER_BRIANNA                     TRAINER_AETHERIA_MELISSA
 
 
-#define TRAINER_BRIANNA                     118
+
 #define TRAINER_NAOMI                       119
 #define TRAINER_CINDY_3                     120
 #define TRAINER_CINDY_4                     121
