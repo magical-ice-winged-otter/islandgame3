@@ -153,6 +153,7 @@ script ISLANDGAME_AETHERIA_Melissa {
             }
         case STATE_FOUND_RIVAL:
             lock
+            faceplayer
             msgbox(format(
                 "Hehe. Ready to earn your ticket, {PLAYER}?"
             ), MSGBOX_YESNO)
@@ -190,6 +191,7 @@ script ISLANDGAME_AETHERIA_Melissa_Battle {
             msgbox(format(
                 "Meet me inside whenever you're ready! Don't keep me waiting any longer, hehe."
             ), MSGBOX_AUTOCLOSE)
+            playse(SE_BIKE_HOP)
             applymovement(LOCALID_MELISSA, moves(jump_right, walk_down * 4))
             waitmovement(0)
             applymovement(OBJ_EVENT_ID_PLAYER, moves(face_down))
@@ -265,6 +267,13 @@ script ISLANDGAME_AETHERIA_FanClubSign {
 script ISLANDGAME_AETHERIA_CondoSign {
     msgbox(format(
         "SANTA MARIA CONDOMINIUMS"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_ArtMuseum {
+    msgbox(format(
+        "AETHERIA MUSEUM OF FINE ARTS\p"
+        "Our new “The Darkest Night” exhibit is now open for viewing!"
     ), MSGBOX_SIGN)
 }
 

@@ -52,11 +52,11 @@ ISLANDGAME_AETHERIA_Melissa::
 # 154 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	case 1, ISLANDGAME_AETHERIA_Melissa_4
 ISLANDGAME_AETHERIA_Melissa_1:
-# 167 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-Aetheria_MelissaEnd:
 # 168 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	closemessage
+Aetheria_MelissaEnd:
 # 169 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	closemessage
+# 170 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
@@ -94,11 +94,13 @@ ISLANDGAME_AETHERIA_Melissa_4:
 # 155 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
 # 156 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 157 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Melissa_Text_6, MSGBOX_YESNO
-# 159 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 160 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_AETHERIA_Melissa_9
-# 163 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 164 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto Aetheria_MelissaEnd
 	goto ISLANDGAME_AETHERIA_Melissa_1
 
@@ -108,7 +110,7 @@ ISLANDGAME_AETHERIA_Melissa_6:
 	goto ISLANDGAME_AETHERIA_Melissa_5
 
 ISLANDGAME_AETHERIA_Melissa_9:
-# 160 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 161 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	call ISLANDGAME_AETHERIA_Melissa_Battle
 	goto ISLANDGAME_AETHERIA_Melissa_1
 
@@ -125,9 +127,9 @@ ISLANDGAME_AETHERIA_Melissa_12:
 
 
 ISLANDGAME_AETHERIA_Melissa_Battle::
-# 173 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 174 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Melissa_Battle_Text_0
-# 176 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 177 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	trainerbattle_no_intro TRAINER_AETHERIA_MELISSA, ISLANDGAME_AETHERIA_Melissa_Battle_Text_1
 	specialvar VAR_RESULT, GetBattleOutcome
 # 0 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
@@ -136,71 +138,73 @@ ISLANDGAME_AETHERIA_Melissa_Battle::
 	return
 
 ISLANDGAME_AETHERIA_Melissa_Battle_1:
-# 183 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setvar VAR_AETHERIA_STATE, 2
 # 184 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playbgm MUS_HG_LYRA, TRUE
+	setvar VAR_AETHERIA_STATE, 2
 # 185 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playbgm MUS_HG_LYRA, TRUE
+# 186 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Melissa_Battle_Text_2
-# 189 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	giveitem ITEM_ISLANDGAME_MUSEUM_TICKET
 # 190 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	giveitem ITEM_ISLANDGAME_MUSEUM_TICKET
+# 191 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Melissa_Battle_Text_3, MSGBOX_AUTOCLOSE
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement LOCALID_MELISSA, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_0
 # 194 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmovement 0
+	playse SE_BIKE_HOP
 # 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_1
+	applymovement LOCALID_MELISSA, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_0
 # 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement LOCALID_MELISSA, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_2
-# 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitmovement 0
+# 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_1
 # 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	savebgm MUS_DUMMY
+	applymovement LOCALID_MELISSA, ISLANDGAME_AETHERIA_Melissa_Battle_Movement_2
 # 199 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadedefaultbgm
+	waitmovement 0
 # 200 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	removeobject LOCALID_MELISSA
+	savebgm MUS_DUMMY
 # 201 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setobjecthidden LOCALID_MELISSA
+	fadedefaultbgm
 # 202 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	removeobject LOCALID_MELISSA
+# 203 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	setobjecthidden LOCALID_MELISSA
+# 204 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	subquestmenu QUEST_MENU_SET_ACTIVE, QUEST_AETHERIA_MELISSA, 0
 	return
 
 
 ISLANDGAME_AETHERIA_WelcomeSign::
-# 253 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 255 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_WelcomeSign_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_FanClubSign::
-# 260 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 262 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_FanClubSign_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_CondoSign::
-# 266 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 268 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_CondoSign_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_CardShop::
-# 272 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 274 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_CardShop_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_DeptStore::
-# 278 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 280 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_DeptStore_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_EmptyTrash::
-# 285 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 287 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_EmptyTrash_Text_0, MSGBOX_SIGN
 	return
 
@@ -210,54 +214,54 @@ ISLANDGAME_AETHERIA_TheRecruiter::
 
 
 ISLANDGAME_AETHERIA_IceCreamLady::
-# 313 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 314 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 315 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	showmoneybox 18, 1
+	lock
 # 316 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 317 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	showmoneybox 18, 1
+# 318 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_IceCreamLady_Text_0, MSGBOX_YESNO
-# 319 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 321 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_AETHERIA_IceCreamLady_2
 ISLANDGAME_AETHERIA_IceCreamLady_1:
-# 340 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	hidemoneybox
-# 341 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	closemessage
 # 342 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	hidemoneybox
+# 343 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	closemessage
+# 344 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_IceCreamLady_2:
-# 320 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 322 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	checkmoney 500
-# 321 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 323 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne ISLANDGAME_AETHERIA_IceCreamLady_4
-# 335 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 337 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_IceCreamLady_Text_2
 	goto ISLANDGAME_AETHERIA_IceCreamLady_1
 
 ISLANDGAME_AETHERIA_IceCreamLady_4:
-# 322 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	removemoney 500
-# 323 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	updatemoneybox
 # 324 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playse SE_SHOP
+	removemoney 500
 # 325 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitse
+	updatemoneybox
 # 326 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playse SE_VEND
+	playse SE_SHOP
 # 327 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitse
 # 328 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	hidemoneybox
+	playse SE_VEND
 # 329 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitse
+# 330 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	hidemoneybox
+# 331 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_IceCreamLady_Text_1
-# 332 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 334 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	giveitem ITEM_CASTELIACONE
 	goto ISLANDGAME_AETHERIA_IceCreamLady_1
 
@@ -267,877 +271,877 @@ ISLANDGAME_AETHERIA_Trainer1::
 
 
 ISLANDGAME_AETHERIA_NPC1::
-# 372 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 373 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 374 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 375 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 376 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_TEMP_3, ISLANDGAME_AETHERIA_NPC1_2
-# 380 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 382 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC1_Text_1
 ISLANDGAME_AETHERIA_NPC1_1:
-# 386 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 388 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 387 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 389 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_NPC1_2:
-# 375 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 377 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC1_Text_0
 	goto ISLANDGAME_AETHERIA_NPC1_1
 
 
 ISLANDGAME_AETHERIA_NPC2::
-# 392 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 393 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 394 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 395 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 396 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC2_Text_0
-# 397 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 399 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 398 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 400 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC3::
-# 403 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 405 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 404 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 406 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC3_Text_0
-# 408 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 410 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 409 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 411 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC4::
-# 414 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 416 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 415 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 417 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_TEMP_2, ISLANDGAME_AETHERIA_NPC4_2
-# 421 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 423 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	faceplayer
-# 422 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 424 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC4_Text_1
 ISLANDGAME_AETHERIA_NPC4_1:
-# 426 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 428 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 427 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 429 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_NPC4_2:
-# 416 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 418 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC4_Text_0
 	goto ISLANDGAME_AETHERIA_NPC4_1
 
 
 ISLANDGAME_AETHERIA_NPC5::
-# 432 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 434 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 433 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 435 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC5_Text_0
-# 436 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 438 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 437 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 439 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC6::
-# 442 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 444 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 443 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 445 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC6_Text_0
-# 446 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 448 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 447 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 449 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC7::
-# 452 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 453 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 454 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 455 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 456 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC7_Text_0
-# 462 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 464 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 463 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 465 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC8::
-# 468 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 469 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 470 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 471 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 472 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC8_Text_0
-# 477 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 479 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 478 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 480 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC9::
-# 483 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 485 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 484 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 486 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC9_Text_0
-# 487 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 489 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 488 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 490 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC10::
-# 493 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 495 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 494 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 496 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC10_Text_0
-# 498 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 500 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 499 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 501 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC11::
-# 504 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 506 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 505 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 507 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC11_Text_0
-# 508 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 510 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 509 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 511 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC12::
-# 514 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 515 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 516 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 517 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 518 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC12_Text_0
-# 522 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 524 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 523 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 525 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC13::
-# 528 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 530 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 529 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 531 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC13_Text_0
-# 533 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 535 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 534 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 536 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC14::
-# 539 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 541 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 540 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 542 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC14_Text_0
-# 543 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 545 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 544 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 546 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC15::
-# 549 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 550 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 551 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 552 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 553 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC15_Text_0
-# 554 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 556 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 555 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 557 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC16::
-# 560 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 561 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 562 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 563 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 564 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC16_Text_0
-# 565 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 567 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 566 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 568 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC17::
-# 571 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 572 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 573 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 574 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 575 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC17_Text_0
-# 576 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 578 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 577 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 579 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC18::
-# 582 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 583 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 584 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 585 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 586 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC18_Text_0
-# 587 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 589 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 588 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 590 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC19::
-# 593 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 595 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 594 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 596 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC19_Text_0
-# 597 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 599 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 598 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 600 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC20::
-# 603 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 605 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 604 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 606 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC20_Text_0
-# 607 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 609 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 608 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 610 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC21::
-# 613 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 615 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 614 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 616 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC21_Text_0
-# 617 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 619 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 618 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 620 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC22::
-# 623 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 624 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 625 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 626 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 627 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC22_Text_0
-# 628 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 630 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 629 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 631 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC23::
-# 634 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 635 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 636 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 637 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 638 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC23_Text_0
-# 639 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 641 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 640 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 642 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC24::
-# 645 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 646 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 647 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 648 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 649 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC24_Text_0
-# 650 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 652 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 651 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 653 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC25::
-# 656 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 657 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 658 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 659 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 660 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC25_Text_0
-# 661 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 663 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 662 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 664 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC26::
-# 667 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 669 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 668 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 670 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC26_Text_0
-# 671 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 673 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 672 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 674 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC27::
-# 677 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 679 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 678 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 680 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC27_Text_0
-# 681 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 683 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 682 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 684 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC28::
-# 687 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 688 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 689 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 690 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 691 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC28_Text_0
-# 694 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	showmonpic SPECIES_ZAPDOS, 10, 3
-# 695 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_NPC28_Text_1
 # 696 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	hidemonpic
+	showmonpic SPECIES_ZAPDOS, 10, 3
 # 697 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	closemessage
+	msgbox ISLANDGAME_AETHERIA_NPC28_Text_1
 # 698 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_NPC28_Text_2
+	hidemonpic
 # 699 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
 # 700 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_NPC28_Text_2
+# 701 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	closemessage
+# 702 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	releaseall
 	return
 
 
 ISLANDGAME_AETHERIA_NPC29::
-# 705 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 706 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 707 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 708 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 709 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC29_Text_0
-# 711 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 713 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 712 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 714 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC30::
-# 717 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 718 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 719 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 720 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 721 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC30_Text_0
-# 722 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 724 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 723 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 725 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_NPC31::
-# 728 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 729 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 730 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	checkplayergender
+	lock
 # 731 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 732 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	checkplayergender
+# 733 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, MALE
 	goto_if_eq ISLANDGAME_AETHERIA_NPC31_2
-# 738 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 740 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC31_Text_1
 ISLANDGAME_AETHERIA_NPC31_1:
-# 742 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 744 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 743 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 745 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_NPC31_2:
-# 732 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 734 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_NPC31_Text_0
 	goto ISLANDGAME_AETHERIA_NPC31_1
 
 
 ISLANDGAME_AETHERIA_Camellia::
-# 747 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 749 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 748 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 750 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Camellia_Text_0
-# 751 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 753 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 752 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 754 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_StrayPurrloin::
-# 756 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 757 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 758 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_PURRLOIN, CRY_MODE_NORMAL
+	lock
 # 759 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmoncry
+	faceplayer
 # 760 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playmoncry SPECIES_PURRLOIN, CRY_MODE_NORMAL
+# 761 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitmoncry
+# 762 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Meloetta::
-# 764 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 765 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 766 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_MELOETTA, CRY_MODE_NORMAL
+	lock
 # 767 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 768 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playmoncry SPECIES_MELOETTA, CRY_MODE_NORMAL
+# 769 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Meloetta_Text_0
-# 770 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 772 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitmoncry
-# 771 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 773 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Birb::
-# 775 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 776 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 777 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
+	lock
 # 778 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 779 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playmoncry SPECIES_WINGULL, CRY_MODE_NORMAL
+# 780 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Birb_Text_0
-# 781 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 783 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Observer1::
-# 794 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 795 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 796 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 797 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 798 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Observer1_Text_0
-# 799 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 801 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 800 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 802 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Observer2::
-# 804 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 805 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 806 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 807 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 808 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Observer2_Text_0
-# 809 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 811 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 810 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 812 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Observer3::
-# 814 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 815 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 816 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 817 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 818 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Observer3_Text_0
-# 819 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 821 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 820 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 822 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Observer4::
-# 824 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 825 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 826 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 827 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 828 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Observer4_Text_0
-# 829 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 831 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 830 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 832 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Battler1::
-# 834 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 836 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 835 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 837 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Battler1_Text_0
-# 838 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 840 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 839 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 841 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_Battler2::
-# 843 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 845 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 844 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 846 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Battler2_Text_0
-# 847 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 849 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 848 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 850 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_FraxureBattle::
-# 852 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 853 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_FRAXURE, CRY_MODE_NORMAL
 # 854 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmoncry
+	lock
 # 855 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playmoncry SPECIES_FRAXURE, CRY_MODE_NORMAL
+# 856 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitmoncry
+# 857 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_KirliaBattle::
-# 859 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 860 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
 # 861 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmoncry
+	lock
 # 862 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	playmoncry SPECIES_KIRLIA, CRY_MODE_NORMAL
+# 863 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitmoncry
+# 864 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_WallyDad::
-# 875 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 876 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 877 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 878 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 879 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_DAILY_AETHERIA_CAMEO_BATTLE, ISLANDGAME_AETHERIA_WallyDad_2
-# 883 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 885 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_WallyDad_Text_1
 ISLANDGAME_AETHERIA_WallyDad_1:
-# 888 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 890 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 889 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 891 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_WallyDad_2:
-# 878 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 880 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_WallyDad_Text_0
 	goto ISLANDGAME_AETHERIA_WallyDad_1
 
 
 ISLANDGAME_AETHERIA_Scott::
-# 893 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 895 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	lock
-# 894 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 896 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_DAILY_AETHERIA_CAMEO_BATTLE, ISLANDGAME_AETHERIA_Scott_2
-# 901 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 903 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Scott_Text_1
 ISLANDGAME_AETHERIA_Scott_1:
-# 905 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 907 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 906 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 908 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_Scott_2:
-# 895 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 897 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	faceplayer
-# 896 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 898 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Scott_Text_0
 	goto ISLANDGAME_AETHERIA_Scott_1
 
 
 ISLANDGAME_AETHERIA_May::
-# 910 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 911 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 912 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 913 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 914 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_DAILY_AETHERIA_CAMEO_BATTLE, ISLANDGAME_AETHERIA_May_2
-# 918 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 920 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_May_Text_1
 ISLANDGAME_AETHERIA_May_1:
-# 922 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 924 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 923 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 925 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_May_2:
-# 913 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 915 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_May_Text_0
 	goto ISLANDGAME_AETHERIA_May_1
 
 
 ISLANDGAME_AETHERIA_Brendan::
-# 927 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 928 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 929 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 930 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 931 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_DAILY_AETHERIA_CAMEO_BATTLE, ISLANDGAME_AETHERIA_Brendan_2
-# 935 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 937 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Brendan_Text_1
 ISLANDGAME_AETHERIA_Brendan_1:
-# 939 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 941 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	closemessage
-# 940 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 942 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_Brendan_2:
-# 930 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 932 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Brendan_Text_0
 	goto ISLANDGAME_AETHERIA_Brendan_1
 
 
 ISLANDGAME_AETHERIA_Wally::
-# 946 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	lock
-# 947 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	faceplayer
 # 948 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	lock
+# 949 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	faceplayer
+# 950 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto_if_set FLAG_DAILY_AETHERIA_CAMEO_BATTLE, ISLANDGAME_AETHERIA_Wally_2
 ISLANDGAME_AETHERIA_Wally_1:
-# 954 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 956 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Wally_Text_1, MSGBOX_YESNO
-# 958 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 960 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq ISLANDGAME_AETHERIA_Wally_5
-# 1034 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 1036 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Wally_Text_2
-# 1037 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 1039 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto Aetheria_CameoBattle_End
 ISLANDGAME_AETHERIA_Wally_4:
-# 1040 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-Aetheria_CameoBattle_End:
-# 1041 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	closemessage
 # 1042 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+Aetheria_CameoBattle_End:
+# 1043 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	closemessage
+# 1044 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	release
 	return
 
 ISLANDGAME_AETHERIA_Wally_2:
-# 949 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 951 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Wally_Text_0
-# 952 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 954 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto Aetheria_CameoBattle_End
 	goto ISLANDGAME_AETHERIA_Wally_1
 
 ISLANDGAME_AETHERIA_Wally_5:
-# 959 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	special SavePlayerParty
-# 960 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadescreen FADE_TO_BLACK
 # 961 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	special ChooseHalfPartyForBattle
+	special SavePlayerParty
 # 962 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitstate
+	fadescreen FADE_TO_BLACK
 # 963 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	special ChooseHalfPartyForBattle
+# 964 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitstate
+# 965 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ISLANDGAME_AETHERIA_Wally_8
-# 971 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 972 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setvar VAR_0x8000, 63
 # 973 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setvar VAR_0x8001, 57
-# 974 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	callnative TeleportCamera
-# 975 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setobjectxy OBJ_EVENT_ID_PLAYER, 66, 58
-# 976 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
-# 977 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement 8, Common_Movement_FaceLeft
-# 978 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadescreen FADE_FROM_BLACK
-# 979 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	delay 30
-# 980 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement 8, Common_Movement_WalkInPlaceLeft
-# 981 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmovement 0
-# 982 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	delay 30
-# 983 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_Wally_Text_3
-# 986 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_Wally_Text_4
-# 996 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	multi_2_vs_2 TRAINER_AETHERIA_BRENDAN, ISLANDGAME_AETHERIA_Wally_Text_5, TRAINER_AETHERIA_MAY, ISLANDGAME_AETHERIA_Wally_Text_6, PARTNER_AETHERIA_WALLY
-# 997 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	switch VAR_RESULT
-# 998 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	case 1, ISLANDGAME_AETHERIA_Wally_12
-# 1024 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	fadescreen FADE_TO_BLACK
-# 1025 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	special SetCB2WhiteOut
+# 974 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	setvar VAR_0x8000, 63
+# 975 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	setvar VAR_0x8001, 57
+# 976 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	callnative TeleportCamera
+# 977 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	setobjectxy OBJ_EVENT_ID_PLAYER, 66, 58
+# 978 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+# 979 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	applymovement 8, Common_Movement_FaceLeft
+# 980 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 981 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	delay 30
+# 982 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	applymovement 8, Common_Movement_WalkInPlaceLeft
+# 983 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitmovement 0
+# 984 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	delay 30
+# 985 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_Wally_Text_3
+# 988 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_Wally_Text_4
+# 998 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	multi_2_vs_2 TRAINER_AETHERIA_BRENDAN, ISLANDGAME_AETHERIA_Wally_Text_5, TRAINER_AETHERIA_MAY, ISLANDGAME_AETHERIA_Wally_Text_6, PARTNER_AETHERIA_WALLY
+# 999 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	switch VAR_RESULT
+# 1000 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	case 1, ISLANDGAME_AETHERIA_Wally_12
 # 1026 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 1027 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	special SetCB2WhiteOut
+# 1028 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitstate
 	goto ISLANDGAME_AETHERIA_Wally_4
 
 ISLANDGAME_AETHERIA_Wally_8:
-# 964 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 966 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	special LoadPlayerParty
-# 965 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 967 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Wally_Text_2
-# 968 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 970 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto Aetheria_CameoBattle_End
 	goto ISLANDGAME_AETHERIA_Wally_4
 
 ISLANDGAME_AETHERIA_Wally_12:
-# 999 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadescreen FADE_TO_BLACK
-# 1000 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setvar VAR_0x8000, 66
 # 1001 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setvar VAR_0x8001, 58
+	fadescreen FADE_TO_BLACK
 # 1002 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	callnative TeleportCamera
+	setvar VAR_0x8000, 66
 # 1003 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	fadescreen FADE_FROM_BLACK
+	setvar VAR_0x8001, 58
 # 1004 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement 8, Common_Movement_WalkInPlaceLeft
+	callnative TeleportCamera
 # 1005 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	waitmovement 0
+	fadescreen FADE_FROM_BLACK
 # 1006 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	delay 30
+	applymovement 8, Common_Movement_WalkInPlaceLeft
 # 1007 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_Wally_Text_7
-# 1010 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	closemessage
-# 1011 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	delay 30
-# 1012 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement 8, Common_Movement_FaceDown
-# 1013 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitmovement 0
+# 1008 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	delay 30
+# 1009 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_Wally_Text_7
+# 1012 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	closemessage
+# 1013 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	delay 30
 # 1014 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement 8, Common_Movement_FaceDown
 # 1015 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	waitmovement 0
 # 1016 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+# 1017 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	waitmovement 0
+# 1018 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_Wally_Text_8
-# 1020 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	giveitem ITEM_ABILITY_CAPSULE
-# 1021 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
-	setflag FLAG_DAILY_AETHERIA_CAMEO_BATTLE
 # 1022 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	giveitem ITEM_ABILITY_CAPSULE
+# 1023 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+	setflag FLAG_DAILY_AETHERIA_CAMEO_BATTLE
+# 1024 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	goto Aetheria_CameoBattle_End
 	goto ISLANDGAME_AETHERIA_Wally_4
 
 
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 ISLANDGAME_AETHERIA_Melissa_Battle_Movement_0:
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	jump_right
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 193 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
 	step_end
 
-# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 ISLANDGAME_AETHERIA_Melissa_Battle_Movement_1:
-# 195 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 197 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	face_down
 	step_end
 
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 ISLANDGAME_AETHERIA_Melissa_Battle_Movement_2:
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_left
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_left
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_left
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_left
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
-# 196 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	walk_down
 	step_end
 
@@ -1184,80 +1188,80 @@ ISLANDGAME_AETHERIA_Melissa_Text_5:
 	.string "here.$"
 
 ISLANDGAME_AETHERIA_Melissa_Text_6:
-# 157 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 158 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Hehe. Ready to earn your ticket,\n"
 	.string "{PLAYER}?$"
 
 ISLANDGAME_AETHERIA_Melissa_Battle_Text_0:
-# 174 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 175 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Get ready... me and Gibby have been\n"
 	.string "itching for a rematch!$"
 
 ISLANDGAME_AETHERIA_Melissa_Battle_Text_1:
-# 178 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 179 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I heard that a single trainer managed\n"
 	.string "to quell the outbreak at Lumine Cave.\p"
 	.string "Ehe... That was you, wasn't it?$"
 
 ISLANDGAME_AETHERIA_Melissa_Battle_Text_2:
-# 186 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 187 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oof, Looks like I bit off a\n"
 	.string "little more than I could chew...\p"
 	.string "Well, a deal's a deal! Dan-da-da-dan!\n"
 	.string "Here's your prize!$"
 
 ISLANDGAME_AETHERIA_Melissa_Battle_Text_3:
-# 191 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 192 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Meet me inside whenever you're ready!\n"
 	.string "Don't keep me waiting any longer, hehe.$"
 
 ISLANDGAME_AETHERIA_WelcomeSign_Text_0:
-# 254 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 256 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "AETHERIA\n"
 	.string "Where stars are born!$"
 
 ISLANDGAME_AETHERIA_FanClubSign_Text_0:
-# 261 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 263 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "STARLIGHT FAN CLUB\n"
 	.string "We stan the Queens of Marya!$"
 
 ISLANDGAME_AETHERIA_CondoSign_Text_0:
-# 267 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 269 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "SANTA MARIA CONDOMINIUMS$"
 
 ISLANDGAME_AETHERIA_CardShop_Text_0:
-# 273 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 275 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "The Top Deck - Gaming Café\n"
 	.string "Come play in our PTCG tournaments!$"
 
 ISLANDGAME_AETHERIA_DeptStore_Text_0:
-# 279 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 281 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "StrixCorp MegaMart\n"
 	.string "“You want it? We got it!”$"
 
 ISLANDGAME_AETHERIA_EmptyTrash_Text_0:
-# 286 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 288 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "{COLOR RED}(There's nothing but garbage in here.)$"
 
 ISLANDGAME_AETHERIA_IceCreamLady_Text_0:
-# 317 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 319 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Helloooooo! Would you like some frosty\n"
 	.string "Nice Cream? It's only ¥500 for a cone!$"
 
 ISLANDGAME_AETHERIA_IceCreamLady_Text_1:
-# 330 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 332 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Enjoy!$"
 
 ISLANDGAME_AETHERIA_IceCreamLady_Text_2:
-# 336 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 338 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Oh... you don't have enough money.$"
 
 ISLANDGAME_AETHERIA_NPC1_Text_0:
-# 376 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 378 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Uurrrp...?$"
 
 ISLANDGAME_AETHERIA_NPC1_Text_1:
-# 381 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 383 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ugggg... I'm tired of waking up at the\n"
 	.string "crack of dawn just to sail this darn\l"
 	.string "detective out into the great blue sea\l"
@@ -1272,7 +1276,7 @@ ISLANDGAME_AETHERIA_NPC1_Text_1:
 	.string "$"
 
 ISLANDGAME_AETHERIA_NPC2_Text_0:
-# 395 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 397 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Aetheria is always bustling with\n"
 	.string "activity.\p"
 	.string "Whether it's in the morning, at noon, or\n"
@@ -1280,32 +1284,32 @@ ISLANDGAME_AETHERIA_NPC2_Text_0:
 	.string "do!$"
 
 ISLANDGAME_AETHERIA_NPC3_Text_0:
-# 405 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 407 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Come on... {PAUSE 30}come on...{PAUSE 30}\p"
 	.string "Drats... I was hoping for chicken, but I\n"
 	.string "guess this will have to do...$"
 
 ISLANDGAME_AETHERIA_NPC4_Text_0:
-# 417 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 419 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I ain't got all day, kid! Do you want a\n"
 	.string "crummy photo or not!?$"
 
 ISLANDGAME_AETHERIA_NPC4_Text_1:
-# 423 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 425 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Buzz off, kid. I'm off the clock. If you\n"
 	.string "want a photo, come back tomorrow.$"
 
 ISLANDGAME_AETHERIA_NPC5_Text_0:
-# 434 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 436 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Waaaaaah! He's too scawwy!$"
 
 ISLANDGAME_AETHERIA_NPC6_Text_0:
-# 444 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 446 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "It's fine, dearie! He won't bite! He's not\n"
 	.string "a real Pokémon!$"
 
 ISLANDGAME_AETHERIA_NPC7_Text_0:
-# 455 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 457 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "A strange man gave me the choice of\n"
 	.string "receiving a Big Nugget or Master Ball\l"
 	.string "earlier this morning...\p"
@@ -1323,7 +1327,7 @@ ISLANDGAME_AETHERIA_NPC7_Text_0:
 	.string "Lugia... Not Arceus... No one...$"
 
 ISLANDGAME_AETHERIA_NPC8_Text_0:
-# 471 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 473 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Since you foreigners clearly don't know\n"
 	.string "how to read, I'll spell it out for you:\p"
 	.string "LITTERING IS A F-E-L-O-N-Y IN MARYA!\n"
@@ -1335,12 +1339,12 @@ ISLANDGAME_AETHERIA_NPC8_Text_0:
 	.string "know exactly who's causing all of it...$"
 
 ISLANDGAME_AETHERIA_NPC9_Text_0:
-# 485 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 487 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ah...! Such a rambunctious squabble of\n"
 	.string "Wingulls...$"
 
 ISLANDGAME_AETHERIA_NPC10_Text_0:
-# 495 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 497 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Noooo! You can't just keep spamming the\n"
 	.string "same move over and over again!\p"
 	.string "You're supposed to be making\n"
@@ -1350,11 +1354,11 @@ ISLANDGAME_AETHERIA_NPC10_Text_0:
 	.string "correctly predict your prediction!$"
 
 ISLANDGAME_AETHERIA_NPC11_Text_0:
-# 506 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 508 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "haha xtreme speed go weeeeee$"
 
 ISLANDGAME_AETHERIA_NPC12_Text_0:
-# 517 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 519 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ever imagined what it would be like to\n"
 	.string "send out one of the Isle Guardians out\l"
 	.string "into battle?\p"
@@ -1372,7 +1376,7 @@ ISLANDGAME_AETHERIA_NPC12_Text_0:
 	.string "buy some product before we run out!$"
 
 ISLANDGAME_AETHERIA_NPC13_Text_0:
-# 530 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 532 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Cammie! Cammie! Are the rumors true?\n"
 	.string "Are you dating a movie star from Unova?\p"
 	.string "C'mon, spill the tea for us! What's his\n"
@@ -1380,11 +1384,11 @@ ISLANDGAME_AETHERIA_NPC13_Text_0:
 	.string "longer! We have the photos!$"
 
 ISLANDGAME_AETHERIA_NPC14_Text_0:
-# 541 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 543 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "hi camie$"
 
 ISLANDGAME_AETHERIA_NPC15_Text_0:
-# 552 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 554 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "She can't be in a relationship... right?\p"
 	.string "I mean, Camellia would never betray her\n"
 	.string "fans like that... right?\p"
@@ -1392,41 +1396,41 @@ ISLANDGAME_AETHERIA_NPC15_Text_0:
 	.string "first performance...$"
 
 ISLANDGAME_AETHERIA_NPC16_Text_0:
-# 563 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 565 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Camellia is so pretty...$"
 
 ISLANDGAME_AETHERIA_NPC17_Text_0:
-# 574 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 576 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I hope those rumors aren't true. It\n"
 	.string "would ruin my one true pairing.$"
 
 ISLANDGAME_AETHERIA_NPC18_Text_0:
-# 585 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 587 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Camellia is my favorite of the\n"
 	.string "STARLIGHT members. Her singing voice is\l"
 	.string "phenomenal!$"
 
 ISLANDGAME_AETHERIA_NPC19_Text_0:
-# 595 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 597 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "{COLOR RED}(Looks like he's sound asleep.)$"
 
 ISLANDGAME_AETHERIA_NPC20_Text_0:
-# 605 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 607 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ehe... How do I look?$"
 
 ISLANDGAME_AETHERIA_NPC21_Text_0:
-# 615 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 617 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "ooooo kawaii desu yo$"
 
 ISLANDGAME_AETHERIA_NPC22_Text_0:
-# 626 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 628 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I missed out on the limited edition\n"
 	.string "STARLIGHT idol collection, so I'm\l"
 	.string "pretending the figurines in the window\l"
 	.string "are mine.$"
 
 ISLANDGAME_AETHERIA_NPC23_Text_0:
-# 637 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 639 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "THIS IS MY BICYCLE!\p"
 	.string "THERE ARE MANY LIKE IT, BUT THIS ONE IS\n"
 	.string "MINE!\p"
@@ -1434,18 +1438,18 @@ ISLANDGAME_AETHERIA_NPC23_Text_0:
 	.string "WITHOUT MY BICYCLE, I AM USELESS!$"
 
 ISLANDGAME_AETHERIA_NPC24_Text_0:
-# 648 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 650 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "If you see anyone suspicious, like a big\n"
 	.string "bald guy riding a motorcycle, please\l"
 	.string "report it to us immediately!$"
 
 ISLANDGAME_AETHERIA_NPC25_Text_0:
-# 659 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 661 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Lumine is too hot... I wanna go back to\n"
 	.string "Oranna.$"
 
 ISLANDGAME_AETHERIA_NPC26_Text_0:
-# 669 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 671 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I can't wait for the next rotation, man.\n"
 	.string "Legit got sacked by this one loser\l"
 	.string "abusing Budew to lock me out of all my\l"
@@ -1454,12 +1458,12 @@ ISLANDGAME_AETHERIA_NPC26_Text_0:
 	.string "seems really balanced.$"
 
 ISLANDGAME_AETHERIA_NPC27_Text_0:
-# 679 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 681 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Uh-huh... Yeah... Mhm... Oh yeah... I hear\n"
 	.string "you...$"
 
 ISLANDGAME_AETHERIA_NPC28_Text_0:
-# 690 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 692 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Not many trainers have the opportunity\n"
 	.string "of seeing Zapdos, the mighty guardian\l"
 	.string "of Lumine...\p"
@@ -1468,16 +1472,16 @@ ISLANDGAME_AETHERIA_NPC28_Text_0:
 	.string "however...$"
 
 ISLANDGAME_AETHERIA_NPC28_Text_1:
-# 695 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 697 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Here is a sketch I drew of it from\n"
 	.string "memory.$"
 
 ISLANDGAME_AETHERIA_NPC28_Text_2:
-# 698 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 700 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "It is quite impressive, no?$"
 
 ISLANDGAME_AETHERIA_NPC29_Text_0:
-# 708 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 710 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "While I respect Detective Rio's\n"
 	.string "tenacity, I think he's just wasting his\l"
 	.string "time with these search missions.\p"
@@ -1487,12 +1491,12 @@ ISLANDGAME_AETHERIA_NPC29_Text_0:
 	.string "found it by now?$"
 
 ISLANDGAME_AETHERIA_NPC30_Text_0:
-# 720 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 722 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Haiyooo! Come have some hotcakes with\n"
 	.string "us at Café Lumi! {COLOR GREEN}(='u'=)$"
 
 ISLANDGAME_AETHERIA_NPC31_Text_0:
-# 733 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 735 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ah... I'm flattered that I caught your\n"
 	.string "eye, but I'm afraid you are much too\l"
 	.string "young for me...\p"
@@ -1500,35 +1504,35 @@ ISLANDGAME_AETHERIA_NPC31_Text_0:
 	.string "say... that café by the coast...?$"
 
 ISLANDGAME_AETHERIA_NPC31_Text_1:
-# 739 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 741 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Hmm? May I help you, small child?$"
 
 ISLANDGAME_AETHERIA_Camellia_Text_0:
-# 749 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 751 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "-sigh- For the last time, that was my\n"
 	.string "brother...$"
 
 ISLANDGAME_AETHERIA_Meloetta_Text_0:
-# 768 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 770 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "{COLOR BLUE}(These paparazzi guys are relentless.\n"
 	.string "Being an idol is tough work.)$"
 
 ISLANDGAME_AETHERIA_Birb_Text_0:
-# 779 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 781 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "MIEN$"
 
 ISLANDGAME_AETHERIA_Observer1_Text_0:
-# 797 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 799 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Those kids look pretty tough...$"
 
 ISLANDGAME_AETHERIA_Observer2_Text_0:
-# 807 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 809 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Mommy lets me watch trainers battle\n"
 	.string "here while she does shopping with my\l"
 	.string "sister!$"
 
 ISLANDGAME_AETHERIA_Observer3_Text_0:
-# 817 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 819 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I once believed that Pokémon battles\n"
 	.string "were barbaric, but I have come to\l"
 	.string "understand that they are merely a form\l"
@@ -1536,27 +1540,27 @@ ISLANDGAME_AETHERIA_Observer3_Text_0:
 	.string "trainers.$"
 
 ISLANDGAME_AETHERIA_Observer4_Text_0:
-# 827 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 829 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Joey, this is why I told you to study up\n"
 	.string "before you get back into battling...$"
 
 ISLANDGAME_AETHERIA_Battler1_Text_0:
-# 836 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 838 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Nyeh!? My attack... it had no effect!?$"
 
 ISLANDGAME_AETHERIA_Battler2_Text_0:
-# 845 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 847 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "You dummy! Kirlia is part fairy-type!\n"
 	.string "How out of the loop are you!?$"
 
 ISLANDGAME_AETHERIA_WallyDad_Text_0:
-# 879 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 881 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Thanks for battling alongside Wally.\p"
 	.string "I wish the best of luck on the rest of\n"
 	.string "your journey!$"
 
 ISLANDGAME_AETHERIA_WallyDad_Text_1:
-# 884 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 886 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ever since Wally's recovered from his\n"
 	.string "illness, he's been really itching to go\l"
 	.string "out and explore the world of Pokémon\l"
@@ -1566,7 +1570,7 @@ ISLANDGAME_AETHERIA_WallyDad_Text_1:
 	.string "it!$"
 
 ISLANDGAME_AETHERIA_Scott_Text_0:
-# 897 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 899 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Those battles were hot, hot, hot!\p"
 	.string "Howsabout a trainer like you come with\n"
 	.string "me back to the Hoenn region and\l"
@@ -1574,29 +1578,29 @@ ISLANDGAME_AETHERIA_Scott_Text_0:
 	.string "$"
 
 ISLANDGAME_AETHERIA_Scott_Text_1:
-# 902 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 904 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Ohoho, it's been a hot minute since I've\n"
 	.string "seen these champs battle!$"
 
 ISLANDGAME_AETHERIA_May_Text_0:
-# 914 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 916 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "You're one tough lava cookie, randy!\n"
 	.string "Don't get too complacent though... I'll\l"
 	.string "be back for a rematch soon!$"
 
 ISLANDGAME_AETHERIA_May_Text_1:
-# 919 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 921 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "After spending the entire day walking\n"
 	.string "around the city, I'm glad to finally take\l"
 	.string "a break and battle!$"
 
 ISLANDGAME_AETHERIA_Brendan_Text_0:
-# 931 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 933 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Heh... I guess I'm a little out of\n"
 	.string "practice...$"
 
 ISLANDGAME_AETHERIA_Brendan_Text_1:
-# 936 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 938 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I was looking most forward to visiting\n"
 	.string "the contest hall here, but I was\l"
 	.string "disappointed to find out that it's been\l"
@@ -1604,45 +1608,45 @@ ISLANDGAME_AETHERIA_Brendan_Text_1:
 	.string "Pokémon Idols instead.$"
 
 ISLANDGAME_AETHERIA_Wally_Text_0:
-# 950 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 952 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "We're also going to be at the Silverwing\n"
 	.string "Festival, so hope to catch you there!$"
 
 ISLANDGAME_AETHERIA_Wally_Text_1:
-# 955 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 957 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Hey there! We're looking for a trainer\n"
 	.string "to join us in a multi battle! Would you\l"
 	.string "like to be my teammate?$"
 
 ISLANDGAME_AETHERIA_Wally_Text_2:
-# 966 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 968 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Darn... I was hoping to get a quick\n"
 	.string "pick-up battle in.$"
 
 ISLANDGAME_AETHERIA_Wally_Text_3:
-# 984 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 986 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Alright! Ready when you two are!$"
 
 ISLANDGAME_AETHERIA_Wally_Text_4:
-# 987 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 989 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "{COLOR GREEN}May: {COLOR DARK_GRAY}Just a fair warning, randy, we'll be\n"
 	.string "coming at you with full force!\p"
 	.string "{COLOR GREEN}Brendan: {COLOR DARK_GRAY}Boisterous as ever...$"
 
 ISLANDGAME_AETHERIA_Wally_Text_5:
-# 996 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 998 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Well, this shirt is ruined...$"
 
 ISLANDGAME_AETHERIA_Wally_Text_6:
-# 996 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 998 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Auuuugh! No way! We lost!?$"
 
 ISLANDGAME_AETHERIA_Wally_Text_7:
-# 1008 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 1010 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "Hehe... looks like I win this time!$"
 
 ISLANDGAME_AETHERIA_Wally_Text_8:
-# 1017 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
+# 1019 "data/maps/ISLANDGAME_AETHERIA/scripts.pory"
 	.string "I couldn't have done it without you,\n"
 	.string "{PLAYER}! You and your Pokémon were\l"
 	.string "amazing!\p"
