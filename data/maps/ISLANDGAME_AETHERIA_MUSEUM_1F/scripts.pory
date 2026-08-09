@@ -1,1 +1,229 @@
-mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {}
+const STATE_INITIAL = 0
+const STATE_FOUND_RIVAL = 1
+const STATE_DEFEATED_RIVAL = 2
+const STATE_ENTERED_MUSEUM = 3
+const STATE_EXHIBIT_UNLOCKED = 4
+const STATE_EXHIBIT_ROBBED = 5
+const STATE_FOUND_THIEF = 6
+const STATE_FINAL = 7
+
+
+mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_AETHERIA_STATE) == STATE_DEFEATED_RIVAL) { // entry to exhibit only allowed after obtaining ticket
+            setvar(VAR_TEMP_0, 1)
+        }
+    }
+
+}
+
+
+
+
+// Important 
+script ISLANDGAME_AETHERIA_MUSEUM_1F_TicketCheckerRight {
+    lock
+    faceplayer
+    msgbox(format(
+        "Only those with a museum ticket may continue into the exhibit hall."
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_TICKET_CHECKER_RIGHT, moves(face_down))
+    release
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_NoEntryRight {
+    lock
+    playse(SE_PIN)
+    applymovement(LOCALID_TICKET_CHECKER_RIGHT, moves(face_down, emote_exclamation_mark, delay_16 * 2))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    msgbox(format(
+        "Excuse me, but only those with a ticket may enter the exhibit hall."
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+    waitmovement(0)
+    release
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_TicketCheckerLeft {
+    lock
+    faceplayer
+    msgbox(format(
+        "Only those with a museum ticket may continue into the exhibit hall."
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_TICKET_CHECKER_LEFT, moves(face_down))
+    release
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_NoEntryLeft {
+    lock
+    playse(SE_PIN)
+    applymovement(LOCALID_TICKET_CHECKER_LEFT, moves(face_down, emote_exclamation_mark, delay_16 * 2))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    msgbox(format(
+        "Excuse me, but only those with a ticket may enter the exhibit hall."
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+    waitmovement(0)
+    release
+}
+
+
+
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist {
+    lock
+    faceplayer
+    msgbox(format(
+        "Welcome to Aetheria's Museum of Fine Arts.\p"
+        "Unfortunately due to high demand, we are currently sold out of tickets.\p"
+        "We apologize for the inconvenience."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Karen {
+    lock
+    msgbox(format(
+        "Are you even listening? I said I want a REFUND on my TICKET!\p"
+        "I'm done speaking with you! Where is your manager!?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_KarenKid {
+    lock
+    msgbox(format(
+        "Moooooooom! I want my Rotom Pad!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist2 {
+    lock
+    msgbox(format(
+        "Again, as per my previous statement, all ticket sales are final.\p"
+        "If you have any disagreements with our policy, you are free to express your concerns through our website."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Artist {
+    lock
+    msgbox(format(
+        "Hmmm, yes... This is quite the masterful composition.\p"
+        "It truly depicts the Isle Guardians in all their limitless splendor."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_NinjaBoy {
+    lock
+    msgbox(format(
+        "Heheh. If I stay still on this wall, people will think I'm part of the exhibit!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Psychic {
+    lock
+    faceplayer
+    msgbox(format(
+        "The vast majority of human history is unknown.\p"
+        "Whether it was destroyed, lost, rewritten, or just the simple fact that humans have existed long before the creation of recordkeeping.\p"
+        "It is quite disturbing, is it not? We truly know nothing of the world."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_FatMan {
+    lock
+    faceplayer
+    msgbox(format(
+        "So mysterious... What secrets do you think are hiding in that island, if it even exists?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Woman {
+    lock
+    msgbox(format(
+        "Ooooh, what a beautiful looking vase! I've never seen anything like it!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid {
+    lock
+    faceplayer
+    msgbox(format(
+        "I'm in the process of writing a novel, but I've been having trouble converting my thoughts into words.\p"
+        "I'm hoping that this cultural excursion will remedy my writing block."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy {
+    lock
+    faceplayer
+    msgbox(format(
+        "This ancient tablet is the oldest recollection we have of The Darkest Night.\p"
+        "We have ensured its preservation for thousands of years, and shall continue.\p"
+        "So that the advent of our lord and savior shall never be forgotten."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+// Paintings
+script ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting {
+    msgbox(format(
+        "“Wings of Majesty”\nBy Kozmocrat\p"
+        "“For thousands of years, the isles of Marya have been under the winged protection of these legendary avians.”\p"
+        "“Articuno, Zapdos, and Moltres.”\p"
+        "“As long as they remain perched atop their mountainous roost, order will be preserved.”"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_PokemonPainting {
+    msgbox(format(
+        "“A Girl and Her Pokémon”\nBy Kyraipikuma\p"
+        "“In loving memory of Sir Buttermilk Pancake Flapjack III”"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_BerriesPainting {
+    msgbox(format(
+        "“Still Life”\nBy InsertNameAqui\p"
+        "{COLOR RED}(It's a painting of an assortment of scrumptious-looking berries.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_LandscapePainting {
+    msgbox(format(
+        "“Faraway Island”\nBy Keleu\p"
+        "“A mythical island in the far reaches of the Maryan Sea.”"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_PokeballPainting {
+    msgbox(format(
+        "“Ancient Poké Ball”\p"
+        "“A Poké Ball hand-crafted by the ancient Arborians using an Apricorn.”"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_VasePainting {
+    msgbox(format(
+        "{COLOR RED}(It's just a painting of a vase. That's it. There's nothing special about it.)"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_GrassPainting {
+    msgbox(format(
+        "“Sylvan Sanctuary”\p"
+        "“We dedicate this painting to the voice of the forest.”\p"
+        "“May another bountiful harvest befall our lush jungle.”"
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet {
+    msgbox(format(
+        "“Ancient Tablet”\p"
+        "“Within the maws of the Great Volcano slumbered the wicked Wings of Chaos.”\p"
+        "“A primordial force of unstoppable evil, it once threatened to engulf the world in eternal shadow.”\p"
+        "“But from the depths emerged our glorious savior to grant us salvation.”\p"
+        "“And so the fiend was sealed whence it came. The world saved from cataclysmic destruction.”"
+    ), MSGBOX_SIGN)
+}
