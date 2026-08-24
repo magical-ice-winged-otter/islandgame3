@@ -273,7 +273,7 @@ script ISLANDGAME_AETHERIA_CondoSign {
 script ISLANDGAME_AETHERIA_ArtMuseum {
     msgbox(format(
         "AETHERIA MUSEUM OF FINE ARTS\p"
-        "Our new “The Darkest Night” exhibit is now open for viewing!"
+        "“The Darkest Night” now showing!"
     ), MSGBOX_SIGN)
 }
 

@@ -13,7 +13,7 @@ mapscripts ISLANDGAME_CAMP_PERSI_MACHETE_TREE_MapScripts {
 
 script ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell {
     setvar(VAR_TEMP_0, 1)
-    msgbox("hi")
+    // msgbox("hi")
 
     if (checkitem(ITEM_ISLANDGAME_STRANGE_DISC) && flag(FLAG_ANOMALY01_DEFEATED)) {
         applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
