@@ -34,7 +34,7 @@ script ISLANDGAME_AETHERIA_PKMNCENTER_Officer {
     msgbox(format(
         "Please remember to stay vigilant at night, especially as a tourist.\p"
         "A group of thugs calling themselves the Goon Gang have been prowling the streets at night looking for easy prey.\p"
-        "They can be identified by their black jackets and motorcycles. If you see one, please do not engage in battle."
+        "They can be identified by their black jackets and motorcycles.\pIf you see one, please do not engage in battle."
     ), MSGBOX_AUTOCLOSE)
 }
 

@@ -5634,9 +5634,9 @@
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_MUSEUM_2F",
       "name": "ISLANDGAME_AETHERIA_MUSEUM_2F_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_Building",
+      "width": 31,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_LilycoveMuseum",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F/map.bin"

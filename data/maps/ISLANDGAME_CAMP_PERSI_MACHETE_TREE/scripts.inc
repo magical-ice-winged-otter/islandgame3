@@ -17,8 +17,6 @@ ISLANDGAME_CAMP_PERSI_MACHETE_TREE_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell::
 # 15 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	setvar VAR_TEMP_0, 1
-# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0
 	checkitem ITEM_ISLANDGAME_STRANGE_DISC
 # 0 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	compare VAR_RESULT, 0
@@ -37,7 +35,7 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_1:
 # 23 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	waitmovement
 # 25 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_1, MSGBOX_AUTOCLOSE
+	msgbox ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0, MSGBOX_AUTOCLOSE
 # 32 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	removeitem ITEM_ISLANDGAME_STRANGE_DISC
 	return
@@ -341,10 +339,6 @@ ISLANDGAME_CAMP_PERSI_TREEHOUSE_Interact_GulpinDoll_Movement_7:
 	step_end
 
 ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_0:
-# 16 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
-	.string "hi$"
-
-ISLANDGAME_CAMP_PERSI_TREEHOUSE_ReturnFromHell_Text_1:
 # 26 "data/maps/ISLANDGAME_CAMP_PERSI_MACHETE_TREE/scripts.pory"
 	.string "...\p"
 	.string "{COLOR RED}(Augh... my head...)\p"

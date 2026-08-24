@@ -96,8 +96,9 @@ ISLANDGAME_AETHERIA_PKMNCENTER_Officer_Text_0:
 	.string "Goon Gang have been prowling the\l"
 	.string "streets at night looking for easy prey.\p"
 	.string "They can be identified by their black\n"
-	.string "jackets and motorcycles. If you see\l"
-	.string "one, please do not engage in battle.$"
+	.string "jackets and motorcycles.\p"
+	.string "If you see one, please do not engage in\n"
+	.string "battle.$"
 
 ISLANDGAME_AETHERIA_PKMNCENTER_Boy_Text_0:
 # 45 "data/maps/ISLANDGAME_AETHERIA_PKMNCENTER/scripts.pory"

@@ -14897,7 +14897,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Grants admission\n"
             "to Aetheria's\n"
-            "history museum."),
+            "fine arts museum."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

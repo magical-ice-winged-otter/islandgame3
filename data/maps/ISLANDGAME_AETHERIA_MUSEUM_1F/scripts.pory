@@ -1,17 +1,23 @@
+// states for main quest
 const STATE_INITIAL = 0
 const STATE_FOUND_RIVAL = 1
 const STATE_DEFEATED_RIVAL = 2
-const STATE_ENTERED_MUSEUM = 3
-const STATE_EXHIBIT_UNLOCKED = 4
-const STATE_EXHIBIT_ROBBED = 5
-const STATE_FOUND_THIEF = 6
-const STATE_FINAL = 7
+const STATE_EXHIBIT_SAW_MELISSA = 3
+const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
+// const STATE_EXHIBIT_ROBBED = 5
+// const STATE_FOUND_THIEF = 6
+// const STATE_FINAL = 7
 
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        if (var(VAR_AETHERIA_STATE) == STATE_DEFEATED_RIVAL) { // entry to exhibit only allowed after obtaining ticket
-            setvar(VAR_TEMP_0, 1)
+        switch (var(VAR_AETHERIA_STATE)) {
+            case STATE_DEFEATED_RIVAL:  // entry to exhibit only allowed after obtaining ticket
+                setvar(VAR_TEMP_0, 1)
+            case STATE_EXHIBIT_BEGIN_EXHIBIT: // curator and melissa have moved upstairs
+                setvar(VAR_TEMP_0, 1)
+                setflag(FLAG_TEMP_1)
+            default:
         }
     }
 
@@ -69,8 +75,56 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_NoEntryLeft {
     release
 }
 
+script ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice {
+    lock
+    playse(SE_PIN)
+    applymovement(LOCALID_MUSEUM_MELISSA, moves(face_player, emote_exclamation_mark, delay_16 * 2))
+    waitmovement(0)
+    msgbox(format(
+        "Melissa: Heyyy! Over here, {PLAYER}!"
+    ))
+    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_SAW_MELISSA)
+    release
+}
 
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Melissa {
+    lock
+    faceplayer
+    msgbox(format(
+        "Are you enjoying the museum so far? The artwork here is always soooo gorg!\p"
+        "My brother used to take me here all the time when I was still a lil sweet pea!\p"
+        "They've always periodically added more pieces, but this is new exhibit their first new major addition!\p"
+        "Eeee! I can't wait!"
+    ), MSGBOX_AUTOCLOSE)
+}
 
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Curator {
+    lock
+    faceplayer
+    msgbox(format(
+        "Welcome, young trainer! I take it you've come to view our newest exhibit?"
+    ), MSGBOX_YESNO)
+    
+    if (var(VAR_RESULT) == NO) {
+        goto(AetheriaMuseum_CuratorEnd)
+    }
+
+    msgbox(format(
+        "Splendid! Follow me upstairs, and experience,{PAUSE 30} The Darkest Night..."
+    ), MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_CURATOR, moves(walk_up))
+    waitmovement(0)
+    playse(SE_EXIT)
+    waitse
+    removeobject(LOCALID_CURATOR)
+    setobjecthidden(LOCALID_CURATOR)
+    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_BEGIN_EXHIBIT)
+
+    AetheriaMuseum_CuratorEnd:
+        closemessage
+        release
+}
 
 
 // NPCs
@@ -222,7 +276,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet {
     msgbox(format(
         "“Ancient Tablet”\p"
         "“Within the maws of the Great Volcano slumbered the wicked Wings of Chaos.”\p"
-        "“A primordial force of unstoppable evil, it once threatened to engulf the world in eternal shadow.”\p"
+        "“A primordial force of unstoppable evil, it once threatened to engulf the world in eternal darkness.”\p"
         "“But from the depths emerged our glorious savior to grant us salvation.”\p"
         "“And so the fiend was sealed whence it came. The world saved from cataclysmic destruction.”"
     ), MSGBOX_SIGN)
