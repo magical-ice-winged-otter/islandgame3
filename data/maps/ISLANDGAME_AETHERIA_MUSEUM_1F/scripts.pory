@@ -223,7 +223,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy {
 // Paintings
 script ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting {
     msgbox(format(
-        "“Wings of Majesty”\nBy Kozmocrat\p"
+        "“Winged Mirages”\nBy Kozmocrat\p"
         "“For thousands of years, the isles of Marya have been under the winged protection of these legendary avians.”\p"
         "“Articuno, Zapdos, and Moltres.”\p"
         "“As long as they remain perched atop their mountainous roost, order will be preserved.”"

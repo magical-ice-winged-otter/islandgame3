@@ -483,7 +483,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy_Text_0:
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting_Text_0:
 # 226 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
-	.string "“Wings of Majesty”\n"
+	.string "“Winged Mirages”\n"
 	.string "By Kozmocrat\p"
 	.string "“For thousands of years, the isles of\n"
 	.string "Marya have been under the winged\l"
