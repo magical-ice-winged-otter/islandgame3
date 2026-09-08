@@ -1,3 +1,5 @@
+#include "gba/defines.h"
+#include "gba/isagbprint.h"
 #include "global.h"
 #include "sprite.h"
 #include "main.h"
@@ -274,6 +276,21 @@ EWRAM_DATA s16 gSpriteCoordOffsetX = 0;
 EWRAM_DATA s16 gSpriteCoordOffsetY = 0;
 EWRAM_DATA struct OamMatrix gOamMatrices[OAM_MATRIX_COUNT] = {0};
 EWRAM_DATA bool8 gAffineAnimsDisabled = FALSE;
+
+u32 DEBUG_CountAllocatedSpriteTiles(void)
+{
+    u32 allocatedSpriteTileCount = gReservedSpriteTileCount;
+
+    for (int i = 0; i < TOTAL_OBJ_TILE_COUNT; i++)
+    {
+        if (SPRITE_TILE_IS_ALLOCATED(i))
+        {
+            allocatedSpriteTileCount++;
+        }
+    }
+
+    return allocatedSpriteTileCount;
+}
 
 void ResetSpriteData(void)
 {
@@ -559,6 +576,8 @@ void DestroySprite(struct Sprite *sprite)
             u16 tileEnd = (sprite->images->size / TILE_SIZE_4BPP) + sprite->oam.tileNum;
             for (i = sprite->oam.tileNum; i < tileEnd; i++)
                 FREE_SPRITE_TILE(i);
+
+            DebugPrintf("destroyed sprite, freed %u sprite tiles (%u / %u)", tileEnd - sprite->oam.tileNum, DEBUG_CountAllocatedSpriteTiles(), TOTAL_OBJ_TILE_COUNT);
         }
         ResetSprite(sprite);
     }
@@ -643,8 +662,11 @@ s16 AllocSpriteTiles(u16 tileCount)
     {
         // Free all unreserved tiles if the tile count is 0.
         for (i = gReservedSpriteTileCount; i < TOTAL_OBJ_TILE_COUNT; i++)
+        {
             FREE_SPRITE_TILE(i);
+        }
 
+        DebugPrintf("cleared all sprite tiles (%u / %u)", DEBUG_CountAllocatedSpriteTiles(), TOTAL_OBJ_TILE_COUNT);
         return 0;
     }
 
@@ -683,6 +705,7 @@ s16 AllocSpriteTiles(u16 tileCount)
     for (i = start; i < tileCount + start; i++)
         ALLOC_SPRITE_TILE(i);
 
+    DebugPrintf("allocated %u sprite tiles (%u / %u)", tileCount, DEBUG_CountAllocatedSpriteTiles(), TOTAL_OBJ_TILE_COUNT);
     return start;
 }
 
@@ -1517,6 +1540,7 @@ void FreeSpriteTilesByTag(u16 tag)
         for (i = start; i < start + count; i++)
             FREE_SPRITE_TILE(i);
 
+        DebugPrintf("freed %u sprite tiles by tag (%u / %u)", count, DEBUG_CountAllocatedSpriteTiles(), TOTAL_OBJ_TILE_COUNT);
         sSpriteTileRangeTags[index] = TAG_NONE;
     }
 }
@@ -1567,8 +1591,22 @@ u16 GetSpriteTileTagByTileStart(u16 start)
 void AllocSpriteTileRange(u16 tag, u16 start, u16 count)
 {
     u8 freeIndex = IndexOfSpriteTileTag(TAG_NONE);
+    AGB_ASSERT(freeIndex != 0xFF && "out of memory: sprite tile tags");
     sSpriteTileRangeTags[freeIndex] = tag;
     SET_SPRITE_TILE_RANGE(freeIndex, start, count);
+
+    // Count all allocated sprite tile tags to debug
+    {
+        u32 totalAllocatedSpriteTileTags = 0;
+        for (int i = 0; i < MAX_SPRITES; i++)
+        {
+            if (sSpriteTileRangeTags[i] != TAG_NONE)
+            {
+                totalAllocatedSpriteTileTags++;
+            }
+        }
+        DebugPrintf("allocated sprite tile tags: %u / %u", totalAllocatedSpriteTileTags, MAX_SPRITES);
+    }
 }
 
 void FreeAllSpritePalettes(void)

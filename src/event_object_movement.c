@@ -1661,6 +1661,7 @@ static bool8 GetAvailableObjectEventId(u16 localId, u8 mapNum, u8 mapGroup, u8 *
 
 void RemoveObjectEvent(struct ObjectEvent *objectEvent)
 {
+    DebugPrintf("removed object event %u", (u32)objectEvent->localId);
     objectEvent->active = FALSE;
     RemoveObjectEventInternal(objectEvent);
     // zero potential species info
@@ -1901,6 +1902,7 @@ u8 TrySpawnObjectEventTemplate(const struct ObjectEventTemplate *objectEventTemp
     if (subspriteTables)
         SetSubspriteTables(&gSprites[gObjectEvents[objectEventId].spriteId], subspriteTables);
 
+    DebugPrintf("spawned object event %u", (u32)objectEventTemplate->localId);
     return objectEventId;
 }
 
