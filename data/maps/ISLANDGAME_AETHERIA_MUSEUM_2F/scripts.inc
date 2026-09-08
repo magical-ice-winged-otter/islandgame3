@@ -45,533 +45,543 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene::
 	doweather
 # 42 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene_Text_1, MSGBOX_AUTOCLOSE
+# 46 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playbgm MUS_ABNORMAL_WEATHER, TRUE
 # 47 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1
-# 50 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2
-# 53 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_THUNDER
+# 48 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitse
+# 57 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3
-# 56 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 60 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene4
-# 59 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5
-# 61 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_TO_BLACK
-# 62 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 9
 # 63 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 7
-# 64 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
+	call ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5
 # 65 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	fadescreenswapbuffers FADE_TO_BLACK
+# 66 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setvar VAR_0x8000, 9
 # 67 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setvar VAR_0x8001, 7
+# 68 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	callnative TeleportCamera
+# 69 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
+# 71 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	release
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1::
-# 72 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 7
-# 73 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 20
-# 74 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
-# 75 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
 # 76 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playbgm MUS_ABNORMAL_WEATHER, TRUE
+	setvar VAR_0x8000, 7
 # 77 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_THUNDER
+	setvar VAR_0x8001, 20
 # 78 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
+	callnative TeleportCamera
 # 79 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 240
+	fadescreenswapbuffers FADE_FROM_WHITE
 # 80 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_EARTHQUAKE
+	delay 240
 # 81 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Long
+	playse SE_M_EARTHQUAKE
 # 82 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
+	special DoSealedChamberShakingEffect_Long
 # 83 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Short
+	waitstate
 # 84 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
-# 85 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_EXPLOSION
-# 86 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
-# 87 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
-# 88 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ETERNATUS, CRY_MODE_ENCOUNTER
-# 89 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	special DoSealedChamberShakingEffect_Short
-# 90 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 85 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitstate
+# 86 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_EXPLOSION
+# 87 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitse
+# 88 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 60
+# 89 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_ETERNATUS, CRY_MODE_ENCOUNTER
+# 90 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	special DoSealedChamberShakingEffect_Short
 # 91 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	waitstate
 # 92 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
+# 93 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1_Text_0, MSGBOX_AUTOCLOSE
-# 96 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 97 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2::
-# 101 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 23
 # 102 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 20
+	setvar VAR_0x8000, 23
 # 103 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
+	setvar VAR_0x8001, 20
 # 104 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	callnative TeleportCamera
+# 105 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_0
 # 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_0
+	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_0
 # 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_1
+	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_0
 # 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
+	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_1
 # 110 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_2
+	waitmovement 0
 # 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_3
+	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_2
 # 112 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 40
+	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_3
 # 113 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ABSOL_MEGA, CRY_MODE_ENCOUNTER
+	delay 40
 # 114 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_ABSOL_MEGA, CRY_MODE_ENCOUNTER
 # 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_4
+	waitmoncry
 # 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
+	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_4
 # 117 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_DACHSBUN, CRY_MODE_NORMAL
+	waitmovement 0
 # 118 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
-# 119 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_PIN
-# 120 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
-# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_6
-# 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
-# 123 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_CUT
-# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_7
-# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
-# 126 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_PIN
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_8
-# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
-# 129 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
-# 130 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	playmoncry SPECIES_DACHSBUN, CRY_MODE_NORMAL
-# 131 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 119 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmoncry
-# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_9
-# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 120 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_PIN
+# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
+# 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_6
+# 123 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmovement 0
-# 134 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_JUMP_KICK
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_10
-# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_11
-# 137 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
-# 138 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_CUT
+# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_RANCHER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_7
+# 126 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitse
+# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_PIN
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_8
+# 129 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitse
+# 130 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 60
-# 140 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 131 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_DACHSBUN, CRY_MODE_NORMAL
+# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
+# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_9
+# 134 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
+# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_JUMP_KICK
+# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ABSOL, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_10
+# 137 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_DACHSBUN, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_11
+# 138 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
+# 139 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 60
+# 141 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Text_0
-# 144 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	closemessage
 # 145 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	closemessage
+# 146 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3::
-# 150 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 7
 # 151 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 32
+	setvar VAR_0x8000, 7
 # 152 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
+	setvar VAR_0x8001, 32
 # 153 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	hideobjectat AETHERIA_MUSEUM_2F_LUGIA, MAP_ISLANDGAME_AETHERIA_MUSEUM_2F
+	callnative TeleportCamera
 # 154 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	setflag FLAG_TEMP_1
+# 155 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	removeobject AETHERIA_MUSEUM_2F_LUGIA
 # 156 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 120
-# 157 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 158 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	delay 120
 # 159 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
 # 160 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
+	waitmoncry
 # 161 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	delay 60
 # 162 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
+	playmoncry SPECIES_ZAPDOS, CRY_MODE_ENCOUNTER
 # 163 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
-# 164 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmoncry
-# 165 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 164 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 60
+# 165 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+# 166 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
 # 167 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_FLY
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_0
+	delay 60
 # 169 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 20
+	playse SE_M_FLY
 # 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_FLY
+	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_0
 # 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_1
-# 172 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 20
-# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 172 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	playse SE_M_FLY
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_1
 # 174 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_1
+	delay 20
 # 175 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
+	playse SE_M_FLY
+# 176 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_1
 # 177 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
+# 179 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_0
-# 180 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	closemessage
 # 182 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Short
-# 183 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
+	closemessage
 # 184 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_ICY_WIND
+	special DoSealedChamberShakingEffect_Short
 # 185 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
+	waitstate
 # 186 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_ICE_BREAK
+	playse SE_M_ICY_WIND
 # 187 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 188 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_THUNDER_WAVE
+	playse SE_ICE_BREAK
 # 189 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 190 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_THUNDERBOLT
+	playse SE_M_THUNDER_WAVE
 # 191 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 192 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_THUNDERBOLT2
+	playse SE_M_THUNDERBOLT
 # 193 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 194 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_FLAMETHROWER
+	playse SE_M_THUNDERBOLT2
 # 195 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 196 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_NOT_EFFECTIVE
+	playse SE_M_FLAMETHROWER
 # 197 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 198 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
+	playse SE_NOT_EFFECTIVE
 # 199 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ETERNATUS, CRY_MODE_ENCOUNTER
-# 200 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
-# 201 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_HYPER_BEAM
-# 202 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
+# 200 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 60
+# 201 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_ETERNATUS, CRY_MODE_ENCOUNTER
+# 202 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
 # 203 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_HYPER_BEAM2
+	playse SE_M_HYPER_BEAM
 # 204 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 205 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Short
+	playse SE_M_HYPER_BEAM2
 # 206 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
-# 207 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_SUPER_EFFECTIVE
-# 208 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
+# 207 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	special DoSealedChamberShakingEffect_Short
+# 208 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitstate
 # 209 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ARTICUNO, CRY_MODE_WEAK
+	playse SE_SUPER_EFFECTIVE
 # 210 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	waitse
 # 211 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ZAPDOS, CRY_MODE_WEAK
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_WEAK
 # 212 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmoncry
 # 213 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_MOLTRES, CRY_MODE_WEAK
+	playmoncry SPECIES_ZAPDOS, CRY_MODE_WEAK
 # 214 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmoncry
 # 215 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_NIGHTMARE
+	playmoncry SPECIES_MOLTRES, CRY_MODE_WEAK
 # 216 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
+	waitmoncry
 # 217 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
+	playse SE_M_NIGHTMARE
 # 218 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_PIN
+	waitse
 # 219 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
+	delay 60
+# 220 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_PIN
 # 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_2
-# 222 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 20
+	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
 # 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3
+	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_2
 # 224 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 20
 # 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3
+	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3
 # 226 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
+	delay 20
+# 227 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3
 # 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_4
-# 229 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MAN_CUTSCENE, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_5
+	waitmovement 0
 # 230 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_EXPERT, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_5
+	removeobject AETHERIA_MUSEUM_2F_ARTICUNO
 # 231 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
+	removeobject AETHERIA_MUSEUM_2F_ZAPDOS
 # 232 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
-# 234 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 30
+	removeobject AETHERIA_MUSEUM_2F_MOLTRES
 # 236 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_1
+	setobjectmovementtype AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+# 237 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectmovementtype AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+# 238 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectmovementtype AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
+# 239 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_ARTICUNO
+# 240 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_ZAPDOS
+# 241 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_MOLTRES
 # 242 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	release
+# 244 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_MAN_CUTSCENE, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_4
+# 245 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_EXPERT, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_4
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_5
+# 247 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
+# 248 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
+# 250 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 60
+# 252 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_1
+# 258 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	closemessage
-# 243 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 259 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene4::
-# 248 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 23
-# 249 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 32
-# 250 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
-# 251 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
-# 252 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special Script_FadeOutMapMusic
-# 253 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
-# 255 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 120
-# 256 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
-# 257 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
-# 258 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
-# 259 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setfieldeffectargument 0, 1
-# 260 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	dofieldeffect FLDEFF_NPCFLY_OUT
-# 261 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitfieldeffect FLDEFF_NPCFLY_OUT
-# 262 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 120
 # 264 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene4_Text_0
+	setvar VAR_0x8000, 23
+# 265 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setvar VAR_0x8001, 32
+# 266 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	callnative TeleportCamera
+# 267 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 268 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	closemessage
+	special Script_FadeOutMapMusic
 # 269 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitstate
+# 271 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 120
+# 272 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+# 273 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
+# 274 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_WHITE
+# 275 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setfieldeffectargument 0, 1
+# 276 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	dofieldeffect FLDEFF_NPCFLY_OUT
+# 277 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitfieldeffect FLDEFF_NPCFLY_OUT
+# 278 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 120
+# 280 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene4_Text_0
+# 284 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	closemessage
+# 285 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5::
-# 274 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8000, 7
-# 275 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setvar VAR_0x8001, 32
-# 276 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	callnative TeleportCamera
-# 277 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_ARTICUNO
-# 278 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_ZAPDOS
-# 279 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_MOLTRES
-# 280 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm 7, 31, AETHERIA_MUSEUM_2F_ARTICUNO
-# 281 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm 9, 30, AETHERIA_MUSEUM_2F_ZAPDOS
-# 282 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm 5, 30, AETHERIA_MUSEUM_2F_MOLTRES
-# 283 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
-# 284 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
-# 285 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN
-# 286 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_ARTICUNO
-# 287 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_ZAPDOS
-# 288 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_MOLTRES
 # 290 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_BLACK
+	setvar VAR_0x8000, 7
+# 291 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setvar VAR_0x8001, 32
 # 292 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 120
-# 294 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setfieldeffectargument 0, 1
+	callnative TeleportCamera
+# 293 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_BLACK
 # 295 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	dofieldeffect FLDEFF_NPCFLY_OUT
-# 296 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
+	delay 120
 # 297 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitfieldeffect FLDEFF_NPCFLY_OUT
+	setfieldeffectargument 0, 1
 # 298 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
+	dofieldeffect FLDEFF_NPCFLY_OUT
 # 299 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
+	fadescreenswapbuffers FADE_TO_WHITE
 # 300 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
+	waitfieldeffect FLDEFF_NPCFLY_OUT
 # 301 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	clearflag AETHERIA_MUSEUM_2F_LUGIA
+	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
 # 302 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
+	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
+# 303 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0
+# 304 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
 # 305 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 60
+	clearflag FLAG_TEMP_1
+# 306 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_LUGIA
 # 307 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_PIN
+	release
 # 308 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
-# 309 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MAN_CUTSCENE, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
-# 310 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_EXPERT, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
+	fadescreenswapbuffers FADE_FROM_WHITE
 # 311 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 60
 # 313 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playbgm MUS_BW_VS_WINNING, TRUE
+	playse SE_PIN
 # 314 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+	applymovement AETHERIA_MUSEUM_2F_ELDER, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
 # 315 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Short
+	applymovement AETHERIA_MUSEUM_2F_MAN_CUTSCENE, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
 # 316 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
+	applymovement AETHERIA_MUSEUM_2F_EXPERT, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5
 # 317 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
-# 318 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
-# 320 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_ARTICUNO
-# 321 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_ZAPDOS
-# 322 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	removeobject AETHERIA_MUSEUM_2F_MOLTRES
-# 323 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm AETHERIA_MUSEUM_2F_ARTICUNO, 7, 33
-# 324 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm AETHERIA_MUSEUM_2F_ZAPDOS, 5, 33
-# 325 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectxyperm AETHERIA_MUSEUM_2F_MOLTRES, 9, 33
-# 326 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_UP
-# 327 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_UP
-# 328 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setobjectmovementtype AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_UP
-# 329 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_ARTICUNO
-# 330 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_ZAPDOS
-# 331 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	addobject AETHERIA_MUSEUM_2F_MOLTRES
-# 333 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
-# 335 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 120
-# 337 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_0
-# 341 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	closemessage
-# 343 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
-# 344 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
-# 345 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	delay 60
-# 346 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_FLY
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_LUGIA, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_1
-# 348 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay 30
-# 349 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_FLY
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
-# 351 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
-# 352 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
-# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmovement 0
-# 354 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_RAZOR_WIND
-# 355 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
-# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_RAZOR_WIND2
-# 357 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitse
-# 358 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 319 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playbgm MUS_BW_VS_WINNING, TRUE
+# 320 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+# 321 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	special DoSealedChamberShakingEffect_Short
-# 359 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 322 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitstate
+# 323 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
+# 324 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_TO_WHITE
+# 326 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	removeobject AETHERIA_MUSEUM_2F_ARTICUNO
+# 327 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	removeobject AETHERIA_MUSEUM_2F_ZAPDOS
+# 328 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	removeobject AETHERIA_MUSEUM_2F_MOLTRES
+# 329 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectxyperm AETHERIA_MUSEUM_2F_ARTICUNO, 7, 33
+# 330 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectxyperm AETHERIA_MUSEUM_2F_ZAPDOS, 5, 32
+# 331 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectxyperm AETHERIA_MUSEUM_2F_MOLTRES, 9, 32
+# 332 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectmovementtype AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_UP
+# 333 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectmovementtype AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_UP
+# 334 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setobjectmovementtype AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_UP
+# 335 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_ARTICUNO
+# 336 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_ZAPDOS
+# 337 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	addobject AETHERIA_MUSEUM_2F_MOLTRES
+# 339 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_WHITE
+# 341 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 120
+# 343 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_0
+# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	closemessage
+# 349 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmoncry
+# 351 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 60
+# 352 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_FLY
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_LUGIA, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_1
+# 354 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay 30
+# 355 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_FLY
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
+# 357 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
+# 358 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2
+# 359 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitmovement 0
 # 360 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_SUPER_EFFECTIVE
+	playse SE_M_ICY_WIND
 # 361 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitse
 # 362 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playmoncry SPECIES_ETERNATUS, CRY_MODE_WEAK
+	playse SE_M_THUNDER_WAVE
 # 363 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitmoncry
+	waitse
 # 364 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	playse SE_M_EXPLOSION
+	playse SE_M_FLAME_WHEEL2
 # 365 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special DoSealedChamberShakingEffect_Long
+	waitse
 # 366 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	waitstate
+	playse SE_M_STRING_SHOT
 # 367 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_TO_WHITE
+	waitse
 # 368 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	setweather WEATHER_NONE
+	special DoSealedChamberShakingEffect_Short
 # 369 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	doweather
+	waitstate
 # 370 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	special WaitWeather
+	playse SE_SUPER_EFFECTIVE
 # 371 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	fadescreenswapbuffers FADE_FROM_WHITE
+	waitse
+# 372 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playmoncry SPECIES_ETERNATUS, CRY_MODE_WEAK
 # 373 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_1
+	waitmoncry
+# 374 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	playse SE_M_SELF_DESTRUCT
+# 375 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	special DoSealedChamberShakingEffect_Long
 # 376 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitstate
+# 377 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_TO_WHITE
+# 378 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_WHITE
+# 379 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	setweather WEATHER_NONE
+# 380 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	doweather
+# 381 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	special WaitWeather
+# 382 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	waitstate
+# 384 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_1
+# 387 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
 	return
 
@@ -628,247 +638,247 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene_Movement_2:
 	face_down
 	step_end
 
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_0:
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
-# 106 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 107 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_right
 	step_end
 
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_1:
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
-# 108 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 109 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_down
 	step_end
 
-# 110 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_2:
-# 110 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	face_up
-# 110 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	emote_question_mark
 	step_end
 
-# 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 112 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_3:
-# 111 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 112 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	face_up
 	step_end
 
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_4:
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_fast_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_fast_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_faster_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_faster_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_faster_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_faster_down
-# 115 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 116 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_faster_down
 	step_end
 
-# 120 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_5:
-# 120 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	emote_exclamation_mark
 	step_end
 
-# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_6:
-# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	jump_2_down
-# 121 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_faster_down
 	step_end
 
-# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_7:
-# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	lock_facing_direction
-# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_down
 	step_end
 
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_8:
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	face_right
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	lock_facing_direction
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_left
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	emote_exclamation_mark
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_right
-# 127 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 128 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_in_place_right
 	step_end
 
-# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_9:
-# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_right
 	step_end
 
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_10:
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	face_left
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	jump_in_place_right
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	face_left
 	step_end
 
-# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 137 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Movement_11:
-# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 137 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_faster_left
-# 136 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 137 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_faster_left
 	step_end
 
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_0:
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 168 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 170 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_1:
-# 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
-# 171 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_2:
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 221 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
 	step_end
 
-# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3:
-# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
-# 223 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
 	step_end
 
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 244 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_4:
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	walk_in_place_fast_up
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	walk_in_place_fast_up
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay_16
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	delay_16
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 244 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	lock_facing_direction
-# 228 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 244 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
 	step_end
 
-# 229 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_5:
-# 229 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	walk_in_place_fast_up
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	walk_in_place_fast_up
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay_16
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+	delay_16
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	lock_facing_direction
-# 229 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 246 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
 	step_end
 
-# 298 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 301 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_0:
-# 298 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 301 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	lock_facing_direction
-# 298 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 301 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_fast_up
 	step_end
 
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_1:
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 347 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 353 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
 	step_end
 
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_2:
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
-# 350 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 356 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_up
 	step_end
 
@@ -888,26 +898,26 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene_Text_1:
 	.string "our isles.”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1_Text_0:
-# 93 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 94 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "The Great Volcano erupted in a fit of\n"
 	.string "unbridled rage under a torrential night.\p"
 	.string "From the billowing smoke emerged an\n"
 	.string "abominable beast with wings of blight.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2_Text_0:
-# 141 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 142 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "The suffocating smog tainted the skies\n"
 	.string "and the pouring rain.\p"
 	.string "Corrupting Pokémon into heartless\n"
 	.string "creatures of savagery and disdain.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_0:
-# 178 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 180 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "The Isle Guardians flew from their\n"
 	.string "roosts to face the wicked beast...$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_1:
-# 237 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 253 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "But even they stood no chance to the\n"
 	.string "beast's unfathomable power.\p"
 	.string "And our ancestors could only watch, {PAUSE 30}as\n"
@@ -919,14 +929,14 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Text_1:
 	.string "thee!”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene4_Text_0:
-# 265 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 281 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "Then suddenly, from the deepest,\n"
 	.string "darkest depths of the sea...\p"
 	.string "...arose an ethereal dragon with wings\n"
 	.string "of glimmering silver majesty.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_0:
-# 338 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 344 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "With a deafening roar and a powerful\n"
 	.string "wingbeat...\p"
 	.string "...the dragon summoned a tempest that\n"
@@ -934,5 +944,5 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_0:
 	.string "retreat!$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Text_1:
-# 374 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
+# 385 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	.string "$"

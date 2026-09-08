@@ -281,3 +281,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet {
         "“And so the fiend was sealed whence it came. The world saved from cataclysmic destruction.”"
     ), MSGBOX_SIGN)
 }
+
+
+

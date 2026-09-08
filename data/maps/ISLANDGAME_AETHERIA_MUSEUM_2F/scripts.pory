@@ -43,11 +43,15 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene {
         "“Long ago,{PAUSE 30} a great calamity befell upon our isles.”"
     ), MSGBOX_AUTOCLOSE)
 
+    playbgm(MUS_ABNORMAL_WEATHER, TRUE)
+    playse(SE_THUNDER)
+    waitse
+
     // wings of chaos emerge
-    call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1)
+    // call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1)
 
     // absol attacks farmer
-    call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2)
+    // call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2)
 
     // birbs try n attack wings of chaos
     call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3)
@@ -73,9 +77,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1 {
     setvar(VAR_0x8001, 20)
     callnative(TeleportCamera) 
     fadescreenswapbuffers(FADE_FROM_WHITE)
-    playbgm(MUS_ABNORMAL_WEATHER, TRUE)
-    playse(SE_THUNDER)
-    waitse
     delay(240)
     playse(SE_M_EARTHQUAKE)
     special(DoSealedChamberShakingEffect_Long)
@@ -150,7 +151,8 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3 {
     setvar(VAR_0x8000, 7)
     setvar(VAR_0x8001, 32)
     callnative(TeleportCamera) 
-    hideobjectat(AETHERIA_MUSEUM_2F_LUGIA, MAP_ISLANDGAME_AETHERIA_MUSEUM_2F)
+    setflag(FLAG_TEMP_1) // hide lugia
+    removeobject(AETHERIA_MUSEUM_2F_LUGIA)
     fadescreenswapbuffers(FADE_FROM_BLACK)
 
     delay(120)
@@ -224,6 +226,20 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3 {
     delay(20)
     applymovement(AETHERIA_MUSEUM_2F_MOLTRES, moves(walk_down * 4))
     waitmovement(0)
+    
+    removeobject(AETHERIA_MUSEUM_2F_ARTICUNO)
+    removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
+    removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
+    // setobjectxyperm(7, 31, AETHERIA_MUSEUM_2F_ARTICUNO)
+    // setobjectxyperm(9, 32, AETHERIA_MUSEUM_2F_ZAPDOS)
+    // setobjectxyperm(5, 32, AETHERIA_MUSEUM_2F_MOLTRES)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    addobject(AETHERIA_MUSEUM_2F_ARTICUNO)
+    addobject(AETHERIA_MUSEUM_2F_ZAPDOS)
+    addobject(AETHERIA_MUSEUM_2F_MOLTRES)
+    release
 
     applymovement(AETHERIA_MUSEUM_2F_MAN_CUTSCENE, moves(lock_facing_direction, walk_down))
     applymovement(AETHERIA_MUSEUM_2F_EXPERT, moves(lock_facing_direction, walk_down))
@@ -274,20 +290,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     setvar(VAR_0x8000, 7)
     setvar(VAR_0x8001, 32)
     callnative(TeleportCamera) 
-    hideobjectat(AETHERIA_MUSEUM_2F_LUGIA, MAP_ISLANDGAME_AETHERIA_MUSEUM_2F)
-    removeobject(AETHERIA_MUSEUM_2F_ARTICUNO)
-    removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
-    removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
-    setobjectxyperm(7, 31, AETHERIA_MUSEUM_2F_ARTICUNO)
-    setobjectxyperm(9, 32, AETHERIA_MUSEUM_2F_ZAPDOS)
-    setobjectxyperm(5, 32, AETHERIA_MUSEUM_2F_MOLTRES)
-    setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
-    setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
-    setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
-    addobject(AETHERIA_MUSEUM_2F_ARTICUNO)
-    addobject(AETHERIA_MUSEUM_2F_ZAPDOS)
-    addobject(AETHERIA_MUSEUM_2F_MOLTRES)
-
     fadescreenswapbuffers(FADE_FROM_BLACK)
     
     delay(120)
@@ -299,7 +301,10 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     applymovement(AETHERIA_MUSEUM_2F_ARTICUNO, moves(lock_facing_direction, walk_fast_up))
     applymovement(AETHERIA_MUSEUM_2F_ZAPDOS, moves(lock_facing_direction, walk_fast_up))
     applymovement(AETHERIA_MUSEUM_2F_MOLTRES, moves(lock_facing_direction, walk_fast_up))
-    clearflag(AETHERIA_MUSEUM_2F_LUGIA)
+    waitmovement(0)
+    clearflag(FLAG_TEMP_1)
+    addobject(AETHERIA_MUSEUM_2F_LUGIA)
+    release
     fadescreenswapbuffers(FADE_FROM_WHITE)
 
     
@@ -322,8 +327,8 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
     removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
     setobjectxyperm(AETHERIA_MUSEUM_2F_ARTICUNO, 7, 33)
-    setobjectxyperm(AETHERIA_MUSEUM_2F_ZAPDOS, 5, 33)
-    setobjectxyperm(AETHERIA_MUSEUM_2F_MOLTRES, 9, 33)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_ZAPDOS, 5, 32)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_MOLTRES, 9, 32)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
@@ -352,9 +357,13 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     applymovement(AETHERIA_MUSEUM_2F_ZAPDOS, moves(walk_up * 7))
     applymovement(AETHERIA_MUSEUM_2F_MOLTRES, moves(walk_up * 7))
     waitmovement(0)
-    playse(SE_M_RAZOR_WIND)
+    playse(SE_M_ICY_WIND)
     waitse
-    playse(SE_M_RAZOR_WIND2)
+    playse(SE_M_THUNDER_WAVE)
+    waitse
+    playse(SE_M_FLAME_WHEEL2)
+    waitse
+    playse(SE_M_STRING_SHOT)
     waitse
     special(DoSealedChamberShakingEffect_Short)
     waitstate
@@ -362,14 +371,15 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     waitse
     playmoncry(SPECIES_ETERNATUS, CRY_MODE_WEAK)
     waitmoncry
-    playse(SE_M_EXPLOSION)
+    playse(SE_M_SELF_DESTRUCT)
     special(DoSealedChamberShakingEffect_Long)
     waitstate
     fadescreenswapbuffers(FADE_TO_WHITE)
+    fadescreenswapbuffers(FADE_FROM_WHITE)
     setweather(WEATHER_NONE)
     doweather
     special(WaitWeather)
-    fadescreenswapbuffers(FADE_FROM_WHITE)
+    waitstate
 
     msgbox(format(
         ""
