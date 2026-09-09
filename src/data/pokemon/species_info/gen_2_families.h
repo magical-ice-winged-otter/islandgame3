@@ -8379,15 +8379,36 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
         SHADOW(2, 17, SHADOW_SIZE_L)
         FOOTPRINT(Lugia)
-        OVERWORLD(
-            sPicTable_Lugia,
-            SIZE_64x64,
-            SHADOW_SIZE_M,
-            TRACKS_NONE,
-            sAnimTable_Following,
-            gOverworldPalette_Lugia,
-            gShinyOverworldPalette_Lugia
-        )
+        // OVERWORLD(
+        //     sPicTable_Lugia,
+        //     SIZE_64x64,
+        //     SHADOW_SIZE_M,
+        //     TRACKS_NONE,
+        //     sAnimTable_Following,
+        //     gOverworldPalette_Lugia,
+        //     gShinyOverworldPalette_Lugia
+        // )
+        .overworldData = 
+        {
+            .tileTag = TAG_NONE,
+            .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,
+            .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+            .size = 1152,
+            .width = 48,
+            .height = 48,
+            .paletteSlot = PALSLOT_NPC_1,
+            .shadowSize = SHADOW_SIZE_M,
+            .inanimate = FALSE,
+            .compressed = FALSE,
+            .tracks = TRACKS_NONE,
+            .oam = &gObjectEventBaseOam_32x32,
+            .subspriteTables = sOamTables_48x48,
+            .anims = sAnimTable_Following,
+            .images = sPicTable_Lugia,
+            .affineAnims = gDummySpriteAffineAnimTable,
+        },
+        .overworldPalette = gOverworldPalette_Lugia,
+        .overworldShinyPalette = gShinyOverworldPalette_Lugia,
         .isLegendary = TRUE,
         .isFrontierBanned = TRUE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,

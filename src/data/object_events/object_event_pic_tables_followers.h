@@ -2120,7 +2120,7 @@ static const struct SpriteFrameImage sPicTable_TyranitarMega[] = {
 
 #if P_FAMILY_LUGIA
 static const struct SpriteFrameImage sPicTable_Lugia[] = {
-    overworld_ascending_frames(gObjectEventPic_Lugia, 8, 8),
+    overworld_ascending_frames(gObjectEventPic_Lugia, 6, 6),
 };
 #endif //P_FAMILY_LUGIA
 

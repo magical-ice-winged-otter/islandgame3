@@ -2887,7 +2887,7 @@ static const struct Subsprite sOamTable_48x48_Grass1[] = {
 };
 
 // Also used for truck
-static const struct SubspriteTable sOamTables_48x48[] = {
+const struct SubspriteTable sOamTables_48x48[] = {
     SUBSPRITE_TABLE_ENTRY(sOamTable_48x48), // reflections
     SUBSPRITE_TABLE_ENTRY(sOamTable_48x48), // elevation 3
     SUBSPRITE_TABLE_ENTRY(sOamTable_48x48_4), // elevation 4

@@ -9482,7 +9482,7 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u8 gMonFootprint_Lugia[] = INCBIN_U8("graphics/pokemon/lugia/footprint.1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
-    const u32 gObjectEventPic_Lugia[] = INCBIN_COMP("graphics/pokemon/lugia/overworld.4bpp");
+    const u32 gObjectEventPic_Lugia[] = INCBIN_U32("graphics/pokemon/lugia/overworld.4bpp");
 #if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
     const u16 gOverworldPalette_Lugia[] = INCBIN_U16("graphics/pokemon/lugia/overworld_normal.gbapal");
     const u16 gShinyOverworldPalette_Lugia[] = INCBIN_U16("graphics/pokemon/lugia/overworld_shiny.gbapal");
