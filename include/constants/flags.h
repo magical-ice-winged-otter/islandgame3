@@ -54,7 +54,11 @@
 #define FLAG_DEXNAV_GET                 0x28 
 #define FLAG_DEXNAV_DETECTOR_MODE       0x29 
 #define FLAG_FOLLOWERS_DISABLED         0x2A
-// #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+// Usage:
+// setflag(FLAG_SPAWN_INVISIBLE) to make the player invisible.
+// 
+// In order to make the player visible again, you will need to use applymovement with set_visible.
+#define FLAG_SPAWN_INVISIBLE            0x2B 
 // #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 // #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 // #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
