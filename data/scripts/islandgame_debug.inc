@@ -255,30 +255,34 @@ Debug_EventScript_Script_3::
 
 Debug_EventScript_Script_4::
 # 106 "data/scripts/islandgame_debug.pory"
+	setflag FLAG_SPAWN_INVISIBLE
+# 107 "data/scripts/islandgame_debug.pory"
+	warp MAP_PETALBURG_CITY, -1, 30, 40
+# 108 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_5::
-# 110 "data/scripts/islandgame_debug.pory"
+# 112 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_6::
-# 114 "data/scripts/islandgame_debug.pory"
+# 116 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_7::
-# 118 "data/scripts/islandgame_debug.pory"
+# 120 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
 
 Debug_EventScript_Script_8::
-# 122 "data/scripts/islandgame_debug.pory"
+# 124 "data/scripts/islandgame_debug.pory"
 	release
 	return
 
