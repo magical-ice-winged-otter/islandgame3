@@ -9,10 +9,19 @@ const STATE_EXHIBIT_WATCHED_MOVIE = 5
 // const STATE_FINAL = 7
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        if (var(VAR_AETHERIA_STATE) == STATE_EXHIBIT_BEGIN_EXHIBIT) { 
+            setflag(B_FLAG_FOLLOWERS_DISABLED) // this is done to prevent object glitches
+        }
+        else { // don't show cutscene NPCs if cutscene is finished
+            setflag(FLAG_TEMP_3)
+        }
+    }
+        
+
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_AETHERIA_STATE, STATE_EXHIBIT_BEGIN_EXHIBIT {
             call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene)
-            setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_WATCHED_MOVIE)
             return
         }
     ]
@@ -34,11 +43,12 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene {
     waitmovement(0)
     
     // Intro
-    fadescreenswapbuffers(FADE_TO_BLACK)
+    fadescreen(FADE_TO_BLACK)
     special(Script_FadeOutMapMusic)
     waitstate
     setweather(WEATHER_RAIN_THUNDERSTORM)
     doweather
+    
     msgbox(format(
         "“Long ago,{PAUSE 30} a great calamity befell upon our isles.”"
     ), MSGBOX_AUTOCLOSE)
@@ -48,10 +58,10 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene {
     waitse
 
     // wings of chaos emerge
-    // call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1)
+    call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1)
 
     // absol attacks farmer
-    // call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2)
+    call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene2)
 
     // birbs try n attack wings of chaos
     call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3)
@@ -62,21 +72,124 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene {
     // lugia saves the day
     call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5)
 
-    fadescreenswapbuffers(FADE_TO_BLACK)
+    fadescreen(FADE_TO_BLACK)
+    msgbox(format(
+        "In honor of the heavenly dragon's heroism, we granted it the name of Lugia.\p"
+        "The Savior of Marya."
+    ))
+    closemessage
     setvar(VAR_0x8000, 9)
     setvar(VAR_0x8001, 7)
     callnative(TeleportCamera) // snap back to reality
+    fadescreen(FADE_FROM_BLACK)
+    special(Script_FadeOutMapMusic)
+    waitstate
+    playbgm(MUS_LILYCOVE_MUSEUM, TRUE)
+    clearflag(B_FLAG_FOLLOWERS_DISABLED)
+
+    delay(60)
+    playse(SE_APPLAUSE)
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_1, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_2, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_3, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_4, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_5, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_AUDIENCE_MEMBER_6, moves(emote_heart, walk_in_place_up * 5))
+    applymovement(LOCALID_MUSEUM_MELISSA_2, moves(emote_heart, walk_in_place_up * 5))
+    waitse
+    applymovement(LOCALID_MUSEUM_MELISSA_2, moves(walk_in_place_fast_left * 2))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Woooooah. Those were some breathtaking visuals!\p"
+        "The sound design too, it really felt like we were experiencing the events of The Darkest Night in-person!\p"
+        "What did you think of it, {PLAYER}? Did you enjoy it?"
+    ), MSGBOX_YESNO)
+    if(var(VAR_RESULT) == NO) {
+        msgbox(format(
+            "Eeeeh? Reaaally? I thought it was a really faithful adaptation!"
+        ))
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_right))
+        waitmovement(0)
+        delay(30)
+        msgbox(format(
+            "I seeee. You wanted to see what the wicked beast looked like?\p"
+            "It's funny you mention that! To this day, we still don't really know much about its appearance.\p"
+            "Our ancestors described the wicked beast as something so terrifying, that anyone who saw it would go insane!\p"
+            "I'd hate to have been around to see it... We owe Lugia big time for what he did!"
+        ))
+    }
+    else {
+        msgbox(format(
+            "Yaaaay! I'm glad you did too! I was a lil worried that you would find this stuff kinda boring..."
+        ))
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_right))
+        waitmovement(0)
+        delay(30)
+        msgbox(format(
+            "Oooh, you're curious of where Lugia is today?\p"
+            "Weeeell, we're not really sure where he went after The Darkest Night.\p"
+            "But every year, the Silverwing Order makes a pilgrimage to the Northern Islands, where they saw Lugia fly in and out from!\p"
+            "So he's gotta be around there somewhere, right?\p"
+            "Maybe someday, we'll head there and see for ourselves! Heehee."
+        ))
+    }
+    closemessage
+
+    applymovement(AETHERIA_MUSEUM_2F_CURATOR, moves(walk_in_place_down * 2))
+    waitmovement(0)
+    applymovement(LOCALID_MUSEUM_MELISSA_2, moves(face_up))
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    delay(30)
+    msgbox(format(
+        "Thank you, thank you! You are all too kind.\p"
+        "I am happy to hear that all of you enjoyed our humble presentation!\p"
+        "Now that you've all been given some background information...\p"
+        "Come forth, and witness, the recovered remnants of that fateful day!"
+    ), MSGBOX_AUTOCLOSE)
+
+    applymovement(AETHERIA_MUSEUM_2F_CURATOR, moves(walk_right * 8, walk_up * 3))
+    waitmovement(0)
+    playse(SE_EXIT)
+    fadescreenswapbuffers(FADE_TO_BLACK)
+    removeobject(AETHERIA_MUSEUM_2F_CURATOR)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_1)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_2)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_3)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_4)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_5)
+    removeobject(LOCALID_MUSEUM_AUDIENCE_MEMBER_6)
     fadescreenswapbuffers(FADE_FROM_BLACK)
-
+    delay(30)
+    playse(SE_BIKE_HOP)
+    applymovement(LOCALID_MUSEUM_MELISSA_2, moves(jump_in_place_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}The recovered remnants!? What are we standing around here for?"
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_MUSEUM_MELISSA_2, moves(walk_fast_right * 7, walk_fast_up * 6))
+    waitmovement(0)
+    removeobject(LOCALID_MUSEUM_MELISSA_2)
+    playse(SE_EXIT)
+    waitse
+    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_WATCHED_MOVIE)
+    setflag(FLAG_TEMP_3)
     release
-
 }
 
+
+
+
+// Movie Scenes
 script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1 {
     setvar(VAR_0x8000, 7)
     setvar(VAR_0x8001, 20)
     callnative(TeleportCamera) 
-    fadescreenswapbuffers(FADE_FROM_WHITE)
+    fadescreen(FADE_FROM_WHITE)
     delay(240)
     playse(SE_M_EARTHQUAKE)
     special(DoSealedChamberShakingEffect_Long)
@@ -91,7 +204,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene1 {
     waitstate
     waitmoncry
     msgbox(format(
-        "The Great Volcano erupted in a fit of unbridled rage under a torrential night.\p"
+        "The Great Volcano erupted in a fit of unbridled rage beneath a torrential night.\p"
         "From the billowing smoke emerged an abominable beast with wings of blight."
     ), MSGBOX_AUTOCLOSE)
     fadescreenswapbuffers(FADE_TO_BLACK)
@@ -177,7 +290,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3 {
     waitmovement(0)
 
     msgbox(format(
-        "The Isle Guardians flew from their roosts to face the wicked beast..."
+        "The Winged Mirages flew from their roosts to face the wicked beast..."
     ))
     closemessage
 
@@ -230,9 +343,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3 {
     removeobject(AETHERIA_MUSEUM_2F_ARTICUNO)
     removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
     removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
-    // setobjectxyperm(7, 31, AETHERIA_MUSEUM_2F_ARTICUNO)
-    // setobjectxyperm(9, 32, AETHERIA_MUSEUM_2F_ZAPDOS)
-    // setobjectxyperm(5, 32, AETHERIA_MUSEUM_2F_MOLTRES)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
@@ -250,10 +360,10 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3 {
     delay(60)
 
     msgbox(format(
-        "But even they stood no chance to the beast's unfathomable power.\p"
+        "But even they stood no chance against the beast's unfathomable power.\p"
         "And our ancestors could only watch, {PAUSE 30}as their protectors betrayed them during their darkest hour.\p"
         "“Someone... anyone... please heed our plea!”\p"
-        "“Exorcise this foul creature, I pray to thee!”"
+        "“Exorcise this foul creature and bring salvation to these isles, I pray to thee!”"
     ))
     closemessage
     fadescreenswapbuffers(FADE_TO_BLACK)
@@ -326,15 +436,16 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     removeobject(AETHERIA_MUSEUM_2F_ARTICUNO)
     removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
     removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
-    setobjectxyperm(AETHERIA_MUSEUM_2F_ARTICUNO, 7, 33)
-    setobjectxyperm(AETHERIA_MUSEUM_2F_ZAPDOS, 5, 32)
-    setobjectxyperm(AETHERIA_MUSEUM_2F_MOLTRES, 9, 32)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
     setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_ARTICUNO, 7, 33)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_ZAPDOS, 9, 32)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_MOLTRES, 5, 32)
     addobject(AETHERIA_MUSEUM_2F_ARTICUNO)
     addobject(AETHERIA_MUSEUM_2F_ZAPDOS)
     addobject(AETHERIA_MUSEUM_2F_MOLTRES)
+    release
 
     fadescreenswapbuffers(FADE_FROM_WHITE)
 
@@ -371,20 +482,79 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     waitse
     playmoncry(SPECIES_ETERNATUS, CRY_MODE_WEAK)
     waitmoncry
-    playse(SE_M_SELF_DESTRUCT)
+    playse(SE_M_EXPLOSION)
     special(DoSealedChamberShakingEffect_Long)
     waitstate
+    playse(SE_FAINT)
     fadescreenswapbuffers(FADE_TO_WHITE)
+    setflag(FLAG_TEMP_2)
+    removeobject(AETHERIA_MUSEUM_2F_WINGSOFCHAOS)
     fadescreenswapbuffers(FADE_FROM_WHITE)
     setweather(WEATHER_NONE)
     doweather
     special(WaitWeather)
     waitstate
+    special(Script_FadeOutMapMusic)
+    waitstate
+    playbgm(MUS_SOOTOPOLIS, TRUE)
+
+    
+    applymovement(AETHERIA_MUSEUM_2F_LUGIA, moves(walk_down * 6))
+    waitmovement(0)
+    applymovement(AETHERIA_MUSEUM_2F_ARTICUNO, moves(walk_down * 5))
+    applymovement(AETHERIA_MUSEUM_2F_ZAPDOS, moves(walk_down * 7))
+    applymovement(AETHERIA_MUSEUM_2F_MOLTRES, moves(walk_down * 7))
+    waitmovement(0)
+
+    removeobject(AETHERIA_MUSEUM_2F_ARTICUNO)
+    removeobject(AETHERIA_MUSEUM_2F_ZAPDOS)
+    removeobject(AETHERIA_MUSEUM_2F_MOLTRES)
+    removeobject(AETHERIA_MUSEUM_2F_LUGIA)
+    removeobject(AETHERIA_MUSEUM_2F_ELDER)
+    removeobject(AETHERIA_MUSEUM_2F_EXPERT)
+    removeobject(AETHERIA_MUSEUM_2F_MAN_CUTSCENE)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_ARTICUNO, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_ZAPDOS, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_MOLTRES, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_LUGIA, MOVEMENT_TYPE_WALK_IN_PLACE_DOWN)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_ELDER, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_EXPERT, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
+    setobjectmovementtype(AETHERIA_MUSEUM_2F_MAN_CUTSCENE, MOVEMENT_TYPE_WALK_IN_PLACE_UP)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_ARTICUNO, 7, 30)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_ZAPDOS, 9, 31)
+    setobjectxyperm(AETHERIA_MUSEUM_2F_MOLTRES, 5, 31)
+    addobject(AETHERIA_MUSEUM_2F_ARTICUNO)
+    addobject(AETHERIA_MUSEUM_2F_ZAPDOS)
+    addobject(AETHERIA_MUSEUM_2F_MOLTRES)
+    addobject(AETHERIA_MUSEUM_2F_LUGIA)
+    addobject(AETHERIA_MUSEUM_2F_ELDER)
+    addobject(AETHERIA_MUSEUM_2F_EXPERT)
+    addobject(AETHERIA_MUSEUM_2F_MAN_CUTSCENE)
+    release
+    playse(SE_APPLAUSE)
+    waitse
 
     msgbox(format(
-        ""
-    ))
-    fadescreenswapbuffers(FADE_TO_BLACK)
+        "Together, the dragon and the Winged Mirages felled the wicked beast.\p"
+        "Sending it back from whence it came, sealed away, never again to be released."
+    ), MSGBOX_AUTOCLOSE)
+
+    delay(60)
+    playmoncry(SPECIES_LUGIA, CRY_MODE_NORMAL)
+    waitmoncry
+    setfieldeffectargument(0, 1)
+    dofieldeffect(FLDEFF_NPCFLY_OUT)
+    fadescreenswapbuffers(FADE_TO_WHITE)
+    waitfieldeffect(FLDEFF_NPCFLY_OUT)
+    removeobject(AETHERIA_MUSEUM_2F_LUGIA)
+    fadescreenswapbuffers(FADE_FROM_WHITE)
+    release
+
+    msgbox(format(
+        "As daybreak arrived, the dragon returned to the briny deep.\p"
+        "...but should catastrophe strike once more, it would return...\p"
+        "A promise it vowed to keep."
+    ), MSGBOX_AUTOCLOSE)
     return    
 
 }

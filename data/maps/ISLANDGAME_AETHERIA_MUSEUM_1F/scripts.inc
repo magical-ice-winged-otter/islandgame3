@@ -152,11 +152,11 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Curator_1:
 	setobjecthidden LOCALID_CURATOR
 # 122 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	setvar VAR_AETHERIA_STATE, 4
-# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 123 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 AetheriaMuseum_CuratorEnd:
-# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 124 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	closemessage
-# 126 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 125 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	release
 	return
 
@@ -167,147 +167,147 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Curator_2:
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist::
-# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 131 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 132 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	faceplayer
-# 134 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 133 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Karen::
-# 142 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 141 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 143 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 142 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Karen_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_KarenKid::
-# 150 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 149 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 151 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 150 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_KarenKid_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist2::
-# 157 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 156 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 158 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 157 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist2_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Artist::
-# 165 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 164 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 166 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 165 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Artist_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_NinjaBoy::
-# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 172 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 174 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 173 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_NinjaBoy_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Psychic::
-# 180 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 179 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 181 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 180 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	faceplayer
-# 182 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 181 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Psychic_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_FatMan::
-# 190 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 189 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 191 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 190 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	faceplayer
-# 192 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 191 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_FatMan_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Woman::
-# 198 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 197 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 199 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 198 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_Woman_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid::
-# 205 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 204 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 206 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 205 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	faceplayer
-# 207 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 206 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy::
-# 214 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 213 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	lock
-# 215 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 214 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	faceplayer
-# 216 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 215 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting::
-# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 224 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_PokemonPainting::
-# 234 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 233 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_PokemonPainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_BerriesPainting::
-# 241 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 240 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_BerriesPainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_LandscapePainting::
-# 248 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 247 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_LandscapePainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_PokeballPainting::
-# 255 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 254 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_PokeballPainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_VasePainting::
-# 262 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 261 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_VasePainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_GrassPainting::
-# 268 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 267 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_GrassPainting_Text_0, MSGBOX_SIGN
 	return
 
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet::
-# 276 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 275 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	msgbox ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet_Text_0, MSGBOX_SIGN
 	return
 
@@ -384,7 +384,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Melissa_Text_0:
 # 94 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Are you enjoying the museum so far? The\n"
 	.string "artwork here is always soooo gorg!\p"
-	.string "My brother used to take me here all the\n"
+	.string "My big bro used to take me here all the\n"
 	.string "time when I was still a lil sweet pea!\p"
 	.string "They've always periodically added more\n"
 	.string "pieces, but this is new exhibit their\l"
@@ -402,7 +402,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Curator_Text_1:
 	.string "experience,{PAUSE 30} The Darkest Night...$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist_Text_0:
-# 135 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 134 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Welcome to Aetheria's Museum of Fine\n"
 	.string "Arts.\p"
 	.string "Unfortunately due to high demand, we\n"
@@ -410,18 +410,18 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist_Text_0:
 	.string "We apologize for the inconvenience.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Karen_Text_0:
-# 144 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 143 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Are you even listening? I said I want a\n"
 	.string "REFUND on my TICKET!\p"
 	.string "I'm done speaking with you! Where is\n"
 	.string "your manager!?$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_KarenKid_Text_0:
-# 152 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 151 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Moooooooom! I want my Rotom Pad!$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist2_Text_0:
-# 159 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 158 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Again, as per my previous statement, all\n"
 	.string "ticket sales are final.\p"
 	.string "If you have any disagreements with our\n"
@@ -429,20 +429,20 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist2_Text_0:
 	.string "concerns through our website.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Artist_Text_0:
-# 167 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 166 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Hmmm, yes... This is quite the masterful\n"
 	.string "composition.\p"
 	.string "It truly depicts the Isle Guardians in\n"
 	.string "all their limitless splendor.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_NinjaBoy_Text_0:
-# 175 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 174 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Heheh. If I stay still on this wall,\n"
 	.string "people will think I'm part of the\l"
 	.string "exhibit!$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Psychic_Text_0:
-# 183 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 182 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "The vast majority of human history is\n"
 	.string "unknown.\p"
 	.string "Whether it was destroyed, lost,\n"
@@ -453,18 +453,18 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_Psychic_Text_0:
 	.string "truly know nothing of the world.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_FatMan_Text_0:
-# 193 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 192 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "So mysterious... What secrets do you\n"
 	.string "think are hiding in that island, if it\l"
 	.string "even exists?$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_Woman_Text_0:
-# 200 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 199 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "Ooooh, what a beautiful looking vase!\n"
 	.string "I've never seen anything like it!$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid_Text_0:
-# 208 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 207 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "I'm in the process of writing a novel,\n"
 	.string "but I've been having trouble converting\l"
 	.string "my thoughts into words.\p"
@@ -472,7 +472,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid_Text_0:
 	.string "will remedy my writing block.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy_Text_0:
-# 217 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 216 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "This ancient tablet is the oldest\n"
 	.string "recollection we have of The Darkest\l"
 	.string "Night.\p"
@@ -482,7 +482,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_SilverwingGuy_Text_0:
 	.string "savior shall never be forgotten.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting_Text_0:
-# 226 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 225 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Winged Mirages”\n"
 	.string "By Kozmocrat\p"
 	.string "“For thousands of years, the isles of\n"
@@ -494,39 +494,39 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_IsleGuardiansPainting_Text_0:
 	.string "preserved.”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_PokemonPainting_Text_0:
-# 235 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 234 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“A Girl and Her Pokémon”\n"
 	.string "By Kyraipikuma\p"
 	.string "“In loving memory of Sir Buttermilk\n"
 	.string "Pancake Flapjack III”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_BerriesPainting_Text_0:
-# 242 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 241 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Still Life”\n"
 	.string "By InsertNameAqui\p"
 	.string "{COLOR RED}(It's a painting of an assortment of\n"
 	.string "scrumptious-looking berries.)$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_LandscapePainting_Text_0:
-# 249 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 248 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Faraway Island”\n"
 	.string "By Keleu\p"
 	.string "“A mythical island in the far reaches of\n"
 	.string "the Maryan Sea.”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_PokeballPainting_Text_0:
-# 256 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 255 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Ancient Poké Ball”\p"
 	.string "“A Poké Ball hand-crafted by the\n"
 	.string "ancient Arborians using an Apricorn.”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_VasePainting_Text_0:
-# 263 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 262 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "{COLOR RED}(It's just a painting of a vase. That's\n"
 	.string "it. There's nothing special about it.)$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_GrassPainting_Text_0:
-# 269 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 268 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Sylvan Sanctuary”\p"
 	.string "“We dedicate this painting to the voice\n"
 	.string "of the forest.”\p"
@@ -534,7 +534,7 @@ ISLANDGAME_AETHERIA_MUSEUM_1F_GrassPainting_Text_0:
 	.string "our lush jungle.”$"
 
 ISLANDGAME_AETHERIA_MUSEUM_1F_StoneTablet_Text_0:
-# 277 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
+# 276 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_1F/scripts.pory"
 	.string "“Ancient Tablet”\p"
 	.string "“Within the maws of the Great Volcano\n"
 	.string "slumbered the wicked Wings of Chaos.”\p"

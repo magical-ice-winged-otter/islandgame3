@@ -122,7 +122,8 @@ script ISLANDGAME_AETHERIA_Melissa {
                 msgbox(format(
                     "Humph. Don't you know it's rude to stand a cute girl up?"
                 ))
-            } else {
+            } 
+            else {
                 msgbox(format(
                     "Humph. Maybe I should reconsider giving the surprise I had planned for you..."
                 ))
@@ -135,10 +136,22 @@ script ISLANDGAME_AETHERIA_Melissa {
             ))
             msgbox(format(
                 "A new exhibit at the Aetheria Museum just recently opened up today!\p"
-                "I figured since you're studying abroad here, we could check it out together!\p"
-                "Buuut, here's the catch... These tickets weren't cheap to get a hold of...\p"
-                "So in exchange, you'll have to entertain me with a battle! How's that sound?"
-            ), MSGBOX_YESNO)
+                "I figured since you're studying abroad here, we could check it out together!"
+            ))
+            checkplayergender // unique dialogue based on who the player is larping as
+            if(var(VAR_RESULT) == MALE) {
+                msgbox(format(
+                    "E-Eeeeh? D-Don't be silly, it's nothing like a d-date! A-Ahem! Anyways...\p"
+                    "These tickets weren't cheap to get ahold of, and since you made me wait for soooo loooong...\p"
+                    "You'll have to beat me in a battle to get yours! How's that sound?"
+                ), MSGBOX_YESNO)
+            }
+            else {
+                msgbox(format(
+                    "Buuut, here's the catch... These tickets weren't cheap to get a hold of...\p"
+                    "So in exchange, you'll have to entertain me with a battle! How's that sound?"
+                ), MSGBOX_YESNO)
+            }
             if (var(VAR_RESULT) == NO) {
                 msgbox(format(
                     "Eeeeh? {PAUSE 30}You're not up for it right now?\p"

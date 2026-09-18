@@ -92,7 +92,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_Melissa {
     faceplayer
     msgbox(format(
         "Are you enjoying the museum so far? The artwork here is always soooo gorg!\p"
-        "My brother used to take me here all the time when I was still a lil sweet pea!\p"
+        "My big bro used to take me here all the time when I was still a lil sweet pea!\p"
         "They've always periodically added more pieces, but this is new exhibit their first new major addition!\p"
         "Eeee! I can't wait!"
     ), MSGBOX_AUTOCLOSE)
@@ -120,7 +120,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_Curator {
     removeobject(LOCALID_CURATOR)
     setobjecthidden(LOCALID_CURATOR)
     setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_BEGIN_EXHIBIT)
-
     AetheriaMuseum_CuratorEnd:
         closemessage
         release
