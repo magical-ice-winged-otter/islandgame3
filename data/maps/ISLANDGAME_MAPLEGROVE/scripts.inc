@@ -163,4 +163,5 @@ ISLANDGAME_MAPLEGROVE_Interact_PondLady_Text_0:
 
 ISLANDGAME_MAPLEGROVE_Interact_Sign_Text_0:
 # 88 "data/maps/ISLANDGAME_MAPLEGROVE/scripts.pory"
-	.string "MAPLEGROVE$"
+	.string "MAPLEGROVE\n"
+	.string "The Sylvan Sanctuary$"

@@ -85,7 +85,8 @@ script ISLANDGAME_MAPLEGROVE_Interact_PondLady {
 
 script ISLANDGAME_MAPLEGROVE_Interact_Sign {
     msgbox(format(
-        "MAPLEGROVE"
+        "MAPLEGROVE \n"
+        "The Sylvan Sanctuary"
     ), MSGBOX_SIGN)
 }
 

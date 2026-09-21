@@ -14889,24 +14889,6 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_IslandgamePancakeMisu,
         .iconPalette = gItemIconPalette_IslandgamePancakeMisu,
     },
-
-    [ITEM_ISLANDGAME_MUSEUM_TICKET] =
-    {
-        .name = ITEM_NAME("Museum Ticket"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Grants admission\n"
-            "to Aetheria's\n"
-            "fine arts museum."),
-        .importance = 1,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .secondaryId = 1,
-        .iconPic = gItemIcon_EonTicket,
-        .iconPalette = gItemIconPalette_EonTicket,
-    },
-
 };
 
 #undef ITEM_NAME

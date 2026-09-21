@@ -5624,20 +5624,20 @@
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_MUSEUM_1F",
       "name": "ISLANDGAME_AETHERIA_MUSEUM_1F_Layout",
-      "width": 22,
-      "height": 19,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_1F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_1F/map.bin"
     },
     {
       "id": "LAYOUT_ISLANDGAME_AETHERIA_MUSEUM_2F",
       "name": "ISLANDGAME_AETHERIA_MUSEUM_2F_Layout",
-      "width": 31,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F/map.bin"
     },

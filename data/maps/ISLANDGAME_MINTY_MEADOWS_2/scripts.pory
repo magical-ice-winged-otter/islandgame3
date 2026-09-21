@@ -57,8 +57,8 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
     waitmovement
 
     msgbox(format(
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Nnngh...{PAUSE 30} I'm only missing one more Pokémon!{PAUSE 30} Where in the world could it be?\p"
-        "Waah! This Pokédex stuff is so frustrating! I just wanna battle!\p"
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Nnngh...{PAUSE 30} I'm only missing one more Pokémon!{PAUSE 30} Where in the world is it?\p"
+        "Waah! I give up! I'm convinced it doesn't even exist! \p"
         "Eh?"
     ), MSGBOX_AUTOCLOSE)
 
@@ -76,13 +76,14 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
 
     msgbox(format(
         "Ooooh! You're {PLAYER}? The professor told me about you earlier today!\p"
-        "It's good to meet you!{PAUSE 30} I'm Melissa, a rising Pokémon trainer just like you!\p"
-        "I was trying to fill out the Pokédex here, but I couldn't find a Scorbunny, no matter how hard I looked...\p"
-        "But now that you're here... let's have a Pokémon battle, and I won't take no for an answer!\p"
+        "It's good to meet you! I'm Melissa, a rising Pokémon trainer just like you!\p"
+        "I was trying to fill out my Pokédex here, but I couldn't find a Scorbunny, no matter how hard I looked...\p"
+        "Hope the isles are treating you kindly so far! I've been here all my life, so if ya ever need guidance, leave it to me!\p"
+        "Oh!{PAUSE 30} Now that you're here, let's have a Pokémon battle! I need some action!\p"
         "I might be new just like you... but don't you underestimate me!"
     ), MSGBOX_AUTOCLOSE)
 
-    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, format("Ack! I guess I got a little too ambitious..."))
+    trainerbattle_no_intro(TRAINER_MINTY_MEADOWS_RIVAL, format("Ack! Looks like I was the one doing the underestimating!"))
 
     if (specialvar(VAR_RESULT, GetBattleOutcome) != B_OUTCOME_WON) {
         return
@@ -108,7 +109,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
     waitmovement
 
     msgbox(format(
-        "{COLOR GREEN}Paul: {COLOR DARK_GRAY}I'm Paul, I own the nearby farm up north with my wife.\p"
+        "{COLOR GREEN}Farm Owner: {COLOR DARK_GRAY}I'm Paul, I'm one of the owners of Fresa Farms.\p"
         "Have you two seen a Mareep with a blue collar wandering around by chance? \p"
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}I haven't... Did you lose one?\p"
         "{COLOR GREEN}Paul: {COLOR DARK_GRAY}I'm afraid so... When I was counting my Mareep after taking them out to graze, I noticed one was missing."
@@ -117,7 +118,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_RivalFight {
     playse(SE_PIN)
 	applymovement(LOCALID_RIVAL, moves(emote_exclamation_mark, delay_8 * 6)) 
 	waitmovement
-    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look right away!"), MSGBOX_AUTOCLOSE)
+    msgbox(format("{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Oh my... that's terrible! We'll help you look, right {PLAYER}?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up, delay_16 * 2, walk_in_place_faster_up, delay_16 * 2, face_down, delay_16 * 2))
     waitmovement
 
@@ -170,7 +171,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Rival {
 
 script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mareep {
     playmoncry(SPECIES_MAREEP, CRY_MODE_WEAK)
-    msgbox(format("{COLOR BLUE}(BRO HELP ME PLZ)"), MSGBOX_AUTOCLOSE)
+    msgbox(format("Reep! Reep! {COLOR BLUE}(BRO HELP ME PLZ)"), MSGBOX_AUTOCLOSE)
     waitmoncry
 }
 
@@ -245,7 +246,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     applymovement(LOCALID_RIVAL, moves(face_down))
     waitmovement
-    msgbox(format("We make a pretty solid team, don't we, {PLAYER}?"), MSGBOX_AUTOCLOSE)
+    msgbox(format("Ehe...! We make a pretty solid team, don't we, {PLAYER}?"), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_in_place_slow_up))
     waitmovement
     applymovement(LOCALID_RIVAL, moves(face_down, emote_question_mark))
@@ -253,7 +254,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     msgbox(format(
         "...Eh? Something was off about the Pokémon? What do you mean? \p"
-        "Red eyes? A wicked dark aura? I didn't see any of that...\p"
+        "Red eyes? A wicked dark aura? Hmmmn... I didn't see any of that.\p"
         "Well, either way, what's important is that Mareep is safe! Let's get him back to old man Paulie!"
     ), MSGBOX_AUTOCLOSE)
 
@@ -312,16 +313,14 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     msgbox(format(
         "Eeeh!?{PAUSE 60} You don't know about the tournament!?\p"
-        "It's a tournament hosted during the Silverwing Festival, where only the best trainers of Marya assemble to compete for the Silverwing Cup!\p"
-        "My big bro was Festival Champion for three straight years, so I'm following in his footsteps!\p"
-        "I've even got some of his secret spice, so I'm all lined up to take that trophy! Hee-hee.\p"
-        "Oh, but in order to qualify for the tournament...\p"
-        "...you'll have to complete the Marya Gym Challenge!"
+        "It's a tournament hosted during the Silverwing Festival where only the best trainers of Marya assemble to compete for the Silverwing Cup!\p"
+        "I'm taking part in it, and I think you should to! As a natural trainer, you'd be a great competitor!\p"
+        "But in order to qualify...{PAUSE 30} you'll have to complete the Marya Gym Challenge!"
     ))
 
     msgbox(format(
-        "You'll have to travel across the three main islands of Oranna, Lumine, and Minerva...\p"
-        "...and defeat their respective gym leaders in battle!\p"
+        "You'll have to travel across the three main islands of Oranna, Lumine, and Minerva... \p"
+        "...and defeat their respective gym leaders in battle! \p"
         "Ooh... I can't wait! I wish the festival was tomorrow!\p"
         "Oh, you're right.{PAUSE 30} Neither of us would qualify if it started tomorrow...\p"
         "There I go being silly again, ehe."
@@ -329,7 +328,7 @@ script ISLANDGAME_MINTY_MEADOWS_2_Interact_Mightyena {
 
     msgbox(format(
         "Well, I'm going to go back to the professor to report my findings.\p"
-        "But {PLAYER}, you should go west of Maplegrove and head up to Tidalcove!\p"
+        "But {PLAYER}, you should go west of Maplegrove and head up to Tidalcove! \p"
         "That's where you'll find the first gym leader: Ruka!\p"
         "Ruka is really famous around here. On top of being a gym leader, she used to be a professional swimmer and swimsuit model!"
     ))

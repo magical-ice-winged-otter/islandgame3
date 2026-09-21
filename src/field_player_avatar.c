@@ -1,4 +1,3 @@
-#include "constants/flags.h"
 #include "global.h"
 #include "main.h"
 #include "bike.h"
@@ -1655,14 +1654,7 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     gPlayerAvatar.spriteId = objectEvent->spriteId;
     gPlayerAvatar.gender = gender;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
-
-    if (FlagGet(FLAG_SPAWN_INVISIBLE))
-    {
-        FlagClear(FLAG_SPAWN_INVISIBLE); 
-        SetPlayerInvisibility(TRUE);
-    } else {
-        CreateFollowerNPCAvatar();
-    } 
+    CreateFollowerNPCAvatar();
 }
 
 void SetPlayerInvisibility(bool8 invisible)

@@ -617,94 +617,92 @@ ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Middle_1:
 # 381 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	applymovement LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleIntro
 # 382 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
-	waitmovement
-# 383 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	call ISLANDGAME_CAMP_PERSI_JonasMain
-# 384 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 383 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	applymovement LOCALID_JONAS, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro
-# 385 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 384 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	applymovement LOCALID_SNORUNT, ISLANDGAME_CAMP_PERSI_JonasMiddleOutro
-# 386 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 385 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	call ISLANDGAME_CAMP_PERSI_JonasEnd
 	return
 
 
-# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 389 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 ISLANDGAME_CAMP_PERSI_JonasMiddleIntro:
-# 391 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 391 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 391 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 391 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 391 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 390 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
 	step_end
 
-# 394 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 393 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 ISLANDGAME_CAMP_PERSI_JonasMiddleOutro:
-# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 394 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_left
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
-# 396 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 395 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	walk_down
 	step_end
 
 ISLANDGAME_CAMP_PERSI_Trainer_Hanzo::
-# 402 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 401 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_single TRAINER_CAMP_PERSI_TRAINER_1, ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text, ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text_0, ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete
-# 403 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 402 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text_1, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward::
-# 414 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 413 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_single TRAINER_CAMP_PERSI_TRAINER_2, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text_0
-# 415 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 414 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text_1, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo::
-# 426 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 425 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_single TRAINER_CAMP_PERSI_TRAINER_3, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text_0
-# 427 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 426 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text_1, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy::
-# 438 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 437 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_single TRAINER_CAMP_PERSI_TRAINER_4, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text_0
-# 440 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 439 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text_1, MSGBOX_NPC
 	return
 
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina::
-# 454 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 453 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_single TRAINER_CAMP_PERSI_TRAINER_5, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text, ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text_0
-# 456 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 455 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text_1, MSGBOX_AUTOCLOSE
 	return
 
 
 ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete::
-# 472 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 471 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete_Text_0, MSGBOX_AUTOCLOSE
 	checkitem ITEM_ISLANDGAME_MACHETE
 # 0 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
@@ -713,105 +711,105 @@ ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete::
 	return
 
 ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete_1:
-# 479 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 478 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	giveitem ITEM_ISLANDGAME_MACHETE
-# 480 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 479 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	closemessage
 	return
 
 
 ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward::
-# 485 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 484 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_Text_0
 	checkitemspace ITEM_SOOTHE_BELL
 # 0 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_2
-# 492 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 491 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_Text_1
-# 493 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 492 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	questmenu QUEST_PERSI_FAVORITE_CARD, QUEST_REWARD
 ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_1:
-# 496 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 495 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	release
 	return
 
 ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_2:
-# 488 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 487 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	giveitem ITEM_SOOTHE_BELL
-# 489 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 488 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	completequest QUEST_PERSI_FAVORITE_CARD
 	goto ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_1
 
 
 ISLANDGAME_CAMP_PERSI_JonasStart::
-# 500 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 499 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasStart_Text_0, MSGBOX_AUTOCLOSE
-# 501 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 500 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	playbgm MUS_DP_ENCOUNTER_SAILOR, TRUE
 	return
 
 
 ISLANDGAME_CAMP_PERSI_JonasMain::
-# 506 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 505 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasMain_Text_0
-# 519 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 517 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	setflag FLAG_NO_WHITEOUT
-# 521 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 519 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	trainerbattle_no_intro TRAINER_CAMP_PERSI_JONAS, ISLANDGAME_CAMP_PERSI_JonasMain_Text_1
-# 527 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 525 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	clearflag FLAG_NO_WHITEOUT
 	specialvar VAR_RESULT, GetBattleOutcome
 # 0 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	compare VAR_RESULT, B_OUTCOME_WON
 	goto_if_eq ISLANDGAME_CAMP_PERSI_JonasMain_2
-# 540 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 538 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasMain_Text_3, MSGBOX_AUTOCLOSE
-# 545 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 543 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	playfanfare MUS_HEAL
-# 546 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 544 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	waitfanfare
-# 547 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 545 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	special HealPlayerParty
-# 549 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 547 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasMain_Text_4
-# 550 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 548 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	giveitem ITEM_ENERGY_POWDER
 ISLANDGAME_CAMP_PERSI_JonasMain_1:
-# 553 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 551 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasMain_Text_5, MSGBOX_AUTOCLOSE
-# 563 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 561 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	setflag FLAG_CAMP_PERSI_JONAS_DEFEATED
-# 564 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 562 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, ISLANDGAME_CAMP_PERSI_JonasMain_Movement_0
 	return
 
 ISLANDGAME_CAMP_PERSI_JonasMain_2:
-# 530 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 528 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	msgbox ISLANDGAME_CAMP_PERSI_JonasMain_Text_2, MSGBOX_AUTOCLOSE
-# 535 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 533 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	playfanfare MUS_HEAL
-# 536 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 534 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	waitfanfare
-# 537 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 535 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	special HealPlayerParty
 	goto ISLANDGAME_CAMP_PERSI_JonasMain_1
 
 
 ISLANDGAME_CAMP_PERSI_JonasEnd::
-# 569 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 567 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	waitmovement
-# 570 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 568 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	savebgm MUS_DUMMY
-# 571 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 569 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	fadedefaultbgm
-# 572 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 570 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	removeobject LOCALID_JONAS
-# 573 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 571 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	removeobject LOCALID_SNORUNT
-# 574 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 572 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	delay 32
-# 575 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 573 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	releaseall
 	return
 
@@ -834,13 +832,13 @@ ISLANDGAME_CAMP_PERSI_Trigger_Jonas_Right_Movement_0:
 	face_left
 	step_end
 
-# 564 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 562 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 ISLANDGAME_CAMP_PERSI_JonasMain_Movement_0:
-# 564 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 562 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	delay_16
-# 564 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 562 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	delay_16
-# 564 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 562 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	face_down
 	step_end
 
@@ -1089,55 +1087,55 @@ ISLANDGAME_CAMP_PERSI_Interact_Sign_Directions_Text_0:
 	.string "CHERIPORT{LEFT_ARROW}\nCAMP PERSI{UP_ARROW}$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text_0:
-# 402 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 401 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Bakana... I lost!?$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text_1:
-# 403 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 402 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "I may not be worthy of my blade now, but\n"
 	.string "I will be back for it later! Believe it!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text_0:
-# 414 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 413 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "If only I had another Pokémon...$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text_1:
-# 415 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 414 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Go bug someone else! Camp's already\n"
 	.string "miserable enough with Hanzo!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text_0:
-# 426 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 425 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Hoo boy, your Pokémon are hot!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text_1:
-# 427 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 426 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "I really like Pokémon battles. It's a\n"
 	.string "great chance to bond with your buds!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text_0:
-# 438 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 437 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Was I fiery enough?$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text_1:
-# 441 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 440 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Pokémon battles aren't really my thing,\n"
 	.string "to be frank. Maybe there's something\l"
 	.string "else I can catch Lazlo's eye with...$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text_0:
-# 454 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 453 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "I learned a lot from our battle!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text_1:
-# 457 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 456 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Pokémon can hold items like berries to\n"
 	.string "give them an edge in battle.\p"
 	.string "But they can't hold items like potions\n"
 	.string "for some reason. Why is that?$"
 
 ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete_Text_0:
-# 473 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 472 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Naruhodo... It appears I still have a lot\n"
 	.string "to learn...\p"
 	.string "{PLAYER}-san! As my first battle and\n"
@@ -1146,36 +1144,36 @@ ISLANDGAME_CAMP_PERSI_DefeatedHanzoGivesMachete_Text_0:
 	.string "know of it!$"
 
 ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_Text_0:
-# 485 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 484 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Here, take this. I made it during arts\n"
 	.string "and crafts!$"
 
 ISLANDGAME_CAMP_PERSI_TryGiveTradingCardReward_Text_1:
-# 492 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 491 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Ummm...{PAUSE 30}\n"
 	.string "Your bag is totally full...$"
 
 ISLANDGAME_CAMP_PERSI_JonasStart_Text_0:
-# 500 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 499 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "{COLOR GREEN}???: {COLOR DARK_GRAY}Ah, you there!$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_0:
-# 507 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 506 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "You don't look like you're from around\n"
 	.string "here. Are you a tourist by chance?\p"
 	.string "...\p"
 	.string "Oh? You've come to aid Professor Palm in\n"
 	.string "his research and become a Pokémon\l"
 	.string "trainer?\p"
-	.string "Well, pardon my assumption then!\n"
+	.string "Well, pardon my assumption, then!\n"
 	.string "Welcome to the Maryan Isles,\l"
 	.string "{PLAYER}!\p"
 	.string "My name is {COLOR GREEN}Jonas{COLOR DARK_GRAY}. I'm a traveling\n"
 	.string "merchant of The Silverwing Order.\p"
 	.string "The Silverwing Order is in charge of\n"
-	.string "governing the isles.\p"
-	.string "It's our job to make sure everyone here\n"
-	.string "is comfortable and safe!\p"
+	.string "governing the isles. It's our job to\l"
+	.string "make sure everyone here is comfortable\l"
+	.string "and safe!\p"
 	.string "My role in particular is traveling\n"
 	.string "around to provide goods and inform\l"
 	.string "visitors of the Marya region!\p"
@@ -1185,36 +1183,36 @@ ISLANDGAME_CAMP_PERSI_JonasMain_Text_0:
 	.string "a little battle?$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_1:
-# 522 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 520 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Ah...\p"
 	.string "Your aptitude for battle is...{PAUSE 60}\n"
 	.string "quite remarkable.{PAUSE 30}$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_2:
-# 531 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 529 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the exciting\n"
 	.string "battle, {PLAYER}. You possess\l"
 	.string "exceptional talent for a beginner!\p"
 	.string "Here, allow me to heal our Pokémon.$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_3:
-# 541 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 539 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "{COLOR GREEN}Jonas: {COLOR DARK_GRAY}Thank you for the battle,\n"
 	.string "{PLAYER}. Your Pokémon fought as\l"
 	.string "hard as they could!\p"
 	.string "Here, allow me to heal our Pokémon.$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_4:
-# 549 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 547 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "{COLOR GREEN}Jonas: {COLOR DARK_GRAY}I'd also like to give you this.\n"
 	.string "It'll be of great use to you as a\l"
 	.string "beginner!$"
 
 ISLANDGAME_CAMP_PERSI_JonasMain_Text_5:
-# 554 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 552 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Unfortunately, this is where our\n"
 	.string "conversation must end. I've got a long\l"
-	.string "day ahead of me.\p"
+	.string "day ahead of me, a-ha.\p"
 	.string "But before I depart, I thought I'd let\n"
 	.string "you know about our upcoming Silverwing\l"
 	.string "Festival!\p"
@@ -1231,30 +1229,30 @@ ISLANDGAME_CAMP_PERSI_JonasMain_Text_5:
 	.string "By Lugia, may our paths cross again.$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Hanzo_Text::
-# 406 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 405 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "Nani!? You've got sharp senses to find\n"
 	.string "a grandmaster ninja like me...\p"
 	.string "But how will you fare in battle against\n"
 	.string "me and my nakama?$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Edward_Text::
-# 418 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 417 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "What the heck! I almost caught a\n"
 	.string "Pokémon and you messed me up!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Lazlo_Text::
-# 430 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 429 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "There's only one thing better than the\n"
 	.string "outdoors: A fiery Pokémon battle!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Patsy_Text::
-# 446 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 445 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "If I want Lazlo to notice me, I'll have\n"
 	.string "to become a fiery Pokémon trainer!\p"
 	.string "So um, get your game on, I guess!$"
 
 ISLANDGAME_CAMP_PERSI_Trainer_Lake_Nina_Text::
-# 462 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
+# 461 "data/maps/ISLANDGAME_CAMP_PERSI/scripts.pory"
 	.string "I'm studying Pokémon, and apparently\n"
 	.string "one of the best ways to study them is\l"
 	.string "to analyze them in battle.\p"

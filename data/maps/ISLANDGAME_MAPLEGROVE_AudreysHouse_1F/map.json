@@ -24,11 +24,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_MelissaMother",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_AudreyMom",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_RUIN_MANIAC",
+      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
       "x": 5,
       "y": 6,
       "elevation": 0,
@@ -37,7 +37,35 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_MelissaFather",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_AudreyDad",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_LITTLE_SISTER",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 1,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_MelissaSister",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_BUNEARY",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(BUNEARY)",
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_MAPLEGROVE_AudreysHouse_1F_Interact_Buneary",
       "flag": "0"
     }
   ],
