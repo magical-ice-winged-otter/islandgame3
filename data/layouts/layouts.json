@@ -6060,6 +6060,16 @@
       "secondary_tileset": "gTileset_PokemonFanClub",
       "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/border.bin",
       "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_FAN_CLUB/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISLANDGAME_AETHERIA_MUSEUM_2F_2",
+      "name": "ISLANDGAME_AETHERIA_MUSEUM_2F_2_Layout",
+      "width": 20,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
+      "border_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F_2/border.bin",
+      "blockdata_filepath": "data/layouts/ISLANDGAME_AETHERIA_MUSEUM_2F_2/map.bin"
     }
   ]
 }

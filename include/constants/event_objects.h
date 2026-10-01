@@ -351,9 +351,10 @@
 #define OBJ_EVENT_GFX_ROCKER                     ISLAND_START + 92
 #define OBJ_EVENT_GFX_SOCIALITE                  ISLAND_START + 93
 #define OBJ_EVENT_GFX_NURSE_M                    ISLAND_START + 94
+#define OBJ_EVENT_GFX_SILVER_FEATHER             ISLAND_START + 95
 
 
-#define ISLAND_END                               OBJ_EVENT_GFX_NURSE_M
+#define ISLAND_END                               OBJ_EVENT_GFX_SILVER_FEATHER
 
 #define NUM_OBJ_EVENT_GFX                        (ISLAND_END + 1)
 
@@ -671,6 +672,7 @@
 #define OBJ_EVENT_PAL_TAG_SOCIALITE               0x1289
 #define OBJ_EVENT_PAL_TAG_NURSE_M                 0x128A
 #define OBJ_EVENT_PAL_TAG_NURSE                   0x128B
+#define OBJ_EVENT_PAL_TAG_SILVER_FEATHER          0x128C
 
 // This + localId is used as the tileTag
 // for compressed graphicsInfos

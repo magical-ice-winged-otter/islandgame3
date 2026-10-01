@@ -216,6 +216,9 @@ const u16 gObjectEventPal_Apple[] = INCBIN_U16("graphics/items/icon_palettes/swe
 const u32 gObjectEventPic_IslandgamePKMN_ShinyAzurill[] = INCBIN_U32("graphics/object_events/pics/pokemon/maryan/shiny_azurill.4bpp");
 const u16 gObjectEventPalette_IslandgamePKMN_ShinyAzurill[] = INCBIN_U16("graphics/object_events/pics/pokemon/maryan/shiny_azurill.gbapal");
 
+const u32 gObjectEventPic_SilverFeather[] = INCBIN_U32("graphics/object_events/pics/misc/silver_feather.4bpp");
+const u16 gObjectEventPal_SilverFeather[] = INCBIN_U16("graphics/object_events/palettes/silver_feather.gbapal");
+
 //vanilla
 const u16 gObjectEventPal_BlackBelt[] = INCBIN_U16("graphics/object_events/pics/people/black_belt.gbapal");
 const u16 gObjectEventPal_BugCatcher[] = INCBIN_U16("graphics/object_events/pics/people/bug_catcher.gbapal");

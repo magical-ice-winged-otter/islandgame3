@@ -1495,3 +1495,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ISLANDGAME_AETHERIA_CONDO_4F_ROOM1/scripts.inc"
 
 	.include "data/maps/ISLANDGAME_AETHERIA_FAN_CLUB/scripts.inc"
+
+	.include "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F_2/scripts.inc"

@@ -5,11 +5,13 @@ const STATE_DEFEATED_RIVAL = 2
 const STATE_EXHIBIT_SAW_MELISSA = 3
 const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
 const STATE_EXHIBIT_WATCHED_MOVIE = 5
-// const STATE_FOUND_THIEF = 6
+const STATE_EXHIBIT_OBSERVED_ROCK = 6
 // const STATE_FINAL = 7
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
+        setobjecthidden(LOCALID_MUSEUM_MELISSA_3) // hide until needed for leaving museum cutscene
+        
         if (var(VAR_AETHERIA_STATE) == STATE_EXHIBIT_BEGIN_EXHIBIT) { 
             setflag(B_FLAG_FOLLOWERS_DISABLED) // this is done to prevent object glitches
         }
@@ -24,9 +26,18 @@ mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_MapScripts {
             call(ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene)
             return
         }
+
+        VAR_AETHERIA_STATE, STATE_EXHIBIT_OBSERVED_ROCK {
+            call(ISLANDGAME_AETHERIA_MUSEUM_2F_BlackoutCutscene)
+            return
+        }
     ]
 }
 
+script ISLANDGAME_AETHERIA_MUSEUM_2F_BlackoutCutscene {
+    lock
+    
+}
 
 script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieCutscene {
     lock

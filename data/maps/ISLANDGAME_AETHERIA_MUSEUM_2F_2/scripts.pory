@@ -1,0 +1,133 @@
+// states for main quest
+const STATE_INITIAL = 0
+const STATE_FOUND_RIVAL = 1
+const STATE_DEFEATED_RIVAL = 2
+const STATE_EXHIBIT_SAW_MELISSA = 3
+const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
+const STATE_EXHIBIT_WATCHED_MOVIE = 5
+const STATE_EXHIBIT_OBSERVED_ROCK = 6
+// const STATE_FINAL = 7
+
+mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_2_MapScripts {}
+
+
+
+// Signs
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_RecoveredArtifacts {
+    msgbox(format(
+        "{COLOR GREEN}> Inside the display are the charred remnants of various artifacts."
+    ), MSGBOX_SIGN)
+}
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_BlightedRock {
+    msgbox(format(
+        "Primordial Stone\p"
+        "A fragment of volcanic rock unearthed from the beaches of Mount Kaballa.\p"
+        "Geological dating suggests that the rock originated from the Great Volcano's eruption.\p"
+        "{COLOR GREEN}> A strange aura seems to emanate from the stone..."
+    ), MSGBOX_SIGN)
+    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_OBSERVED_ROCK)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Fossil {
+    msgbox(format(
+        "Fossilized Remains\p"
+        "The fossilized remains of an Absol's broken horn. It is strangely misshapen.\p"
+        "According to the village elder, a wild Absol had approached her before the storm, as if to warn her of the encroaching disaster."
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_SilverFeather {
+    msgbox(format(
+        "Silver Feather\p"
+        "A sparkling silver feather that was shed from Lugia during its battle with the wicked beast.\p"
+        "It is said that the feather emits a faint blue glow when Lugia is nearby."
+    ), MSGBOX_SIGN)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Lugia {
+    msgbox(format(
+        "The Glorious Savior\p"
+        "An ancient statue of Lugia that was uncovered during an archaeological excavation.\p"
+        "The statue depicts Lugia with slightly different colors, possibly due to age."
+    ), MSGBOX_SIGN)
+}
+
+
+
+
+
+
+// NPCs
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Curator {
+    lock
+    faceplayer
+    msgbox(format(
+        "Hope you are enjoying the exhibit, young trainer!\p"
+        "It warms my heart to see that the new generation still has interest in our historical ventures.\p"
+        "Several of these artifacts we have kept preserved for many years.\p"
+        "Our newest finding however is that rock over to the left. Please take a look!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Edea {
+    lock
+    msgbox(format(
+        "...That's it? It looks just like any other rock in the region.\p"
+        "Well, if they insist. I'm not gonna argue with it."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Pokefan {
+    lock
+    faceplayer
+    msgbox(format(
+        "They say that the sound of Mount Kaballa's eruption could be heard as far as thousands of miles.\p"
+        "That means someone all the way in the Hoenn region would've heard it!"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Melissa {
+    lock
+    faceplayer
+    msgbox(format(
+        "Wow... that feather's really huge! It's so much bigger than mine!\p"
+        "In Marya, Lugia's silver feather is a symbol of luck and protection.\p"
+        "It's why I keep this feather charm with me at all times!\p"
+        "Nothing'll beat the real deal though, huh? Imagine having to carry THAT everywhere you go."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Scientist {
+    lock
+    faceplayer
+    msgbox(format(
+        "I've never seen an Absol horn look so... menacing.\p"
+        "Could this be the result of prolonged exposure to the corrupted rainfall?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Woman {
+    lock
+    faceplayer
+    msgbox(format(
+        "What a harrowing night that must've been.\p"
+        "If not for Lugia, the world as we know it today may not have remained.\p"
+        "We are forever indebted to him."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Beauty {
+    lock
+    msgbox(format(
+        "This Lugia... is it the same one that dwelled in the Whirl Islands of Johto?"
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Socialite {
+    lock
+    faceplayer
+    msgbox(format(
+        "Every year, the Silverwing Order makes a perilous journey across the Maryan sea to the Northern Islands, where our lord and savior resides.\p"
+        "At the shrine, the order performs a sacred ritual, offering fervent prayers and bountiful tribute for Lugia in exchange for his continued protection."
+    ), MSGBOX_AUTOCLOSE)
+}

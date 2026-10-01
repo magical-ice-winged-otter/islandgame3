@@ -793,7 +793,9 @@ static const struct SpriteFrameImage sPicTable_NurseM[] = {
     overworld_ascending_frames(gObjectEventPic_NurseM, 2, 4),
 };
 
-
+static const struct SpriteFrameImage sPicTable_SilverFeather[] = {
+    obj_frame_tiles(gObjectEventPic_SilverFeather),
+};
 
 
 
