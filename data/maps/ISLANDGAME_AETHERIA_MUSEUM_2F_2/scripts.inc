@@ -68,7 +68,7 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_2_Melissa::
 # 91 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F_2/scripts.pory"
 	faceplayer
 # 92 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F_2/scripts.pory"
-	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_2_Melissa_Text_0
+	msgbox ISLANDGAME_AETHERIA_MUSEUM_2F_2_Melissa_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -113,8 +113,7 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_2_Socialite::
 ISLANDGAME_AETHERIA_MUSEUM_2F_2_RecoveredArtifacts_Text_0:
 # 18 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F_2/scripts.pory"
 	.string "{COLOR GREEN}> Inside the display are the charred\n"
-	.string "remnants of various artifacts.\p"
-	.string "$"
+	.string "remnants of various artifacts.$"
 
 ISLANDGAME_AETHERIA_MUSEUM_2F_2_BlightedRock_Text_0:
 # 23 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F_2/scripts.pory"

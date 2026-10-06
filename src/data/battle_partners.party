@@ -116,3 +116,45 @@ Ability: ABILITY_STEADFAST
 - MOVE_LEAF_BLADE
 - MOVE_CLOSE_COMBAT
 - MOVE_NIGHT_SLASH
+
+=== PARTNER_AETHERIA_MELISSA ===
+Name: Melissa
+Class: Rival
+Pic: Melissa
+Gender: Female
+Music: Female
+Back Pic: Melissa
+AI: AI_FLAG_BASIC_TRAINER
+
+Lycanroc Midday (F) @ ITEM_HARD_STONE
+Level: 34
+Ability: Keen Eye
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Adamant
+- Accelerock
+- Rock Slide
+- Fire Fang
+- Thunder Fang
+
+Excadrill (M) @ ITEM_AIR_BALLOON
+Level: 34
+Ability: Mold Breaker
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Adamant
+- Drill Run
+- Iron Head
+- Rock Slide
+- X Scissor
+
+Gabite (M) @ ITEM_EXPERT_BELT
+Level: 36
+Ability: Rough Skin
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
+Nature: Jolly
+- Dual Chop
+- Iron Head
+- Bulldoze
+- Rock Slide

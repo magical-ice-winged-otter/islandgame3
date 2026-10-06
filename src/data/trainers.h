@@ -6327,7 +6327,7 @@ F_TRAINER_FEMALE |
 #line 2628
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 2627
-            .ability = ABILITY_SAND_VEIL,
+            .ability = ABILITY_WATER_COMPACTION,
 #line 2626
             .lvl = 34,
 #line 2630
@@ -6335,7 +6335,7 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 2631
-                MOVE_SANDSTORM,
+                MOVE_SAND_TOMB,
                 MOVE_BULLDOZE,
                 MOVE_HYPNOSIS,
                 MOVE_GIGA_DRAIN,
@@ -6353,7 +6353,7 @@ F_TRAINER_FEMALE |
 #line 2639
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 2638
-            .ability = ABILITY_SAND_RUSH,
+            .ability = ABILITY_KEEN_EYE,
 #line 2637
             .lvl = 34,
 #line 2641
@@ -6379,7 +6379,7 @@ F_TRAINER_FEMALE |
 #line 2650
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 2649
-            .ability = ABILITY_SAND_RUSH,
+            .ability = ABILITY_MOLD_BREAKER,
 #line 2648
             .lvl = 34,
 #line 2652
@@ -6405,7 +6405,7 @@ F_TRAINER_FEMALE |
 #line 2661
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 2660
-            .ability = ABILITY_SAND_VEIL,
+            .ability = ABILITY_ROUGH_SKIN,
 #line 2659
             .lvl = 36,
 #line 2663

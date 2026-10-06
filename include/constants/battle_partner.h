@@ -6,6 +6,7 @@
 #define PARTNER_STEVEN              1
 #define PARTNER_MEADOWS_RIVAL       2
 #define PARTNER_AETHERIA_WALLY      3
+#define PARTNER_AETHERIA_MELISSA    4
 
-#define PARTNER_COUNT               4
+#define PARTNER_COUNT               5
 #endif  // GUARD_CONSTANTS_BATTLE_PARTNERS_H

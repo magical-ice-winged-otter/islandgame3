@@ -2624,18 +2624,18 @@ AI: Check Bad Move / Try To Faint / Check Viability / Force Setup First Turn / S
 
 Sandygast (M) @ ITEM_EVIOLITE
 Level: 34
-Ability: Sand Veil
+Ability: Water Compaction
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 6 Def / 0 SpA / 0 SpD / 0 Spe
 Nature: Bold
-- Sandstorm
+- Sand Tomb
 - Bulldoze
 - Hypnosis
 - Giga Drain
 
 Lycanroc Midday (F) @ ITEM_HARD_STONE
 Level: 34
-Ability: Sand Rush
+Ability: Keen Eye
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
 Nature: Adamant
@@ -2646,7 +2646,7 @@ Nature: Adamant
 
 Excadrill (M) @ ITEM_AIR_BALLOON
 Level: 34
-Ability: Sand Rush
+Ability: Mold Breaker
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
 Nature: Adamant
@@ -2657,7 +2657,7 @@ Nature: Adamant
 
 Gabite (M) @ ITEM_EXPERT_BELT
 Level: 36
-Ability: Sand Veil
+Ability: Rough Skin
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 6 Spe
 Nature: Jolly

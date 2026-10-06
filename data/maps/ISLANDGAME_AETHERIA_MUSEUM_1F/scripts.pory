@@ -4,9 +4,9 @@ const STATE_FOUND_RIVAL = 1
 const STATE_DEFEATED_RIVAL = 2
 const STATE_EXHIBIT_SAW_MELISSA = 3
 const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
-// const STATE_EXHIBIT_ROBBED = 5
-// const STATE_FOUND_THIEF = 6
-// const STATE_FINAL = 7
+const STATE_EXHIBIT_WATCHED_MOVIE = 5
+const STATE_EXHIBIT_OBSERVED_ROCK = 6
+const STATE_EXHIBIT_ROCK_STOLEN = 7
 
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
@@ -15,6 +15,9 @@ mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
             case STATE_DEFEATED_RIVAL:  // entry to exhibit only allowed after obtaining ticket
                 setvar(VAR_TEMP_0, 1)
             case STATE_EXHIBIT_BEGIN_EXHIBIT: // curator and melissa have moved upstairs
+            case STATE_EXHIBIT_WATCHED_MOVIE:
+            case STATE_EXHIBIT_OBSERVED_ROCK:
+            case STATE_EXHIBIT_ROCK_STOLEN:
                 setvar(VAR_TEMP_0, 1)
                 setflag(FLAG_TEMP_1)
             default:

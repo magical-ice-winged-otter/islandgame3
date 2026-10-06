@@ -285,3 +285,104 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 120
+    [DIFFICULTY_NORMAL][PARTNER_AETHERIA_MELISSA] =
+    {
+#line 121
+        .trainerName = _("Melissa"),
+#line 122
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 123
+        .trainerPic = TRAINER_PIC_MELISSA,
+        .encounterMusic_gender =
+#line 124
+F_TRAINER_FEMALE | 
+#line 125
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 127
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+#line 126
+        .trainerBackPic = TRAINER_BACK_PIC_MELISSA,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 129
+            .species = SPECIES_LYCANROC_MIDDAY,
+#line 129
+            .gender = TRAINER_MON_FEMALE,
+#line 129
+            .heldItem = ITEM_HARD_STONE,
+#line 133
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 6, 0, 0),
+#line 132
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 131
+            .ability = ABILITY_KEEN_EYE,
+#line 130
+            .lvl = 34,
+#line 134
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 135
+                MOVE_ACCELEROCK,
+                MOVE_ROCK_SLIDE,
+                MOVE_FIRE_FANG,
+                MOVE_THUNDER_FANG,
+            },
+            },
+            {
+#line 140
+            .species = SPECIES_EXCADRILL,
+#line 140
+            .gender = TRAINER_MON_MALE,
+#line 140
+            .heldItem = ITEM_AIR_BALLOON,
+#line 144
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 6, 0, 0),
+#line 143
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 142
+            .ability = ABILITY_MOLD_BREAKER,
+#line 141
+            .lvl = 34,
+#line 145
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 146
+                MOVE_DRILL_RUN,
+                MOVE_IRON_HEAD,
+                MOVE_ROCK_SLIDE,
+                MOVE_X_SCISSOR,
+            },
+            },
+            {
+#line 151
+            .species = SPECIES_GABITE,
+#line 151
+            .gender = TRAINER_MON_MALE,
+#line 151
+            .heldItem = ITEM_EXPERT_BELT,
+#line 155
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 6, 0, 0),
+#line 154
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 153
+            .ability = ABILITY_ROUGH_SKIN,
+#line 152
+            .lvl = 36,
+#line 156
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 157
+                MOVE_DUAL_CHOP,
+                MOVE_IRON_HEAD,
+                MOVE_BULLDOZE,
+                MOVE_ROCK_SLIDE,
+            },
+            },
+        },
+    },
