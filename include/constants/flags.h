@@ -1584,7 +1584,7 @@
 #define FLAG_AETHERIA_CYNTHIA_DEFEATED     0x2D 
 #define FLAG_AETHERIA_ROOM_SERVICE         0x2E
 #define FLAG_AETHERIA_FAN_CLUB_TM          0x2F
-#define FLAG_HIDE_AETHERIA_RIVAL           0x30
+#define FLAG_HIDE_AETHERIA_RIVAL           0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag

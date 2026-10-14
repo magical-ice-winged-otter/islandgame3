@@ -109,7 +109,6 @@
       "flag": "FLAG_TEMP_1"
     },
     {
-      "local_id": "LOCALID_MUSEUM_MELISSA",
       "graphics_id": "OBJ_EVENT_GFX_MELISSA",
       "x": 18,
       "y": 5,
@@ -212,6 +211,33 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_SchoolKid",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_MUSEUM_MELISSA",
+      "graphics_id": "OBJ_EVENT_GFX_MELISSA",
+      "x": 17,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_Melissa",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_M",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_Officer",
+      "flag": "FLAG_TEMP_2"
     }
   ],
   "warp_events": [
@@ -273,60 +299,6 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_NoEntryLeft"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 7,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
-    },
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
-    },
-    {
-      "type": "trigger",
-      "x": 18,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_AETHERIA_STATE",
-      "var_value": "2",
-      "script": "ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice"
     }
   ],
   "bg_events": [

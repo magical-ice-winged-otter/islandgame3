@@ -676,7 +676,7 @@ static const struct SubQuest sSubQuests_AetheriaMelissa[SUB_QUEST_COUNT_AETHERIA
 {
     {
         .id = SUB_QUEST_AETHERIA_MELISSA_1,
-        .name = COMPOUND_STRING("I-It's not a date!"),
+        .name = COMPOUND_STRING("Part I"),
         .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
         .map = COMPOUND_STRING("Aetheria"),
         .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
@@ -685,20 +685,11 @@ static const struct SubQuest sSubQuests_AetheriaMelissa[SUB_QUEST_COUNT_AETHERIA
     },
     {
         .id = SUB_QUEST_AETHERIA_MELISSA_2,
-        .name = COMPOUND_STRING("I-It's not a date!"),
-        .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
+        .name = COMPOUND_STRING("Part II"),
+        .desc = COMPOUND_STRING("Find and catch the museum thief!"),
         .map = COMPOUND_STRING("Aetheria"),
-        .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
-        .spritetype = ITEM,
-        .type = sText_Active
-    },
-    {
-        .id = SUB_QUEST_AETHERIA_MELISSA_3,
-        .name = COMPOUND_STRING("I-It's not a date!"),
-        .desc = COMPOUND_STRING("Meet with Melissa inside the museum!"),
-        .map = COMPOUND_STRING("Aetheria"),
-        .sprite = ITEM_ISLANDGAME_MUSEUM_TICKET, 
-        .spritetype = ITEM,
+        .sprite = OBJ_EVENT_GFX_BREAKABLE_ROCK, 
+        .spritetype = OBJECT,
         .type = sText_Active
     },
 };

@@ -2,11 +2,12 @@
 const STATE_INITIAL = 0
 const STATE_FOUND_RIVAL = 1
 const STATE_DEFEATED_RIVAL = 2
-const STATE_EXHIBIT_SAW_MELISSA = 3
+const STATE_EXHIBIT_SAW_MELISSA = 3 // unused
 const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
 const STATE_EXHIBIT_WATCHED_MOVIE = 5
 const STATE_EXHIBIT_OBSERVED_ROCK = 6
 const STATE_EXHIBIT_ROCK_STOLEN = 7
+const STATE_HUNTING_THIEF = 8
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
@@ -69,11 +70,12 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_BlackoutCutscene {
     applymovement(LOCALID_MUSEUM_MELISSA_3, moves(emote_question_mark, delay_16 * 2))
     msgbox(format(
         "Eh? A strange feeling? Like the one you felt with that Mightyena?\p"
-        "Mmmmn, I wasn't really getting like any bad vibes from it.\p"
+        "Mmmm, I wasn't really getting like any bad vibes from it.\p"
         "Buuuut I also didn't see anything off with the Mightyena either...\p"
         "O-Oh, please don't misunderstand! Not that I don't trust you or anything!\p"
         "Maybe I'm just too much of a dummy to see what you're seeing, ehe.\p"
-        "But if that rock gave you the same heebie-jeebies as the Mightyena..."
+        "But if that rock gave you the same heebie-jeebies as the Mightyena...\p"
+        "Hmmmmn..."
     ), MSGBOX_AUTOCLOSE)
 
     playse(SE_RG_BALL_CLICK)
@@ -87,8 +89,10 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_BlackoutCutscene {
     waitmoncry
     playse(SE_ICE_BREAK)
     waitse 
+    delay(60)
     playse(SE_FLEE)
     waitse
+    delay(60)
     playse(SE_M_JUMP_KICK)
     waitse
     msgbox(format(
@@ -101,18 +105,24 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_BlackoutCutscene {
         "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Owwwie..."
     ), MSGBOX_AUTOCLOSE)
     playse(SE_PIN)
-    waitse
     applymovement(OBJ_EVENT_ID_PLAYER, moves(emote_exclamation_mark, delay_16 * 2, walk_left, delay_16 * 2))
     waitmovement(0)
     msgbox(format(
-        "I'm okay, I think...{PAUSE 30} Someone was rushing downstairs and shoved me aside.\p"
-        "You heard that noise too, right after the lights went out, right?\p"
-        "That can only mean...\p"
-        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}N-No way... I-It's gone!\p"
-        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}{PLAYER}, let's go back upstairs and investigate!"
-    ) MSGBOX_AUTOCLOSE)
-
-    setfollowernpc(LOCALID_MUSEUM_MELISSA_3, FNPC_ALL, 0, PARTNER_AETHERIA_MELISSA)
+        "I'm alright, thankies.\p"
+        "Whoever came rushing downstairs was in a real big hurry, that's for sure...\p"
+        "You heard that crash as well, right? That couldn't have been good.\p"
+        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}I-It's gone! It's been stolen!\p"
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Gone? Stolen? {PLAYER}, let's head upstairs and investigate!"
+    ))
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(lock_facing_direction, walk_right))
+    waitmovement(0)
+    applymovement(LOCALID_MUSEUM_MELISSA_3, moves(unlock_facing_direction, walk_fast_right, walk_fast_up))
+    waitmovement(0)
+    playse(SE_EXIT)
+    waitse
+    removeobject(LOCALID_MUSEUM_MELISSA_3)
+    setobjecthidden(LOCALID_MUSEUM_MELISSA_3)
     setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_ROCK_STOLEN)
     release
 }
@@ -124,13 +134,6 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_CantLeaveYet {
     ), MSGBOX_AUTOCLOSE)
     applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
     waitmovement(0)
-}
-
-script ISLANDGAME_AETHERIA_MUSEUM_2F_Melissa {
-    lock
-    msgbox(format(
-        "That jerk! My butt is gonna be feeling like that for the rest of the day..."
-    ), MSGBOX_AUTOCLOSE)
 }
 
 
@@ -624,7 +627,7 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5 {
     
     applymovement(AETHERIA_MUSEUM_2F_LUGIA, moves(walk_down * 6))
     waitmovement(0)
-    applymovement(AETHERIA_MUSEUM_2F_ARTICUNO, moves(walk_down * 3))
+    applymovement(AETHERIA_MUSEUM_2F_ARTICUNO, moves(walk_down * 4))
     applymovement(AETHERIA_MUSEUM_2F_ZAPDOS, moves(walk_down * 7))
     applymovement(AETHERIA_MUSEUM_2F_MOLTRES, moves(walk_down * 7))
     waitmovement(0)

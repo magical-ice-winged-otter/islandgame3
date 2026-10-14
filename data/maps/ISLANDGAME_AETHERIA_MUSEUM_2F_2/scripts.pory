@@ -2,14 +2,104 @@
 const STATE_INITIAL = 0
 const STATE_FOUND_RIVAL = 1
 const STATE_DEFEATED_RIVAL = 2
-const STATE_EXHIBIT_SAW_MELISSA = 3
+const STATE_EXHIBIT_SAW_MELISSA = 3 // unused
 const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
 const STATE_EXHIBIT_WATCHED_MOVIE = 5
 const STATE_EXHIBIT_OBSERVED_ROCK = 6
 const STATE_EXHIBIT_ROCK_STOLEN = 7
+const STATE_HUNTING_THIEF = 8
 
-mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_2_MapScripts {}
 
+mapscripts ISLANDGAME_AETHERIA_MUSEUM_2F_2_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_TEMP_3) // hide security officer until needed for crime scene cutscene
+
+        if (var(VAR_AETHERIA_STATE) < STATE_EXHIBIT_ROCK_STOLEN) {
+            setflag(FLAG_TEMP_1)
+        }
+        else {
+            setflag(FLAG_TEMP_2)
+        }
+    }
+
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_AETHERIA_STATE, STATE_EXHIBIT_ROCK_STOLEN {
+            call(ISLANDGAME_AETHERIA_MUSEUM_2F_2_StolenCutscene)
+            return
+        }
+    ]
+}
+
+
+// Cutscenes
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_StolenCutscene {
+    lock
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up * 2, walk_left))
+    waitmovement(0)
+    applymovement(AETHERIA_MUSEUM_2F_2_CURATOR, moves(face_left, delay_16 * 2, face_right, delay_16 * 2, face_up, delay_16 * 2, walk_left, delay_16 * 2, face_down, delay_16 * 2, face_up, delay_16 * 2, walk_right, face_up, walk_in_place_faster_up * 2, lock_facing_direction, walk_down))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}But who...?{PAUSE 30} How...?{PAUSE 30} Why...?"
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(AETHERIA_MUSEUM_2F_2_CURATOR, moves(unlock_facing_direction, walk_up))
+    waitmovement(0)
+    playse(SE_POKENAV_CALL)
+    msgbox(format(
+        "S-Security! Lock everything down, immediately!\p"
+        "Nobody may leave the museum without permission!"
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(AETHERIA_MUSEUM_2F_2_MELISSA, moves(walk_in_place_down * 2))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}No way... the giant rock got stolen? Out of everything here?\p"
+        "We were just talking about it too...\p"
+        "Whoever stole the rock, do you think they might know more about it than meets the eye?"
+    ))
+    closemessage
+    release
+    clearflag(FLAG_TEMP_3)
+    addobject(AETHERIA_MUSEUM_2F_2_OFFICER)
+    playse(SE_EXIT)
+    waitse
+    applymovement(AETHERIA_MUSEUM_2F_2_OFFICER, moves(walk_left * 2, walk_up * 3, walk_left))
+    waitmovement(0)
+    applymovement(AETHERIA_MUSEUM_2F_2_CURATOR, moves(face_right))
+    waitmovement(0)
+    applymovement(AETHERIA_MUSEUM_2F_2_MELISSA, moves(face_left))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Officer: {COLOR DARK_GRAY}We've conducted a full sweep of the ground floor and the surrounding area.\p"
+        "No sign of the suspect or the artifact yet.\p"
+        "We're currently questioning the staff and visitors for any potential leads.\p"
+        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}The cameras! Do we have any footage of the thief on the cameras?\p"
+        "{COLOR GREEN}Officer: {COLOR DARK_GRAY}I'm sorry sir, our cameras lost signal the second the power outage occurred.\p"
+        "We're still trying to get them operational as we speak.\p"
+        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}Inconceivable...\p"
+        "Our most groundbreaking archaeological discovery yet... vanished in the blink of an eye..."
+    ), MSGBOX_AUTOCLOSE)
+    applymovement(AETHERIA_MUSEUM_2F_2_MELISSA, moves(walk_in_place_down * 2))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}Whoever came rushing downstairs earlier during the blackout, they've gotta be our culprit, right?\p"
+        "Mmmmnh... if only we could see what they looked like!"
+    ))
+    closemessage
+    applymovement(AETHERIA_MUSEUM_2F_2_CURATOR, moves(face_down, walk_in_place_down * 2))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Solomon: {COLOR DARK_GRAY}My sincerest apologies everyone, but I am afraid I must end the exhibit prematurely.\p"
+        "Please make your way downstairs while the staff and investigate this matter."
+    ))
+    fadescreen(FADE_TO_BLACK)
+    warp(MAP_ISLANDGAME_AETHERIA_MUSEUM_1F, 18, 4)
+    release
+}
 
 
 // Signs
@@ -19,13 +109,15 @@ script ISLANDGAME_AETHERIA_MUSEUM_2F_2_RecoveredArtifacts {
     ), MSGBOX_SIGN)
 }
 script ISLANDGAME_AETHERIA_MUSEUM_2F_2_BlightedRock {
-    msgbox(format(
-        "Primordial Stone\p"
-        "A fragment of volcanic rock unearthed from the beaches of Mount Kaballa.\p"
-        "Geological dating suggests that the rock originated from the Great Volcano's eruption.\p"
-        "{COLOR GREEN}> A strange aura seems to emanate from the stone..."
-    ), MSGBOX_SIGN)
-    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_OBSERVED_ROCK)
+    if(var(VAR_AETHERIA_STATE) < STATE_EXHIBIT_ROCK_STOLEN) { // there's only a sign when the rock is on display
+        msgbox(format(
+            "Primordial Stone\p"
+            "A fragment of volcanic rock unearthed from the beaches of Mount Kaballa.\p"
+            "Geological dating suggests that the rock originated from the Great Volcano's eruption.\p"
+            "{COLOR GREEN}> A strange aura seems to emanate from the stone..."
+        ), MSGBOX_SIGN)
+        setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_OBSERVED_ROCK)
+    }
 }
 
 script ISLANDGAME_AETHERIA_MUSEUM_2F_2_Fossil {

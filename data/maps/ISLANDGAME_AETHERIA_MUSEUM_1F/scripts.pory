@@ -2,11 +2,12 @@
 const STATE_INITIAL = 0
 const STATE_FOUND_RIVAL = 1
 const STATE_DEFEATED_RIVAL = 2
-const STATE_EXHIBIT_SAW_MELISSA = 3
+const STATE_EXHIBIT_SAW_MELISSA = 3 // unused
 const STATE_EXHIBIT_BEGIN_EXHIBIT = 4
 const STATE_EXHIBIT_WATCHED_MOVIE = 5
 const STATE_EXHIBIT_OBSERVED_ROCK = 6
 const STATE_EXHIBIT_ROCK_STOLEN = 7
+const STATE_HUNTING_THIEF = 8
 
 
 mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
@@ -14,22 +15,52 @@ mapscripts ISLANDGAME_AETHERIA_MUSEUM_1F_MapScripts {
         switch (var(VAR_AETHERIA_STATE)) {
             case STATE_DEFEATED_RIVAL:  // entry to exhibit only allowed after obtaining ticket
                 setvar(VAR_TEMP_0, 1)
+                setflag(FLAG_TEMP_2) // hide melissa 2nd position and officer until needed for later
             case STATE_EXHIBIT_BEGIN_EXHIBIT: // curator and melissa have moved upstairs
             case STATE_EXHIBIT_WATCHED_MOVIE:
             case STATE_EXHIBIT_OBSERVED_ROCK:
+                setvar(VAR_TEMP_0, 1)
+                setflag(FLAG_TEMP_1)
+                setflag(FLAG_TEMP_2) // hide melissa 2nd position and officer until needed for later
             case STATE_EXHIBIT_ROCK_STOLEN:
+            case STATE_HUNTING_THIEF:
                 setvar(VAR_TEMP_0, 1)
                 setflag(FLAG_TEMP_1)
             default:
         }
     }
 
+
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_AETHERIA_STATE, STATE_EXHIBIT_ROCK_STOLEN {
+            applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+            waitmovement(0)
+            call(ISLANDGAME_AETHERIA_MUSEUM_2F_2_HuntingThiefCutscene)
+            return
+        }
+    ]
+
 }
 
 
 
 
-// Important 
+// Important
+script ISLANDGAME_AETHERIA_MUSEUM_2F_2_HuntingThiefCutscene {
+    lock
+    applymovement(LOCALID_MUSEUM_MELISSA, moves(walk_in_place_fast_up * 2, delay_16 * 2, face_right))
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, moves(face_left))
+    waitmovement(0)
+    msgbox(format(
+        "{COLOR GREEN}Melissa: {COLOR DARK_GRAY}{PLAYER}, we should help them look for the thief! They couldn't have gone far with a giant rock like that!\p"
+        "Hmmmmnghh...{PAUSE 30} think, Melissa, think!{PAUSE 30} Who was missing from the room after the lights went out?"
+    ), MSGBOX_AUTOCLOSE)
+    setvar(VAR_AETHERIA_STATE, STATE_HUNTING_THIEF)
+    release
+}
+
+
 script ISLANDGAME_AETHERIA_MUSEUM_1F_TicketCheckerRight {
     lock
     faceplayer
@@ -78,27 +109,23 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_NoEntryLeft {
     release
 }
 
-script ISLANDGAME_AETHERIA_MUSEUM_1F_MelissaNotice {
-    lock
-    playse(SE_PIN)
-    applymovement(LOCALID_MUSEUM_MELISSA, moves(face_player, emote_exclamation_mark, delay_16 * 2))
-    waitmovement(0)
-    msgbox(format(
-        "Melissa: Heyyy! Over here, {PLAYER}!"
-    ))
-    setvar(VAR_AETHERIA_STATE, STATE_EXHIBIT_SAW_MELISSA)
-    release
-}
-
 script ISLANDGAME_AETHERIA_MUSEUM_1F_Melissa {
     lock
     faceplayer
-    msgbox(format(
-        "Are you enjoying the museum so far? The artwork here is always soooo gorg!\p"
-        "My big bro used to take me here all the time when I was still a lil sweet pea!\p"
-        "They've always periodically added more pieces, but this is new exhibit their first new major addition!\p"
-        "Eeee! I can't wait!"
-    ), MSGBOX_AUTOCLOSE)
+    if(var(VAR_AETHERIA_STATE) == STATE_HUNTING_THIEF) {
+        msgbox(format(
+            "When the lights went out... I thought I had heard the cry of a Pokémon...\p"
+            "But of what Pokémon...?{PAUSE 30} Argh! This is what I get for procrastinating!"
+        ), MSGBOX_AUTOCLOSE)
+    }
+    else {
+        msgbox(format(
+            "Are you enjoying the museum so far? The artwork here is always soooo gorg!\p"
+            "My big bro used to take me here all the time when I was still a lil sweet pea!\p"
+            "They've always periodically added more pieces, but this is new exhibit their first new major addition!\p"
+            "Eeee! I can't wait!"
+        ), MSGBOX_AUTOCLOSE)
+    }
 }
 
 script ISLANDGAME_AETHERIA_MUSEUM_1F_Curator {
@@ -128,8 +155,21 @@ script ISLANDGAME_AETHERIA_MUSEUM_1F_Curator {
         release
 }
 
+script ISLANDGAME_AETHERIA_MUSEUM_1F_Officer {
+    lock
+    faceplayer
+    msgbox(format(
+        "The Darkest Night exhibit will be closed until further notice."
+    ), MSGBOX_AUTOCLOSE)
+}
 
-// NPCs
+
+
+
+
+
+
+// NPCs & Signs
 script ISLANDGAME_AETHERIA_MUSEUM_1F_Receptionist {
     lock
     faceplayer
