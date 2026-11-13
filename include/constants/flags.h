@@ -43,57 +43,54 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_NO_ENCOUNTER               0x20 
-#define FLAG_NO_COLLISION               0x21 
-#define FLAG_NO_TRAINER_SEE             0x22 
-#define FLAG_FORCE_DOUBLE_WILD          0x23 
-#define FLAG_SMART_WILD_AI              0x24 
-#define FLAG_NO_CATCHING                0x25 
-#define FLAG_NO_RUNNING                 0x26
-#define FLAG_DEXNAV_SEARCHING           0x27 
-#define FLAG_DEXNAV_GET                 0x28 
-#define FLAG_DEXNAV_DETECTOR_MODE       0x29 
-#define FLAG_FOLLOWERS_DISABLED         0x2A
-// Usage:
-// setflag(FLAG_SPAWN_INVISIBLE) to make the player invisible.
-// 
-// In order to make the player visible again, you will need to use applymovement with set_visible.
-#define FLAG_SPAWN_INVISIBLE            0x2B 
-// #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-// #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-// #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-// #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-// #define FLAG_UNUSED_0x030    0x30 // Unused Flag
-// #define FLAG_UNUSED_0x031    0x31 // Unused Flag
-// #define FLAG_UNUSED_0x032    0x32 // Unused Flag
-// #define FLAG_UNUSED_0x033    0x33 // Unused Flag
-// #define FLAG_UNUSED_0x034    0x34 // Unused Flag
-// #define FLAG_UNUSED_0x035    0x35 // Unused Flag
-// #define FLAG_UNUSED_0x036    0x36 // Unused Flag
-// #define FLAG_UNUSED_0x037    0x37 // Unused Flag
-// #define FLAG_UNUSED_0x038    0x38 // Unused Flag
-// #define FLAG_UNUSED_0x039    0x39 // Unused Flag
-// #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-// #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-// #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-// #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-// #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-// #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-// #define FLAG_UNUSED_0x040    0x40 // Unused Flag
-// #define FLAG_UNUSED_0x041    0x41 // Unused Flag
-// #define FLAG_UNUSED_0x042    0x42 // Unused Flag
-// #define FLAG_UNUSED_0x043    0x43 // Unused Flag
-// #define FLAG_UNUSED_0x044    0x44 // Unused Flag
-// #define FLAG_UNUSED_0x045    0x45 // Unused Flag
-// #define FLAG_UNUSED_0x046    0x46 // Unused Flag
-// #define FLAG_UNUSED_0x047    0x47 // Unused Flag
-// #define FLAG_UNUSED_0x048    0x48 // Unused Flag
-// #define FLAG_UNUSED_0x049    0x49 // Unused Flag
-// #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-// #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-// #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-// #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-// #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
+#define FLAG_NO_ENCOUNTER                  0x20 
+#define FLAG_NO_COLLISION                  0x21 
+#define FLAG_NO_TRAINER_SEE                0x22 
+#define FLAG_FORCE_DOUBLE_WILD             0x23 
+#define FLAG_SMART_WILD_AI                 0x24 
+#define FLAG_NO_CATCHING                   0x25 
+#define FLAG_NO_RUNNING                    0x26
+#define FLAG_DEXNAV_SEARCHING              0x27 
+#define FLAG_DEXNAV_GET                    0x28 
+#define FLAG_DEXNAV_DETECTOR_MODE          0x29 
+#define FLAG_FOLLOWERS_DISABLED            0x2A
+#define FLAG_AETHERIA_SERAFINA_CUTSCENE    0x2B 
+#define FLAG_AETHERIA_CYNTHIA_JUMPSCARE    0x2C
+#define FLAG_AETHERIA_CYNTHIA_DEFEATED     0x2D 
+#define FLAG_AETHERIA_ROOM_SERVICE         0x2E
+#define FLAG_AETHERIA_FAN_CLUB_TM          0x2F
+#define FLAG_HIDE_AETHERIA_RIVAL           0x30 // Unused Flag
+#define FLAG_UNUSED_0x031                  0x31 // Unused Flag
+#define FLAG_UNUSED_0x032                  0x32 // Unused Flag
+#define FLAG_UNUSED_0x033                  0x33 // Unused Flag
+#define FLAG_UNUSED_0x034                  0x34 // Unused Flag
+#define FLAG_UNUSED_0x035                  0x35 // Unused Flag
+#define FLAG_UNUSED_0x036                  0x36 // Unused Flag
+#define FLAG_UNUSED_0x037                  0x37 // Unused Flag
+#define FLAG_UNUSED_0x038                  0x38 // Unused Flag
+#define FLAG_UNUSED_0x039                  0x39 // Unused Flag
+#define FLAG_UNUSED_0x03A                  0x3A // Unused Flag
+#define FLAG_UNUSED_0x03B                  0x3B // Unused Flag
+#define FLAG_UNUSED_0x03C                  0x3C // Unused Flag
+#define FLAG_UNUSED_0x03D                  0x3D // Unused Flag
+#define FLAG_UNUSED_0x03E                  0x3E // Unused Flag
+#define FLAG_UNUSED_0x03F                  0x3F // Unused Flag
+#define FLAG_UNUSED_0x040                  0x40 // Unused Flag
+#define FLAG_UNUSED_0x041                  0x41 // Unused Flag
+#define FLAG_UNUSED_0x042                  0x42 // Unused Flag
+#define FLAG_UNUSED_0x043                  0x43 // Unused Flag
+#define FLAG_UNUSED_0x044                  0x44 // Unused Flag
+#define FLAG_UNUSED_0x045                  0x45 // Unused Flag
+#define FLAG_UNUSED_0x046                  0x46 // Unused Flag
+#define FLAG_UNUSED_0x047                  0x47 // Unused Flag
+#define FLAG_UNUSED_0x048                  0x48 // Unused Flag
+#define FLAG_UNUSED_0x049                  0x49 // Unused Flag
+#define FLAG_UNUSED_0x04A                  0x4A // Unused Flag
+#define FLAG_UNUSED_0x04B                  0x4B // Unused Flag
+#define FLAG_UNUSED_0x04C                  0x4C // Unused Flag
+#define FLAG_UNUSED_0x04D                  0x4D // Unused Flag
+#define FLAG_UNUSED_0x04E                  0x4E // Unused Flag
+
 #define FLAG_EXP_SHARE       0x4F // LINK include/config/item.h
 
 // Scripts
@@ -1579,43 +1576,6 @@
 #define FLAG_AETHERIA_DEPT_STORE_KID_GIVE_DOLL      (SYSTEM_FLAGS + 0xBE)
 #define FLAG_UNUSED_0x91F                           (SYSTEM_FLAGS + 0xBF) // Unused Flag (Causes weird compiling errors if used?) ~ res
 
-#define FLAG_AETHERIA_SERAFINA_CUTSCENE    0x2B 
-#define FLAG_AETHERIA_CYNTHIA_JUMPSCARE    0x2C
-#define FLAG_AETHERIA_CYNTHIA_DEFEATED     0x2D 
-#define FLAG_AETHERIA_ROOM_SERVICE         0x2E
-#define FLAG_AETHERIA_FAN_CLUB_TM          0x2F
-#define FLAG_HIDE_AETHERIA_RIVAL           0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-
 // Daily Flags
 // These flags are cleared once per day
 // The start and end are byte-aligned because the flags are cleared in byte increments
@@ -1696,7 +1656,10 @@
 #define FLAG_HIDE_MAP_NAME_POPUP                (SPECIAL_FLAGS_START + 0x0)
 #define FLAG_DONT_TRANSITION_MUSIC              (SPECIAL_FLAGS_START + 0x1)
 #define FLAG_ENABLE_MULTI_CORRIDOR_DOOR         (SPECIAL_FLAGS_START + 0x2)
-#define FLAG_SPECIAL_FLAG_UNUSED_0x4003         (SPECIAL_FLAGS_START + 0x3) // Unused Flag
+// Usage:
+// setflag(FLAG_SPAWN_INVISIBLE) to make the player invisible on next map spawn.
+// In order to make the player visible again, use applymovement with set_visible.
+#define FLAG_SPAWN_INVISIBLE                    (SPECIAL_FLAGS_START + 0x3)
 #define FLAG_STORING_ITEMS_IN_PYRAMID_BAG       (SPECIAL_FLAGS_START + 0x4)
 #define FLAG_SAFE_FOLLOWER_MOVEMENT             (SPECIAL_FLAGS_START + 0x5) // When set, applymovement does not put the follower inside a pokeball
                                                                             // Also, scripted movements on the player will move follower(s), too
