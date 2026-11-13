@@ -114,7 +114,4 @@
 // so we don't make breaking changes in the future.
 #define QUEST_ARRAY_COUNT 100
 
-// Allocate bit slots in SaveBlock2.subQuests based on max subquest ID capacity (not dense count, since IDs 35..40 are skipped).
-#define SUB_QUEST_SLOT_COUNT 64
-
 #endif // GUARD_CONSTANTS_QUESTS_H
