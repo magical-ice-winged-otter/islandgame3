@@ -28,8 +28,9 @@ bool32 SetUpFieldMove_Teleport(void)
 static void FieldCallback_Teleport(void)
 {
     Overworld_ResetStateAfterTeleport();
-    FieldEffectStart(FLDEFF_USE_TELEPORT);
     gFieldEffectArguments[0] = (u32)GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
+    FieldEffectStart(FLDEFF_USE_TELEPORT);
 }
 
 bool8 FldEff_UseTeleport(void)

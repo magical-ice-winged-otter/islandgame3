@@ -14,6 +14,7 @@
 #include "sound.h"
 #include "sprite.h"
 #include "task.h"
+#include "constants/field_effects.h"
 #include "constants/songs.h"
 
 struct FlashStruct
@@ -92,9 +93,9 @@ bool32 SetUpFieldMove_Flash(void)
 
 static void FieldCallback_Flash(void)
 {
-    u8 taskId = CreateFieldMoveTask();
-    //gFieldEffectArguments[0] = GetCursorSelectionMonId();
     gFieldEffectArguments[0] = ITEM_ISLANDGAME_LANTERN;
+    gFieldEffectArguments[7] = SHOW_ITEM;
+    u8 taskId = CreateFieldMoveTask();
     gTasks[taskId].data[8] = (uintptr_t)FldEff_UseFlash >> 16;
     gTasks[taskId].data[9] = (uintptr_t)FldEff_UseFlash;
 }

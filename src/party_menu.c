@@ -4250,6 +4250,7 @@ static void DisplayCantUseFlashMessage(void)
 static void FieldCallback_Surf(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_SURF);
 }
 
@@ -4294,6 +4295,7 @@ void CB2_ReturnToPartyMenuFromFlyMap(void)
 static void FieldCallback_Waterfall(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_WATERFALL);
 }
 
@@ -4332,6 +4334,7 @@ bool32 SetUpFieldMove_RockClimb(void)
 static void FieldCallback_Dive(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_DIVE);
 }
 
@@ -8154,6 +8157,7 @@ void CursorCb_MoveItem(u8 taskId)
 static void FieldCallback_RockClimb(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_ROCK_CLIMB);
 }
 

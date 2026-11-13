@@ -3,6 +3,7 @@ EventScript_UseSurf::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_EndUseSurf
 	setfieldeffectargument 0, ITEM_ISLANDGAME_RAFT
+	setfieldeffectargument 7, SHOW_ITEM
 	lockall
 	msgbox gText_WantToUseSurf, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_ReleaseUseSurf

@@ -34,8 +34,9 @@ bool32 SetUpFieldMove_SweetScent(void)
 
 static void FieldCallback_SweetScent(void)
 {
-    FieldEffectStart(FLDEFF_SWEET_SCENT);
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
+    FieldEffectStart(FLDEFF_SWEET_SCENT);
 }
 
 bool8 FldEff_SweetScent(void)

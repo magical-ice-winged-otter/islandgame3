@@ -586,6 +586,7 @@ bool32 SetUpFieldMove_SecretPower(void)
 static void FieldCallback_SecretBaseCave(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     ScriptContext_SetupScript(SecretBase_EventScript_CaveUseSecretPower);
 }
 
@@ -646,6 +647,7 @@ static void SpriteCB_CaveEntranceEnd(struct Sprite *sprite)
 static void FieldCallback_SecretBaseTree(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     ScriptContext_SetupScript(SecretBase_EventScript_TreeUseSecretPower);
 }
 
@@ -720,6 +722,7 @@ static void SpriteCB_TreeEntranceEnd(struct Sprite *sprite)
 static void FieldCallback_SecretBaseShrub(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     ScriptContext_SetupScript(SecretBase_EventScript_ShrubUseSecretPower);
 }
 

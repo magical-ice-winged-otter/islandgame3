@@ -1432,6 +1432,7 @@ static void Task_UseFly(u8 taskId)
                 return;
 
             gFieldEffectArguments[0] = ITEM_ISLANDGAME_WHISTLE;
+            gFieldEffectArguments[7] = SHOW_ITEM;
             FieldEffectStart(FLDEFF_USE_FLY);
             fieldEffectStarted = TRUE;
         }
@@ -1944,12 +1945,14 @@ static bool8 EscalatorWarpIn_End(struct Task *task)
 
 #define tState data[0]
 #define tMonId data[1]
+#define tIsItem data[2]
 
 bool8 FldEff_UseWaterfall(void)
 {
     u8 taskId;
     taskId = CreateTask(Task_UseWaterfall, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tIsItem = (gFieldEffectArguments[7] == SHOW_ITEM);
     Task_UseWaterfall(taskId);
     return FALSE;
 }
@@ -1974,7 +1977,10 @@ static bool8 WaterfallFieldEffect_ShowMon(struct Task *task, struct ObjectEvent 
     {
         ObjectEventClearHeldMovementIfFinished(objectEvent);
         gFieldEffectArguments[0] = task->tMonId;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        if (task->tIsItem)
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+        else
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         task->tState++;
     }
     return FALSE;
@@ -2018,6 +2024,7 @@ static bool8 WaterfallFieldEffect_ContinueRideOrEnd(struct Task *task, struct Ob
 
 #undef tState
 #undef tMonId
+#undef tIsItem
 
 bool8 FldEff_UseDive(void)
 {
@@ -2025,6 +2032,7 @@ bool8 FldEff_UseDive(void)
     taskId = CreateTask(Task_UseDive, 0xff);
     gTasks[taskId].data[15] = gFieldEffectArguments[0];
     gTasks[taskId].data[14] = gFieldEffectArguments[1];
+    gTasks[taskId].data[13] = (gFieldEffectArguments[7] == SHOW_ITEM);
     Task_UseDive(taskId);
     return FALSE;
 }
@@ -2045,7 +2053,10 @@ static bool8 DiveFieldEffect_ShowMon(struct Task *task)
 {
     LockPlayerFieldControls();
     gFieldEffectArguments[0] = task->data[15];
-    FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+    if (task->data[13])
+        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+    else
+        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
     task->data[0]++;
     return FALSE;
 }
@@ -2815,11 +2826,10 @@ bool8 FldEff_FieldMoveShowSprite(void)
     else
         taskId = CreateTask(Task_FieldMoveShowSpriteIndoors, 0xff);
 
-    if (gFieldEffectArguments[7] == 0)
-      gTasks[taskId].tSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
-    else if (gFieldEffectArguments[7] == 1) {
-      gTasks[taskId].tSpriteId = InitFieldMoveItemSprite(gFieldEffectArguments[0]);
-    }
+    if (gFieldEffectArguments[7] == SHOW_ITEM)
+        gTasks[taskId].tSpriteId = InitFieldMoveItemSprite(gFieldEffectArguments[0]);
+    else
+        gTasks[taskId].tSpriteId = InitFieldMoveMonSprite(gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     return FALSE;
 }
 
@@ -2829,11 +2839,14 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 {
     struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
+    u8 partyIdx = (u8)gFieldEffectArguments[0];
+    if (partyIdx >= PARTY_SIZE)
+        partyIdx = 0;
+    pokemon = &gPlayerParty[partyIdx];
     gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
     gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
     gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
-    gFieldEffectArguments[7] = 0;
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     gFieldEffectArguments[0] |= noDucking;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
@@ -2844,7 +2857,7 @@ bool8 FldEff_FieldMoveShowItemInit(void)
 {
     // We know that gFieldEffectArguments[0] contains the item id.
     gFieldEffectArguments[0] = SanitizeItemId((u16) gFieldEffectArguments[0]);
-    gFieldEffectArguments[7] = 1;
+    gFieldEffectArguments[7] = SHOW_ITEM;
 
     DebugPrintf("FldEff_FieldMoveShowItemInit: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_SPRITE);
@@ -3199,9 +3212,7 @@ static u8 InitFieldMoveMonSprite(u32 species, bool8 isShiny, u32 personality)
     struct Sprite *sprite;
     noDucking = (species & SHOW_MON_CRY_NO_DUCKING) >> 16;
     species &= ~SHOW_MON_CRY_NO_DUCKING;
-    monSprite = AddItemIconSprite(2110, 2110, species);
-    gSprites[monSprite].y = 0x50;
-    gSprites[monSprite].x = 0x140;
+    monSprite = CreateMonSprite_FieldMove(species, isShiny, personality, 320, 80, 0);
     sprite = &gSprites[monSprite];
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
@@ -3231,7 +3242,12 @@ static void SpriteCB_FieldMoveSpriteSlideOnscreen(struct Sprite *sprite)
         sprite->x = DISPLAY_WIDTH / 2;
         sprite->sOnscreenTimer = 30;
         sprite->callback = SpriteCB_FieldMoveSpriteWaitAfterCry;
-        PlaySE(SE_USE_ITEM);
+        if (sprite->sSpecies == SPECIES_NONE)
+            PlaySE(SE_USE_ITEM);
+        else if (sprite->data[6])
+            PlayCry_NormalNoDucking(sprite->sSpecies, 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
+        else
+            PlayCry_Normal(sprite->sSpecies, 0);
     }
 }
 
@@ -3258,12 +3274,14 @@ static void SpriteCB_FieldMoveSpriteSlideOffscreen(struct Sprite *sprite)
 #define tState data[0]
 #define tDestX data[1]
 #define tDestY data[2]
+#define tIsItem data[14]
 #define tMonId data[15]
 
 u8 FldEff_UseSurf(void)
 {
     u8 taskId = CreateTask(Task_SurfFieldEffect, 0xff);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tIsItem = (gFieldEffectArguments[7] == SHOW_ITEM);
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;
@@ -3313,8 +3331,16 @@ static void SurfFieldEffect_ShowMon(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventCheckHeldMovementStatus(objectEvent))
     {
-        gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
-        FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        if (task->tIsItem)
+        {
+            gFieldEffectArguments[0] = task->tMonId;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+        }
+        else
+        {
+            gFieldEffectArguments[0] = task->tMonId | SHOW_MON_CRY_NO_DUCKING;
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
         task->tState++;
     }
 }
@@ -3360,6 +3386,7 @@ static void SurfFieldEffect_End(struct Task *task)
 #undef tState
 #undef tDestX
 #undef tDestY
+#undef tIsItem
 #undef tMonId
 
 u8 FldEff_RayquazaSpotlight(void)
@@ -3438,6 +3465,7 @@ static void SpriteCB_NPCFlyOut(struct Sprite *sprite)
 #define tMonId          data[1]
 #define tBirdSpriteId   data[1] //re-used
 #define tTimer          data[2]
+#define tIsItem         data[14]
 #define tAvatarFlags    data[15]
 
 // Sprite data for the fly bird
@@ -3448,6 +3476,7 @@ u8 FldEff_UseFly(void)
 {
     u8 taskId = CreateTask(Task_FlyOut, 254);
     gTasks[taskId].tMonId = gFieldEffectArguments[0];
+    gTasks[taskId].tIsItem = (gFieldEffectArguments[7] == SHOW_ITEM);
     return 0;
 }
 
@@ -3490,7 +3519,12 @@ static void FlyOutFieldEffect_ShowMon(struct Task *task)
         task->tState++;
         gFieldEffectArguments[0] = task->tMonId;
         if (!gSkipShowMonAnim)
-            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        {
+            if (task->tIsItem)
+                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+            else
+                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+        }
     }
 }
 
@@ -3580,6 +3614,8 @@ static void FlyOutFieldEffect_End(struct Task *task)
         DestroyTask(FindTaskIdByFunc(Task_FlyOut));
     }
 }
+
+#undef tIsItem
 
 static u8 CreateFlyBirdSprite(void)
 {
