@@ -694,6 +694,10 @@ static const struct SubQuest sSubQuests_AetheriaMelissa[SUB_QUEST_COUNT_AETHERIA
     },
 };
 
+// This assert is important to ensure that there is no saveblock corruption. Please update appropriately.
+// The left hand side of the equal sign should be the last sub quest listed.
+STATIC_ASSERT((SUB_QUEST_AETHERIA_MELISSA_2 + 1) == SUB_QUEST_COUNT, gTotalSubQuestCountMatchesSumOfSubQuestGroupCount);
+
 ////////////////////////END SUBQUEST CUSTOMIZATION/////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -1644,6 +1648,9 @@ u8 QuestMenu_GetSetSubquestState(u8 quest, u8 caseId, u8 childQuest)
 	u8  index = uniqueId / 8; //8 bits per byte
 	u8	bit = uniqueId % 8;
 	u8	mask = 1 << bit;
+
+	if (index >= SUB_FLAGS_COUNT)
+		return 0;
 
 	switch (caseId)
 	{
