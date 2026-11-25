@@ -78,5 +78,4 @@ ISLANDGAME_AETHERIA_POLICE_HQ_1F_Wanderer_Text_0:
 	.string "We believe that the programmer behind\n"
 	.string "this intended to use these game\l"
 	.string "cartridges as a means of brainwashing\l"
-	.string "children for nefarious purposes.\p"
-	.string "What a messed up world we live in...$"
+	.string "children for nefarious purposes.$"
