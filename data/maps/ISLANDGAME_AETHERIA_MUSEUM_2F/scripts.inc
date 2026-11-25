@@ -897,11 +897,11 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5::
 # 629 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmovement 0
 # 630 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_4
+	applymovement AETHERIA_MUSEUM_2F_ARTICUNO, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene3_Movement_3
 # 631 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_5
+	applymovement AETHERIA_MUSEUM_2F_ZAPDOS, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_4
 # 632 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_5
+	applymovement AETHERIA_MUSEUM_2F_MOLTRES, ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_4
 # 633 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	waitmovement 0
 # 635 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
@@ -1493,18 +1493,8 @@ ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_3:
 	walk_down
 	step_end
 
-# 630 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_4:
-# 630 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	walk_down
-# 630 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	walk_down
-# 630 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-	walk_down
-	step_end
-
 # 631 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
-ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_5:
+ISLANDGAME_AETHERIA_MUSEUM_2F_MovieScene5_Movement_4:
 # 631 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"
 	walk_down
 # 631 "data/maps/ISLANDGAME_AETHERIA_MUSEUM_2F/scripts.pory"

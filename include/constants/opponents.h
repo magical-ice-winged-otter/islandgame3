@@ -285,11 +285,12 @@
 #define TRAINER_CINDY_2                     TRAINER_AETHERIA_CYNTHIA
 #define TRAINER_AETHERIA_MELISSA            118
 #define TRAINER_BRIANNA                     TRAINER_AETHERIA_MELISSA
+#define TRAINER_AETHERIA_PARK_OFFICER       119
+#define TRAINER_NAOMI                       TRAINER_AETHERIA_PARK_OFFICER
+#define TRAINER_AETHERIA_DEPT_OFFICER       120
+#define TRAINER_CINDY_3                     TRAINER_AETHERIA_DEPT_OFFICER
 
 
-
-#define TRAINER_NAOMI                       119
-#define TRAINER_CINDY_3                     120
 #define TRAINER_CINDY_4                     121
 #define TRAINER_CINDY_5                     122
 #define TRAINER_CINDY_6                     123

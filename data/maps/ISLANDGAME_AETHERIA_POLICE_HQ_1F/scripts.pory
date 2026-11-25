@@ -1,0 +1,39 @@
+mapscripts ISLANDGAME_AETHERIA_POLICE_HQ_1F_MapScripts {}
+
+
+script ISLANDGAME_AETHERIA_POLICE_HQ_1F_FrontDeskWoman {
+    lock
+    faceplayer
+    msgbox(format(
+        "Welcome to the Maryan Police Department.\p"
+        "We're currently experiencing a large volume of calls, so please leave me alone."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_POLICE_HQ_1F_FrontDeskMan {
+    lock
+    faceplayer
+    msgbox(format(
+        "I joined the force in hopes of one day being able to join the International Police so I could go around the world.\p"
+        "But I've been stuck here for years doing lame busy work..."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_POLICE_HQ_1F_NoEntry {
+    lock
+    faceplayer
+    msgbox(format(
+        "Only officers are allowed up here."
+    ), MSGBOX_AUTOCLOSE)
+}
+
+script ISLANDGAME_AETHERIA_POLICE_HQ_1F_Wanderer {
+    lock
+    faceplayer
+    msgbox(format(
+        "In our most recent raid, we seized hundreds of illegally modified copies of Pokémon Fire Red.\p"
+        "A soundtrack in the game was altered to contain high-pitched tones that only children could hear, causing erratic behavior.\p"
+        "Many of these cartridges were already distributed across Marya, and have resulted in the hospitalization and even deaths of children.\p"
+        "We believe that the programmer behind this intended to use these game cartridges as a means of brainwashing children for nefarious purposes."
+    ), MSGBOX_AUTOCLOSE)
+}

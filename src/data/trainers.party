@@ -2666,37 +2666,44 @@ Nature: Jolly
 - Bulldoze
 - Rock Slide
 
-
-
-=== TRAINER_NAOMI ===
-Name: NAOMI
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
+=== TRAINER_AETHERIA_PARK_OFFICER ===
+Name: Jun-Ho
+Class: TRAINER_CLASS_OFFICER
+Pic: TRAINER_PIC_POLICE
+Gender: Male
+Music: Male
 Battle Type: Singles
-AI: Check Bad Move
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY
 
-Roselia @ Nugget
-Level: 45
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Mightyena
+Level: 36
+Ability: Strong Jaw
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Hardy
+- Crunch
+- Fire Fang
+- Ice Fang
+- Thunder Fang
+
+=== TRAINER_AETHERIA_DEPT_OFFICER ===
+Name: Johnson
+Class: TRAINER_CLASS_OFFICER
+Pic: TRAINER_PIC_POLICE
+Gender: Male
+Music: Male
+Battle Type: Singles
+AI: AI_FLAG_CHECK_BAD_MOVE / AI_FLAG_TRY_TO_FAINT / AI_FLAG_CHECK_VIABILITY
+
+Ariados
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 
-=== TRAINER_CINDY_3 ===
-Name: CINDY
-Class: Lady
-Pic: Lady
-Gender: Female
-Music: Female
-Items: Full Restore
-Battle Type: Singles
-AI: Check Bad Move
-
-Linoone @ Nugget
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+Hitmonchan
+Level: 35
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
+
 
 === TRAINER_CINDY_4 ===
 Name: CINDY

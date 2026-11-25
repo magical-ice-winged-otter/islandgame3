@@ -1,0 +1,3 @@
+ISLANDGAME_AETHERIA_POLICE_HQ_B1F_MapScripts::
+	.byte 0
+

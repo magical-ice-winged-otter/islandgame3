@@ -99,16 +99,16 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POLICE",
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_M",
       "x": 58,
       "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "ISLANDGAME_AETHERIA_Trainer1",
+      "script": "ISLANDGAME_AETHERIA_ParkOfficer",
       "flag": "FLAG_TEMP_2"
     },
     {
@@ -121,7 +121,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC3",
+      "script": "ISLANDGAME_AETHERIA_ParkFatMan",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -134,7 +134,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC4",
+      "script": "ISLANDGAME_AETHERIA_ParkPokemaniac",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -147,7 +147,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC5",
+      "script": "ISLANDGAME_AETHERIA_ParkCryingChild",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -160,7 +160,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC6",
+      "script": "ISLANDGAME_AETHERIA_ParkMother",
       "flag": "FLAG_TEMP_3"
     },
     {
@@ -173,7 +173,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_NPC7",
+      "script": "ISLANDGAME_AETHERIA_ParkHomelessMan",
       "flag": "FLAG_TEMP_2"
     },
     {
@@ -199,7 +199,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer2",
+      "script": "ISLANDGAME_AETHERIA_BattleObserverKid",
       "flag": "FLAG_TEMP_5"
     },
     {
@@ -212,7 +212,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer4",
+      "script": "ISLANDGAME_AETHERIA_BattleObserverBoy",
       "flag": "FLAG_TEMP_4"
     },
     {
@@ -238,7 +238,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Battler1",
+      "script": "ISLANDGAME_AETHERIA_Joey",
       "flag": "FLAG_TEMP_4"
     },
     {
@@ -264,7 +264,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer1",
+      "script": "ISLANDGAME_AETHERIA_BattleObserverGirl",
       "flag": "FLAG_TEMP_5"
     },
     {
@@ -303,7 +303,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Battler2",
+      "script": "ISLANDGAME_AETHERIA_EspaRoba",
       "flag": "FLAG_TEMP_4"
     },
     {
@@ -333,7 +333,7 @@
       "flag": "FLAG_TEMP_5"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_UNION_ROOM_NURSE",
+      "graphics_id": "OBJ_EVENT_GFX_SILVERWING_F",
       "x": 69,
       "y": 21,
       "elevation": 0,
@@ -342,7 +342,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ISLANDGAME_AETHERIA_Observer3",
+      "script": "ISLANDGAME_AETHERIA_BattleObserverSilverwing",
       "flag": "FLAG_TEMP_4"
     },
     {
@@ -359,46 +359,48 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PRIMROSE",
-      "x": 46,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_IDOL",
-      "x": 47,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BEAUTY_MASTERS",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
       "x": 48,
-      "y": 2,
+      "y": 11,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "ISLANDGAME_AETHERIA_DeptGentleman",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OFFICER_M",
+      "x": 41,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ISLANDGAME_AETHERIA_PoliceDeptOffDutyOfficer",
+      "flag": "FLAG_TEMP_2"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 46,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_POLICE_HQ_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 47,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ISLANDGAME_AETHERIA_POLICE_HQ_1F",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {
@@ -464,6 +466,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ISLANDGAME_AETHERIA_PoliceHQ"
     }
   ]
 }
