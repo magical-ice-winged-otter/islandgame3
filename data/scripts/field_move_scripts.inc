@@ -5,7 +5,7 @@ EventScript_CutTree::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, ITEM_ISLANDGAME_MACHETE
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToCut, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
 	closemessage
@@ -66,7 +66,7 @@ EventScript_RockSmash::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantSmashRock
 	setfieldeffectargument 0, ITEM_ISLANDGAME_PICKAXE
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToSmash, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelSmash
 	closemessage
@@ -226,7 +226,7 @@ EventScript_StrengthBoulder::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantStrength
 	setfieldeffectargument 0, ITEM_ISLANDGAME_POWERGLOVE
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
 	closemessage
@@ -287,7 +287,7 @@ EventScript_UseWaterfall::
 	compare VAR_RESULT, FALSE
 	goto_if_eq EventScript_CantWaterfall
 	setfieldeffectargument 0, ITEM_ISLANDGAME_RAFT
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToWaterfall, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
 	hidefollowernpc
@@ -323,7 +323,7 @@ EventScript_UseDive::
 	goto_if_eq EventScript_CantDive
 	setfieldeffectargument 0, ITEM_ISLANDGAME_RAFT
 	setfieldeffectargument 1, 1
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
 	hidefollowernpc
@@ -347,7 +347,7 @@ EventScript_UseDiveUnderwater::
 	goto_if_eq EventScript_CantSurface
 	setfieldeffectargument 0, ITEM_ISLANDGAME_RAFT
 	setfieldeffectargument 1, 1
-  setfieldeffectargument 7, 1
+  setfieldeffectargument 7, SHOW_ITEM
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_NoSurface
 	hidefollowernpc
@@ -434,6 +434,7 @@ EventScript_UseDefog::
 	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
 	waitmovement 0
 	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 7, SHOW_POKEMON
 	dofieldeffect FLDEFF_DEFOG
 	waitstate
 	releaseall
@@ -445,6 +446,7 @@ EventScript_UseRockClimb::
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantRockClimb
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
 	setfieldeffectargument 0, VAR_RESULT
+	setfieldeffectargument 7, SHOW_POKEMON
 	msgbox Text_WantToRockClimb, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndRockClimb
 	msgbox Text_MonUsedRockClimb, MSGBOX_DEFAULT

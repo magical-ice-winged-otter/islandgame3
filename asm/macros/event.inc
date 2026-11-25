@@ -2897,7 +2897,7 @@
 
     @sets the flag AFTER you declare the wildbattle.
     .macro setcwildbattle spot:req, species:req, level:req, item, nature, abilityNum, hpEv, atkEv, defEv, speedEv, spAtkEv, spDefEv, hpIv, atkIv, defIv, speedIv, spAtkIv, spDefIv, move1, move2, move3, move4, isShiny
-    .byte 0xed
+    .byte SCR_OP_SETCWILDBATTLE
     .byte \spot
     .2byte \species
     .byte \level

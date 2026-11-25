@@ -329,6 +329,10 @@ static void ClearSearchParameterBoxText(void);
 // const rom data
 #include "data/pokemon/pokedex_orders.h"
 
+STATIC_ASSERT(ARRAY_COUNT(gPokedexOrder_Alphabetical) == NATIONAL_DEX_COUNT, PokedexOrderAlphabeticalCountMatches);
+STATIC_ASSERT(ARRAY_COUNT(gPokedexOrder_Weight) == NATIONAL_DEX_COUNT, PokedexOrderWeightCountMatches);
+STATIC_ASSERT(ARRAY_COUNT(gPokedexOrder_Height) == NATIONAL_DEX_COUNT, PokedexOrderHeightCountMatches);
+
 static const struct OamData sOamData_ScrollBar =
 {
     .y = DISPLAY_HEIGHT,

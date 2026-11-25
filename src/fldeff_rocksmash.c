@@ -70,10 +70,10 @@ static void Task_DoFieldMove_Init(u8 taskId)
                 gFieldEffectArguments[3] = 0;
 
             DebugPrintf("Task_DoFieldMove_Init: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
-            if (gFieldEffectArguments[7] == 0)
-                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
-            else if (gFieldEffectArguments[7] == 1)
+            if (gFieldEffectArguments[7] == SHOW_ITEM)
                 FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+            else
+                FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
             gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
         }
         else
@@ -92,10 +92,10 @@ static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId)
     {
 
         DebugPrintf("Task_DoFieldMove_ShowMonAfterPose: Called for [7]=%d [0]=%d", gFieldEffectArguments[7], gFieldEffectArguments[0]);
-        if (gFieldEffectArguments[7] == 0)
-            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
-        else if (gFieldEffectArguments[7] == 1)
+        if (gFieldEffectArguments[7] == SHOW_ITEM)
             FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT);
+        else
+            FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
         gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
     }
 }
@@ -158,6 +158,7 @@ bool32 SetUpFieldMove_RockSmash(void)
 static void FieldCallback_RockSmash(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     ScriptContext_SetupScript(EventScript_UseRockSmash);
 }
 

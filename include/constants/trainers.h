@@ -154,10 +154,6 @@
 #define TRAINER_PIC_PAINTER              133
 #define TRAINER_PIC_CUEBALL              134
 
-
-#define TRAINER_PIC_COUNT                135
-
-
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_OLIVER                 0
 #define TRAINER_BACK_PIC_OLIVIA                 1

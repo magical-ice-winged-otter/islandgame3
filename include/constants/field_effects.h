@@ -83,6 +83,12 @@
 #define FLDEFF_THINKING_ICON             78
 #define FLDEFF_FIELD_MOVE_SHOW_ITEM_INIT 79
 
+enum FieldMoveShowMode
+{
+    SHOW_POKEMON = 0,
+    SHOW_ITEM = 1,
+};
+
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1
 #define FLDEFFOBJ_SHADOW_L              2

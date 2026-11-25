@@ -193,6 +193,7 @@ bool8 ShouldDoBrailleRegirockEffect(void)
 void SetUpPuzzleEffectRegirock(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_TOMB_PUZZLE_EFFECT);
 }
 
@@ -233,6 +234,7 @@ bool8 ShouldDoBrailleRegisteelEffect(void)
 void SetUpPuzzleEffectRegisteel(void)
 {
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     FieldEffectStart(FLDEFF_USE_TOMB_PUZZLE_EFFECT);
 }
 

@@ -32,7 +32,7 @@ bool32 SetUpFieldMove_Strength(void)
 static void FieldCallback_Strength(void)
 {
     gFieldEffectArguments[0] = ITEM_ISLANDGAME_POWERGLOVE;
-    gFieldEffectArguments[7] = 1;
+    gFieldEffectArguments[7] = SHOW_ITEM;
     ScriptContext_SetupScript(EventScript_UseStrength);
 }
 

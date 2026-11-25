@@ -34,6 +34,7 @@ static void FieldCallback_Dig(void)
 {
     Overworld_ResetStateAfterDigEscRope();
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
+    gFieldEffectArguments[7] = SHOW_POKEMON;
     ScriptContext_SetupScript(EventScript_UseDig);
 }
 

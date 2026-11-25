@@ -22,6 +22,15 @@ const u16 gTrainerPalette_Scientist2[] = INCBIN_U16("graphics/trainers/front_pic
 const u32 gTrainerFrontPic_Biker[] = INCBIN_U32("graphics/trainers/front_pics/biker.4bpp.smol");
 const u16 gTrainerPalette_Biker[] = INCBIN_U16("graphics/trainers/front_pics/biker.gbapal");
 
+const u32 gTrainerFrontPic_Tamer[] = INCBIN_U32("graphics/trainers/front_pics/tamer.4bpp.smol");
+const u16 gTrainerPalette_Tamer[] = INCBIN_U16("graphics/trainers/front_pics/tamer.gbapal");
+
+const u32 gTrainerFrontPic_Painter[] = INCBIN_U32("graphics/trainers/front_pics/painter.4bpp.smol");
+const u16 gTrainerPalette_Painter[] = INCBIN_U16("graphics/trainers/front_pics/painter.gbapal");
+
+const u32 gTrainerFrontPic_CueBall[] = INCBIN_U32("graphics/trainers/front_pics/cue_ball.4bpp.smol");
+const u16 gTrainerPalette_CueBall[] = INCBIN_U16("graphics/trainers/front_pics/cue_ball.gbapal");
+
 const u32 gTrainerFrontPic_Duo[] = INCBIN_U32("graphics/trainers/front_pics/Duo.4bpp.smol");
 const u16 gTrainerPalette_Duo[] = INCBIN_U16("graphics/trainers/front_pics/Duo.gbapal");
 
@@ -574,7 +583,12 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_BIRD_KEEPER_F, gTrainerFrontPic_BirdKeeperF, gTrainerPalette_BirdKeeperF),
     TRAINER_SPRITE(TRAINER_PIC_SCIENTIST2, gTrainerFrontPic_Scientist2, gTrainerPalette_Scientist2),
     TRAINER_SPRITE(TRAINER_PIC_BIKER, gTrainerFrontPic_Biker, gTrainerPalette_Biker),
+    TRAINER_SPRITE(TRAINER_PIC_TAMER, gTrainerFrontPic_Tamer, gTrainerPalette_Tamer),
+    TRAINER_SPRITE(TRAINER_PIC_PAINTER, gTrainerFrontPic_Painter, gTrainerPalette_Painter),
+    TRAINER_SPRITE(TRAINER_PIC_CUEBALL, gTrainerFrontPic_CueBall, gTrainerPalette_CueBall),
 };
+
+STATIC_ASSERT(TRAINER_PIC_CUEBALL + 1 == ARRAY_COUNT(gTrainerSprites), TrainerSpritesCountMatches);
 
 static const union AnimCmd sAnimCmd_Hoenn[] =
 {
